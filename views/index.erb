@@ -1,0 +1,32 @@
+<ul>
+  <li>
+        <%= @unit_list %>
+
+        <%= @pattern %>
+        <%= @files[0] %>
+
+                  <img src="<% @files[0] %>">
+        <img src="<% @unit_list %>/profile_imgs/bisa.jpg"/>
+        <!-- this image loads perfectly  -->
+        <p><%= @unit_list%></p>
+        <!--@unit path is ->  /home/curmet/Desktop/170_optional/data -->
+
+        <% @files.each do |file| %>
+
+          <img src="<% file %>">
+          <!--  <= THis image won't load the above says 'source unknown' -->
+          <%= file %>
+          <!--  this file path is: /home/curmet/Desktop/170_optional/data/profile_imgs/bisa.jpg -->
+
+          <!-- # Even though the file path is complete and includes "/profile_imgs/[filename]", it doesn't load. -->
+          <!-- # unless i add the "/profile_imgs/[filename]" to the end of the path like below. THe below image loads. -->
+          <img src="<% file %>/profile_imgs/bisa.jpg">
+
+          <!-- this image loads perfectly  -->
+          <img src="<% file[0..-10] %>/profile_imgs/bisa.jpg"><% file[0..-10] %>
+
+          <!-- this image loads perfectly  -->
+
+        <% end %>
+  </li>
+</ul>

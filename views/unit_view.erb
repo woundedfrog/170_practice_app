@@ -1,0 +1,10 @@
+<% @units.each do |key, val| %>
+  <h3><%= key %></h3>
+  <img src="<% @unit_data_path %>/profile_imgs/<%= val["pic"]%>"/>
+  <% val.each do |sub_k, sub_v|%>
+    <% next if sub_k == "pic" %>
+    <ul>
+      <li><%= sub_k %>: <%= sub_v %></li>
+    </ul>
+  <% end %>
+<% end %>

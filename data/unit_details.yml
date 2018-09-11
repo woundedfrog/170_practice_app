@@ -1,0 +1,11 @@
+
+  bisa: {
+    pic: "bisa.jpg",
+    path: "bisa",
+    tier: "s",
+    normal: "·Deals 113 damage.",
+    tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore 'Taunt' & 'Reflect' ) to self for 13 seconds /n·Underground Only, Additional 430 damage to target.",
+    slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) /n·Additional 150 damage IF Debuff Type target. /n·Ignore 200 defense IF Dark Type target",
+    drive: "·Deals 2588 damage to all enemies.",
+    leader: "·Slilde Skills Damage +8% to Light Types allies."
+  }
