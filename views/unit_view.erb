@@ -1,10 +1,18 @@
-<% @units.each do |key, val| %>
-  <h3><%= key %></h3>
-  <img src="<% @unit_data_path %>/profile_imgs/<%= val["pic"]%>"/>
-  <% val.each do |sub_k, sub_v|%>
-    <% next if sub_k == "pic" %>
-    <ul>
-      <li><%= sub_k %>: <%= sub_v %></li>
-    </ul>
+<a id="back_to_main" href="/">Main unit list</a>
+
+<div class="stats_div">
+<% @current_unit.each do |info_key, info_val| %>
+  <% if info_key == "pic" %>
+    <div class="unit_profile_pic">
+      <img src="<% @unit_profile_pics %><%= info_val %>"/>
+    </div>
+  <% else %>
+      <ul>
+        <h3 class="stat_title"><%= info_key %>:</h3>
+            <ul>
+              <li class="unit_stats"><%= info_val %></li>
+            </ul>
+      </ul>
   <% end %>
 <% end %>
+</div>

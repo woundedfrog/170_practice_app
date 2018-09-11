@@ -56,23 +56,17 @@ def get_unit_files(unit)
   [profile, skins]
 end
 
-# set :public_folder, 'data'
-
 get "/" do
   @title = "Destiny Japan units info"
-  @pattern = File.join(unit_data_path, "profile_imgs/*")
-  @files = Dir.glob(@pattern)
-  @unit_list = unit_data_path
+  @unit_profile_pics = unit_data_path
+  @units = load_unit_details
   erb :index
 end
 
 get "/:unit_name" do
   @units = load_unit_details
+  @current_unit = @units[params[:unit_name]]
   @unit_data_path = unit_data_path
 
   erb :unit_view
 end
-
-# get '/:unit_name' do
-#   send_file('/root/dev/notes/images/'+params[:file], :disposition => 'inline')
-# end
