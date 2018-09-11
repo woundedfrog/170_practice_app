@@ -1,0 +1,23 @@
+body {
+  padding: 1em;
+  font-family: sans-serif;
+}
+
+#back_to_main {
+  padding: .5em;
+  font-size: 1em;
+}
+
+.stats_div {
+    padding-top: 1em;
+}
+
+.stat_title {
+  font-size: .7em;
+  color: #320099;
+}
+
+.unit_stats {
+  font-size: .5em;
+  color: gray;
+}
