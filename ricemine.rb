@@ -8,18 +8,6 @@ require "nokogiri"
 require "fileutils"
 
 helpers do
-#   def full_file_name(file_path)
-#     file_path.split("/")
-#   end
-#
-#   def get_file_name(file_path)
-#     full_file_name(file_path)[-1]
-#   end
-#
-#   def get_folder_name(file_path)
-#     full_file_name(file_path)[-2]
-#   end
-
   def display_profile_pic(unit)
     data = unit_data_path
     "/"
@@ -48,17 +36,20 @@ def load_unit_details
   YAML.load_file(unit_list)
 end
 
-def get_file_name_parts(file)
-  file_name = file
-  extension = File.extname(file_name) # extract file extension
-  basename = File.basename(file_name, extension) # extract file basename
-  [basename, extension, file]
-end
-
 def get_unit_files(unit)
   profile = ''
   skins = ''
   [profile, skins]
+end
+
+def delete_unit(index)
+  unit_name = ''
+  load_unit_details.each do |name, info|
+    if info["index"] == index
+      unit_name = name
+    end
+  end
+  unit_name
 end
 
 get "/" do
@@ -75,11 +66,67 @@ end
 get "/:unit_name" do
   @units = load_unit_details
   @current_unit = @units[params[:unit_name]]
-    # @new_unit_info = load_unit_details["new_unit"] #used for testing
   erb :unit_view
 end
 
+get "/:unit_name/edit" do
+  @current_unit = load_unit_details[params[:unit_name]]
+  erb :edit_unit
+end
+
 post "/new_unit" do
-  @new_unit_info = load_unit_details["new_unit"]
-  erb :new_unit
+  unit_data = load_unit_details
+  @new_unit_info = unit_data["new_unit"]
+
+  name = params[:unit_name]
+  pic = params[:pic]
+
+  if params[:unit_name] == ""
+    status 422
+    erb :new_unit
+  elsif unit_data.include?(name) && params["index"] == nil
+    status 422
+    erb :new_unit
+  else
+    index = unit_data.size
+    pic = "/images/" + pic unless pic.include?("/images/")
+    data = load_unit_details
+
+    if params["index"] != nil
+      index = params["index"].to_i
+      old_name = delete_unit(index)
+      data[name] = data.delete(old_name)
+    else
+      data[name] = {}
+    end
+
+    data[name]["pic"] = pic
+    data[name]["tier"] = params[:tier]
+    data[name]["stars"] = params[:stars]
+    data[name]["type"] = params[:type]
+    data[name]["element"] = params[:element]
+    data[name]["leader"] = params[:leader]
+    data[name]["auto"] = params[:auto]
+    data[name]["tap"] = params[:tap]
+    data[name]["slide"] = params[:slide]
+    data[name]["drive"] = params[:drive]
+    data[name]["index"] = index
+
+    File.write("data/unit_details.yml", YAML.dump(data))
+    redirect "/"
+  end
+end
+
+post "/:unit_name/remove" do
+  unit = params[:unit_name]
+  units_info = load_unit_details
+
+  if params[:unit_name] == ""
+    status 422
+    erb :new_unit
+  else
+    units_info.delete(unit)
+    File.write("data/unit_details.yml", YAML.dump(units_info))
+    redirect "/"
+  end
 end

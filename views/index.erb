@@ -1,11 +1,22 @@
 <a  href="/new_unit">Add new unit</a>
-<ul>
-  <% @units.each do |unit, unit_details| %>
-    <li>
-      <%= unit.capitalize %>
-      <ul>
-        <a href="/<%= unit %>"><img src="<% @unit_profile_pics %><%= unit_details['pic'] %>"/></>
-      </ul>
-    </li>
-  <% end %>
-</ul>
+<div class="units_list_div">
+
+    <% @units.each do |unit, unit_details| %>
+      <% next if unit == "new_unit" %>
+
+      <div class="unit_div">
+          <h3><%= unit.capitalize %></h3>
+
+            <div class="index_unit_title">
+        <form class="edit_button" action="/<%= unit %>/edit" method="get">
+            <button type="submit">E</button>
+        </form>
+        <form class="delete_button" action="/<%= unit %>/remove" method="post">
+            <button type="submit">X</button>
+        </form>
+
+                </div>
+        <a href="/<%= unit %>"><img class="unit_index_pic" src="<%= unit_details['pic'] %>"/></a>
+      </div>
+    <% end %>
+</div>

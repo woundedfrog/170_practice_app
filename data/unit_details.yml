@@ -1,28 +1,55 @@
-
-  new_unit: {
-    pic: "/images/",
-    tier: "",
-    auto attack: "",
-    tap attack: "",
-    slide attack: "",
-    drive attack: "",
-    leader: ""
-  }
-  bisa: {
-    pic: "/images/bisa.jpg",
-    tier: "s",
-    auto attack: "·Deals 113 damage.",
-    tap attack: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore 'Taunt' & 'Reflect' ) to self for 13 seconds /n·Underground Only, Additional 430 damage to target.",
-    slide attack: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) /n·Additional 150 damage IF Debuff Type target. /n·Ignore 200 defense IF Dark Type target",
-    drive attack: "·Deals 2588 damage to all enemies.",
-    leader: "·Slilde Skills Damage +8% to Light Types allies."
-  }
-  test: {
-    pic: "/images/test.jpg",
-    tier: "s",
-    auto attack: "·Deals 113 damage.",
-    tap attack: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore 'Taunt' & 'Reflect' ) to self for 13 seconds /n·Underground Only, Additional 430 damage to target.",
-    slide attack: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) /n·Additional 150 damage IF Debuff Type target. /n·Ignore 200 defense IF Dark Type target",
-    drive attack: "·Deals 2588 damage to all enemies.",
-    leader: "·Slilde Skills Damage +8% to Light Types allies."
-  }
+---
+new_unit:
+  pic: ''
+  tier: ''
+  stars: ''
+  type: ''
+  element: ''
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: nil
+bisa:
+  pic: "/images/bisa.jpg"
+  tier: B
+  stars: '5'
+  type: support
+  element: water
+  leader: "·Slilde Skills Damage +8% to Light Types allies."
+  auto: "·Deals 113 damage."
+  tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
+    'Taunt' & 'Reflect' ) to self for 13 seconds \n·Underground Only, Additional 430
+    damage to target."
+  slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \n·Additional
+    150 damage IF Debuff Type target. \n·Ignore 200 defense IF Dark Type target"
+  drive: "·Deals 2588 damage to all enemies."
+  index: 1
+test:
+  pic: "/images/test.jpg"
+  tier: B
+  stars: ''
+  type: attacker
+  element: fire
+  leader: "·Slilde Skills Damage +8% to Light Types allies."
+  auto: "·Deals 113 damage."
+  tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
+    'Taunt' & 'Reflect' ) to self for 13 seconds \n·Underground Only, Additional 430
+    damage to target."
+  slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \n·Additional
+    150 damage IF Debuff Type target. \n·Ignore 200 defense IF Dark Type target"
+  drive: "·Deals 2588 damage to all enemies."
+  index: 2
+dinashi:
+  pic: "/images/dinashi.jpg"
+  tier: B
+  stars: '5'
+  type: tank
+  element: fire
+  auto: 100 damage to 1 unit
+  tap: Give 1500 shield to 5 fire allies.
+  slide: Double-edge sword - increase atk power and decrease def power by 90%.
+  drive: Gives shield for 5 fire units.
+  leader: Fire allies atk +10
+  index: 3

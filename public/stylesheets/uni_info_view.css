@@ -1,23 +1,137 @@
-body {
-  padding: 1em;
-  font-family: sans-serif;
+/* =====================
+basic styles
+===================== */
+  body {
+    padding: .3em;
+    font-family: sans-serif;
+  }
+
+  a:link, a:active, a:visited  {
+    padding: .2em;
+    font-size: .7em;
+    color: red;
+  }
+
+    /* ===========index profiles=========== */
+
+  .unit_index_pic {
+    height: 200px;
+    width: 100px;
+  }
+
+  .units_list_div {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .unit_div {
+    padding-left: 10px;
+    width: 110px;
+  }
+
+  .index_unit_title {
+    display: flex;
+    flex-direction: row;
+    padding: .6em;
+    padding-left: 0em;
+  }
+
+  h3 {
+    font-size: 1em;
+    height: .1em;
+    padding: .5em;
+    padding-left: 0em;
+    margin: 0em;
+  }
+
+  .edit_button {
+    align-self: center;
+    height: 15px;
+  }
+
+  .delete_button {
+    align-self: center;
+    padding-left: .5em;
+    height: 15px;
+  }
+  /* ===========unit profiles=========== */
+
+  .unit_profile_div {
+      padding-top: .5em;
+  }
+
+  .unit_pic_div {
+    padding-left: 50px;
+  }
+
+  .stat_title {
+    font-size: .7em;
+    color: #320099;
+  }
+
+  .stats {
+    font-size: .5em;
+    color: gray;
+  }
+
+
+/* =====================
+medium window sizes
+===================== */
+@media only screen and (min-width: 500px) {
+
+  /* ===========index profiles=========== */
+  .unit_index_pic {
+    height: 200px;
+    width: 100px;
+  }
+
+  .index_pic_large {
+    height: 200px;
+    width: 100px;
+  }
+
+  .units_list_div {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .unit_div {
+    padding-left: 10px;
+  }
+
+  /* ===========unit profiles=========== */
+    .unit_profile_div {
+        padding-top: .5em;
+        background-color: lightblue;
+        display: flex;
+        flex-direction: row;
+    }
+
+    .unit_pic_div {
+      padding-left: 50px;
+      width: 300px;
+
+    }
+
+    .stat_title {
+      font-size: .7em;
+      color: #320099;
+    }
+
+    .stats {
+      font-size: .5em;
+      color: gray;
+      width: 300px;
+    }
+
+    .unit_stats_div {
+      width: 200px;
+    }
 }
 
-#back_to_main {
-  padding: .5em;
-  font-size: 1em;
-}
 
-.stats_div {
-    padding-top: 1em;
-}
-
-.stat_title {
-  font-size: .7em;
-  color: #320099;
-}
-
-.unit_stats {
-  font-size: .5em;
-  color: gray;
-}
+/* =====================
+large window sizes
+===================== */

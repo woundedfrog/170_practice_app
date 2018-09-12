@@ -1,18 +1,17 @@
 <a id="back_to_main" href="/">Main unit list</a>
-<div class="stats_div">
-  <div class="unit_profile_pic">
-    <img src="<%= @current_unit["pic"] %>"/>
+
+<div class="unit_profile_div">
+  <div class="unit_pic_div">
+    <img class="unit_profile_pic" src="<%= @current_unit["pic"] %>"/>
   </div>
-  <div>
+  <span class="unit_stats_div">
     <% @current_unit.each do |info_key, info_val| %>
-      <% unless info_key == "pic" %>
-        <ul>
-          <h3 class="stat_title"><%= info_key %>:</h3>
+      <% unless info_key == "pic" || info_key == "index" %>
+          <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
           <ul>
-            <li class="unit_stats"><%= info_val %></li>
+            <li class="stats"><%= info_val %></li>
           </ul>
-        </ul>
       <% end %>
     <% end %>
-  </div>
+  </span>
 </div>

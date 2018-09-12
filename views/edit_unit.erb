@@ -6,17 +6,17 @@
     <dd>
       <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>">
     </dd>
-    <% @new_unit_info.each do |key, value| %>
+    <% @current_unit.each do |key, value| %>
     <dt>
       <label for="<% key %>"><%= key.capitalize %> info:</label>
     </dt>
     <dd>
       <% if key == "pic" || key == "tier" || key == "leader" || key == "stars" || key == "type" || key == "element" %>
-        <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
+        <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
       <% elsif key == "index" %>
-       <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>" disabled>
+       <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
       <% else %>
-        <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>
+        <textarea class="content" name="<%= key %>" rows="5" cols="50"  value="<%= params[key.to_sym] %>"><%= value %></textarea>
       <% end %>
     </dd>
     <% end %>
