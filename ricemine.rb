@@ -7,7 +7,7 @@ require "nokogiri"
 # require "open-uri"
 require "fileutils"
 
-# helpers do
+helpers do
 #   def full_file_name(file_path)
 #     file_path.split("/")
 #   end
@@ -19,7 +19,12 @@ require "fileutils"
 #   def get_folder_name(file_path)
 #     full_file_name(file_path)[-2]
 #   end
-# end
+
+  def display_profile_pic(unit)
+    data = unit_data_path
+    "/"
+  end
+end
 
 def render_markdown(text)
   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
@@ -58,15 +63,23 @@ end
 
 get "/" do
   @title = "Destiny Japan units info"
-  @unit_profile_pics = unit_data_path
   @units = load_unit_details
   erb :index
+end
+
+get "/new_unit" do
+  @new_unit_info = load_unit_details["new_unit"]
+  erb :new_unit
 end
 
 get "/:unit_name" do
   @units = load_unit_details
   @current_unit = @units[params[:unit_name]]
-  @unit_data_path = unit_data_path
-
+    # @new_unit_info = load_unit_details["new_unit"] #used for testing
   erb :unit_view
+end
+
+post "/new_unit" do
+  @new_unit_info = load_unit_details["new_unit"]
+  erb :new_unit
 end
