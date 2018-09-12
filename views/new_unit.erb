@@ -1,0 +1,16 @@
+<form action="/new_unit" method="post">
+  <dl>
+    <% @new_unit_info.each do |key, value| %>
+    <dt>
+      <label for="unit_name"><%= key.capitalize %> info:</label>
+    </dt>
+    <dd>
+      <input name="unit_name" placeholder="~required~" type="text"  value="">
+    </dd>
+    <% end %>
+  </dl>
+  <fieldset class="actions">
+    <input type="submit" value="Save">
+    <a href="/">Cancel</a>
+  </fieldset>
+</form>
