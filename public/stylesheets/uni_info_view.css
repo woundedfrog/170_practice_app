@@ -8,9 +8,14 @@ basic styles
 
   a:link, a:active, a:visited  {
     padding: .2em;
-    font-size: .7em;
     color: red;
   }
+
+#add_new_unit {
+    font-size: 1em;
+    padding: .5em;
+    background-color: lightblue;
+}
 
     /* ===========index profiles=========== */
 
@@ -28,6 +33,16 @@ basic styles
   .unit_div {
     padding-left: 10px;
     width: 110px;
+  }
+
+  #form_div {
+    width: 100%;
+  }
+
+  .content {
+    max-width: 100%;
+    margin-top: .5em;
+    margin-bottom: .5em;
   }
 
   .index_unit_title {

@@ -10,7 +10,7 @@ new_unit:
   tap: ''
   slide: ''
   drive: ''
-  index: nil
+  index: 0
 bisa:
   pic: "/images/bisa.jpg"
   tier: B
@@ -26,22 +26,7 @@ bisa:
     150 damage IF Debuff Type target. \n·Ignore 200 defense IF Dark Type target"
   drive: "·Deals 2588 damage to all enemies."
   index: 1
-test:
-  pic: "/images/test.jpg"
-  tier: B
-  stars: ''
-  type: attacker
-  element: fire
-  leader: "·Slilde Skills Damage +8% to Light Types allies."
-  auto: "·Deals 113 damage."
-  tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
-    'Taunt' & 'Reflect' ) to self for 13 seconds \n·Underground Only, Additional 430
-    damage to target."
-  slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \n·Additional
-    150 damage IF Debuff Type target. \n·Ignore 200 defense IF Dark Type target"
-  drive: "·Deals 2588 damage to all enemies."
-  index: 2
-dinashi:
+dinash4i:
   pic: "/images/dinashi.jpg"
   tier: B
   stars: '5'
@@ -53,3 +38,54 @@ dinashi:
   drive: Gives shield for 5 fire units.
   leader: Fire allies atk +10
   index: 3
+dinashi3:
+  pic: "/images/dinashi.jpg"
+  tier: B
+  stars: '5'
+  type: tank
+  element: fire
+  auto: 100 damage to 1 unit
+  tap: Give 1500 shield to 5 fire allies.
+  slide: Double-edge sword - increase atk power and decrease def power by 90%.
+  drive: Gives shield for 5 fire units.
+  leader: Fire allies atk +10
+  index: 5
+test:
+  pic: "/images/test.jpg"
+  tier: B
+  stars: ''
+  type: attacker
+  element: fire
+  leader: "·Slilde Skills Damage +8% to Light Types allies."
+  auto: "·Deals 113 damage."
+  tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
+    'Taunt' & 'Reflect' ) to self for 13 seconds \r\n·Underground Only, Additional
+    430 damage to target."
+  slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \r\n·Additional
+    150 damage IF Debuff Type target. \r\n·Ignore 200 defense IF Dark Type targetddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd"
+  drive: "·Deals 2588 damage to all enemies."
+  index: 2
+dinashi:
+  pic: "/images/dinashi.jpg"
+  tier: B
+  stars: '5'
+  type: tank
+  element: fire
+  auto: 100 damage to 1 unitfsdf
+  tap: Give 1500 shield to 5 fire allies.
+  slide: Double-edge sword - increase atk power and decrease def power by 90%.
+  drive: Gives shield for 5 fire units.asdfasd
+  leader: Fire allies atk +10
+  index: 4
+ddhhd43:
+  pic: "/images/"
+  tier: ''
+  stars: ew
+  type: ''
+  element: ''
+  leader: ''
+  auto: ewwe
+  tap: d
+  slide: we4
+  drive: ewdfsdf
+  index: 6

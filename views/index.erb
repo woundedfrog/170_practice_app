@@ -1,6 +1,6 @@
-<a  href="/new_unit">Add new unit</a>
+<a id="add_new_unit" href="/new_unit">Add new unit</a>
 <div class="units_list_div">
-
+# <%= @units["new_unit"]["index"] == 'nil'%>
     <% @units.each do |unit, unit_details| %>
       <% next if unit == "new_unit" %>
 

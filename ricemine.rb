@@ -76,17 +76,19 @@ end
 
 post "/new_unit" do
   unit_data = load_unit_details
-  @new_unit_info = unit_data["new_unit"]
+  # @new_unit_info = unit_data["new_unit"]
+  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
   name = params[:unit_name]
   pic = params[:pic]
 
   if params[:unit_name] == ""
     status 422
-    erb :new_unit
-  elsif unit_data.include?(name) && params["index"] == nil
+    redirect "/#{original_unit.keys.first}/edit"
+  elsif unit_data.include?(name) && unit_data[name][params["index"]] != nil
     status 422
-    erb :new_unit
+    @x = unit_data[name][params["index"]]
+    redirect "/#{params[:unit_name]}/edit"
   else
     index = unit_data.size
     pic = "/images/" + pic unless pic.include?("/images/")
