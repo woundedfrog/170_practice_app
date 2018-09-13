@@ -2,41 +2,159 @@
 basic styles
 ===================== */
   body {
-    padding: .3em;
     font-family: sans-serif;
+    background-color: #505560;
+    margin: 0em;
   }
 
   a:link, a:active, a:visited  {
-    padding: .2em;
-    color: red;
+  color: #bec6dd;
+  text-decoration: none;
   }
 
-#add_new_unit {
-    font-size: 1em;
-    padding: .5em;
-    background-color: lightblue;
+  h1 {
+    margin: 0em;
+    padding: 1em;
+    background-color: #292b33;
+    color: #e8a855;
+
+  }
+
+#add_new_unit, #back_to_main {
+  /* margin: 1em; */
+  max-width: 100px;
+  margin-top: .5em;
+  margin-left: .5em;
+  padding: .3em;
+  background-color: #666b75;
+  border-style: solid;
+  border-width: 1px;
 }
 
-    /* ===========index profiles=========== */
+/* ===========index profiles=========== */
 
-  .unit_index_pic {
-    height: 200px;
-    width: 100px;
+  main {
+    padding-left: 1em;
+    padding-right: 1em;
   }
 
   .units_list_div {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: .5em;
+  }
+
+  .unit_index_pic {
+    height: 200px;
+    width: 100px;
   }
 
   .unit_div {
-    padding-left: 10px;
     width: 110px;
+    background-color: #292b33;
+    margin-left: .5em;
+    margin-top: .5em;
   }
 
-  #form_div {
+  .action_buttons {
+    display: flex;
+    flex-direction: row;
+    padding: .5em;
+    padding-left: 0em;
+    background-color: #292b33;
+  }
+
+  h2 {
+    font-size: 1em;
+    height: auto;
+    margin: 0em;
+    padding: .3em;
+    padding-left: .2em;
+    background-color: #32343d;
+    color: #e8a855;
+  }
+
+  .edit_button {
+    padding-left: .2em;
+  }
+
+  .delete_button {
+    padding-left: .5em;
+    height: 15px;
+  }
+  /* ===========unit profiles=========== */
+
+  .unit_profile_div {
+    margin-top: 1em;
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+
+  .unit_header_div {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .main_short_unit_stats_div {
+    display: flex;
+    flex-direction: row;
+    flex-flow: wrap;
+  }
+
+  .unit_profile_pic {
+    padding-left: 10px;
+    width: 100%;
+  }
+
+  .short_unit_stats_div {
+    background-color:#424451;
+    border-style: solid;
+    border-width: 1px;
+  }
+
+  .short_stat_title {
+    font-size: 1em;
+    margin: 0em;
+    padding: .3em;
+    background-color: #32343d;
+    color: #e8a855;
+  }
+
+  .short_stats {
+    width: 100%;
+    font-size: .9em;
+    color: #c1885e;
+    padding-left: 1em;
+    padding-right: 1em;
+  }
+
+  .unit_stats_div {
+    background-color:#424451;
+    padding-bottom: 1em;
+  }
+
+  .stat_title {
+    font-size: 1em;
+    height: auto;
+    margin: 0em;
+    padding: .3em;
+    background-color: #32343d;
+    color: #e8a855;
+  }
+
+  .stats {
+    font-size: .9em;
+    color: #c1885e;
+  }
+
+
+  /* ===========form profiles=========== */
+  .form_div, .form_div2 {
+    /* margin: 1em; */
+      background-color:#424451;
   }
 
   .content {
@@ -45,106 +163,28 @@ basic styles
     margin-bottom: .5em;
   }
 
-  .index_unit_title {
-    display: flex;
-    flex-direction: row;
-    padding: .6em;
-    padding-left: 0em;
+  label {
+    color: #e8a855;
   }
 
-  h3 {
-    font-size: 1em;
-    height: .1em;
-    padding: .5em;
-    padding-left: 0em;
-    margin: 0em;
-  }
+  dt {
 
-  .edit_button {
-    align-self: center;
-    height: 15px;
-  }
-
-  .delete_button {
-    align-self: center;
+    background-color: #32343d;
     padding-left: .5em;
-    height: 15px;
-  }
-  /* ===========unit profiles=========== */
-
-  .unit_profile_div {
-      padding-top: .5em;
+    padding: .5em;
   }
 
-  .unit_pic_div {
-    padding-left: 50px;
+  input, textarea {
+      background-color: #b7bacc;
   }
 
-  .stat_title {
-    font-size: .7em;
-    color: #320099;
-  }
-
-  .stats {
-    font-size: .5em;
-    color: gray;
-  }
-
+    /* ===========form profiles=========== */
 
 /* =====================
 medium window sizes
 ===================== */
-@media only screen and (min-width: 500px) {
+/* @media only screen and (min-width: 9000px) { */
 
-  /* ===========index profiles=========== */
-  .unit_index_pic {
-    height: 200px;
-    width: 100px;
-  }
-
-  .index_pic_large {
-    height: 200px;
-    width: 100px;
-  }
-
-  .units_list_div {
-    display: flex;
-    flex-direction: row;
-  }
-
-  .unit_div {
-    padding-left: 10px;
-  }
-
-  /* ===========unit profiles=========== */
-    .unit_profile_div {
-        padding-top: .5em;
-        background-color: lightblue;
-        display: flex;
-        flex-direction: row;
-    }
-
-    .unit_pic_div {
-      padding-left: 50px;
-      width: 300px;
-
-    }
-
-    .stat_title {
-      font-size: .7em;
-      color: #320099;
-    }
-
-    .stats {
-      font-size: .5em;
-      color: gray;
-      width: 300px;
-    }
-
-    .unit_stats_div {
-      width: 200px;
-    }
-}
 
 
 /* =====================
