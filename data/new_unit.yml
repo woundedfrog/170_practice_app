@@ -1,0 +1,14 @@
+new_unit:
+  pic: ''
+  pic2: ''
+  pic3: ''
+  tier: ''
+  stars: ''
+  type: ''
+  element: ''
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 0
