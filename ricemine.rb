@@ -165,18 +165,26 @@ post "/new_unit" do
   data = load_unit_details
   name = params[:unit_name]
   index =  data.size + 1 || params["index"].to_i
-  if params["edited"] && (unit_data.include?(name) == false && index != unit_data[name]["index"])
+  if unit_data.include?(name) && index != unit_data[name]["index"]
+    #this clause makes sure we can only edit units if there are no name conflicts.
+
+    session[:message] = "A unit by that name already exists. Please enter a different unit name."
+    if params["edited"]
+        status 422
+        redirect "/#{params[:unit_name]}/edit"
+      else
+        status 422
+        redirect "/new_unit"
+      end
+      # redirect "/new_unit"
+  elsif params["edited"] && (unit_data.include?(name) == false && index != unit_data[name]["index"])
+    #this clause makes sure we can only edit units if there are no name conflicts.
     original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
 
-    # old_name = get_unit_name(index)
-    old_name = original_unit.keys.first
-    data[name] = data.delete(old_name)
-  elsif unit_data.include?(name) && index != unit_data[name]["index"]
-      status 422
-      erb :new_unit
-      session[:message] = "A unit by that name already exists. Please enter a different unit name."
-      redirect "/new_unit"
+# old_name = get_unit_name(index)
+old_name = original_unit.keys.first
+data[name] = data.delete(old_name)
   else
     data[name] = {}
   end
@@ -232,12 +240,14 @@ get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
   unit = params[:unit_name]
   units_info = load_unit_details
 
-  if params[:unit_name] == ""
+  if units_info.include?(params[:unit_name]) == false
     status 422
-    erb :new_unit
+    session[:message] = "That unit doesn't exist."
+    redirect "/"
   else
     units_info.delete(unit)
     File.write("data/unit_details.yml", YAML.dump(units_info))
+    session[:message] = "That unit successfully deleted."
     redirect "/"
   end
 end
