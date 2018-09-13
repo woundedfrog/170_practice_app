@@ -71,6 +71,15 @@ def unit_data_path
   end
 end
 
+def load_new_unit
+  unit_list = if ENV["RACK_ENV"] == "test"
+    File.expand_path("../test/data/new_unit.yml", __FILE__)
+  else
+    File.expand_path("../data/new_unit.yml", __FILE__)
+  end
+  YAML.load_file(unit_list)
+end
+
 def load_unit_details
   unit_list = if ENV["RACK_ENV"] == "test"
     File.expand_path("../test/data/unit_details.yml", __FILE__)
@@ -86,7 +95,7 @@ def get_unit_files(unit)
   [profile, skins]
 end
 
-def delete_unit(index)
+def get_unit_name(index)
   unit_name = ''
   load_unit_details.each do |name, info|
     if info["index"] == index
@@ -129,7 +138,7 @@ end
 
 get "/new_unit" do
   require_user_signin
-  @new_unit_info = load_unit_details["new_unit"]
+  @new_unit_info = load_new_unit["new_unit"]
   erb :new_unit
 end
 
@@ -152,6 +161,7 @@ end
 post "/new_unit" do
   unit_data = load_unit_details
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
+
 
   name = params[:unit_name]
 
@@ -178,7 +188,7 @@ post "/new_unit" do
 
     if params["index"] != nil
       index = params["index"].to_i
-      old_name = delete_unit(index)
+      old_name = get_unit_name(index)
       data[name] = data.delete(old_name)
     else
       data[name] = {}
@@ -186,8 +196,8 @@ post "/new_unit" do
 
     data[name]["tier"] = params[:tier]
     data[name]["pic"] = pname
-    data[name]["pic2"] = params[:pic2]
-    data[name]["pic3"] = params[:pic3]
+    data[name]["pic2"] = params[:pic2].include?("/images/") ? params[:pic2] : "/images/" + params[:pic2]
+    data[name]["pic3"] =  params[:pic3].include?("/images/") ? params[:pic3] : "/images/" + params[:pic3]
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
     data[name]["element"] = params[:element]
