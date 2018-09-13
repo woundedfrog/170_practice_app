@@ -1,6 +1,8 @@
 ---
 new_unit:
-  pic: "/images/"
+  pic: ''
+  pic2: ''
+  pic3: ''
   tier: ''
   stars: ''
   type: ''
@@ -11,12 +13,42 @@ new_unit:
   slide: ''
   drive: ''
   index: 0
-bisa:
-  pic: "/images/bisa.jpg"
+dinashiD:
+  pic: "/images/dinashi.jpg"
+  pic2: "/images/"
+  pic3: "/images/"
   tier: B
   stars: '5'
-  type: support
-  element: water
+  type: defensive
+  element: dark
+  auto: 100 damage to 1 unitfsdf
+  tap: Give 1500 shield to 5 fire allies.
+  slide: Double-edge sword - increase atk power and decrease def power by 90%.
+  drive: Gives shield for 5 fire units.asdfasd
+  leader: Fire allies atk +10
+  index: 2
+dinashiO:
+  pic: "/images/dinashi.jpg"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: offensive
+  element: fire
+  auto: 100 damage to 1 unitfsdf
+  tap: Give 1500 shield to 5 fire allies.
+  slide: Double-edge sword - increase atk power and decrease def power by 90%.
+  drive: Gives shield for 5 fire units.asdfasd
+  leader: Fire allies atk +10
+  index: 3
+bisaD:
+  pic: "/images/bisa.jpg"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: defensive
+  element: fire
   leader: "·Slilde Skills Damage +8% to Light Types allies."
   auto: "·Deals 113 damage."
   tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
@@ -25,52 +57,35 @@ bisa:
   slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \r\n·Additional
     150 damage IF Debuff Type target. \r\n·Ignore 200 defense IF Dark Type target"
   drive: "·Deals 2588 damage to all enemies.asdf3"
-  index: 1
-dinashi:
-  pic: "/images/dinashi.jpg"
+  index: 5
+bisa11:
+  tier: ''
+  pic: "/images/bisa.jpg"
+  pic2: ''
+  pic3: ''
+  stars: ''
+  type: ''
+  element: ''
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 6
+bisa0H:
+  pic: "/images/bisa.jpg"
+  pic2: ''
+  pic3: ''
   tier: B
   stars: '5'
-  type: defensive
-  element: fire
-  auto: 100 damage to 1 unitfsdf
-  tap: Give 1500 shield to 5 fire allies.
-  slide: Double-edge sword - increase atk power and decrease def power by 90%.
-  drive: Gives shield for 5 fire units.asdfasd
-  leader: Fire allies atk +10
+  type: healing
+  element: dark
+  leader: "·Slilde Skills Damage +8% to Light Types allies."
+  auto: "·Deals 113 damage."
+  tap: "Deals 486 damage to target. ·65% chance to apply 'Long Range Attack' (ignore
+    'Taunt' & 'Reflect' ) to self for 13 seconds \r\n·Underground Only, Additional
+    430 damage to target."
+  slide: "·Deals 755 damage 2times to 2enemies (prioritizing dark type enemies) \r\n·Additional
+    150 damage IF Debuff Type target. \r\n·Ignore 200 defense IF Dark Type target"
+  drive: "·Deals 2588 damage to all enemies.asdf3"
   index: 4
-uploaded:
-  pic: "/images/bisa.jpg"
-  tier: ''
-  stars: ''
-  type: ''
-  element: ''
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: sa
-  index: 4
-world:
-  pic: "/images/offensive.png"
-  tier: ''
-  stars: ''
-  type: ''
-  element: ''
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 5
-dinashi2:
-  pic: "/images/dinashi2.jpg"
-  tier: ''
-  stars: ''
-  type: ''
-  element: ''
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 5

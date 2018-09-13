@@ -1,5 +1,13 @@
-<div id="add_new_unit">
-  <a href="/new_unit">Add new unit</a>
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+  <div id="links">
+  <% if session[:username] %><a id="add_new_unit" href="/new_unit">Add new unit</a><% end %>
+  <a href="/">Sort by name</a>
+  <a href="/sort_by/tier">Sort by tier</a>
+  <a href="/sort_by/type">Sort by type</a>
+  <a href="/sort_by/element">Sort by element</a>
+  <a href="/sort_by/stars">Sort by stars</a>
 </div>
 <div class="units_list_div">
     <% @units.each do |unit, unit_details| %>
@@ -8,7 +16,7 @@
 
       <div class="unit_div">
         <h2><%= unit.capitalize %></h2>
-        <a href="/<%= unit %>/edit">Edit</a> | 
+        <a href="/<%= unit %>/edit">Edit</a> |
         <a href="/<%= unit %>/remove">Remove</a>
         <!-- <div class="action_buttons">
           <form class="edit_button" action="/<%= unit %>/edit" method="get">
