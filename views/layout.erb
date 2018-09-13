@@ -8,6 +8,9 @@
   <body>
     <h1>Destiny Japan units info</h1>
     <main>
+      <% if session[:message] %>
+        <p class="message"><%= session.delete(:message) %></p>
+      <% end %>
       <%= yield %>
     </main>
   </body>
