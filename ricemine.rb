@@ -160,10 +160,26 @@ end
 
 post "/new_unit" do
   unit_data = load_unit_details
-  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
-
-
+  @new_unit_info = load_new_unit["new_unit"]
+  @current_unit = load_unit_details[params[:unit_name]]
+  data = load_unit_details
   name = params[:unit_name]
+  index =  data.size + 1 || params["index"].to_i
+  if params["edited"] && (unit_data.include?(name) == false && index != unit_data[name]["index"])
+    original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
+
+
+    # old_name = get_unit_name(index)
+    old_name = original_unit.keys.first
+    data[name] = data.delete(old_name)
+  elsif unit_data.include?(name) && index != unit_data[name]["index"]
+      status 422
+      erb :new_unit
+      session[:message] = "A unit by that name already exists. Please enter a different unit name."
+      redirect "/new_unit"
+  else
+    data[name] = {}
+  end
 
   # V this uploads and takes the pic file and processes it.
   if params[:file] != nil
@@ -178,21 +194,20 @@ post "/new_unit" do
   end
   # ^ this uploads and takes the pic file and processes it.
 
-  if unit_data.include?(name) && unit_data[name][params["index"]] != nil
-    status 422
-    redirect "/#{params[:unit_name]}/edit"
-  else
-    index = unit_data.size
-    pname = "/images/" + pname unless pname.include?("/images/")
-    data = load_unit_details
+  # if unit_data.include?(name) && unit_data[name][params["index"]] != nil
+  #   status 422
+  #   redirect "/#{params[:unit_name]}/edit"
+  # else
+  #   index = unit_data.size
+pname = "/images/" + pname unless pname.include?("/images/")
 
-    if params["index"] != nil
-      index = params["index"].to_i
-      old_name = get_unit_name(index)
-      data[name] = data.delete(old_name)
-    else
-      data[name] = {}
-    end
+    # if params["index"] != nil
+    #   index = params["index"].to_i
+    #   old_name = get_unit_name(index)
+    #   data[name] = data.delete(old_name)
+    # else
+    #   # data[name] = {}
+    # end
 
     data[name]["tier"] = params[:tier]
     data[name]["pic"] = pname
@@ -210,7 +225,6 @@ post "/new_unit" do
 
     File.write("data/unit_details.yml", YAML.dump(data))
     redirect "/"
-  end
 end
 
 get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
