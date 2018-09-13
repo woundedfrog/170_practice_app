@@ -6,6 +6,7 @@
       </dt>
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
+        <input name="edited" type="checkbox" required>
       </dd>
       <% @current_unit.each do |key, value| %>
       <dt>
