@@ -1,5 +1,4 @@
-<div id="form_div">
-  <%= @x %>
+<div class="form_div2">
   <form action="/new_unit" method="post">
     <dl>
       <dt>
@@ -13,7 +12,7 @@
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
       <dd>
-        <% if key == "pic" || key == "tier" || key == "leader" || key == "stars" || key == "type" || key == "element" %>
+        <% if is_special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">

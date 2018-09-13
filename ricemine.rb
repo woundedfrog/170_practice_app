@@ -8,9 +8,19 @@ require "nokogiri"
 require "fileutils"
 
 helpers do
-  def display_profile_pic(unit)
-    data = unit_data_path
-    "/"
+
+  def is_special_key?(key)
+    ["pic", "tier", "leader", "stars", "type", "element"].include?(key.to_s)
+  end
+
+  def format_stat(info_val)
+    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
+      "<img src='/images/#{info_val}.png' style='width:25%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
+    elsif  ['defensive', 'offensive', 'support', 'healing', 'restraint'].include?(info_val)
+      "<img src='/images/#{info_val}.png' style='width:30%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
+    else
+      info_val
+    end
   end
 end
 
@@ -53,14 +63,18 @@ def delete_unit(index)
 end
 
 get "/" do
-  @title = "Destiny Japan units info"
   @units = load_unit_details
+  @units = @units.sort_by { |k, v| k }.to_h
   erb :index
 end
 
 get "/new_unit" do
   @new_unit_info = load_unit_details["new_unit"]
   erb :new_unit
+end
+
+get "/upload" do
+  erb :upload
 end
 
 get "/:unit_name" do
@@ -76,22 +90,31 @@ end
 
 post "/new_unit" do
   unit_data = load_unit_details
-  # @new_unit_info = unit_data["new_unit"]
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
   name = params[:unit_name]
-  pic = params[:pic]
-
+ # V this uploads and takes the pic file and processes it.
+  if params[:file] != nil
+    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
+  directory = "public/images"
+  path = File.join(directory, pname)
+  File.open(path, "wb") { |f| f.write(tmpfile.read) }
+  "file uploaded"
+elsif params[:pic]
+  pname = params[:pic]
+else
+    pname = params[:unit_name] + ".jpg"
+  end
+# ^ this uploads and takes the pic file and processes it.
   if params[:unit_name] == ""
     status 422
     redirect "/#{original_unit.keys.first}/edit"
   elsif unit_data.include?(name) && unit_data[name][params["index"]] != nil
     status 422
-    @x = unit_data[name][params["index"]]
     redirect "/#{params[:unit_name]}/edit"
   else
     index = unit_data.size
-    pic = "/images/" + pic unless pic.include?("/images/")
+    pname = "/images/" + pname unless pname.include?("/images/")
     data = load_unit_details
 
     if params["index"] != nil
@@ -102,7 +125,10 @@ post "/new_unit" do
       data[name] = {}
     end
 
-    data[name]["pic"] = pic
+
+
+
+    data[name]["pic"] = pname
     data[name]["tier"] = params[:tier]
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
@@ -119,7 +145,7 @@ post "/new_unit" do
   end
 end
 
-post "/:unit_name/remove" do
+get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
   unit = params[:unit_name]
   units_info = load_unit_details
 
@@ -131,4 +157,37 @@ post "/:unit_name/remove" do
     File.write("data/unit_details.yml", YAML.dump(units_info))
     redirect "/"
   end
+end
+
+post "/:unit_name/remove" do  #use this if using the form buttons for edit/remove
+  unit = params[:unit_name]
+  units_info = load_unit_details
+
+  if params[:unit_name] == ""
+    status 422
+    erb :new_unit
+  else
+    units_info.delete(unit)
+    File.write("data/unit_details.yml", YAML.dump(units_info))
+    redirect "/"
+  end
+end
+
+post '/upload' do
+  # tempfile = params['file'][:tempfile]
+  # filename = params['file'][:filename]
+  # File.copy(tempfile.path, "./files/#{filename}")
+  # # erb :new_unit
+  # redirect "/new_unit"
+  unless params[:file] &&
+         (tmpfile = params[:file][:tempfile]) &&
+         (name = params[:file][:filename])
+         @error = "No file selected"
+           return haml(:upload)
+  end
+           directory = "public/images"
+           path = File.join(directory, name)
+           File.open(path, "wb") { |f| f.write(tmpfile.read) }
+           "file uploaded"
+      erb :upload
 end

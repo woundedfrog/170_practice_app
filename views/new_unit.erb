@@ -1,5 +1,5 @@
-<div id="form_div">
-  <form action="/new_unit" method="post">
+<div class="form_div">
+  <form action="/new_unit" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
         <label for="unit_name">Enter a unit name:</label>
@@ -12,7 +12,10 @@
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
       <dd>
-        <% if key == "pic" || key == "tier" || key == "leader" || key == "stars" || key == "type" || key == "element" %>
+        <% if key == "pic" %>
+          <label for="upload">upload a file</label>
+          <input type="file" name="file" value="upload">
+        <% elsif is_special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>" disabled>
