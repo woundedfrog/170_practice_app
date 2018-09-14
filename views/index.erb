@@ -17,8 +17,10 @@
       <div class="unit_div <%= unit_details["element"] %>">
         <h2><%= unit.capitalize %></h2>
         <% if session[:username] %>
-        <a href="/<%= unit %>/edit">Edit</a> |
+        <a href="/<%= unit %>/edit">Edit</a>|
         <a href="/<%= unit %>/remove">Remove</a>
+        <% else %>
+        <p>  </p>
         <% end %>
         <!-- <div class="action_buttons">
           <form class="edit_button" action="/<%= unit %>/edit" method="get">

@@ -83,20 +83,6 @@ aurora:
   slide: ''
   drive: ''
   index: 5
-ashtoreth:
-  tier: s
-  pic: "/images/ashtoreth.jpg"
-  pic2: "/images/ashtoreths.jpg"
-  pic3: "/images/"
-  stars: '5'
-  type: offensive
-  element: light
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 6
 brownie:
   tier: s
   pic: "/images/brownies.jpg"
@@ -391,3 +377,22 @@ gkouga:
   slide: ''
   drive: ''
   index: 23
+ashtoreth:
+  tier: s
+  pic: "/images/ashtoreth.jpg"
+  pic2: "/images/ashtoreths.jpg"
+  pic3: "/images/"
+  stars: '5'
+  type: offensive
+  element: light
+  leader: "·Tap Skill Damage +5% to Light Allies"
+  auto: "·Deals 113 damage"
+  tap: "·Deals 505 damage to highest attack enemy.\r\n·65% chance to Apply \"Direct
+    Hit\" (Ignore \"Invincibility\") to self for 13 seconds"
+  slide: "·Deals 830 damage to 3 highest attack enemies.\r\n·Ignore 800 defense.\r\n·Additional
+    800 damage IF target is \"Confused\" or have \"Invincibility\"."
+  drive: "·Deals 2339 damage to 4 highest attack enemies.\r\n·70% chance to Apply
+    \"Confuse\" (Confused Targets will attack their own allies and heals the enemy)
+    to target for 10 seconds .\r\n·90% chance to Apply \"Direct Hit\" (Ignore \"Invincibility\")
+    to self for 18 seconds."
+  index: 6

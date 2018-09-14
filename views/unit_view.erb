@@ -16,7 +16,7 @@
         <div class="short_unit_stats_div">
             <h3 class="short_stat_title"><%= info_key.capitalize %>:</h3>
             <!-- <ul> -->
-              <p class="short_stats"><%= format_stat(info_val) %></p>
+              <p class="short_stats"><%= format_stat(info_key, info_val) %></p>
             <!-- </ul> -->
         </div>
       <% end %>
@@ -27,39 +27,18 @@
  </div>
 
 
-  <div class="main_unit_stats_div">
-    <% @current_unit.each do |info_key, info_val| %>
-      <% unless is_special_key?(info_key) || info_key == "index" %>
-      <div class="unit_stats_div">
-          <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
-          <ul>
-            <li class="stats"><%= info_val %></li>
-          </ul>
-        <% end %>
-      </div>
+ <div class="main_unit_stats_div">
+   <% @current_unit.each do |info_key, info_val| %>
+     <% unless is_special_key?(info_key) || info_key == "index" %>
+     <div class="unit_stats_div">
+         <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
+         <ul>
+           <% info_val.split(".").each do |line| %>
+             <p class="short_stats"><%= line %></p>
+           <% end %>
+         </ul>
+       <% end %>
+     </div>
 
-    <% end %>
-  </div>
-
-</div>
-
-<!-- <div id="back_to_main">
-  <a href="/">Main unit list</a>
-</div>
-<div class="unit_profile_div">
-  <div class="unit_pic_div">
-    <img class="unit_profile_pic" src="<%= @current_unit["pic"] %>"/>
-  </div>
-
-    <% @current_unit.each do |info_key, info_val| %>
-    <div class="unit_stats_div">
-      <% unless info_key == "pic" || info_key == "index" %>
-          <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
-          <ul>
-            <li class="stats"><%= info_val %></li>
-          </ul>
-      <% end %>
-
-    </div>
-    <% end %>
-</div> -->
+   <% end %>
+ </div>

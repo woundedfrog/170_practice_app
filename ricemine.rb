@@ -17,8 +17,8 @@ helpers do
     ["pic", "pic2", "pic3", "tier", "leader", "stars", "type", "element"].include?(key.to_s)
   end
 
-  def format_stat(info_val)
-    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
+  def format_stat(stat_key, info_val)
+   if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
       "<img src='/images/#{info_val}.png' style='width:25%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
     elsif  ['defensive', 'offensive', 'support', 'healing', 'restraint'].include?(info_val)
       "<img src='/images/#{info_val}.png' style='width:30%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
