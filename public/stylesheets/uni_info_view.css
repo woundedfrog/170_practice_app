@@ -48,6 +48,27 @@ basic styles
     padding-left: 1em;
     padding-right: 1em;
   }
+/* ===========index profiles borders=========== */
+  .fire {
+    border-style: solid;
+    border-color: darkred;
+  }
+  .water {
+    border-style: solid;
+    border-color: blue;
+  }
+  .earth {
+    border-style: solid;
+    border-color: green;
+  }
+  .dark {
+    border-style: solid;
+    border-color: purple;
+  }
+  .light {
+    border-style: solid;
+    border-color: lightyellow;
+  }
 
   .units_list_div {
     display: flex;

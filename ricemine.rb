@@ -163,9 +163,10 @@ post "/new_unit" do
   unit_data = load_unit_details
   @new_unit_info = load_new_unit["new_unit"]
   @current_unit = load_unit_details[params[:unit_name]]
+  @max_index_val = load_unit_details.sort_by { |k, v| v["index"] }.to_h
   data = load_unit_details
   name = params[:unit_name]
-  index = params[:index]
+  index = params[:index].to_i
 
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
