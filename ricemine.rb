@@ -164,24 +164,7 @@ post "/new_unit" do
   @current_unit = load_unit_details[params[:unit_name]]
   data = load_unit_details
   name = params[:unit_name]
-  index =  params["index"].to_i || data.size + 1
-
-  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
-
-  # V this uploads and takes the pic file and processes it.
-  if params[:file] != nil
-    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = "public/images"
-    path = File.join(directory, pname)
-    File.open(path, "wb") { |f| f.write(tmpfile.read) }
-  elsif params[:pic]
-    pname = params[:pic]
-  else
-    pname = params[:unit_name] + ".jpg"
-  end
-  pname = "/images/" + pname unless pname.include?("/images/")
-  # ^ this uploads and takes the pic file and processes it.
-
+  index =  data.size + 1 || params["index"].to_i
   if unit_data.include?(name) && index != unit_data[name]["index"]
     #this clause makes sure we can only edit units if there are no name conflicts.
 
@@ -189,17 +172,21 @@ post "/new_unit" do
     if params["edited"]
         status 422
         redirect "/#{params[:unit_name]}/edit"
-    else
+      else
         status 422
         redirect "/new_unit"
-    end
+      end
+      # redirect "/new_unit"
+  elsif params["edited"] && (unit_data.include?(name) == false && index != unit_data[name]["index"])
+    #this clause makes sure we can only edit units if there are no name conflicts.
+    original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
-    elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
-      old = data.delete(original_unit.keys.first)
-      data[name] = {}
-    else
-      old = data.delete(original_unit.keys.first)
-      data[name] = {}
+
+# old_name = get_unit_name(index)
+old_name = original_unit.keys.first
+data[name] = data.delete(old_name)
+  else
+    data[name] = {}
   end
 
   # V this uploads and takes the pic file and processes it.
@@ -213,8 +200,22 @@ post "/new_unit" do
   else
     pname = params[:unit_name] + ".jpg"
   end
-  pname = "/images/" + pname unless pname.include?("/images/")
   # ^ this uploads and takes the pic file and processes it.
+
+  # if unit_data.include?(name) && unit_data[name][params["index"]] != nil
+  #   status 422
+  #   redirect "/#{params[:unit_name]}/edit"
+  # else
+  #   index = unit_data.size
+pname = "/images/" + pname unless pname.include?("/images/")
+
+    # if params["index"] != nil
+    #   index = params["index"].to_i
+    #   old_name = get_unit_name(index)
+    #   data[name] = data.delete(old_name)
+    # else
+    #   # data[name] = {}
+    # end
 
     data[name]["tier"] = params[:tier]
     data[name]["pic"] = pname
@@ -268,14 +269,14 @@ end
 #used to upload a file without creating a new unit
 post '/upload' do
   unless params[:file] &&
-    (tmpfile = params[:file][:tempfile]) &&
-    (name = params[:file][:filename])
-    @error = "No file selected"
-    return haml(:upload)
+         (tmpfile = params[:file][:tempfile]) &&
+         (name = params[:file][:filename])
+         @error = "No file selected"
+           return haml(:upload)
   end
-  directory = "public/images"
-  path = File.join(directory, name)
-  File.open(path, "wb") { |f| f.write(tmpfile.read) }
-  session[:message] = "file uploaded!"
-  erb :upload
+           directory = "public/images"
+           path = File.join(directory, name)
+           File.open(path, "wb") { |f| f.write(tmpfile.read) }
+           "file uploaded"
+      erb :upload
 end
