@@ -321,20 +321,6 @@ frey:
   slide: ''
   drive: ''
   index: 22
-Gkouga:
-  tier: s
-  pic: "/images/gkougas.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
-  stars: '5'
-  type: offensive
-  element: earth
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 23
 hades:
   tier: b
   pic: "/images/hadess.jpg"
@@ -391,3 +377,17 @@ hestia:
   slide: ''
   drive: ''
   index: 27
+gkouga:
+  tier: s
+  pic: "/images/gkougas.jpg"
+  pic2: "/images/"
+  pic3: "/images/"
+  stars: '5'
+  type: offensive
+  element: earth
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 23
