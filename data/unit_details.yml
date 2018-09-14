@@ -1,18 +1,4 @@
 ---
-dinashi2:
-  tier: ''
-  pic: "/images/bisa.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
-  stars: ''
-  type: ''
-  element: earth
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: b
-  drive: ''
-  index: 1
 bisa:
   tier: ''
   pic: "/images/bisa.jpg"
@@ -27,31 +13,3 @@ bisa:
   slide: ''
   drive: ''
   index: 2
-dasfd:
-  tier: ''
-  pic: "/images/dark.png"
-  pic2: "/images/"
-  pic3: "/images/"
-  stars: ''
-  type: ''
-  element: ''
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 4
-bisaaa:
-  tier: ''
-  pic: "/images/light.png"
-  pic2: "/images/"
-  pic3: "/images/"
-  stars: ''
-  type: ''
-  element: ''
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 6
