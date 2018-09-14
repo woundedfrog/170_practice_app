@@ -1,15 +1,85 @@
 ---
 bisa:
-  tier: ''
+  tier: s
   pic: "/images/bisa.jpg"
   pic2: "/images/"
   pic3: "/images/"
-  stars: ''
-  type: ''
-  element: dark
-  leader: rr
+  stars: '5'
+  type: support
+  element: water
+  leader: ''
   auto: ''
-  tap: rr
+  tap: ''
   slide: ''
   drive: ''
   index: 2
+abaddon:
+  tier: ''
+  pic: "/images/abaddon.jpg"
+  pic2: "/images/"
+  pic3: "/images/"
+  stars: '5'
+  type: offensive
+  element: earth
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 1
+ai:
+  tier: c
+  pic: "/images/ai.jpg"
+  pic2: "/images/"
+  pic3: "/images/"
+  stars: '5'
+  type: defensive
+  element: dark
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 3
+aria:
+  tier: a
+  pic: "/images/aria.jpg"
+  pic2: "/images/arias.jpg"
+  pic3: "/images/"
+  stars: '5'
+  type: support
+  element: light
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 0
+astraeas:
+  tier: a
+  pic: "/images/astraeas.jpg"
+  pic2: "/images/astraeas"
+  pic3: "/images/"
+  stars: '5'
+  type: healing
+  element: earth
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 4
+aurora:
+  tier: a
+  pic: "/images/auroras.jpg"
+  pic2: "/images/auroras2"
+  pic3: "/images/"
+  stars: '5'
+  type: healing
+  element: fire
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: '5'

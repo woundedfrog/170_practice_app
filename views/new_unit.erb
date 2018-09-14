@@ -19,7 +19,7 @@
         <% elsif is_special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
         <% elsif key == "index" %>
-         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>" disabled>
+         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val.map { |k, v| v["index"]}.max + 1 %>">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>
         <% end %>

@@ -139,6 +139,7 @@ end
 get "/new_unit" do
   require_user_signin
   @new_unit_info = load_new_unit["new_unit"]
+  @max_index_val = load_unit_details.sort_by { |k, v| v["index"] }.to_h
   erb :new_unit
 end
 
@@ -164,7 +165,7 @@ post "/new_unit" do
   @current_unit = load_unit_details[params[:unit_name]]
   data = load_unit_details
   name = params[:unit_name]
-  index =  params["index"].to_i || data.size + 1
+  index = params[:index]
 
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
 
@@ -217,7 +218,7 @@ post "/new_unit" do
   # ^ this uploads and takes the pic file and processes it.
 
     data[name]["tier"] = params[:tier]
-    data[name]["pic"] = pname
+    data[name]["pic"] = (pname += ".jpg")
     data[name]["pic2"] = params[:pic2].include?("/images/") ? params[:pic2] : "/images/" + params[:pic2]
     data[name]["pic3"] =  params[:pic3].include?("/images/") ? params[:pic3] : "/images/" + params[:pic3]
     data[name]["stars"] = params[:stars]
