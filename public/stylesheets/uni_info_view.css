@@ -98,6 +98,19 @@ basic styles
     margin-top: .5em;
   }
 
+  .sc_index_pic {
+    width: 150px;
+  }
+
+  .sc_div {
+    width: 150px;
+    height: 18.5em;
+    margin-left: .5em;
+    margin-top: .5em;
+    background-color: #292b33;
+  }
+
+
   .action_buttons {
     display: flex;
     flex-direction: row;
@@ -327,6 +340,19 @@ basic styles
         margin-left: .5em;
         margin-top: .5em;
       }
+
+
+        .sc_index_pic {
+          width: 150px;
+        }
+
+        .sc_div {
+          width: 150px;
+          height: 18.5em;
+          margin-left: .5em;
+          margin-top: .5em;
+          background-color: #292b33;
+        }
 
       .action_buttons {
         display: flex;

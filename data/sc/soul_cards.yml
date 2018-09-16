@@ -1,18 +1,4 @@
 ---
-bisa:
-  tier: 
-  pic: "/images/sc/4stars.jpg"
-  stats: ''
-  passive: ''
-  stars: '5'
-  index: 1
-test2:
-  tier: 
-  pic: "/images/sc/4stars.jpg"
-  stats: ''
-  passive: ''
-  stars: '3'
-  index: 2
 undersea date:
   pic: "/images/sc/underseadate.jpg"
   stars: '5'
@@ -29,3 +15,15 @@ beach relaxation:
   passive: "Restriction: Earth type.\r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
+seaside goddess:
+  pic: "/images/sc/seasidegoddess.jpg"
+  stars: '5'
+  stats: ''
+  passive: ''
+  index: 1
+vacation:
+  pic: "/images/sc/vacation.jpg"
+  stars: '3'
+  stats: ''
+  passive: ''
+  index: 2
