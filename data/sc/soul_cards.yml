@@ -1,0 +1,31 @@
+---
+bisa:
+  tier: 
+  pic: "/images/sc/4stars.jpg"
+  stats: ''
+  passive: ''
+  stars: '5'
+  index: 1
+test2:
+  tier: 
+  pic: "/images/sc/4stars.jpg"
+  stats: ''
+  passive: ''
+  stars: '3'
+  index: 2
+undersea date:
+  pic: "/images/sc/underseadate.jpg"
+  stars: '5'
+  stats: "Defense: 540 at lvl0 / 1520 at lvl50 / 2660 at lvl50 +5.\r\n\r\nAgility:
+    280 at lvl0  / 1260 at lvl50 / 2205 at lvl50 +5."
+  passive: "Restriction: Water type.\r\n\r\nPoison +500 in Underground.\r\nIf card
+    is +5 then 750 in Underground."
+  index: 3
+beach relaxation:
+  pic: "/images/sc/beachrelax.jpg"
+  stars: '5'
+  stats: "Attack: 540 at lvl0 / 1200 at lvl50 / 2660 at lvl50 +5.\r\n\r\nCritical:
+    280 at lvl0  / 1260 at lvl50 / 2205 at lvl50 +5."
+  passive: "Restriction: Earth type.\r\n\r\nFinal attack +700 in Ragna. \r\nIf card
+    is +5 then +1200 in Ragna."
+  index: 0

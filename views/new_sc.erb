@@ -1,13 +1,13 @@
 <div class="form_div">
-  <form action="/new_unit" method="post" enctype="multipart/form-data">
+  <form action="/equips/new_sc" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
-        <label for="unit_name">Enter a unit name:</label>
+        <label for="unit_name">Enter a card name:</label>
       </dt>
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
       </dd>
-      <% @new_unit_info.each do |key, value| %>
+      <% @card.each do |key, value| %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
@@ -16,19 +16,19 @@
           <label for="upload">upload a file</label>
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
-        <% elsif is_special_key?(key) %>
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
+        <% elsif key == "stars" %>
+        <input class="content" name="<%= key %>" placeholder="" type="text"  value="">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
         <% else %>
-          <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>
+          <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>
       </dd>
       <% end %>
     </dl>
     <fieldset class="actions">
       <input type="submit" value="Save">
-      <a href="/">Cancel</a>
+      <a href="/equips/soulcards">Cancel</a>
     </fieldset>
   </form>
 </div>

@@ -1,0 +1,36 @@
+<div class="form_div2">
+  <form action="/equips/new_sc" method="post" enctype="multipart/form-data">
+    <dl>
+      <dt>
+        <label for="unit_name">Enter a unit name:</label>
+      </dt>
+      <dd>
+        <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:sc_name] %>" required>
+        <input name="edited" type="checkbox" required>
+      </dd>
+      <% @current_card.each do |key, value| %>
+      <dt>
+        <label for="<% key %>"><%= key.capitalize %> info:</label>
+      </dt>
+      <dd>
+        <% if key == "pic" %>
+          <label for="upload">upload a file</label>
+          <input type="file" name="file" value="upload">
+          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+
+        <% elsif is_special_key?(key) %>
+          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+        <% elsif key == "index" %>
+         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
+        <% else %>
+          <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
+        <% end %>
+      </dd>
+      <% end %>
+    </dl>
+    <fieldset class="actions">
+      <input type="submit" value="Save">
+      <a href="/">Cancel</a>
+    </fieldset>
+  </form>
+</div>

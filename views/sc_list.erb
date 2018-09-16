@@ -1,0 +1,24 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+  <div id="links">
+  <% if session[:username] %><a id="add_new_unit" href="/equips/new_sc">Add new SoulCard</a><% end %>
+  <a href="/equips/soulcards">Show Soul Cards</a>
+  <a href="/">Sort by name</a>
+  <a href="/sort_by/stars">Sort by stars</a>
+</div>
+<div class="units_list_div">
+    <% @cards.each do |card, card_details| %>
+
+        <div class="unit_div">
+          <h2><%= card.capitalize %></h2>
+          <% if session[:username] %>
+            <a href="/equips/<%= card %>/edit">Edit</a>|
+            <a href="/equips/<%= card %>/remove">Remove</a>
+          <% else %>
+            <p>  </p>
+          <% end %>
+          <a href="/equips/soulcards/<%= card %>"><img class="unit_index_pic" src="<%= card_details['pic'] %>"/></a>
+        </div>
+    <% end %>
+</div>

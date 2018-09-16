@@ -3,6 +3,7 @@
 <% end %>
   <div id="links">
   <% if session[:username] %><a id="add_new_unit" href="/new_unit">Add new unit</a><% end %>
+  <a href="/equips/soulcards">Show Soul Cards</a>
   <a href="/">Sort by name</a>
   <a href="/sort_by/tier">Sort by tier</a>
   <a href="/sort_by/type">Sort by type</a>
@@ -13,24 +14,15 @@
     <% @units.each do |unit, unit_details| %>
       <% next if unit == "new_unit" %>
 
-
-      <div class="unit_div <%= unit_details["element"] %>">
-        <h2><%= unit.capitalize %></h2>
-        <% if session[:username] %>
-        <a href="/<%= unit %>/edit">Edit</a>|
-        <a href="/<%= unit %>/remove">Remove</a>
-        <% else %>
-        <p>  </p>
-        <% end %>
-        <!-- <div class="action_buttons">
-          <form class="edit_button" action="/<%= unit %>/edit" method="get">
-              <button type="submit">E</button>
-          </form>
-          <form class="delete_button" action="/<%= unit %>/remove" method="post">
-              <button type="submit">X</button>
-          </form>
-        </div> -->
-        <a href="/<%= unit %>"><img class="unit_index_pic" src="<%= unit_details['pic'] %>"/></a>
-      </div>
+        <div class="unit_div <%= unit_details["element"] %>">
+          <h2><%= unit.capitalize %></h2>
+          <% if session[:username] %>
+            <a href="/<%= unit %>/edit">Edit</a>|
+            <a href="/<%= unit %>/remove">Remove</a>
+          <% else %>
+            <p>  </p>
+          <% end %>
+          <a href="/<%= unit %>"><img class="unit_index_pic" src="<%= unit_details['pic'] %>"/></a>
+        </div>
     <% end %>
 </div>

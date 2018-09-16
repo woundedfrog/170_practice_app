@@ -63,13 +63,32 @@ end
 #   markdown.render(text)
 # end
 
-def unit_data_path
-  if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/data", __FILE__)
+# def unit_data_path
+#   if ENV["RACK_ENV"] == "test"
+#     File.expand_path("../test/data/", __FILE__)
+#   else
+#     File.expand_path("../data/", __FILE__)
+#   end
+# end
+
+def soulcards_data_path
+  unit_list = if ENV["RACK_ENV"] == "test"
+    File.expand_path("../test/data/sc/soul_cards.yml", __FILE__)
   else
-    File.expand_path("../data", __FILE__)
+    File.expand_path("../data/sc/soul_cards.yml", __FILE__)
   end
+  YAML.load_file(unit_list)
 end
+
+def new_soulcards_data_path
+  unit_list = if ENV["RACK_ENV"] == "test"
+    File.expand_path("../test/data/sc/new_soul_card.yml", __FILE__)
+  else
+    File.expand_path("../data/sc/new_soul_card.yml", __FILE__)
+  end
+  YAML.load_file(unit_list)
+end
+
 
 def load_new_unit
   unit_list = if ENV["RACK_ENV"] == "test"
@@ -89,11 +108,11 @@ def load_unit_details
   YAML.load_file(unit_list)
 end
 
-def get_unit_files(unit)
-  profile = ''
-  skins = ''
-  [profile, skins]
-end
+# def get_unit_files(unit)
+#   profile = ''
+#   skins = ''
+#   [profile, skins]
+# end
 
 def get_unit_name(index)
   unit_name = ''
@@ -103,6 +122,11 @@ def get_unit_name(index)
     end
   end
   unit_name
+end
+
+def get_max_index_number(list)
+  list.sort_by { |k, v| v["index"] }.to_h
+  list = list.map { |k, v| v["index"]}.max + 1
 end
 
 get "/users/signin" do
@@ -139,8 +163,14 @@ end
 get "/new_unit" do
   require_user_signin
   @new_unit_info = load_new_unit["new_unit"]
-  @max_index_val = load_unit_details.sort_by { |k, v| v["index"] }.to_h
+  @max_index_val = get_max_index_number(load_unit_details)
   erb :new_unit
+end
+
+get "/equips/new_sc" do
+  @card = new_soulcards_data_path["new_sc"]
+  @max_index_val = get_max_index_number(soulcards_data_path)
+  erb :new_sc
 end
 
 get "/upload" do
@@ -159,11 +189,97 @@ get "/:unit_name/edit" do
   erb :edit_unit
 end
 
+get "/equips/soulcards" do
+  @cards = soulcards_data_path
+  erb :sc_list
+end
+
+get "/equips/soulcards/:sc_name" do
+  @current_card = soulcards_data_path[params[:sc_name]]
+  name = params[:sc_name]
+  erb :view_sc
+end
+
+get "/equips/:sc_name/edit" do
+  @current_card = soulcards_data_path[params[:sc_name]]
+  name = params[:sc_name]
+  erb :sc_edit
+end
+
+post "/equips/new_sc" do
+  unit_data = soulcards_data_path
+  @new_unit_info = new_soulcards_data_path["new_sc"]
+  @current_unit = soulcards_data_path[params[:unit_name]]
+  @max_index_val = get_max_index_number(soulcards_data_path)
+  data = soulcards_data_path
+  name = params[:unit_name]
+  index = params[:index].to_i
+
+  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
+
+  # V this uploads and takes the pic file and processes it.
+  if params[:file] != nil
+    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
+    directory = "public/images/sc"
+    path = File.join(directory, pname)
+    File.open(path, "wb") { |f| f.write(tmpfile.read) }
+  elsif params[:pic]
+    pname = params[:pic]
+  else
+    pname = params[:unit_name] + ".jpg"
+  end
+  pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
+  # ^ this uploads and takes the pic file and processes it.
+
+  if unit_data.include?(name) && index != unit_data[name]["index"]
+    #this clause makes sure we can only edit units if there are no name conflicts.
+
+    session[:message] = "A unit by that name already exists. Please enter a different unit name."
+    if params["edited"]
+        status 422
+        redirect "/#{params[:unit_name]}/edit"
+    else
+        status 422
+        redirect "/new_unit"
+    end
+
+    elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
+      old = data.delete(original_unit.keys.first)
+      data[name] = {}
+    else
+      old = data.delete(original_unit.keys.first)
+      data[name] = {}
+  end
+
+  # V this uploads and takes the pic file and processes it.
+  if params[:file] != nil
+    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
+    directory = "public/images/sc"
+    path = File.join(directory, pname)
+    File.open(path, "wb") { |f| f.write(tmpfile.read) }
+  elsif params[:pic]
+    pname = params[:pic]
+  else
+    pname = params[:unit_name] + ".jpg"
+  end
+  pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
+  # ^ this uploads and takes the pic file and processes it.
+
+    data[name]["pic"] = (pname += ".jpg")
+    data[name]["stars"] = params[:stars]
+    data[name]["stats"] = params[:stats]
+    data[name]["passive"] = params[:passive]
+    data[name]["index"] = index
+
+    File.write("data/sc/soul_cards.yml", YAML.dump(data))
+    redirect "/equips/soulcards"
+end
+
 post "/new_unit" do
   unit_data = load_unit_details
   @new_unit_info = load_new_unit["new_unit"]
   @current_unit = load_unit_details[params[:unit_name]]
-  @max_index_val = load_unit_details.sort_by { |k, v| v["index"] }.to_h
+  @max_index_val = get_max_index_number(load_unit_details)
   data = load_unit_details
   name = params[:unit_name]
   index = params[:index].to_i
@@ -252,20 +368,6 @@ get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
     redirect "/"
   end
 end
-
-# post "/:unit_name/remove" do  #use this if using the form buttons for edit/remove
-#   unit = params[:unit_name]
-#   units_info = load_unit_details
-#
-#   if params[:unit_name] == ""
-#     status 422
-#     erb :new_unit
-#   else
-#     units_info.delete(unit)
-#     File.write("data/unit_details.yml", YAML.dump(units_info))
-#     redirect "/"
-#   end
-# end
 
 #used to upload a file without creating a new unit
 post '/upload' do
