@@ -2,6 +2,9 @@
    <% unless name.nil? %>
      <p><%= name %></p>
       <img src="../images/<%= name %>">
+      <p>
+      <a id="add_new_unit" href="/download/<%= name %>">Download file</a>
+      </p>
     <a href="/show_files/<%= name %>/remove">Delete</a>
    <% end %>
   <% end %>

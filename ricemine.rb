@@ -163,8 +163,10 @@ end
 get '/download/:filename' do |filename|
   if filename.include?("soul")
     send_file "./data/sc/#{filename}", :filename => filename, :type => 'Application/octet-stream'
-  else
+  elsif filename.include?("unit")
     send_file "./data/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  else
+    send_file "./public/images/#{filename}", :filename => filename, :type => 'Application/octet-stream'
   end
   redirect "/"
 end
