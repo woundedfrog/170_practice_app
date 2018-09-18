@@ -8,6 +8,10 @@ require "fileutils"
 require "bcrypt"
 
 configure do
+  set :erb, :escape_html => true
+end
+
+configure do
   enable :sessions
   set :session_secret, "secret"
 end
@@ -65,10 +69,6 @@ def require_user_signin
     redirect "/"
   end
 end
-# def render_markdown(text)
-#   markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
-#   markdown.render(text)
-# end
 
 def file_path
   if ENV["RACK_ENV"] == "test"
@@ -188,7 +188,7 @@ end
 
 get "/equips/new_sc" do
   @card = load_new_soulcard["new_sc"]
-  @max_index_val = get_max_index_number(soulcards_data_path)
+  @max_index_val = get_max_index_number(load_soulcards_details)
   erb :new_sc
 end
 
@@ -229,7 +229,7 @@ post "/equips/new_sc" do
   unit_data = load_soulcards_details
   # @new_card_info = load_new_soulcard["new_sc"]
   @current_unit = load_soulcards_details[params[:sc_name]]
-  @max_index_val = get_max_index_number(soulcards_data_path)
+  @max_index_val = get_max_index_number(load_soulcards_details)
   data = load_soulcards_details
   name = params[:sc_name]
   index = params[:index].to_i
