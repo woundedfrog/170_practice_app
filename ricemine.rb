@@ -160,6 +160,15 @@ get "/show_unit_details" do
   erb :show_unit_details
 end
 
+get '/download/:filename' do |filename|
+  if filename.include?("soul")
+    send_file "./data/sc/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  else
+    send_file "./data/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  end
+  redirect "/"
+end
+
 get "/show_files" do
   pattern = File.join(file_path, "*")
   @files = Dir.glob(pattern).map do |path|

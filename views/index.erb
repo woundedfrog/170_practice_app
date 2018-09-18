@@ -2,7 +2,12 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
   <div id="links">
-  <% if session[:username] %><a id="add_new_unit" href="/new_unit">Add new unit</a><% end %>
+  <% if session[:username] %>
+  <a id="add_new_unit" href="/new_unit">Add new unit</a>
+  <a id="add_new_unit" href="/show_unit_details">Get yml details</a>
+  <a id="add_new_unit" href="/show_files">Show all image files</a>
+  <a id="add_new_unit" href="/upload">Upload images/files</a>
+  <% end %>
   <a href="/equips/soulcards">Show Soul Cards</a>
   <a href="/">Sort by name</a>
   <a href="/sort_by/tier">Sort by tier</a>
