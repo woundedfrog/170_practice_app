@@ -15,15 +15,15 @@ beach relaxation:
   passive: "Restriction: Earth type.\r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
-seaside goddess:
-  pic: "/images/sc/seasidegoddess.jpg"
-  stars: '5'
-  stats: ''
-  passive: ''
-  index: 1
 vacation:
   pic: "/images/sc/vacation.jpg"
   stars: '3'
   stats: ''
   passive: ''
   index: 2
+seaside goddess:
+  pic: "/images/sc/seasidegoddess.jpg"
+  stars: '5'
+  stats: ''
+  passive: ''
+  index: 1

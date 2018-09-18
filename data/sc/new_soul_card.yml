@@ -1,5 +1,5 @@
 new_sc:
-  pic: "/images/sc/"
+  pic: ""
   stars: '5'
   stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.\r\n\r\n[stat]:
       [basenumber] at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5."

@@ -2,8 +2,8 @@
 bisa:
   tier: s
   pic: "/images/bisa.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: support
   element: water
@@ -16,8 +16,8 @@ bisa:
 abaddon:
   tier: ''
   pic: "/images/abaddon.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: earth
@@ -30,8 +30,8 @@ abaddon:
 ai:
   tier: c
   pic: "/images/ai.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: defensive
   element: dark
@@ -41,25 +41,11 @@ ai:
   slide: ''
   drive: ''
   index: 3
-aria:
-  tier: a
-  pic: "/images/aria.jpg"
-  pic2: "/images/arias.jpg"
-  pic3: "/images/"
-  stars: '5'
-  type: support
-  element: light
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 0
 astraeas:
   tier: a
   pic: "/images/astraeas.jpg"
   pic2: "/images/astraeas"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: healing
   element: earth
@@ -73,7 +59,7 @@ aurora:
   tier: a
   pic: "/images/auroras.jpg"
   pic2: "/images/auroras2"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: healing
   element: fire
@@ -86,8 +72,8 @@ aurora:
 brownie:
   tier: s
   pic: "/images/brownies.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: support
   element: earth
@@ -100,8 +86,8 @@ brownie:
 busterlisa:
   tier: b
   pic: "/images/busterlisa.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: water
@@ -115,7 +101,7 @@ bastet:
   tier: b
   pic: "/images/bastet.jpg"
   pic2: "/images/bastets3.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: offensive
   element: light
@@ -128,8 +114,8 @@ bastet:
 calypso:
   tier: a
   pic: "/images/calypsos.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: water
@@ -142,8 +128,8 @@ calypso:
 cammy:
   tier: a
   pic: "/images/cammys.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: support
   element: water
@@ -156,8 +142,8 @@ cammy:
 charururu:
   tier: s
   pic: "/images/charururu.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: light
@@ -184,8 +170,8 @@ cleopatra:
 chun-li:
   tier: s
   pic: "/images/chunlis.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '6'
   type: support
   element: water
@@ -198,8 +184,8 @@ chun-li:
 dana:
   tier: s
   pic: "/images/danas.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: defensive
   element: light
@@ -213,7 +199,7 @@ dinashi:
   tier: b
   pic: "/images/dinashis.jpg"
   pic2: "/images/dinashis2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: defensive
   element: fire
@@ -226,8 +212,8 @@ dinashi:
 elizabeth:
   tier: a
   pic: "/images/elizabeth.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: dark
@@ -240,8 +226,8 @@ elizabeth:
 epona:
   tier: a
   pic: "/images/eponas.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: support
   element: earth
@@ -254,8 +240,8 @@ epona:
 eshu:
   tier: b
   pic: "/images/eshus.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: defensive
   element: water
@@ -269,7 +255,7 @@ eve:
   tier: s
   pic: "/images/eves.jpg"
   pic2: "/images/eves2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: offensive
   element: water
@@ -283,7 +269,7 @@ diablo:
   tier: b
   pic: "/images/diablos.jpg"
   pic2: "/images/diablos2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: defensive
   element: fire
@@ -296,8 +282,8 @@ diablo:
 frey:
   tier: s
   pic: "/images/frey.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: dark
@@ -311,7 +297,7 @@ hades:
   tier: b
   pic: "/images/hadess.jpg"
   pic2: "/images/hadess2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: defensive
   element: fire
@@ -325,7 +311,7 @@ hera:
   tier: b
   pic: "/images/heras.jpg"
   pic2: "/images/heras2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: defensive
   element: earth
@@ -339,7 +325,7 @@ hermes:
   tier: a
   pic: "/images/hermess.jpg"
   pic2: "/images/hermess2.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: restraint
   element: fire
@@ -352,8 +338,8 @@ hermes:
 hestia:
   tier: s
   pic: "/images/hestias.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: fire
@@ -366,8 +352,8 @@ hestia:
 gkouga:
   tier: s
   pic: "/images/gkougas.jpg"
-  pic2: "/images/"
-  pic3: "/images/"
+  pic2: ''
+  pic3: ''
   stars: '5'
   type: offensive
   element: earth
@@ -381,7 +367,7 @@ ashtoreth:
   tier: s
   pic: "/images/ashtoreth.jpg"
   pic2: "/images/ashtoreths.jpg"
-  pic3: "/images/"
+  pic3: ''
   stars: '5'
   type: offensive
   element: light
@@ -396,3 +382,17 @@ ashtoreth:
     to target for 10 seconds .\r\n·90% chance to Apply \"Direct Hit\" (Ignore \"Invincibility\")
     to self for 18 seconds."
   index: 6
+aria:
+  tier: a
+  pic: "/images/aria.jpg"
+  pic2: "/images/arias.jpg"
+  pic3: ''
+  stars: '5'
+  type: support
+  element: light
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 0

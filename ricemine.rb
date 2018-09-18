@@ -19,12 +19,19 @@ helpers do
 
   def format_stat(stat_key, info_val)
    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
-      "<img src='/images/#{info_val}.png' style='width:25%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
+      "<img src='/images/#{info_val}.png' style='width: 25%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
     elsif  ['defensive', 'offensive', 'support', 'healing', 'restraint'].include?(info_val)
-      "<img src='/images/#{info_val}.png' style='width:30%; padding-left: 0em;display:block; margin-right: auto;margin-left: 25%;'/>"
+      "<img src='/images/#{info_val}.png' style='width: 30%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
     else
       info_val
     end
+  end
+end
+
+def delete_selected_file(name)
+  Dir.glob("./public/images/").each do |f|
+
+  FileUtils.rm(f + name)
   end
 end
 
@@ -63,15 +70,15 @@ end
 #   markdown.render(text)
 # end
 
-# def unit_data_path
-#   if ENV["RACK_ENV"] == "test"
-#     File.expand_path("../test/data/", __FILE__)
-#   else
-#     File.expand_path("../data/", __FILE__)
-#   end
-# end
+def file_path
+  if ENV["RACK_ENV"] == "test"
+    File.expand_path("../test/public/images/", __FILE__)
+  else
+    File.expand_path("../public/images/", __FILE__)
+  end
+end
 
-def soulcards_data_path
+def load_soulcards_details
   unit_list = if ENV["RACK_ENV"] == "test"
     File.expand_path("../test/data/sc/soul_cards.yml", __FILE__)
   else
@@ -80,7 +87,7 @@ def soulcards_data_path
   YAML.load_file(unit_list)
 end
 
-def new_soulcards_data_path
+def load_new_soulcard
   unit_list = if ENV["RACK_ENV"] == "test"
     File.expand_path("../test/data/sc/new_soul_card.yml", __FILE__)
   else
@@ -108,15 +115,9 @@ def load_unit_details
   YAML.load_file(unit_list)
 end
 
-# def get_unit_files(unit)
-#   profile = ''
-#   skins = ''
-#   [profile, skins]
-# end
-
-def get_unit_name(index)
+def get_unit_name(data_path, index)
   unit_name = ''
-  load_unit_details.each do |name, info|
+  data_path.each do |name, info|
     if info["index"] == index
       unit_name = name
     end
@@ -154,6 +155,24 @@ get "/" do
   erb :index
 end
 
+get "/show_files" do
+  pattern = File.join(file_path, "*")
+  @files = Dir.glob(pattern).map do |path|
+    if File.directory?(path)
+      next
+    else
+      File.basename(path)
+    end
+  end
+  @files
+  erb :file_list
+end
+
+get "/show_files/:file_name/remove" do
+  delete_selected_file(params[:file_name])
+  redirect "/show_files"
+end
+
 get "/sort_by/:type" do
   @units = load_unit_details
   @units = @units.sort_by { |k, v| v[params[:type]] }.to_h
@@ -168,7 +187,7 @@ get "/new_unit" do
 end
 
 get "/equips/new_sc" do
-  @card = new_soulcards_data_path["new_sc"]
+  @card = load_new_soulcard["new_sc"]
   @max_index_val = get_max_index_number(soulcards_data_path)
   erb :new_sc
 end
@@ -180,7 +199,7 @@ end
 get "/:unit_name" do
   @units = load_unit_details
   @current_unit = @units[params[:unit_name]]
-  erb :unit_view
+  erb :view_unit
 end
 
 get "/:unit_name/edit" do
@@ -190,29 +209,29 @@ get "/:unit_name/edit" do
 end
 
 get "/equips/soulcards" do
-  @cards = soulcards_data_path
-  erb :sc_list
+  @cards = load_soulcards_details
+  erb :list_sc
 end
 
 get "/equips/soulcards/:sc_name" do
-  @current_card = soulcards_data_path[params[:sc_name]]
+  @current_card = load_soulcards_details[params[:sc_name]]
   name = params[:sc_name]
   erb :view_sc
 end
 
 get "/equips/:sc_name/edit" do
-  @current_card = soulcards_data_path[params[:sc_name]]
+  @current_card = load_soulcards_details[params[:sc_name]]
   name = params[:sc_name]
-  erb :sc_edit
+  erb :edit_sc
 end
 
 post "/equips/new_sc" do
-  unit_data = soulcards_data_path
-  @new_unit_info = new_soulcards_data_path["new_sc"]
-  @current_unit = soulcards_data_path[params[:unit_name]]
+  unit_data = load_soulcards_details
+  # @new_card_info = load_new_soulcard["new_sc"]
+  @current_unit = load_soulcards_details[params[:sc_name]]
   @max_index_val = get_max_index_number(soulcards_data_path)
-  data = soulcards_data_path
-  name = params[:unit_name]
+  data = load_soulcards_details
+  name = params[:sc_name]
   index = params[:index].to_i
 
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
@@ -226,7 +245,7 @@ post "/equips/new_sc" do
   elsif params[:pic]
     pname = params[:pic]
   else
-    pname = params[:unit_name] + ".jpg"
+    pname = params[:sc_name] + ".jpg"
   end
   pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
   # ^ this uploads and takes the pic file and processes it.
@@ -234,36 +253,23 @@ post "/equips/new_sc" do
   if unit_data.include?(name) && index != unit_data[name]["index"]
     #this clause makes sure we can only edit units if there are no name conflicts.
 
-    session[:message] = "A unit by that name already exists. Please enter a different unit name."
+    session[:message] = "A unit by that name already exists. Please create a different card."
     if params["edited"]
         status 422
-        redirect "/#{params[:unit_name]}/edit"
+        temp_name = get_unit_name(unit_data, index)
+        redirect "/equips/#{temp_name}/edit"
     else
         status 422
-        redirect "/new_unit"
+        redirect "/equips/new_sc"
     end
 
-    elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
-      old = data.delete(original_unit.keys.first)
+  elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
+    old = data.delete(original_unit.keys.first)
       data[name] = {}
-    else
-      old = data.delete(original_unit.keys.first)
-      data[name] = {}
-  end
-
-  # V this uploads and takes the pic file and processes it.
-  if params[:file] != nil
-    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = "public/images/sc"
-    path = File.join(directory, pname)
-    File.open(path, "wb") { |f| f.write(tmpfile.read) }
-  elsif params[:pic]
-    pname = params[:pic]
   else
-    pname = params[:unit_name] + ".jpg"
+    old = data.delete(original_unit.keys.first)
+    data[name] = {}
   end
-  pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
-  # ^ this uploads and takes the pic file and processes it.
 
     data[name]["pic"] = (pname += ".jpg")
     data[name]["stars"] = params[:stars]
@@ -277,7 +283,6 @@ end
 
 post "/new_unit" do
   unit_data = load_unit_details
-  @new_unit_info = load_new_unit["new_unit"]
   @current_unit = load_unit_details[params[:unit_name]]
   @max_index_val = get_max_index_number(load_unit_details)
   data = load_unit_details
@@ -306,7 +311,8 @@ post "/new_unit" do
     session[:message] = "A unit by that name already exists. Please enter a different unit name."
     if params["edited"]
         status 422
-        redirect "/#{params[:unit_name]}/edit"
+        temp_name = get_unit_name(unit_data, index)
+        redirect "/#{temp_name}/edit"
     else
         status 422
         redirect "/new_unit"
@@ -320,24 +326,12 @@ post "/new_unit" do
       data[name] = {}
   end
 
-  # V this uploads and takes the pic file and processes it.
-  if params[:file] != nil
-    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = "public/images"
-    path = File.join(directory, pname)
-    File.open(path, "wb") { |f| f.write(tmpfile.read) }
-  elsif params[:pic]
-    pname = params[:pic]
-  else
-    pname = params[:unit_name] + ".jpg"
-  end
-  pname = "/images/" + pname unless pname.include?("/images/")
-  # ^ this uploads and takes the pic file and processes it.
-
     data[name]["tier"] = params[:tier]
-    data[name]["pic"] = (pname += ".jpg")
-    data[name]["pic2"] = params[:pic2].include?("/images/") ? params[:pic2] : "/images/" + params[:pic2]
-    data[name]["pic3"] =  params[:pic3].include?("/images/") ? params[:pic3] : "/images/" + params[:pic3]
+    data[name]["pic"] = pname.include?(".jpg") ? pname : (pname + ".jpg")
+
+    data[name]["pic2"] = params[:pic2] == '' ? '' : "/images/" + params[:pic2]
+    data[name]["pic3"] =  params[:pic3] == '' ? '' : "/images/" + params[:pic3]
+
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
     data[name]["element"] = params[:element]
@@ -366,6 +360,23 @@ get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
     File.write("data/unit_details.yml", YAML.dump(units_info))
     session[:message] = "That unit successfully deleted."
     redirect "/"
+  end
+end
+
+get "/equips/:sc_name/remove" do  #use this if using the normal links for edit/remove
+  require_user_signin
+  card = params[:sc_name]
+  cards_info = load_soulcards_details
+
+  if cards_info.include?(params[:sc_name]) == false
+    status 422
+    session[:message] = "That unit doesn't exist."
+    redirect "/equips/soulcards"
+  else
+    cards_info.delete(card)
+    File.write("data/sc/soul_cards.yml", YAML.dump(cards_info))
+    session[:message] = "That unit successfully deleted."
+    redirect "/equips/soulcards"
   end
 end
 
