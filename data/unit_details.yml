@@ -27,20 +27,6 @@ abaddon:
   slide: ''
   drive: ''
   index: 1
-ai:
-  tier: c
-  pic: "/images/ai.jpg"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: defensive
-  element: dark
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 3
 astraeas:
   tier: a
   pic: "/images/astraeas.jpg"
@@ -396,3 +382,17 @@ aria:
   slide: ''
   drive: ''
   index: 0
+ai:
+  tier: c
+  pic: "/images/ai.jpg"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: defensive
+  element: dark
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 3
