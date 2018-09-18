@@ -1,7 +1,7 @@
 <% @files.each do |name| %>
-  <% unless name.nil? %>
+   <% unless name.nil? %>
      <p><%= name %></p>
-     <img src="../images/<%= name %>">
-     <a href="/show_files/<%= name %>/remove">Delete</a>
+      <img src="../images/<%= name %>">
+    <a href="/show_files/<%= name %>/remove">Delete</a>
    <% end %>
- <% end %>
+  <% end %>

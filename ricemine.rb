@@ -155,6 +155,11 @@ get "/" do
   erb :index
 end
 
+get "/show_unit_details" do
+  @details = load_unit_details
+  erb :show_unit_details
+end
+
 get "/show_files" do
   pattern = File.join(file_path, "*")
   @files = Dir.glob(pattern).map do |path|
@@ -300,7 +305,7 @@ post "/new_unit" do
   elsif params[:pic]
     pname = params[:pic]
   else
-    pname = params[:unit_name] + ".jpg"
+    pname = params[:unit_name]
   end
   pname = "/images/" + pname unless pname.include?("/images/")
   # ^ this uploads and takes the pic file and processes it.
@@ -327,10 +332,24 @@ post "/new_unit" do
   end
 
     data[name]["tier"] = params[:tier]
-    data[name]["pic"] = pname.include?(".jpg") ? pname : (pname + ".jpg")
+    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".jpg")
 
-    data[name]["pic2"] = params[:pic2] == '' ? '' : "/images/" + params[:pic2]
-    data[name]["pic3"] =  params[:pic3] == '' ? '' : "/images/" + params[:pic3]
+if params[:pic2] == ''
+  data[name]["pic2"] = ''
+elsif params[:pic2].include?("images")
+  data[name]["pic2"] = params[:pic2]
+else
+  data[name]["pic2"] = "/images/" + params[:pic2]
+end
+if params[:pic3] == ''
+  data[name]["pic3"] = ''
+elsif params[:pic3].include?("images")
+  data[name]["pic3"] = params[:pic2]
+else
+  data[name]["pic3"] = "/images/" + params[:pic3]
+end
+    # data[name]["pic2"] = params[:pic2] == '' ? '' : "/images/" + params[:pic2]
+    # data[name]["pic3"] =  params[:pic3] == '' ? '' : "/images/" + params[:pic3]
 
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
