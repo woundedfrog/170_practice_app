@@ -2,14 +2,19 @@
 basic styles
 ===================== */
 
-
 @media only screen and (max-width: 600px) {
 
- body {
-    font-family: sans-serif;
+  html, body {
+    margin: 0px;
+    padding: 0px;
     background-color: #505560;
-    margin: 0em;
   }
+
+  main {
+     font-family: sans-serif;
+     margin: 0em;
+     margin-bottom: 10px
+   }
 
   a:link, a:active, a:visited  {
   color: #bec6dd;
@@ -212,10 +217,6 @@ basic styles
     padding: .5em;
   }
 
-/* .stats > p {
-  padding: 1em;
-} */
-
   /* ===========form profiles=========== */
   .form_div, .form_div2 {
     /* margin: 1em; */
@@ -250,17 +251,23 @@ basic styles
                 /* bigger screens */
 
     /* ===========form profiles=========== */
-  @media only screen and (min-width: 600px) {
+  @media only screen and (min-width: 601px) {
 
-     body {
-        font-family: sans-serif;
-        background-color: #505560;
-        margin: 0em;
-      }
+    html, body {
+      margin: 0px;
+      padding: 0px;
+      background-color: #505560;
+      margin-bottom: 10px;
+    }
+
+    main {
+      font-family: sans-serif;
+      margin: .5em;
+     }
 
       a:link, a:active, a:visited  {
-      color: #bec6dd;
-      text-decoration: none;
+        color: #bec6dd;
+        text-decoration: none;
       }
 
       h1 {
@@ -295,9 +302,7 @@ basic styles
     }
     /* ===========index profiles=========== */
 
-       /* main {
-        width: 100%;
-      } */
+
     /* ===========index profiles borders=========== */
       .fire {
         border-style: solid;
@@ -471,7 +476,6 @@ basic styles
       }
 
       dt {
-
         background-color: #32343d;
         padding-left: .5em;
         padding: .5em;
