@@ -30,6 +30,12 @@ basic styles
     font-size: 2em;
   }
 
+  h3 {
+    font-size: 2em;
+    margin: .3em;
+  color: #e8a855;
+  }
+
 #links , #back_to_main{
   max-width: auto;
   margin-top: .5em;
@@ -248,6 +254,7 @@ basic styles
   input, textarea {
       background-color: #b7bacc;
   }
+
 }
 
 
@@ -283,6 +290,12 @@ basic styles
 
       }
 
+      h3 {
+        font-size: 2em;
+        margin: .3em;
+      color: #e8a855;
+      }
+      
     #links , #back_to_main{
       max-width: auto;
       margin-top: .5em;

@@ -8,5 +8,3 @@ gem "rack-test"
 gem "redcarpet"
 # password encryption
 gem "bcrypt"
-# html attribute sourcing
-gem "nokogiri"

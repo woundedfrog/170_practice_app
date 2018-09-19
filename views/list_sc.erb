@@ -2,8 +2,10 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
   <div id="links">
-  <% if session[:username] %><a id="add_new_unit" href="/equips/new_sc">Add new SoulCard</a><% end %>
   <a href="/">Show unit list</a>
+  <% if session[:username] %>
+    <a id="add_new_unit" href="/equips/new_sc">Add new SoulCard</a>
+  <% end %>
 </div>
 <div class="units_list_div">
     <% @cards.each do |card, card_details| %>

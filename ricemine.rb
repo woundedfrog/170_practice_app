@@ -3,7 +3,6 @@ require "sinatra/reloader"
 require "tilt/erubis"
 require "redcarpet"
 require "yaml"
-require "nokogiri"
 require "fileutils"
 require "bcrypt"
 
@@ -150,9 +149,10 @@ post "/users/signin" do
 end
 
 get "/" do
-  @units = load_unit_details
-  @units = @units.sort_by { |k, v| k }.to_h
-  erb :index
+  # @units = load_unit_details
+  # @units = @units.sort_by { |k, v| k }.to_h
+  # erb :index
+  redirect "/sort_by/5"
 end
 
 get "/show_unit_details" do
@@ -180,7 +180,6 @@ get "/show_files" do
       File.basename(path)
     end
   end
-  @files
   erb :file_list
 end
 
@@ -190,8 +189,14 @@ get "/show_files/:file_name/remove" do
 end
 
 get "/sort_by/:type" do
-  @units = load_unit_details
-  @units = @units.sort_by { |k, v| v[params[:type]] }.to_h
+  # @units = load_unit_details.select { |_, v| v["type"] == params[:type] }.to_h
+  if params[:type] == '5'
+    @units = load_unit_details.select { |_, v| v["stars"] == '5' }.to_h
+  elsif params[:type] == '4'
+    @units = load_unit_details.select { |_, v| v["stars"] == '4' }.to_h
+  else
+    @units = load_unit_details.sort_by { |k, v| v[params[:type]] }.to_h
+  end
   erb :index
 end
 
@@ -214,6 +219,7 @@ end
 
 get "/:unit_name" do
   @units = load_unit_details
+  @unit_name = params[:unit_name].capitalize
   @current_unit = @units[params[:unit_name]]
   erb :view_unit
 end
@@ -230,6 +236,7 @@ get "/equips/soulcards" do
 end
 
 get "/equips/soulcards/:sc_name" do
+  @sc_name = params[:sc_name].capitalize
   @current_card = load_soulcards_details[params[:sc_name]]
   name = params[:sc_name]
   erb :view_sc
@@ -361,8 +368,6 @@ post "/new_unit" do
     end
 
     data[name]["tier"] = params[:tier]
-    # data[name]["pic2"] = params[:pic2] == '' ? '' : "/images/" + params[:pic2]
-    # data[name]["pic3"] =  params[:pic3] == '' ? '' : "/images/" + params[:pic3]
 
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
