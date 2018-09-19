@@ -287,7 +287,7 @@ post "/equips/new_sc" do
     data[name] = {}
   end
 
-    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".png")
+    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".jpg")
     data[name]["stars"] = params[:stars]
     data[name]["stats"] = params[:stats]
     data[name]["passive"] = params[:passive]

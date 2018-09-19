@@ -101,6 +101,7 @@ basic styles
     background-color: #292b33;
     margin-left: .5em;
     margin-top: .5em;
+    /* overflow: hidden; */
   }
 
   .sc_index_pic {
@@ -165,7 +166,11 @@ basic styles
 
   .unit_profile_pic {
     padding-left: 10px;
-    /* width: 100%; */
+    padding-bottom: 5px;
+  }
+
+  .profile_imgs {
+    height: 272px;
   }
 
   .short_unit_stats_div {
@@ -408,7 +413,11 @@ basic styles
 
       .unit_profile_pic {
         padding-left: 10px;
-        /* width: 100%; */
+        padding-bottom: 5px;
+      }
+
+      .profile_imgs {
+      height: 320px;
       }
 
       .short_unit_stats_div {

@@ -5,9 +5,9 @@
 
   <div class="unit_header_div">
     <div class="unit_profile_pic">
-      <img src="<%= @current_unit["pic"] %>"/>
-      <img src="<%= @current_unit["pic2"] %>"/>
-      <img src="<%= @current_unit["pic3"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic2"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic3"] %>"/>
     </div>
     <div class="main_short_unit_stats_div">
       <% @current_unit.each do |info_key, info_val| %>

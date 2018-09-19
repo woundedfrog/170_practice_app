@@ -27,3 +27,275 @@ seaside goddess:
   stats: ''
   passive: ''
   index: 1
+afternoon nap:
+  pic: "/images/sc/afternoonnap.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 4
+afternoon train:
+  pic: "/images/sc/afternoontrain.jpg"
+  stars: '3'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 5
+ass baring devil:
+  pic: "/images/sc/assbaringdevil.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 6
+azure girl:
+  pic: "/images/sc/azuregirl.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 7
+baptism goddess:
+  pic: "/images/sc/baptismgoddess.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 8
+believe:
+  pic: "/images/sc/believe.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 9
+castle of pleasure:
+  pic: "/images/sc/castlepleasure.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 11
+blade of hot sun:
+  pic: "/images/sc/bladesun.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 10
+dream team:
+  pic: "/images/sc/dreamteam.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 12
+endo siblings:
+  pic: "/images/sc/endosiblings.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 13
+good moa:
+  pic: "/images/sc/goodmoa.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 14
+hero:
+  pic: "/images/sc/hero.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 15
+hero of legends:
+  pic: "/images/sc/herooflegends.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 16
+higgins daughters:
+  pic: "/images/sc/higginsdaughters.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 17
+high jump:
+  pic: "/images/sc/highjump.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 18
+hunting devil:
+  pic: "/images/sc/huntingdevil.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 19
+judgement day:
+  pic: "/images/sc/judgementday.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 20
+late night partner:
+  pic: "/images/sc/latenightpartner.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 21
+marine idol:
+  pic: "/images/sc/marineidol.jpg"
+  stars: '3'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 22
+piercing blue sky:
+  pic: "/images/sc/piercingbluesky.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 23
+power of smile:
+  pic: "/images/sc/powerofsmile.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 24
+princess carry:
+  pic: "/images/sc/princesscarry.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 25
+serious worker:
+  pic: "/images/sc/seriousworker.jpg"
+  stars: '3'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 26
+small assailant:
+  pic: "/images/sc/smallassailant.jpg"
+  stars: '3'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 27
+stf:
+  pic: "/images/sc/stf.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 28
+strategist night:
+  pic: "/images/sc/strategistnight.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 29
+summer night:
+  pic: "/images/sc/summernight.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 30
+sweet propose:
+  pic: "/images/sc/sweetpropose.jpg"
+  stars: '3'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 31
+time over:
+  pic: "/images/sc/timeover.jpg"
+  stars: '4'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 33
+throne:
+  pic: "/images/sc/throne.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 32
+Meat together:
+  pic: "/images/sc/togetherwithmeat.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 34
+training expert:
+  pic: "/images/sc/trainingexpert.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 35
+wandering doctor:
+  pic: "/images/sc/wanderingdoctor.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 36
+wisteria tree:
+  pic: "/images/sc/wisteriatree.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 37
