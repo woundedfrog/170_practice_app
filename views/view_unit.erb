@@ -26,7 +26,6 @@
 
  </div>
 
-
  <div class="main_unit_stats_div">
    <% @current_unit.each do |info_key, info_val| %>
      <% unless is_special_key?(info_key) || info_key == "index" %>
@@ -34,7 +33,7 @@
          <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
          <ul>
            <% info_val.split(".").each do |line| %>
-             <p class="short_stats"><%= line %></p>
+             <p class="stats"><%= line %></p>
            <% end %>
          </ul>
        <% end %>

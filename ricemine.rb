@@ -24,7 +24,7 @@ helpers do
   def format_stat(stat_key, info_val)
    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
       "<img src='/images/#{info_val}.png' style='width: 25%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
-    elsif  ['defensive', 'offensive', 'support', 'healing', 'restraint'].include?(info_val)
+    elsif  ['tank', 'attacker', 'buffer', 'healer', 'debuffer'].include?(info_val)
       "<img src='/images/#{info_val}.png' style='width: 30%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
     else
       info_val
@@ -261,7 +261,7 @@ post "/equips/new_sc" do
   elsif params[:pic]
     pname = params[:pic]
   else
-    pname = params[:sc_name] + ".jpg"
+    pname = params[:sc_name] + ".png"
   end
   pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
   # ^ this uploads and takes the pic file and processes it.
@@ -287,7 +287,7 @@ post "/equips/new_sc" do
     data[name] = {}
   end
 
-    data[name]["pic"] = (pname += ".jpg")
+    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".png")
     data[name]["stars"] = params[:stars]
     data[name]["stats"] = params[:stats]
     data[name]["passive"] = params[:passive]
@@ -342,23 +342,25 @@ post "/new_unit" do
       data[name] = {}
   end
 
-    data[name]["tier"] = params[:tier]
-    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".jpg")
+    data[name]["pic"] = pname.include?(".") ? pname : (pname + ".png")
 
-if params[:pic2] == ''
-  data[name]["pic2"] = ''
-elsif params[:pic2].include?("images")
-  data[name]["pic2"] = params[:pic2]
-else
-  data[name]["pic2"] = "/images/" + params[:pic2]
-end
-if params[:pic3] == ''
-  data[name]["pic3"] = ''
-elsif params[:pic3].include?("images")
-  data[name]["pic3"] = params[:pic2]
-else
-  data[name]["pic3"] = "/images/" + params[:pic3]
-end
+    if params[:pic2] == ''
+      data[name]["pic2"] = ''
+    elsif params[:pic2].include?("images")
+      data[name]["pic2"] = params[:pic2]
+    else
+      data[name]["pic2"] = "/images/" + params[:pic2] + ".png"
+    end
+
+    if params[:pic3] == ''
+      data[name]["pic3"] = ''
+    elsif params[:pic3].include?("images")
+      data[name]["pic3"] = params[:pic2]
+    else
+      data[name]["pic3"] = "/images/" + params[:pic3] + ".png"
+    end
+
+    data[name]["tier"] = params[:tier]
     # data[name]["pic2"] = params[:pic2] == '' ? '' : "/images/" + params[:pic2]
     # data[name]["pic3"] =  params[:pic3] == '' ? '' : "/images/" + params[:pic3]
 
