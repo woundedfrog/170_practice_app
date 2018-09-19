@@ -103,7 +103,7 @@ basic styles
 
   .unit_div {
     width: 100px;
-    height: 19em;
+    height: 20.2em;
     background-color: #292b33;
     margin-left: .5em;
     margin-top: .5em;
@@ -116,7 +116,7 @@ basic styles
 
   .sc_div {
     width: 150px;
-    height: 18.5em;
+    height: 19.5em;
     margin-left: .5em;
     margin-top: .5em;
     background-color: #292b33;
@@ -133,7 +133,7 @@ basic styles
 
   h2 {
     font-size: 1em;
-    height: auto;
+    height: 37px;
     margin: 0em;
     padding: .3em;
     padding-left: .2em;
@@ -295,7 +295,7 @@ basic styles
         margin: .3em;
       color: #e8a855;
       }
-      
+
     #links , #back_to_main{
       max-width: auto;
       margin-top: .5em;
@@ -358,7 +358,7 @@ basic styles
 
       .unit_div {
         width: 100px;
-        height: 19em;
+        height: 20.2em;
         background-color: #292b33;
         margin-left: .5em;
         margin-top: .5em;
@@ -371,7 +371,7 @@ basic styles
 
         .sc_div {
           width: 150px;
-          height: 18.5em;
+          height: 19.5em;
           margin-left: .5em;
           margin-top: .5em;
           background-color: #292b33;
@@ -387,7 +387,7 @@ basic styles
 
       h2 {
         font-size: 1em;
-        height: auto;
+        height: 37px;
         margin: 0em;
         padding: .3em;
         padding-left: .2em;
