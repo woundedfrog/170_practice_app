@@ -4,7 +4,7 @@
 <div class="unit_profile_div">
 
   <div class="unit_header_div">
-    <h3><%= @unit_name %></h3>
+    <h3><%= upcase_name(@unit_name) %></h3>
     <div class="unit_profile_pic">
       <img class="profile_imgs" src="<%= @current_unit["pic"] %>"/>
       <img class="profile_imgs" src="<%= @current_unit["pic2"] %>"/>

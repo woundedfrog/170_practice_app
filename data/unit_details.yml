@@ -1,41 +1,6 @@
 ---
-Cube Moa:
-  tier: s
-  pic: "/images/moa0.png"
-  pic2: "/images/moa1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: light
-  leader: Dark enemy debuff evasion rate -10%
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
-  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
-    (unable to act for 10s or after being hit 2 times).
-  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
-    to act for 15s or after being hit 3 times).
-  index: 31
-Dark Maat:
-  tier: b
-  pic: "/images/darkmaat0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  leader: "  +5% slide damage to Dark allies"
-  auto: Deal 113 damage.
-  tap: Attack 2 targets twice each, dealing auto-attack damage plus 40 additional
-    damage per hit (prioritizes enemies with buff effects).
-  slide: Deal 1329 damage to all enemies, plus 500 defense ignoring damage, with a
-    70% chance to apply Chaser (upon killing an enemy, deal 1500 additional fixed
-    damage to 1 random remaining enemy) to self for 14 seconds.
-  drive: Deal 2285 damage to all enemies and apply Resurrect to self for 10 seconds
-    (upon dying, revive with 50% HP, fully charge skill gauge, and Attack Up (stacks
-    up to 5 times)).
-  index: 35
-Horus:
-  tier: b
+horus:
+  tier: B
   pic: "/images/horus0.png"
   pic2: ''
   pic3: ''
@@ -52,8 +17,8 @@ Horus:
     for 14seconds and if they are inflicted with "Bleed", "Poison", "Curse" within
     6seconds debuff duration is increased by +50% to 3random enemies.
   index: 32
-Khepri:
-  tier: a
+khepri:
+  tier: A
   pic: "/images/khepri0.png"
   pic2: ''
   pic3: ''
@@ -70,8 +35,8 @@ Khepri:
     enemies (Confused Targets will attack their own allies and heals the enemy) for
     6seconds.
   index: 34
-Lan Fei:
-  tier: a
+lan fei:
+  tier: A
   pic: "/images/lanfei0.png"
   pic2: ''
   pic3: ''
@@ -86,7 +51,7 @@ Lan Fei:
   drive: Deals 2012 damage to 3 enemies with the highest Defense, removes one buff
     and enemy drive gauge -10%.
   index: 36
-Mafdet:
+mafdet:
   tier: s
   pic: "/images/mafdet0.png"
   pic2: "/images/mafdet1.png"
@@ -103,7 +68,7 @@ Mafdet:
   drive: Deals 2341 damage to all enemies and block heals (excludes Lifesteal and
     absorption) for 25s to 3 enemies with lowest HP.
   index: 30
-Sitri:
+sitri:
   tier: s
   pic: "/images/sitri0.png"
   pic2: ''
@@ -122,43 +87,8 @@ Sitri:
     lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
     Allies (Prioritizing back row).
   index: 29
-abaddon:
-  tier: a
-  pic: "/images/abaddon0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: earth
-  leader: Drive skill damage +1000 to all Grass type allies (bonus +1000 drive damage
-    to all allies on Ragnas)
-  auto: Deals 112 damage.
-  tap: Deals 120 damage plus Auto damage 4 times to target.
-  slide: Deals 771 damages to 3 random enemis and Absorb 350 damage as HP.
-  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
-    for 2turn to self.
-  index: 1
-ai:
-  tier: c
-  pic: "/images/ai0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: dark
-  leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
-    Ragnas)
-  auto: Deals 90 damage.
-  tap: Deals 294 damage to target and Defense +900 to self and gains Taunt (85% provocation)
-    for 11s.
-  slide: Deals 539 damage to target, gives Reflect (returns 13% of damage received)
-    to self and gives Defense +850 to 3 units with priority to Dark Units (including
-    self).
-  drive: Deals 1386 damage to 2 random enemies and gives Reflect (returns 20% of damage
-    received) for 18s to 5 allies.
-  index: 3
 aria:
-  tier: a
+  tier: A
   pic: "/images/aria0.png"
   pic2: "/images/aria1.png"
   pic3: "/images/aria1.png"
@@ -193,7 +123,7 @@ ashtoreth:
     to self for 18 seconds."
   index: 6
 astraeas:
-  tier: a
+  tier: A
   pic: "/images/astraea0.png"
   pic2: ''
   pic3: ''
@@ -212,7 +142,7 @@ astraeas:
     receives attacks) for 16seconds to 3 lowest HP allies.
   index: 4
 aurora:
-  tier: a
+  tier: A
   pic: "/images/aurora0.png"
   pic2: "/images/aurora1.png"
   pic3: ''
@@ -230,7 +160,7 @@ aurora:
     HP, and heals an additional 319HP if the target is affected.
   index: 5
 bastet:
-  tier: b
+  tier: B
   pic: "/images/bastet0.png"
   pic2: "/images/bastet1.png"
   pic3: ''
@@ -264,7 +194,7 @@ brownie:
     HP) to 3 lowest HP allies. Buff is Stackable.
   index: 8
 buster lisa:
-  tier: b
+  tier: B
   pic: "/images/busterliza0.png"
   pic2: ''
   pic3: ''
@@ -282,7 +212,7 @@ buster lisa:
     damage target according to debuff duration) to 4 Lowest HP enemies.
   index: 9
 calypso:
-  tier: a
+  tier: A
   pic: "/images/calypso0.png"
   pic2: ''
   pic3: ''
@@ -299,7 +229,7 @@ calypso:
   drive: Deals 2589 damage to 3 lowest HP enemies.
   index: 10
 cammy:
-  tier: a
+  tier: A
   pic: "/images/cammy0.png"
   pic2: ''
   pic3: ''
@@ -381,7 +311,7 @@ dana:
     to all allies.
   index: 15
 diablo:
-  tier: b
+  tier: B
   pic: "/images/diablo0.png"
   pic2: "/images/diablo1.png"
   pic3: ''
@@ -398,7 +328,7 @@ diablo:
     Light units.
   index: 16
 warwolf:
-  tier: a
+  tier: A
   pic: "/images/warwolf0.png"
   pic2: "/images/warwolf1.png"
   pic3: ''
@@ -416,7 +346,7 @@ warwolf:
     Rate to 3 Allies (Prioritizing Dark Types).
   index: 38
 pantheon:
-  tier: b
+  tier: B
   pic: "/images/pantheon0.png"
   pic2: ''
   pic3: ''
@@ -479,7 +409,7 @@ hestia:
   drive: Deals 2317 damage to all enemies.
   index: 27
 hermes:
-  tier: a
+  tier: A
   pic: "/images/hermes0.png"
   pic2: "/images/hermes1.png"
   pic3: ''
@@ -496,7 +426,7 @@ hermes:
     attack +300 for 25s to 3 allies with highest attack.
   index: 26
 hera:
-  tier: b
+  tier: B
   pic: "/images/hera0.png"
   pic2: "/images/hera1.png"
   pic3: ''
@@ -514,7 +444,7 @@ hera:
     dealt restores HP (Doubled if Grass allies)) to all allies.
   index: 25
 hades:
-  tier: b
+  tier: B
   pic: "/images/hades0.png"
   pic2: "/images/hades1.png"
   pic3: ''
@@ -580,7 +510,7 @@ eve:
   drive: Deals 2437 damage to all enemies.
   index: 21
 eshu:
-  tier: b
+  tier: B
   pic: "/images/eshu0.png"
   pic2: ''
   pic3: ''
@@ -598,7 +528,7 @@ eshu:
     to enemy) for 16seconds or 2hits to 9allies prioritizing the front row.
   index: 20
 epona:
-  tier: a
+  tier: A
   pic: "/images/epona0.png"
   pic2: ''
   pic3: ''
@@ -615,7 +545,7 @@ epona:
     for 25s to 3 allies with lowest HP
   index: 19
 elizabeth:
-  tier: a
+  tier: A
   pic: "/images/elizabeth0.png"
   pic2: ''
   pic3: ''
@@ -630,7 +560,7 @@ elizabeth:
     12s to 4 random enemies.
   index: 18
 dinashi:
-  tier: b
+  tier: B
   pic: "/images/dinashi0.png"
   pic2: "/images/dinashi1.png"
   pic3: ''
@@ -664,7 +594,7 @@ bari:
   drive: Deal 2212 damage to 4 random enemies and apply Debuff Explosion (remove 1
     debuff and deal damage depending on the debuff type) if the target is debuffed.
   index: 39
-Willow:
+willow:
   tier: ''
   pic: "/images/yanagi0.png"
   pic2: ''
@@ -705,7 +635,7 @@ dark Midas:
     5[4+1]) to 3 lowest HP allies). (On Enemy, Deal 400 damage multiplied by the number
     of debuffs +1 up to 4 debuffs (Total 5[4+1]) to 3 lowest HP enemies).
   index: 41
-Hildr:
+hildr:
   tier: ''
   pic: "/images/hildr0.png"
   pic2: ''
@@ -741,23 +671,6 @@ scubaMona:
   drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
     Power -20% and 300 sustained damage every 2 seconds) for 16 seconds.
   index: 43
-Bikini Davi:
-  tier: ''
-  pic: "/images/bikinidavi0.png"
-  pic2: "/images/bikinidavi1.png"
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  leader: "+8% defense for all allies (additional +12% on WorldBoss)"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 382 damage and a 70% chance to cancel 2 debuffs ('Burn' and 'Scalp').
-  slide: Deal 660 damage and a 50% to apply "Double-Edge Sword" (Increase attack,
-    but decrease defense) to 5 water allies for 16 seconds. For WorldBoss Only. Slide
-    Skill Damage +1250 for 16 seconds.
-  drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
-    Only, Attack power +30% for 20 seconds.
-  index: 44
 bikini Lisa:
   tier: ''
   pic: "/images/bikinilisa0.png"
@@ -796,26 +709,6 @@ isolde:
     to Apply "Freeze" (Skill Charge Speed, Drive Gauge Decrease and Bleeding debuff
     damage increase) for 16 seconds.
   index: 46
-anemone:
-  tier: s
-  pic: "/images/anemone0.png"
-  pic2: "/images/anemone1.png"
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  leader: "+10% skill charge rate for water element allies"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 380 damage to the target, priorizing an ally 2 with least HP, recover
-    280 HP 2 times, plus a 60% chance to puriy 2 bleeding allies (Convert Bleeding
-    Into Recover.
-  slide: "Deal 660 to target. Prioritizing 2 alles with highest ATK, grants Skill
-    gauge charge +35% and Increase ATK +1600 for 14 seconds, plus \"Patience\"\r\n(Grants
-    +1 of \"Endure\" [lgnore all damage.] per debuff [Maximum 3] for 10 seconds)."
-  drive: Deal 1734 to 3 enemies ramdomly. Prioritizing 2 allies with least HP, grants
-    1230 instant HP recovery for 16 seconds, and prioritizing 2 allies with highest
-    ATK, grants Skill gauge charge +30%.
-  index: 47
 love Sitri:
   tier: s
   pic: "/images/lovesitri0.png"
@@ -877,7 +770,7 @@ kouka:
     (increase critical damage up to 30% and increase Slide skill damage by the amount
     of buffs you have) for 20 seconds.
   index: 50
-Orora:
+orora:
   pic: "/images/4orora0.png"
   pic2: ''
   pic3: ''
@@ -908,7 +801,7 @@ calchas:
   drive: Deals 1406 damage and Bleeding (160 continuous damage every 2 seconds) for
     8s to 3 random enemies.
   index: 52
-Maiden Detective:
+maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
   pic3: ''
@@ -924,3 +817,279 @@ Maiden Detective:
   drive: Deals 1409 damage and Bleeding (160 continuous damage every 2 seconds) for
     10s to 4 random enemies.
   index: 53
+orga:
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: debuffer
+  element: water
+  leader: Skill gauge charge rate -15% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  index: 54
+bikini davi:
+  pic: "/images/bikinidavi0.png"
+  pic2: "/images/bikinidavi1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: buffer
+  element: water
+  leader: "+8% defense for all allies (additional +12% on WorldBoss)"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 382 damage and a 70% chance to cancel 2 debuffs ('Burn' and 'Scalp').
+  slide: Deal 660 damage and a 50% to apply "Double-Edge Sword" (Increase attack,
+    but decrease defense) to 5 water allies for 16 seconds. For WorldBoss Only. Slide
+    Skill Damage +1250 for 16 seconds.
+  drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
+    Only, Attack power +30% for 20 seconds.
+  index: 44
+anemone:
+  pic: "/images/anemone0.png"
+  pic2: "/images/anemone1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: buffer
+  element: water
+  leader: "+10% skill charge rate for water element allies"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 380 damage to the target, priorizing an ally 2 with least HP, recover
+    280 HP 2 times, plus a 60% chance to puriy 2 bleeding allies (Convert Bleeding
+    Into Recover.
+  slide: "Deal 660 to target. Prioritizing 2 alles with highest ATK, grants Skill
+    gauge charge +35% and Increase ATK +1600 for 14 seconds, plus \"Patience\"\r\n(Grants
+    +1 of \"Endure\" [lgnore all damage.] per debuff [Maximum 3] for 10 seconds)."
+  drive: Deal 1734 to 3 enemies ramdomly. Prioritizing 2 allies with least HP, grants
+    1230 instant HP recovery for 16 seconds, and prioritizing 2 allies with highest
+    ATK, grants Skill gauge charge +30%.
+  index: 47
+redcross:
+  pic: "/images/redcross0.png"
+  pic2: ''
+  pic3: ''
+  tier: C
+  stars: '5'
+  type: tank
+  element: dark
+  leader: Tap Skill defense +5% to Dark units
+  auto: Deals 91 damage
+  tap: Deals 301 damage to target and gives +850 Defense and +600 barrier for 10s
+    to 1 ally with lowest HP
+  slide: Deals 540 damage and gives Reflect (12% of received damage) to 3 allies with
+    lowest HP with priorities to Dark types for 15s and +12% Defense (for 24s or 3
+    hits) to 2 allies with priorities to Dark types.
+  drive: Deals 1405 damage to 2 random enemies and gives Reflect (returns 25% of damage
+    received) for 20s to 2 allies with the lowest HP, including self (if own HP is
+    the lowest, it will only be applied to self, no second target).
+  index: 55
+metis:
+  pic: "/images/metis0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: healer
+  element: dark
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Dark units
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and heals 201HP to ally with lowest HP.
+  slide: Gives 1.5%HP+21HP Regeneration (Heal every 2seconds) for 10s and Immortality
+    (HP won't go under 1) for 10s to 2 allies with lowest HP.
+  drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
+    unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
+  index: 56
+maou davi:
+  pic: "/images/maoudavi0.png"
+  pic2: ''
+  pic3: ''
+  tier: C
+  stars: '5'
+  type: attacker
+  element: fire
+  leader: Slide Skills Damage +8% to Fire Allies
+  auto: Deals 113 damage.
+  tap: Deals 50 damage 3times to target.
+  slide: Deals 1205 damage to 2 highest attack enemies and 700 ignore defense additional
+    500 damage to target with "Regeneration" buff and 35% chance to Apply "Double-Edge"(Increase
+    Attack and Decrease Defense) to self for 23seconds.
+  drive: Deals 1488 damage to all enemies and Apply "Bleed"(250 damage per 2seconds)
+    to 2 lowest HP enemies for 12seconds.
+  index: 57
+medb:
+  pic: "/images/medb0.png"
+  pic2: ''
+  pic3: ''
+  tier: A
+  stars: '5'
+  type: attacker
+  element: fire
+  leader: Tap damage +5% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 475 damage to target with 150 additional damage if enemy is buffed.
+  slide: Deals 100 damage plus Tap damage (including bonus damage effect on Tap skill)
+    2 times to 2 random enemies.
+  drive: Deals 2355 damage to 3 enemies with lowest HP.
+  index: 58
+morgan:
+  pic: "/images/morgan0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: attacker
+  element: fire
+  leader: "  +8% slide damage to fire element allies"
+  auto: Deal 113 damage.
+  tap: Deal 485 damage, apply Bleed (100 damage) for 8 seconds, and apply +35% crit
+    rate to self for 12 seconds.
+  slide: Deal 902 damage to 3 random enemies, plus 550 defense ignoring damage per
+    hit, plus 650 additional damage if target is Bleeding.
+  drive: Deal 2480 damage to 4 enemies with the lowest HP.
+  index: 59
+tirfing:
+  pic: "/images/tyrfing0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: attacker
+  element: fire
+  leader: Attack +5% to all Allies (Additional +8% on Worldboss)
+  auto: Deals 113 Damages.
+  tap: Deals 486 Damages to 1 enemy and Apply Bleed (80 damages per 2seconds) for
+    10seconds. On Worldboss Only, +500 additional Damage.
+  slide: Deals 930 Damges and +500 additional damages to 3 random enemies and +700
+    ignore defense if Bleed/Poison. On Worldboss Only, Apply "Sever" 3times (800 Additional
+    damages if target is Bleeding/Poisoned).
+  drive: Deals 2238 Damages to 4 random enemies and Apply "Sever" 1 time (1000 Damage
+    if target is Bleeding/Poisoned).
+  index: 60
+jupiter:
+  pic: "/images/jupiter0.png"
+  pic2: "/images/jupiter1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: debuffer
+  element: fire
+  leader: Defense -10% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 369 damage and Defense -5% for 6s to target.
+  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
+    with lowest Defense.
+  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
+    enemies.
+  index: 61
+verdel:
+  pic: "/images/verdel0.png"
+  pic2: ''
+  pic3: ''
+  tier: C
+  stars: '5'
+  type: buffer
+  element: fire
+  leader: " +50 Bleed damage for Bleeds applied by allies. Additional +200 in Devil
+    Rumble"
+  auto: Deal 100 damage.
+  tap: Deal 370 damage, apply +20% crit damage to 2 allies with the highest attack
+    for 8 seconds.
+  slide: Deal 568 damage to 2 enemies (prioritizes Bleeding enemies) with 70% chance
+    to apply "Wounded" (increase Bleed duration and effect), and apply +1200 attack
+    to 5 Fire element allies for 18 seconds.
+  drive: Deal 1670 damage to 3 targets (prioritizes "Wounded" enemies), apply Bleeding
+    (120 damage) for 6 seconds, and charge +35% skill gauge to 2 allies with the highest
+    attack.
+  index: 62
+thanatos:
+  pic: "/images/thanatos0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: attacker
+  element: water
+  leader: Drive skill damage +1000 to Water units
+  auto: Deals 111 damage.
+  tap: Deals 95 damage plus Auto damage 4 times to target.
+  slide: Deals 733 damage and Poison (deals 300 damage when enemy attacks and receives
+    attacks) for 4 turns to 2 enemies with highest attack with 175 additional damage
+    if Fire type.
+  drive: Deals 2151 damage to 4 enemies with lowest HP.
+  index: 63
+cube moa:
+  pic: "/images/moa0.png"
+  pic2: "/images/moa1.png"
+  pic3: ''
+  tier: s
+  stars: '5'
+  type: debuffer
+  element: light
+  leader: Dark enemy debuff evasion rate -10%
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
+  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
+    (unable to act for 10s or after being hit 2 times).
+  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
+    to act for 15s or after being hit 3 times).
+  index: 31
+dark maat:
+  pic: "/images/darkmaat0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: attacker
+  element: dark
+  leader: "  +5% slide damage to Dark allies"
+  auto: Deal 113 damage.
+  tap: Attack 2 targets twice each, dealing auto-attack damage plus 40 additional
+    damage per hit (prioritizes enemies with buff effects).
+  slide: Deal 1329 damage to all enemies, plus 500 defense ignoring damage, with a
+    70% chance to apply Chaser (upon killing an enemy, deal 1500 additional fixed
+    damage to 1 random remaining enemy) to self for 14 seconds.
+  drive: Deal 2285 damage to all enemies and apply Resurrect to self for 10 seconds
+    (upon dying, revive with 50% HP, fully charge skill gauge, and Attack Up (stacks
+    up to 5 times)).
+  index: 35
+ai:
+  pic: "/images/ai0.png"
+  pic2: ''
+  pic3: ''
+  tier: C
+  stars: '5'
+  type: tank
+  element: dark
+  leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
+    Ragnas)
+  auto: Deals 90 damage.
+  tap: Deals 294 damage to target and Defense +900 to self and gains Taunt (85% provocation)
+    for 11s.
+  slide: Deals 539 damage to target, gives Reflect (returns 13% of damage received)
+    to self and gives Defense +850 to 3 units with priority to Dark Units (including
+    self).
+  drive: Deals 1386 damage to 2 random enemies and gives Reflect (returns 20% of damage
+    received) for 18s to 5 allies.
+  index: 3
+abaddon:
+  pic: "/images/abaddon0.png"
+  pic2: ''
+  pic3: ''
+  tier: A
+  stars: '5'
+  type: attacker
+  element: earth
+  leader: Drive skill damage +1000 to all Grass type allies (bonus +1000 drive damage
+    to all allies on Ragnas)
+  auto: Deals 112 damage.
+  tap: Deals 120 damage plus Auto damage 4 times to target.
+  slide: Deals 771 damages to 3 random enemis and Absorb 350 damage as HP.
+  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
+    for 2turn to self.
+  index: 1
