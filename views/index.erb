@@ -19,12 +19,11 @@
 <div class="units_list_div">
     <% @units.each do |unit, unit_details| %>
       <% next if unit == "new_unit" %>
-
         <div class="unit_div <%= unit_details["element"] %>">
-          <h2><%= unit.capitalize %></h2>
+          <h2><%= upcase_name(unit) %></h2>
           <% if session[:username] %>
             <a href="/<%= unit %>/edit">Edit</a>|
-            <a href="/<%= unit %>/remove">Remove</a>
+            <a href="/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
           <% else %>
             <p>  </p>
           <% end %>

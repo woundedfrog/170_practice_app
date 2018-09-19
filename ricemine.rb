@@ -29,6 +29,10 @@ helpers do
       info_val
     end
   end
+
+  def upcase_name(name)
+    name.split(" ").map { |part| part.capitalize  }.join(" ")
+  end
 end
 
 def delete_selected_file(name)
@@ -150,7 +154,7 @@ end
 
 get "/" do
   units = load_unit_details
-  units = units.select { |_, v| v["stars"] == '5' }.to_h.sort_by { |k, v| k }.to_h
+  units = units.select { |_, v| v["stars"] == '5' }.to_h
   @units = units.sort_by { |k, v| k }.to_h
   erb :index
 end
@@ -234,7 +238,7 @@ get "/equips/soulcards" do
 end
 
 get "/equips/soulcards/:sc_name" do
-  @sc_name = params[:sc_name].capitalize
+  @sc_name = params[:sc_name]
   @current_card = load_soulcards_details[params[:sc_name]]
   name = params[:sc_name]
   erb :view_sc
@@ -252,7 +256,7 @@ post "/equips/new_sc" do
   @current_unit = load_soulcards_details[params[:sc_name]]
   @max_index_val = get_max_index_number(load_soulcards_details)
   data = load_soulcards_details
-  name = params[:sc_name]
+  name = params[:sc_name].downcase  #makes sure all names are downcase
   index = params[:index].to_i
 
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
@@ -307,7 +311,7 @@ post "/new_unit" do
   @current_unit = load_unit_details[params[:unit_name]]
   @max_index_val = get_max_index_number(load_unit_details)
   data = load_unit_details
-  name = params[:unit_name]
+  name = params[:unit_name].downcase
   index = params[:index].to_i
 
   original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
@@ -365,7 +369,7 @@ post "/new_unit" do
       data[name]["pic3"] = "/images/" + params[:pic3] + ".png"
     end
 
-    data[name]["tier"] = params[:tier]
+    data[name]["tier"] = params[:tier].upcase
 
     data[name]["stars"] = params[:stars]
     data[name]["type"] = params[:type]
