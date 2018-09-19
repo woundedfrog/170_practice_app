@@ -191,9 +191,9 @@ end
 get "/sort_by/:type" do
   # @units = load_unit_details.select { |_, v| v["type"] == params[:type] }.to_h
   if params[:type] == '5'
-    @units = load_unit_details.select { |_, v| v["stars"] == '5' }.to_h
+    @units = load_unit_details.select { |_, v| v["stars"] == '5' }.to_h.sort_by { |k, v| k }.to_h
   elsif params[:type] == '4'
-    @units = load_unit_details.select { |_, v| v["stars"] == '4' }.to_h
+    @units = load_unit_details.select { |_, v| v["stars"] == '4' }.to_h.sort_by { |k, v| k }.to_h
   else
     @units = load_unit_details.sort_by { |k, v| v[params[:type]] }.to_h
   end
