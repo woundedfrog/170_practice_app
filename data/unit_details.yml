@@ -415,7 +415,7 @@ warwolf:
   drive: Deals 1751 damage to 3 random enemies and Give +30% Attack and +50% Critical
     Rate to 3 Allies (Prioritizing Dark Types).
   index: 38
-panteon:
+pantheon:
   tier: b
   pic: "/images/pantheon0.png"
   pic2: ''
