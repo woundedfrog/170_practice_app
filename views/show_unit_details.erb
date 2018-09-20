@@ -1,7 +1,7 @@
 <p>
 <a id="add_new_unit" href="/">BACK TO MAIN MENU</a>
 </p>
-
+<%= @details.class %>
 <p>There are <%= @details.keys.size %> units in the file. </p>
 <p>Their names are: <%= @details.keys.sort %></p>
 <p>Total characters: <%= @details.to_a.flatten.join("").size %>

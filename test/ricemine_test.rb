@@ -19,23 +19,21 @@ class RICEMINETest < Minitest::Test
     FileUtils.mkdir_p("../test/data/sc/")
     # @unit_details = load_unit_details
     # @card_details = load_soulcards_details
-    # @new_unit = load_unit_details
+    # @new_unit = load_new_unit
     new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}
 
-    units = {"dana" => {"pic" => "dana0.png", "pic2" => "", "pic3" => "","tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 1},
-    "cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}
+    units = {"cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0},
+  "dana" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 1}}
 
     new_sc = {"new_sc" => { "pic" => "", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
 
     sc = {"vacation" => { "pic" => "vacation0.jpg", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
-
 
     create_unit_file("new_unit.yml", new_unit)
     # create_file("new_unit.yml", units)
     create_unit_file("unit_details.yml", units)
     create_soulcard_file("new_soul_card.yml", new_sc)
     create_soulcard_file("soul_cards.yml", sc)
-
   end
 
   def session
@@ -43,7 +41,7 @@ class RICEMINETest < Minitest::Test
   end
 
   def admin_session
-    { "rack.session" => { username: "mnyiaa", password: "thiccissick" } }
+    { "rack.session" => { username: "mnyiaa"} }
   end
 
   def create_unit_file(name, content = "")
@@ -61,8 +59,6 @@ class RICEMINETest < Minitest::Test
   #   File.write("../test/data/unit_details.yml", YAML.dump(content))
   # end
 
-
-
   # def create_soulcard(name, content = "")
   #   File.write("../test/data/sc/unit_details.yml", YAML.dump(content))
   # end
@@ -72,7 +68,6 @@ class RICEMINETest < Minitest::Test
     assert_equal 200, last_response.status
     assert_equal "text/html;charset=utf-8", last_response["Content-Type"]
     assert_includes last_response.body, "cleopatra"
-    assert_includes last_response.body, 'dana'
   end
 
   def test_show_unit_details_list
@@ -91,10 +86,9 @@ class RICEMINETest < Minitest::Test
   def test_units_info
     details = load_unit_details
     assert_includes details, "cleopatra"
-    assert_includes details, "dana"
 
     assert_equal details["cleopatra"]["stars"], '5'
-    assert_equal details["dana"]["type"], 'tank'
+    assert_equal details["cleopatra"]["type"], 'attacker'
 
     get "/cleopatra"
     assert_includes last_response.body, "attacker"
@@ -117,13 +111,7 @@ class RICEMINETest < Minitest::Test
     assert_equal "invalid_unit_name doesn't exist.", session[:message]
   end
 
-  def test_document_editing
-    # without signing in -> error
-    get "/cleopatra/edit"
-    assert_equal 302, last_response.status
-    assert_equal "You must be signed in to do that.", session[:message]
-
-
+  def test_unit_editing_signed_in
     # with signing in -> no error
     get "/cleopatra/edit", {}, admin_session
     assert_equal 200, last_response.status
@@ -131,32 +119,78 @@ class RICEMINETest < Minitest::Test
     assert_includes last_response.body, %q(<input name="edited" type="checkbox" required>)
   end
 
-  def test_updating_document
-    # post "/new_unit", {@unit_details["cleopatra"]}, admin_session
-    #
-    # assert_equal 302, last_response.status
-
-    # assert_equal "cleopatra has been updated!", session[:message]
-
-    # get "/changes.txt"
-    # assert_equal 200, last_response.status
-    # assert_includes last_response.body, "content testing text"
+  def test_unit_editing_signed_out
+    # without signing in -> error
+    get "/cleopatra/edit"
+    assert_equal 302, last_response.status
+    assert_equal "You must be signed in to do that.", session[:message]
   end
-#
-#   def test_updating_document_signed_out
-#     post "/changes.txt", {content: "new content"}
-#
-#     assert_equal 302, last_response.status
-#     assert_equal "You must be signed in to do that.", session[:message]
-#   end
-#
-#   def test_view_new_document_form
-#   get "/new", {}, admin_session
-#
-#   assert_equal 200, last_response.status
-#   assert_includes last_response.body, "<input"
-#   assert_includes last_response.body, %q(<button type="submit")
-#   end
+
+  def test_editing_updating_unit
+    get "/cleopatra/edit", {:unit_name => "cleopatra"}, admin_session
+    assert_includes last_response.body, "cleopatra"
+
+    post "/new_unit", {:unit_name => "cleopatra1", :tier => "S", :pic2 => '', :pic3 => ''}, admin_session
+
+    assert_equal "New unit called CLEOPATRA1 has been created.", session[:message]
+
+    assert_equal 302, last_response.status
+    assert_equal load_unit_details.keys.size, 2
+    assert_includes load_unit_details.keys, "cleopatra1"
+    refute_includes load_unit_details.keys, "cleopatra0"
+  end
+
+  def test_creating_new_unit
+    post "/new_unit", {:unit_name => "eve", :tier => "S", :pic2 => '', :pic3 => '', :index => 3}, admin_session
+
+
+    assert_equal "New unit called EVE has been created.", session[:message]
+    assert_equal 302, last_response.status
+    assert_equal load_unit_details.keys.size, 3
+    assert_includes load_unit_details.keys, "eve"
+  end
+
+  def test_updating_soulcard
+    get "/equips/vacation/edit", {:unit_name => "vacation"}, admin_session
+    assert_includes last_response.body, "vacation"
+
+    post "/equips/new_sc", {:sc_name => "vacation2"}, admin_session
+
+    assert_equal "New Soulcard called VACATION2 has been created.", session[:message]
+
+    assert_equal 302, last_response.status
+    assert_equal load_soulcards_details.keys.size, 1
+    assert_includes load_soulcards_details.keys, "vacation2"
+    refute_includes load_soulcards_details.keys, "vacation"
+  end
+
+  def test_creating_new_soulcard
+    post "/equips/new_sc", {:sc_name => "vacation2", :index => 1}, admin_session
+
+
+    assert_equal "New Soulcard called VACATION2 has been created.", session[:message]
+    assert_equal 302, last_response.status
+    assert_equal load_soulcards_details.keys.size, 2
+    assert_includes load_soulcards_details.keys, "vacation2"
+  end
+
+  def test_view_new_document_form
+    get "/equips/new_sc", {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}, admin_session
+  # {:unit_name => "eve", :index => 1},
+    assert_equal 200, last_response.status
+
+    assert_includes last_response.body, "<input"
+    assert_includes last_response.body, %q(<button type="submit")
+  end
+
+  def test_view_new_soulcard_form
+    get "/equips/new_sc", {:new_sc => { :pic => "", :stars => '5', :stats => "", :passive => "", :index=> 0}}, admin_session
+  # {:unit_name => "eve", :index => 1},
+    assert_equal 200, last_response.status
+
+    assert_includes last_response.body, "<input"
+    assert_includes last_response.body, %q(<button type="submit")
+  end
 #
 #   def test_view_new_document_form_signed_out
 #     get "/new"

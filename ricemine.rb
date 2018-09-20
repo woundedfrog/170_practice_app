@@ -307,6 +307,8 @@ post "/equips/new_sc" do
     data[name]["index"] = index
 
     File.write("data/sc/soul_cards.yml", YAML.dump(data))
+
+    session[:message] = "New Soulcard called #{name.upcase} has been created."
     redirect "/equips/soulcards"
 end
 
@@ -336,7 +338,6 @@ post "/new_unit" do
 
   if unit_data.include?(name) && index != unit_data[name]["index"]
     #this clause makes sure we can only edit units if there are no name conflicts.
-
     session[:message] = "A unit by that name already exists. Please enter a different unit name."
     if params["edited"]
         status 422
@@ -386,6 +387,7 @@ post "/new_unit" do
     data[name]["index"] = index
 
     File.write("data/unit_details.yml", YAML.dump(data))
+    session[:message] = "New unit called #{name.upcase} has been created."
     redirect "/"
 end
 
