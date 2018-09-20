@@ -103,25 +103,6 @@ aria:
   drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
     2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
   index: 0
-ashtoreth:
-  tier: s
-  pic: "/images/ashtoreth0.png"
-  pic2: "/images/ashtoreth1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  leader: "·Tap Skill Damage +5% to Light Allies"
-  auto: "·Deals 113 damage"
-  tap: "·Deals 505 damage to highest attack enemy.\r\n·65% chance to Apply \"Direct
-    Hit\" (Ignore \"Invincibility\") to self for 13 seconds"
-  slide: "·Deals 830 damage to 3 highest attack enemies.\r\n·Ignore 800 defense.\r\n·Additional
-    800 damage IF target is \"Confused\" or have \"Invincibility\"."
-  drive: "·Deals 2339 damage to 4 highest attack enemies.\r\n·70% chance to Apply
-    \"Confuse\" (Confused Targets will attack their own allies and heals the enemy)
-    to target for 10 seconds .\r\n·90% chance to Apply \"Direct Hit\" (Ignore \"Invincibility\")
-    to self for 18 seconds."
-  index: 6
 astraeas:
   tier: A
   pic: "/images/astraea0.png"
@@ -635,24 +616,6 @@ dark Midas:
     5[4+1]) to 3 lowest HP allies). (On Enemy, Deal 400 damage multiplied by the number
     of debuffs +1 up to 4 debuffs (Total 5[4+1]) to 3 lowest HP enemies).
   index: 41
-hildr:
-  tier: ''
-  pic: "/images/hildr0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: earth
-  leader: "+8% slide skill damage for Light type allies"
-  auto: Deal 113 auto attack damage.
-  tap: Deal 486 damage and has a 65% chance to apply "Long-Range Attack" (ignore Taunt
-    and Reflect) to self for 13 seconds. In Underground, 430 additional damage to
-    target.
-  slide: Attack 2 enemies twice each (prioritizing Dark type), dealing 755 damage.
-    If the target is a Debuff type, deal 150 additional damage and if the target is
-    a Dark type, deal 200 additional piecing damage.
-  drive: Deal 2588 damage to all enemies.
-  index: 42
 scubaMona:
   tier: ''
   pic: "/images/scubamona0.png"
@@ -833,23 +796,6 @@ orga:
   drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
     gauge by 45% to 3 random enemies.
   index: 54
-bikini davi:
-  pic: "/images/bikinidavi0.png"
-  pic2: "/images/bikinidavi1.png"
-  pic3: ''
-  tier: S
-  stars: '5'
-  type: buffer
-  element: water
-  leader: "+8% defense for all allies (additional +12% on WorldBoss)"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 382 damage and a 70% chance to cancel 2 debuffs ('Burn' and 'Scalp').
-  slide: Deal 660 damage and a 50% to apply "Double-Edge Sword" (Increase attack,
-    but decrease defense) to 5 water allies for 16 seconds. For WorldBoss Only. Slide
-    Skill Damage +1250 for 16 seconds.
-  drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
-    Only, Attack power +30% for 20 seconds.
-  index: 44
 anemone:
   pic: "/images/anemone0.png"
   pic2: "/images/anemone1.png"
@@ -1093,8 +1039,8 @@ abaddon:
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2turn to self.
   index: 1
-frey(light):
-  pic: "/images/frey0.png"
+frey (light):
+  pic: "/images/freylight0.jpg"
   pic2: ''
   pic3: ''
   tier: B
@@ -1109,8 +1055,8 @@ frey(light):
   drive: Deal 10870 (250%) damage to 2 enemies & apply "Curse" (300 damage every 2
     seconds) for 8 seconds.
   index: 64
-nevan(light):
-  pic: "/images/4nevan0.png"
+nevan (light):
+  pic: "/images/neman1.jpg"
   pic2: ''
   pic3: ''
   tier: B
@@ -1126,3 +1072,75 @@ nevan(light):
   drive: Deal 4332 damage to 3 enemies & +40% ATK + "Silence Immunity" for 10 seconds
     to 2 Allies (Prioritizing highest ATK).
   index: 65
+rita:
+  pic: "/images/rita0.jpg"
+  pic2: ''
+  pic3: ''
+  tier: A
+  stars: '5'
+  type: debuffer
+  element: dark
+  leader: "-10% Debuff Evasion to all enemies"
+  auto: Deal 261 damage
+  tap: Deal 1281 dmg to 1 enemy with highest ATK stat, then reduces the target's ATK
+    by -16.4% for 10 seconds
+  slide: Deal 1575 dmg to 2 enemies with lowest HP, then 72.7% chance to inflict Death
+    Heal (enemy receives dmg equal to the HP heal received, Vampirism/HP Absorb excluded)
+    for 14 seconds, and reduces skill gauge by -39.1%
+  drive: Deal 4699 dmg to 3 targets, and apply Disintegration (500 damage every 2
+    seconds, debuffs inflicted will last shorter and cannot be extended) for 14 seconds
+  index: 66
+hildr:
+  pic: "/images/hildr0.png"
+  pic2: ''
+  pic3: ''
+  tier: ''
+  stars: '5'
+  type: attacker
+  element: light
+  leader: "+8% slide skill damage for Light type allies"
+  auto: Deal 113 auto attack damage.
+  tap: Deal 486 damage and has a 65% chance to apply "Long-Range Attack" (ignore Taunt
+    and Reflect) to self for 13 seconds. In Underground, 430 additional damage to
+    target.
+  slide: Attack 2 enemies twice each (prioritizing Dark type), dealing 755 damage.
+    If the target is a Debuff type, deal 150 additional damage and if the target is
+    a Dark type, deal 200 additional piecing damage.
+  drive: Deal 2588 damage to all enemies.
+  index: 42
+ashtoreth:
+  pic: "/images/ashtoreth0.png"
+  pic2: "/images/ashtoreth1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: attacker
+  element: light
+  leader: "·Tap Skill Damage +5% to Light Allies"
+  auto: "·Deals 113 damage"
+  tap: ·Deals 505 damage to highest attack enemy. ·65% chance to Apply "Direct Hit"
+    (Ignore "Invincibility") to self for 13 seconds
+  slide: ·Deals 830 damage to 3 highest attack enemies. ·Ignore 800 defense. ·Additional
+    800 damage IF target is "Confused" or have "Invincibility".
+  drive: ·Deals 2339 damage to 4 highest attack enemies. ·70% chance to Apply "Confuse"
+    (Confused Targets will attack their own allies and heals the enemy) to target
+    for 10 seconds. ·90% chance to Apply "Direct Hit" (Ignore "Invincibility") to
+    self for 18 seconds.
+  index: 6
+bikini davi:
+  pic: "/images/bikinidavi0.png"
+  pic2: "/images/bikinidavi1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: buffer
+  element: water
+  leader: "+8% defense for all allies (additional +12% on WorldBoss)"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 382 damage and a 70% chance to cancel 2 debuffs ('Burn' and 'Scalp').
+  slide: Deal 660 damage and a 50% to apply "Double-Edge Sword" (Increase attack,
+    but decrease defense) to 5 water allies for 16 seconds. For WorldBoss Only, Slide
+    Skill Damage +1250 for 16 seconds.
+  drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
+    Only, Attack power +30% for 20 seconds.
+  index: 44

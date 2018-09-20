@@ -33,7 +33,7 @@
      <div class="unit_stats_div">
          <h3 class="stat_title"><%= info_key.capitalize %>:</h3>
          <ul>
-           <% info_val.split(".").each do |line| %>
+           <% info_val.split(". ").each do |line| %>
              <p class="stats"><%= line %></p>
            <% end %>
          </ul>
