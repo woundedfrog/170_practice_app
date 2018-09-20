@@ -46,6 +46,7 @@ DEPENDENCIES
   bcrypt
   erubis
   minitest
+  rack (~> 2.0.1)
   rack-test
   redcarpet
   sinatra

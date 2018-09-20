@@ -174,7 +174,7 @@ class RICEMINETest < Minitest::Test
     assert_includes load_soulcards_details.keys, "vacation2"
   end
 
-  def test_view_new_document_form
+  def test_view_new_unit_form
     get "/equips/new_sc", {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}, admin_session
   # {:unit_name => "eve", :index => 1},
     assert_equal 200, last_response.status
@@ -192,78 +192,67 @@ class RICEMINETest < Minitest::Test
     assert_includes last_response.body, %q(<button type="submit")
   end
 #
-#   def test_view_new_document_form_signed_out
-#     get "/new"
-#
-#     assert_equal 302, last_response.status
-#     assert_equal "You must be signed in to do that.", session[:message]
-#   end
-#
-#   def test_create_new_document
-#     post "/create", {filename: "test.txt"}, admin_session
-#     assert_equal 302, last_response.status
-#     assert_equal "test.txt has been created!", session[:message]
-#
-#     get "/"
-#     assert_includes last_response.body, "test.txt"
-#   end
-#
-#   def test_create_new_document_signed_out
-#     post "/create", {filename: "test.txt"}
-#
-#     assert_equal 302, last_response.status
-#     assert_equal "You must be signed in to do that.", session[:message]
-#   end
-#
-#   def test_create_new_document_without_filename
-#     post "/create", {filename: ""}, admin_session
-#     assert_equal 422, last_response.status
-#     assert_includes last_response.body, "A valid file-name and type is required!"
-#   end
-#
-#   def test_deleting_document
-#     post "/test.txt/delete", {}, admin_session
-#
-#     assert_equal 302, last_response.status
-#     assert_equal "test.txt has been deleted!", session[:message]
-#
-#     get "/"
-#     refute_includes last_response.body, %q(href="/test.txt")
-#   end
-#
-#   def test_deleting_document_signed_out
-#     create_document("test.txt")
-#
-#     post "/test.txt/delete"
-#     assert_equal 302, last_response.status
-#     assert_equal "You must be signed in to do that.", session[:message]
-#   end
-#
-#   def test_signin_form
-#     get "/users/signin"
-#
-#     assert_equal 200, last_response.status
-#     assert_includes last_response.body, "<input"
-#     assert_includes last_response.body, %q(<button type="submit")
-#   end
-#
-#   def test_signin
-#     post "/users/signin", username: "admin", password: "secret"
-#     assert_equal 302, last_response.status
-#     assert_equal "Welcome!", session[:message]
-#     assert_equal "admin", session[:username]
-#
-#     get last_response["Location"]
-#     assert_includes last_response.body, "Signed in as admin"
-#   end
-#
-#   def test_signin_with_bad_credentials
-#     post "/users/signin", username: "guest", password: "shhhh"
-#     assert_equal 422, last_response.status
-#     assert_nil session[:username]
-#     assert_includes last_response.body, "Invalid credentials"
-#   end
-#
+  def test_view_new_unit_form_signed_out
+    get "/new_unit"
+
+    assert_equal 302, last_response.status
+    assert_equal "You must be signed in to do that.", session[:message]
+  end
+
+  def test_creating_new_unit_signed_out
+    post "/new_unit", {:unit_name => "eve", :tier => "S", :pic2 => '', :pic3 => '', :index => 3}
+
+
+    assert_equal "You must be signed in to do that.", session[:message]
+    assert_equal 302, last_response.status
+    # assert_equal load_unit_details.keys.size, 3
+    refute_includes load_unit_details.keys, "eve"
+  end
+
+  def test_deleting_unit
+    get "/cleopatra", {:unit_name => "cleopatra"}
+    assert_equal 200, last_response.status
+
+    get "/cleopatra/remove", {}, admin_session
+    assert_equal 302, last_response.status
+    assert_equal "That unit was successfully deleted.", session[:message]
+
+    #
+    get "/"
+    refute_includes last_response.body, "Cleopatra"
+  end
+
+  def test_deleting_document_signed_out
+    get "/cleopatra/remove"
+    assert_equal 302, last_response.status
+    assert_equal "You must be signed in to do that.", session[:message]
+  end
+
+  def test_signin_form
+    get "/users/signin"
+
+    assert_equal 200, last_response.status
+    assert_includes last_response.body, "<input"
+    assert_includes last_response.body, %q(<button type="submit")
+  end
+
+  def test_signin
+    post "/users/signin", username: "mnyiaa", password: "thiccissick"
+    assert_equal 302, last_response.status
+    assert_equal "Welcome!", session[:message]
+    assert_equal "mnyiaa", session[:username]
+
+    get last_response["Location"]
+    assert_includes last_response.body, "Welcome!"
+  end
+
+  def test_signin_with_bad_credentials
+    post "/users/signin", username: "guest", password: "shhhh"
+    assert_equal 422, last_response.status
+    assert_nil session[:username]
+    assert_includes last_response.body, "Invalid credentials"
+  end
+
 #   def test_signout
 #     get "/", {}, {"rack.session" => { username: "admin"} }
 #     assert_includes last_response.body, "Signed in as admin"
@@ -275,7 +264,7 @@ class RICEMINETest < Minitest::Test
 #     assert_includes last_response.body, "You have been signed out"
 #     assert_includes last_response.body, "Sign In"
 #   end
-#
+
 # # These two tests are doing the same thing, but the 2nd one is more natural.
 #   def test_sets_session_value
 #     post "/users/signin", username: "admin", password: "secret"
@@ -284,20 +273,10 @@ class RICEMINETest < Minitest::Test
 #     get "/"
 #     assert_equal "admin", session[:username]
 #   end
-#
-#   def test_index_as_signed_in_user
-#     get "/", {}, {"rack.session" => { username: "admin"} }
-#   end
-# # ...end...
-#
-#   def test_editing_document_signed_out
-#     create_document "changes.txt"
-#
-#     get "/changes.txt/edit"
-#
-#     assert_equal 302, last_response.status
-#     assert_equal "You must be signed in to do that.", session[:message]
-#   end
+
+  def test_index_as_signed_in_user
+    get "/", {}, {"rack.session" => { username: "mnyiaa"} }
+  end
 
   def teardown
         FileUtils.rm_rf("../test/data")

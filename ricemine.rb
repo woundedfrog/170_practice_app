@@ -249,12 +249,14 @@ get "/equips/soulcards/:sc_name" do
 end
 
 get "/equips/:sc_name/edit" do
+  require_user_signin
   @current_card = load_soulcards_details[params[:sc_name]]
   name = params[:sc_name]
   erb :edit_sc
 end
 
 post "/equips/new_sc" do
+  require_user_signin
   unit_data = load_soulcards_details
   # @new_card_info = load_new_soulcard["new_sc"]
   @current_unit = load_soulcards_details[params[:sc_name]]
@@ -313,6 +315,7 @@ post "/equips/new_sc" do
 end
 
 post "/new_unit" do
+  require_user_signin
   unit_data = load_unit_details
   @current_unit = load_unit_details[params[:unit_name]]
   @max_index_val = get_max_index_number(load_unit_details)
@@ -403,7 +406,7 @@ get "/:unit_name/remove" do  #use this if using the normal links for edit/remove
   else
     units_info.delete(unit)
     File.write("data/unit_details.yml", YAML.dump(units_info))
-    session[:message] = "That unit successfully deleted."
+    session[:message] = "That unit was successfully deleted."
     redirect "/"
   end
 end
