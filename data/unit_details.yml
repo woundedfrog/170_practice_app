@@ -1093,3 +1093,36 @@ abaddon:
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2turn to self.
   index: 1
+frey(light):
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: attacker
+  element: light
+  leader: "+8% Tap Skill Damage to Light Allies | Additional +8% in Ragna"
+  auto: Deal 302 damage.
+  tap: Deal 1604 (109.4%) damage & +350 Ignore Defense Damage if enemy is Dark Attribute.
+  slide: Deal Tap Skill Damage 2X +200 additional damage to 2 enemies prioritizing
+    Debuffer type | +660 Additional damage if during Ragna and if enemy is Dark Attribute.
+  drive: Deal 10870 (250%) damage to 2 enemies & apply "Curse" (300 damage every 2
+    seconds) for 8 seconds.
+  index: 64
+nevan(light):
+  pic: "/images/4nevan0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: buffer
+  element: light
+  leader: "+10% Debuff Evasion for Light Allies | Additional +10% in Ragna"
+  auto: Deal 256 damage
+  tap: Deal 1245 Damage & 72.7% chance to remove "Death Heal" debuff from 2 allies.
+  slide: Deal 1709 damage to 1 enemy + increase ATK by +1680 & Slide Skill Damage
+    by +1280 for 3 Light Allies (Prioritizing Highest ATK) for 16 seconds | Additionally
+    increase Skill Gauge +23.4% for 2 Light Allies in Ragna.
+  drive: Deal 4332 damage to 3 enemies & +40% ATK + "Silence Immunity" for 10 seconds
+    to 2 Allies (Prioritizing highest ATK).
+  index: 65

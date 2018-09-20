@@ -1,13 +1,15 @@
-<p>
-<a id="add_new_unit" href="/">BACK TO MAIN MENU</a>
-</p>
-<%= @details.class %>
-<p>There are <%= @details.keys.size %> units in the file. </p>
-<p>Their names are: <%= @details.keys.sort %></p>
-<p>Total characters: <%= @details.to_a.flatten.join("").size %>
-<p>
-<a id="add_new_unit" href="/download/unit_details.yml">Get unit details</a>
-</p>
-<p>
-<a id="add_new_unit" href="/download/soul_cards.yml">Get soulcard details</a>
-</p>
+<p><a id="add_new_unit" href="/">BACK TO MAIN MENU</a></p>
+
+<h4>Unit details:</h4>
+<p>There are <%= @unit_details.keys.size %> units in the file. </p>
+<p>Their names are: <%= @unit_details.keys.sort %></p>
+<p>Total characters: <%= @unit_details.to_a.flatten.join("").size %><p>
+<p><a id="add_new_unit" href="/download/unit_details.yml">Get unit details</a></p>
+
+<h4>Soulcard details:</h4>
+<p>There are <%= @sc_details.keys.size %> Soulcards in the file. </p>
+<p>Their names are: <%= @sc_details.keys.sort %></p>
+<p>Total characters: <%= @sc_details.to_a.flatten.join("").size %><p>
+  <p>-------------------</p>
+
+<p><a id="add_new_unit" href="/download/soul_cards.yml">Get soulcard details</a></p>

@@ -160,7 +160,8 @@ get "/" do
 end
 
 get "/show_unit_details" do
-  @details = load_unit_details
+  @unit_details = load_unit_details
+  @sc_details = load_soulcards_details
   erb :show_unit_details
 end
 
