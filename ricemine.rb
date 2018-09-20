@@ -220,6 +220,10 @@ get "/upload" do
 end
 
 get "/:unit_name" do
+  if load_unit_details.include?(params[:unit_name]) == false
+   session[:message] = "#{params[:unit_name]} doesn't exist."
+   redirect "/"
+  end
   @units = load_unit_details
   @unit_name = params[:unit_name].capitalize
   @current_unit = @units[params[:unit_name]]

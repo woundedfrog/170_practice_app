@@ -4,6 +4,7 @@
 
 <p>There are <%= @details.keys.size %> units in the file. </p>
 <p>Their names are: <%= @details.keys.sort %></p>
+<p>Total characters: <%= @details.to_a.flatten.join("").size %>
 <p>
 <a id="add_new_unit" href="/download/unit_details.yml">Get unit details</a>
 </p>

@@ -1,0 +1,19 @@
+---
+cleopatra:
+  tier: S
+  pic: "/images/cleopatra0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: light
+  leader: Attack -15% to Dark Type Enemies
+  auto: Deals 101 damage.
+  tap: Deals 386 damage and Reduce -700 Attack for 8 seconds and 60% chance to increase
+    "Curse" damage and duration for 8 seconds to target.
+  slide: Deals 604 damage and 500ignore defense to 2 highest attack enemies and Apply
+    "Blind" (40% chance to miss) for 12seconds.
+  drive: Dreals 1910 damage to 3 random enemies and Apply "Blind" (60% chance to miss)
+    for 14seconds and if they are inflicted with "Bleed", "Poison", "Curse" within
+    6seconds debuff duration is increased by +50% to 3random enemies.
+  index: 1
