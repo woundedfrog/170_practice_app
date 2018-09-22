@@ -1,10 +1,10 @@
 <% @files.each do |name| %>
    <% unless name.nil? %>
-     <p><%= name %></p>
+     <div><%= name %></div>
       <img src="../images/<%= name %>">
-      <p>
-      <a id="add_new_unit" href="/download/<%= name %>">Download file</a>
-      </p>
+      <div>
+      <a  href="/download/<%= name %>">Download file</a>
+    </div>
     <a href="/show_files/<%= name %>/remove">Delete</a>
    <% end %>
   <% end %>
