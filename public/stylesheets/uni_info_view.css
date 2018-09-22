@@ -92,8 +92,6 @@ basic styles
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    margin-left: auto;
-    margin-right: auto;
   }
 
   .unit_index_pic {
@@ -176,7 +174,7 @@ basic styles
   }
 
   .profile_imgs {
-    height: 272px;
+    height: 240px;
   }
 
   .short_unit_stats_div {
@@ -201,9 +199,22 @@ basic styles
     margin-right: 1em;
   }
 
+  .stat_img {
+    margin:  10px auto 10px auto;
+  }
+
+  .stat_img img {
+    height: 30px;
+    padding-left: 0em;
+    display: block;
+    margin-right: auto;
+    margin-left: auto;
+  }
+
   .unit_stats_div {
     background-color:#424451;
-    padding-bottom: 1em;
+    margin: auto;
+    /* padding-bottom: .5em; */
     padding-right: 1em;
   }
 
@@ -255,6 +266,18 @@ basic styles
       background-color: #b7bacc;
   }
 
+
+
+  span.highlight{
+      display:inline-block;
+      color:#d3bb3b;
+  }
+
+  p {
+     font-family:arial;
+  }
+
+
 }
 
 
@@ -274,7 +297,6 @@ basic styles
 
     main {
       font-family: sans-serif;
-      margin: .5em;
      }
 
       a:link, a:active, a:visited  {
@@ -430,7 +452,7 @@ basic styles
       }
 
       .profile_imgs {
-      height: 320px;
+      height: 250px;
       }
 
       .short_unit_stats_div {
@@ -453,11 +475,26 @@ basic styles
         color: #c1885e;
         padding-left: 1em;
         margin-right: 1em;
+
+      }
+
+    .stat_img {
+          margin:  10px auto 10px auto;
+      }
+
+      .stat_img img {
+        height: 30px;
+        padding-left: 0em;
+        display: block;
+        margin-right: auto;
+        margin-left: auto;
       }
 
       .unit_stats_div {
+        height: 100%;
         background-color:#424451;
-        padding-bottom: 1em;
+        margin: auto;
+        padding-bottom: .3em;
         padding-right: 1em;
       }
 
@@ -506,7 +543,17 @@ basic styles
       input, textarea {
           background-color: #b7bacc;
       }
-    }
+
+      span.highlight{
+          display:inline-block;
+          color:#d3bb3b;
+      }
+
+      p {
+         font-family:arial;
+      }
+
+  }
     /* ===========form profiles=========== */
 
 /* =====================

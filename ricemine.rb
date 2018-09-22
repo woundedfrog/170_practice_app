@@ -22,9 +22,9 @@ helpers do
 
   def format_stat(stat_key, info_val)
    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
-      "<img src='/images/#{info_val}.png' style='width: 25%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
+      "<img src='/images/#{info_val}.png'/>"
     elsif  ['tank', 'attacker', 'buffer', 'healer', 'debuffer'].include?(info_val)
-      "<img src='/images/#{info_val}.png' style='width: 30%; padding-left: 0em; display: block; margin-right: auto; margin-left: 25%;'/>"
+      "<img src='/images/#{info_val}.png'/>"
     else
       info_val
     end

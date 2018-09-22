@@ -1,12 +1,15 @@
 ENV["RACK_ENV"] = "test"
 
-require "fileutils"
+# require "fileutils"
 require "minitest/autorun"
+require 'minitest/reporters'
 require "rack/test"
+require 'yaml'
+Minitest::Reporters.use!
 
 require_relative "../ricemine"
 
-class RICEMINETest < Minitest::Test
+class RiceMineTest < Minitest::Test
   include Rack::Test::Methods
 
   def app
@@ -17,13 +20,11 @@ class RICEMINETest < Minitest::Test
 
     FileUtils.mkdir_p("../test/data/")
     FileUtils.mkdir_p("../test/data/sc/")
-    # @unit_details = load_unit_details
-    # @card_details = load_soulcards_details
-    # @new_unit = load_new_unit
+
     new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}
 
     units = {"cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0},
-  "dana" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 1}}
+    "dana" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 1}}
 
     new_sc = {"new_sc" => { "pic" => "", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
 
