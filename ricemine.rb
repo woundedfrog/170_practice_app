@@ -17,7 +17,7 @@ end
 
 helpers do
   def is_special_key?(key)
-    ["pic", "pic2", "pic3", "tier", "leader", "stars", "type", "element"].include?(key.to_s)
+    ["pic", "pic2", "pic3", "tier",  "stars", "type", "element"].include?(key.to_s)
   end
 
   def format_stat(stat_key, info_val)

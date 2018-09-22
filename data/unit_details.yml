@@ -1023,22 +1023,6 @@ ai:
   drive: Deals 1386 damage to 2 random enemies and gives Reflect (returns 20% of damage
     received) for 18s to 5 allies.
   index: 3
-abaddon:
-  pic: "/images/abaddon0.png"
-  pic2: ''
-  pic3: ''
-  tier: A
-  stars: '5'
-  type: attacker
-  element: earth
-  leader: Drive skill damage +1000 to all Grass type allies (bonus +1000 drive damage
-    to all allies on Ragnas)
-  auto: Deals 112 damage.
-  tap: Deals 120 damage plus Auto damage 4 times to target.
-  slide: Deals 771 damages to 3 random enemis and Absorb 350 damage as HP.
-  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
-    for 2turn to self.
-  index: 1
 frey (light):
   pic: "/images/freylight0.jpg"
   pic2: ''
@@ -1144,3 +1128,19 @@ bikini davi:
   drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
     Only, Attack power +30% for 20 seconds.
   index: 44
+abaddon:
+  pic: "/images/abaddon0.png"
+  pic2: ''
+  pic3: ''
+  tier: A
+  stars: '5'
+  type: attacker
+  element: earth
+  leader: Drive skill damage +1000 to all Grass type allies. (bonus +1000 drive damage
+    to all allies on Ragnas)
+  auto: Deals 112 damage.
+  tap: Deals 120 damage plus Auto damage 4 times to target.
+  slide: Deals 771 damages to 3 random enemis and Absorb 350 damage as HP.
+  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
+    for 2turn to self.
+  index: 1

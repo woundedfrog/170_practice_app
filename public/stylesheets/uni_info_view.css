@@ -13,7 +13,7 @@ basic styles
   main {
      font-family: sans-serif;
      margin: 0em;
-     margin-bottom: 10px
+     margin-bottom: 10px;
    }
 
   a:link, a:active, a:visited  {
@@ -192,11 +192,12 @@ basic styles
   }
 
   .short_stats {
-    width: 100%;
+    width: 80%;
     font-size: .9em;
     color: #c1885e;
     padding-left: 1em;
     margin-right: 1em;
+    overflow: hidden;
   }
 
   .stat_img {
