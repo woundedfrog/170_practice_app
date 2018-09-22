@@ -749,21 +749,6 @@ orora:
     7% of damage received) for 15s, priority to Dark enemies.
   drive: Deals 1417 damage to 3 enemies with lowest HP.
   index: 51
-calchas:
-  pic: "/images/4calchas0.png"
-  pic2: ''
-  pic3: ''
-  tier: C
-  stars: '4'
-  type: attacker
-  element: light
-  leader: Tap attack damage +40 to Light units
-  auto: Deals 80 damage.
-  tap: Deals 80 damage plus Auto damage 3 times to target.
-  slide: Deals 507 damage and Healing -25% for 14s to 2 enemies with lowest HP.
-  drive: Deals 1406 damage and Bleeding (160 continuous damage every 2 seconds) for
-    8s to 3 random enemies.
-  index: 52
 maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
@@ -1144,3 +1129,18 @@ abaddon:
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2turn to self.
   index: 1
+calchas:
+  pic: "/images/4calchas0.png"
+  pic2: ''
+  pic3: ''
+  tier: C
+  stars: '4'
+  type: attacker
+  element: light
+  leader: Tap attack damage +40 to Light units
+  auto: Deals 80 damage.
+  tap: Deals 80 damage plus Auto damage 3 times to target.
+  slide: Deals 507 damage and Healing -25% for 14s to 2 enemies with lowest HP.
+  drive: Deals 1406 damage and Bleeding (160 continuous damage every 2 seconds) for
+    8s to 3 random enemies.
+  index: 52

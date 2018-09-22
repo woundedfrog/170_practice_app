@@ -134,7 +134,6 @@ def get_max_index_number(list)
 end
 
 def sort_by_given_info(catagory, stars, type = 'name')
-
   star_rating = stars[0]
   by_stars = catagory.select { |_, v| v["stars"] == star_rating }.to_h
 
@@ -145,6 +144,10 @@ def sort_by_given_info(catagory, stars, type = 'name')
   else
     by_stars.sort_by { |k, v| v[type] }.to_h
   end
+end
+
+def get_last_two_units(list)
+  list.to_a[-2..-1].to_h
 end
 
 get "/users/signin" do
@@ -167,9 +170,10 @@ post "/users/signin" do
 end
 
 get "/" do
-  units = load_unit_details
   # units = units.select { |_, v| v["stars"] == '5' }.to_h
   # @units = units.sort_by { |k, v| k }.to_h
+  @units = get_last_two_units(load_unit_details)
+  @soulcards = get_last_two_units(load_soulcards_details)
   erb :home
 end
 
@@ -215,21 +219,21 @@ end
 get "/equips/:star_rating/:sc_name" do
   @sc_name = params[:sc_name]
   @current_card = load_soulcards_details[params[:sc_name]]
-  name = params[:sc_name]
+  # name = params[:sc_name]
   erb :view_sc
 end
 
 get "/equips/:star_rating/:sc_name/edit" do
   require_user_signin
   @current_card = load_soulcards_details[params[:sc_name]]
-  name = params[:sc_name]
+  # name = params[:sc_name]
   erb :edit_sc
 end
 
-get "/:catagory/:star_rating/:type" do
+get "/childs/:star_rating/sort_by/:type" do
   star_rating = params[:star_rating]
   type = params[:type]
-  catagory = params[:catagory] == "childs" ? load_unit_details : load_soulcards_details
+  catagory = load_unit_details
 
   if star_rating.include?("5") || star_rating.include?("4") || star_rating.include?("3")
     @units = sort_by_given_info(catagory, star_rating, type)
@@ -290,22 +294,22 @@ get "/upload" do
   erb :upload
 end
 
-get "/childs/:star_rating/:unit_name" do
-  if load_unit_details.include?(params[:unit_name]) == false
-    session[:message] = "#{params[:unit_name]} doesn't exist."
-    redirect "/"
-  end
-  @units = load_unit_details
-  @unit_name = params[:unit_name].capitalize
-  @current_unit = @units[params[:unit_name]]
-  erb :view_unit
-end
+# get "/childs/:star_rating/:unit_name" do
+#   if load_unit_details.include?(params[:unit_name]) == false
+#     session[:message] = "#{params[:unit_name]} doesn't exist."
+#     redirect "/"
+#   end
+#   @units = load_unit_details
+#   @unit_name = params[:unit_name].capitalize
+#   @current_unit = @units[params[:unit_name]]
+#   erb :view_unit
+# end
 
-get "/childs/:unit_name/edit" do
-  require_user_signin
-  @current_unit = load_unit_details[params[:unit_name]]
-  erb :edit_unit
-end
+# get "/childs/:unit_name/edit" do
+#   require_user_signin
+#   @current_unit = load_unit_details[params[:unit_name]]
+#   erb :edit_unit
+# end
 
 # get "/equips/soulcards" do
 #   @cards = load_soulcards_details
@@ -370,7 +374,8 @@ post "/equips/new_sc" do
   File.write("data/sc/soul_cards.yml", YAML.dump(data))
 
   session[:message] = "New Soulcard called #{name.upcase} has been created."
-  redirect "/equips/soulcards"
+  # redirect "/equips/#{params[:stars]}stars"
+  redirect "/"
 end
 
 post "/new_unit" do
@@ -450,6 +455,7 @@ post "/new_unit" do
 
   File.write("data/unit_details.yml", YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
+  # redirect "/childs/#{params[:stars]}stars"
   redirect "/"
 end
 
@@ -478,12 +484,12 @@ get "/equips/:star_rating/:sc_name/remove" do  #use this if using the normal lin
   if cards_info.include?(params[:sc_name]) == false
     status 422
     session[:message] = "That unit doesn't exist."
-    redirect "/equips/soulcards"
+    redirect "/"
   else
     cards_info.delete(card)
     File.write("data/sc/soul_cards.yml", YAML.dump(cards_info))
     session[:message] = "That unit successfully deleted."
-    redirect "/equips/soulcards"
+    redirect "/"
   end
 end
 
