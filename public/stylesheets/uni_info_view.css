@@ -194,7 +194,7 @@ basic styles
   .short_stats {
     width: 80%;
     font-size: .9em;
-    color: #c1885e;
+    color: white;
     padding-left: 1em;
     margin-right: 1em;
     overflow: hidden;
@@ -231,7 +231,7 @@ basic styles
 
   .stats {
     font-size: .9em;
-    color: #c1885e;
+    color: white;
     width: 100%;
   }
 
@@ -270,8 +270,8 @@ basic styles
 
 
   span.highlight{
-      display:inline-block;
-      color:#d3bb3b;
+      display: inline-block;
+      color: orange;
   }
 
   p {
@@ -473,7 +473,7 @@ basic styles
       .short_stats {
         width: 100%;
         font-size: .9em;
-        color: #c1885e;
+        color: white;
         padding-left: 1em;
         margin-right: 1em;
 
@@ -511,7 +511,7 @@ basic styles
 
       .stats {
         font-size: .9em;
-        color: #c1885e;
+        color: white;
         width: 100%;
       }
 
@@ -546,8 +546,8 @@ basic styles
       }
 
       span.highlight{
-          display:inline-block;
-          color:#d3bb3b;
+          display: inline-block;
+          color: orange;
       }
 
       p {

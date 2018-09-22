@@ -1140,7 +1140,7 @@ abaddon:
     to all allies on Ragnas)
   auto: Deals 112 damage.
   tap: Deals 120 damage plus Auto damage 4 times to target.
-  slide: Deals 771 damages to 3 random enemis and Absorb 350 damage as HP.
+  slide: Deals 771 damages to 3 random enemies and Absorb 350 damage as HP.
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2turn to self.
   index: 1
