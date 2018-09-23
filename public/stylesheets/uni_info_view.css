@@ -1,33 +1,104 @@
 /* =====================
 basic styles
 ===================== */
+body {
+	background-color: #2f343d;
+	min-width: 100%;
+}
 
-/* @media only screen and (max-width: 600px) { */
+.nav-link {
+	padding: 5px;
+}
 
-  /* html, body {
-    margin: 0px;
-    padding: 0px;
-    font-family: sans-serif;
-  } */
+h1,h2,h3,h4,h5,h6 {
+	color: #edeccb;
+	padding-left: 5px;
+	text-align: center;
+}
 
-   a:link, a:active, a:visited, a:hover  {
-  /* color: brown; */
-  text-decoration: none;
-  }
+.index-profile-title {
+	width: 98px;
+	height: 40px;
+	text-align: center;
+	/* word-wrap: break-word; */
+}
+
+.unit-grid-cols {
+	background-color: rgba(68, 68, 57, 1);
+	position: relative;
+	height: 320px;
+	width: 98px;
+	margin-top: 10px;
+	padding-top: 5px;
+	margin-left: 3px;
+}
+
+.sc-grid-cols {
+	position: relative;
+	max-width: 110px;
+	margin-top: 15px;
+	background-color: rgba(68, 68, 57, 1);
+	padding-top: 5px;
+}
+
+a:link, a:active, a:visited, a:hover  {
+	/* color: brown; */
+	text-decoration: none;
+}
+
+.sc_homepage_pic {
+	width: 110px;
+}
+.unit_index_pic {
+	position: absolute;
+
+	top: 0px;
+	/* left: 20px; */
+}
+.container {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.index-stat-container {
+	/* position: absolute;
+	bottom: 0px; */
+	/* background-color: rgba(48, 58, 57, 0.3); */
+	/* margin-bottom: 3px; */
+}
+
+.type-element-container {
+	position: absolute;
+	bottom: 50px;
+	left: 22px;
+	width: 70px;
+}
+
+.element-type-pic {
+	width: 35%;
+	padding-left: 5px;
+}
+
+.titles {
+	position: absolute;
+	padding-top: 3px;
+	width: 98px;
+	top: 275px;
+}
 
 /* } */
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+}
 
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+}
 
-  /* ===========form profiles=========== */
-                /* bigger screens */
-    /* ===========form profiles=========== */
-  /* @media only screen and (min-width: 601px) { */
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+}
 
-
-    /* ===========index profiles=========== */
-
-
-    /* ===========index profiles borders=========== */
-      /* ===========form profiles=========== */
-
-  /* } */
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+}

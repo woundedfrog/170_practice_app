@@ -22,9 +22,9 @@ helpers do
 
   def format_stat(stat_key, info_val)
     if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
-      "<img src='/images/#{info_val}.png'/>"
+      "<img class=\"element-type-pic\" src='/images/#{info_val}.png'/>"
     elsif  ['tank', 'attacker', 'buffer', 'healer', 'debuffer'].include?(info_val)
-      "<img src='/images/#{info_val}.png'/>"
+      "<img class=\"element-type-pic\" src='/images/#{info_val}.png'/>"
     else
       info_val
     end
@@ -146,10 +146,6 @@ def sort_by_given_info(catagory, stars, type = 'name')
   end
 end
 
-def get_last_two_units(list)
-  list.to_a[-2..-1].to_h
-end
-
 get "/users/signin" do
   erb :signin
 end
@@ -172,8 +168,8 @@ end
 get "/" do
   # units = units.select { |_, v| v["stars"] == '5' }.to_h
   # @units = units.sort_by { |k, v| k }.to_h
-  @units = get_last_two_units(load_unit_details)
-  @soulcards = get_last_two_units(load_soulcards_details)
+  @units = load_unit_details.to_a[-3..-1].to_h
+  @soulcards = load_soulcards_details.to_a[-3..-1].to_h
   erb :home
 end
 
@@ -241,7 +237,7 @@ get "/childs/:star_rating/sort_by/:type" do
     session[:message] = "There are no units by that tier!"
     redirect "/"
   end
-  erb :index
+  erb :index_child
 end
 
 get "/:catagory/:star_rating" do
@@ -256,12 +252,12 @@ get "/:catagory/:star_rating" do
     unit_info = load_unit_details
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
-    erb :index
+    erb :index_child
   else
     unit_info = load_soulcards_details
     @catagory = 'equips'
     @cards = sort_by_given_info(unit_info, params[:star_rating])
-    erb :list_sc
+    erb :index_sc
   end
 end
 
@@ -313,7 +309,7 @@ end
 
 # get "/equips/soulcards" do
 #   @cards = load_soulcards_details
-#   erb :list_sc
+#   erb :index_sc
 # end
 
 
@@ -409,7 +405,7 @@ post "/new_unit" do
     if params["edited"]
       status 422
       temp_name = get_unit_name(unit_data, index)
-      redirect "/#{temp_name}/edit"
+      redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
     else
       status 422
       redirect "/new_unit"
