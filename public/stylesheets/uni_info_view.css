@@ -116,6 +116,15 @@ span {
 	background-color: #3a3630;
 }
 
+label {
+	width: 100%;
+	background-color: #363a30;
+}
+
+.special-links {
+	text-decoration: underline;
+	color: blue;
+}
 /* end */
 
 /* } */

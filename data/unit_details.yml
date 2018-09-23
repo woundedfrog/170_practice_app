@@ -616,24 +616,6 @@ dark Midas:
     5[4+1]) to 3 lowest HP allies). (On Enemy, Deal 400 damage multiplied by the number
     of debuffs +1 up to 4 debuffs (Total 5[4+1]) to 3 lowest HP enemies).
   index: 41
-scubaMona:
-  tier: ''
-  pic: "/images/scubamona0.png"
-  pic2: "/images/scubamona1.png"
-  pic3: ''
-  stars: '5'
-  type: ''
-  element: water
-  leader: "-15% skill charge speed for all enemies"
-  auto: Deal 101 auto attack damage.
-  tap: Deal 392 damage and -350 defense to target for 8 second.
-  slide: Deal 673 damage to 2 enemies (Prioritizing the highest defense enemies) and
-    apply "Scald" (Skill Damage Defense -5%) and "Burn" [100 sustained dmg every 2
-    seconds. It last 8 seconds][Scald' effect will be reapplied when you receive an
-    attack other than Fever Time if "Burn" is happening]) for 12 seconds.
-  drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
-    Power -20% and 300 sustained damage every 2 seconds) for 16 seconds.
-  index: 43
 bikini Lisa:
   tier: ''
   pic: "/images/bikinilisa0.png"
@@ -1144,3 +1126,21 @@ calchas:
   drive: Deals 1406 damage and Bleeding (160 continuous damage every 2 seconds) for
     8s to 3 random enemies.
   index: 52
+scuba mona:
+  pic: "/images/scubamona0.png"
+  pic2: "/images/scubamona1.png"
+  pic3: ''
+  tier: ''
+  stars: '5'
+  type: ''
+  element: water
+  leader: "-15% skill charge speed for all enemies"
+  auto: Deal 101 auto attack damage.
+  tap: Deal 392 damage and -350 defense to target for 8 second.
+  slide: Deal 673 damage to 2 enemies (Prioritizing the highest defense enemies) and
+    apply "Scald" (Skill Damage Defense -5%) and "Burn" [100 sustained dmg every 2
+    seconds. It last 8 seconds][Scald' effect will be reapplied when you receive an
+    attack other than Fever Time if "Burn" is happening]) for 12 seconds.
+  drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
+    Power -20% and 300 sustained damage every 2 seconds) for 16 seconds.
+  index: 43
