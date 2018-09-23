@@ -1,24 +1,31 @@
 <% if session[:message] %>
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
-  <div id="links">
+  <!-- <div id="links">
   <a href="/">Show unit list</a>
   <% if session[:username] %>
     <a id="add_new_unit" href="/equips/new_sc">Add new SoulCard</a>
   <% end %>
-</div>
-<div class="units_list_div">
-    <% @cards.each do |card, card_details| %>
-    <% rating = card_details["stars"] + "stars" %>
-        <div class="sc_div">
-          <h2><%= upcase_name(card) %></h2>
+</div> -->
+
+<div class="container">
+    <div class="row justify-content-center">
+      <% @cards.each do |card, card_details| %>
+        <% rating = card_details["stars"] + "stars" %>
+      <div class="col-* sc-grid-cols">
+        <!-- <div class="index-profile-title"><h6><%= upcase_name(card) %></h6></div> -->
           <% if session[:username] %>
+          <div class="edit-remove-buttons">
             <a href="/equips/<%= rating %>/<%= card %>/edit">Edit</a>|
             <a href="/equips/<%= rating %>/<%= card %>/remove" onClick="return checkMe()">Remove</a>
-          <% else %>
-            <p>  </p>
+          </div>
           <% end %>
-          <a href="/equips/<%= rating %>/<%= card %>"><img class="sc_index_pic" src="<%= card_details['pic'] %>"/></a>
-        </div>
-    <% end %>
+
+          <a href="/equips/<%= rating %>/<%= card %>">
+            <img class="sc_index_pic" src="<%= card_details['pic'] %>"/>
+          </a>
+          <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
+      </div>
+  <% end %>
+  </div>
 </div>

@@ -2,72 +2,81 @@
 basic styles
 ===================== */
 body {
-	background-color: #2f343d;
+	background-color: #5e5e5e;
 	min-width: 100%;
+	color: #eae9e5;
 }
 
 .nav-link {
 	padding: 5px;
 }
 
+a:link, a:active, a:visited, a:hover  {
+	text-decoration: none;
+	color: white;
+}
+
 h1,h2,h3,h4,h5,h6 {
-	color: #edeccb;
-	padding-left: 5px;
+	padding: 5px;
+	padding-bottom: 0px;
+	color: #ffd584;
+}
+
+h1,h3,h4 {
 	text-align: center;
 }
 
-.index-profile-title {
-	width: 98px;
-	height: 40px;
-	text-align: center;
-	/* word-wrap: break-word; */
+
+.dropdown-menu {
+	background-color: #544d41;
+}
+
+ul {
+	margin: 0px;
+}
+p {
+	margin: 0px;
+}
+
+span {
+	color: #ffd123;
 }
 
 .unit-grid-cols {
-	background-color: rgba(68, 68, 57, 1);
+	background-color: rgba(58, 58, 57, 1);
 	position: relative;
 	height: 320px;
 	width: 98px;
 	margin-top: 10px;
-	padding-top: 5px;
 	margin-left: 3px;
 }
 
 .sc-grid-cols {
 	position: relative;
+	background-color: rgba(58, 58, 57, 1);
 	max-width: 110px;
-	margin-top: 15px;
-	background-color: rgba(68, 68, 57, 1);
-	padding-top: 5px;
+	margin-top: 10px;
+	margin-left: 3px;
 }
 
-a:link, a:active, a:visited, a:hover  {
-	/* color: brown; */
-	text-decoration: none;
-}
-
-.sc_homepage_pic {
+.sc_index_pic {
 	width: 110px;
 }
-.unit_index_pic {
-	position: absolute;
 
-	top: 0px;
-	/* left: 20px; */
+.edit-remove-buttons {
+		position: absolute;
+		top: 0px;
+		width: 100%;
+		text-align: center;
+		background-color: rgb(69, 98, 124, 0.5);
 }
+
 .container {
 	margin-top: 10px;
 	margin-bottom: 10px;
 }
 
-.index-stat-container {
-	/* position: absolute;
-	bottom: 0px; */
-	/* background-color: rgba(48, 58, 57, 0.3); */
-	/* margin-bottom: 3px; */
-}
-
-.type-element-container {
+.index-stat-pic-container {
 	position: absolute;
 	bottom: 50px;
 	left: 22px;
@@ -79,12 +88,35 @@ a:link, a:active, a:visited, a:hover  {
 	padding-left: 5px;
 }
 
-.titles {
+.unit-profile-title {
 	position: absolute;
 	padding-top: 3px;
 	width: 98px;
 	top: 275px;
+	text-align: center;
 }
+
+.sc-profile-title {
+	text-align: center;
+}
+
+.short-stat-content {
+	text-align: center;
+}
+
+/* ////CHILD PROFILES//// */
+
+.profile-stat-container {;
+	padding-bottom: 10px;
+	background-color: #595857;
+}
+
+.card-title {
+	color: #e8a855;
+	background-color: #3a3630;
+}
+
+/* end */
 
 /* } */
 /* // Small devices (landscape phones, 576px and up) */

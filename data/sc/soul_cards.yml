@@ -15,12 +15,6 @@ beach relaxation:
   passive: "Restriction: Earth type.\r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
-vacation:
-  pic: "/images/sc/vacation.jpg"
-  stars: '3'
-  stats: ''
-  passive: ''
-  index: 2
 seaside goddess:
   pic: "/images/sc/seasidegoddess.jpg"
   stars: '5'
@@ -299,3 +293,9 @@ wisteria tree:
     [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
   index: 37
+vacation:
+  pic: "/images/sc/vacation.jpg"
+  stars: '5'
+  stats: ''
+  passive: ''
+  index: 2
