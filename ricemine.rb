@@ -155,13 +155,7 @@ def sort_by_given_info(catagory, stars, type = 'name')
   star_rating = stars[0]
   by_stars = catagory.select { |_, v| v["stars"] == star_rating }.to_h
 
-  # if type == "name"
-    by_stars.sort_by { |k, v| k }.to_h
-  # elsif type = "tiers"
-  #   by_stars.sort_by { |k, v| v["tier"] }.reverse.to_h
-  # else
-    # by_stars.sort_by { |k, v| v[type] }.to_h
-  # end
+  by_stars.sort_by { |k, v| k }.to_h
 end
 
 get "/users/signin" do
