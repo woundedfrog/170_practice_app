@@ -1,61 +1,58 @@
-require "sinatra"
-require "sinatra/reloader"
-require "tilt/erubis"
-require "redcarpet"
-require "yaml"
-require "fileutils"
-require "bcrypt"
+require 'sinatra'
+require 'sinatra/reloader'
+require 'tilt/erubis'
+require 'redcarpet'
+require 'yaml'
+require 'fileutils'
+require 'bcrypt'
 
 configure do
-  set :erb, :escape_html => true
+  set :erb, escape_html: true
 end
 
 configure do
   enable :sessions
-  set :session_secret, "secret"
+  set :session_secret, 'secret'
 end
 
 helpers do
-  def is_special_key?(key)
-    ["pic", "pic2", "pic3", "tier", "stars", "type", "element"].include?(key.to_s)
+  def special_key?(key)
+    %w(pic pic2 pic3 tier stars type element).include?(key.to_s)
   end
 
-  def format_stat(stat_key, info_val)
-    if ['water', 'fire', 'earth', 'light', 'dark'].include?(info_val)
-      "<img class=\"element-type-pic\" src='/images/#{info_val}.png'/>"
-    elsif  ['tank', 'attacker', 'buffer', 'healer', 'debuffer'].include?(info_val)
-      "<img class=\"element-type-pic\" src='/images/#{info_val}.png'/>"
+  def format_stat(_stat_key, info_val)
+    if %w(water fire earth light dark).include?(info_val)
+      "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
+    elsif %w(tank attacker buffer healer debuffer).include?(info_val)
+      "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
     else
       info_val
     end
   end
 
-    def sort_info_by_given_type(criteria, type)
-      keys = []
-      criteria.values.each do |hash|
-        hash.each do |k, v|
-          if k == type
-            keys << v
-          end
-        end
-      end
-      if type == "tier"
-        keys.uniq!.sort!
-        [type, [keys[-1]] + keys[0..-2]]
-      else
-        [type, keys.uniq.sort]
+  def sort_info_by_given_type(criteria, type)
+    keys = []
+    criteria.values.each do |hash|
+      hash.each do |k, v|
+        keys << v if k == type
       end
     end
 
+    if type == 'tier'
+      keys.uniq!.sort!
+      [type, [keys[-1]] + keys[0..-2]]
+    else
+      [type, keys.uniq.sort]
+    end
+  end
 
   def upcase_name(name)
-    name.split(" ").map { |part| part.capitalize  }.join(" ")
+    name.split(' ').map(&:capitalize).join(' ')
   end
 end
 
 def delete_selected_file(name)
-  Dir.glob("./public/images/").each do |f|
-
+  Dir.glob('./public/images/').each do |f|
     FileUtils.rm(f + name)
   end
 end
@@ -72,11 +69,11 @@ def valid_credentials?(username, password)
 end
 
 def load_user_credentials
-  credentials_path = if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/users.yml", __FILE__)
-  else
-    File.expand_path("../users.yml", __FILE__)
-  end
+  credentials_path = if ENV['RACK_ENV'] == 'test'
+                       File.expand_path('../test/users.yml', __FILE__)
+                     else
+                       File.expand_path('../users.yml', __FILE__)
+                     end
   YAML.load_file(credentials_path)
 end
 
@@ -85,100 +82,96 @@ def user_signed_in?
 end
 
 def require_user_signin
-  if user_signed_in? == false
-    session[:message] = "You must be signed in to do that."
-    redirect "/"
-  end
+  return unless user_signed_in? == false
+  session[:message] = 'You must be signed in to do that.'
+  redirect '/'
 end
 
 def file_path
-  if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/public/images/", __FILE__)
+  if ENV['RACK_ENV'] == 'test'
+    File.expand_path('../test/public/images/', __FILE__)
   else
-    File.expand_path("../public/images/", __FILE__)
+    File.expand_path('../public/images/', __FILE__)
   end
 end
 
 def load_soulcards_details
-  unit_list = if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/data/sc/soul_cards.yml", __FILE__)
-  else
-    File.expand_path("../data/sc/soul_cards.yml", __FILE__)
-  end
+  unit_list = if ENV['RACK_ENV'] == 'test'
+                File.expand_path('../test/data/sc/soul_cards.yml', __FILE__)
+              else
+                File.expand_path('../data/sc/soul_cards.yml', __FILE__)
+              end
   YAML.load_file(unit_list)
 end
 
 def load_new_soulcard
-  unit_list = if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/data/sc/new_soul_card.yml", __FILE__)
-  else
-    File.expand_path("../data/sc/new_soul_card.yml", __FILE__)
-  end
+  unit_list = if ENV['RACK_ENV'] == 'test'
+                File.expand_path('../test/data/sc/new_soul_card.yml', __FILE__)
+              else
+                File.expand_path('../data/sc/new_soul_card.yml', __FILE__)
+              end
   YAML.load_file(unit_list)
 end
 
-
 def load_new_unit
-  unit_list = if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/data/new_unit.yml", __FILE__)
-  else
-    File.expand_path("../data/new_unit.yml", __FILE__)
-  end
+  unit_list = if ENV['RACK_ENV'] == 'test'
+                File.expand_path('../test/data/new_unit.yml', __FILE__)
+              else
+                File.expand_path('../data/new_unit.yml', __FILE__)
+              end
   YAML.load_file(unit_list)
 end
 
 def load_unit_details
-  unit_list = if ENV["RACK_ENV"] == "test"
-    File.expand_path("../test/data/unit_details.yml", __FILE__)
-  else
-    File.expand_path("../data/unit_details.yml", __FILE__)
-  end
+  unit_list = if ENV['RACK_ENV'] == 'test'
+                File.expand_path('../test/data/unit_details.yml', __FILE__)
+              else
+                File.expand_path('../data/unit_details.yml', __FILE__)
+              end
   YAML.load_file(unit_list)
 end
 
 def get_unit_name(data_path, index)
   unit_name = ''
   data_path.each do |name, info|
-    if info["index"] == index
-      unit_name = name
-    end
+    unit_name = name if info['index'] == index
   end
   unit_name
 end
 
 def get_max_index_number(list)
-  list.sort_by { |k, v| v["index"] }.to_h
-  list = list.map { |k, v| v["index"]}.max + 1
+  list.sort_by { |_, v| v['index'] }.to_h
+  list.map { |_, v| v['index'] }.max + 1
 end
 
-def sort_by_given_info(catagory, stars, type = 'name')
+def sort_by_given_info(catagory, stars)
   star_rating = stars[0]
-  by_stars = catagory.select { |_, v| v["stars"] == star_rating }.to_h
+  by_stars = catagory.select { |_, v| v['stars'] == star_rating }.to_h
 
-  by_stars.sort_by { |k, v| k }.to_h
+  by_stars.sort_by { |k, _| k }.to_h
 end
 
-get "/users/signin" do
+get '/users/signin' do
   erb :signin
 end
 
-post "/users/signin" do
+post '/users/signin' do
   username = params[:username]
   password = params[:password]
 
   if valid_credentials?(username, password)
     session[:username] = username
-    session[:message] = "Welcome!"
-    redirect "/"
+    session[:message] = 'Welcome!'
+    redirect '/'
   else
-    session[:message] = "Invalid credentials!"
+    session[:message] = 'Invalid credentials!'
     status 422
     erb :signin
   end
 end
 
-get "/" do
-  # units = units.select { |_, v| v["stars"] == '5' }.to_h
+get '/' do
+  # units = units.select { |_, v| v['stars'] == '5' }.to_h
   # @units = units.sort_by { |k, v| k }.to_h
   @units = load_unit_details.to_a[-3..-1].to_h
   @soulcards = load_soulcards_details.to_a[-3..-1].to_h
@@ -186,31 +179,33 @@ get "/" do
 end
 
 get '/download/:filename' do |filename|
-  if filename.include?("soul")
-    send_file "./data/sc/#{filename}", :filename => filename, :type => 'Application/octet-stream'
-  elsif filename.include?("unit")
-    send_file "./data/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+  fname = filename
+  ftype = 'Application/octet-stream'
+  if filename.include?('soul')
+    send_file "./data/sc/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('unit')
+    send_file "./data/#{filename}", filename: fname, type: ftype
   else
-    send_file "./public/images/#{filename}", :filename => filename, :type => 'Application/octet-stream'
+    send_file "./public/images/#{filename}",  filename: fname, type: ftype
   end
-  redirect "/"
+  redirect '/'
 end
 
-get "/show_files/:file_name/remove" do
+get '/show_files/:file_name/remove' do
   delete_selected_file(params[:file_name])
-  redirect "/show_files"
+  redirect '/show_files'
 end
 
-get "/equips/new_sc" do
-  @card = load_new_soulcard["new_sc"]
+get '/equips/new_sc' do
+  @card = load_new_soulcard['new_sc']
   @max_index_val = get_max_index_number(load_soulcards_details)
   erb :new_sc
 end
 
-get "/childs/:star_rating/:unit_name" do
+get '/childs/:star_rating/:unit_name' do
   if load_unit_details.include?(params[:unit_name]) == false
     session[:message] = "#{params[:unit_name]} doesn't exist."
-    redirect "/"
+    redirect '/'
   end
   @units = load_unit_details
   @unit_name = params[:unit_name].capitalize
@@ -218,50 +213,54 @@ get "/childs/:star_rating/:unit_name" do
   erb :view_unit
 end
 
-get "/childs/:star_rating/:unit_name/edit" do
+get '/childs/:star_rating/:unit_name/edit' do
   require_user_signin
   @current_unit = load_unit_details[params[:unit_name]]
   erb :edit_unit
 end
 
-get "/equips/:star_rating/:sc_name" do
+get '/equips/:star_rating/:sc_name' do
   @sc_name = params[:sc_name]
   @current_card = load_soulcards_details[params[:sc_name]]
   # name = params[:sc_name]
   erb :view_sc
 end
 
-get "/equips/:star_rating/:sc_name/edit" do
+get '/equips/:star_rating/:sc_name/edit' do
   require_user_signin
   @current_card = load_soulcards_details[params[:sc_name]]
   # name = params[:sc_name]
   erb :edit_sc
 end
 
-get "/childs/:star_rating/sort_by/:type" do
+get '/childs/:star_rating/sort_by/:type' do
   star_rating = params[:star_rating]
   type = params[:type]
   catagory = load_unit_details
 
-  if star_rating.include?("5") || star_rating.include?("4") || star_rating.include?("3")
+  if star_rating.include?('5') ||
+     star_rating.include?('4') ||
+     star_rating.include?('3')
     @sort_catagory = sort_info_by_given_type(catagory, type)
-    @units = sort_by_given_info(catagory, star_rating, type)
+    @units = sort_by_given_info(catagory, star_rating)
   else
-    session[:message] = "There are no units by that tier!"
-    redirect "/"
+    session[:message] = 'There are no units by that tier!'
+    redirect '/'
   end
   erb :sort_by_type
 end
 
-get "/:catagory/:star_rating" do
+get '/:catagory/:star_rating' do
   star_rating = params[:star_rating]
 
-  if !star_rating == "5stars" || !star_rating == "4stars" || !star_rating == "3stars"
-      session[:message] = "There are no units by that tier!"
-      redirect "/"
+  if !star_rating == '5stars' ||
+     !star_rating == '4stars' ||
+     !star_rating == '3stars'
+    session[:message] = 'There are no units by that tier!'
+    redirect '/'
   end
 
-  if params[:catagory] == "childs"
+  if params[:catagory] == 'childs'
     unit_info = load_unit_details
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
@@ -274,39 +273,36 @@ get "/:catagory/:star_rating" do
   end
 end
 
-get "/show_unit_details" do
+get '/show_unit_details' do
   @unit_details = load_unit_details
   @sc_details = load_soulcards_details
   erb :show_unit_details
 end
 
-get "/show_files" do
-  pattern = File.join(file_path, "*")
+get '/show_files' do
+  pattern = File.join(file_path, '*')
   @files = Dir.glob(pattern).map do |path|
-    if File.directory?(path)
-      next
-    else
-      File.basename(path)
-    end
+    next if File.directory?(path)
+    File.basename(path)
   end
   erb :file_list
 end
 
-get "/new_unit" do
+get '/new_unit' do
   require_user_signin
-  @new_unit_info = load_new_unit["new_unit"]
+  @new_unit_info = load_new_unit['new_unit']
   @max_index_val = get_max_index_number(load_unit_details)
   erb :new_unit
 end
 
-get "/upload" do
+get '/upload' do
   erb :upload
 end
 
-# get "/childs/:star_rating/:unit_name" do
+# get '/childs/:star_rating/:unit_name' do
 #   if load_unit_details.include?(params[:unit_name]) == false
 #     session[:message] = "#{params[:unit_name]} doesn't exist."
-#     redirect "/"
+#     redirect '/'
 #   end
 #   @units = load_unit_details
 #   @unit_name = params[:unit_name].capitalize
@@ -314,80 +310,75 @@ end
 #   erb :view_unit
 # end
 
-# get "/childs/:unit_name/edit" do
+# get '/childs/:unit_name/edit' do
 #   require_user_signin
 #   @current_unit = load_unit_details[params[:unit_name]]
 #   erb :edit_unit
 # end
 
-# get "/equips/soulcards" do
+# get '/equips/soulcards' do
 #   @cards = load_soulcards_details
 #   erb :index_sc
 # end
 
-
-
-post "/equips/new_sc" do
+post '/equips/new_sc' do
   require_user_signin
   unit_data = load_soulcards_details
-  # @new_card_info = load_new_soulcard["new_sc"]
+
   @current_unit = load_soulcards_details[params[:sc_name]]
   @max_index_val = get_max_index_number(load_soulcards_details)
+
   data = load_soulcards_details
-  name = params[:sc_name].downcase  #makes sure all names are downcase
+  name = params[:sc_name].downcase
   index = params[:index].to_i
 
-  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
+  # original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
   # V this uploads and takes the pic file and processes it.
-  if params[:file] != nil
+  if !params[:file].nil?
     (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = "public/images/sc"
+    directory = 'public/images/sc'
     path = File.join(directory, pname)
-    File.open(path, "wb") { |f| f.write(tmpfile.read) }
+    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   elsif params[:pic]
     pname = params[:pic]
   else
-    pname = params[:sc_name] + ".png"
+    pname = params[:sc_name] + '.png'
   end
-  pname = "/images/sc/" + pname unless pname.include?("/images/sc/")
+  pname = '/images/sc/' + pname unless pname.include?('/images/sc/')
   # ^ this uploads and takes the pic file and processes it.
 
-  if unit_data.include?(name) && index != unit_data[name]["index"]
-    #this clause makes sure we can only edit units if there are no name conflicts.
+  if unit_data.include?(name) && index != unit_data[name]['index']
+    # this clause makes sure we can only edit units if no name conflicts.
 
-    session[:message] = "A unit by that name already exists. Please create a different card."
-    if params["edited"]
+    session[:message] = 'A unit by that name already exists. Please create a different card.'
+    if params['edited']
       status 422
       temp_name = get_unit_name(unit_data, index)
       redirect "/equips/#{temp_name}/edit"
     else
       status 422
-      redirect "/equips/new_sc"
+      redirect '/equips/new_sc'
     end
-
-  elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
-    old = data.delete(original_unit.keys.first)
-    data[name] = {}
   else
-    old = data.delete(original_unit.keys.first)
+    # old = data.delete(original_unit.keys.first)
     data[name] = {}
   end
 
-  data[name]["pic"] = pname.include?(".") ? pname : (pname + ".jpg")
-  data[name]["stars"] = params[:stars]
-  data[name]["stats"] = params[:stats]
-  data[name]["passive"] = params[:passive]
-  data[name]["index"] = index
+  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
+  data[name]['stars'] = params[:stars]
+  data[name]['stats'] = params[:stats]
+  data[name]['passive'] = params[:passive]
+  data[name]['index'] = index
 
-  File.write("data/sc/soul_cards.yml", YAML.dump(data))
+  File.write('data/sc/soul_cards.yml', YAML.dump(data))
 
   session[:message] = "New Soulcard called #{name.upcase} has been created."
   # redirect "/equips/#{params[:stars]}stars"
-  redirect "/"
+  redirect '/'
 end
 
-post "/new_unit" do
+post '/new_unit' do
   require_user_signin
   unit_data = load_unit_details
   @current_unit = load_unit_details[params[:unit_name]]
@@ -396,79 +387,76 @@ post "/new_unit" do
   name = params[:unit_name].downcase
   index = params[:index].to_i
 
-  original_unit = unit_data.select {|unit, info| unit if params["index"].to_i == info["index"].to_i}
+  # original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
   # V this uploads and takes the pic file and processes it.
-  if params[:file] != nil
+  if !params[:file].nil?
     (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = "public/images"
+    directory = 'public/images'
     path = File.join(directory, pname)
-    File.open(path, "wb") { |f| f.write(tmpfile.read) }
+    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   elsif params[:pic]
     pname = params[:pic]
   else
     pname = params[:unit_name]
   end
-  pname = "/images/" + pname unless pname.include?("/images/")
+  pname = '/images/' + pname unless pname.include?('/images/')
   # ^ this uploads and takes the pic file and processes it.
 
-  if unit_data.include?(name) && index != unit_data[name]["index"]
-    #this clause makes sure we can only edit units if there are no name conflicts.
-    session[:message] = "A unit by that name already exists. Please enter a different unit name."
-    if params["edited"]
+  if unit_data.include?(name) && index != unit_data[name]['index']
+    # this clause makes sure we can only edit units if no name conflicts.
+    session[:message] = 'A unit by that name already exists. Please enter a different unit name.'
+    if params['edited']
       status 422
       temp_name = get_unit_name(unit_data, index)
       redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
     else
       status 422
-      redirect "/new_unit"
+      redirect '/new_unit'
     end
-
-  elsif params["edited"] && (unit_data.include?(name) == false && index == original_unit["index"])
-    old = data.delete(original_unit.keys.first)
-    data[name] = {}
   else
-    old = data.delete(original_unit.keys.first)
+    # old = data.delete(original_unit.keys.first)
     data[name] = {}
   end
 
-  data[name]["pic"] = pname.include?(".") ? pname : (pname + ".png")
+  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.png')
 
   if params[:pic2] == ''
-    data[name]["pic2"] = ''
-  elsif params[:pic2].include?("images")
-    data[name]["pic2"] = params[:pic2]
+    data[name]['pic2'] = ''
+  elsif params[:pic2].include?('images')
+    data[name]['pic2'] = params[:pic2]
   else
-    data[name]["pic2"] = "/images/" + params[:pic2] + ".png"
+    data[name]['pic2'] = '/images/' + params[:pic2] + '.png'
   end
 
   if params[:pic3] == ''
-    data[name]["pic3"] = ''
-  elsif params[:pic3].include?("images")
-    data[name]["pic3"] = params[:pic2]
+    data[name]['pic3'] = ''
+  elsif params[:pic3].include?('images')
+    data[name]['pic3'] = params[:pic2]
   else
-    data[name]["pic3"] = "/images/" + params[:pic3] + ".png"
+    data[name]['pic3'] = '/images/' + params[:pic3] + '.png'
   end
 
-  data[name]["tier"] = params[:tier].upcase
+  data[name]['tier'] = params[:tier].upcase
 
-  data[name]["stars"] = params[:stars]
-  data[name]["type"] = params[:type]
-  data[name]["element"] = params[:element]
-  data[name]["leader"] = params[:leader]
-  data[name]["auto"] = params[:auto]
-  data[name]["tap"] = params[:tap]
-  data[name]["slide"] = params[:slide]
-  data[name]["drive"] = params[:drive]
-  data[name]["index"] = index
+  data[name]['stars'] = params[:stars]
+  data[name]['type'] = params[:type]
+  data[name]['element'] = params[:element]
+  data[name]['leader'] = params[:leader]
+  data[name]['auto'] = params[:auto]
+  data[name]['tap'] = params[:tap]
+  data[name]['slide'] = params[:slide]
+  data[name]['drive'] = params[:drive]
+  data[name]['index'] = index
 
-  File.write("data/unit_details.yml", YAML.dump(data))
+  File.write('data/unit_details.yml', YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
   # redirect "/childs/#{params[:stars]}stars"
-  redirect "/"
+  redirect '/'
 end
 
-get "/childs/:star_rating/:unit_name/remove" do  #use this if using the normal links for edit/remove
+# use this if using the normal links for edit/remove
+get '/childs/:star_rating/:unit_name/remove' do
   require_user_signin
   unit = params[:unit_name]
   units_info = load_unit_details
@@ -476,16 +464,16 @@ get "/childs/:star_rating/:unit_name/remove" do  #use this if using the normal l
   if units_info.include?(params[:unit_name]) == false
     status 422
     session[:message] = "That unit doesn't exist."
-    redirect "/"
   else
     units_info.delete(unit)
-    File.write("data/unit_details.yml", YAML.dump(units_info))
-    session[:message] = "That unit was successfully deleted."
-    redirect "/"
+    File.write('data/unit_details.yml', YAML.dump(units_info))
+    session[:message] = 'That unit was successfully deleted.'
   end
+  redirect '/'
 end
 
-get "/equips/:star_rating/:sc_name/remove" do  #use this if using the normal links for edit/remove
+# use this if using the normal links for edit/remove
+get '/equips/:star_rating/:sc_name/remove' do
   require_user_signin
   card = params[:sc_name]
   cards_info = load_soulcards_details
@@ -493,26 +481,25 @@ get "/equips/:star_rating/:sc_name/remove" do  #use this if using the normal lin
   if cards_info.include?(params[:sc_name]) == false
     status 422
     session[:message] = "That unit doesn't exist."
-    redirect "/"
   else
     cards_info.delete(card)
-    File.write("data/sc/soul_cards.yml", YAML.dump(cards_info))
-    session[:message] = "That unit successfully deleted."
-    redirect "/"
+    File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
+    session[:message] = 'That unit successfully deleted.'
   end
+  redirect '/'
 end
 
-#used to upload a file without creating a new unit
+# used to upload a file without creating a new unit
 post '/upload' do
   unless params[:file] &&
-    (tmpfile = params[:file][:tempfile]) &&
-    (name = params[:file][:filename])
-    @error = "No file selected"
+         (tmpfile = params[:file][:tempfile]) &&
+         (name = params[:file][:filename])
+    @error = 'No file selected'
     return haml(:upload)
   end
-  directory = "public/images"
+  directory = 'public/images'
   path = File.join(directory, name)
-  File.open(path, "wb") { |f| f.write(tmpfile.read) }
-  session[:message] = "file uploaded!"
+  File.open(path, 'wb') { |f| f.write(tmpfile.read) }
+  session[:message] = 'file uploaded!'
   erb :upload
 end

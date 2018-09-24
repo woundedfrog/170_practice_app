@@ -1,18 +1,6 @@
 <% if session[:message] %>
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
-<!-- <div class="container-fluid">
-  <div class="row">
-    <% @units.each do |k,unit_details| %>
-      <div class="card" >
-        <img class="card-img-top" src="<%= unit_details['pic'] %>" alt="Card image cap">
-        <div class="card-img-bottom">
-          <p class="card-text"><%= k %></p>
-        </div>
-      </div>
-    <% end %>
-  </div>
-</div> -->
 
 <div class="container">
 <h4>Recently added/updated Childs</h4>

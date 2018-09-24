@@ -679,8 +679,8 @@ brigid:
   pic2: ''
   pic3: ''
   stars: ''
-  type: 'tank'
-  element: 'fire'
+  type: tank
+  element: fire
   leader: "+10% defense for fire allies (additional +10% on Underground)"
   auto: Deal 92 auto attack damage.
   tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-barrier"
