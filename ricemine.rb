@@ -345,7 +345,7 @@ post '/equips/new_sc' do
   elsif params[:pic]
     pname = params[:pic]
   else
-    pname = params[:sc_name] + '.png'
+    pname = params[:sc_name]
   end
   pname = '/images/sc/' + pname unless pname.include?('/images/sc/')
   # ^ this uploads and takes the pic file and processes it.
@@ -398,10 +398,10 @@ post '/new_unit' do
     directory = 'public/images'
     path = File.join(directory, pname)
     File.open(path, 'wb') { |f| f.write(tmpfile.read) }
-  elsif params[:pic]
-    pname = params[:pic]
+  elsif params[:pic].empty?
+    pname = 'emptyunit0.png'
   else
-    pname = params[:unit_name]
+    pname = params[:pic]
   end
   pname = '/images/' + pname unless pname.include?('/images/')
   # ^ this uploads and takes the pic file and processes it.
@@ -444,7 +444,6 @@ post '/new_unit' do
     end
 
   data[name]['tier'] = params[:tier].upcase
-
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
   data[name]['element'] = params[:element]
