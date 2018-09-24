@@ -7,13 +7,22 @@ body {
 	color: #eae9e5;
 }
 
+header {
+	background-color: #444444;
+}
+
 .nav-link {
 	padding: 5px;
 	background-color: rgb(142, 113, 55, 0.5);
 	margin-bottom: 1px;
+		color: white;
 }
 
-a:link, a:active, a:visited, a:hover  {
+.dropdown-menu {
+	background-color: #544d41;
+}
+
+ a, a:hover, .dropdown-item {
 	text-decoration: none;
 	color: white;
 }
@@ -26,18 +35,23 @@ h1,h2,h3,h4,h5,h6 {
 
 h1,h3,h4 {
 	text-align: center;
+	font-weight: 600;
 }
 
-
-.dropdown-menu {
-	background-color: #544d41;
+#header-title a {
+	color: #d1aa19;
+	font-weight: 600;
 }
 
 ul {
 	margin: 0px;
+	padding-left: 0px;
 }
 p {
 	margin: 0px;
+	font-size: .9em;
+	padding-right: 10px;
+	padding-left: 10px;
 }
 
 span {
@@ -116,6 +130,11 @@ span {
 .card-title {
 	color: #e8a855;
 	background-color: #3a3630;
+	border-right: 1px solid black;
+}
+
+.stat-line-filler {
+	padding: 0px;
 }
 
 label {
@@ -123,10 +142,13 @@ label {
 	background-color: #363a30;
 }
 
-.special-links {
+.special-links, .special-links a {
 	text-decoration: underline;
-	color: blue;
+	color: orange;
+	margin-top: 10px;
+	margin-left: 5px;
 }
+
 /* end */
 
 /* } */
@@ -136,12 +158,23 @@ label {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	.unit_profile_div {
+		margin-top: 10px;
+		width: 60%;
+		margin: auto;
+	}
 }
 
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
+
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
+	/* .unit_profile_div {
+		margin-top: 10px;
+		width: 68%;
+		margin: auto;
+	} */
 }

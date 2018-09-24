@@ -1491,23 +1491,6 @@ durandal:
     (60% chance to miss) to target for 25s.\r\n·Gives +30% Attack to 3highest attack
     Allies for 25s."
   index: 86
-agamemnon:
-  pic: "/images/4agamemnon0.png"
-  pic2: ''
-  pic3: ''
-  tier: B
-  stars: '4'
-  type: debuffer
-  element: earth
-  leader: Charge Speed -10% to Water Type Enemies.
-  auto: Deals 74 damage.
-  tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
-    remove 1 buff from target.
-  slide: Deals 454 damages to 2 enemies (prioritizing enemies with Speed Charge type
-    buffs) and 300 ignore defense and 40% chance to Apply "Time Alter" (remove 1 buff
-    and -40% Skill gauge Charge rate) for 12s.
-  drive: Deals 1194 to 3 random enemies and -30% Skill gauge Charge rate for 16s.
-  index: 87
 bast:
   pic: "/images/4bast0.png"
   pic2: ''
@@ -1823,22 +1806,6 @@ melpomene:
   drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
     with highest attack and 75% confusion for 10s to 1 random enemy.
   index: 107
-bakje:
-  pic: "/images/4bakje0.png"
-  pic2: ''
-  pic3: ''
-  tier: D
-  stars: '4'
-  type: tank
-  element: dark
-  leader: Gives Reflect (50 damage per hit) to Dark units.
-  auto: Deals 68 damage.
-  tap: Deals 187 damage to target and Defense +540 for 10s to self.
-  slide: Deals 397 damage to target, and gives Reflect (returns 10% of damage received)
-    and Taunt (84% provocation) for 10s.
-  drive: Deals 786 damage to target, and gives Reflect (returns 8% of damage received)
-    for 20s to 5 allies.
-  index: 108
 aten:
   pic: "/images/4aten0.png"
   pic2: ''
@@ -2365,3 +2332,36 @@ selene:
     every 2s) for 18s to 3 allies with lowest HP. If debuffed additional 60HP Regeneration
     (Heal every 2seconds)
   index: 141
+agamemnon:
+  pic: "/images/4agamemnon0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '4'
+  type: debuffer
+  element: earth
+  leader: Charge Speed -10% to Water Type Enemies.
+  auto: Deals 74 damage.
+  tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
+    remove 1 buff from target.
+  slide: Deals 454 damages to 2 enemies (prioritizing enemies with Speed Charge type
+    buffs) and 300 ignore defense and 40% chance to Apply "Time Alter" (remove 1 buff
+    and -40% Skill gauge Charge rate) for 12s.
+  drive: Deals 1194 to 3 random enemies and -30% Skill gauge Charge rate for 16s.
+  index: 87
+bakje:
+  pic: "/images/4bakje0.png"
+  pic2: ''
+  pic3: ''
+  tier: D
+  stars: '4'
+  type: tank
+  element: dark
+  leader: Gives Reflect (50 damage per hit) to Dark units.
+  auto: Deals 68 damage.
+  tap: Deals 187 damage to target and Defense +540 for 10s to self.
+  slide: Deals 397 damage to target, and gives Reflect (returns 10% of damage received)
+    and Taunt (84% provocation) for 10s.
+  drive: Deals 786 damage to target, and gives Reflect (returns 8% of damage received)
+    for 20s to 5 allies.
+  index: 108
