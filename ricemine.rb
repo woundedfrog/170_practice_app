@@ -17,13 +17,13 @@ end
 
 helpers do
   def special_key?(key)
-    %w(pic pic2 pic3 tier stars type element).include?(key.to_s)
+    %w[pic pic2 pic3 tier stars type element].include?(key.to_s)
   end
 
   def format_stat(_stat_key, info_val)
-    if %w(water fire earth light dark).include?(info_val)
+    if %w[water fire earth light dark].include?(info_val)
       "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
-    elsif %w(tank attacker buffer healer debuffer).include?(info_val)
+    elsif %w[tank attacker buffer healer debuffer].include?(info_val)
       "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
     else
       info_val
@@ -70,9 +70,9 @@ end
 
 def load_user_credentials
   credentials_path = if ENV['RACK_ENV'] == 'test'
-                       File.expand_path('../test/users.yml', __FILE__)
+                       File.expand_path('test/users.yml', __dir__)
                      else
-                       File.expand_path('../users.yml', __FILE__)
+                       File.expand_path('users.yml', __dir__)
                      end
   YAML.load_file(credentials_path)
 end
@@ -83,50 +83,51 @@ end
 
 def require_user_signin
   return unless user_signed_in? == false
+
   session[:message] = 'You must be signed in to do that.'
   redirect '/'
 end
 
 def file_path
   if ENV['RACK_ENV'] == 'test'
-    File.expand_path('../test/public/images/', __FILE__)
+    File.expand_path('test/public/images/', __dir__)
   else
-    File.expand_path('../public/images/', __FILE__)
+    File.expand_path('public/images/', __dir__)
   end
 end
 
 def load_soulcards_details
   unit_list = if ENV['RACK_ENV'] == 'test'
-                File.expand_path('../test/data/sc/soul_cards.yml', __FILE__)
+                File.expand_path('test/data/sc/soul_cards.yml', __dir__)
               else
-                File.expand_path('../data/sc/soul_cards.yml', __FILE__)
+                File.expand_path('data/sc/soul_cards.yml', __dir__)
               end
   YAML.load_file(unit_list)
 end
 
 def load_new_soulcard
   unit_list = if ENV['RACK_ENV'] == 'test'
-                File.expand_path('../test/data/sc/new_soul_card.yml', __FILE__)
+                File.expand_path('test/data/sc/new_soul_card.yml', __dir__)
               else
-                File.expand_path('../data/sc/new_soul_card.yml', __FILE__)
+                File.expand_path('data/sc/new_soul_card.yml', __dir__)
               end
   YAML.load_file(unit_list)
 end
 
 def load_new_unit
   unit_list = if ENV['RACK_ENV'] == 'test'
-                File.expand_path('../test/data/new_unit.yml', __FILE__)
+                File.expand_path('test/data/new_unit.yml', __dir__)
               else
-                File.expand_path('../data/new_unit.yml', __FILE__)
+                File.expand_path('data/new_unit.yml', __dir__)
               end
   YAML.load_file(unit_list)
 end
 
 def load_unit_details
   unit_list = if ENV['RACK_ENV'] == 'test'
-                File.expand_path('../test/data/unit_details.yml', __FILE__)
+                File.expand_path('test/data/unit_details.yml', __dir__)
               else
-                File.expand_path('../data/unit_details.yml', __FILE__)
+                File.expand_path('data/unit_details.yml', __dir__)
               end
   YAML.load_file(unit_list)
 end
@@ -283,6 +284,7 @@ get '/show_files' do
   pattern = File.join(file_path, '*')
   @files = Dir.glob(pattern).map do |path|
     next if File.directory?(path)
+
     File.basename(path)
   end
   erb :file_list
@@ -323,7 +325,7 @@ end
 
 post '/equips/new_sc' do
   require_user_signin
-  unit_data = load_soulcards_details
+  card_data = load_soulcards_details
 
   @current_unit = load_soulcards_details[params[:sc_name]]
   @max_index_val = get_max_index_number(load_soulcards_details)
@@ -332,7 +334,7 @@ post '/equips/new_sc' do
   name = params[:sc_name].downcase
   index = params[:index].to_i
 
-  # original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
+  original_card = card_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
   # V this uploads and takes the pic file and processes it.
   if !params[:file].nil?
@@ -348,20 +350,21 @@ post '/equips/new_sc' do
   pname = '/images/sc/' + pname unless pname.include?('/images/sc/')
   # ^ this uploads and takes the pic file and processes it.
 
-  if unit_data.include?(name) && index != unit_data[name]['index']
+  if card_data.include?(name) && index != card_data[name]['index']
     # this clause makes sure we can only edit units if no name conflicts.
 
     session[:message] = 'A unit by that name already exists. Please create a different card.'
+
+    status 422
+
     if params['edited']
-      status 422
-      temp_name = get_unit_name(unit_data, index)
-      redirect "/equips/#{temp_name}/edit"
+      temp_name = get_unit_name(card_data, index)
+      redirect "/equips/#{params[:stars]}stars/#{temp_name}/edit"
     else
-      status 422
       redirect '/equips/new_sc'
     end
   else
-    # old = data.delete(original_unit.keys.first)
+    data.delete(original_card.keys.first)
     data[name] = {}
   end
 
@@ -387,7 +390,7 @@ post '/new_unit' do
   name = params[:unit_name].downcase
   index = params[:index].to_i
 
-  # original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
+  original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
   # V this uploads and takes the pic file and processes it.
   if !params[:file].nil?
@@ -406,36 +409,39 @@ post '/new_unit' do
   if unit_data.include?(name) && index != unit_data[name]['index']
     # this clause makes sure we can only edit units if no name conflicts.
     session[:message] = 'A unit by that name already exists. Please enter a different unit name.'
+
+    status 422
+
     if params['edited']
-      status 422
       temp_name = get_unit_name(unit_data, index)
       redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
     else
-      status 422
       redirect '/new_unit'
     end
   else
-    # old = data.delete(original_unit.keys.first)
+    data.delete(original_unit.keys.first)
     data[name] = {}
   end
 
   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.png')
 
-  if params[:pic2] == ''
-    data[name]['pic2'] = ''
-  elsif params[:pic2].include?('images')
-    data[name]['pic2'] = params[:pic2]
-  else
-    data[name]['pic2'] = '/images/' + params[:pic2] + '.png'
-  end
+  data[name]['pic2'] =
+    if params[:pic2] == ''
+      ''
+    elsif params[:pic2].include?('images')
+      params[:pic2]
+    else
+      '/images/' + params[:pic2] + '.png'
+    end
 
-  if params[:pic3] == ''
-    data[name]['pic3'] = ''
-  elsif params[:pic3].include?('images')
-    data[name]['pic3'] = params[:pic2]
-  else
-    data[name]['pic3'] = '/images/' + params[:pic3] + '.png'
-  end
+  data[name]['pic3'] =
+    if params[:pic3] == ''
+      ''
+    elsif params[:pic3].include?('images')
+      params[:pic3]
+    else
+      '/images/' + params[:pic3] + '.png'
+    end
 
   data[name]['tier'] = params[:tier].upcase
 

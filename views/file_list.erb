@@ -1,4 +1,8 @@
+
+<div class="container">
+<div class="row">
 <% @files.each do |name| %>
+<div class="col file-list-box">
    <% unless name.nil? %>
      <div><%= name %></div>
       <img src="../images/<%= name %>">
@@ -7,4 +11,9 @@
     </div>
     <a href="/show_files/<%= name %>/remove">Delete</a>
    <% end %>
+
+   </div>
   <% end %>
+
+</div>
+</div>

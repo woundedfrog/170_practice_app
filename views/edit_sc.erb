@@ -18,7 +18,7 @@
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
 
-        <% elsif is_special_key?(key) %>
+        <% elsif special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">

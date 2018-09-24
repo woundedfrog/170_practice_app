@@ -155,6 +155,10 @@ label {
 	text-align: center;
 }
 
+.file-list-box {
+	border: 1px solid black;
+}
+
 /* end */
 
 /* } */

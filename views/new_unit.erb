@@ -16,7 +16,7 @@
           <label for="upload">upload a file</label>
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
-        <% elsif is_special_key?(key) %>
+        <% elsif special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">

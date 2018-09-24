@@ -2351,17 +2351,17 @@ newbie mona:
   stars: '5'
   type: buffer
   element: earth
-  leader: "·Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble)."
-  auto: "·Deals 101 damage."
-  tap: "·Deals 379 damage to target..\t\t\t\t\t\t\t\r\n·50% chance to remove \"Bleed\",
-    \"Poison\" , \"Curse\" from 2 allies.·Gives \"Lifesteal\"(Absorbs 15% of the damage
+  leader: Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble).
+  auto: Deals 101 damage.
+  tap: "Deals 379 damage to target.\t\t\t\t\t\t\r\n50% chance to remove \"Bleed\",
+    \"Poison\" , \"Curse\" from 2 allies. Gives \"Lifesteal\"(Absorbs 15% of the damage
     as HP) for 14s to 2 allies."
-  slide: "·Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for
-    2 turns to 2 highest attack allies.\r\n·70% chance to Apply \"Cheer\" (15% weakness
-    skill damage and increase attack based on the current number of buffs) for 2 turns
-    to 2 highest attack allies."
-  drive: "·Deals 1803 damage to 3 random enemies.\r\n·Gives +40% Skill Gauge Charge
-    for 3turns to 3 allies (prioritizing Grass Types).\r\n·Apply \"Cheer\" (15% weakness
-    skill damage and increase attack based on the current number of buffs) for 3turns
+  slide: Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for 2
+    turns to 2 highest attack allies. 70% chance to Apply "Cheer" (15% weakness skill
+    damage and increase attack based on the current number of buffs) for 2 turns to
+    2 highest attack allies.
+  drive: "Deals 1803 damage to 3 random enemies.\r\nGives +40% Skill Gauge Charge
+    for 3 turns to 3 allies (prioritizing Grass Types). \r\nApply \"Cheer\" (15% weakness
+    skill damage and increase attack based on the current number of buffs) for 3 turns
     to 3 allies (prioritizing Grass Types)."
   index: 84
