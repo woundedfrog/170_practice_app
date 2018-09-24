@@ -9,6 +9,8 @@ body {
 
 .nav-link {
 	padding: 5px;
+	background-color: rgb(142, 113, 55, 0.5);
+	margin-bottom: 1px;
 }
 
 a:link, a:active, a:visited, a:hover  {
