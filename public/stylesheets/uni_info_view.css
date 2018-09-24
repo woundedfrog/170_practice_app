@@ -15,14 +15,14 @@ header {
 	padding: 5px;
 	background-color: rgb(142, 113, 55, 0.5);
 	margin-bottom: 1px;
-		color: white;
+	color: white;
 }
 
 .dropdown-menu {
 	background-color: #544d41;
 }
 
- a, a:hover, .dropdown-item {
+a, a:hover, .dropdown-item {
 	text-decoration: none;
 	color: white;
 }
@@ -81,11 +81,11 @@ span {
 }
 
 .edit-remove-buttons {
-		position: absolute;
-		top: 0px;
-		width: 100%;
-		text-align: center;
-		background-color: rgb(69, 98, 124, 0.5);
+	position: absolute;
+	top: 0px;
+	width: 100%;
+	text-align: center;
+	background-color: rgb(69, 98, 124, 0.5);
 }
 
 .container {
@@ -137,7 +137,7 @@ span {
 .stat-line-filler {
 	padding: 0px;
 }
-
+/* ////CHILD PROFILES END//// */
 label {
 	width: 100%;
 	background-color: #363a30;
@@ -183,8 +183,8 @@ label {
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
 	/* .unit_profile_div {
-		margin-top: 10px;
-		width: 68%;
-		margin: auto;
+	margin-top: 10px;
+	width: 68%;
+	margin: auto;
 	} */
 }
