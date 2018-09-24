@@ -30,6 +30,24 @@ helpers do
     end
   end
 
+    def sort_info_by_given_type(criteria, type)
+      keys = []
+      criteria.values.each do |hash|
+        hash.each do |k, v|
+          if k == type
+            keys << v
+          end
+        end
+      end
+      if type == "tier"
+        keys.uniq!.sort!
+        [type, [keys[-1]] + keys[0..-2]]
+      else
+        [type, keys.uniq.sort]
+      end
+    end
+
+
   def upcase_name(name)
     name.split(" ").map { |part| part.capitalize  }.join(" ")
   end
@@ -137,13 +155,13 @@ def sort_by_given_info(catagory, stars, type = 'name')
   star_rating = stars[0]
   by_stars = catagory.select { |_, v| v["stars"] == star_rating }.to_h
 
-  if type == "name"
+  # if type == "name"
     by_stars.sort_by { |k, v| k }.to_h
-  elsif type = "tiers"
-    by_stars.sort_by { |k, v| v["tier"] }.reverse.to_h
-  else
-    by_stars.sort_by { |k, v| v[type] }.to_h
-  end
+  # elsif type = "tiers"
+  #   by_stars.sort_by { |k, v| v["tier"] }.reverse.to_h
+  # else
+    # by_stars.sort_by { |k, v| v[type] }.to_h
+  # end
 end
 
 get "/users/signin" do
@@ -232,12 +250,13 @@ get "/childs/:star_rating/sort_by/:type" do
   catagory = load_unit_details
 
   if star_rating.include?("5") || star_rating.include?("4") || star_rating.include?("3")
+    @sort_catagory = sort_info_by_given_type(catagory, type)
     @units = sort_by_given_info(catagory, star_rating, type)
   else
     session[:message] = "There are no units by that tier!"
     redirect "/"
   end
-  erb :index_child
+  erb :sort_by_type
 end
 
 get "/:catagory/:star_rating" do

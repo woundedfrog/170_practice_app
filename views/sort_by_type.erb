@@ -1,0 +1,39 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+
+<% @sort_catagory[1].each do |catagory| %>
+  <div class="container">
+    <% type = @sort_catagory[0] %>
+    <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory.capitalize %></h5>
+  </div>
+<div class="container">
+    <div class="row justify-content-center">
+
+
+    <% @units.each do |unit, unit_details| %>
+    <% next unless unit_details[type] == catagory %>
+    <% rating = unit_details["stars"] + "stars" %>
+          <div class="col-* unit-grid-cols">
+            <% if session[:username] %>
+            <div class="edit-remove-buttons">
+              <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
+              <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
+            </div>
+            <% end %>
+
+              <a href="/childs/<%= rating %>/<%= unit %>">
+                <img src="<%= unit_details['pic'] %>"/>
+                </a>
+            <div class="index-stat-pic-container">
+                <%== format_stat("type", unit_details["type"]) %>
+                <%== format_stat("element", unit_details["element"]) %>
+            </div>
+            <h6 class="unit-profile-title"><%= upcase_name(unit) %></h6>
+        </div>
+    <% end %>
+
+    </div>
+</div>
+
+    <% end %><!-- sorting end -->

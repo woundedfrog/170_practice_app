@@ -39,7 +39,7 @@ h1,h3,h4 {
 }
 
 #header-title a {
-	color: #d1aa19;
+	color: #edece8;
 	font-weight: 600;
 }
 
@@ -65,6 +65,7 @@ span {
 	width: 98px;
 	margin-top: 10px;
 	margin-left: 3px;
+	overflow: hidden;
 }
 
 .sc-grid-cols {
@@ -147,6 +148,11 @@ label {
 	color: orange;
 	margin-top: 10px;
 	margin-left: 5px;
+}
+
+#sort_by_title {
+	background-color: rgb(48, 58, 53, 0.7);
+	text-align: center;
 }
 
 /* end */

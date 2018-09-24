@@ -52,7 +52,7 @@ lan fei:
     and enemy drive gauge -10%.
   index: 36
 mafdet:
-  tier: s
+  tier: S
   pic: "/images/mafdet0.png"
   pic2: "/images/mafdet1.png"
   pic3: ''
@@ -69,7 +69,7 @@ mafdet:
     absorption) for 25s to 3 enemies with lowest HP.
   index: 30
 sitri:
-  tier: s
+  tier: S
   pic: "/images/sitri0.png"
   pic2: ''
   pic3: ''
@@ -157,7 +157,7 @@ bastet:
   drive: "·Deals 2161 damage to 4 enemies with highest attack."
   index: 7
 brownie:
-  tier: s
+  tier: S
   pic: "/images/brownie0.png"
   pic2: ''
   pic3: ''
@@ -227,7 +227,7 @@ cammy:
     Gauge Speed for 16seconds.
   index: 11
 charlotte:
-  tier: s
+  tier: S
   pic: "/images/charlotte0.png"
   pic2: ''
   pic3: ''
@@ -242,7 +242,7 @@ charlotte:
   drive: Deals 2539 damage to 4 enemies with lowest HP.
   index: 12
 chun-li:
-  tier: s
+  tier: S
   pic: "/images/chunli0.png"
   pic2: ''
   pic3: ''
@@ -257,7 +257,7 @@ chun-li:
   drive: Deals 2130 Damages to all enmies and +500 additional damages to stunned enemies.
   index: 13
 cleopatra:
-  tier: s
+  tier: S
   pic: "/images/cleopatra0.png"
   pic2: "/images/cleopatra1.png"
   pic3: "/images/cleopatra1.png"
@@ -276,7 +276,7 @@ cleopatra:
     is cursed.
   index: 14
 dana:
-  tier: s
+  tier: S
   pic: "/images/dana0.png"
   pic2: ''
   pic3: ''
@@ -343,7 +343,7 @@ pantheon:
     rate +70% for 22s to 2 allies with highest attack.
   index: 37
 nirrti:
-  tier: s
+  tier: S
   pic: "/images/nirrti0.png"
   pic2: ''
   pic3: ''
@@ -359,7 +359,7 @@ nirrti:
     with the highest attack.
   index: 28
 maat:
-  tier: s
+  tier: S
   pic: "/images/maat0.png"
   pic2: "/images/maat1.png"
   pic3: ''
@@ -374,7 +374,7 @@ maat:
     for 16s to 3 allies with lowest HP.
   index: 33
 hestia:
-  tier: s
+  tier: S
   pic: "/images/hestia0.png"
   pic2: ''
   pic3: ''
@@ -443,7 +443,7 @@ hades:
     only be applied to 2 targets).
   index: 24
 gkouga:
-  tier: s
+  tier: S
   pic: "/images/gkouga0.png"
   pic2: ''
   pic3: ''
@@ -459,7 +459,7 @@ gkouga:
   drive: Deals 2329 damage to 3 enemies with lowest hp
   index: 23
 frey:
-  tier: s
+  tier: S
   pic: "/images/frey0.png"
   pic2: ''
   pic3: ''
@@ -475,7 +475,7 @@ frey:
     enemy according to debuff) to all enemies.
   index: 22
 eve:
-  tier: s
+  tier: S
   pic: "/images/eve0.png"
   pic2: "/images/eves1.png"
   pic3: ''
@@ -557,7 +557,7 @@ dinashi:
     to 5 allies.
   index: 17
 bari:
-  tier: ''
+  tier: A
   pic: "/images/bari0.png"
   pic2: ''
   pic3: ''
@@ -576,7 +576,7 @@ bari:
     debuff and deal damage depending on the debuff type) if the target is debuffed.
   index: 39
 willow:
-  tier: ''
+  tier: C
   pic: "/images/yanagi0.png"
   pic2: ''
   pic3: ''
@@ -594,7 +594,7 @@ willow:
     poison and heal 1 tick worth of poison damage) to 3 poisoned allies.
   index: 40
 dark Midas:
-  tier: ''
+  tier: A
   pic: "/images/darkmidas0.png"
   pic2: ''
   pic3: ''
@@ -617,7 +617,7 @@ dark Midas:
     of debuffs +1 up to 4 debuffs (Total 5[4+1]) to 3 lowest HP enemies).
   index: 41
 bikini Lisa:
-  tier: ''
+  tier: S
   pic: "/images/bikinilisa0.png"
   pic2: "/images/bikinilisa1.png"
   pic3: ''
@@ -636,7 +636,7 @@ bikini Lisa:
     attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
   index: 45
 isolde:
-  tier: ''
+  tier: A
   pic: "/images/isolde0.png"
   pic2: "/images/isolde1.png"
   pic3: ''
@@ -655,7 +655,7 @@ isolde:
     damage increase) for 16 seconds.
   index: 46
 love Sitri:
-  tier: s
+  tier: S
   pic: "/images/lovesitri0.png"
   pic2: ''
   pic3: ''
@@ -674,13 +674,13 @@ love Sitri:
     of Stun by 1 second to max 5 seconds for each attack) for 4 seconds."
   index: 48
 brigid:
-  tier: ''
+  tier: B
   pic: "/images/brigid0.png"
   pic2: ''
   pic3: ''
   stars: ''
-  type: ''
-  element: ''
+  type: 'tank'
+  element: 'fire'
   leader: "+10% defense for fire allies (additional +10% on Underground)"
   auto: Deal 92 auto attack damage.
   tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-barrier"
@@ -698,7 +698,7 @@ brigid:
     per 2% decrease in HP, maximum increase to 720%]).
   index: 49
 kouka:
-  tier: s
+  tier: S
   pic: "/images/kouka0.png"
   pic2: ''
   pic3: ''
@@ -955,7 +955,7 @@ cube moa:
   pic: "/images/moa0.png"
   pic2: "/images/moa1.png"
   pic3: ''
-  tier: s
+  tier: S
   stars: '5'
   type: debuffer
   element: light
@@ -1060,7 +1060,7 @@ hildr:
   pic: "/images/hildr0.png"
   pic2: ''
   pic3: ''
-  tier: ''
+  tier: B
   stars: '5'
   type: attacker
   element: light
@@ -1130,7 +1130,7 @@ scuba mona:
   pic: "/images/scubamona0.png"
   pic2: "/images/scubamona1.png"
   pic3: ''
-  tier: ''
+  tier: B
   stars: '5'
   type: buffer
   element: water
@@ -1431,28 +1431,6 @@ medusa:
     that attack Medusa) to self for 12s.\t"
   drive: ''
   index: 83
-newbie mona:
-  pic: "/images/newbiemona0.png"
-  pic2: ''
-  pic3: ''
-  tier: S
-  stars: '5'
-  type: buffer
-  element: earth
-  leader: "·Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble)."
-  auto: "·Deals 101 damage."
-  tap: "·Deals 379 damage to target..\t\t\t\t\t\t\t\r\n·50% chance to remove \"Bleed\",
-    \"Poison\" , \"Curse\" from 2 allies.·Gives \"Lifesteal\"(Absorbs 15% of the damage
-    as HP) for 14s to 2 allies."
-  slide: "·Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for
-    2 turns to 2 highest attack allies.\r\n·70% chance to Apply \"Cheer\" (15% weakness
-    skill damage and increase attack based on the current number of buffs) for 2 turns
-    to 2 highest attack allies."
-  drive: "·Deals 1803 damage to 3 random enemies.\r\n·Gives +40% Skill Gauge Charge
-    for 3turns to 3 allies (prioritizing Grass Types).\r\n·Apply \"Cheer\" (15% weakness
-    skill damage and increase attack based on the current number of buffs) for 3turns
-    to 3 allies (prioritizing Grass Types)."
-  index: 84
 ruin:
   pic: "/images/ruin0.png"
   pic2: ''
@@ -1655,7 +1633,7 @@ frigga:
   pic: "/images/4frigga0.png"
   pic2: ''
   pic3: ''
-  tier: ''
+  tier: C
   stars: '4'
   type: tank
   element: light
@@ -2365,3 +2343,25 @@ bakje:
   drive: Deals 786 damage to target, and gives Reflect (returns 8% of damage received)
     for 20s to 5 allies.
   index: 108
+newbie mona:
+  pic: "/images/newbiemona0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: buffer
+  element: earth
+  leader: "·Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble)."
+  auto: "·Deals 101 damage."
+  tap: "·Deals 379 damage to target..\t\t\t\t\t\t\t\r\n·50% chance to remove \"Bleed\",
+    \"Poison\" , \"Curse\" from 2 allies.·Gives \"Lifesteal\"(Absorbs 15% of the damage
+    as HP) for 14s to 2 allies."
+  slide: "·Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for
+    2 turns to 2 highest attack allies.\r\n·70% chance to Apply \"Cheer\" (15% weakness
+    skill damage and increase attack based on the current number of buffs) for 2 turns
+    to 2 highest attack allies."
+  drive: "·Deals 1803 damage to 3 random enemies.\r\n·Gives +40% Skill Gauge Charge
+    for 3turns to 3 allies (prioritizing Grass Types).\r\n·Apply \"Cheer\" (15% weakness
+    skill damage and increase attack based on the current number of buffs) for 3turns
+    to 3 allies (prioritizing Grass Types)."
+  index: 84
