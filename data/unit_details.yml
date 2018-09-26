@@ -650,7 +650,7 @@ anemone:
   auto: Deal 100 auto attack damage.
   tap: Deal 380 damage to the target, priorizing an ally 2 with least HP, recover
     280 HP 2 times, plus a 60% chance to puriy 2 bleeding allies (Convert Bleeding
-    Into Recover.
+    Into Recover).
   slide: "Deal 660 to target. Prioritizing 2 alles with highest ATK, grants Skill
     gauge charge +35% and Increase ATK +1600 for 14 seconds, plus \"Patience\"\r\n(Grants
     +1 of \"Endure\" [lgnore all damage.] per debuff [Maximum 3] for 10 seconds)."
