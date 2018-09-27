@@ -140,9 +140,10 @@ span {
 	background-color: #3a3630;
 	border-right: 1px solid black;
 }
-/* .stat-div-container {
+
+.stat-div-container {
 width: 100%;
-} */
+}
 
 /* .stat-line-filler {
 	padding: 0px;
