@@ -1,52 +1,57 @@
-<div class="unit_profile_div">
 
+<div class="container">
   <div  class="special-links">
     <% stars = @current_unit["stars"] %>
     <a href="/childs/<%= stars %>stars">Go back</a>
   </div>
 
-  <div class="container-fluid">
-      <h3><%= upcase_name(@unit_name) %></h3>
-      <div class="row">
-        <img class="profile_imgs" src="<%= @current_unit["pic"] %>"/>
-        <img class="profile_imgs" src="<%= @current_unit["pic2"] %>"/>
-        <img class="profile_imgs" src="<%= @current_unit["pic3"] %>"/>
-      </div>
-      <div class="row">
-        <% @current_unit.each do |info_key, info_val| %>
-          <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
-            <div class="profile-stat-container col-*">
-              <h5 class="card-title"><%= info_key.capitalize %>:</h5>
-              <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p>
-            </div>
-          <% end %>
-        <% end %>
-        <div class="profile-stat-container stat-line-filler col">
-          <h5 class="card-title">-</h5>
-          <p class="short-stat-content">-</p>
-        </div>
-      </div>
+  <h3><%= upcase_name(@unit_name) %></h3>
+
+  <div class="row profile-row-container">
+    <div class="col- profile-pic-container">
+      <img class="profile_imgs" src="<%= @current_unit["pic"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic2"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic3"] %>"/>
     </div>
-   <div class="col-*">
-     <% @current_unit.each do |info_key, info_val| %>
 
-       <% unless special_key?(info_key) || info_key == "index" %>
-          <div class="profile-stat-container">
-             <h5 class="card-title"><%= info_key.capitalize %>:</h5>
-             <ul>
-               <% info_val.split(". ").each do |line| %>
+    <div class="col profile-stat-col-cantainer">
+      <div class="row profile-stat-row-container">
+        <% @current_unit.each do |info_key, info_val| %>
+        <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
+        <div class="profile-stat-container col-*">
+          <h5 class="card-title"><%= info_key.capitalize %>:</h5>
+          <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p>
+        </div>
+        <% end %>
+        <% end %>
+        <!-- <div class="profile-stat-container stat-line-filler col">
+        <h5 class="card-title">-</h5>
+        <p class="short-stat-content">-</p>
+      </div> -->
+    </div>
 
-                 <% if line[-1] != '.' %>
-                   <p>· <%= line + "." %></p>
-                 <% else %>
-                   <p>· <%= line %></p>
-                 <% end %>
 
-               <% end %>
-             </ul>
-          </div>
-       <% end %>
+    <% @current_unit.each do |info_key, info_val| %>
 
-     <% end %>
-   </div>
+    <% unless special_key?(info_key) || info_key == "index" %>
+    <div class="profile-stat-container">
+      <h5 class="card-title"><%= info_key.capitalize %>:</h5>
+      <ul>
+        <% info_val.split(". ").each do |line| %>
+
+        <% if line[-1] != '.' %>
+        <p><strong>·</strong> <%= line + "." %></p>
+        <% else %>
+        <p><strong>·</strong> <%= line %></p>
+        <% end %>
+
+        <% end %>
+      </ul>
+    </div>
+    <% end %>
+
+    <% end %>
+  </div>
+
+</div>
 </div>

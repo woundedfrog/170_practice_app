@@ -1,7 +1,7 @@
 $( document ).ready(function() {
   jQuery.fn.highlight = function ( className) {
     return this.each(function () {
-        this.innerHTML = this.innerHTML.replace(/-?[\d()\+\%]/g, function(matched) {return "<span class=\"" + className + "\">" + matched + "</span>";});
+        this.innerHTML = this.innerHTML.replace(/-?[\d+()\+\%]/g, function(matched) {return "<span class=\"" + className + "\">" + matched + "</span>";});
     });
 };
 

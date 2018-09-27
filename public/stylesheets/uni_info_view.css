@@ -36,6 +36,7 @@ h1,h2,h3,h4,h5,h6 {
 h1,h3,h4 {
 	text-align: center;
 	font-weight: 600;
+	margin-bottom: 20px;
 }
 
 #header-title a {
@@ -47,6 +48,7 @@ ul {
 	margin: 0px;
 	padding-left: 0px;
 }
+
 p {
 	margin: 0px;
 	font-size: .9em;
@@ -123,9 +125,14 @@ span {
 
 /* ////CHILD PROFILES//// */
 
-.profile-stat-container {;
+.profile-stat-container {
 	padding-bottom: 10px;
 	background-color: #595857;
+}
+
+.profile-stat-row-container {
+	padding-left: 15px;
+	max-width: 100%;
 }
 
 .card-title {
@@ -133,22 +140,38 @@ span {
 	background-color: #3a3630;
 	border-right: 1px solid black;
 }
+/* .stat-div-container {
+width: 100%;
+} */
 
-.stat-line-filler {
+/* .stat-line-filler {
 	padding: 0px;
-}
+} */
 /* ////CHILD PROFILES END//// */
+
+/* ////SC PROFILES view//// */
+
+/* ////SC PROFILES END//// */
+.profile-stat-col-cantainer {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+.profile-pic-container {
+	width: 100%;
+}
+
 label {
 	width: 100%;
 	background-color: #363a30;
 }
 
-.special-links, .special-links a {
+/* .special-links, .special-links a {
 	text-decoration: underline;
 	color: orange;
 	margin-top: 10px;
 	margin-left: 5px;
-}
+} */
 
 #sort_by_title {
 	background-color: rgb(48, 58, 53, 0.7);
@@ -159,19 +182,41 @@ label {
 	border: 1px solid black;
 }
 
+
+
 /* end */
 
-/* } */
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 }
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
-	.unit_profile_div {
-		margin-top: 10px;
-		width: 60%;
+	.container {
+		width: 70%;
 		margin: auto;
+		margin-top: 20px;
+	}
+
+	/* ////SC PROFILES view//// */
+	.stat-div-container {
+		width: calc(100% - 200px);
+	}
+	/* ////SC PROFILES END//// */
+
+
+	.profile-stat-col-cantainer {
+		/* width: calc(100% - 110px); */
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+
+	.profile-pic-container {
+		width: auto;
+		max-width: 210px;
+	}
+	.profile-row-container {
+		margin-left: auto;
 	}
 }
 
@@ -182,9 +227,5 @@ label {
 
 /* // Extra large devices (large desktops, 1200px and up) */
 @media (min-width: 1200px) {
-	/* .unit_profile_div {
-	margin-top: 10px;
-	width: 68%;
-	margin: auto;
-	} */
+
 }

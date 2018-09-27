@@ -29,13 +29,6 @@ ass baring devil:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: none. \r\n\r\nBleed + 200 (400 at lvl50 +5) in WorldBoss."
   index: 6
-azure girl:
-  pic: "/images/sc/azuregirl.jpg"
-  stars: '5'
-  stats: "Attack: 520 at lvl0 / 1500 at lvl50 / 2625 at lvl50 +5. \r\n\r\nAgility:
-    270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Water type. \r\n\r\nPoison +1000 (1500) in WorldBoss.\r\n"
-  index: 7
 believe:
   pic: "/images/sc/believe.jpg"
   stars: '5'
@@ -283,3 +276,10 @@ beach relaxation:
   passive: "Restriction: Earth type. \r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
+azure girl:
+  pic: "/images/sc/azuregirl.jpg"
+  stars: '5'
+  stats: "Attack: 520 at lvl0 / 1500 at lvl50 / 2625 at lvl50 +5. \r\n\r\nAgility:
+    270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
+  passive: "Restriction: Water type. \r\n\r\nPoison +1000 (1500) in WorldBoss."
+  index: 7
