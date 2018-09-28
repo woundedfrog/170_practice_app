@@ -1,12 +1,10 @@
 <% if session[:message] %>
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
-  <!-- <div id="links">
-  <a href="/">Show unit list</a>
-  <% if session[:username] %>
-    <a id="add_new_unit" href="/equips/new_sc">Add new SoulCard</a>
-  <% end %>
-</div> -->
+
+<div style="text-align: center;">
+  <input id="search" type="text" placeholder="search name..." autofocus/>
+</div>
 
 <div class="container">
     <div class="row justify-content-center">
@@ -22,7 +20,7 @@
           <% end %>
 
           <a href="/equips/<%= rating %>/<%= card %>">
-            <img class="sc_index_pic" src="<%= card_details['pic'] %>"/>
+            <img class="sc_index_pic" src="<%= card_details['pic'] %>" alt="<%= card %>"/>
           </a>
           <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
       </div>

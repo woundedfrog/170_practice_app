@@ -2,15 +2,12 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
 
-<div style="text-align: center;">
-  <input id="search" type="text" placeholder="search name..." autofocus/>
-</div>
-
-<div class="container">
+<div class="container static-container">
     <div class="row justify-content-center">
     <% @units.each do |unit, unit_details| %>
     <% rating = unit_details["stars"] + "stars" %>
-          <div class="col-* unit-grid-cols" data-keywords="<%= unit %>">
+        <div class="col-* unit-grid-cols">
+
             <% if session[:username] %>
             <div class="edit-remove-buttons">
               <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
@@ -29,4 +26,24 @@
         </div>
     <% end %>
     </div>
+</div>
+<div class="container static-container">
+    <div class="row justify-content-center">
+      <% @soulcards.each do |card, card_details| %>
+        <% rating = card_details["stars"] + "stars" %>
+      <div class="col-* sc-grid-cols">
+          <% if session[:username] %>
+          <div class="edit-remove-buttons">
+            <a href="/equips/<%= rating %>/<%= card %>/edit">Edit</a>|
+            <a href="/equips/<%= rating %>/<%= card %>/remove" onClick="return checkMe()">Remove</a>
+          </div>
+          <% end %>
+
+            <a href="/equips/<%= rating %>/<%= card %>">
+              <img class="sc_index_pic" src="<%= card_details['pic'] %>" alt="<%= card %>"/>
+            </a>
+          <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
+      </div>
+  <% end %>
+  </div>
 </div>

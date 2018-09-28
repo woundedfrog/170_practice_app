@@ -183,7 +183,10 @@ label {
 	border: 1px solid black;
 }
 
-
+input, textarea {
+	background-color: lightgrey;
+	width: 150px;
+}
 
 /* end */
 

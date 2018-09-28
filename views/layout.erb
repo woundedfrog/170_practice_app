@@ -14,6 +14,13 @@
 <body>
   <header>
     <h1 id="header-title"><a href="/">DeschaWiki</a></h1>
+
+    <div style="text-align: center;">
+      <form action="/search/" method="get">
+        Search site: <input id="mainsearch" name="search_query" type="text" placeholder="keyword..." required autofocus/>
+      </form>
+    </div>
+
     <ul class="nav nav-tabs justify-content-center">
       <li class="nav-item dropdown">
         <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">5 Stars Childs</a>
@@ -67,7 +74,7 @@
   </header>
   <main>
     <% if session[:message] %>
-    <p class="message"><%= session.delete(:message) %></p>
+      <p class="message"><%= session.delete(:message) %></p>
     <% end %>
     <%== yield %>
   </main>

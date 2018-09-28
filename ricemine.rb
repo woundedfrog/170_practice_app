@@ -152,6 +152,36 @@ def sort_by_given_info(catagory, stars)
   by_stars.sort_by { |k, _| k }.to_h
 end
 
+def find_unit_or_sc_from_keys(keys)
+  cards = load_soulcards_details
+  units = load_unit_details
+  return [nil, nil] unless keys.size != 0
+  unit_results = []
+  card_results = []
+
+  units.each do |name, info_hash|
+    info_hash.each do |key, val|
+      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
+        unit_results << [name, info_hash]
+      else
+        next
+      end
+    end
+  end
+
+  cards.each do |name, info_hash|
+    info_hash.each do |key, val|
+      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
+        card_results << [name, info_hash]
+      else
+        next
+      end
+    end
+  end
+
+  [unit_results.to_h, card_results.to_h]
+end
+
 get '/users/signin' do
   erb :signin
 end
@@ -169,6 +199,13 @@ post '/users/signin' do
     status 422
     erb :signin
   end
+end
+
+get "/search/" do
+  keys = params[:search_query].downcase
+  @units = find_unit_or_sc_from_keys(keys)[0]
+  @soulcards = find_unit_or_sc_from_keys(keys)[1]
+  erb :search
 end
 
 get '/' do
