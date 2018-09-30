@@ -2,10 +2,6 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
 
-<div style="text-align: center;">
-  <input id="search" type="text" placeholder="search name..." autofocus/>
-</div>
-
 <div class="container">
     <div class="row justify-content-center">
       <% @cards.each do |card, card_details| %>

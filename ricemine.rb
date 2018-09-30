@@ -33,9 +33,7 @@ helpers do
   def sort_info_by_given_type(criteria, type)
     keys = []
     criteria.values.each do |hash|
-      hash.each do |k, v|
-        keys << v if k == type
-      end
+      hash.each { |k, v| keys << v if k == type }
     end
 
     if type == 'tier'
@@ -152,34 +150,28 @@ def sort_by_given_info(catagory, stars)
   by_stars.sort_by { |k, _| k }.to_h
 end
 
-def find_unit_or_sc_from_keys(keys)
+def get_unit_or_sc_from_keys(keys)
   cards = load_soulcards_details
   units = load_unit_details
-  return [nil, nil] unless keys.size != 0
-  unit_results = []
-  card_results = []
+  return [nil, nil] if keys.empty?
 
-  units.each do |name, info_hash|
-    info_hash.each do |key, val|
-      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
-        unit_results << [name, info_hash]
-      else
-        next
-      end
-    end
-  end
-
-  cards.each do |name, info_hash|
-    info_hash.each do |key, val|
-      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
-        card_results << [name, info_hash]
-      else
-        next
-      end
-    end
-  end
+  unit_results = find_unit_sc_from_keys(units, keys)
+  card_results = find_unit_sc_from_keys(cards, keys)
 
   [unit_results.to_h, card_results.to_h]
+end
+
+def find_unit_sc_from_keys(details, keys)
+  results = []
+
+  details.each do |name, info_hash|
+    info_hash.each do |key, val|
+      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
+        results << [name, info_hash]
+      end
+    end
+  end
+  results
 end
 
 get '/users/signin' do
@@ -201,18 +193,16 @@ post '/users/signin' do
   end
 end
 
-get "/search/" do
+get '/search/' do
   keys = params[:search_query].downcase
-  @units = find_unit_or_sc_from_keys(keys)[0]
-  @soulcards = find_unit_or_sc_from_keys(keys)[1]
+  @units = get_unit_or_sc_from_keys(keys)[0]
+  @soulcards = get_unit_or_sc_from_keys(keys)[1]
   erb :search
 end
 
 get '/' do
-  # units = units.select { |_, v| v['stars'] == '5' }.to_h
-  # @units = units.sort_by { |k, v| k }.to_h
-  @units = load_unit_details.to_a[-3..-1].to_h
-  @soulcards = load_soulcards_details.to_a[-3..-1].to_h
+  @units = load_unit_details.to_a.reverse.take(3).to_h
+  @soulcards = load_soulcards_details.to_a.reverse.take(3).to_h
   erb :home
 end
 
@@ -260,7 +250,6 @@ end
 get '/equips/:star_rating/:sc_name' do
   @sc_name = params[:sc_name]
   @current_card = load_soulcards_details[params[:sc_name]]
-  # name = params[:sc_name]
   erb :view_sc
 end
 
@@ -276,9 +265,7 @@ get '/childs/:star_rating/sort_by/:type' do
   type = params[:type]
   catagory = load_unit_details
 
-  if star_rating.include?('5') ||
-     star_rating.include?('4') ||
-     star_rating.include?('3')
+  if %w[3 4 5].any? { |star| star_rating.include?(star) }
     @sort_catagory = sort_info_by_given_type(catagory, type)
     @units = sort_by_given_info(catagory, star_rating)
   else
@@ -338,27 +325,19 @@ get '/upload' do
   erb :upload
 end
 
-# get '/childs/:star_rating/:unit_name' do
-#   if load_unit_details.include?(params[:unit_name]) == false
-#     session[:message] = "#{params[:unit_name]} doesn't exist."
-#     redirect '/'
-#   end
-#   @units = load_unit_details
-#   @unit_name = params[:unit_name].capitalize
-#   @current_unit = @units[params[:unit_name]]
-#   erb :view_unit
-# end
-
-# get '/childs/:unit_name/edit' do
-#   require_user_signin
-#   @current_unit = load_unit_details[params[:unit_name]]
-#   erb :edit_unit
-# end
-
-# get '/equips/soulcards' do
-#   @cards = load_soulcards_details
-#   erb :index_sc
-# end
+def create_file_from_upload(uploaded_file, pic_param, directory)
+  if !uploaded_file.nil?
+    (tmpfile = uploaded_file[:tempfile]) && (pname = uploaded_file[:filename])
+    path = File.join(directory, pname)
+    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
+  elsif params[:pic].empty?
+    pname = 'emptyunit0.png'
+  else
+    pname = pic_param
+  end
+  directory.gsub!('public', '')
+  pname.include?(directory) ? pname : "#{directory}/" + pname
+end
 
 post '/equips/new_sc' do
   require_user_signin
@@ -371,27 +350,12 @@ post '/equips/new_sc' do
   name = params[:sc_name].downcase
   index = params[:index].to_i
 
-  original_card = card_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
+  original_card = card_data.select { |unit, info| unit if index == info['index'].to_i }
 
-  # V this uploads and takes the pic file and processes it.
-  if !params[:file].nil?
-    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = 'public/images/sc'
-    path = File.join(directory, pname)
-    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
-  elsif params[:pic]
-    pname = params[:pic]
-  else
-    pname = params[:sc_name]
-  end
-  pname = '/images/sc/' + pname unless pname.include?('/images/sc/')
-  # ^ this uploads and takes the pic file and processes it.
+  pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
 
   if card_data.include?(name) && index != card_data[name]['index']
-    # this clause makes sure we can only edit units if no name conflicts.
-
     session[:message] = 'A unit by that name already exists. Please create a different card.'
-
     status 422
 
     if params['edited']
@@ -400,6 +364,7 @@ post '/equips/new_sc' do
     else
       redirect '/equips/new_sc'
     end
+
   else
     data.delete(original_card.keys.first)
     data[name] = {}
@@ -414,7 +379,6 @@ post '/equips/new_sc' do
   File.write('data/sc/soul_cards.yml', YAML.dump(data))
 
   session[:message] = "New Soulcard called #{name.upcase} has been created."
-  # redirect "/equips/#{params[:stars]}stars"
   redirect '/'
 end
 
@@ -423,28 +387,16 @@ post '/new_unit' do
   unit_data = load_unit_details
   @current_unit = load_unit_details[params[:unit_name]]
   @max_index_val = get_max_index_number(load_unit_details)
+
   data = load_unit_details
   name = params[:unit_name].downcase
   index = params[:index].to_i
 
   original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
-  # V this uploads and takes the pic file and processes it.
-  if !params[:file].nil?
-    (tmpfile = params[:file][:tempfile]) && (pname = params[:file][:filename])
-    directory = 'public/images'
-    path = File.join(directory, pname)
-    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
-  elsif params[:pic].empty?
-    pname = 'emptyunit0.png'
-  else
-    pname = params[:pic]
-  end
-  pname = '/images/' + pname unless pname.include?('/images/')
-  # ^ this uploads and takes the pic file and processes it.
+  pname = create_file_from_upload(params[:file], params[:pic], 'public/images')
 
   if unit_data.include?(name) && index != unit_data[name]['index']
-    # this clause makes sure we can only edit units if no name conflicts.
     session[:message] = 'A unit by that name already exists. Please enter a different unit name.'
 
     status 422
@@ -493,11 +445,9 @@ post '/new_unit' do
 
   File.write('data/unit_details.yml', YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
-  # redirect "/childs/#{params[:stars]}stars"
   redirect '/'
 end
 
-# use this if using the normal links for edit/remove
 get '/childs/:star_rating/:unit_name/remove' do
   require_user_signin
   unit = params[:unit_name]
@@ -514,7 +464,6 @@ get '/childs/:star_rating/:unit_name/remove' do
   redirect '/'
 end
 
-# use this if using the normal links for edit/remove
 get '/equips/:star_rating/:sc_name/remove' do
   require_user_signin
   card = params[:sc_name]
