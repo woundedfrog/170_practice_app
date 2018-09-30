@@ -201,8 +201,8 @@ get '/search/' do
 end
 
 get '/' do
-  @units = load_unit_details.to_a.reverse.take(3).to_h
-  @soulcards = load_soulcards_details.to_a.reverse.take(3).to_h
+  @units = load_unit_details.to_a.last(3).to_h
+  @soulcards = load_soulcards_details.to_a.last(3).to_h
   erb :home
 end
 

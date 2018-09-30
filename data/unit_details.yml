@@ -476,25 +476,6 @@ willow:
   drive: Heal 1224 HP to all allies and 90% chance to apply "Detoxification" (Cleanse
     poison and heal 1 tick worth of poison damage) to 3 poisoned allies.
   index: 40
-bikini Lisa:
-  tier: S
-  pic: "/images/bikinilisa0.png"
-  pic2: "/images/bikinilisa1.png"
-  pic3: ''
-  stars: ''
-  type: buffer
-  element: water
-  leader: "+10% weak Point final damage for wood Types (Additional +10% on Raid Boss)"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
-    2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to Cancel "Water
-    Balloon" debuff.
-  slide: Deal 662 damage to target. Apply +25% Defense to 3 Wood type allies with
-    highest attack power. +10% WeakPoint Skill Damage and a 70% chance to Cancel "Frozen"
-    debuff for 16 seconds.
-  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
-    attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
-  index: 45
 isolde:
   tier: A
   pic: "/images/isolde0.png"
@@ -2402,3 +2383,22 @@ pallas:
     apply Skill Damage Protection +30% (Cancels after 32 seconds or 4 attacks) and
     apply "Immortal" (HP can't be reduce to 1 or less) or 14 seconds.
   index: 143
+bikini lisa:
+  pic: "/images/bikinilisa0.png"
+  pic2: "/images/bikinilisa1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: buffer
+  element: water
+  leader: "+10% weak Point final damage for wood Types (Additional +10% on Raid Boss)"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
+    2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to Cancel "Water
+    Balloon" debuff.
+  slide: Deal 662 damage to target. Apply +25% Defense to 3 Wood type allies with
+    highest attack power. +10% WeakPoint Skill Damage and a 70% chance to Cancel "Frozen"
+    debuff for 16 seconds.
+  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
+    attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
+  index: 45
