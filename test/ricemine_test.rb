@@ -17,7 +17,7 @@ class RiceMineTest < Minitest::Test
   end
 
   def setup
-
+    
     FileUtils.mkdir_p("../test/data/")
     FileUtils.mkdir_p("../test/data/sc/")
 
