@@ -21,7 +21,7 @@ helpers do
   end
 
   def format_stat(_stat_key, info_val)
-    if %w[water fire earth light dark].include?(info_val)
+    if %w[water fire grass light dark].include?(info_val)
       "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
     elsif %w[tank attacker buffer healer debuffer].include?(info_val)
       "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"

@@ -12,7 +12,7 @@ wisteria tree:
   stars: '5'
   stats: "HP: 1030 at lvl0 / 2010at lvl50 / 3517 at lvl50 +5. \r\n\r\nCritical: 270
     at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Earth type. \r\n\r\nBleed Resist +35% (50% at lvl50 +5)\t\r\n"
+  passive: "Restriction: Grass type. \r\n\r\nBleed Resist +35% (50% at lvl50 +5)\t\r\n"
   index: 37
 vacation:
   pic: "/images/sc/vacation.jpg"
@@ -34,7 +34,7 @@ believe:
   stars: '5'
   stats: "Defense: 520 at lvl0 / 1500 at lvl50 / 2625 at lvl50 +5. \r\n\r\nCritical:
     1250 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Earth type. \r\n\r\nPoison damage received -250 (500 at lvl50
+  passive: "Restriction: Grass type. \r\n\r\nPoison damage received -250 (500 at lvl50
     +5) in Devil Rumble."
   index: 9
 hero of legends:
@@ -102,7 +102,7 @@ power of smile:
   stars: '5'
   stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
     at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
-  passive: "Restriction: Earth + Attacker. \r\nPoison Resist +35% (50% at lvl50 +5)."
+  passive: "Restriction: Grass + Attacker. \r\nPoison Resist +35% (50% at lvl50 +5)."
   index: 24
 princess carry:
   pic: "/images/sc/princesscarry.jpg"
@@ -167,7 +167,7 @@ castle of pleasure:
   stars: '4'
   stats: "HP: 775 at lvl0 / 1340 at lvl40 / 1849 at lvl40 +4. \r\n\r\nDefense: 395
     at lvl0  / 980 at lvl40 / 1332 at lvl40 +4."
-  passive: "Restriction: Earth. \r\n\r\nInstant Heal Received +400 (800 at lvl40 +4)."
+  passive: "Restriction: Grass. \r\n\r\nInstant Heal Received +400 (800 at lvl40 +4)."
   index: 11
 dream team:
   pic: "/images/sc/dreamteam.jpg"
@@ -231,7 +231,7 @@ secret date:
   stars: '3'
   stats: "HP: 510 at lvl0 / 800 at lvl30 / 1220 at lvl30 +3. \r\nCritical: 135 at
     lvl0 / 425 at lvl30 / 648 at lvl30 +3."
-  passive: "Restriction: Earth. \r\n\r\nHP +200."
+  passive: "Restriction: Grass. \r\n\r\nHP +200."
   index: 38
 serious worker:
   pic: "/images/sc/seriousworker.jpg"
@@ -273,7 +273,7 @@ beach relaxation:
   stars: '5'
   stats: "Attack: 540 at lvl0 / 1200 at lvl50 / 2660 at lvl50 +5. \r\n\r\nCritical:
     280 at lvl0  / 1260 at lvl50 / 2205 at lvl50 +5."
-  passive: "Restriction: Earth type. \r\n\r\nFinal attack +700 in Ragna. \r\nIf card
+  passive: "Restriction: Grass type. \r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
 azure girl:

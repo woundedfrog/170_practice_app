@@ -93,8 +93,8 @@ astraeas:
   pic3: ''
   stars: '5'
   type: healer
-  element: earth
-  leader: Instant Heal +8% to Grass Allies
+  element: grass
+  leader: Instant Heal +8% to grass Allies
   auto: Deals 96 damage.
   tap: "Deals 337 damage to target and Instant Heal for 214 HP and Apply \"Secret
     Healing\" (Heals 200 damages when attack and receives attacks) for 2turns to 2
@@ -130,10 +130,10 @@ brownie:
   pic3: ''
   stars: '5'
   type: buffer
-  element: earth
-  leader: "Skill Gauge Charge +8% to Grass Allies\t"
+  element: grass
+  leader: "Skill Gauge Charge +8% to grass Allies\t"
   auto: Deals 99 damage.
-  tap: Deals 368 damage to target and gives +150 skill gauge to 2 Grass Attacker.
+  tap: Deals 368 damage to target and gives +150 skill gauge to 2 grass Attacker.
   slide: Deals 578 damage to target and gives +30% skill gauge charge and debuff duration
     -20% (excluding petrification) for 15seconds to 3 grass allies.
   drive: Deals 1673 damage to 3 random enemies and 70% chance to apply Stun for 14seconds
@@ -281,7 +281,7 @@ hestia:
   element: fire
   leader: Drive skill damage +10% to Fire units
   auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Grass
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
     type.
   slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
     with lowest HP with 120 additional damage if debuff type.
@@ -296,7 +296,7 @@ hermes:
   type: buffer
   element: fire
   leader: Deals 1419 damage to 2 random enemies and gives "Lifesteal" (20% of damage
-    dealt restores HP (Doubled if Grass allies)) to all allies
+    dealt restores HP (Doubled if grass allies)) to all allies
   auto: Deals 99 damage.
   tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
   slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
@@ -311,16 +311,16 @@ hera:
   pic3: ''
   stars: '5'
   type: tank
-  element: earth
-  leader: Tap Skill defense +5% to Grass units
+  element: grass
+  leader: Tap Skill defense +5% to grass units
   auto: Deals 91 damage.
   tap: Deals 306 damage to target and Apply "Lifesteal" (10% of damage dealt restores
     HP) and "Poison" damage reduction -25% to 2 lowest HP allies.
   slide: Deals 545 damage to target and gives Skill Defense +10% (for 32seconds or
     4hits) and "Poison damage reduction -35% for 15seconds to 3allies (prioritizing
-    Grass allies).
+    grass allies).
   drive: Deals 1419 damage to 2 random enemies and gives "Lifesteal" (20% of damage
-    dealt restores HP (Doubled if Grass allies)) to all allies.
+    dealt restores HP (Doubled if grass allies)) to all allies.
   index: 25
 hades:
   tier: B
@@ -347,7 +347,7 @@ gkouga:
   pic3: ''
   stars: '5'
   type: attacker
-  element: earth
+  element: grass
   leader: ''
   auto: Deals 113 damage.
   tap: Deal 527 damage to target and additional 300 damage if target is Petrified
@@ -413,8 +413,8 @@ epona:
   pic3: ''
   stars: '5'
   type: buffer
-  element: earth
-  leader: Defense +8% to Grass units
+  element: grass
+  leader: Defense +8% to grass units
   auto: Deals 99 damage
   tap: Deals 363 damages to target and Gives +20% Defense and +15% Debuff Evasion
     to 2 lowest HP allies for 10secs.
@@ -465,7 +465,7 @@ willow:
   pic3: ''
   stars: '5'
   type: buffer
-  element: earth
+  element: grass
   leader: "+8% Skill Gauge Charge to all Allie"
   auto: Deal 99 auto attack damage.
   tap: Heal 330 HP twice to the ally with the lowest remaining HP.
@@ -502,7 +502,7 @@ love Sitri:
   pic3: ''
   stars: '5'
   type: debuffer
-  element: earth
+  element: grass
   leader: Weakness Defense -8% to Water Types enemies
   auto: Deal 101 auto attack damage
   tap: With priority on Debuffers, Deal 390 damage and, if the target is a Debuffer
@@ -909,7 +909,7 @@ santa:
   element: water
   leader: Skill gauge charge rate -18% to Water enemies.
   auto: Deals 101 damage to target.
-  tap: Deals 385 damage to target, if Grass unit deal additional 150 damage.
+  tap: Deals 385 damage to target, if grass unit deal additional 150 damage.
   slide: Deals 672 damage to 2 random enemies, 70% chance to freeze (reduces skill
     gauge charge rate and charge amount) for 10s.
   drive: Deals 1875 damage to 2 random enemies, 90% chance to freeze (reduces skill
@@ -1043,8 +1043,8 @@ siren:
   tier: B
   stars: '5'
   type: attacker
-  element: earth
-  leader: Drive skill damage +10% to Grass units.
+  element: grass
+  leader: Drive skill damage +10% to grass units.
   auto: Deals 111 damage.
   tap: Deals 140 damage plus Auto damage 4 times to target and gives "Lifesteal" (10%
     of damages dealt becomes heals) for 2 turns to self.
@@ -1058,8 +1058,8 @@ krampus:
   tier: S
   stars: '5'
   type: attacker
-  element: earth
-  leader: Tap skill damage +5% to Grass units.
+  element: grass
+  leader: Tap skill damage +5% to grass units.
   auto: Deals 113 damage to target.
   tap: Deals 483 damage to target, if Water unit deal additional 150 damage.
   slide: Deals 100 damage and Tap skill 2 times to two random enemies, and Absorbs
@@ -1073,7 +1073,7 @@ midas:
   tier: A
   stars: '5'
   type: debuffer
-  element: earth
+  element: grass
   leader: Weakness Defense -8% to all enemies.
   auto: Deals 101 damage.
   tap: Deals 379 damage to target and -10% weakness Defense for 8s.
@@ -1089,8 +1089,8 @@ syrinx:
   tier: S
   stars: '5'
   type: healer
-  element: earth
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Grass units
+  element: grass
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
   auto: Deals 96 damage.
   tap: Deals 335 damage to target and gives Invincibility for 10s or 2 hits to ally
     with highest attack.
@@ -1154,7 +1154,7 @@ rednose:
   tier: C
   stars: '4'
   type: buffer
-  element: earth
+  element: grass
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target, and Defense +10% for 10s to 1 random ally.
@@ -1477,7 +1477,7 @@ fenrir:
   auto: Deals 80 damage.
   tap: Deals 80 damage plus Auto damage 3 times to target.
   slide: Deals 458 damage to 2 enemies and Bleeding (60 continuous damage every 2s)
-    for 10s, with 80 additional damage if Grass type.
+    for 10s, with 80 additional damage if grass type.
   drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
     2s) for 8s.
   index: 112
@@ -1491,10 +1491,10 @@ hector:
   element: fire
   leader: Auto damage +40 to Fire units.
   auto: Deals 80 damage.
-  tap: Deals 294 damage to enemy with lowest HP with 100 additional damage if Grass
+  tap: Deals 294 damage to enemy with lowest HP with 100 additional damage if grass
     type.
   slide: Deals 470 damage and Bleeding (120 continuous damage every 2s) for 8s to
-    2 enemies with priority to Grass type.
+    2 enemies with priority to grass type.
   drive: Deals 1417 damage to 3 enemies with lowest HP.
   index: 113
 yuna:
@@ -1507,10 +1507,10 @@ yuna:
   element: fire
   leader: Critical +400 to Fire units.
   auto: Deals 80 damage.
-  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Grass
+  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if grass
     type.
-  slide: Deals 560 damage 3 enemies with priority to Grass type with 200 additional
-    damage if Grass type.
+  slide: Deals 560 damage 3 enemies with priority to grass type with 200 additional
+    damage if grass type.
   drive: Deals 1310 damage to 4 random enemies.
   index: 114
 neid:
@@ -1537,7 +1537,7 @@ freesia:
   stars: '4'
   type: debuffer
   element: fire
-  leader: Defense -8% to Grass enemies.
+  leader: Defense -8% to grass enemies.
   auto: Deals 74 damage.
   tap: Deals 240 damage to target with least Defense, and Defense -300 for 8s to enemy
     with highest defense.
@@ -1787,8 +1787,8 @@ tisiphone:
   tier: B
   stars: '4'
   type: attacker
-  element: earth
-  leader: Tap skill damage +80 to Grass units.
+  element: grass
+  leader: Tap skill damage +80 to grass units.
   auto: Deals 81 damage.
   tap: Deals 75 damage plus Auto damage 3 times to target and gains Lifesteal (Absorbs
     40HP per hit) for 20s.
@@ -1802,8 +1802,8 @@ ambrosia:
   tier: C
   stars: '4'
   type: attacker
-  element: earth
-  leader: Critical +400 to Grass units.
+  element: grass
+  leader: Critical +400 to grass units.
   auto: Deals 80 damage.
   tap: Deals 293 damage to enemy with lowest HP with 100 additional damage if Water
     unit.
@@ -1817,8 +1817,8 @@ korra:
   tier: B
   stars: '4'
   type: attacker
-  element: earth
-  leader: Attack +500 to Grass units.
+  element: grass
+  leader: Attack +500 to grass units.
   auto: Deals 80 damage.
   tap: Deals 296 damage to enemy with lowest HP with 100 additional damage if Water
     unit.
@@ -1834,7 +1834,7 @@ amor:
   stars: '4'
   type: attacker
   element: water
-  leader: Auto damage +40 to Grass units.
+  leader: Auto damage +40 to grass units.
   auto: Deals 80 damage.
   tap: Deals 297 damage to target and gives Lifesteal (absorb 3% of the damage as
     HP) for 16s to self.
@@ -1849,7 +1849,7 @@ muse:
   tier: B
   stars: '4'
   type: debuffer
-  element: earth
+  element: grass
   leader: Attack -10% to Water enemies.
   auto: Deals 74 damage.
   tap: Deals 239 damage to target, and weakness Defense -3% for 6s if Water unit.
@@ -1865,7 +1865,7 @@ flora:
   tier: C
   stars: '4'
   type: buffer
-  element: earth
+  element: grass
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 231 damage to target and 50% chance to remove stun to 1 stunned ally.
@@ -1881,13 +1881,13 @@ ankh:
   tier: D
   stars: '4'
   type: tank
-  element: earth
-  leader: Defense +7% to Grass Allies.
+  element: grass
+  leader: Defense +7% to grass Allies.
   auto: Deals 68 damage.
-  tap: Deals 196 damage and give +15% Defense to 2 Grass Allies and Apply "Taunt"
+  tap: Deals 196 damage and give +15% Defense to 2 grass Allies and Apply "Taunt"
     (84% Provocation) to self for 10seconds.
   slide: Deals 404 damage and Absorb 20% of the damage as HP and gives +100 Skill
-    Damage Defense to 3 Grass Allies for 10seconds.
+    Damage Defense to 3 grass Allies for 10seconds.
   drive: Deals 912 damage to 2 random enemies and gives +1500 Barrier to 4 lowest
     HP Allies for 18seconds.
   index: 138
@@ -1898,8 +1898,8 @@ hat-trick:
   tier: D
   stars: '4'
   type: tank
-  element: earth
-  leader: HP +800 for Grass units.
+  element: grass
+  leader: HP +800 for grass units.
   auto: Deals 68 damage.
   tap: Deals 189 damage to target and gains Lifesteal (Absorbs 6% of damage per hit)
     for 12s .
@@ -1914,12 +1914,12 @@ europa:
   tier: C
   stars: '4'
   type: tank
-  element: earth
-  leader: Gives Lifesteal (Absorbs 3% of the damage as HP) to Grass units.
+  element: grass
+  leader: Gives Lifesteal (Absorbs 3% of the damage as HP) to grass units.
   auto: Deals 68 damage.
   tap: Deals 193 damage to target and absorb 100HP.
   slide: Deals 376 damage to target, Lifesteal (Absorbs 10% of the damage as HP) to
-    5 units, and 900 HP barrier for 12s to 2 Grass units.
+    5 units, and 900 HP barrier for 12s to 2 grass units.
   drive: Deals 901 damage to target, Defense +30% and Taunt (95% provocation) for
     15s to self.
   index: 140
@@ -1930,8 +1930,8 @@ selene:
   tier: A
   stars: '4'
   type: healer
-  element: earth
-  leader: Healing +8% to Grass units.
+  element: grass
+  leader: Healing +8% to grass units.
   auto: Deals 70 damage.
   tap: Heals 184 HP to 2 allies with lowest hp.
   slide: Heals 381HP and 110HP Regeneration (Heal every 2seconds) for 10s to 3 allies
@@ -1947,7 +1947,7 @@ agamemnon:
   tier: B
   stars: '4'
   type: debuffer
-  element: earth
+  element: grass
   leader: Charge Speed -10% to Water Type Enemies.
   auto: Deals 74 damage.
   tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
@@ -1980,7 +1980,7 @@ newbie mona:
   tier: S
   stars: '5'
   type: buffer
-  element: earth
+  element: grass
   leader: Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble).
   auto: Deals 101 damage.
   tap: "Deals 379 damage to target.\t\t\t\t\t\t\r\n50% chance to remove \"Bleed\",
@@ -1991,9 +1991,9 @@ newbie mona:
     damage and increase attack based on the current number of buffs) for 2 turns to
     2 highest attack allies.
   drive: "Deals 1803 damage to 3 random enemies.\r\nGives +40% Skill Gauge Charge
-    for 3 turns to 3 allies (prioritizing Grass Types). \r\nApply \"Cheer\" (15% weakness
+    for 3 turns to 3 allies (prioritizing grass Types). \r\nApply \"Cheer\" (15% weakness
     skill damage and increase attack based on the current number of buffs) for 3 turns
-    to 3 allies (prioritizing Grass Types)."
+    to 3 allies (prioritizing grass Types)."
   index: 84
 bastet:
   pic: "/images/bastet0.png"
@@ -2037,8 +2037,8 @@ jiseihi:
   tier: A
   stars: '5'
   type: attacker
-  element: earth
-  leader: "·Tap Damage +8% to Grass Types Allies (Additional +10% In Ragna)"
+  element: grass
+  leader: "·Tap Damage +8% to grass Types Allies (Additional +10% In Ragna)"
   auto: "·Deals 113 damage"
   tap: "Deals 491 damage. \r\nIn Ragna, Give +1000 Weakness Skill Final Damage to
     self for 16seconds"
@@ -2090,7 +2090,7 @@ ruin:
   tier: A
   stars: '5'
   type: debuffer
-  element: earth
+  element: grass
   leader: Defense -15% to Water Types Enemies.
   auto: Deals 101 damage.
   tap: "Deals 390 damage to highest attack enemy. \r\nReduce -350 Defense to target."
@@ -2109,8 +2109,8 @@ abaddon:
   tier: B
   stars: '5'
   type: attacker
-  element: earth
-  leader: Drive skill damage +1000 to all Grass type allies. (bonus +1000 drive damage
+  element: grass
+  leader: Drive skill damage +1000 to all grass type allies. (bonus +1000 drive damage
     to all allies on Ragnas)
   auto: Deals 112 damage.
   tap: Deals 120 damage plus Auto damage 4 times to target.
@@ -2286,8 +2286,8 @@ mammon:
   tier: M
   stars: '5'
   type: tank
-  element: earth
-  leader: Tap Skill defense +5% to Grass units.
+  element: grass
+  leader: Tap Skill defense +5% to grass units.
   auto: Deals 91 damage
   tap: Deals 311 damage to target and Gives +25% defense for 15s to self.
   slide: Deals 564 damage to target and Gives Skill defense +20% to self and Taunt
@@ -2354,12 +2354,12 @@ bikini lisa:
   stars: '5'
   type: buffer
   element: water
-  leader: "+10% weak Point final damage for wood Types (Additional +10% on Raid Boss)"
+  leader: "+10% weak Point final damage for grass Types (Additional +10% on Raid Boss)"
   auto: Deal 100 auto attack damage.
   tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
     2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to Cancel "Water
     Balloon" debuff.
-  slide: Deal 662 damage to target. Apply +25% Defense to 3 Wood type allies with
+  slide: Deal 662 damage to target. Apply +25% Defense to 3 grass type allies with
     highest attack power. +10% WeakPoint Skill Damage and a 70% chance to Cancel "Frozen"
     debuff for 16 seconds.
   drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest

@@ -2,10 +2,6 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
 
-<div style="text-align: center;">
-  <input id="search" type="text" placeholder="search name..." autofocus/>
-</div>
-
 <% @sort_catagory[1].each do |catagory| %>
   <div class="container">
     <% type = @sort_catagory[0] %>

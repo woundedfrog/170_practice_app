@@ -3,7 +3,7 @@
 <% end %>
 
 <div class="container">
-<h4>Recently Child Changes</h4>
+<h4>Recent Child Updates</h4>
     <div class="row justify-content-center">
     <% @units.each do |unit, unit_details| %>
     <% rating = unit_details["stars"] + "stars" %>
@@ -31,7 +31,7 @@
 
 
 <div class="container">
-<h4>Recently Soul-Card Changes</h4>
+<h4>Recent Soul-Card Updates</h4>
     <div class="row justify-content-center">
       <% @soulcards.each do |card, card_details| %>
         <% rating = card_details["stars"] + "stars" %>
