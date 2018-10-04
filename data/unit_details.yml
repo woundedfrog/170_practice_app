@@ -2346,43 +2346,6 @@ nevan (light):
   drive: Deal 4332 damage to 3 enemies & +40% ATK + "Silence Immunity" for 10 seconds
     to 2 Allies (Prioritizing highest ATK).
   index: 65
-athena:
-  pic: "/images/athena0.png"
-  pic2: ''
-  pic3: ''
-  tier: B
-  stars: '5'
-  type: tank
-  element: light
-  leader: "+1500 max HP for all allies (Additional +2000 in Devil Rumble)"
-  auto: ''
-  tap: Deal 1003 damage to target, a 72.7% chance to apply "Debuff Provocation" on
-    self (You steal one ally debuff) for 20 seconds. Reduce debuff duration -26% (Except
-    "Wither", "Water Balloon", and "Petrify") for 20 seconds.
-  slide: Deal 1386 damage to target, increase Defense Power +42.2% and apply "Taunt"
-    (With 90% of the chance) for 12 seconds.
-  drive: Deal 3426 damage to 2 enemies randomly, prioritizing 3 allies with less HP
-    (Including self) apply "Reflect" (Return 30% of the damage receive) for 20 seconds
-    (If you receive "Reflect" buff, it will be applies to 2 allies).
-  index: 142
-pallas:
-  pic: "/images/pallas0.png"
-  pic2: ''
-  pic3: ''
-  tier: B
-  stars: '5'
-  type: buffer
-  element: dark
-  leader: -10% duration of debuffs (Except "Wither") (Additional -10% in Devil Rumble).
-  auto: ''
-  tap: Deal 1242 damage to target and a 72% change to apply "Target" (Concentrate
-    attacks on one target) for 12 seconds.
-  slide: Deal 1709 damage to target, prioritizing 2 allies with less HP, Heal over
-    Time +144 and a 77% chance to Cancel any DoT of 2 allies for 16 seconds.
-  drive: Deal 3307 damage to 3 enemies randomly, prioritizing 3 allies with less HP
-    apply Skill Damage Protection +30% (Cancels after 32 seconds or 4 attacks) and
-    apply "Immortal" (HP can't be reduce to 1 or less) or 14 seconds.
-  index: 143
 bikini lisa:
   pic: "/images/bikinilisa0.png"
   pic2: "/images/bikinilisa1.png"
@@ -2402,3 +2365,40 @@ bikini lisa:
   drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
     attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
   index: 45
+pallas:
+  pic: "/images/pallas0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: buffer
+  element: dark
+  leader: -10% duration of debuffs (Except "Wither") (Additional -10% in Devil Rumble).
+  auto: Deal 256 damage.
+  tap: Deal 1242 damage to target and a 72% change to apply "Target" (Concentrate
+    attacks on one target) for 12 seconds.
+  slide: Deal 1709 damage to target, prioritizing 2 allies with less HP, Heal over
+    Time +144 and a 77% chance to Cancel any DoT of 2 allies for 16 seconds.
+  drive: Deal 3307 damage to 3 enemies randomly, prioritizing 3 allies with less HP
+    apply Skill Damage Protection +30% (Cancels after 32 seconds or 4 attacks) and
+    apply "Immortal" (HP can't be reduce to 1 or less) or 14 seconds.
+  index: 143
+athena:
+  pic: "/images/athena0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
+  stars: '5'
+  type: tank
+  element: light
+  leader: "+1500 max HP for all allies (Additional +2000 in Devil Rumble)"
+  auto: Deal 226 damage.
+  tap: Deal 1003 damage to target, a 72.7% chance to apply "Debuff Provocation" on
+    self (You steal one ally debuff) for 20 seconds. Reduce debuff duration -26% (Except
+    "Wither", "Water Balloon", and "Petrify") for 20 seconds.
+  slide: Deal 1386 damage to target, increase Defense Power +42.2% and apply "Taunt"
+    (With 90% of the chance) for 12 seconds.
+  drive: Deal 3426 damage to 2 enemies randomly, prioritizing 3 allies with less HP
+    (Including self) apply "Reflect" (Return 30% of the damage receive) for 20 seconds
+    (If you receive "Reflect" buff, it will be applies to 2 allies).
+  index: 142
