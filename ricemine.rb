@@ -50,7 +50,6 @@ helpers do
 end
 
 def delete_selected_file(name)
-
   if !name.include?(".jpg")
     Dir.glob('./public/images/').each do |f|
       FileUtils.rm(f + name)
