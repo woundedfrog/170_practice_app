@@ -50,8 +50,15 @@ helpers do
 end
 
 def delete_selected_file(name)
-  Dir.glob('./public/images/').each do |f|
-    FileUtils.rm(f + name)
+
+  if !name.include?(".jpg")
+    Dir.glob('./public/images/').each do |f|
+      FileUtils.rm(f + name)
+    end
+  else
+    Dir.glob('public/images/sc/').each do |f|
+      FileUtils.rm(f + name)
+    end
   end
 end
 
@@ -87,11 +94,16 @@ def require_user_signin
 end
 
 def file_path
+  cards = ''
+  units = ''
   if ENV['RACK_ENV'] == 'test'
-    File.expand_path('test/public/images/', __dir__)
+    cards = File.expand_path('test/public/images/sc/', __dir__)
+    units = File.expand_path('test/public/images/', __dir__)
   else
-    File.expand_path('public/images/', __dir__)
+    cards = File.expand_path('public/images/sc/', __dir__)
+    units = File.expand_path('public/images/', __dir__)
   end
+  [units, cards]
 end
 
 def load_soulcards_details
@@ -209,8 +221,8 @@ end
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
-  if filename.include?('soul')
-    send_file "./data/sc/#{filename}", filename: fname, type: ftype
+  if filename.include?('.jpg')
+    send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
   elsif filename.include?('unit')
     send_file "./data/#{filename}", filename: fname, type: ftype
   else
@@ -305,10 +317,15 @@ get '/show_unit_details' do
 end
 
 get '/show_files' do
-  pattern = File.join(file_path, '*')
-  @files = Dir.glob(pattern).map do |path|
+  units = File.join(file_path[0], '*')
+  cards = File.join(file_path[1], '*')
+  # pattern = File.join(file_path, '*')
+  @units = Dir.glob(units).map do |path|
     next if File.directory?(path)
-
+    File.basename(path)
+  end
+  @soulcards = Dir.glob(cards).map do |path|
+    next if File.directory?(path)
     File.basename(path)
   end
   erb :file_list
