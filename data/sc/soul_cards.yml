@@ -283,3 +283,11 @@ azure girl:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Water type. \r\n\r\nPoison +1000 (1500) in WorldBoss."
   index: 7
+iced americano:
+  pic: "/images/sc/icedamericano.jpg"
+  stars: '5'
+  stats: "HP: 1078 at lvl0 / 2058 at lvl50 / 3601 at lvl50 +5. \r\n\r\nDefence: 586
+    at lvl0  /1566 at lvl50 / 2740 at lvl50 +5."
+  passive: "Restriction: Attacker. \r\n\r\n40.5% (45.5%) chance to apply 750 (1250)
+    barrier when using slide skill in Underground."
+  index: 39
