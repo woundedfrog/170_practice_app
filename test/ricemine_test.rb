@@ -17,9 +17,11 @@ class RiceMineTest < Minitest::Test
   end
 
   def setup
-    
+
     FileUtils.mkdir_p("../test/data/")
     FileUtils.mkdir_p("../test/data/sc/")
+    FileUtils.mkdir_p("../test/public/images/")
+    FileUtils.mkdir_p("../test/public/images/sc/")
 
     new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "index" => 0}}
 
@@ -55,6 +57,31 @@ class RiceMineTest < Minitest::Test
     File.open(File.join("../test/data/sc/", name), "w") do |file|
       File.write(file, YAML.dump(content))
     end
+  end
+
+  def create_file(path, extension)
+    dir = File.dirname(path)
+
+    unless File.directory?(dir)
+      FileUtils.mkdir_p(dir)
+    end
+
+    path << ".#{extension}"
+    File.new(path, 'w')
+  end
+
+  def create_file_from_upload(uploaded_file, pic_param, directory)
+    if !uploaded_file.nil?
+      (tmpfile = uploaded_file[:tempfile]) && (pname = uploaded_file[:filename])
+      path = File.join(directory, pname)
+      File.open(path, 'wb') { |f| f.write(tmpfile.read) }
+    elsif params[:pic].empty?
+      pname = 'emptyunit0.png'
+    else
+      pname = pic_param
+    end
+    directory.gsub!('public', '')
+    pname.include?(directory) ? pname : "#{directory}/" + pname
   end
   # def create_unit(name, content = "")
   #   File.write("../test/data/unit_details.yml", YAML.dump(content))
@@ -149,13 +176,17 @@ class RiceMineTest < Minitest::Test
   end
 
   def test_creating_new_unit
-    post "/new_unit", {:unit_name => "eve", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :index => 3}, admin_session
+    # img_file = "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png")
+
+    post "/new_unit", {:unit_name => "eve", :tier => "S", "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png"), :pic2 => '', :pic3 => '', :index => 3}, admin_session
 
 
     assert_equal "New unit called EVE has been created.", session[:message]
     assert_equal 302, last_response.status
     assert_equal load_unit_details.keys.size, 4
     assert_includes load_unit_details.keys, "eve"
+    assert_includes load_unit_details["eve"]["pic"], "images/testunit.png"
+
   end
 
   def test_updating_soulcard
@@ -173,13 +204,14 @@ class RiceMineTest < Minitest::Test
   end
 
   def test_creating_new_soulcard
-    post "/equips/new_sc", {:sc_name => "vacation2", :pic => '', :index => 1}, admin_session
+    post "/equips/new_sc", {:sc_name => "vacation2", "file" => Rack::Test::UploadedFile.new("testsc.jpg", "image/jpg"), :index => 1}, admin_session
 
 
     assert_equal "New Soulcard called VACATION2 has been created.", session[:message]
     assert_equal 302, last_response.status
     assert_equal load_soulcards_details.keys.size, 2
     assert_includes load_soulcards_details.keys, "vacation2"
+    assert_includes load_soulcards_details["vacation2"]["pic"], "images/sc/testsc.jpg"
   end
 
   def test_view_new_unit_form
@@ -235,6 +267,27 @@ class RiceMineTest < Minitest::Test
     assert_equal "You must be signed in to do that.", session[:message]
   end
 
+  def test_removing_image_file
+
+  end
+
+  def test_uploading_files
+    post "/upload", "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png")
+    assert_equal last_response.status, 200
+    assert_includes last_response.body, "file uploaded"
+
+    post "/upload", "file" => Rack::Test::UploadedFile.new("testsc.jpg", "image/jpg")
+    assert_equal last_response.status, 200
+    assert_includes last_response.body, "file uploaded"
+  end
+
+  def test_uploading_file_with_no_file_selected
+    post "/upload"
+    assert_equal last_response.status, 302
+    get last_response["Location"]
+    assert_includes last_response.body, "No file selected"
+  end
+
   def test_search_for_keywords
     get '/search/?search_query=attacker'
 
@@ -276,7 +329,16 @@ class RiceMineTest < Minitest::Test
     get "/", {}, {"rack.session" => { username: "mnyiaa"} }
   end
 
+  def test_downloading_files
+    get "/download/unit_details.yml"
+    assert_equal 200, last_response.status
+
+    get "/download/soul_cards.yml"
+    assert_equal 200, last_response.status
+  end
+
   def teardown
         FileUtils.rm_rf("../test/data")
+        FileUtils.rm_rf("../test/public")
   end
 end
