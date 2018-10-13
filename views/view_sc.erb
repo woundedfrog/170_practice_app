@@ -15,7 +15,11 @@
 			<% unless info_key == "index" || info_key == "pic" %>
 			<div class="profile-stat-container">
 				<h5 class="card-title"><%= info_key.capitalize %>:</h5>
-				<ul>
+				<% if ["stars", "tier"].include?(info_key) %>
+					<%== format_stat(info_key, info_val) %>
+				<% else %>
+					<!-- <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p> -->
+
 					<% info_val.split(". ").each do |line| %>
 
 					<% if line[-1] != '.' && info_key != "stars" %>
@@ -25,7 +29,7 @@
 					<% end %>
 
 					<% end %>
-				</ul>
+			<% end %>
 			</div>
 			<% end %>
 			<% end %>
