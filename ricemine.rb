@@ -50,7 +50,7 @@ helpers do
 end
 
 def delete_selected_file(name)
-  if !name.include?(".jpg")
+  if !name.include?('.jpg')
     Dir.glob('./public/images/').each do |f|
       FileUtils.rm(f + name)
     end
@@ -185,6 +185,21 @@ def find_unit_sc_from_keys(details, keys)
   results
 end
 
+def create_file_from_upload(uploaded_file, pic_param, directory)
+  if !uploaded_file.nil?
+    (tmpfile = uploaded_file[:tempfile]) && (pname = uploaded_file[:filename])
+    path = File.join(directory, pname)
+    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
+  elsif params[:pic].empty?
+    pname = 'emptyunit0.png'
+  else
+    pname = pic_param
+  end
+
+  directory.gsub!('public', '')
+  pname.include?(directory) ? pname : "#{directory}/" + pname
+end
+
 get '/users/signin' do
   erb :signin
 end
@@ -227,7 +242,7 @@ get '/download/:filename' do |filename|
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
   else
-    send_file "./public/images/#{filename}",  filename: fname, type: ftype
+    send_file "./public/images/#{filename}", filename: fname, type: ftype
   end
   redirect '/'
 end
@@ -323,10 +338,12 @@ get '/show_files' do
   # pattern = File.join(file_path, '*')
   @units = Dir.glob(units).map do |path|
     next if File.directory?(path)
+
     File.basename(path)
   end
   @soulcards = Dir.glob(cards).map do |path|
     next if File.directory?(path)
+
     File.basename(path)
   end
   erb :file_list
@@ -341,20 +358,6 @@ end
 
 get '/upload' do
   erb :upload
-end
-
-def create_file_from_upload(uploaded_file, pic_param, directory)
-  if !uploaded_file.nil?
-    (tmpfile = uploaded_file[:tempfile]) && (pname = uploaded_file[:filename])
-    path = File.join(directory, pname)
-    File.open(path, 'wb') { |f| f.write(tmpfile.read) }
-  elsif params[:pic].empty?
-    pname = 'emptyunit0.png'
-  else
-    pname = pic_param
-  end
-  directory.gsub!('public', '')
-  pname.include?(directory) ? pname : "#{directory}/" + pname
 end
 
 post '/equips/new_sc' do
@@ -395,9 +398,8 @@ post '/equips/new_sc' do
   data[name]['index'] = index
 
   File.write('data/sc/soul_cards.yml', YAML.dump(data))
-
   session[:message] = "New Soulcard called #{name.upcase} has been created."
-  redirect '/'
+  redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
 post '/new_unit' do
@@ -463,7 +465,7 @@ post '/new_unit' do
 
   File.write('data/unit_details.yml', YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
-  redirect '/'
+  redirect "/childs/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
 get '/childs/:star_rating/:unit_name/remove' do
@@ -500,18 +502,25 @@ end
 
 # used to upload a file without creating a new unit
 post '/upload' do
+  require_user_signin
   unless params[:file] &&
          (tmpfile = params[:file][:tempfile]) &&
          (name = params[:file][:filename])
     session[:message] = 'No file selected'
     # return haml(:upload)
-    redirect "/upload"
+    redirect '/upload'
   end
-  if name.include?("jpg")
-    directory = file_path[1]
-  else
-    directory = file_path[0]
-  end#'public/images'
+
+  directory = if name.include?('png')
+                file_path[0]
+              elsif name.include?('jpg')
+                file_path[1]
+              elsif name == 'unit_details.yml'
+                'data/'
+              else
+                'data/sc/'
+              end
+
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
