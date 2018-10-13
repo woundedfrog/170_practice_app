@@ -20,11 +20,15 @@ helpers do
     %w[pic pic2 pic3 tier stars type element].include?(key.to_s)
   end
 
-  def format_stat(_stat_key, info_val)
+  def format_stat(stat_key, info_val)
     if %w[water fire grass light dark].include?(info_val)
-      "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
+      "<img class=\'short-stat-content element-type-pic\' src='/images/#{info_val}.png'/>"
     elsif %w[tank attacker buffer healer debuffer].include?(info_val)
-      "<img class=\'element-type-pic\' src='/images/#{info_val}.png'/>"
+      "<img class=\'short-stat-content element-type-pic\' src='/images/#{info_val}.png'/>"
+    elsif stat_key == 'stars'
+      "<img class=\'short-stat-content star_rating\' src='/images/star#{info_val}.png'/>"
+    elsif stat_key == 'tier'
+      "<img class=\'short-stat-content tier_rating\' src='/images/class#{info_val.downcase}.png'/>"
     else
       info_val
     end
