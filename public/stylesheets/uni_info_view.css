@@ -188,6 +188,10 @@ input, textarea {
 	width: 150px;
 }
 
+textarea {
+	width: inherit;
+}
+
 /* end */
 
 /* // Small devices (landscape phones, 576px and up) */
