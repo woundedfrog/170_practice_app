@@ -169,13 +169,6 @@ castle of pleasure:
     at lvl0  / 980 at lvl40 / 1332 at lvl40 +4."
   passive: "Restriction: Grass. \r\n\r\nInstant Heal Received +400 (800 at lvl40 +4)."
   index: 11
-dream team:
-  pic: "/images/sc/dreamteam.jpg"
-  stars: '4'
-  stats: "Attack: 415 at lvl0 / 1000 at lvl40 / 1360 at lvl40 +4. \r\nDefense: 365
-    at lvl0 / 960 at lvl40 / 1305 at lvl40 +4."
-  passive: "Restriction: None. \r\n\r\nHeal 700 (1500 at lvl40 +4) HP when kill enemy."
-  index: 12
 hero:
   pic: "/images/sc/hero.jpg"
   stars: '4'
@@ -291,22 +284,6 @@ iced americano:
   passive: "Restriction: Attacker. \r\n\r\n40.5% (45.5%) chance to apply 750 (1250)
     barrier when using slide skill in Underground."
   index: 39
-7th runaway:
-  pic: "/images/sc/runaway.jpg"
-  stars: '5'
-  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nCritical:
-    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\nRestriction: Light. \r\n\r\n[Write
-    info]\r\n[Write info]"
-  index: 40
-ayane:
-  pic: "/images/sc/ayane.jpg"
-  stars: '5'
-  stats: "HP: 1070 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nAgility: 300 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
-  index: 41
 dive:
   pic: "/images/sc/dive.jpg"
   stars: '5'
@@ -365,22 +342,6 @@ sc booster 4:
   stats: Increases + EXP by 84.
   passive: 'Restriction: none.'
   index: 50
-onna tengu:
-  pic: "/images/sc/onnatengu.jpg"
-  stars: '4'
-  stats: "HP: 775 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.
-    \r\n\r\nCritical: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at
-    lvl50 +5."
-  passive: "Restriction: Light. \r\n\r\n[Write info]"
-  index: 51
-runa:
-  pic: "/images/sc/runa.jpg"
-  stars: '4'
-  stats: "Defense: 395 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nAgility: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
-  index: 52
 kokoro:
   pic: "/images/sc/kokoro.jpg"
   stars: '3'
@@ -404,6 +365,35 @@ forbidden fruit:
     290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
   passive: "Restriction: none. \r\n\r\n[Write info]"
   index: 55
+sc booster 3:
+  pic: "/images/sc/scupgrade3.jpg"
+  stars: '3'
+  stats: Increase + EXP by 28.
+  passive: 'Restriction: None.'
+  index: 56
+dream team:
+  pic: "/images/sc/dreamteam.jpg"
+  stars: '4'
+  stats: "Attack: 415 at lvl0 / 1000 at lvl40 / 1360 at lvl40 +4. \r\nDefense: 365
+    at lvl0 / 960 at lvl40 / 1305 at lvl40 +4."
+  passive: "Restriction: None. \r\n\r\nHeal 700 (1500 at lvl40 +4) HP when kill enemy."
+  index: 12
+runa:
+  pic: "/images/sc/runa.jpg"
+  stars: '4'
+  stats: "Defense: 395 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nAgility: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\n[Write info]"
+  index: 52
+onna tengu:
+  pic: "/images/sc/onnatengu.jpg"
+  stars: '4'
+  stats: "HP: 775 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.
+    \r\n\r\nCritical: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at
+    lvl50 +5."
+  passive: "Restriction: Light. \r\n\r\n[Write info]"
+  index: 51
 shaking feeling:
   pic: "/images/sc/shakingfeeling.jpg"
   stars: '5'
@@ -411,9 +401,18 @@ shaking feeling:
     530 at lvl0  / [lvl50 number] at lvl50 / 2642 at lvl50 +5."
   passive: "Restriction: None. \r\n\r\n[Write info]"
   index: 46
-sc booster 3:
-  pic: "/images/sc/scupgrade3.jpg"
-  stars: ''
-  stats: Increase + EXP by 28.
-  passive: 'Restriction: None.'
-  index: 56
+7th runaway:
+  pic: "/images/sc/runaway.jpg"
+  stars: '5'
+  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nCritical:
+    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
+  passive: "Restriction: Light. \r\n\r\n[Write info]"
+  index: 40
+ayane:
+  pic: "/images/sc/ayane.jpg"
+  stars: '5'
+  stats: "HP: 1070 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nAgility: 300 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 41

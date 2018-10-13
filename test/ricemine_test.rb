@@ -134,6 +134,13 @@ class RiceMineTest < Minitest::Test
     assert_includes last_response.body, "Passive"
   end
 
+  def test_view_profile
+    get "/childs/5stars/cleopatra"
+    assert_equal last_response.status, 200
+    assert_includes last_response.body, *["<h3>Cleopatra", "profile_imgs"]
+    assert_includes last_response.body, *["Go back", "Drive"]
+  end
+
   def test_unit_profile_not_found
     get "/childs/5stars/invalid_unit_name"
 
@@ -173,6 +180,16 @@ class RiceMineTest < Minitest::Test
     assert_equal load_unit_details.keys.size, 3
     assert_includes load_unit_details.keys, "cleopatra1"
     refute_includes load_unit_details.keys, "cleopatra0"
+  end
+
+  def test_editing_updating_unit_and_redirect
+    post "/new_unit", {:unit_name => "cleopatra1", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :stars => 5, :slide => '', :tap => '', :drive => '', :leader => '', :auto => '', :index => 0}, admin_session
+
+    assert_equal 302, last_response.status
+    assert_equal "New unit called CLEOPATRA1 has been created.", session[:message]
+
+    get last_response["location"], {:unit_name => "cleopatra"}
+    assert_includes last_response.body, *["<h3>Cleopatra1", "profile_imgs"]
   end
 
   def test_creating_new_unit
@@ -272,17 +289,20 @@ class RiceMineTest < Minitest::Test
   end
 
   def test_uploading_files
-    post "/upload", "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png")
+    post "/upload", {"file" => Rack::Test::UploadedFile.new("testunit.png", "image/png")}, admin_session
+
     assert_equal last_response.status, 200
     assert_includes last_response.body, "file uploaded"
 
-    post "/upload", "file" => Rack::Test::UploadedFile.new("testsc.jpg", "image/jpg")
+    post "/upload", {"file" => Rack::Test::UploadedFile.new("testsc.jpg", "image/jpg")}, admin_session
+
     assert_equal last_response.status, 200
     assert_includes last_response.body, "file uploaded"
   end
 
   def test_uploading_file_with_no_file_selected
-    post "/upload"
+    post "/upload", {}, admin_session
+
     assert_equal last_response.status, 302
     get last_response["Location"]
     assert_includes last_response.body, "No file selected"

@@ -2448,13 +2448,13 @@ marie rose:
   pic: "/images/marierose0.png"
   pic2: "/images/marierose1.png"
   pic3: "/images/marierose2.png"
-  tier: '5'
-  stars: ''
+  tier: S
+  stars: '5'
   type: tank
   element: grass
   leader: ''
   auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  tap: She taps Hard
+  slide: Her slide is smoothe.
+  drive: Likes to drive... her car at night.
   index: 144
