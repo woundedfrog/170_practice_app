@@ -2420,7 +2420,7 @@ honoka:
   pic: "/images/honoka0.png"
   pic2: "/images/honoka1.png"
   pic3: "/images/honoka2.png"
-  tier: ''
+  tier: S
   stars: '5'
   type: healer
   element: fire
@@ -2434,7 +2434,7 @@ kasumi:
   pic: "/images/kasumi0.png"
   pic2: "/images/kasumi1.png"
   pic3: "/images/kasumi3.png"
-  tier: ''
+  tier: A
   stars: '5'
   type: attacker
   element: water
@@ -2452,7 +2452,7 @@ marie rose:
   stars: '5'
   type: tank
   element: grass
-  leader: ''
+  leader: 'Looking good.'
   auto: ''
   tap: She taps Hard
   slide: Her slide is smoothe.
