@@ -220,10 +220,12 @@ end
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
-  if filename.include?('.jpg')
-    send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
+  if filename.include?('soul')
+    send_file "./data/sc/#{filename}", filename: fname, type: ftype
   elsif filename.include?('unit')
     send_file "./data/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('.jpg')
+    send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
   else
     send_file "./public/images/#{filename}",  filename: fname, type: ftype
   end
@@ -501,10 +503,15 @@ post '/upload' do
   unless params[:file] &&
          (tmpfile = params[:file][:tempfile]) &&
          (name = params[:file][:filename])
-    @error = 'No file selected'
-    return haml(:upload)
+    session[:message] = 'No file selected'
+    # return haml(:upload)
+    redirect "/upload"
   end
-  directory = 'public/images'
+  if name.include?("jpg")
+    directory = file_path[1]
+  else
+    directory = file_path[0]
+  end#'public/images'
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
