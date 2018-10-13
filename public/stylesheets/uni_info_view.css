@@ -103,8 +103,21 @@ span {
 }
 
 .element-type-pic {
-	width: 35%;
-	padding-left: 5px;
+	width: 45%;
+	padding-left: 0px;
+	padding-right: 5px;
+}
+
+.star_rating {
+	width: 100%;
+	/* padding-left: 5px; */
+	padding: 0px;
+}
+
+.tier_rating {
+	width: 100%;
+	/* padding-left: 5px; */
+	padding: 0px;
 }
 
 .unit-profile-title {
@@ -121,6 +134,7 @@ span {
 
 .short-stat-content {
 	text-align: center;
+	max-width: 100px;
 }
 
 /* ////CHILD PROFILES//// */
