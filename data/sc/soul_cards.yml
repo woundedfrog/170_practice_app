@@ -119,7 +119,7 @@ stf:
   passive: "Restriction: Light. \r\n\r\nCurse +200."
   index: 28
 summer night:
-  pic: "/images/sc/summernight.jpg"
+  pic: "/images/sc/summerfestivalnight.jpg"
   stars: '5'
   stats: "HP: 1018 at lvl0 / 1998 at lvl50 / 3296 at lvl50 +5. \r\nAgility: 268 at
     lvl0  / 1248 at lvl50 / 2184 at lvl50 +5."
@@ -291,3 +291,129 @@ iced americano:
   passive: "Restriction: Attacker. \r\n\r\n40.5% (45.5%) chance to apply 750 (1250)
     barrier when using slide skill in Underground."
   index: 39
+7th runaway:
+  pic: "/images/sc/runaway.jpg"
+  stars: '5'
+  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nCritical:
+    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\nRestriction: Light. \r\n\r\n[Write
+    info]\r\n[Write info]"
+  index: 40
+ayane:
+  pic: "/images/sc/ayane.jpg"
+  stars: '5'
+  stats: "HP: 1070 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nAgility: 300 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 41
+dive:
+  pic: "/images/sc/dive.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 42
+crossed hearts:
+  pic: "/images/sc/crossedheart.jpg"
+  stars: '5'
+  stats: "HP: 1050 at lvl0 / [lvl50 number] at lvl50 / 3552 at lvl50 +5. \r\n\r\nDefense:
+    560 at lvl0  / [lvl50 number] at lvl50 / 2695 at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 43
+sc booster 5:
+  pic: "/images/sc/scupgrade5.jpg"
+  stars: '5'
+  stats: Increases + EXP by 480.
+  passive: 'Restriction: None.'
+  index: 44
+sow:
+  pic: "/images/sc/sow.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5.\r\n\r\n[stat]: [basenumber] at lvl0  / [lvl50 number] at lvl50 /
+    [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 45
+tamaki:
+  pic: "/images/sc/tamaki.jpg"
+  stars: '5'
+  stats: "Attack: 580 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nDefense: 540 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 47
+lacia:
+  pic: "/images/sc/lacia.jpg"
+  stars: '4'
+  stats: "HP: 790 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.\r\n\r\nDefense:
+    400 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 49
+in the clouds:
+  pic: "/images/sc/lookupatclouds.jpg"
+  stars: '4'
+  stats: "Attack: 430 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nAgility: 206 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 48
+sc booster 4:
+  pic: "/images/sc/scupgrade4.jpg"
+  stars: '4'
+  stats: Increases + EXP by 84.
+  passive: 'Restriction: none.'
+  index: 50
+onna tengu:
+  pic: "/images/sc/onnatengu.jpg"
+  stars: '4'
+  stats: "HP: 775 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.
+    \r\n\r\nCritical: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at
+    lvl50 +5."
+  passive: "Restriction: Light. \r\n\r\n[Write info]"
+  index: 51
+runa:
+  pic: "/images/sc/runa.jpg"
+  stars: '4'
+  stats: "Defense: 395 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nAgility: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  index: 52
+kokoro:
+  pic: "/images/sc/kokoro.jpg"
+  stars: '3'
+  stats: "Defense: 260 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nCritical: 145 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 53
+misaki:
+  pic: "/images/sc/misaki.jpg"
+  stars: '3'
+  stats: "Attack: 270 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
+    +5. \r\n\r\nDefense: 250 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
+    at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 54
+forbidden fruit:
+  pic: "/images/sc/forbiddenfruit.jpg"
+  stars: '5'
+  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nAgility:
+    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n[Write info]"
+  index: 55
+shaking feeling:
+  pic: "/images/sc/shakingfeeling.jpg"
+  stars: '5'
+  stats: "HP: 1040 at lvl0 / [lvl50 number] at lvl50 / 3535 at lvl50 +5. \r\n\r\nAttack:
+    530 at lvl0  / [lvl50 number] at lvl50 / 2642 at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\n[Write info]"
+  index: 46
+sc booster 3:
+  pic: "/images/sc/scupgrade3.jpg"
+  stars: ''
+  stats: Increase + EXP by 28.
+  passive: 'Restriction: None.'
+  index: 56

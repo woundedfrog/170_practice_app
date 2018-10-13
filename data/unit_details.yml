@@ -2402,3 +2402,59 @@ athena:
     (Including self) apply "Reflect" (Return 30% of the damage receive) for 20 seconds
     (If you receive "Reflect" buff, it will be applies to 2 allies).
   index: 142
+brigette:
+  pic: "/images/brigette.png"
+  pic2: ''
+  pic3: ''
+  tier: ''
+  stars: '5'
+  type: tank
+  element: fire
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 147
+honoka:
+  pic: "/images/honoka0.png"
+  pic2: "/images/honoka1.png"
+  pic3: "/images/honoka2.png"
+  tier: ''
+  stars: '5'
+  type: healer
+  element: fire
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 145
+kasumi:
+  pic: "/images/kasumi0.png"
+  pic2: "/images/kasumi1.png"
+  pic3: "/images/kasumi3.png"
+  tier: ''
+  stars: '5'
+  type: attacker
+  element: water
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 146
+marie rose:
+  pic: "/images/marierose0.png"
+  pic2: "/images/marierose1.png"
+  pic3: "/images/marierose2.png"
+  tier: '5'
+  stars: ''
+  type: tank
+  element: grass
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 144
