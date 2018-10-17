@@ -7,6 +7,11 @@
 
   <h3><%= upcase_name(@unit_name) %></h3>
 
+<!-- button to show LIVE2D canvas and content -->
+  <button id="live2d_button">
+    <a onclick="Simple()" href="#glcanvas">Show 2D Model</a>
+  </button>
+
   <div class="row profile-row-container">
     <div class="col- profile-pic-container">
       <img class="profile_imgs" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
@@ -17,7 +22,7 @@
     <div class="col profile-stat-col-cantainer">
       <div class="row profile-stat-row-container">
         <% @current_unit.each do |info_key, info_val| %>
-        <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
+        <% unless info_key == "index" || info_key == "pic" || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
         <div class="profile-stat-container col-*">
           <h5 class="card-title"><%= info_key.capitalize %>:</h5>
           <% if ["stars", "tier"].include?(info_key) %>
@@ -33,10 +38,17 @@
 
     <% @current_unit.each do |info_key, info_val| %>
 
-    <% unless special_key?(info_key) || info_key == "index" %>
+    <!-- THIS IS FOR LIVE 2D to get the ID that needs to be in the YAML stats under "ID" -->
+    <% if info_key == "id" %>
+      <p id="unit_id" value='<%= info_val %>'></p>
+      <% next %>
+    <% end %>
+
+    <% unless special_key?(info_key) || info_key == "index"%>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
       <ul>
+
         <% info_val.split(". ").each do |line| %>
 
         <% if line[-1] != '.' %>
@@ -44,7 +56,6 @@
         <% else %>
         <p><strong>·</strong> <%= line %></p>
         <% end %>
-
         <% end %>
       </ul>
     </div>
@@ -55,3 +66,7 @@
 
 </div>
 </div>
+
+   <div id="canvas" style="text-align: center;">
+     <canvas id="glcanvas" width = "311px" height="322px" style="border:dashed 1px #CCC"></canvas>
+   </div>

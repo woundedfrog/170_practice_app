@@ -340,22 +340,6 @@ hades:
     to 3 units with lowest HP, including self (if own HP is the lowest, barrier will
     only be applied to 2 targets).
   index: 24
-gkouga:
-  tier: S
-  pic: "/images/gkouga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  leader: ''
-  auto: Deals 113 damage.
-  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
-    or Frozen and 200 Ignore defense if target is Water type.
-  slide: Deals 400 damages + Tap damage 3times to 1 enemy  (Prioritizing attacker
-    Types) and absorb 200 damage as HP.
-  drive: Deals 2329 damage to 3 enemies with lowest hp
-  index: 23
 frey:
   tier: S
   pic: "/images/frey0.png"
@@ -2188,23 +2172,6 @@ mafdet:
   drive: Deals 2341 damage to all enemies and block heals (excludes Lifesteal and
     absorption) for 25s to 3 enemies with lowest HP.
   index: 30
-cammy:
-  pic: "/images/cammy0.png"
-  pic2: ''
-  pic3: ''
-  tier: B
-  stars: '5'
-  type: buffer
-  element: water
-  leader: Weakness Defense -8% to Water Types enemies
-  auto: "Deals 101 Damages.\t\t\t"
-  tap: Deals 389 Damages and +160 additional damages if target Support Types.
-  slide: Deals 669 Damges to 2 highest attack enemies, 60% chances to Apply Stun (target
-    is unable to use skills and within 4sec any attack received increases Stun duration
-    by 1sec to a max of 5secs) and -1200 attack for 12seconds.
-  drive: Deals 1965 Damages to 3enemies (prioritizing Water Types) and -33% Skill
-    Gauge Speed for 16seconds.
-  index: 11
 dark midas:
   pic: "/images/darkmidas0.png"
   pic2: ''
@@ -2371,6 +2338,7 @@ pallas:
   pic3: ''
   tier: B
   stars: '5'
+  id: c378_01
   type: buffer
   element: dark
   leader: -10% duration of debuffs (Except "Wither") (Additional -10% in Devil Rumble).
@@ -2406,16 +2374,78 @@ brigette:
   pic: "/images/brigette.png"
   pic2: ''
   pic3: ''
-  tier: ''
+  tier: B
   stars: '5'
   type: tank
   element: fire
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: "+10% Defense for Fire allies (Additional +10% in Underground)."
+  auto: Deal 92 attack damage.
+  tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-Barrier"
+    (Cancel Barrier and do 50% damage of the remaining barrier).
+  slide: "Deal 525 damage to 2 targets randomly. Prioritizing 4 fire type allies,
+    apply \"Pain Adapt\" (Increase defense +600, defense increase in proportion to
+    HP loss [4% increase in defense per 2% decrease in HP - maximum increase to 80%]
+    for 14 seconds. \r\nPlus apply \"Damage Reflect\" (Return 20% of received damage
+    for 14 seconds or 3 attacks). For Underground Only, recover sustained 118HP (Once
+    every 2 seconds) for 14 seconds."
+  drive: "Deal 1443 damage to 2 targets randomly. Prioritizing 5 Fire allies, increase
+    defense +1200 and gives +1500 barrier (Shield consumes enemies' attacks over HP)
+    for 20 seconds. \r\nFor Underground Only, apply \"Painful Sublimation\" (Increase
+    attack +200, attack increases in proportion to HP loss [36% increase in attack
+    per 2% decrease in HP - maximum increase to 720%])"
   index: 147
+gkouga:
+  pic: "/images/gkouga0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: attacker
+  element: grass
+  leader: "+5% to Tap damage for all allies. "
+  auto: Deals 113 damage.
+  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
+    or Frozen and 200 Ignore defense if target is Water type.
+  slide: Deals 400 damages + Tap damage 3times to 1 enemy  (Prioritizing attacker
+    Types) and absorb 200 damage as HP.
+  drive: Deals 2329 damage to 3 enemies with lowest hp
+  index: 23
+kasumi:
+  pic: "/images/kasumi0.png"
+  pic2: "/images/kasumi1.png"
+  pic3: "/images/kasumi3.png"
+  tier: A
+  stars: '5'
+  id: c386_01
+  type: attacker
+  element: water
+  leader: "+12% attack for Water type allies"
+  auto: Deal 297 damage.
+  tap: Deal 1568 damage and, if the target is poisoned, 189 additional damage.
+  slide: Prioritizing the enemies with the highests attack power, deal 2077 damage
+    to 3 enemies, gives 620 defense ignore damage, and if you do a critical hit, gives
+    a 62% chance to apply "Stun" for 4 seconds (adds 1 second to max 5 seconds when
+    attacking in a stunning state.
+  drive: Deal 5363 damage to 3 enemies randomly, 700 additional damage or "Evasion"
+    +40% to self for 20 seconds.
+  index: 146
+marie rose:
+  pic: "/images/marierose0.png"
+  pic2: "/images/marierose1.png"
+  pic3: "/images/marierose2.png"
+  tier: A
+  stars: '5'
+  type: tank
+  element: grass
+  leader: "+8% skill damage defense for wood type allies."
+  auto: Deal 228 damage.
+  tap: Deal 1020 damage, increase 21.3% all skill damage defense (Cancels after 24
+    seconds or 3 attacks).
+  slide: Deal 1442 damage, apply "Endure" to 4 allies except self (Cancels after 14
+    seconds or 2 attacks) and gives Silence resistance +22.7 for 14 seconds.
+  drive: Deal 3480 damage to 2 enemies randomly, +40% of Defense Power to 5 allies
+    and DoT Resistance +50% for 20 seconds.
+  index: 144
 honoka:
   pic: "/images/honoka0.png"
   pic2: "/images/honoka1.png"
@@ -2424,37 +2454,29 @@ honoka:
   stars: '5'
   type: healer
   element: fire
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: "+15% Critical for Fire allies (Additional +25% on Devil Rumble)."
+  auto: Deal 241 damage.
+  tap: Deals 1111 damage and, prioritizing an ally with least HP, gives 752 HP.
+  slide: Prioritizing the allies with least HP, HoT 220 to 3 allies and if you do
+    a critical hit, adds +38.4% skill gauge for 14 seconds.
+  drive: Deal 3872 damage to 2 enemies randomly, prioritizing the allies with least
+    HP, HoT 313 to 5 allies for 16 seconds and increase Critical attack +2000 for
+    20 seconds .
   index: 145
-kasumi:
-  pic: "/images/kasumi0.png"
-  pic2: "/images/kasumi1.png"
-  pic3: "/images/kasumi3.png"
-  tier: A
+cammy:
+  pic: "/images/cammy0.png"
+  pic2: ''
+  pic3: ''
+  tier: B
   stars: '5'
-  type: attacker
-  element: water
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
-  index: 146
-marie rose:
-  pic: "/images/marierose0.png"
-  pic2: "/images/marierose1.png"
-  pic3: "/images/marierose2.png"
-  tier: S
-  stars: '5'
-  type: tank
+  type: debuffer
   element: grass
-  leader: 'Looking good.'
-  auto: ''
-  tap: She taps Hard
-  slide: Her slide is smoothe.
-  drive: Likes to drive... her car at night.
-  index: 144
+  leader: Weakness Defense -8% to Water Types enemies
+  auto: "Deals 101 Damages.\t\t\t"
+  tap: Deals 389 Damages and +160 additional damages if target Support Types.
+  slide: Deals 669 Damges to 2 highest attack enemies, 60% chances to Apply Stun (target
+    is unable to use skills and within 4sec any attack received increases Stun duration
+    by 1sec to a max of 5secs) and -1200 attack for 12seconds.
+  drive: Deals 1965 Damages to 3enemies (prioritizing Water Types) and -33% Skill
+    Gauge Speed for 16seconds.
+  index: 11

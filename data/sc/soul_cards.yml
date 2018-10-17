@@ -276,14 +276,6 @@ azure girl:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Water type. \r\n\r\nPoison +1000 (1500) in WorldBoss."
   index: 7
-iced americano:
-  pic: "/images/sc/icedamericano.jpg"
-  stars: '5'
-  stats: "HP: 1078 at lvl0 / 2058 at lvl50 / 3601 at lvl50 +5. \r\n\r\nDefence: 586
-    at lvl0  /1566 at lvl50 / 2740 at lvl50 +5."
-  passive: "Restriction: Attacker. \r\n\r\n40.5% (45.5%) chance to apply 750 (1250)
-    barrier when using slide skill in Underground."
-  index: 39
 dive:
   pic: "/images/sc/dive.jpg"
   stars: '5'
@@ -292,13 +284,6 @@ dive:
     [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
   index: 42
-crossed hearts:
-  pic: "/images/sc/crossedheart.jpg"
-  stars: '5'
-  stats: "HP: 1050 at lvl0 / [lvl50 number] at lvl50 / 3552 at lvl50 +5. \r\n\r\nDefense:
-    560 at lvl0  / [lvl50 number] at lvl50 / 2695 at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 43
 sc booster 5:
   pic: "/images/sc/scupgrade5.jpg"
   stars: '5'
@@ -313,58 +298,12 @@ sow:
     [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
   index: 45
-tamaki:
-  pic: "/images/sc/tamaki.jpg"
-  stars: '5'
-  stats: "Attack: 580 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nDefense: 540 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
-  index: 47
-lacia:
-  pic: "/images/sc/lacia.jpg"
-  stars: '4'
-  stats: "HP: 790 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.\r\n\r\nDefense:
-    400 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 49
-in the clouds:
-  pic: "/images/sc/lookupatclouds.jpg"
-  stars: '4'
-  stats: "Attack: 430 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nAgility: 206 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 48
 sc booster 4:
   pic: "/images/sc/scupgrade4.jpg"
   stars: '4'
   stats: Increases + EXP by 84.
   passive: 'Restriction: none.'
   index: 50
-kokoro:
-  pic: "/images/sc/kokoro.jpg"
-  stars: '3'
-  stats: "Defense: 260 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nCritical: 145 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 53
-misaki:
-  pic: "/images/sc/misaki.jpg"
-  stars: '3'
-  stats: "Attack: 270 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nDefense: 250 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 54
-forbidden fruit:
-  pic: "/images/sc/forbiddenfruit.jpg"
-  stars: '5'
-  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nAgility:
-    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
-  passive: "Restriction: none. \r\n\r\n[Write info]"
-  index: 55
 sc booster 3:
   pic: "/images/sc/scupgrade3.jpg"
   stars: '3'
@@ -378,41 +317,97 @@ dream team:
     at lvl0 / 960 at lvl40 / 1305 at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nHeal 700 (1500 at lvl40 +4) HP when kill enemy."
   index: 12
-runa:
-  pic: "/images/sc/runa.jpg"
-  stars: '4'
-  stats: "Defense: 395 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nAgility: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: None. \r\n\r\n[Write info]"
-  index: 52
-onna tengu:
-  pic: "/images/sc/onnatengu.jpg"
-  stars: '4'
-  stats: "HP: 775 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.
-    \r\n\r\nCritical: 210 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at
-    lvl50 +5."
-  passive: "Restriction: Light. \r\n\r\n[Write info]"
-  index: 51
-shaking feeling:
+feeling tremors:
   pic: "/images/sc/shakingfeeling.jpg"
   stars: '5'
   stats: "HP: 1040 at lvl0 / [lvl50 number] at lvl50 / 3535 at lvl50 +5. \r\n\r\nAttack:
     530 at lvl0  / [lvl50 number] at lvl50 / 2642 at lvl50 +5."
-  passive: "Restriction: None. \r\n\r\n[Write info]"
+  passive: "Restriction: None. \r\n\r\nIncrease 12% chance to stun in Devil Rumble."
   index: 46
+crossed hearts:
+  pic: "/images/sc/crossedheart.jpg"
+  stars: '5'
+  stats: "HP: 1050 at lvl0 / 3552 at lvl50 +5. \r\n\r\nDefense: 560 at lvl0  / 2695
+    at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\nIncrease Stun Ignore by 30% in Devil Rumble."
+  index: 43
 7th runaway:
   pic: "/images/sc/runaway.jpg"
   stars: '5'
-  stats: "Attack: 560 at lvl0 / [lvl50 number] at lvl50 / 2695 at lvl50 +5. \r\n\r\nCritical:
-    290 at lvl0  / [lvl50 number] at lvl50 / 2222 at lvl50 +5."
-  passive: "Restriction: Light. \r\n\r\n[Write info]"
+  stats: "Attack: 560 at lvl0 / 2695 at lvl50 +5. \r\n\r\nCritical: 290 at lvl0 /
+    2222 at lvl50 +5."
+  passive: "Restriction: Light. \r\n\r\nIncrease Critical attack by 800 in Raid Boss."
   index: 40
+forbidden fruit:
+  pic: "/images/sc/forbiddenfruit.jpg"
+  stars: '5'
+  stats: "Attack: 560 at lvl0 / 2695 at lvl50 +5. \r\n\r\nAgility: 290 at lvl0  /
+    2222 at lvl50 +5."
+  passive: "Restriction: none. \r\n\r\n30% chance to ignore Death Heal in Raid Boss."
+  index: 55
+iced americano:
+  pic: "/images/sc/icedamericano.jpg"
+  stars: '5'
+  stats: "HP: 1078 at lvl0 / 2058 at lvl50 / 3601 at lvl50 +5. \r\n\r\nDefence: 586
+    at lvl0  /1566 at lvl50 / 2740 at lvl50 +5."
+  passive: "Restriction: Attacker. \r\n\r\nUsing a slide skill grants a 40% (45.5%)
+    chance to get 700HP(1250HP) barrier for 10 seconds in Underground."
+  index: 39
+luna:
+  pic: "/images/sc/runa.jpg"
+  stars: '4'
+  stats: "Defense: 395 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nAgility: 210
+    at lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
+  index: 52
+kokoro:
+  pic: "/images/sc/kokoro.jpg"
+  stars: '3'
+  stats: "Attack: 270 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nDefense: 250
+    at lvl0 / [lvl30 +3 number] at lvl30 +3."
+  passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
+  index: 53
+misaki:
+  pic: "/images/sc/misaki.jpg"
+  stars: '3'
+  stats: "Defense: 260 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nCritical:
+    145 at lvl0  / [lvl30 +3 number] at lvl30 +3."
+  passive: "Restriction: none. \r\n\r\nIncrease HoT received by +15."
+  index: 54
+in the clouds:
+  pic: "/images/sc/lookupatclouds.jpg"
+  stars: '4'
+  stats: "Attack: 430 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nAgility: 206
+    at lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: none. \r\n\r\nAdd 3% of your Final attack power to your Final
+    agility power."
+  index: 48
+lacia:
+  pic: "/images/sc/lacia.jpg"
+  stars: '4'
+  stats: "HP: 790 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nDefense: 400 at
+    lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: none. \r\n\r\nAdd 2% of your Final attack power to your Final
+    critical power."
+  index: 49
+tamaki:
+  pic: "/images/sc/tamaki.jpg"
+  stars: '5'
+  stats: "Attack: 580 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\nDefense: 540
+    at lvl0  / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: Attacker. \r\n\r\nHeal 1500HP when enemy is killed."
+  index: 47
 ayane:
   pic: "/images/sc/ayane.jpg"
   stars: '5'
-  stats: "HP: 1070 at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50
-    +5. \r\n\r\nAgility: 300 at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number]
-    at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  stats: "HP: 1070 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n \r\nAgility: 300
+    at lvl0 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\nIncrease Petrify resist +30% in Devil Rumble."
   index: 41
+nyotengu:
+  pic: "/images/sc/onnatengu.jpg"
+  stars: '4'
+  stats: "HP: 775 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nCritical: 210 at
+    lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: Light. \r\n \r\nIncrease Curse damage by +75."
+  index: 51

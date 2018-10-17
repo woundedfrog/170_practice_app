@@ -206,7 +206,18 @@ textarea {
 	width: inherit;
 }
 
-/* end */
+#canvas {
+	display: none;
+}
+
+#live2d_button {
+	text-align: center;
+}
+
+/* USED TO HIDE THE ID display in the view_units erb */
+#unit_id {
+	display: none;
+}
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
