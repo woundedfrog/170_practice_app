@@ -207,23 +207,6 @@ dana:
   drive: Deals 1480 damage to 2 random enemies and drive Skill defense +30% for 15s
     to all allies.
   index: 15
-diablo:
-  tier: B
-  pic: "/images/diablo0.png"
-  pic2: "/images/diablo1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: fire
-  leader: Tap Skill defense +5% to Light units
-  auto: Deals 91 damage.
-  tap: Deals 297 damage to target and Skill defense +18% for (24s or 3 hits) and Taunt
-    (88% provocation) for 10s to self.
-  slide: Deals 487 damage to 2 random enemy and gains Immortality (HP won't go under
-    1) and Fury (saves up to 350% damage and returns.
-  drive: Deals 1397 damage to 2 random enemies and Skill defense +25% for 20s to 5
-    Light units.
-  index: 16
 pantheon:
   tier: B
   pic: "/images/pantheon0.png"
@@ -356,22 +339,6 @@ frey:
   drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
     enemy according to debuff) to all enemies.
   index: 22
-eve:
-  tier: S
-  pic: "/images/eve0.png"
-  pic2: "/images/eves1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: water
-  leader: Drive skill damage +10% to Water units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
-    Defense
-  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
-    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
-  drive: Deals 2437 damage to all enemies.
-  index: 21
 eshu:
   tier: B
   pic: "/images/eshu0.png"
@@ -1608,22 +1575,6 @@ daphne:
   drive: Gives 1000 HP instant heal to 3 allies with lowest HP, additional 240 HP
     instant heal if Fire type.
   index: 121
-sibbet:
-  pic: "/images/4sonnet0.png"
-  pic2: ''
-  pic3: ''
-  tier: S
-  stars: '4'
-  type: attacker
-  element: water
-  leader: Auto damage +40 to Water units.
-  auto: Deals 80 damage.
-  tap: Deals 80 damage plus Auto damage 3 times to target.
-  slide: Deals 531 damage and Poison (Deals 380 damage when enemy attacks and receives
-    attacks) for 3 turns to 2 enemies with priority to fire units, if fire type deal
-    150 additional damage.
-  drive: Deals 1389 damage to 3 random enemies.
-  index: 122
 elysiun:
   pic: "/images/4elysium0.png"
   pic2: ''
@@ -2478,3 +2429,66 @@ cammy:
   drive: Deals 1965 Damages to 3enemies (prioritizing Water Types) and -33% Skill
     Gauge Speed for 16seconds.
   index: 11
+diablo:
+  pic: "/images/diablo0.png"
+  pic2: "/images/diablo1.png"
+  pic3: ''
+  tier: C
+  stars: '5'
+  type: tank
+  element: light
+  leader: Tap Skill defense +5% to Light units
+  auto: Deals 91 damage.
+  tap: Deals 297 damage to target and Skill defense +18% for (24s or 3 hits) and Taunt
+    (88% provocation) for 10s to self.
+  slide: Deals 487 damage to 2 random enemy and gains Immortality (HP won't go under
+    1) and Fury (saves up to 350% damage and returns.
+  drive: Deals 1397 damage to 2 random enemies and Skill defense +25% for 20s to 5
+    Light units.
+  index: 16
+eve:
+  pic: "/images/eve0.png"
+  pic2: "/images/eve1.png"
+  pic3: ''
+  tier: S
+  stars: '5'
+  type: attacker
+  element: water
+  leader: Drive skill damage +10% to Water units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
+    Defense
+  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
+    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
+  drive: Deals 2437 damage to all enemies.
+  index: 21
+sonnet:
+  pic: "/images/4sonnet0.png"
+  pic2: ''
+  pic3: ''
+  tier: S
+  stars: '4'
+  type: attacker
+  element: water
+  leader: Auto damage +40 to Water units.
+  auto: Deals 80 damage.
+  tap: Deals 80 damage plus Auto damage 3 times to target.
+  slide: Deals 531 damage and Poison (Deals 380 damage when enemy attacks and receives
+    attacks) for 3 turns to 2 enemies with priority to fire units, if fire type deal
+    150 additional damage.
+  drive: Deals 1389 damage to 3 random enemies.
+  index: 122
+test:
+  pic: "/images/emptyunit0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: 'attacker'
+  element: water
+  tier: C S A
+  leader: ''
+  auto: ''
+  tap: ''
+  slide: ''
+  drive: ''
+  index: 148

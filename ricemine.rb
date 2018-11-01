@@ -20,6 +20,14 @@ helpers do
     %w[pic pic2 pic3 tier stars type element].include?(key.to_s)
   end
 
+  def format_image_from_tier(ratings)
+    formated_images = []
+    ratings.split(" ").each do |tier|
+      formated_images << "<img class=\'short-stat-content tier_rating\' src='/images/class#{tier.downcase}.png'/>"
+    end
+    formated_images
+  end
+
   def format_stat(stat_key, info_val)
     if %w[water fire grass light dark].include?(info_val)
       "<img class=\'short-stat-content element-type-pic\' src='/images/#{info_val}.png'/>"
@@ -28,6 +36,7 @@ helpers do
     elsif stat_key == 'stars'
       "<img class=\'short-stat-content star_rating\' src='/images/star#{info_val}.png'/>"
     elsif stat_key == 'tier'
+      # format_image_from_tier(info_val)
       "<img class=\'short-stat-content tier_rating\' src='/images/class#{info_val.downcase}.png'/>"
     else
       info_val
