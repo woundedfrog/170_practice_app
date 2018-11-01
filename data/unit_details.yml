@@ -70,22 +70,6 @@ sitri:
     lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
     Allies (Prioritizing back row).
   index: 29
-aria:
-  tier: A
-  pic: "/images/aria0.png"
-  pic2: "/images/aria1.png"
-  pic3: "/images/aria1.png"
-  stars: '5'
-  type: buffer
-  element: light
-  leader: HP +800 to all allies (bonus +600 on Ragnas)
-  auto: Deals 99 damage.
-  tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
-  slide: Deals 555 damage to 2 random enemies and additional 300 ignore def damage,
-    and +100 ally drive gauge to all allies.
-  drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
-    2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
-  index: 0
 astraeas:
   tier: A
   pic: "/images/astraea0.png"
@@ -105,24 +89,6 @@ astraeas:
     Hp per 2seconds) and Apply "Secret Healing" (Heals 1200 damages when attack and
     receives attacks) for 16seconds to 3 lowest HP allies.
   index: 4
-aurora:
-  tier: A
-  pic: "/images/aurora0.png"
-  pic2: "/images/aurora1.png"
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: fire
-  leader: "Deals 1548 damage to 2 random enemies and Apply \"Regeneration\" (Heal
-    300 Hp per 2seconds) and Apply \"Secret Healing\" (Heals 1200 damages when attack
-    and receives attacks) for 16seconds to 3 lowest HP allies\t\t\t\t\t\t\t\t\t\t"
-  auto: Deals 95 damage.
-  tap: Deals 330 damage to target and gives instant heal +30% for 20s to 5 Fire units.
-  slide: Heals 1776HP to 2 allies with lowest HP and 75% chance to remove all skill
-    damage reduction type debuffs to 2 debuffed allies.
-  drive: Gives 272HP Regeneration (Heal every 2seconds) for 18s to 3 allies with lowest
-    HP, and heals an additional 319HP if the target is affected.
-  index: 5
 brownie:
   tier: S
   pic: "/images/brownie0.png"
@@ -2053,25 +2019,6 @@ abaddon:
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2 turn to self.
   index: 1
-ashtoreth:
-  pic: "/images/ashtoreth0.png"
-  pic2: "/images/ashtoreth1.png"
-  pic3: ''
-  tier: B
-  stars: '5'
-  type: attacker
-  element: light
-  leader: Tap Skill Damage +5% to Light Allies
-  auto: Deals 113 damage
-  tap: Deals 505 damage to highest attack enemy. 65% chance to Apply "Direct Hit"
-    (Ignore "Invincibility") to self for 13 seconds
-  slide: Deals 830 damage to 3 highest attack enemies. Ignore 800 defense. ·Additional
-    800 damage IF target is "Confused" or have "Invincibility".
-  drive: Deals 2339 damage to 4 highest attack enemies. 70% chance to Apply "Confuse"
-    (Confused Targets will attack their own allies and heals the enemy) to target
-    for 10 seconds. 90% chance to Apply "Direct Hit" (Ignore "Invincibility") to self
-    for 18 seconds.
-  index: 6
 charlotte:
   pic: "/images/charlotte0.png"
   pic2: ''
@@ -2087,25 +2034,6 @@ charlotte:
     HP.\r\nIf a barrier is applied, deals 1800 additional damage."
   drive: Deals 2539 damage to 4 enemies with lowest HP.
   index: 12
-cleopatra:
-  pic: "/images/cleopatra0.png"
-  pic2: "/images/cleopatra1.png"
-  pic3: "/images/cleopatra1.png"
-  tier: S
-  stars: '5'
-  type: attacker
-  element: light
-  leader: Attack +10% to Light Allies
-  auto: Deals 113 damage.
-  tap: Deals 477 damage to target and Additional 100 damage IF target is Dark Type
-    and 55% chance to Apply "Concentration" (100% Critital Rate and Hit Rate) to self
-    for 13seconds.
-  slide: "Deals 927 damage and 800 ignore defense and Apply \"Curse\" (80 damages
-    per 2seconds and additional damage when \"Curse\" ends) for 8seconds to 2 lowest
-    HP enemies.\t"
-  drive: Deals 2327 damage to 4 lowest Hp enemies and Additional 500 damage IF target
-    is cursed.
-  index: 14
 mafdet:
   pic: "/images/mafdet0.png"
   pic2: "/images/mafdet1.png"
@@ -2264,25 +2192,6 @@ nevan (light):
   drive: Deal 4332 damage to 3 enemies & +40% ATK + "Silence Immunity" for 10 seconds
     to 2 Allies (Prioritizing highest ATK).
   index: 65
-bikini lisa:
-  pic: "/images/bikinilisa0.png"
-  pic2: "/images/bikinilisa1.png"
-  pic3: ''
-  tier: S
-  stars: '5'
-  type: buffer
-  element: water
-  leader: "+10% weak Point final damage for grass Types (Additional +10% on Raid Boss)"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
-    2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to Cancel "Water
-    Balloon" debuff.
-  slide: Deal 662 damage to target. Apply +25% Defense to 3 grass type allies with
-    highest attack power. +10% WeakPoint Skill Damage and a 70% chance to Cancel "Frozen"
-    debuff for 16 seconds.
-  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
-    attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
-  index: 45
 pallas:
   pic: "/images/pallas0.png"
   pic2: ''
@@ -2478,17 +2387,148 @@ sonnet:
     150 additional damage.
   drive: Deals 1389 damage to 3 random enemies.
   index: 122
-test:
-  pic: "/images/emptyunit0.png"
+aurora:
+  pic: "/images/aurora0.png"
+  pic2: "/images/aurora1.png"
+  pic3: ''
+  tier: A
+  stars: '5'
+  type: healer
+  element: fire
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Fire units.
+  auto: Deals 95 damage.
+  tap: Deals 330 damage to target and gives instant heal +30% for 20s to 5 Fire units.
+  slide: Heals 1776HP to 2 allies with lowest HP and 75% chance to remove all skill
+    damage reduction type debuffs to 2 debuffed allies.
+  drive: Gives 272HP Regeneration (Heal every 2seconds) for 18s to 3 allies with lowest
+    HP, and heals an additional 319HP if the target is affected by a damage type debuff.
+  index: 5
+magician ailill:
+  pic: "/images/magicianailill0.png"
   pic2: ''
   pic3: ''
+  tier: B
   stars: '5'
-  type: 'attacker'
-  element: water
-  tier: C S A
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  type: attacker
+  element: fire
+  leader: "+8% Slide skill damage for all Fire allies."
+  auto: Deal 113 auto attack damage.
+  tap: Deal 486 damage to target. For WorldBoss Only apply "Fire Prison" (additional
+    1500 damage in proportion to the number of Fire type allies, maximum 10 childs).
+  slide: Prioritizing Wood type enemies, deal 942 damage to 3 enemies plus 850 piercing
+    damage. If the enemy is Wood Type, add 600 additional damage.
+  drive: Deal 2386 damage to target.
+  index: 149
+party star medb:
+  pic: "/images/partystarmedb0.png"
+  pic2: "/images/partystarmedb1.png"
+  pic3: ''
+  tier: 8 8 5 6
+  stars: '5'
+  type: buffer
+  element: fire
+  leader: "+10% skill gauge increase for Fire type allies. (Increase WeakPoint damage
+    + 10% in WorldBoss)"
+  auto: deal 100 auto attack damage.
+  tap: Deal 382 damage to target, increase Skill Gauge for two Fire type Attacker
+    allies +15%.
+  slide: Deal 660 damage to target. Increase Skill Gauge +35% to 3 highest attack
+    power Fire type allies for 16 seconds and increase Slide skill damage +1100. For
+    WorldBoss Only, prioritizing highest attack power fire type allies, increase WeakPoint
+    damage +10%.
+  drive: Deal 1733 damage to 3 enemies randomly. Prioritizing the allies with the
+    least HP, heal 1525 up to 5 allies. For WorldBoss only, increase Normal skill
+    damage for the back row +1500 for 20seconds.
+  index: 150
+magician ohad:
+  pic: "/images/magicianohad0.png"
+  pic2: "/images/magicianohad1.png"
+  pic3: ''
+  tier: 6 6 6 6.5
+  stars: '5'
+  type: attacker
+  element: grass
+  leader: "+12% attack for Fire type allies."
+  auto: Deal 113 attack damage.
+  tap: Deal 482 damage to target. Apply "Lifesteal" on herself (Recovers 15% of the
+    HP on attack) for 20 seconds.
+  slide: 'Pyritizing Water Type enemies, deal 852 damage to 3 enemies. If the enemy
+    is Water Type, add 800 piercing damaging and apply "Stigma" to 2 enemies at random:
+    (Continuous damage every 2 seconds [Buffs target number +1] x50 continuous damage,
+    maximum 6 buffs [Final tick 7]) for 20 seconds.'
+  drive: Deal 2227 damage to 4 enemies randomly, if the enemy has "Stigma", deal 500
+    additional damage.
   index: 148
+cleopatra:
+  pic: "/images/cleopatra0.png"
+  pic2: "/images/cleopatra1.png"
+  pic3: "/images/cleopatra1.png"
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 9 7.5 8.5 8
+  leader: Attack +10% to Light Allies
+  auto: Deals 113 damage.
+  tap: Deals 477 damage to target and Additional 100 damage IF target is Dark Type
+    and 55% chance to Apply "Concentration" (100% Critital Rate and Hit Rate) to self
+    for 13seconds.
+  slide: "Deals 927 damage and 800 ignore defense and Apply \"Curse\" (80 damages
+    per 2seconds and additional damage when \"Curse\" ends) for 8seconds to 2 lowest
+    HP enemies.\t"
+  drive: Deals 2327 damage to 4 lowest Hp enemies and Additional 500 damage IF target
+    is cursed.
+  index: 14
+aria:
+  pic: "/images/aria0.png"
+  pic2: "/images/aria1.png"
+  pic3: "/images/aria1.png"
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 6 7 9
+  leader: HP +800 to all allies (bonus +600 on Ragnas)
+  auto: Deals 99 damage.
+  tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
+  slide: Deals 555 damage to 2 random enemies and additional 300 ignore def damage,
+    and +100 ally drive gauge to all allies.
+  drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
+    2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
+  index: 0
+ashtoreth:
+  pic: "/images/ashtoreth0.png"
+  pic2: "/images/ashtoreth1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 8 6 8 8
+  leader: Tap Skill Damage +5% to Light Allies
+  auto: Deals 113 damage
+  tap: Deals 505 damage to highest attack enemy. 65% chance to Apply "Direct Hit"
+    (Ignore "Invincibility") to self for 13 seconds
+  slide: Deals 830 damage to 3 highest attack enemies. Ignore 800 defense. ·Additional
+    800 damage IF target is "Confused" or have "Invincibility".
+  drive: Deals 2339 damage to 4 highest attack enemies. 70% chance to Apply "Confuse"
+    (Confused Targets will attack their own allies and heals the enemy) to target
+    for 10 seconds. 90% chance to Apply "Direct Hit" (Ignore "Invincibility") to self
+    for 18 seconds.
+  index: 6
+bikini lisa:
+  pic: "/images/bikinilisa0.png"
+  pic2: "/images/bikinilisa1.png"
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 6 5 7 9
+  leader: "+10% weak Point final damage for grass Types (Additional +10% on Raid Boss)"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
+    2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to Cancel "Water
+    Balloon" debuff.
+  slide: Deal 662 damage to target. Apply +25% Defense to 3 grass type allies with
+    highest attack power. +10% WeakPoint Skill Damage and a 70% chance to Cancel "Frozen"
+    debuff for 16 seconds.
+  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
+    attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
+  index: 45

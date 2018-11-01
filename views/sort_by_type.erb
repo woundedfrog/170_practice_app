@@ -2,17 +2,16 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
 
-<% @sort_catagory[1].each do |catagory| %>
+<% @sort_catagory_arr[1].each do |catagory_value| %>
   <div class="container">
-    <% type = @sort_catagory[0] %>
-    <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory.capitalize %></h5>
+    <% type = @sort_catagory_arr[0] %>
+    <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory_value.capitalize %></h5>
   </div>
 <div class="container">
     <div class="row justify-content-center">
 
-
     <% @units.each do |unit, unit_details| %>
-    <% next unless unit_details[type] == catagory %>
+    <% next unless unit_details[type] == catagory_value %>
     <% rating = unit_details["stars"] + "stars" %>
           <div class="col-* unit-grid-cols">
             <% if session[:username] %>
@@ -21,7 +20,6 @@
               <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
             </div>
             <% end %>
-
               <a href="/childs/<%= rating %>/<%= unit %>">
                 <img src="<%= unit_details['pic'] %>"/>
                 </a>

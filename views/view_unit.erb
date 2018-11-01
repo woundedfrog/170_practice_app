@@ -19,14 +19,16 @@
         <% @current_unit.each do |info_key, info_val| %>
         <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
         <div class="profile-stat-container col-*">
-          <h5 class="card-title"><%= info_key.capitalize %>:</h5>
           <% if ["stars"].include?(info_key) %>
+            <h5 class="card-title"><%= info_key.capitalize %>:</h5>
             <%== format_stat(info_key, info_val) %>
           <% elsif info_key == "tier" %>
-          <% info_val.split(" ").each do |tier| %>
-            <%== format_stat(info_key, tier) %>
-          <% end %>
+            <h5 class="card-title"><%= info_key.capitalize %> (PVE/PVP/Ragna/WB):</h5>
+            <p class="short-stat-content tier-div">
+              <%== format_stat(info_key, info_val).split(" ").join(" / ") %>
+            </p>
           <% else %>
+            <h5 class="card-title"><%= info_key.capitalize %>:</h5>
             <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p>
           <% end %>
         </div>
