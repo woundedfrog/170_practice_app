@@ -1,13 +1,13 @@
-ENV["RACK_ENV"] = "test"
+ENV["RACK_ENV"] = 'test'
 
 # require "fileutils"
-require "minitest/autorun"
+require 'minitest/autorun'
 require 'minitest/reporters'
-require "rack/test"
+require 'rack/test'
 require 'yaml'
 Minitest::Reporters.use!
 
-require_relative "../ricemine"
+require_relative '../ricemine'
 
 class RiceMineTest < Minitest::Test
   include Rack::Test::Methods

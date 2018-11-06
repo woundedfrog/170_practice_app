@@ -46,8 +46,9 @@ helpers do
       if type == 'tier'
         hash.each do |k, v|
           if k == type
-            tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil.to_s
+            tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
             keys << tier_average
+            keys.sort!
           end
         end
       else
@@ -55,7 +56,7 @@ helpers do
       end
     end
 
-    [type, keys.uniq.sort.reverse]
+    [type, keys.uniq.sort.map!(&:to_s).reverse]
   end
 
   def upcase_name(name)
@@ -227,6 +228,10 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
 
   directory.gsub!('public', '')
   pname.include?(directory) ? pname : "#{directory}/" + pname
+end
+
+not_found do
+  redirect '/'
 end
 
 get '/users/signin' do
