@@ -269,6 +269,7 @@ end
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
+  # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
   if filename.include?('soul')
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
   elsif filename.include?('unit')

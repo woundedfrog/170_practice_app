@@ -411,3 +411,55 @@ nyotengu:
     lvl0  / [lvl40 +4 number] at lvl40 +4."
   passive: "Restriction: Light. \r\n \r\nIncrease Curse damage by +75."
   index: 51
+ganryu davi:
+  pic: "/images/sc/ganryudavi.jpg"
+  stars: '5'
+  stats: "Attack: 550 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nDefense: 590 at
+    lvl0 / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: None. \r\nAdd 9% of your final defense to your final attack
+    power."
+  index: 60
+halloween diva:
+  pic: "/images/sc/halloweendiva.jpg"
+  stars: '5'
+  stats: "Defense: 550 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nAgility: 310
+    at lvl0  / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: none.\r\n\r\nIncrease Final HP +1500."
+  index: 58
+under the rose:
+  pic: "/images/sc/undertherose.jpg"
+  stars: '5'
+  stats: "Defense: 590 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nAgility: 320
+    at lvl0  / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\nIncrease \"Dancing Blade\" debuff damage in
+    Devil Rumble +170."
+  index: 59
+show time!:
+  pic: "/images/sc/showtime.jpg"
+  stars: '5'
+  stats: "HP: 1080 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nCritical: 300 at
+    lvl0  / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: Fire. \r\nIncrease 15% chance to debuff in WorldBoss."
+  index: 57
+queen of the night:
+  pic: "/images/sc/queenofnight.jpg"
+  stars: '5'
+  stats: "HP: 1020 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nCritical: 270 at
+    lvl0  / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\nIncrease Final Attack +500."
+  index: 61
+inspiration:
+  pic: "/images/sc/inspiration.jpg"
+  stars: '5'
+  stats: "Attack: 590 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nCritical: 310
+    at lvl0  / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: Dark. \r\n\r\nIgnore Damage +350 added to normal skill in
+    Raid Boss."
+  index: 62
+starry stage:
+  pic: "/images/sc/starrystage.jpg"
+  stars: '5'
+  stats: "HP: 1090 at lvl0 / ~ at lvl50 / ~ at lvl50 +5. \r\n\r\nAgility: 330 at lvl0
+    \ / ~ at lvl50 / ~ at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\nIncrease Instant Heal received +800."
+  index: 63

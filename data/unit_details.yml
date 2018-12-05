@@ -1472,22 +1472,6 @@ daphne:
   drive: Gives 1000 HP instant heal to 3 allies with lowest HP, additional 240 HP
     instant heal if Fire type.
   index: 121
-elysiun:
-  pic: "/images/4elysium0.png"
-  pic2: ''
-  pic3: ''
-  tier: S
-  stars: '4'
-  type: attacker
-  element: water
-  leader: Tap damage +80 to Water units.
-  auto: Deals 80 damage.
-  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
-    type.
-  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
-    attacks) for 3 turns to 3 enemies with lowest HP.
-  drive: Deals 1422 damage to 3 enemies with lowest HP.
-  index: 123
 danu:
   pic: "/images/4danu0.png"
   pic2: ''
@@ -2532,3 +2516,132 @@ sitri:
     lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
     Allies (Prioritizing back row).
   index: 29
+lady bathory:
+  pic: "/images/bathory0.png"
+  pic2: "/images/bathory1.png"
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 7 6 6 7
+  leader: Final drive skill damage for all enemies -25% (Additional, deduce DoT debuff
+    damage -50% in Devil Rumble).
+  auto: Deal 102 auto attack damage.
+  tap: Prioritizing enemies with many buffs, deal 399 damage to target, reduce debuff
+    evasion of enemy -10% for 20 seconds and reduce defense power -10% for 8 seconds.
+  slide: Prioritizing enemies with the least HP, deal 702 damage to do 2 enemies,
+    apply "Dancing blade" (Reduce defense power -20% and apply 200 DoT every 2 seconds)
+    for 14 seconds and reduce Defense power -700.
+  drive: Prioritizing enemies with many buffs, deal 2089 to 3 enemies and apply "Stigma"
+    (Continuous damage every 4 seconds [Buffs target number +1] x 250 continuous damage,
+    maximum 6 buffs [Final tick 7]) for 20 seconds.
+  index: 151
+mysterious saturn:
+  pic: "/images/mysterioussaturn0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 7 7 10
+  leader: "+10% increase WeakPoint skill damage for dark type allies (Additional +10%
+    in Raid Boss)."
+  auto: Deal 113 auto attack damage.
+  tap: Deal 481 to target and if the target is a Light type, deal 250 additional damage.
+  slide: Prioritizing supporter enemies, deal 958 damage to 3 enemies, gives 800 defense
+    ignore damage, and if the target is a Light type, deal 600 additional damage.
+  drive: Deal 2598 damage to 4 enemies and increase self WeakPoint skill damage +50%
+    for 20 seconds.
+  index: 153
+elysium:
+  pic: "/images/4elysium0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: water
+  tier: S
+  leader: Tap damage +80 to Water units.
+  auto: Deals 80 damage.
+  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
+    type.
+  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
+    attacks) for 3 turns to 3 enemies with lowest HP.
+  drive: Deals 1422 damage to 3 enemies with lowest HP.
+  index: 123
+neptune:
+  pic: "/images/hardworkerneptune0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 7 7 7 10
+  leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
+    Increase instant heal +10%)."
+  auto: Deal 101 auto attack damage.
+  tap: "Deal 387 damage to target. \r\nPrioritizing allies with least HP remaining,
+    Heal +30% of HP to 2 allies for 20 seconds. \r\nFor Raid Boss only, delete target
+    stacking buff (Attack/ defense power) 5 times ONLY."
+  slide: "Deal 676 damage to target. \r\nPrioritizing allies with least HP remaining,
+    increase skill gauge speed +30% and heal 1251 HP for 16 seconds. \r\nFor Raid
+    Boss only, prioritizing an ally with the most attack power, get a 30% chance to
+    apply \"Double-Edge Sword\" (Increase attack power and reduce defense) for 16
+    seconds.\r\n"
+  drive: "Deal 1816 damage to 3 enemies randomly. \r\nApply \"Life Bind\" up to 5
+    allies (Convert 50% of the damage received into healing, the rest of the HP buff
+    is spread to 2 allies with the least HP) for 20 seconds. "
+  index: 154
+pretty mars:
+  pic: "/images/prettymars0.png"
+  pic2: "/images/prettymars1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 7 7 7
+  leader: "+15% increase attack power for dark type allies."
+  auto: Deal 113 auto attack damage.
+  tap: "Deal 485 damage to target. \r\nIncrease own critical chance to +45% for 12
+    seconds."
+  slide: 'Prioritizing Light type enemies, deal 904 damage to target, gives 470 Defense
+    Ignore damage 3 times, and if the target is a light type, deal 400 additional
+    damage. '
+  drive: Prioritizing enemies with the least HP remaining, deal 2485 damage to 4 enemies.
+  index: 155
+innocent venus:
+  pic: "/images/innocentvenus0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: light
+  tier: 9 9 9 9
+  leader: Increase HP recovery of all allies (instant or HoT) +10%.
+  auto: Deal 96 auto attack damage.
+  tap: Prioritizing allies with the lowest HP remaining, heal 314 to 2 allies.
+  slide: "For 8 seconds to 4 allies except herself, apply \"Immortal\" (HP cannot
+    drop below 1 when being attacked). \r\nPrioritizing allies with least HP, HoT
+    231 (once every 2 seconds) to 2 allies for 12 seconds. "
+  drive: "Deal 1597 damage to 4 enemies randomly. \r\nPrioritizing allies with least
+    HP remaining, apply \"Debuff Clear\" to 3 allies (Cancels after 14 seconds or
+    2 debuff attacks) and heals 1691 HP."
+  index: 156
+exchange student eve:
+  pic: "/images/studenteve0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 7 7 7 7
+  leader: "-15% debuff evasion for grass enemies."
+  auto: Deal 102 auto attack damage.
+  tap: Prioritizing enemies with "Endure" buff, deal 394 to 2 enemies and a 75% chance
+    to cancel(remove) "Endure" buff.
+  slide: 'Prioritizing debuffer enemies, deal 674 to 2 enemies, a 60% chance to apply
+    "Stun" (Adds 1 second to max 5 second when attack in a stunning state) for 4 seconds,
+    -800 Agility for 12 seconds. '
+  drive: Deal 2029 to 3 enemies randomly. For 2 turns, add +2 seconds on enemy slide
+    skill cooldown, and reduce enemy drive gauge -12%.
+  index: 152
