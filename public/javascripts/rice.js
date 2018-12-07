@@ -1,12 +1,23 @@
 $( document ).ready(function() {
   jQuery.fn.highlight = function ( className) {
+
     return this.each(function () {
         this.innerHTML = this.innerHTML.replace(/-?[\d+()\+\%]/g, function(matched) {return "<span class=\"" + className + "\">" + matched + "</span>";});
-    });
+      });
+
 };
 
-$("p").highlight("highlight");
+$('p').each(function() {
+  // checks if a <p> element has img imbedded.
+  // if it does, then it skips the HIGHLIGHTING, else it highlights
+  var name = $(this).children("img").length == 0;  // checks if the img element returns 0 or not
 
+  if (name) {
+    $(this).highlight("highlight");
+  } else  {
+      return;
+    }
+});
 
   $("#search").keyup(function(){
     var current_query = $("#search").val().toLowerCase();

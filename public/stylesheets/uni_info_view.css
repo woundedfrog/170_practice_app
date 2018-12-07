@@ -167,6 +167,12 @@ span {
 width: 100%;
 }
 
+img[alt$="-fullwidth"]{
+  width: auto;
+	max-width: 100%;
+  display: block;
+}
+
 /* .stat-line-filler {
 	padding: 0px;
 } */

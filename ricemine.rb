@@ -45,11 +45,11 @@ helpers do
     criteria.values.each do |hash|
       if type == 'tier'
         hash.each do |k, v|
-          if k == type
-            tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
-            keys << tier_average
-            keys.sort!
-          end
+          next if k != type
+
+          tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
+          keys << tier_average
+          keys.sort!
         end
       else
         hash.each { |k, v| keys << v if k == type }
@@ -230,6 +230,20 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
   pname.include?(directory) ? pname : "#{directory}/" + pname
 end
 
+# ##################
+
+def render_markdown(file)
+  markdown = Redcarpet::Markdown.new(Redcarpet::Render::HTML)
+  markdown.render(file)
+end
+
+def load_file_content(filename)
+  content = File.read(filename)
+  render_markdown(content)
+end
+
+# ##################
+
 not_found do
   redirect '/'
 end
@@ -261,9 +275,17 @@ get '/search/' do
 end
 
 get '/' do
+  note = File.expand_path('data/maininfo.yml', __dir__)
+  @message_note = YAML.load_file(note)
   @units = load_unit_details.to_a.last(3).to_h
   @soulcards = load_soulcards_details.to_a.last(3).to_h
   erb :home
+end
+
+get '/basics' do
+  path = File.expand_path('data/basics.md', __dir__)
+  @markdown = load_file_content(path)
+  erb :starterguide
 end
 
 get '/download/:filename' do |filename|
@@ -272,7 +294,7 @@ get '/download/:filename' do |filename|
   # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
   if filename.include?('soul')
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('unit')
+  elsif filename.include?('unit') || filename.include?('maininfo') || filename.include?('basics.md')
     send_file "./data/#{filename}", filename: fname, type: ftype
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
@@ -306,6 +328,7 @@ end
 
 get '/childs/:star_rating/:unit_name/edit' do
   require_user_signin
+  @unit_name = params[:unit_name]
   @current_unit = load_unit_details[params[:unit_name]]
   erb :edit_unit
 end
@@ -318,6 +341,7 @@ end
 
 get '/equips/:star_rating/:sc_name/edit' do
   require_user_signin
+  @card_name = params['sc_name']
   @current_card = load_soulcards_details[params[:sc_name]]
   # name = params[:sc_name]
   erb :edit_sc
@@ -327,7 +351,9 @@ get '/childs/:star_rating/sort_by/:type' do
   star_rating = params[:star_rating]
   type = params[:type]
   unit_info = load_unit_details
-
+  note = File.expand_path('data/maininfo.yml', __dir__)
+  @message_note = YAML.load_file(note)
+  @type = type
   if %w[3 4 5].any? { |star| star_rating.include?(star) }
     @sort_catagory_arr = sort_info_by_given_type(unit_info, type)
     @units = sort_by_given_info(unit_info, star_rating, @sort_catagory_arr[1], type)
@@ -496,6 +522,11 @@ post '/new_unit' do
   data[name]['tap'] = params[:tap]
   data[name]['slide'] = params[:slide]
   data[name]['drive'] = params[:drive]
+  data[name]['notes'] = if params[:notes] != ''
+                          params[:notes]
+                        else
+                          ''
+                        end
   data[name]['index'] = index
 
   File.write('data/unit_details.yml', YAML.dump(data))
@@ -550,10 +581,14 @@ post '/upload' do
                 file_path[0]
               elsif name.include?('jpg')
                 file_path[1]
-              elsif name == 'unit_details.yml'
+              elsif ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
                 'data/'
-              else
+              elsif name == 'soul_cards.yml'
                 'data/sc/'
+              else
+
+                session[:message] = 'Filename must match original filename'
+                redirect '/upload'
               end
 
   path = File.join(directory, name)

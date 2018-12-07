@@ -3,6 +3,9 @@
   <div  class="special-links">
     <% stars = @current_unit["stars"] %>
     <a href="/childs/<%= stars %>stars">Go back</a>
+  <% if session[:username] %>
+      <a href="/childs/<%= stars %>stars/<%= @unit_name.downcase %>/edit">  | Edit</a>
+    <% end %>
   </div>
 
   <h3><%= upcase_name(@unit_name) %></h3>
