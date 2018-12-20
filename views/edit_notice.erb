@@ -1,0 +1,8 @@
+<form action="/update/<%= @name %>" method="post">
+  <label for="content"><h3>Edit content of '<%= @name %>':</h3></label>
+  <div>
+    <textarea name="content" id="content" rows="20" cols="80"><%= @content %></textarea>
+  </div>
+
+  <button type="submit">Save Changes</button>
+</form>

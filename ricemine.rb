@@ -288,6 +288,15 @@ get '/basics' do
   erb :starterguide
 end
 
+get "/:filename/edit" do
+  file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
+  @name = params[:filename]
+  @content = YAML.dump(YAML.load_file(file))
+
+  erb :edit_notice
+end
+
+
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
@@ -595,4 +604,22 @@ post '/upload' do
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
   erb :upload
+end
+
+post '/update/:filename' do
+  name = params[:filename] + ".yml"
+  content = params[:content]
+  directory = if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
+                session[:message] = "#{name} was updated"
+                'data/'
+              else
+
+                session[:message] = 'Filename must match original filename'
+                redirect '/upload'
+              end
+
+  path = File.join(directory, name)
+  File.open(path, 'wb') { |f| f.write(content) }
+  session[:message] = 'file uploaded!'
+  redirect "/"
 end

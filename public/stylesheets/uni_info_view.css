@@ -31,9 +31,12 @@ h1,h2,h3,h4,h5,h6 {
 	padding: 5px;
 	padding-bottom: 0px;
 	color: #ffd584;
+	/* color: #5abdf2; */
+	text-shadow: 1px 1px 2px #996600;
 }
 
 h1,h3,h4 {
+  font-size: 2em;
 	text-align: center;
 	font-weight: 600;
 	margin-bottom: 20px;
@@ -42,6 +45,10 @@ h1,h3,h4 {
 #header-title a {
 	color: #edece8;
 	font-weight: 600;
+}
+
+.offsite-link {
+		background-color: rgb(102, 23, 05, 0.5)
 }
 
 ul {
@@ -57,7 +64,8 @@ p {
 }
 
 span {
-	color: #ffd123;
+	color: #ffc766;
+	text-shadow: 1px 1px 3px #996600;
 }
 
 .unit-grid-cols {
@@ -93,6 +101,11 @@ span {
 .container {
 	margin-top: 10px;
 	margin-bottom: 10px;
+}
+
+.notice-board {
+	text-align: left;
+	width: 100%;
 }
 
 .index-stat-pic-container {
@@ -224,6 +237,9 @@ textarea {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
+		h1 {
+		font-size: 3em;
+	}
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -232,6 +248,10 @@ textarea {
 		width: 70%;
 		margin: auto;
 		margin-top: 20px;
+	}
+
+	.notice-board {
+		width: 30%;
 	}
 
 	/* ////SC PROFILES view//// */

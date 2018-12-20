@@ -4,6 +4,9 @@
 
 <div class="container">
   <h4>Notice</h4>
+  <% if session[:username] %>
+    <a href="/maininfo/edit">Edit Main Notice</a>
+  <% end %>
   <h6><%== @message_note['home']['main'] %></h6>
   <p><%== @message_note['home']['sub'] %></p>
   <p><%== @message_note['home']['sub2'] %></p>
