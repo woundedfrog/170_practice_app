@@ -1,2 +1,3 @@
-This is a basic version of a game unit index.
-Version: .01
+This is a game unit index.
+Version: 1.8
+deschav2 merged
