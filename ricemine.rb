@@ -446,7 +446,7 @@ post '/equips/new_sc' do
   pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
 
   if card_data.include?(name) && index != card_data[name]['index']
-    session[:message] = 'A unit by that name already exists. Please create a different card.'
+    session[:message] = 'A card by that name already exists. Please create a different card.'
     status 422
 
     if params['edited']
