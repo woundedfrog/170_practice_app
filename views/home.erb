@@ -2,15 +2,12 @@
   <p class="message"><%= session.delete(:message) %></p>
 <% end %>
 
-<div class="container">
+<div class="container notice-board">
   <h4>Notice</h4>
-  <% if session[:username] %>
-    <a href="/maininfo/edit">Edit Main Notice</a>
-  <% end %>
   <h6><%== @message_note['home']['main'] %></h6>
   <p><%== @message_note['home']['sub'] %></p>
   <p><%== @message_note['home']['sub2'] %></p>
-</div>
+  </div>
 <div class="container">
 <h4>Recent Child Updates</h4>
     <div class="row justify-content-center">
@@ -39,7 +36,7 @@
 </div>
 
 
-<div class="container">
+<!-- <div class="container">
 <h4>Recent Soul-Card Updates</h4>
     <div class="row justify-content-center">
       <% @soulcards.each do |card, card_details| %>
@@ -59,4 +56,4 @@
       </div>
   <% end %>
   </div>
-</div>
+</div> -->

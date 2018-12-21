@@ -2,18 +2,18 @@
 basic styles
 ===================== */
 body {
-	background-color: #5e5e5e;
+	background-color: #474545;
 	min-width: 100%;
 	color: #eae9e5;
 }
 
 header {
-	background-color: #444444;
+	background-color: #363333;
 }
 
 .nav-link {
 	padding: 5px;
-	background-color: rgb(142, 113, 55, 0.5);
+	background-color: rgb(73, 156, 131, 0.5);
 	margin-bottom: 1px;
 	color: white;
 }
@@ -30,9 +30,9 @@ a, a:hover, .dropdown-item {
 h1,h2,h3,h4,h5,h6 {
 	padding: 5px;
 	padding-bottom: 0px;
-	color: #ffd584;
-	/* color: #5abdf2; */
-	text-shadow: 1px 1px 2px #996600;
+	/* color: #ffd584; */
+	color: #ffffff;
+	text-shadow: 1px 1px 2px darkblue;
 }
 
 h1,h3,h4 {
@@ -43,12 +43,12 @@ h1,h3,h4 {
 }
 
 #header-title a {
-	color: #edece8;
+	color: #e6c640;
 	font-weight: 600;
 }
 
 .offsite-link {
-		background-color: rgb(102, 23, 05, 0.5)
+		background-color: rgb(36, 77, 65, 0.5)
 }
 
 ul {
@@ -64,8 +64,8 @@ p {
 }
 
 span {
-	color: #ffc766;
-	text-shadow: 1px 1px 3px #996600;
+color: #ffffff;
+	text-shadow: 1px 1px 2px darkblue;
 }
 
 .unit-grid-cols {
@@ -237,8 +237,8 @@ textarea {
 
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
-		h1 {
-		font-size: 3em;
+	h1 {
+	  font-size: 3em;
 	}
 }
 
@@ -274,6 +274,8 @@ textarea {
 	.profile-row-container {
 		margin-left: auto;
 	}
+
+
 }
 
 /* // Large devices (desktops, 992px and up) */

@@ -277,7 +277,7 @@ end
 get '/' do
   note = File.expand_path('data/maininfo.yml', __dir__)
   @message_note = YAML.load_file(note)
-  @units = load_unit_details.to_a.last(3).to_h
+  @units = load_unit_details.to_a.last(5).to_h
   @soulcards = load_soulcards_details.to_a.last(3).to_h
   erb :home
 end
@@ -287,15 +287,6 @@ get '/basics' do
   @markdown = load_file_content(path)
   erb :starterguide
 end
-
-get "/:filename/edit" do
-  file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
-  @name = params[:filename]
-  @content = YAML.dump(YAML.load_file(file))
-
-  erb :edit_notice
-end
-
 
 get '/download/:filename' do |filename|
   fname = filename
@@ -446,7 +437,7 @@ post '/equips/new_sc' do
   pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
 
   if card_data.include?(name) && index != card_data[name]['index']
-    session[:message] = 'A card by that name already exists. Please create a different card.'
+    session[:message] = 'A unit by that name already exists. Please create a different card.'
     status 422
 
     if params['edited']
@@ -604,22 +595,4 @@ post '/upload' do
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
   erb :upload
-end
-
-post '/update/:filename' do
-  name = params[:filename] + ".yml"
-  content = params[:content]
-  directory = if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
-                session[:message] = "#{name} was updated"
-                'data/'
-              else
-
-                session[:message] = 'Filename must match original filename'
-                redirect '/upload'
-              end
-
-  path = File.join(directory, name)
-  File.open(path, 'wb') { |f| f.write(content) }
-  session[:message] = 'file uploaded!'
-  redirect "/"
 end
