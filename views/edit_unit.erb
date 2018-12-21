@@ -20,7 +20,7 @@
 
         <% elsif special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
-        <% elsif key == "index" %>
+        <% elsif key == "index" || key == 'date' %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>

@@ -242,6 +242,15 @@ def load_file_content(filename)
   render_markdown(content)
 end
 
+def check_and_fetch_date(data, name)
+  if data.key?(name)
+    if data[name].key?('date')
+      return data[name]['date']
+    end
+  end
+  ''
+end
+
 # ##################
 
 not_found do
@@ -481,6 +490,7 @@ post '/new_unit' do
   data = load_unit_details
   name = params[:unit_name].downcase
   index = params[:index].to_i
+  date = check_and_fetch_date(data, name)
 
   original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
@@ -536,6 +546,11 @@ post '/new_unit' do
                         else
                           ''
                         end
+  data[name]['date'] = if date == ''
+                          Time.new.to_s
+                       else
+                          date
+                       end
   data[name]['index'] = index
 
   File.write('data/unit_details.yml', YAML.dump(data))

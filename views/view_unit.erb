@@ -45,17 +45,18 @@
     <% unless special_key?(info_key) || info_key == "index" %>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
-      <ul>
-        <% info_val.split(". ").each do |line| %>
-
-        <% if line[-1] != '.' %>
-        <p><strong>·</strong> <%= line + "." %></p>
+        <% if info_key == 'date' %>
+          <p>Date added(Tokyo): <%= info_val %></p>
         <% else %>
-        <p><strong>·</strong> <%= line %></p>
-        <% end %>
 
-        <% end %>
-      </ul>
+          <% info_val.split(". ").each do |line| %>
+            <% if line[-1] != '.' %>
+            <p><strong>·</strong> <%= line + "." %></p>
+            <% else %>
+            <p><strong>·</strong> <%= line %></p>
+            <% end %>
+          <% end %>
+      <% end %>
     </div>
     <% end %>
 

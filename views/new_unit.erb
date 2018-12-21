@@ -8,6 +8,7 @@
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
       </dd>
       <% @new_unit_info.each do |key, value| %>
+        <% next if key == 'date' %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
