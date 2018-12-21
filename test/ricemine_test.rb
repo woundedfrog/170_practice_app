@@ -23,11 +23,11 @@ class RiceMineTest < Minitest::Test
     FileUtils.mkdir_p("../test/public/images/")
     FileUtils.mkdir_p("../test/public/images/sc/")
 
-    new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "index" => 0}}
+    new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 0}}
 
-    units = {"cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "index" => 0},
-    "dana" => {"pic" => "dana0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "index" => 1},
-    "maat" => {"pic" => "maat0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "healer", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "index" => 2}}
+    units = {"cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 0},
+    "dana" => {"pic" => "dana0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 1},
+    "maat" => {"pic" => "maat0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "healer", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 2}}
 
     new_sc = {"new_sc" => { "pic" => "", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
 

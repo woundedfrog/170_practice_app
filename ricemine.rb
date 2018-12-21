@@ -230,6 +230,15 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
   pname.include?(directory) ? pname : "#{directory}/" + pname
 end
 
+def check_and_fetch_date(data, name)
+  if data.key?(name)
+    if data[name].key?('date')
+      return data[name]['date']
+    end
+  end
+  ''
+end
+
 # ##################
 
 def render_markdown(file)
@@ -286,6 +295,14 @@ get '/basics' do
   path = File.expand_path('data/basics.md', __dir__)
   @markdown = load_file_content(path)
   erb :starterguide
+end
+
+get "/:filename/edit" do
+  file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
+  @name = params[:filename]
+  @content = YAML.dump(YAML.load_file(file))
+
+  erb :edit_notice
 end
 
 get '/download/:filename' do |filename|
@@ -431,6 +448,7 @@ post '/equips/new_sc' do
   data = load_soulcards_details
   name = params[:sc_name].downcase
   index = params[:index].to_i
+  date = check_and_fetch_date(data, name)
 
   original_card = card_data.select { |unit, info| unit if index == info['index'].to_i }
 
@@ -472,6 +490,7 @@ post '/new_unit' do
   data = load_unit_details
   name = params[:unit_name].downcase
   index = params[:index].to_i
+  date = check_and_fetch_date(data, name)
 
   original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
 
@@ -527,6 +546,11 @@ post '/new_unit' do
                         else
                           ''
                         end
+  data[name]['date'] = if date == ''
+                          Time.new.to_s
+                       else
+                          date
+                       end
   data[name]['index'] = index
 
   File.write('data/unit_details.yml', YAML.dump(data))
@@ -595,4 +619,22 @@ post '/upload' do
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
   erb :upload
+end
+
+post '/update/:filename' do
+  name = params[:filename] + ".yml"
+  content = params[:content]
+  directory = if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
+                session[:message] = "#{name} was updated"
+                'data/'
+              else
+
+                session[:message] = 'Filename must match original filename'
+                redirect '/upload'
+              end
+
+  path = File.join(directory, name)
+  File.open(path, 'wb') { |f| f.write(content) }
+  session[:message] = 'file uploaded!'
+  redirect "/"
 end

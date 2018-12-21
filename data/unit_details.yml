@@ -17,6 +17,7 @@ horus:
     for 14seconds and if they are inflicted with "Bleed", "Poison", "Curse" within
     6seconds debuff duration is increased by +50% to 3random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 32
 khepri:
   pic: "/images/khepri0.png"
@@ -36,6 +37,7 @@ khepri:
     enemies (Confused Targets will attack their own allies and heals the enemy) for
     6seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 34
 lan fei:
   pic: "/images/lanfei0.png"
@@ -53,6 +55,7 @@ lan fei:
   drive: Deals 2012 damage to 3 enemies with the highest Defense, removes one buff
     and enemy drive gauge -10%.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 36
 astraeas:
   pic: "/images/astraea0.png"
@@ -73,6 +76,7 @@ astraeas:
     Hp per 2seconds) and Apply "Secret Healing" (Heals 1200 damages when attack and
     receives attacks) for 16seconds to 3 lowest HP allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 4
 brownie:
   pic: "/images/brownie0.png"
@@ -92,6 +96,7 @@ brownie:
     by 1sec to a max of 5secs) and gives "LifeSteal" (25% of damage dealt restores
     HP) to 3 lowest HP allies. Buff is Stackable.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 8
 buster lisa:
   pic: "/images/busterliza0.png"
@@ -111,6 +116,7 @@ buster lisa:
   drive: Deals 2496 damages and Apply "Outbreak" (remove first applied debuff and
     damage target according to debuff duration) to 4 Lowest HP enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 9
 calypso:
   pic: "/images/calypso0.png"
@@ -129,6 +135,7 @@ calypso:
     to 10times).
   drive: Deals 2589 damage to 3 lowest HP enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 10
 chun-li:
   pic: "/images/chunli0.png"
@@ -145,6 +152,7 @@ chun-li:
     stunned enemies) and +100 ignore defense if target is stunned.
   drive: Deals 2130 Damages to all enmies and +500 additional damages to stunned enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 13
 pantheon:
   pic: "/images/pantheon0.png"
@@ -162,6 +170,7 @@ pantheon:
   drive: Deals 1705 damage to 2 random enemies, critical damage +50% and critical
     rate +70% for 22s to 2 allies with highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 37
 nirrti:
   pic: "/images/nirrti0.png"
@@ -179,6 +188,7 @@ nirrti:
   drive: Deals 2017 damage, removes one buff and enemy drive gauge -10% to 3 enemies
     with the highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 28
 maat:
   pic: "/images/maat0.png"
@@ -195,6 +205,7 @@ maat:
   drive: Revives 1 dead ally to 1000HP and gives 300HP Regeneration (Heal every 2seconds)
     for 16s to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 33
 hestia:
   pic: "/images/hestia0.png"
@@ -212,6 +223,7 @@ hestia:
     with lowest HP with 120 additional damage if debuff type.
   drive: Deals 2317 damage to all enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 27
 hermes:
   pic: "/images/hermes0.png"
@@ -230,6 +242,7 @@ hermes:
   drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
     attack +300 for 25s to 3 allies with highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 26
 hera:
   pic: "/images/hera0.png"
@@ -249,6 +262,7 @@ hera:
   drive: Deals 1419 damage to 2 random enemies and gives "Lifesteal" (20% of damage
     dealt restores HP (Doubled if grass allies)) to all allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 25
 hades:
   pic: "/images/hades0.png"
@@ -268,6 +282,7 @@ hades:
     to 3 units with lowest HP, including self (if own HP is the lowest, barrier will
     only be applied to 2 targets).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 24
 frey:
   pic: "/images/frey0.png"
@@ -285,6 +300,7 @@ frey:
   drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
     enemy according to debuff) to all enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 22
 eshu:
   pic: "/images/eshu0.png"
@@ -304,6 +320,7 @@ eshu:
   drive: Deals 1436 Damage to 2 random enemies, Gives Reflect (24% damaged returned
     to enemy) for 16seconds or 2hits to 9allies prioritizing the front row.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 20
 epona:
   pic: "/images/epona0.png"
@@ -322,6 +339,7 @@ epona:
   drive: Deals 1703 damage to 2 random enemies and Defense +35% and +2000HP barrier
     for 25s to 3 allies with lowest HP
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 19
 dinashi:
   pic: "/images/dinashi0.png"
@@ -339,6 +357,7 @@ dinashi:
   drive: Deals 1474 damage to 2 random enemies and drive Skill defense +30% for 15s
     to 5 allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 17
 bari:
   pic: "/images/bari0.png"
@@ -359,6 +378,7 @@ bari:
   drive: Deal 2212 damage to 4 random enemies and apply Debuff Explosion (remove 1
     debuff and deal damage depending on the debuff type) if the target is debuffed.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 39
 willow:
   pic: "/images/yanagi0.png"
@@ -378,6 +398,7 @@ willow:
   drive: Heal 1224 HP to all allies and 90% chance to apply "Detoxification" (Cleanse
     poison and heal 1 tick worth of poison damage) to 3 poisoned allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 40
 isolde:
   pic: "/images/isolde0.png"
@@ -398,6 +419,7 @@ isolde:
     to Apply "Freeze" (Skill Charge Speed, Drive Gauge Decrease and Bleeding debuff
     damage increase) for 16 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 46
 love Sitri:
   pic: "/images/lovesitri0.png"
@@ -418,13 +440,14 @@ love Sitri:
     charge amount -33% for 16 seconds and a 80% chance of \"Stun\" (increase\r\nduration
     of Stun by 1 second to max 5 seconds for each attack) for 4 seconds."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 48
 brigid:
-  tier: B
+  tier: 7 7 7 7
   pic: "/images/brigid0.png"
   pic2: ''
   pic3: ''
-  stars: ''
+  stars: 5
   type: tank
   element: fire
   leader: "+10% defense for fire allies (additional +10% on Underground)"
@@ -443,6 +466,7 @@ brigid:
     attack +200, attack increases in proportion to HP loss [36% increase in attack
     per 2% decrease in HP, maximum increase to 720%]).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 49
 kouka:
   pic: "/images/kouka0.png"
@@ -462,12 +486,13 @@ kouka:
     (increase critical damage up to 30% and increase Slide skill damage by the amount
     of buffs you have) for 20 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 50
 orora:
   pic: "/images/4orora0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: light
@@ -479,12 +504,13 @@ orora:
     7% of damage received) for 15s, priority to Dark enemies.
   drive: Deals 1417 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 51
 calchas:
   pic: "/images/4calchas0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
@@ -495,12 +521,13 @@ calchas:
   drive: Deals 1406 damage and Bleeding (160 continuous damage every 2 seconds) for
     8s to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 52
 maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
@@ -512,6 +539,7 @@ maiden detective:
   drive: Deals 1409 damage and Bleeding (160 continuous damage every 2 seconds) for
     10s to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 53
 orga(wola):
   pic: "/images/orga0.png"
@@ -529,6 +557,7 @@ orga(wola):
   drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
     gauge by 45% to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 54
 anemone:
   pic: "/images/anemone0.png"
@@ -550,6 +579,7 @@ anemone:
     1230 instant HP recovery for 16 seconds, and prioritizing 2 allies with highest
     ATK, grants Skill gauge charge +30%.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 47
 redcross:
   pic: "/images/redcross0.png"
@@ -570,6 +600,7 @@ redcross:
     received) for 20s to 2 allies with the lowest HP, including self (if own HP is
     the lowest, it will only be applied to self, no second target).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 55
 metis:
   pic: "/images/metis0.png"
@@ -587,6 +618,7 @@ metis:
   drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
     unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 56
 maou davi:
   pic: "/images/maoudavi0.png"
@@ -605,6 +637,7 @@ maou davi:
   drive: Deals 1488 damage to all enemies and Apply "Bleed"(250 damage per 2seconds)
     to 2 lowest HP enemies for 12seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 57
 medb:
   pic: "/images/medb0.png"
@@ -621,6 +654,7 @@ medb:
     2 times to 2 random enemies.
   drive: Deals 2355 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 58
 morgan:
   pic: "/images/morgan0.png"
@@ -638,6 +672,7 @@ morgan:
     hit, plus 650 additional damage if target is Bleeding.
   drive: Deal 2480 damage to 4 enemies with the lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 59
 tirfing:
   pic: "/images/tyrfing0.png"
@@ -657,6 +692,7 @@ tirfing:
   drive: Deals 2238 Damages to 4 random enemies and Apply "Sever" 1 time (1000 Damage
     if target is Bleeding/Poisoned).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 60
 jupiter:
   pic: "/images/jupiter0.png"
@@ -674,6 +710,7 @@ jupiter:
   drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
     enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 61
 verdel:
   pic: "/images/verdel0.png"
@@ -695,6 +732,7 @@ verdel:
     (120 damage) for 6 seconds, and charge +35% skill gauge to 2 allies with the highest
     attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 62
 thanatos:
   pic: "/images/thanatos0.png"
@@ -712,6 +750,7 @@ thanatos:
     if Fire type.
   drive: Deals 2151 damage to 4 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 63
 cube moa:
   pic: "/images/moa0.png"
@@ -729,6 +768,7 @@ cube moa:
   drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
     to act for 15s or after being hit 3 times).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 31
 dark maat:
   pic: "/images/darkmaat0.png"
@@ -749,6 +789,7 @@ dark maat:
     (upon dying, revive with 50% HP, fully charge skill gauge, and Attack Up (stacks
     up to 5 times)).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 35
 ai:
   pic: "/images/ai0.png"
@@ -769,6 +810,7 @@ ai:
   drive: Deals 1386 damage to 2 random enemies and gives Reflect (returns 20% of damage
     received) for 18s to 5 allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 3
 hildr:
   pic: "/images/hildr0.png"
@@ -788,6 +830,7 @@ hildr:
     a Dark type, deal 200 additional piecing damage.
   drive: Deal 2588 damage to all enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 42
 bikini davi:
   pic: "/images/bikinidavi0.png"
@@ -806,6 +849,7 @@ bikini davi:
   drive: Deal 1733 damage to 2 enemies randomly and allies drive gauge +400. For WorldBoss
     Only, Attack power +30% for 20 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 44
 santa:
   pic: "/images/santa0.png"
@@ -823,6 +867,7 @@ santa:
   drive: Deals 1875 damage to 2 random enemies, 90% chance to freeze (reduces skill
     gauge charge rate and charge amount) for 16s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 67
 tethys:
   pic: "/images/tethys0.png"
@@ -843,6 +888,7 @@ tethys:
   drive: Deals 1983 damages to 3 random enemies and Apply "Poison" (Deals 800 damages
     when attack and receives attacks) for 3turns.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 68
 kouga:
   pic: "/images/kouga0.png"
@@ -861,6 +907,7 @@ kouga:
   drive: Deals 1789 damage and 80% chance to stun for 12s to 3 enemies that are charging
     skill and +400 drive gauge.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 70
 myrina:
   pic: "/images/myrina0.png"
@@ -879,6 +926,7 @@ myrina:
   drive: Deal 1982 damage to 3 random enemies and apply +25% weakness damage to 3
     allies with the highest attack. Additional 40% in Ragna.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 71
 naiad:
   pic: "/images/naiad0.png"
@@ -898,6 +946,7 @@ naiad:
     +20% to all Allies for 20 seconds.\r\n·Gives Skill Gauge Charge Speed +20% to
     all Allies for 20 seconds."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 72
 snow miku:
   pic: "/images/snowmiku0.png"
@@ -917,6 +966,7 @@ snow miku:
     for 1259 HP and 90% chance to apply "Purification" to 5 allies with the Bleeding
     status.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 74
 rusalka:
   pic: "/images/rusalka0.png"
@@ -934,6 +984,7 @@ rusalka:
   drive: Heals 12%HP+90HP and gives Immortality (HP won't go under 1) for 14s to 3
     allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 75
 siren:
   pic: "/images/siren0.png"
@@ -950,6 +1001,7 @@ siren:
   slide: Deals 523 (120%) damage to 3 enemies (prioritizing Water types) .
   drive: Deals 2184 damage to 4 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 76
 krampus:
   pic: "/images/krampus0.png"
@@ -966,6 +1018,7 @@ krampus:
     20% of damage as HP.
   drive: Deals 2290 damage to all enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 78
 midas:
   pic: "/images/midas0.png"
@@ -983,6 +1036,7 @@ midas:
   drive: Deals 1836 damage and Apply "Poison" (620 damages when attack and receives
     attacks) for 2 turns and removes 1 buff to 3 lowest HP enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 79
 syrinx:
   pic: "/images/syrinx0.png"
@@ -1001,12 +1055,13 @@ syrinx:
   drive: Gives 199HP Regeneration (Heal every 2seconds) for 16s and Invincibility
     for 15s or 3 hits to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 81
 rudolph:
   pic: "/images/4rudolph0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 5 5 5 5
   stars: '4'
   type: debuffer
   element: fire
@@ -1018,12 +1073,13 @@ rudolph:
   drive: Deals 1086 damage to 3 random units, attack +25% for 25s to 3 units with
     highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 89
 rednose:
   pic: "/images/4rednose0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 5 5 5 5
   stars: '4'
   type: buffer
   element: grass
@@ -1034,12 +1090,13 @@ rednose:
   drive: Deals 1072 damage to 3 random enemies, and +1200 HP Barrier for 18s to 3
     allies with lowest hp.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 91
 titania:
   pic: "/images/4titania0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: light
@@ -1052,12 +1109,13 @@ titania:
   drive: Deals 1324 damage to 4 random enemies, 90% chance to block healing (Excludes
     Lifesteal and HP absorption) for 10s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 93
 victrix:
   pic: "/images/4victrix0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
@@ -1070,12 +1128,13 @@ victrix:
     block heals (excludes absorption and lifesteal) for 14s to 3 enemies with lowest
     HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 94
 ishtar:
   pic: "/images/4ishtar0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 5 5 6
   stars: '4'
   type: debuffer
   element: light
@@ -1085,6 +1144,7 @@ ishtar:
   slide: Deals 437 damage to 2 enemies and agility -700 for 12s.
   drive: Deals 1149 damage to 3 random enemies and Blind (-35% Accuracy) for 10s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 95
 heracles:
   pic: "/images/4heracles0.png"
@@ -1093,7 +1153,7 @@ heracles:
   stars: '4'
   type: tank
   element: light
-  tier: C
+  tier: 5 5 5 5
   leader: Maximum Health +800 to Light units.
   auto: Deals 68 damage.
   tap: Deals 206 damage to target and gains Fury (saves up to 250% damage received
@@ -1103,12 +1163,13 @@ heracles:
   drive: Deals 797 damage to 2 random enemies and Skill defense +20% from 3 enemies
     for 16s to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 97
 frigga:
   pic: "/images/4frigga0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: light
@@ -1120,12 +1181,13 @@ frigga:
   drive: Deals 820 damage to 2 random enemies and gains Fury (Up to 100% of damage
     is received and returned).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 98
 pomona:
   pic: "/images/4pomona0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 5 6 6
   stars: '4'
   type: healer
   element: light
@@ -1136,12 +1198,13 @@ pomona:
     every 2s) for 10s .
   drive: Gives 1100HP instant heal to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 99
 merlin:
   pic: "/images/4merlin0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 6 6 6
   stars: '4'
   type: healer
   element: light
@@ -1154,12 +1217,13 @@ merlin:
     and 50HP additional Regeneration (Heal every 2s) in the case of a damage debuff
     for 18s to 3 allies lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 100
 inanna:
   pic: "/images/4inanna0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: dark
@@ -1170,12 +1234,13 @@ inanna:
   slide: Deals 95 damage plus Tap damage 2 times to target (450 ignore Defense damage).
   drive: Deals 1313 damage to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 102
 morrigu:
   pic: "/images/4morrigu0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: dark
@@ -1186,12 +1251,13 @@ morrigu:
   slide: Deals 271 (105%) damage to 3 enemies with priority to Light units.
   drive: Deals 1417 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 103
 persephone:
   pic: "/images/4persephone0.png"
   pic2: ''
   pic3: ''
-  tier: S
+  tier: 8 8 9 9
   stars: '4'
   type: debuffer
   element: dark
@@ -1203,12 +1269,13 @@ persephone:
   drive: Deals 1162 damage to 2 enemies with priority to Light units, attack -30%
     and weakness defense -20%.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 105
 aten:
   pic: "/images/4aten0.png"
   pic2: ''
   pic3: ''
-  tier: D
+  tier: 3 3 3 3
   stars: '4'
   type: tank
   element: dark
@@ -1220,12 +1287,13 @@ aten:
   drive: Gives Reflect (returns 21% of damage received) for 20s to ally with lowest
     HP and self.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 109
 cybele:
   pic: "/images/4cybele0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 4 6 6
   stars: '4'
   type: tank
   element: dark
@@ -1239,12 +1307,13 @@ cybele:
   drive: Deals 823 damage to 2 random enemies, and 1500 HP barrier for 16s to 3 units
     with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 110
 zelos:
   pic: "/images/4zelos0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 6
   stars: '4'
   type: healer
   element: dark
@@ -1257,12 +1326,13 @@ zelos:
   drive: Heals 1000HP for 3 allies with lowest HP, additional healing of 200HP if
     Dark unit.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 111
 fenrir:
   pic: "/images/4fenrir0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: fire
@@ -1274,12 +1344,13 @@ fenrir:
   drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
     2s) for 8s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 112
 hector:
   pic: "/images/4hector0.png"
   pic2: ''
   pic3: ''
-  tier: D
+  tier: 4 4 4 4
   stars: '4'
   type: attacker
   element: fire
@@ -1291,12 +1362,13 @@ hector:
     2 enemies with priority to grass type.
   drive: Deals 1417 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 113
 yuna:
   pic: "/images/4yuna0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: fire
@@ -1308,12 +1380,13 @@ yuna:
     damage if grass type.
   drive: Deals 1310 damage to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 114
 neid:
   pic: "/images/4neid0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 4 5 7
   stars: '4'
   type: attacker
   element: fire
@@ -1325,12 +1398,13 @@ neid:
   drive: Deals 1454 damage plus 500 ignore Defense damage and 90% chance to block
     heals for 10s to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 115
 fortuna:
   pic: "/images/4fortuna0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 4 6 7
   stars: '4'
   type: buffer
   element: fire
@@ -1342,12 +1416,13 @@ fortuna:
   drive: Deals 1058 damage to 2 random enemies and skill damage +25% for 16s to 3
     random allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 117
 lady:
   pic: "/images/4lady0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 4 4 4 4
   stars: '4'
   type: tank
   element: fire
@@ -1359,12 +1434,13 @@ lady:
   drive: Deals 834 damage to target, and gains a +3000HP barrier and Taunt (95% provocation)
     for 15s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 118
 el dorado:
   pic: "/images/4eldorado0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 4
   stars: '4'
   type: tank
   element: fire
@@ -1375,12 +1451,13 @@ el dorado:
     for 10s.
   drive: Gives a +2500 HP barrier for 20s to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 119
 yaga:
   pic: "/images/4yaga0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 3 5 5
   stars: '4'
   type: debuffer
   element: water
@@ -1391,12 +1468,13 @@ yaga:
     highest attack.
   drive: Deals 1157 damage and skill gauge charge speed -40% for 16s to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 126
 kirinus:
   pic: "/images/4kirinus0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 3 5 4
   stars: '4'
   type: buffer
   element: water
@@ -1408,12 +1486,13 @@ kirinus:
   drive: Deals 1075 damage to 2 random enemies and Attack +1000 for 18s to 2 allies
     with highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 127
 maya:
   pic: "/images/4mayahuel0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 6 4 6 6
   stars: '4'
   type: buffer
   element: water
@@ -1426,12 +1505,13 @@ maya:
   drive: Deals 1120 damage and 75% chance to Confuse for 10s to 2 random enemies and
     heal 250HP to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 128
 isis:
   pic: "/images/4isis0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 6
   stars: '4'
   type: healer
   element: water
@@ -1442,12 +1522,13 @@ isis:
     is debuffed for 12s to 3 allies with lowest HP.
   drive: Heals 1100 HP to 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 131
 tisiphone:
   pic: "/images/4tisiphone0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 6 7 8
   stars: '4'
   type: attacker
   element: grass
@@ -1458,12 +1539,13 @@ tisiphone:
   slide: Deals 589 damage to 3 random enemies and absorb 8% of the damage as HP.
   drive: Deals 1432 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 132
 ambrosia:
   pic: "/images/4ambrosia0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: grass
@@ -1474,12 +1556,13 @@ ambrosia:
   slide: Deals 278 (108%) damage to 2 random enemies.
   drive: Deals 1393 damage to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 133
 korra:
   pic: "/images/4korra0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 5 7 7
   stars: '4'
   type: attacker
   element: grass
@@ -1491,12 +1574,13 @@ korra:
     with priority to Water unit.
   drive: Deals 1425 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 134
 muse:
   pic: "/images/4muse0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 4 5
   stars: '4'
   type: debuffer
   element: grass
@@ -1508,12 +1592,13 @@ muse:
   drive: Deals 1154 damage to 3 random enemies, weakness Defense -15% for 16s if Water
     unit.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 136
 flora:
   pic: "/images/4flora0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 6 6 6 6
   stars: '4'
   type: buffer
   element: grass
@@ -1525,12 +1610,13 @@ flora:
   drive: Deals 1076 damage to 3 random enemies, and gives a +1200HP barrier for 18s
     for 3 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 137
 europa:
   pic: "/images/4europa0.png"
   pic2: ''
   pic3: ''
-  tier: C
+  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: grass
@@ -1542,12 +1628,13 @@ europa:
   drive: Deals 901 damage to target, Defense +30% and Taunt (95% provocation) for
     15s to self.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 140
 selene:
   pic: "/images/4selene0.png"
   pic2: ''
   pic3: ''
-  tier: A
+  tier: 7 7 7 6
   stars: '4'
   type: healer
   element: grass
@@ -1560,12 +1647,13 @@ selene:
     every 2s) for 18s to 3 allies with lowest HP. If debuffed additional 60HP Regeneration
     (Heal every 2seconds)
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 141
 agamemnon:
   pic: "/images/4agamemnon0.png"
   pic2: ''
   pic3: ''
-  tier: B
+  tier: 7 7 6 6
   stars: '4'
   type: debuffer
   element: grass
@@ -1578,6 +1666,7 @@ agamemnon:
     and -40% Skill gauge Charge rate) for 12s.
   drive: Deals 1194 to 3 random enemies and -30% Skill gauge Charge rate for 16s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 87
 newbie mona:
   pic: "/images/newbiemona0.png"
@@ -1601,6 +1690,7 @@ newbie mona:
     skill damage and increase attack based on the current number of buffs) for 3 turns
     to 3 allies (prioritizing grass Types)."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 84
 bastet:
   pic: "/images/bastet0.png"
@@ -1618,6 +1708,7 @@ bastet:
     Accuracy) to target for 12 seconds."
   drive: Deals 2161 damage to 4 enemies with highest attack.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 7
 durandal:
   pic: "/images/durandal0.png"
@@ -1638,6 +1729,7 @@ durandal:
     (60% chance to miss) to target for 25s. \r\nGives +30% Attack to 3highest attack
     Allies for 25s."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 86
 jiseihi:
   pic: "/images/jiseihi0.png"
@@ -1656,6 +1748,7 @@ jiseihi:
   drive: "Deals 2498 damage to 4 random enemies. \r\nAdditional 700 damage IF Water
     Type target. \r\nIn Ragna, Ignore 4000 Defense IF Water Type target."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 77
 luna:
   pic: "/images/luna0.png"
@@ -1676,6 +1769,7 @@ luna:
     to \"Petrify\". \r\nGives Skill Damage +25% to 5 light allies for 22s. \r\nOn
     Worldboss, Give +30% attack to the back row for 22s."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 82
 medusa:
   pic: "/images/medusa0.png"
@@ -1694,6 +1788,7 @@ medusa:
     attack Medusa) to self for 12s.\t"
   drive: ''
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 83
 ruin:
   pic: "/images/ruin0.png"
@@ -1714,6 +1809,7 @@ ruin:
     \r\nApply \"Invincibility Explosion\" (Removes up to 2stacks of \"Invincibility\"
     and if 3 or more stacks was removed, deals 1500 damage per stacks) to target."
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 85
 abaddon:
   pic: "/images/abaddon0.png"
@@ -1731,6 +1827,7 @@ abaddon:
   drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
     for 2 turn to self.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 1
 charlotte:
   pic: "/images/charlotte0.png"
@@ -1747,6 +1844,7 @@ charlotte:
     HP.\r\nIf a barrier is applied, deals 1800 additional damage."
   drive: Deals 2539 damage to 4 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 12
 mafdet:
   pic: "/images/mafdet0.png"
@@ -1765,6 +1863,7 @@ mafdet:
   drive: Deals 2341 damage to all enemies and block heals (excludes Lifesteal and
     absorption) for 25s to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 30
 dark midas:
   pic: "/images/darkmidas0.png"
@@ -1789,6 +1888,7 @@ dark midas:
     5[4+1]) to 3 lowest HP allies). (On Enemy, Deal 400 damage multiplied by the number
     of debuffs +1 up to 4 debuffs (Total 5[4+1]) to 3 lowest HP enemies).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 41
 hatsune miku:
   pic: "/images/hatsunemiku0.png"
@@ -1808,6 +1908,7 @@ hatsune miku:
   drive: Deal 1715 damage to 2 random enemies and apply +50% drive damage to 5 water
     allies for 33 seconds and +300 to ally drive gauge.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 69
 elizabeth:
   pic: "/images/elizabeth0.png"
@@ -1824,6 +1925,7 @@ elizabeth:
   drive: Deals 2992 (250%) damage to target and Bleeding (200 damage every 2s) for
     12s to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 18
 warwolf:
   pic: "/images/warwolf0.png"
@@ -1843,6 +1945,7 @@ warwolf:
   drive: Deals 1751 damage to 3 random enemies and Give +30% Attack and +50% Critical
     Rate to 3 Allies (Prioritizing Dark Types).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 38
 mammon:
   pic: "/images/mammon0.png"
@@ -1860,6 +1963,7 @@ mammon:
   drive: Deals 1456 damage to 2 random enemies and drive Skill defense +30% for 15s
     to 5 allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 80
 frey (light):
   pic: "/images/freylight0.png"
@@ -1877,6 +1981,7 @@ frey (light):
   drive: Deal 10870 (250%) damage to 2 enemies & apply "Curse" (300 damage every 2
     seconds) for 8 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 64
 rita:
   pic: "/images/rita0.png"
@@ -1896,6 +2001,7 @@ rita:
   drive: Deal 4699 dmg to 3 targets, and apply Disintegration (500 damage every 2
     seconds, debuffs inflicted will last shorter and cannot be extended) for 14 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 66
 nevan (light):
   pic: "/images/nevanlight0.png"
@@ -1914,6 +2020,7 @@ nevan (light):
   drive: Deal 4332 damage to 3 enemies & +40% ATK + "Silence Immunity" for 10 seconds
     to 2 Allies (Prioritizing highest ATK).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 65
 pallas:
   pic: "/images/pallas0.png"
@@ -1933,6 +2040,7 @@ pallas:
     apply Skill Damage Protection +30% (Cancels after 32 seconds or 4 attacks) and
     apply "Immortal" (HP can't be reduce to 1 or less) or 14 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 143
 athena:
   pic: "/images/athena0.png"
@@ -1953,6 +2061,7 @@ athena:
     (Including self) apply "Reflect" (Return 30% of the damage receive) for 20 seconds
     (If you receive "Reflect" buff, it will be applies to 2 allies).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 142
 brigette:
   pic: "/images/brigette.png"
@@ -1978,6 +2087,7 @@ brigette:
     attack +200, attack increases in proportion to HP loss [36% increase in attack
     per 2% decrease in HP - maximum increase to 720%])"
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 147
 gkouga:
   pic: "/images/gkouga0.png"
@@ -1995,6 +2105,7 @@ gkouga:
     Types) and absorb 200 damage as HP.
   drive: Deals 2329 damage to 3 enemies with lowest hp
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 23
 kasumi:
   pic: "/images/kasumi0.png"
@@ -2014,6 +2125,7 @@ kasumi:
   drive: Deal 5363 damage to 3 enemies randomly, 700 additional damage or "Evasion"
     +40% to self for 20 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 146
 marie rose:
   pic: "/images/marierose0.png"
@@ -2032,6 +2144,7 @@ marie rose:
   drive: Deal 3480 damage to 2 enemies randomly, +40% of Defense Power to 5 allies
     and DoT Resistance +50% for 20 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 144
 honoka:
   pic: "/images/honoka0.png"
@@ -2050,6 +2163,7 @@ honoka:
     HP, HoT 313 to 5 allies for 16 seconds and increase Critical attack +2000 for
     20 seconds .
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 145
 cammy:
   pic: "/images/cammy0.png"
@@ -2068,6 +2182,7 @@ cammy:
   drive: Deals 1965 Damages to 3enemies (prioritizing Water Types) and -33% Skill
     Gauge Speed for 16seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 11
 diablo:
   pic: "/images/diablo0.png"
@@ -2086,6 +2201,7 @@ diablo:
   drive: Deals 1397 damage to 2 random enemies and Skill defense +25% for 20s to 5
     Light units.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 16
 eve:
   pic: "/images/eve0.png"
@@ -2103,6 +2219,7 @@ eve:
     attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
   drive: Deals 2437 damage to all enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 21
 aurora:
   pic: "/images/aurora0.png"
@@ -2120,6 +2237,7 @@ aurora:
   drive: Gives 272HP Regeneration (Heal every 2seconds) for 18s to 3 allies with lowest
     HP, and heals an additional 319HP if the target is affected by a damage type debuff.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 5
 cleopatra:
   pic: "/images/cleopatra0.png"
@@ -2140,6 +2258,7 @@ cleopatra:
   drive: Deals 2327 damage to 4 lowest Hp enemies and Additional 500 damage IF target
     is cursed.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 14
 aria:
   pic: "/images/aria0.png"
@@ -2157,6 +2276,7 @@ aria:
   drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
     2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 0
 ashtoreth:
   pic: "/images/ashtoreth0.png"
@@ -2177,6 +2297,7 @@ ashtoreth:
     for 10 seconds. 90% chance to Apply "Direct Hit" (Ignore "Invincibility") to self
     for 18 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 6
 dana:
   pic: "/images/dana0.png"
@@ -2194,6 +2315,7 @@ dana:
   drive: Deals 1480 damage to 2 random enemies and drive Skill defense +30% for 15s
     to all allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 15
 bikini lisa:
   pic: "/images/bikinilisa0.png"
@@ -2214,6 +2336,7 @@ bikini lisa:
   drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
     attack power, increase attack power +30% and Normal Skill Damage +800 for 20 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 45
 scuba mona:
   pic: "/images/scubamona0.png"
@@ -2233,6 +2356,7 @@ scuba mona:
   drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
     Power -20% and 300 sustained damage every 2 seconds) for 16 seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 43
 magician ohad:
   pic: "/images/magicianohad0.png"
@@ -2253,6 +2377,7 @@ magician ohad:
   drive: Deal 2227 damage to 4 enemies randomly, if the enemy has "Stigma", deal 500
     additional damage.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 148
 magician ailill:
   pic: "/images/magicianailill0.png"
@@ -2270,6 +2395,7 @@ magician ailill:
     damage. If the enemy is Wood Type, add 600 additional damage.
   drive: Deal 2386 damage to target.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 149
 party star medb:
   pic: "/images/partystarmedb0.png"
@@ -2292,6 +2418,7 @@ party star medb:
     least HP, heal 1525 up to 5 allies. For WorldBoss only, increase Normal skill
     damage for the back row +1500 for 20seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 150
 maris:
   pic: "/images/maris0.png"
@@ -2309,6 +2436,7 @@ maris:
   drive: Deals 1466 damage to 3 random enemies and drive Skill defense +20% for 15s
     to all allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 73
 sitri:
   pic: "/images/sitri0.png"
@@ -2329,6 +2457,7 @@ sitri:
     lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
     Allies (Prioritizing back row).
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 29
 lady bathory:
   pic: "/images/bathory0.png"
@@ -2350,6 +2479,7 @@ lady bathory:
     (Continuous damage every 4 seconds [Buffs target number +1] x 250 continuous damage,
     maximum 6 buffs [Final tick 7]) for 20 seconds.
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 151
 mysterious saturn:
   pic: "/images/mysterioussaturn0.png"
@@ -2368,6 +2498,7 @@ mysterious saturn:
   drive: Deal 2598 damage to 4 enemies and increase self WeakPoint skill damage +50%
     for 20 seconds.
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 153
 pretty mars:
   pic: "/images/prettymars0.png"
@@ -2386,6 +2517,7 @@ pretty mars:
     damage. '
   drive: Prioritizing enemies with the least HP remaining, deal 2485 damage to 4 enemies.
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 155
 innocent venus:
   pic: "/images/innocentvenus0.png"
@@ -2405,6 +2537,7 @@ innocent venus:
     HP remaining, apply \"Debuff Clear\" to 3 allies (Cancels after 14 seconds or
     2 debuff attacks) and heals 1691 HP."
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 156
 exchange student eve:
   pic: "/images/studenteve0.png"
@@ -2424,6 +2557,7 @@ exchange student eve:
   drive: Deal 2029 to 3 enemies randomly. For 2 turns, add +2 seconds on enemy slide
     skill cooldown, and reduce enemy drive gauge -12%.
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 152
 erato:
   pic: "/images/4erato0.png"
@@ -2432,7 +2566,7 @@ erato:
   stars: '4'
   type: buffer
   element: light
-  tier: 6 3 7 7
+  tier: 7 6 9 8
   leader: Maximum HP +500 to all allies
   auto: Deals 73 damage
   tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
@@ -2441,6 +2575,7 @@ erato:
   drive: Deals 1070 damage to 2 random enemies, give Reflect (returns 10% of damaged
     received) for 20s to 2 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 92
 freesia:
   pic: "/images/4freesia0.png"
@@ -2458,6 +2593,7 @@ freesia:
   drive: Deals 1101 damage to 3 enemies with highest Defense, and Defense -1000 for
     16s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 116
 neman:
   pic: "/images/4nevan0.png"
@@ -2475,6 +2611,7 @@ neman:
   drive: Deals 1355 damage to 2 enemies with highest attack, drive skill gauge -5%,
     and Attack -30% for 15s.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 106
 melpomene:
   pic: "/images/4melpomene0.png"
@@ -2492,6 +2629,7 @@ melpomene:
   drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
     with highest attack and 75% confusion for 10s to 1 random enemy.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 107
 danu:
   pic: "/images/4danu0.png"
@@ -2509,6 +2647,7 @@ danu:
     damage.
   drive: Deals 1319 damage to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 124
 sonnet:
   pic: "/images/4sonnet0.png"
@@ -2526,6 +2665,7 @@ sonnet:
     150 additional damage.
   drive: Deals 1389 damage to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 122
 amor:
   pic: "/images/4amor0.png"
@@ -2534,7 +2674,7 @@ amor:
   stars: '4'
   type: attacker
   element: water
-  tier: 7 4 7 7
+  tier: 9 7 9 10
   leader: Auto damage +40 to grass units.
   auto: Deals 80 damage.
   tap: Deals 297 damage to target and gives Lifesteal (absorb 3% of the damage as
@@ -2543,6 +2683,7 @@ amor:
     200 damage if Water unit.
   drive: Deals 1314 damage to 4 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 135
 elysium:
   pic: "/images/4elysium0.png"
@@ -2560,6 +2701,7 @@ elysium:
     attacks) for 3 turns to 3 enemies with lowest HP.
   drive: Deals 1422 damage to 3 enemies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 123
 leda:
   pic: "/images/4leda0.png"
@@ -2568,7 +2710,7 @@ leda:
   stars: '4'
   type: buffer
   element: light
-  tier: 7 3 8 9
+  tier: 10 9 10 10
   leader: Healing +2.5% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
@@ -2577,6 +2719,7 @@ leda:
   drive: Deals 1108 damage to 2 random enemies and give Lifesteal (Absorbs 20% of
     the damage as HP) for 20s to 2 allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 96
 hat-trick:
   pic: "/images/4hat-trick0.png"
@@ -2594,6 +2737,7 @@ hat-trick:
   drive: Deals 897 damage to target, and including self gives 2500HP barrier to 3
     allies with lowest HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 139
 halloween:
   pic: "/images/4halloween0.png"
@@ -2610,6 +2754,7 @@ halloween:
     for 10s to self.
   drive: Defense +30% for 20s to 5 allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 129
 guillotine:
   pic: "/images/4guillotine0.png"
@@ -2625,6 +2770,7 @@ guillotine:
   slide: Deals 286 (110%) damage to 2 random enemies.
   drive: Deals 1399 damage to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 101
 ankh:
   pic: "/images/4ankh0.png"
@@ -2643,6 +2789,7 @@ ankh:
   drive: Deals 912 damage to 2 random enemies and gives +1500 Barrier to 4 lowest
     HP Allies for 18seconds.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 138
 bakje:
   pic: "/images/4bakje0.png"
@@ -2660,6 +2807,7 @@ bakje:
   drive: Deals 786 damage to target, and gives Reflect (returns 8% of damage received)
     for 20s to 5 allies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 108
 chimaera:
   pic: "/images/4chimaera0.png"
@@ -2677,6 +2825,7 @@ chimaera:
   drive: Deals 897 damage to 1 random enemies and Defense +30% and Taunt (95% provocation)
     to self.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 120
 fairy:
   pic: "/images/4fairy0.png"
@@ -2710,6 +2859,7 @@ thoth:
   drive: Deals 819 damage to 2 random enemies, skill damage Defense +20% for 16s to
     3 Water units.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 130
 artemis:
   pic: "/images/4artemis0.png"
@@ -2726,6 +2876,7 @@ artemis:
   drive: Deals 1433 damage and Bleeding (160 continuous damage every 2s) for 8s to
     3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 104
 bast:
   pic: "/images/4bast0.png"
@@ -2734,7 +2885,7 @@ bast:
   stars: '4'
   type: buffer
   element: light
-  tier: 6 3 7 6
+  tier: 10 8 10 10
   leader: Weakness Defense +5% to Light Allies.
   auto: Deals 73 damage.
   tap: Deals 223 damage and 60% chance to remove "Confusion" from 1 allies.
@@ -2743,6 +2894,7 @@ bast:
   drive: Deals 1097 damge to 3 random enemies and Instant Heal 3 lowest Hp Allies
     for 516 HP.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 88
 daphne:
   pic: "/images/4daphne0.png"
@@ -2760,6 +2912,7 @@ daphne:
   drive: Gives 1000 HP instant heal to 3 allies with lowest HP, additional 240 HP
     instant heal if Fire type.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 121
 arges:
   pic: "/images/4arges0.png"
@@ -2775,6 +2928,7 @@ arges:
   slide: Deals 438 damage and skill gauge charge speed -20% for 12s to 2 random enemies.
   drive: Deals 1151 damage and skill gauge charge speed -30% for 16s to 3 random enemies.
   notes: ''
+  date: '2018-11-28 9:57:23 +0900'
   index: 125
 neptune:
   pic: "/images/hardworkerneptune0.png"
@@ -2799,4 +2953,5 @@ neptune:
     allies (Convert 50% of the damage received into healing, the rest of the HP buff
     is spread to 2 allies with the least HP) for 20 seconds. "
   notes: ''
+  date: '2018-12-05 9:57:23 +0900'
   index: 154
