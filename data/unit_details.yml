@@ -492,7 +492,7 @@ orora:
   pic: "/images/4orora0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
+  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: light
@@ -1545,7 +1545,7 @@ ambrosia:
   pic: "/images/4ambrosia0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
+  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: grass
@@ -2566,7 +2566,7 @@ erato:
   stars: '4'
   type: buffer
   element: light
-  tier: 6 3 7 7
+  tier: 7 6 9 8
   leader: Maximum HP +500 to all allies
   auto: Deals 73 damage
   tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
@@ -2674,7 +2674,7 @@ amor:
   stars: '4'
   type: attacker
   element: water
-  tier: 7 4 7 7
+  tier: 9 7 9 10
   leader: Auto damage +40 to grass units.
   auto: Deals 80 damage.
   tap: Deals 297 damage to target and gives Lifesteal (absorb 3% of the damage as
@@ -2710,7 +2710,7 @@ leda:
   stars: '4'
   type: buffer
   element: light
-  tier: 7 3 8 9
+  tier: 10 9 10 10
   leader: Healing +2.5% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
@@ -2885,7 +2885,7 @@ bast:
   stars: '4'
   type: buffer
   element: light
-  tier: 6 3 7 6
+  tier: 10 8 10 10
   leader: Weakness Defense +5% to Light Allies.
   auto: Deals 73 damage.
   tap: Deals 223 damage and 60% chance to remove "Confusion" from 1 allies.
