@@ -1,15 +1,27 @@
-<p><a id="add_new_unit" href="/">BACK TO MAIN MENU</a></p>
+<div class="container-fluid">
+  <p class="special-links" ><a href="/">BACK TO MAIN MENU</a></p>
 
 <h4>Unit details:</h4>
 <p>There are <%= @unit_details.keys.size %> units in the file. </p>
 <p>Their names are: <%= @unit_details.keys.sort %></p>
-<p>Total characters: <%= @unit_details.to_a.flatten.join("").size %><p>
-<p><a id="add_new_unit" href="/download/unit_details.yml">Get unit details</a></p>
+<p>Total characters: <%= @unit_details.to_a.flatten.join("").split(" ").join("").size %><p>
+<p>-------------------</p>
+
+<p class="special-links" ><a href="/download/unit_details.yml">Get unit details</a></p>
 
 <h4>Soulcard details:</h4>
 <p>There are <%= @sc_details.keys.size %> Soulcards in the file. </p>
 <p>Their names are: <%= @sc_details.keys.sort %></p>
-<p>Total characters: <%= @sc_details.to_a.flatten.join("").size %><p>
-  <p>-------------------</p>
+<p>Total characters: <%= @sc_details.to_a.flatten.join("").split(" ").join("").size %><p>
+<p>-------------------</p>
 
-<p><a id="add_new_unit" href="/download/soul_cards.yml">Get soulcard details</a></p>
+<p class="special-links" ><a href="/download/soul_cards.yml">Get soulcard details</a></p>
+
+
+<h4>Main page information Notice:</h4>
+
+<p class="special-links" ><a href="/download/maininfo.yml">Get main page notes</a></p>
+<p class="special-links" ><a href="/download/basics.md">Get starterguide file</a></p>
+
+
+</div>

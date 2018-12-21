@@ -1,4 +1,4 @@
-<div class="form_div2">
+<div class="container-fluid">
   <form action="/equips/new_sc" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
@@ -14,11 +14,11 @@
       </dt>
       <dd>
         <% if key == "pic" %>
-          <label for="upload">upload a file</label>
+          <label for="upload"><em>upload a file or enter filename (from server)</em></label>
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
 
-        <% elsif is_special_key?(key) %>
+        <% elsif special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
@@ -30,7 +30,7 @@
     </dl>
     <fieldset class="actions">
       <button type="submit" value="Save">Save</button>
-      <a href="/equips/soulcards">Cancel</a>
+      <a href="/equips/<%= @current_card['stars'] %>stars/<%= @card_name.downcase %>">Cancel</a>
     </fieldset>
   </form>
 </div>

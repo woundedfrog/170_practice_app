@@ -1,4 +1,4 @@
-<div class="form_div">
+<div class="container-fluid">
   <form action="/new_unit" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
@@ -13,10 +13,10 @@
       </dt>
       <dd>
         <% if key == "pic" %>
-          <label for="upload">upload a file</label>
+          <label for="upload"><em>upload a file or enter filename (from server)</em></label>
           <input type="file" name="file" value="upload">
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
-        <% elsif is_special_key?(key) %>
+          <input class="content" name="<%= key %>" placeholder="file-name" type="text"  value="<%= params[key.to_sym] %>">
+        <% elsif special_key?(key) %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">

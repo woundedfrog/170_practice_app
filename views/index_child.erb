@@ -1,0 +1,28 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+
+<div class="container">
+    <div class="row justify-content-center">
+    <% @units.each do |unit, unit_details| %>
+    <% rating = unit_details["stars"] + "stars" %>
+          <div class="col-* unit-grid-cols" data-keywords="<%= unit %>">
+            <% if session[:username] %>
+            <div class="edit-remove-buttons">
+              <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
+              <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
+            </div>
+            <% end %>
+
+              <a href="/childs/<%= rating %>/<%= unit %>">
+                <img src="<%= unit_details['pic'] %>" alt="<%= unit %>"/>
+                </a>
+            <div class="index-stat-pic-container">
+                <%== format_stat("type", unit_details["type"]) %>
+                <%== format_stat("element", unit_details["element"]) %>
+            </div>
+            <h6 class="unit-profile-title"><%= upcase_name(unit) %></h6>
+        </div>
+    <% end %>
+    </div>
+</div>
