@@ -7,6 +7,16 @@
       <h6><%== @message_note['sortby'] %></h6>
     </div>
 <% end %>
+
+<div class="container sort-buttons">
+  <button type="button" class="btn btn-warning btn-xs" id="units" onClick="return showUnitsOnly('units')">Show all</button>
+  <button type="button" class="btn btn-warning btn-xs" id="attacker" onClick="return showUnitsOnly('attacker')">Attackers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="tank" onClick="return showUnitsOnly('tank')">Tanks</button>
+  <button type="button" class="btn btn-warning btn-xs" id="healer" onClick="return showUnitsOnly('healer')">Healers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="buffer" onClick="return showUnitsOnly('buffer')">Buffers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
+</div>
+
 <% @sort_catagory_arr[1].each do |catagory_value| %>
   <% next unless @units.any? {|name, info| info[@type] == catagory_value } %>
   <div class="container">
@@ -20,7 +30,7 @@
     <% @units.each do |unit, unit_details| %>
     <% next unless unit_details[type] == catagory_value %>
     <% rating = unit_details["stars"] + "stars" %>
-          <div class="col-* unit-grid-cols">
+          <div class="col-* unit-grid-cols units <%= unit_details["type"] %>">
             <% if session[:username] %>
             <div class="edit-remove-buttons">
               <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|

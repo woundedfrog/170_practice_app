@@ -2,13 +2,13 @@
 basic styles
 ===================== */
 body {
-	background-color: #5e5e5e;
+	background-color: #585858;
 	min-width: 100%;
-	color: #eae9e5;
+	color: #f2f2f2;
 }
 
 header {
-	background-color: #444444;
+	background-color: #3e3d3d;
 }
 
 .nav-link {
@@ -30,9 +30,9 @@ a, a:hover, .dropdown-item {
 h1,h2,h3,h4,h5,h6 {
 	padding: 5px;
 	padding-bottom: 0px;
-	color: #ffd584;
+	color: #f6d38f;
 	/* color: #5abdf2; */
-	text-shadow: 1px 1px 2px #996600;
+	text-shadow: 1px 1px 2px rgb(77, 62, 41);
 }
 
 h1,h3,h4 {
@@ -41,9 +41,38 @@ h1,h3,h4 {
 	font-weight: 600;
 	margin-bottom: 20px;
 }
+/* SORTING ICONS */
+.sort-buttons {
+	width: 100%;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.sort-buttons button {
+	align-self: center;
+	width: 25%;
+	justify-content: center;
+	font-size: 0.7em;
+	font-weight: bold;
+	/* background-color: rgb(166, 141, 76); */
+	margin: 1px;
+}
 
+.btn-warning, .btn-warning:hover {
+	background-color: #f6d38f;
+}
+.btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
+	background-color: #985631;
+	border: 1px solid #985631;
+	outline: 0;
+	   -webkit-box-shadow: none;
+	   box-shadow: none;
+}
+
+
+/* SORTING ICONS */
 #header-title a {
-	color: #edece8;
+	color: #f1f0eb;
 	font-weight: 600;
 }
 
@@ -65,7 +94,7 @@ p {
 
 span {
 	color: #ffc766;
-	text-shadow: 1px 1px 3px #996600;
+	text-shadow: 1px 1px 3px #a87205;
 }
 
 .unit-grid-cols {
@@ -260,6 +289,14 @@ textarea {
 	}
 	/* ////SC PROFILES END//// */
 
+	/* SORTING ICONS */
+	.sort-buttons {
+		width: 50%;
+	}
+	.sort-buttons button {
+		width: 30%;
+	}
+	/* SORTING ICONS */
 
 	.profile-stat-col-cantainer {
 		/* width: calc(100% - 110px); */
