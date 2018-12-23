@@ -51,7 +51,13 @@ $('p').each(function() {
 
 });
 
-
+function  showUnitsOnly(type) {
+  $('.btn').removeClass('btn-success').addClass('btn-warning')
+  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.units').show();
+  $('.units').hide();
+  $('.' + type).show();
+};
 
 function checkMe() {
     if (confirm("Are you sure you want to delete profile? It can't be undone!")) {
