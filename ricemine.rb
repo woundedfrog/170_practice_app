@@ -547,7 +547,7 @@ post '/new_unit' do
                           ''
                         end
   data[name]['date'] = if date == ''
-                         new_time = Time.new
+                         new_time = Time.now.utc.localtime('+09:00')
                          [new_time.year, new_time.month, new_time.day].join('-').to_s
                        else
                          date

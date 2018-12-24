@@ -942,9 +942,9 @@ naiad:
     to 1 ally.
   slide: Deals 550 damage and -30% skill gauge charge rate for 2 turns to 2 random
     enemies, and gives cooldown -1s for 2 turns to 3 random allies.
-  drive: "·Deals 1705 damage to 2 random enemies.\r\n·Gives Skill Gauge Charge Rate
-    +20% to all Allies for 20 seconds.\r\n·Gives Skill Gauge Charge Speed +20% to
-    all Allies for 20 seconds."
+  drive: Deals 1705 damage to 2 random enemies. Gives Skill Gauge Charge Rate +20%
+    to all Allies for 20 seconds. Gives Skill Gauge Charge Speed +20% to all Allies
+    for 20 seconds.
   notes: ''
   date: '2018-11-28'
   index: 72
