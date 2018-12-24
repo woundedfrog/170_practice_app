@@ -204,10 +204,10 @@ end
 
 def find_unit_sc_from_keys(details, keys)
   results = []
-
+  tags = keys.split(" ")
   details.each do |name, info_hash|
     info_hash.each do |key, val|
-      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys)
+      if val.to_s.downcase.include?(keys) || key.downcase.include?(keys) || name.downcase.include?(keys)
         results << [name, info_hash]
       end
     end

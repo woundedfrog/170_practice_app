@@ -305,8 +305,8 @@ victrix:
   tap: Deals 298 damage and Healing -25% for 8s to target.
   slide: Deals 587 damage 3 enemies priority to Dark, ignore 300 Defense power and
     gains Reflect (returns 9% of damage received) for 15s.
-  drive: Deals 1460 damage, Bleeding (200 continuous damage every 2s) for 10s and
-    block heals (excludes absorption and lifesteal) for 14s to 3 enemies with lowest
+  drive: Deals 1460 damage, Bleeding (200 continuous damage every 2s) for 10s and adds
+    heal block (excludes absorption and lifesteal) debuff for 14s to 3 enemies with lowest
     HP.
   notes: ''
   date: '2018-12-24'
