@@ -448,7 +448,6 @@ post '/equips/new_sc' do
   data = load_soulcards_details
   name = params[:sc_name].downcase
   index = params[:index].to_i
-  date = check_and_fetch_date(data, name)
 
   original_card = card_data.select { |unit, info| unit if index == info['index'].to_i }
 
@@ -547,7 +546,8 @@ post '/new_unit' do
                           ''
                         end
   data[name]['date'] = if date == ''
-                          Time.new.to_s
+                         new_time = Time.new
+                         [new_time.year, new_time.month, new_time.day].join("-").to_s
                        else
                           date
                        end
