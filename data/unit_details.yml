@@ -233,8 +233,7 @@ hermes:
   type: buffer
   element: fire
   tier: 6 6 8 9
-  leader: Deals 1419 damage to 2 random enemies and gives "Lifesteal" (20% of damage
-    dealt restores HP (Doubled if grass allies)) to all allies
+  leader: Attack +10% to Fire allies.
   auto: Deals 99 damage.
   tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
   slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
