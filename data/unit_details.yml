@@ -52,23 +52,6 @@ maat:
   notes: ''
   date: '2018-12-24'
   index: 33
-hermes:
-  pic: "/images/hermes0.png"
-  pic2: "/images/hermes1.png"
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: fire
-  tier: 6 6 8 9
-  leader: Attack +10% to Fire allies.
-  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
-  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
-    attack +100 for 18s to 3 allies with highest attack.
-  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
-    attack +300 for 25s to 3 allies with highest attack.
-  notes: ''
-  date: '2018-12-24'
-  index: 26
 hera:
   pic: "/images/hera0.png"
   pic2: "/images/hera1.png"
@@ -131,10 +114,10 @@ calchas:
   pic: "/images/4calchas0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 7 7 7 7
   leader: Tap attack damage +40 to Light units
   auto: Deals 80 damage.
   tap: Deals 80 damage plus Auto damage 3 times to target.
@@ -148,10 +131,10 @@ maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 7 7 7 7
   leader: Attack +500 to Light units
   auto: Deals 80 damage.
   tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Dark
@@ -184,10 +167,10 @@ ai:
   pic: "/images/ai0.png"
   pic2: ''
   pic3: ''
-  tier: 4 3 3 3
   stars: '5'
   type: tank
   element: dark
+  tier: 4 3 3 3
   leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
     Ragnas)
   auto: Deals 90 damage.
@@ -259,10 +242,10 @@ rudolph:
   pic: "/images/4rudolph0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: debuffer
   element: fire
+  tier: 5 5 5 5
   leader: Attack +8% to all allies.
   auto: Deals 73 damage.
   tap: Deals 234 damage to target, 70% chance to remove freeze from ally.
@@ -277,10 +260,10 @@ rednose:
   pic: "/images/4rednose0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: buffer
   element: grass
+  tier: 5 5 5 5
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target, and Defense +10% for 10s to 1 random ally.
@@ -294,10 +277,10 @@ titania:
   pic: "/images/4titania0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: light
+  tier: 7 7 7 8
   leader: Agility +400 to Light units
   auto: Deals 81 damage.
   tap: Deals 300 damage to enemy with lowest HP with 100 additional damage if Dark
@@ -313,10 +296,10 @@ victrix:
   pic: "/images/4victrix0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 7 7 7 7
   leader: Tap Damage +80 to Light units.
   auto: Deals 80 damage.
   tap: Deals 298 damage and Healing -25% for 8s to target.
@@ -332,10 +315,10 @@ ishtar:
   pic: "/images/4ishtar0.png"
   pic2: ''
   pic3: ''
-  tier: 6 5 5 6
   stars: '4'
   type: debuffer
   element: light
+  tier: 6 5 5 6
   leader: Critical rate -20% to Dark enemies.
   auto: Deals 73 damage.
   tap: Deals 236 damage to target，if Dark gives weakness Defense -3% for 6s.
@@ -367,10 +350,10 @@ frigga:
   pic: "/images/4frigga0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: light
+  tier: 5 5 5 5
   leader: Evasion rate +10% to Light units.
   auto: Deals 68 damage.
   tap: Deals 194 damage to target and Defense +530 for 10s.
@@ -385,10 +368,10 @@ inanna:
   pic: "/images/4inanna0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: dark
+  tier: 7 7 7 8
   leader: Tap skill damage +80 to Dark units.
   auto: Deals 80 damage.
   tap: Deals 296 damage to enemy with lowest HP with 100 additional damage if Light
@@ -398,31 +381,14 @@ inanna:
   notes: ''
   date: '2018-12-24'
   index: 102
-morrigu:
-  pic: "/images/4morrigu0.png"
-  pic2: ''
-  pic3: ''
-  tier: 7 7 7 7
-  stars: '4'
-  type: attacker
-  element: dark
-  leader: Damage +40 to Dark units.
-  auto: Deals 80 damage.
-  tap: Deals 294 damage to enemy with lowest HP with additional 100 damage if Light
-    type.
-  slide: Deals 271 (105%) damage to 3 enemies with priority to Light units.
-  drive: Deals 1417 damage to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 103
 persephone:
   pic: "/images/4persephone0.png"
   pic2: ''
   pic3: ''
-  tier: 8 8 9 9
   stars: '4'
   type: debuffer
   element: dark
+  tier: 8 8 9 9
   leader: Attack -10% to all enemies.
   auto: Deals 74 damage.
   tap: Deals 240 damage and critical -25% for 9s to target.
@@ -437,10 +403,10 @@ aten:
   pic: "/images/4aten0.png"
   pic2: ''
   pic3: ''
-  tier: 3 3 3 3
   stars: '4'
   type: tank
   element: dark
+  tier: 3 3 3 3
   leader: Defense +300 to Dark Units.
   auto: Deals 67 damage.
   tap: Deals 187 damage to target and Skill defense +45 for 10s to self.
@@ -455,10 +421,10 @@ cybele:
   pic: "/images/4cybele0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 6
   stars: '4'
   type: tank
   element: dark
+  tier: 6 4 6 6
   leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
     Ragnas).
   auto: Deals 68 damage.
@@ -475,10 +441,10 @@ hector:
   pic: "/images/4hector0.png"
   pic2: ''
   pic3: ''
-  tier: 4 4 4 4
   stars: '4'
   type: attacker
   element: fire
+  tier: 4 4 4 4
   leader: Auto damage +40 to Fire units.
   auto: Deals 80 damage.
   tap: Deals 294 damage to enemy with lowest HP with 100 additional damage if grass
@@ -493,10 +459,10 @@ neid:
   pic: "/images/4neid0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 5 7
   stars: '4'
   type: attacker
   element: fire
+  tier: 6 4 5 7
   leader: Tap damage +80 to Fire units.
   auto: Deals 81 damage.
   tap: Deals 300 damage and Bleeding (45 continuous damage every 2s) for 6s to target.
@@ -511,10 +477,10 @@ fortuna:
   pic: "/images/4fortuna0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 7
   stars: '4'
   type: buffer
   element: fire
+  tier: 6 4 6 7
   leader: Attack +8% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target and attack +200 for 8s to 1 random ally.
@@ -529,10 +495,10 @@ lady:
   pic: "/images/4lady0.png"
   pic2: ''
   pic3: ''
-  tier: 4 4 4 4
   stars: '4'
   type: tank
   element: fire
+  tier: 4 4 4 4
   leader: HP +800 to Fire units.
   auto: Deals 68 damage.
   tap: Deals 189 damage to target and Defense +540 for 10s to self.
@@ -547,10 +513,10 @@ el dorado:
   pic: "/images/4eldorado0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 4
   stars: '4'
   type: tank
   element: fire
+  tier: 6 6 6 4
   leader: Defense +300 to Fire units.
   auto: Deals 68 damage.
   tap: Deals 193 damage to target and Skill defense by +45 for 10s to self.
@@ -564,10 +530,10 @@ yaga:
   pic: "/images/4yaga0.png"
   pic2: ''
   pic3: ''
-  tier: 6 3 5 5
   stars: '4'
   type: debuffer
   element: water
+  tier: 6 3 5 5
   leader: Skill gauge charge speed -10% to Fire enemies.
   auto: Deals 74 damage.
   tap: Deals 238 damage to target and remove 30% of target skills gauge.
@@ -581,10 +547,10 @@ kirinus:
   pic: "/images/4kirinus0.png"
   pic2: ''
   pic3: ''
-  tier: 6 3 5 4
   stars: '4'
   type: buffer
   element: water
+  tier: 6 3 5 4
   leader: Skill gauge charge speed +5% to all allies.
   auto: Deals 73 damage.
   tap: Deals 231 damage to target, and agility +300 to 2 allies with highest attack.
@@ -599,10 +565,10 @@ maya:
   pic: "/images/4mayahuel0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 6
   stars: '4'
   type: buffer
   element: water
+  tier: 6 4 6 6
   leader: Skill gauge charge +4% to all allies.
   auto: Deals 73 damage.
   tap: Deals 232 damage to target and skill gauge charge speed 25% for 6s to 1 random
@@ -618,10 +584,10 @@ tisiphone:
   pic: "/images/4tisiphone0.png"
   pic2: ''
   pic3: ''
-  tier: 7 6 7 8
   stars: '4'
   type: attacker
   element: grass
+  tier: 7 6 7 8
   leader: Tap skill damage +80 to grass units.
   auto: Deals 81 damage.
   tap: Deals 75 damage plus Auto damage 3 times to target and gains Lifesteal (Absorbs
@@ -635,10 +601,10 @@ ambrosia:
   pic: "/images/4ambrosia0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: grass
+  tier: 6 6 6 8
   leader: Critical +400 to grass units.
   auto: Deals 80 damage.
   tap: Deals 293 damage to enemy with lowest HP with 100 additional damage if Water
@@ -652,10 +618,10 @@ korra:
   pic: "/images/4korra0.png"
   pic2: ''
   pic3: ''
-  tier: 7 5 7 7
   stars: '4'
   type: attacker
   element: grass
+  tier: 7 5 7 7
   leader: Attack +500 to grass units.
   auto: Deals 80 damage.
   tap: Deals 296 damage to enemy with lowest HP with 100 additional damage if Water
@@ -670,10 +636,10 @@ muse:
   pic: "/images/4muse0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 4 5
   stars: '4'
   type: debuffer
   element: grass
+  tier: 7 7 4 5
   leader: Attack -10% to Water enemies.
   auto: Deals 74 damage.
   tap: Deals 239 damage to target, and weakness Defense -3% for 6s if Water unit.
@@ -688,10 +654,10 @@ flora:
   pic: "/images/4flora0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 6
   stars: '4'
   type: buffer
   element: grass
+  tier: 6 6 6 6
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 231 damage to target and 50% chance to remove stun to 1 stunned ally.
@@ -706,10 +672,10 @@ europa:
   pic: "/images/4europa0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: grass
+  tier: 5 5 5 5
   leader: Gives Lifesteal (Absorbs 3% of the damage as HP) to grass units.
   auto: Deals 68 damage.
   tap: Deals 193 damage to target and absorb 100HP.
@@ -720,25 +686,6 @@ europa:
   notes: ''
   date: '2018-12-24'
   index: 140
-agamemnon:
-  pic: "/images/4agamemnon0.png"
-  pic2: ''
-  pic3: ''
-  tier: 7 7 6 6
-  stars: '4'
-  type: debuffer
-  element: grass
-  leader: Charge Speed -10% to Water Type Enemies.
-  auto: Deals 74 damage.
-  tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
-    remove 1 buff from target.
-  slide: Deals 454 damages to 2 enemies (prioritizing enemies with Speed Charge type
-    buffs) and 300 ignore defense and 40% chance to Apply "Time Alter" (remove 1 buff
-    and -40% Skill gauge Charge rate) for 12s.
-  drive: Deals 1194 to 3 random enemies and -30% Skill gauge Charge rate for 16s.
-  notes: ''
-  date: '2018-12-24'
-  index: 87
 bastet:
   pic: "/images/bastet0.png"
   pic2: "/images/bastet1.png"
@@ -761,10 +708,10 @@ abaddon:
   pic: "/images/abaddon0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 7 7
   stars: '5'
   type: attacker
   element: grass
+  tier: 6 6 7 7
   leader: Drive skill damage +1000 to all grass type allies. (bonus +1000 drive damage
     to all allies on Ragnas)
   auto: Deals 112 damage.
@@ -1797,3 +1744,57 @@ fenrir:
   notes: ''
   date: '2018-12-24'
   index: 112
+hermes:
+  pic: "/images/hermes0.png"
+  pic2: "/images/hermes1.png"
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: fire
+  tier: 6 6 8 9
+  leader: Attack +10% to Fire allies.
+  auto: Deals 99 damage.
+  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
+  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
+    attack +100 for 18s to 3 allies with highest attack.
+  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
+    attack +300 for 25s to 3 allies with highest attack.
+  notes: ''
+  date: '2018-12-24'
+  index: 26
+morrigu:
+  pic: "/images/4morrigu0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: dark
+  tier: 7 7 7 7
+  leader: Damage +40 to Dark units.
+  auto: Deals 80 damage.
+  tap: Deals 294 damage to enemy with lowest HP with additional 100 damage if Light
+    type.
+  slide: Deals 271 (105%) damage to 3 enemies with priority to Light units.
+  drive: Deals 1417 damage to 3 enemies with lowest HP.
+  notes: ''
+  date: '2018-12-24'
+  index: 103
+agamemnon:
+  pic: "/images/4agamemnon0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: debuffer
+  element: grass
+  tier: 7 7 6 6
+  leader: Charge Speed -10% to Water Type Enemies.
+  auto: Deals 74 damage.
+  tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
+    remove 1 buff from target.
+  slide: Deals 454 damages to 2 enemies (prioritizing enemies with Speed Charge type
+    buffs) and 300 ignore defense and 40% chance to Apply "Time Alter" (remove 1 buff
+    and -40% Skill gauge Charge rate) for 12s.
+  drive: Deals 1194 to 3 random enemies and -30% Skill gauge Charge rate for 16s.
+  notes: ''
+  date: '2018-12-24'
+  index: 87
