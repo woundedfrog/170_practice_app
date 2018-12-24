@@ -1,10 +1,8 @@
 ---
 home:
-  main: The information on this site is for the Japanese version of Destiny Child.
-    The names are thus different from the Global version. However, the stats and skills
-    of JP version is the same as the Global version of DC.
-  sub: "<strong><em>08/20/2018</em></strong> - Updated."
-  sub2:
+  main: Global and Japanese version have seperate sites.
+  sub: ''
+  sub2: ''
 sortby: This list shows the tier average of the units taken from 4 values (PVE, PVP,
   RAID, WB). Click on a unit's profile to get a more detailed tier rating of each
   game mode for that unit. <em><strong>Tier 10 > Tier 1</strong></em>
