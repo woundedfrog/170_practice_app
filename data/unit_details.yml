@@ -2982,7 +2982,7 @@ agamemnon:
   stars: '4'
   type: debuffer
   element: grass
-  tier: 7 7 6 6
+  tier: 7 7 5 5
   leader: Charge Speed -10% to Water Type Enemies.
   auto: Deals 74 damage.
   tap: Deals 240 damage to target and reduce -400 attack for 8s and 40% chance to
