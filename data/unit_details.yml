@@ -64,7 +64,7 @@ astraeas:
   stars: '5'
   type: healer
   element: grass
-  tier: 7 7 7 5
+  tier: 7 8 8 6
   leader: Instant Heal +8% to grass Allies
   auto: Deals 96 damage.
   tap: Deals 337 damage to target and Instant Heal for 214 HP and Apply "Secret Healing"
@@ -85,7 +85,7 @@ brownie:
   stars: '5'
   type: buffer
   element: grass
-  tier: 4 4 6 6
+  tier: 6 6 5 5
   leader: Skill Gauge Charge +8% to grass Allies
   auto: Deals 99 damage.
   tap: Deals 368 damage to target and gives +150 skill gauge to 2 grass Attacker.
@@ -125,11 +125,11 @@ calypso:
   stars: '5'
   type: attacker
   element: water
-  tier: 4 4 3 9
+  tier: 5 5 6 9
   leader: Attack +10% to Water Allies (Additional +8% on Worldboss)
   auto: Deals 113 damage.
   tap: Deals 530 damage to target and Additional 350 damage IF target is Debuff Type.
-  slide: Deals 400 damage + Tap Damage 3times to 1enemy(Prioritizing Debuff Type)
+  slide: Deals 400 damage + Tap Damage 3times to 1 enemy(Prioritizing Debuff Type)
     and 500 ignore defense IF target is "Poisoned". On WorldBoss Only, Apply "Tsunami"
     (Additional 700 Damage depending on the number of Water Allies in the party up
     to 10times).
@@ -142,7 +142,7 @@ chun-li:
   pic2: ''
   pic3: ''
   stars: '5'
-  type: buffer
+  type: attacker
   element: water
   tier: 7 6 7 8
   leader: Slide Skill Damage +5% to Water Allies
@@ -161,7 +161,7 @@ pantheon:
   stars: '5'
   type: buffer
   element: dark
-  tier: 6 6 9 10
+  tier: 6 6 10 10
   leader: Critical rate +15% to Dark units
   auto: Deals 99 damage.
   tap: Deals 364 damage to target and critical rate +35% for 7s to 1 random ally.
@@ -271,7 +271,7 @@ hades:
   stars: '5'
   type: tank
   element: fire
-  tier: 5 5 4 3
+  tier: 6 7 6 3
   leader: Tap Skill defense +5% to Fire units
   auto: Deals 91 damage.
   tap: Deals 313 damage to target and gains +600 barrier for 4s and Fury (saves up
@@ -309,16 +309,15 @@ eshu:
   stars: '5'
   type: tank
   element: water
-  tier: 5 4 3 3
-  leader: Deals 1703 damage to 2 random enemies and Defense +35% and +2000HP barrier
-    for 25s to 3 allies with lowest HP
+  tier: 6 6 6 9
+  leader: Slide skill damage +5% to Water allies.
   auto: Deals 91 Damage.
   tap: Deals 305 Damage, Gives +500 barrier to 5 Water allies for 8 seconds.
   slide: Deals 547 Damage, Gives Taunt (88% provocation) for 24 seconds and Reflect
     (24% damage returned to enemy) for 24sec or 2 or 7 hits (random number of hits
     applied).
   drive: Deals 1436 Damage to 2 random enemies, Gives Reflect (24% damaged returned
-    to enemy) for 16seconds or 2hits to 9allies prioritizing the front row.
+    to enemy) for 16seconds or 2 hits to 9 allies prioritizing the front row.
   notes: ''
   date: '2018-11-28'
   index: 20
@@ -329,7 +328,7 @@ epona:
   stars: '5'
   type: buffer
   element: grass
-  tier: 8 3 8 5
+  tier: 6 3 8 5
   leader: Defense +8% to grass units
   auto: Deals 99 damage
   tap: Deals 363 damages to target and Gives +20% Defense and +15% Debuff Evasion
@@ -366,7 +365,7 @@ bari:
   stars: '5'
   type: attacker
   element: water
-  tier: 7 6 7 7
+  tier: 7 7 6 7
   leader: "+5% slide damage for Water element allies"
   auto: Deal 112 auto attack damage.
   tap: Deals 476 damage to target with a 70% chance to prevent recovery (Except Vampirism
@@ -387,8 +386,8 @@ willow:
   stars: '5'
   type: buffer
   element: grass
-  tier: 5 4 5 5
-  leader: "+8% Skill Gauge Charge to all Allie"
+  tier: 5 5 5 5
+  leader: "+8% Skill Gauge Charge to all Allies"
   auto: Deal 99 auto attack damage.
   tap: Heal 330 HP twice to the ally with the lowest remaining HP.
   slide: Deal 578 damage to the target, Heal +700 HP, apply "Regeneration" (79 HP
@@ -407,7 +406,7 @@ isolde:
   stars: '5'
   type: debuffer
   element: water
-  tier: 7 7 7 7
+  tier: 7 7 5 5
   leader: "-15% attack for Fire type enemies"
   auto: Deal 101 auto attack damage.
   tap: Deal 387 damage to target with a 60% chance to Apply "Freeze" (Skill Charge
@@ -428,7 +427,7 @@ love Sitri:
   stars: '5'
   type: debuffer
   element: grass
-  tier: 5 7 5 5
+  tier: 6 8 5 5
   leader: Weakness Defense -8% to Water Types enemies
   auto: Deal 101 auto attack damage
   tap: With priority on Debuffers, Deal 390 damage and, if the target is a Debuffer
@@ -475,7 +474,7 @@ kouka:
   stars: '5'
   type: attacker
   element: fire
-  tier: 8 6 7 8
+  tier: 9 9 10 10
   leader: "+15% attack for Fire element allie"
   auto: Deal 113 auto attack damage.
   tap: Prioritizing debuffer types, Deal 484 damage to target and apply "Bleed" (Deal
@@ -510,10 +509,10 @@ calchas:
   pic: "/images/4calchas0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 6 7 6 7
   leader: Tap attack damage +40 to Light units
   auto: Deals 80 damage.
   tap: Deals 80 damage plus Auto damage 3 times to target.
@@ -527,10 +526,10 @@ maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 6 7 6 7
   leader: Attack +500 to Light units
   auto: Deals 80 damage.
   tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Dark
@@ -563,10 +562,10 @@ anemone:
   pic: "/images/anemone0.png"
   pic2: "/images/anemone1.png"
   pic3: ''
-  tier: 7 8 7 7
   stars: '5'
   type: buffer
   element: water
+  tier: 7 8 7 7
   leader: "+10% skill charge rate for water element allies"
   auto: Deal 100 auto attack damage.
   tap: Deal 380 damage to the target, priorizing an ally 2 with least HP, recover
@@ -588,7 +587,7 @@ redcross:
   stars: '5'
   type: tank
   element: dark
-  tier: 4 3 3 3
+  tier: 4 4 4 3
   leader: Tap Skill defense +5% to Dark units
   auto: Deals 91 damage
   tap: Deals 301 damage to target and gives +850 Defense and +600 barrier for 10s
@@ -627,7 +626,7 @@ maou davi:
   stars: '5'
   type: attacker
   element: fire
-  tier: 9 7 3 3
+  tier: 6 6 5 8
   leader: Slide Skills Damage +8% to Fire Allies
   auto: Deals 113 damage.
   tap: Deals 50 damage 3times to target.
@@ -663,7 +662,7 @@ morgan:
   stars: '5'
   type: attacker
   element: fire
-  tier: 6 5 7 7
+  tier: 6 6 8 8
   leader: "  +8% slide damage to fire element allies"
   auto: Deal 113 damage.
   tap: Deal 485 damage, apply Bleed (100 damage) for 8 seconds, and apply +35% crit
@@ -681,7 +680,7 @@ tirfing:
   stars: '5'
   type: attacker
   element: fire
-  tier: 7 5 5 9
+  tier: 7 5 7 10
   leader: Attack +5% to all Allies (Additional +8% on Worldboss)
   auto: Deals 113 Damages.
   tap: Deals 486 Damages to 1 enemy and Apply Bleed (80 damages per 2seconds) for
@@ -741,7 +740,7 @@ thanatos:
   stars: '5'
   type: attacker
   element: water
-  tier: 6 6 6 6
+  tier: 6 6 6 7
   leader: Drive skill damage +1000 to Water units
   auto: Deals 111 damage.
   tap: Deals 95 damage plus Auto damage 4 times to target.
@@ -759,7 +758,7 @@ cube moa:
   stars: '5'
   type: debuffer
   element: light
-  tier: 6 7 3 3
+  tier: 7 8 3 3
   leader: Dark enemy debuff evasion rate -10%
   auto: Deals 100 damage.
   tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
@@ -819,7 +818,7 @@ hildr:
   stars: '5'
   type: attacker
   element: light
-  tier: 5 4 5 6
+  tier: 6 6 5 7
   leader: "+8% slide skill damage for Light type allies"
   auto: Deal 113 auto attack damage.
   tap: Deal 486 damage and has a 65% chance to apply "Long-Range Attack" (ignore Taunt
@@ -839,7 +838,7 @@ bikini davi:
   stars: '5'
   type: buffer
   element: water
-  tier: 6 5 7 6
+  tier: 6 5 6 10
   leader: "+8% defense for all allies (additional +12% on WorldBoss)"
   auto: Deal 100 auto attack damage.
   tap: Deal 382 damage and a 70% chance to cancel 2 debuffs ('Burn' and 'Scalp').
@@ -876,7 +875,7 @@ tethys:
   stars: '5'
   type: debuffer
   element: water
-  tier: 4 4 4 6
+  tier: 4 4 5 9
   leader: Drive Gauge Charge -5% to all enemies (Additional 8% on Worldboss).
   auto: Deals 101 damage
   tap: "Deals 381 damage to target and Apply \"Poison\" (Deals 200 damages when attack
@@ -975,7 +974,7 @@ rusalka:
   stars: '5'
   type: healer
   element: water
-  tier: 5 5 4 3
+  tier: 6 6 6 5
   leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Water units.
   auto: Deals 96 damage.
   tap: Heals 233HP to 2 allies with lowest HP.
@@ -1079,10 +1078,10 @@ rednose:
   pic: "/images/4rednose0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: buffer
   element: grass
+  tier: 5 5 5 5
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target, and Defense +10% for 10s to 1 random ally.
@@ -1096,10 +1095,10 @@ titania:
   pic: "/images/4titania0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: light
+  tier: 6 6 7 8
   leader: Agility +400 to Light units
   auto: Deals 81 damage.
   tap: Deals 300 damage to enemy with lowest HP with 100 additional damage if Dark
@@ -1115,10 +1114,10 @@ victrix:
   pic: "/images/4victrix0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: light
+  tier: 6 7 7 7
   leader: Tap Damage +80 to Light units.
   auto: Deals 80 damage.
   tap: Deals 298 damage and Healing -25% for 8s to target.
@@ -1134,10 +1133,10 @@ ishtar:
   pic: "/images/4ishtar0.png"
   pic2: ''
   pic3: ''
-  tier: 6 5 5 6
   stars: '4'
   type: debuffer
   element: light
+  tier: 6 5 5 6
   leader: Critical rate -20% to Dark enemies.
   auto: Deals 73 damage.
   tap: Deals 236 damage to target，if Dark gives weakness Defense -3% for 6s.
@@ -1153,7 +1152,7 @@ heracles:
   stars: '4'
   type: tank
   element: light
-  tier: 5 5 5 5
+  tier: 6 6 6 5
   leader: Maximum Health +800 to Light units.
   auto: Deals 68 damage.
   tap: Deals 206 damage to target and gains Fury (saves up to 250% damage received
@@ -1169,10 +1168,10 @@ frigga:
   pic: "/images/4frigga0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: light
+  tier: 5 5 5 5
   leader: Evasion rate +10% to Light units.
   auto: Deals 68 damage.
   tap: Deals 194 damage to target and Defense +530 for 10s.
@@ -1187,10 +1186,10 @@ pomona:
   pic: "/images/4pomona0.png"
   pic2: ''
   pic3: ''
-  tier: 6 5 6 6
   stars: '4'
   type: healer
   element: light
+  tier: 6 5 6 6
   leader: Regeneration (Heal every 2s) +50 to Light units.
   auto: Deals 70 damage.
   tap: Deals 205 damage to target, and Healing +30% to 2 ally with lowest HP.
@@ -1204,10 +1203,10 @@ merlin:
   pic: "/images/4merlin0.png"
   pic2: ''
   pic3: ''
-  tier: 7 6 7 6
   stars: '4'
   type: healer
   element: light
+  tier: 7 6 7 6
   leader: Regeneration (Heal every 2seconds) +50 to all units.
   auto: Deals 71 damage.
   tap: Deals 210 damage to target, and Healing -40% for 12s.
@@ -1223,10 +1222,10 @@ inanna:
   pic: "/images/4inanna0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 8
   stars: '4'
   type: attacker
   element: dark
+  tier: 7 7 7 8
   leader: Tap skill damage +80 to Dark units.
   auto: Deals 80 damage.
   tap: Deals 296 damage to enemy with lowest HP with 100 additional damage if Light
@@ -1240,10 +1239,10 @@ morrigu:
   pic: "/images/4morrigu0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 7 7
   stars: '4'
   type: attacker
   element: dark
+  tier: 6 6 6 7
   leader: Damage +40 to Dark units.
   auto: Deals 80 damage.
   tap: Deals 294 damage to enemy with lowest HP with additional 100 damage if Light
@@ -1257,10 +1256,10 @@ persephone:
   pic: "/images/4persephone0.png"
   pic2: ''
   pic3: ''
-  tier: 8 8 9 9
   stars: '4'
   type: debuffer
   element: dark
+  tier: 8 8 9 9
   leader: Attack -10% to all enemies.
   auto: Deals 74 damage.
   tap: Deals 240 damage and critical -25% for 9s to target.
@@ -1275,10 +1274,10 @@ aten:
   pic: "/images/4aten0.png"
   pic2: ''
   pic3: ''
-  tier: 3 3 3 3
   stars: '4'
   type: tank
   element: dark
+  tier: 3 3 3 3
   leader: Defense +300 to Dark Units.
   auto: Deals 67 damage.
   tap: Deals 187 damage to target and Skill defense +45 for 10s to self.
@@ -1293,9 +1292,9 @@ cybele:
   pic: "/images/4cybele0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 6
   stars: '4'
   type: tank
+  tier: 6 4 6 6
   element: dark
   leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
     Ragnas).
@@ -1313,10 +1312,10 @@ zelos:
   pic: "/images/4zelos0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 6
   stars: '4'
   type: healer
   element: dark
+  tier: 6 6 6 6
   leader: Gives +50 HP Regeneration (Heal every 2s).
   auto: Deals 71 damage.
   tap: Deals 206 damage to target and 50% chance to remove enemy regeneration, Lifesteal,
@@ -1332,10 +1331,10 @@ fenrir:
   pic: "/images/4fenrir0.png"
   pic2: ''
   pic3: ''
-  tier: 4 4 6 7
   stars: '4'
   type: attacker
   element: fire
+  tier: 4 4 6 7
   leader: Attack +500 to Fire units.
   auto: Deals 80 damage.
   tap: Deals 80 damage plus Auto damage 3 times to target.
@@ -1350,10 +1349,10 @@ hector:
   pic: "/images/4hector0.png"
   pic2: ''
   pic3: ''
-  tier: 4 4 4 4
   stars: '4'
   type: attacker
   element: fire
+  tier: 4 4 4 4
   leader: Auto damage +40 to Fire units.
   auto: Deals 80 damage.
   tap: Deals 294 damage to enemy with lowest HP with 100 additional damage if grass
@@ -1368,10 +1367,10 @@ yuna:
   pic: "/images/4yuna0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 7 7
   stars: '4'
   type: attacker
   element: fire
+  tier: 5 5 7 7
   leader: Critical +400 to Fire units.
   auto: Deals 80 damage.
   tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if grass
@@ -1386,10 +1385,10 @@ neid:
   pic: "/images/4neid0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 5 7
   stars: '4'
   type: attacker
   element: fire
+  tier: 6 4 5 7
   leader: Tap damage +80 to Fire units.
   auto: Deals 81 damage.
   tap: Deals 300 damage and Bleeding (45 continuous damage every 2s) for 6s to target.
@@ -1404,10 +1403,10 @@ fortuna:
   pic: "/images/4fortuna0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 7
   stars: '4'
   type: buffer
   element: fire
+  tier: 6 4 6 7
   leader: Attack +8% to all allies.
   auto: Deals 73 damage.
   tap: Deals 229 damage to target and attack +200 for 8s to 1 random ally.
@@ -1422,10 +1421,10 @@ lady:
   pic: "/images/4lady0.png"
   pic2: ''
   pic3: ''
-  tier: 4 4 4 4
   stars: '4'
   type: tank
   element: fire
+  tier: 4 4 4 4
   leader: HP +800 to Fire units.
   auto: Deals 68 damage.
   tap: Deals 189 damage to target and Defense +540 for 10s to self.
@@ -1440,10 +1439,10 @@ el dorado:
   pic: "/images/4eldorado0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 4
   stars: '4'
   type: tank
   element: fire
+  tier: 6 6 6 4
   leader: Defense +300 to Fire units.
   auto: Deals 68 damage.
   tap: Deals 193 damage to target and Skill defense by +45 for 10s to self.
@@ -1457,10 +1456,10 @@ yaga:
   pic: "/images/4yaga0.png"
   pic2: ''
   pic3: ''
-  tier: 6 3 5 5
   stars: '4'
   type: debuffer
   element: water
+  tier: 6 3 5 5
   leader: Skill gauge charge speed -10% to Fire enemies.
   auto: Deals 74 damage.
   tap: Deals 238 damage to target and remove 30% of target skills gauge.
@@ -1474,10 +1473,10 @@ kirinus:
   pic: "/images/4kirinus0.png"
   pic2: ''
   pic3: ''
-  tier: 6 3 5 4
   stars: '4'
   type: buffer
   element: water
+  tier: 6 3 5 4
   leader: Skill gauge charge speed +5% to all allies.
   auto: Deals 73 damage.
   tap: Deals 231 damage to target, and agility +300 to 2 allies with highest attack.
@@ -1492,10 +1491,10 @@ maya:
   pic: "/images/4mayahuel0.png"
   pic2: ''
   pic3: ''
-  tier: 6 4 6 6
   stars: '4'
   type: buffer
   element: water
+  tier: 6 4 6 6
   leader: Skill gauge charge +4% to all allies.
   auto: Deals 73 damage.
   tap: Deals 232 damage to target and skill gauge charge speed 25% for 6s to 1 random
@@ -1511,10 +1510,10 @@ isis:
   pic: "/images/4isis0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 6
   stars: '4'
   type: healer
   element: water
+  tier: 6 6 6 6
   leader: Regeneration (Heal every 2seconds) +50 to Water units.
   auto: Deals 70 damage.
   tap: Deals 209HP to target, and Heals 181 to ally with lowest HP.
@@ -1528,10 +1527,10 @@ tisiphone:
   pic: "/images/4tisiphone0.png"
   pic2: ''
   pic3: ''
-  tier: 7 6 7 8
   stars: '4'
   type: attacker
   element: grass
+  tier: 6 6 7 8
   leader: Tap skill damage +80 to grass units.
   auto: Deals 81 damage.
   tap: Deals 75 damage plus Auto damage 3 times to target and gains Lifesteal (Absorbs
@@ -1545,10 +1544,10 @@ ambrosia:
   pic: "/images/4ambrosia0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 8
   stars: '4'
   type: attacker
   element: grass
+  tier: 6 6 6 8
   leader: Critical +400 to grass units.
   auto: Deals 80 damage.
   tap: Deals 293 damage to enemy with lowest HP with 100 additional damage if Water
@@ -1562,10 +1561,10 @@ korra:
   pic: "/images/4korra0.png"
   pic2: ''
   pic3: ''
-  tier: 7 5 7 7
   stars: '4'
   type: attacker
   element: grass
+  tier: 7 5 7 7
   leader: Attack +500 to grass units.
   auto: Deals 80 damage.
   tap: Deals 296 damage to enemy with lowest HP with 100 additional damage if Water
@@ -1580,10 +1579,10 @@ muse:
   pic: "/images/4muse0.png"
   pic2: ''
   pic3: ''
-  tier: 7 7 4 5
   stars: '4'
   type: debuffer
   element: grass
+  tier: 7 7 4 5
   leader: Attack -10% to Water enemies.
   auto: Deals 74 damage.
   tap: Deals 239 damage to target, and weakness Defense -3% for 6s if Water unit.
@@ -1598,10 +1597,10 @@ flora:
   pic: "/images/4flora0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 6 6
   stars: '4'
   type: buffer
   element: grass
+  tier: 6 6 6 6
   leader: Defense +7% to all allies.
   auto: Deals 73 damage.
   tap: Deals 231 damage to target and 50% chance to remove stun to 1 stunned ally.
@@ -1616,10 +1615,10 @@ europa:
   pic: "/images/4europa0.png"
   pic2: ''
   pic3: ''
-  tier: 5 5 5 5
   stars: '4'
   type: tank
   element: grass
+  tier: 5 5 5 5
   leader: Gives Lifesteal (Absorbs 3% of the damage as HP) to grass units.
   auto: Deals 68 damage.
   tap: Deals 193 damage to target and absorb 100HP.
@@ -1634,10 +1633,10 @@ selene:
   pic: "/images/4selene0.png"
   pic2: ''
   pic3: ''
-  tier: 8 6 9 6
   stars: '4'
   type: healer
   element: grass
+  tier: 8 6 9 6
   leader: Healing +8% to grass units.
   auto: Deals 70 damage.
   tap: Heals 184 HP to 2 allies with lowest hp.
@@ -1680,7 +1679,7 @@ bastet:
   stars: '5'
   type: attacker
   element: light
-  tier: 5 5 5 7
+  tier: 6 7 7 8
   leader: 'Drive skill damage +1000 to Light units. '
   auto: 'Deals 111 damage. '
   tap: "Deals Auto damage + Additional 135 damage 4 times to target. \r\nApply \"Blind\"
@@ -1698,7 +1697,7 @@ durandal:
   stars: '5'
   type: buffer
   element: dark
-  tier: 8 6 5 7
+  tier: 7 6 7 9
   leader: Critical Rate +15% to all allies (Critical Damage +30% in Devil Rumble).
   auto: Deals 100 damage.
   tap: "Deals 375 damage to target. \r\nGives +30% Critical Rate to self and 1 Attack
@@ -1707,7 +1706,7 @@ durandal:
     3 Allies (Priotizing Dark Attacker Types) for 15s. \r\nGives +1200 Slide Skill
     Damage to 3 Allies (Priotizing Dark Attacker Types) for 15s."
   drive: "Deals 2021 damage to 3 enemies (Prioritizing Light Types). \r\nApply \"Blind\"
-    (60% chance to miss) to target for 25s. \r\nGives +30% Attack to 3highest attack
+    (60% chance to miss) to target for 25s. \r\nGives +30% Attack to 3 highest attack
     Allies for 25s."
   notes: ''
   date: '2018-11-28'
@@ -1719,7 +1718,7 @@ jiseihi:
   stars: '5'
   type: attacker
   element: grass
-  tier: 6 6 9 6
+  tier: 6 6 10 9
   leader: "·Tap Damage +8% to grass Types Allies (Additional +10% In Ragna)"
   auto: "·Deals 113 damage"
   tap: "Deals 491 damage. \r\nIn Ragna, Give +1000 Weakness Skill Final Damage to
@@ -1738,7 +1737,7 @@ luna:
   stars: '5'
   type: buffer
   element: light
-  tier: 3 3 3 7
+  tier: 4 4 4 9
   leader: Skill Gauge Charge +8% to Light Types Allies (Additional +8% on Worldboss)
   auto: Deals 100 damage.
   tap: "Deals 382 damage to target. \r\n70% chance to remove \"Petrify\" from 2 \"Petrified\"
@@ -1759,7 +1758,7 @@ medusa:
   stars: '5'
   type: debuffer
   element: dark
-  tier: 4 4 3 3
+  tier: 6 6 3 3
   leader: Debuff resist +15% from Light Types Enemies.
   auto: Deals 101 damage.
   tap: "·Deals 390 damage to target. \r\n·Reduce 12% Attack to target for 10s."
@@ -1778,7 +1777,7 @@ ruin:
   stars: '5'
   type: debuffer
   element: grass
-  tier: 6 6 5 5
+  tier: 6 7 5 5
   leader: Defense -15% to Water Types Enemies.
   auto: Deals 101 damage.
   tap: "Deals 390 damage to highest attack enemy. \r\nReduce -350 Defense to target."
@@ -1796,10 +1795,10 @@ abaddon:
   pic: "/images/abaddon0.png"
   pic2: ''
   pic3: ''
-  tier: 6 6 7 7
   stars: '5'
   type: attacker
   element: grass
+  tier: 6 6 7 7
   leader: Drive skill damage +1000 to all grass type allies. (bonus +1000 drive damage
     to all allies on Ragnas)
   auto: Deals 112 damage.
@@ -1834,7 +1833,7 @@ mafdet:
   stars: '5'
   type: attacker
   element: light
-  tier: 9 9 8 8
+  tier: 9 9 9 9
   leader: Drive skill damage +10% to Light units
   auto: Deals 112 damage.
   tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
@@ -1878,7 +1877,7 @@ hatsune miku:
   stars: '5'
   type: buffer
   element: water
-  tier: 5 4 5 3
+  tier: 5 4 9 8
   leader: "  +8% tap damage for water allies. Additional +8% in Ragna."
   auto: Deals 99 damage.
   tap: Deal 368 damage to target and grant +30% heal/regen rate to 3 water allies
@@ -1898,7 +1897,7 @@ elizabeth:
   stars: '5'
   type: attacker
   element: dark
-  tier: 6 6 5 6
+  tier: 6 6 7 8
   leader: Slide skill damage +4% to Dark units
   auto: Deals 111 damage.
   tap: Deals 120 damage plus Auto damage 4 times to target.
@@ -1915,7 +1914,7 @@ warwolf:
   stars: '5'
   type: buffer
   element: dark
-  tier: 3 3 8 5
+  tier: 3 4 8 7
   leader: Attack +10% to Dark Allies (Additional +5% in Ragna)
   auto: Deals 253 damage.
   tap: Deals 376 damage to target and Give +12% Attack to highest attack ally and
@@ -1991,7 +1990,7 @@ nevan (light):
   stars: '5'
   type: buffer
   element: light
-  tier: 5 5 5 5
+  tier: 6 6 9 7
   leader: "+10% Debuff Evasion for Light Allies | Additional +10% in Ragna."
   auto: Deal 256 damage.
   tap: Deal 1245 Damage & 72.7% chance to remove "Death Heal" debuff from 2 allies.
@@ -2010,7 +2009,7 @@ pallas:
   stars: '5'
   type: buffer
   element: dark
-  tier: 6 7 6 6
+  tier: 6 8 6 6
   leader: -10% duration of debuffs (Except "Wither") (Additional -10% in Devil Rumble).
   auto: Deal 256 damage.
   tap: Deal 1242 damage to target and a 72% change to apply "Target" (Concentrate
@@ -2030,7 +2029,7 @@ athena:
   stars: '5'
   type: tank
   element: light
-  tier: 7 6 3 3
+  tier: 6 8 4 4
   leader: "+1500 max HP for all allies (Additional +2000 in Devil Rumble)"
   auto: Deal 226 damage.
   tap: Deal 1003 damage to target, a 72.7% chance to apply "Debuff Provocation" on
@@ -2051,7 +2050,7 @@ brigette:
   stars: '5'
   type: tank
   element: fire
-  tier: 6 5 4 5
+  tier: 6 5 5 5
   leader: "+10% Defense for Fire allies (Additional +10% in Underground)."
   auto: Deal 92 attack damage.
   tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-Barrier"
@@ -2115,7 +2114,7 @@ marie rose:
   stars: '5'
   type: tank
   element: grass
-  tier: 9 8 7 3
+  tier: 7 7 7 5
   leader: "+8% skill damage defense for wood type allies."
   auto: Deal 228 damage.
   tap: Deal 1020 damage, increase 21.3% all skill damage defense (Cancels after 24
@@ -2191,7 +2190,7 @@ eve:
   stars: '5'
   type: attacker
   element: water
-  tier: 9 9 9 10
+  tier: 10 10 10 10
   leader: Drive skill damage +10% to Water units
   auto: Deals 113 damage.
   tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
@@ -2227,7 +2226,7 @@ cleopatra:
   stars: '5'
   type: attacker
   element: light
-  tier: 9 7.5 8.5 8
+  tier: 9 9 10 10
   leader: Attack +10% to Light Allies
   auto: Deals 113 damage.
   tap: Deals 477 damage to target and Additional 100 damage IF target is Dark Type
@@ -2248,7 +2247,7 @@ aria:
   stars: '5'
   type: buffer
   element: light
-  tier: 5 5 6 7
+  tier: 5 5 6 10
   leader: HP +800 to all allies (bonus +600 on Ragnas)
   auto: Deals 99 damage.
   tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
@@ -2324,9 +2323,9 @@ scuba mona:
   pic2: "/images/scubamona1.png"
   pic3: ''
   stars: '5'
-  type: buffer
+  type: debuffer
   element: fire
-  tier: 6 5 6 7
+  tier: 6 6 7 7
   leader: "-15% skill charge speed for all enemies."
   auto: Deal 101 auto attack damage.
   tap: Deal 392 damage and -350 defense to target for 8 second.
@@ -2346,7 +2345,7 @@ magician ohad:
   stars: '5'
   type: attacker
   element: grass
-  tier: 6 6 6 6.5
+  tier: 6 6 7 9
   leader: "+12% attack for Grass type allies."
   auto: Deal 113 attack damage.
   tap: Deal 482 damage to target. Apply "Lifesteal" on herself (Recovers 15% of the
@@ -2367,7 +2366,7 @@ magician ailill:
   stars: '5'
   type: attacker
   element: fire
-  tier: 6 5 5 8
+  tier: 6 5 7 8
   leader: "+8% Slide skill damage for all Fire allies."
   auto: Deal 113 auto attack damage.
   tap: Deal 486 damage to target. For WorldBoss Only apply "Fire Prison" (additional
@@ -2385,7 +2384,7 @@ party star medb:
   stars: '5'
   type: buffer
   element: fire
-  tier: 6 6 5 7
+  tier: 6 6 7 10
   leader: "+10% skill gauge increase for Fire type allies. (Increase WeakPoint damage
     + 10% in WorldBoss)"
   auto: deal 100 auto attack damage.
@@ -2408,7 +2407,7 @@ maris:
   stars: '5'
   type: buffer
   element: water
-  tier: 9 8 7 10
+  tier: 8 8 8 10
   leader: Tap Skill defense +5% to Water units.
   auto: Deals 92 damage.
   tap: Deals 314 damage to target and absorb 26% of the damage as HP.
@@ -2426,7 +2425,7 @@ sitri:
   stars: '5'
   type: buffer
   element: light
-  tier: 6 6 9 10
+  tier: 6 7 10 10
   leader: Maximum hp +1000 to all Light Allies (+3000 additional hp on Worldboss)
   auto: Deals 100 Damages.
   tap: Deals 380 Damages to 1 enemy. On Worldboss Only, removes 5 Attack and Defense
@@ -2447,7 +2446,7 @@ lady bathory:
   stars: '5'
   type: debuffer
   element: grass
-  tier: 7 6 6 7
+  tier: 7 9 6 7
   leader: Final drive skill damage for all enemies -25% (Additional, deduce DoT debuff
     damage -50% in Devil Rumble).
   auto: Deal 102 auto attack damage.
@@ -2469,7 +2468,7 @@ mysterious saturn:
   stars: '5'
   type: attacker
   element: dark
-  tier: 7 7 7 10
+  tier: 7 7 10 10
   leader: "+10% increase WeakPoint skill damage for dark type allies (Additional +10%
     in Raid Boss)."
   auto: Deal 113 auto attack damage.
@@ -2488,7 +2487,7 @@ exchange student eve:
   stars: '5'
   type: debuffer
   element: fire
-  tier: 7 7 7 7
+  tier: 7 7 5 5
   leader: "-15% debuff evasion for grass enemies."
   auto: Deal 102 auto attack damage.
   tap: Prioritizing enemies with "Endure" buff, deal 394 to 2 enemies and a 75% chance
@@ -2508,7 +2507,7 @@ erato:
   stars: '4'
   type: buffer
   element: light
-  tier: 6 6 9 8
+  tier: 6 6 8 7
   leader: Maximum HP +500 to all allies
   auto: Deals 73 damage
   tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
@@ -2562,7 +2561,7 @@ melpomene:
   stars: '4'
   type: buffer
   element: dark
-  tier: 4 4 7 7
+  tier: 6 6 7 7
   leader: Critical rate +10% to all allies.
   auto: Deals 73 damage.
   tap: Deals 233 damage to target and critical rate +30% for 10s to 1 random ally.
@@ -2580,7 +2579,7 @@ danu:
   stars: '4'
   type: attacker
   element: water
-  tier: 5 5 7 7
+  tier: 6 5 6 7
   leader: Critical +400 to Water units.
   auto: Deals 81 damage.
   tap: Deals 300 damage and Poison (Deals 150 damage when enemy attacks and recieves
@@ -2827,7 +2826,7 @@ bast:
   stars: '4'
   type: buffer
   element: light
-  tier: 7 8 9 6
+  tier: 7 6 8 7
   leader: Weakness Defense +5% to Light Allies.
   auto: Deals 73 damage.
   tap: Deals 223 damage and 60% chance to remove "Confusion" from 1 allies.
@@ -2845,7 +2844,7 @@ daphne:
   stars: '4'
   type: healer
   element: fire
-  tier: 7 6 7 6
+  tier: 7 5 7 6
   leader: Regeneration (Heal every 2seconds)s +50 to all allies.
   auto: Deals 70 damage.
   tap: Deals 206 damage to target, instant heal 189 to 2 allies with lowest HP.
@@ -2863,7 +2862,7 @@ arges:
   stars: '4'
   type: debuffer
   element: water
-  tier: 6 5 4 3
+  tier: 6 5 3 3
   leader: Attack -10% to Fire enemies.
   auto: Deals 74 damage.
   tap: Deals 237 damage to target, and remove 30% of target skill gauge.
@@ -2880,11 +2879,11 @@ lisa:
   type: buffer
   element: water
   tier: 6 6 7 9
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: Attack +8% to all allies.
+  auto: Deals 54 damage.
+  tap: Deals 149 damage to target and skill gauge charge rate +20% for 8s to 1 ally with highest attack.
+  slide: Deals 307 damage to target and attack +500 for 14s to all allies.
+  drive: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and skill gauge charge +40% for 23s to 2 allies with highest attack.
   notes: ''
   date: '2018-11-28'
   index: 157
@@ -2896,11 +2895,11 @@ mona:
   type: tank
   element: dark
   tier: 4 3 3 1
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: Maximum HP +400 to Dark units.
+  auto: Deals 51 damage.
+  tap: Deals 126 damage to target and gains Lifesteal (Absorbs 50HP per hit) for 2 turns.
+  slide: Deals 281 damage to target and gives +30% Defense and Taunt (84% provocation) for 10s to self.
+  drive: Deals 622 damage to 3 random enemies and +1200 HP barrier for 15s to all allies.
   notes: ''
   date: '2018-11-28'
   index: 158
@@ -2912,11 +2911,11 @@ tiamat:
   type: debuffer
   element: fire
   tier: 6 6 7 8
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: Defense -7% to all enemies.
+  auto: Deals 54 damage.
+  tap: Deals 156 damage and Defense -250 for 8s to target.
+  slide: Deals 306 damage and Defense -4% for 12s to 2 random enemies.
+  drive: Deals 831 damage and Defense -17% for 14s to 3 random enemies.
   notes: ''
   date: '2018-11-28'
   index: 159
@@ -2928,11 +2927,11 @@ davi:
   type: attacker
   element: fire
   tier: 5 4 3 6
-  leader: ''
-  auto: ''
-  tap: ''
-  slide: ''
-  drive: ''
+  leader: Slide damage +60 to Fire units.
+  auto: Deals 58 damage.
+  tap: Deals 193 damage and Bleeding (70 continuous damage) for 6s to target.
+  slide: Deals 405 damage to all enemies.
+  drive: Deals 949 damage to all enemies and Bleeding (120 continuous damage) for 10s to 3 enemies with highest HP.
   notes: ''
   date: '2018-11-28'
   index: 160
@@ -2963,7 +2962,7 @@ pretty mars:
   stars: '5'
   type: attacker
   element: dark
-  tier: 7 7 7 7
+  tier: 7 8 10 10
   leader: "+15% increase attack power for dark type allies."
   auto: Deal 113 auto attack damage.
   tap: "Deal 485 damage to target. \r\nIncrease own critical chance to +45% for 12
@@ -3001,7 +3000,7 @@ neptune:
   stars: '5'
   type: buffer
   element: light
-  tier: 7 7 7 10
+  tier: 7 7 10 9
   leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
     Increase instant heal +10%)."
   auto: Deal 101 auto attack damage.
