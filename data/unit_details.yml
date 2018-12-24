@@ -52,24 +52,6 @@ maat:
   notes: ''
   date: '2018-12-24'
   index: 33
-hestia:
-  pic: "/images/hestia0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 8 8 8 8
-  leader: Drive skill damage +10% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
-    type.
-  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
-    with lowest HP with 120 additional damage if debuff type.
-  drive: Deals 2317 damage to all enemies.
-  notes: ''
-  date: '2018-12-24'
-  index: 27
 hermes:
   pic: "/images/hermes0.png"
   pic2: "/images/hermes1.png"
@@ -78,9 +60,7 @@ hermes:
   type: buffer
   element: fire
   tier: 6 6 8 9
-  leader: Deals 1419 damage to 2 random enemies and gives "Lifesteal" (20% of damage
-    dealt restores HP (Doubled if grass allies)) to all allies
-  auto: Deals 99 damage.
+  leader: Attack +10% to Fire allies.
   tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
   slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
     attack +100 for 18s to 3 allies with highest attack.
@@ -129,24 +109,6 @@ hades:
   notes: ''
   date: '2018-12-24'
   index: 24
-frey:
-  pic: "/images/frey0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 9 9 9 9
-  leader: Drive skill damage +1000 to Dark Units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
-    self.
-  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
-  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
-    enemy according to debuff) to all enemies.
-  notes: ''
-  date: '2018-12-24'
-  index: 22
 orora:
   pic: "/images/4orora0.png"
   pic2: ''
@@ -200,24 +162,6 @@ maiden detective:
   notes: ''
   date: '2018-12-24'
   index: 53
-metis:
-  pic: "/images/metis0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: dark
-  tier: 6 6 7 3
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Dark units
-  auto: Deals 96 damage.
-  tap: Deals 335 damage to target and heals 201HP to ally with lowest HP.
-  slide: Gives 1.5%HP+21HP Regeneration (Heal every 2seconds) for 10s and Immortality
-    (HP won't go under 1) for 10s to 2 allies with lowest HP.
-  drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
-    unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 56
 thanatos:
   pic: "/images/thanatos0.png"
   pic2: ''
@@ -437,25 +381,6 @@ frigga:
   notes: ''
   date: '2018-12-24'
   index: 98
-merlin:
-  pic: "/images/4merlin0.png"
-  pic2: ''
-  pic3: ''
-  tier: 7 6 7 6
-  stars: '4'
-  type: healer
-  element: light
-  leader: Regeneration (Heal every 2seconds) +50 to all units.
-  auto: Deals 71 damage.
-  tap: Deals 210 damage to target, and Healing -40% for 12s.
-  slide: Deals 372 damage to target, instant heal 516HP and Regeneration (Heal every
-    2s) 140 for 12s to 2 allies with lowest HP.
-  drive: Deals 854 damage to 2 random enemies, 110HP Regeneration (Heal every 2s)
-    and 50HP additional Regeneration (Heal every 2s) in the case of a damage debuff
-    for 18s to 3 allies lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 100
 inanna:
   pic: "/images/4inanna0.png"
   pic2: ''
@@ -546,24 +471,6 @@ cybele:
   notes: ''
   date: '2018-12-24'
   index: 110
-fenrir:
-  pic: "/images/4fenrir0.png"
-  pic2: ''
-  pic3: ''
-  tier: 4 4 6 7
-  stars: '4'
-  type: attacker
-  element: fire
-  leader: Attack +500 to Fire units.
-  auto: Deals 80 damage.
-  tap: Deals 80 damage plus Auto damage 3 times to target.
-  slide: Deals 458 damage to 2 enemies and Bleeding (60 continuous damage every 2s)
-    for 10s, with 80 additional damage if grass type.
-  drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
-    2s) for 8s.
-  notes: ''
-  date: '2018-12-24'
-  index: 112
 hector:
   pic: "/images/4hector0.png"
   pic2: ''
@@ -582,24 +489,6 @@ hector:
   notes: ''
   date: '2018-12-24'
   index: 113
-yuna:
-  pic: "/images/4yuna0.png"
-  pic2: ''
-  pic3: ''
-  tier: 5 5 7 7
-  stars: '4'
-  type: attacker
-  element: fire
-  leader: Critical +400 to Fire units.
-  auto: Deals 80 damage.
-  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if grass
-    type.
-  slide: Deals 560 damage 3 enemies with priority to grass type with 200 additional
-    damage if grass type.
-  drive: Deals 1310 damage to 4 random enemies.
-  notes: ''
-  date: '2018-12-24'
-  index: 114
 neid:
   pic: "/images/4neid0.png"
   pic2: ''
@@ -831,25 +720,6 @@ europa:
   notes: ''
   date: '2018-12-24'
   index: 140
-selene:
-  pic: "/images/4selene0.png"
-  pic2: ''
-  pic3: ''
-  tier: 8 6 9 6
-  stars: '4'
-  type: healer
-  element: grass
-  leader: Healing +8% to grass units.
-  auto: Deals 70 damage.
-  tap: Heals 184 HP to 2 allies with lowest hp.
-  slide: Heals 381HP and 110HP Regeneration (Heal every 2seconds) for 10s to 3 allies
-    with lowest HP.
-  drive: Deals 841 damage to 2 random enemies, and gives 110HP Regeneration (Heal
-    every 2s) for 18s to 3 allies with lowest HP. If debuffed additional 60HP Regeneration
-    (Heal every 2seconds)
-  notes: ''
-  date: '2018-12-24'
-  index: 141
 agamemnon:
   pic: "/images/4agamemnon0.png"
   pic2: ''
@@ -905,25 +775,6 @@ abaddon:
   notes: ''
   date: '2018-12-24'
   index: 1
-mafdet:
-  pic: "/images/mafdet0.png"
-  pic2: "/images/mafdet1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 9 9 8 8
-  leader: Drive skill damage +10% to Light units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
-    type.
-  slide: Deals 797 damage plus 350 additional damage and heal block (excludes Lifesteal
-    and absorption) for 16s to 3 enemies with lowest HP.
-  drive: Deals 2341 damage to all enemies and heal block (excludes Lifesteal and absorption)
-    for 25s to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 30
 elizabeth:
   pic: "/images/elizabeth0.png"
   pic2: ''
@@ -1014,24 +865,6 @@ dana:
   notes: ''
   date: '2018-12-24'
   index: 15
-erato:
-  pic: "/images/4erato0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: light
-  tier: 6 6 9 8
-  leader: Maximum HP +500 to all allies
-  auto: Deals 73 damage
-  tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
-  slide: Gives 60 HP Regeneration for 16s to 2 allies with lowest HP and 70% chance
-    to remove bleeding and poison debuff from 2 allies.
-  drive: Deals 1070 damage to 2 random enemies, give Reflect (returns 10% of damaged
-    received) for 20s to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 92
 neman:
   pic: "/images/4nevan0.png"
   pic2: ''
@@ -1122,42 +955,6 @@ amor:
   notes: ''
   date: '2018-12-24'
   index: 135
-elysium:
-  pic: "/images/4elysium0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: water
-  tier: 7 9 8 9
-  leader: Tap damage +80 to Water units.
-  auto: Deals 80 damage.
-  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
-    type.
-  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
-    attacks) for 3 turns to 3 enemies with lowest HP.
-  drive: Deals 1422 damage to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 123
-leda:
-  pic: "/images/4leda0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: light
-  tier: 10 6 9 9
-  leader: Healing +2.5% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
-  slide: Gives Regeneration (Heal every 2s) ability +30% to all allies and 60HP Regeneration
-    (Heal every 2s) for 16s to 2 allies with lowest HP.
-  drive: Deals 1108 damage to 2 random enemies and give Lifesteal (Absorbs 20% of
-    the damage as HP) for 20s to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 96
 hat-trick:
   pic: "/images/4hat-trick0.png"
   pic2: ''
@@ -1315,24 +1112,6 @@ artemis:
   notes: ''
   date: '2018-12-24'
   index: 104
-daphne:
-  pic: "/images/4daphne0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: healer
-  element: fire
-  tier: 7 6 7 6
-  leader: Regeneration (Heal every 2seconds)s +50 to all allies.
-  auto: Deals 70 damage.
-  tap: Deals 206 damage to target, instant heal 189 to 2 allies with lowest HP.
-  slide: Gives continous heal 120 HP and 500 HP barrier for 14s to 3 allies with lowest
-    HP .
-  drive: Gives 1000 HP instant heal to 3 allies with lowest HP, additional 240 HP
-    instant heal if Fire type.
-  notes: ''
-  date: '2018-12-24'
-  index: 121
 arges:
   pic: "/images/4arges0.png"
   pic2: ''
@@ -1368,24 +1147,6 @@ chang'e:
   notes: ''
   date: '2018-12-24'
   index: 70
-eve:
-  pic: "/images/eve0.png"
-  pic2: "/images/eve1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 10 10 10 10
-  leader: Drive skill damage +10% to Water units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
-    Defense
-  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
-    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
-  drive: Deals 2437 damage to all enemies.
-  notes: ''
-  date: '2018-12-24'
-  index: 21
 krampus:
   pic: "/images/krampus0.png"
   pic2: "/images/krampus1.png"
@@ -1439,23 +1200,6 @@ freesia:
   notes: ''
   date: '2018-12-24'
   index: 116
-medb:
-  pic: "/images/medb0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 6 6 10 10
-  leader: Tap damage +5% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 475 damage to target with 150 additional damage if enemy is buffed.
-  slide: Deals 100 damage plus Tap damage (including bonus damage effect on Tap skill)
-    2 times to 2 random enemies.
-  drive: Deals 2355 damage to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 58
 pomona:
   pic: "/images/4pomona0.png"
   pic2: ''
@@ -1509,25 +1253,6 @@ zelos:
   notes: ''
   date: '2018-12-24'
   index: 111
-syrinx:
-  pic: "/images/syrinx0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: grass
-  tier: 9 10 10 6
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
-  auto: Deals 96 damage.
-  tap: Deals 335 damage to target and gives Invincibility for 10s or 2 hits to ally
-    with highest attack.
-  slide: Gives 141HP Regeneration (Heal every 2seconds) for 14s and Invincibility
-    for 20s or 4 hits to 2 allies with lowest HP.
-  drive: Gives 199HP Regeneration (Heal every 2seconds) for 16s and Invincibility
-    for 15s or 3 hits to 3 allies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 81
 jupiter:
   pic: "/images/jupiter0.png"
   pic2: "/images/jupiter1.png"
@@ -1777,3 +1502,298 @@ naias:
   notes: ''
   date: '2018-12-24'
   index: 72
+eve:
+  pic: "/images/eve0.png"
+  pic2: "/images/eve1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 10 10 10 10
+  leader: Drive skill damage +10% to Water units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
+    Defense
+  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
+    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
+  drive: Deals 2437 damage to all enemies.
+  notes: Eve's offensive capabilities are over the roof, as her entire kit is to melt
+    the enemy with the strongest poison slide in the game combined with a 5-man AoE
+    drive.
+  date: '2018-12-24'
+  index: 21
+mafdet:
+  pic: "/images/mafdet0.png"
+  pic2: "/images/mafdet1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 8 10 8 8
+  leader: Drive skill damage +10% to Light units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
+    type.
+  slide: Deals 797 damage plus 350 additional damage and heal block (excludes Lifesteal
+    and absorption) for 16s to 3 enemies with lowest HP.
+  drive: Deals 2341 damage to all enemies and heal block (excludes Lifesteal and absorption)
+    for 25s to 3 enemies with lowest HP.
+  notes: Mafdet is very strong in PvP, especially against linups with healers. Mafdet
+    is probably the reason why healers in general are not good in PvP.
+  date: '2018-12-24'
+  index: 30
+frey:
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 9 9 9 9
+  leader: Drive skill damage +1000 to Dark Units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
+    self.
+  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
+  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
+    enemy according to debuff) to all enemies.
+  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
+    good gear. Although he may seem lackluster early, with higher unbinds he becomes
+    probably the strongest attacker in the game.
+  date: '2018-12-24'
+  index: 22
+hestia:
+  pic: "/images/hestia0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 8 8 8 8
+  leader: Drive skill damage +10% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
+    type.
+  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
+    with lowest HP with 120 additional damage if debuff type.
+  drive: Deals 2317 damage to all enemies.
+  notes: Not the best unit in multitarget, and not the best unit in single target.
+    Hestia is just solid overall, but not best in slot
+  date: '2018-12-24'
+  index: 27
+medb:
+  pic: "/images/medb0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 6 6 10 10
+  leader: Tap damage +5% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 475 damage to target with 150 additional damage if enemy is buffed.
+  slide: Deals 100 damage plus Tap damage (including bonus damage effect on Tap skill)
+    2 times to 2 random enemies.
+  drive: Deals 2355 damage to 3 enemies with lowest HP.
+  notes: "Medb is the best fire attacker against single target, and a strong single
+    attacker overall across all elements. \r\nHowever being able to target the lowest
+    HP enemy is incredibly important, and without that Medb has alot of issues in
+    Multitarget matchups"
+  date: '2018-12-24'
+  index: 58
+elysium:
+  pic: "/images/4elysium0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: water
+  tier: 9 9 8 9
+  leader: Tap damage +80 to Water units.
+  auto: Deals 80 damage.
+  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
+    type.
+  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
+    attacks) for 3 turns to 3 enemies with lowest HP.
+  drive: Deals 1422 damage to 3 enemies with lowest HP.
+  notes: "\"Elysion requires multiple uncaps before she starts to shine, but as a
+    four star, she should be far easy to aquire copies than her five star peers. \r\nAt
+    +2 and above uncaps, her poison will be as strong as, if not stronger than Eve's\""
+  date: '2018-12-24'
+  index: 123
+yuna:
+  pic: "/images/4yuna0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: fire
+  tier: 5 5 7 7
+  leader: Critical +400 to Fire units.
+  auto: Deals 80 damage.
+  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if grass
+    type.
+  slide: Deals 560 damage 3 enemies with priority to grass type with 200 additional
+    damage if grass type.
+  drive: Deals 1310 damage to 4 random enemies.
+  notes: Yuna has decent slide attack spread, and is a fine alternative in ragna (especially
+    season 0) when uncapped.
+  date: '2018-12-24'
+  index: 114
+syrinx:
+  pic: "/images/syrinx0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: grass
+  tier: 9 10 10 6
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and gives Invincibility for 10s or 2 hits to ally
+    with highest attack.
+  slide: Gives 141HP Regeneration (Heal every 2seconds) for 14s and Invincibility
+    for 20s or 4 hits to 2 allies with lowest HP.
+  drive: Gives 199HP Regeneration (Heal every 2seconds) for 16s and Invincibility
+    for 15s or 3 hits to 3 allies with lowest HP.
+  notes: "Syrinx is the best PVP healer as she doesn't get completely shut down by
+    Mafdet. \r\nFortitude protects your team from Ragna Drives"
+  date: '2018-12-24'
+  index: 81
+leda:
+  pic: "/images/4leda0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: buffer
+  element: light
+  tier: 10 6 9 9
+  leader: Healing +2.5% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
+  slide: Gives Regeneration (Heal every 2s) ability +30% to all allies and 60HP Regeneration
+    (Heal every 2s) for 16s to 2 allies with lowest HP.
+  drive: Deals 1108 damage to 2 random enemies and give Lifesteal (Absorbs 20% of
+    the damage as HP) for 20s to 2 allies with lowest HP.
+  notes: "Leda is one of the strongest healers in the game. Her regen scales well
+    with uncaps, and as a support her slide skill cooldown is 7 compared to the healer
+    cooldown of 10. \r\nHowever Leda requires uncaps to be an effective healer as
+    her base healing is low"
+  date: '2018-12-24'
+  index: 96
+metis:
+  pic: "/images/metis0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: dark
+  tier: 6 6 7 3
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Dark units
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and heals 201HP to ally with lowest HP.
+  slide: Gives 1.5%HP+21HP Regeneration (Heal every 2seconds) for 10s and Immortality
+    (HP won't go under 1) for 10s to 2 allies with lowest HP.
+  drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
+    unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
+  notes: "Metis's drive skill provides a large attack boost, which works with Fever.
+    \r\nHer skillset also helps you survive enemy fever, with Immortality and Invincibility.
+    \r\nOverall a very good offensive healer to help squeeze in more damage."
+  date: '2018-12-24'
+  index: 56
+erato:
+  pic: "/images/4erato0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: buffer
+  element: light
+  tier: 6 6 9 8
+  leader: Maximum HP +500 to all allies
+  auto: Deals 73 damage
+  tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
+  slide: Gives 60 HP Regeneration for 16s to 2 allies with lowest HP and 70% chance
+    to remove bleeding and poison debuff from 2 allies.
+  drive: Deals 1070 damage to 2 random enemies, give Reflect (returns 10% of damaged
+    received) for 20s to 2 allies with lowest HP.
+  notes: "Erato not only functions as a healer, she removes most debuffs making her
+    extremely useful for certain ragnas. \r\nHowever Erato requires multiple uncaps
+    to function as a healer as her base healing is low."
+  date: '2018-12-24'
+  index: 92
+selene:
+  pic: "/images/4selene0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: healer
+  element: grass
+  tier: 8 6 9 6
+  leader: Healing +8% to grass units.
+  auto: Deals 70 damage.
+  tap: Heals 184 HP to 2 allies with lowest hp.
+  slide: Heals 381HP and 110HP Regeneration (Heal every 2seconds) for 10s to 3 allies
+    with lowest HP.
+  drive: Deals 841 damage to 2 random enemies, and gives 110HP Regeneration (Heal
+    every 2s) for 18s to 3 allies with lowest HP. If debuffed additional 60HP Regeneration
+    (Heal every 2seconds)
+  notes: Selene provides a large amount of healing straight out of the box. She is
+    the best entry healer and effective even without uncaps
+  date: '2018-12-24'
+  index: 141
+daphne:
+  pic: "/images/4daphne0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: healer
+  element: fire
+  tier: 7 6 7 6
+  leader: Regeneration (Heal every 2seconds)s +50 to all allies.
+  auto: Deals 70 damage.
+  tap: Deals 206 damage to target, instant heal 189 to 2 allies with lowest HP.
+  slide: Gives continous heal 120 HP and 500 HP barrier for 14s to 3 allies with lowest
+    HP .
+  drive: Gives 1000 HP instant heal to 3 allies with lowest HP, additional 240 HP
+    instant heal if Fire type.
+  notes: Barriers don't stack, so at many times her barrier is useless
+  date: '2018-12-24'
+  index: 121
+merlin:
+  pic: "/images/4merlin0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: healer
+  element: light
+  tier: 7 6 7 6
+  leader: Regeneration (Heal every 2seconds) +50 to all units.
+  auto: Deals 71 damage.
+  tap: Deals 210 damage to target, and Healing -40% for 12s.
+  slide: Deals 372 damage to target, instant heal 516HP and Regeneration (Heal every
+    2s) 140 for 12s to 2 allies with lowest HP.
+  drive: Deals 854 damage to 2 random enemies, 110HP Regeneration (Heal every 2s)
+    and 50HP additional Regeneration (Heal every 2s) in the case of a damage debuff
+    for 18s to 3 allies lowest HP.
+  notes: Merlin provides a large amount of healing straight out of the box. In general
+    Selene is better as she heals 3 targets vrs 2
+  date: '2018-12-24'
+  index: 100
+fenrir:
+  pic: "/images/4fenrir0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: fire
+  tier: 8 8 5 7
+  leader: Attack +500 to Fire units.
+  auto: Deals 80 damage.
+  tap: Deals 275 damage 3 times to target.
+  slide: Deals 458 damage to 2 enemies and Bleeding (60 continuous damage every 2s)
+    for 10s, with 80 additional damage if grass type.
+  drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
+    2s) for 8s.
+  notes: ''
+  date: '2018-12-24'
+  index: 112
