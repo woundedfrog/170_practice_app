@@ -1,0 +1,62 @@
+<% if session[:message] %>
+  <p class="message"><%= session.delete(:message) %></p>
+<% end %>
+    <div class="container">
+      <h4>NOTE!</h4>
+      <h6><%== @message_note['sortby'] %></h6>
+    </div>
+
+<div class="container sort-buttons">
+  <button type="button" class="btn btn-warning btn-xs" id="units" onClick="return showAllUnits('units')">Show all</button>
+  <button type="button" class="btn btn-warning btn-xs" id="attacker" onClick="return showUnitsOnly('attacker')">Attackers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="tank" onClick="return showUnitsOnly('tank')">Tanks</button>
+  <button type="button" class="btn btn-warning btn-xs" id="healer" onClick="return showUnitsOnly('healer')">Healers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="buffer" onClick="return showUnitsOnly('buffer')">Buffers</button>
+  <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
+
+  <button type="button" class="btn btn-warning btn-xs" id="0" onClick="return showUnitsTier('0')">PVE</button>
+  <button type="button" class="btn btn-warning btn-xs" id="1" onClick="return showUnitsTier('1')">PVP</button>
+  <button type="button" class="btn btn-warning btn-xs" id="2" onClick="return showUnitsTier('2')">RAIDS</button>
+  <button type="button" class="btn btn-warning btn-xs" id="3" onClick="return showUnitsTier('3')">WORLDBOSS</button>
+</div>
+
+<% @sorted_catagories.each_with_index do |units, idx| %>
+  <div class="main-container conatiner">
+  <h4 class="container catagory_div <%= idx %>" id="sort_by_title"><%= catagory(idx) %></h4>
+  <% @sorted_arr[1].each do |catagory_value| %>
+
+  <div class="catagory_div <%= idx %>">
+    <div class="container">
+      <% type = @sorted_arr[0] %>
+      <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory_value.capitalize %></h5>
+    </div>
+
+  <div class="container">
+      <div class="row justify-content-center">
+      <% units.each do |unit, unit_details| %>
+      <% next unless unit_details['tier'].split(' ')[idx] == catagory_value %>
+      <% rating = unit_details["stars"] + "stars" %>
+            <div class="col-* unit-grid-cols units <%= unit_details["type"] %>">
+              <% if session[:username] %>
+              <div class="edit-remove-buttons">
+                <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
+                <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
+              </div>
+              <% end %>
+                <a href="/childs/<%= rating %>/<%= unit %>">
+                  <img src="<%= unit_details['pic'] %>"/>
+                  </a>
+              <div class="index-stat-pic-container">
+                  <%== format_stat("type", unit_details["type"]) %>
+                  <%== format_stat("element", unit_details["element"]) %>
+              </div>
+              <h6 class="unit-profile-title"><%= upcase_name(unit) %></h6>
+          </div>
+      <% end %>
+
+      </div>
+  </div>
+</div>
+<% end %>
+</div>
+<% end %><!-- sorting end -->
