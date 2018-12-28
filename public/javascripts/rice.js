@@ -69,6 +69,7 @@ function  showUnitsTier(type) {
   $('.catagory_div').hide();
   $('.' + type).show();
 };
+
 function  showAllUnits(type) {
   $('.btn').removeClass('btn-success').addClass('btn-warning')
   $('#'+type).removeClass('btn-warning').addClass('btn-success')

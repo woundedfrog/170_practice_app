@@ -8,16 +8,19 @@
 
 <div class="container sort-buttons">
   <button type="button" class="btn btn-warning btn-xs" id="units" onClick="return showAllUnits('units')">Show all</button>
+</div>
+<div class="container sort-buttons">
+  <button type="button" class="btn btn-warning btn-xs" id="0" onClick="return showUnitsTier('0')">PVE</button>
+  <button type="button" class="btn btn-warning btn-xs" id="1" onClick="return showUnitsTier('1')">PVP</button>
+  <button type="button" class="btn btn-warning btn-xs" id="2" onClick="return showUnitsTier('2')">RAIDS</button>
+  <button type="button" class="btn btn-warning btn-xs" id="3" onClick="return showUnitsTier('3')">WORLDBOSS</button>
+</div>
+<div class="container sort-buttons">
   <button type="button" class="btn btn-warning btn-xs" id="attacker" onClick="return showUnitsOnly('attacker')">Attackers</button>
   <button type="button" class="btn btn-warning btn-xs" id="tank" onClick="return showUnitsOnly('tank')">Tanks</button>
   <button type="button" class="btn btn-warning btn-xs" id="healer" onClick="return showUnitsOnly('healer')">Healers</button>
   <button type="button" class="btn btn-warning btn-xs" id="buffer" onClick="return showUnitsOnly('buffer')">Buffers</button>
   <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
-
-  <button type="button" class="btn btn-warning btn-xs" id="0" onClick="return showUnitsTier('0')">PVE</button>
-  <button type="button" class="btn btn-warning btn-xs" id="1" onClick="return showUnitsTier('1')">PVP</button>
-  <button type="button" class="btn btn-warning btn-xs" id="2" onClick="return showUnitsTier('2')">RAIDS</button>
-  <button type="button" class="btn btn-warning btn-xs" id="3" onClick="return showUnitsTier('3')">WORLDBOSS</button>
 </div>
 
 <% @sorted_catagories.each_with_index do |units, idx| %>
