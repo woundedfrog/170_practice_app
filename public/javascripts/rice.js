@@ -1,4 +1,5 @@
 $( document ).ready(function() {
+
   jQuery.fn.highlight = function ( className) {
 
     return this.each(function () {
@@ -54,10 +55,30 @@ $('p').each(function() {
 function  showUnitsOnly(type) {
   $('.btn').removeClass('btn-success').addClass('btn-warning')
   $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.main-container').show();
   $('.units').show();
   $('.units').hide();
   $('.' + type).show();
 };
+
+function  showUnitsTier(type) {
+  $('.btn').removeClass('btn-success').addClass('btn-warning')
+  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.main-container').show();
+  $('.catagory_div').show();
+  $('.catagory_div').hide();
+  $('.' + type).show();
+};
+
+function  showAllUnits(type) {
+  $('.btn').removeClass('btn-success').addClass('btn-warning')
+  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.main-container').show();
+  $('.catagory_div').show();
+  $('.units').show();
+};
+
+
 
 function checkMe() {
     if (confirm("Are you sure you want to delete profile? It can't be undone!")) {
@@ -66,6 +87,10 @@ function checkMe() {
         return false;
     }
 };
+
+$(document).ready(function() {
+  $('.main-container').hide();
+});
 
 // var docWidth = document.documentElement.offsetWidth;
 //

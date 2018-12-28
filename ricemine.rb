@@ -47,10 +47,11 @@ helpers do
         hash.each do |k, v|
           next if k != type
 
-          tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
-          keys << tier_average
-          keys.sort!
+          # tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
+          # tier_average = (v.split(' ').map(&:to_i))
+          keys << v.split(' ').map(&:to_i)
         end
+        keys.flatten!
       else
         hash.each { |k, v| keys << v if k == type }
       end
@@ -61,6 +62,19 @@ helpers do
 
   def upcase_name(name)
     name.split(' ').map(&:capitalize).join(' ')
+  end
+
+  def catagory(idx)
+    case idx
+    when 0
+      'PVE'
+    when 1
+      'PVP'
+    when 2
+      'RAID'
+    when 3
+      'WORLD BOSS'
+    end
   end
 end
 
@@ -169,24 +183,24 @@ def get_max_index_number(list)
   list.map { |_, v| v['index'] }.max + 1
 end
 
-def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
+def sort_by_given_info(unit_info, stars, _catagory_vals = nil, type = nil)
   star_rating = stars[0]
   by_stars = nil
 
-  if type == 'tier'
-    by_stars = unit_info.select do |_, v|
-      # averages the 4 tier values
-      tier_average = (v['tier'].split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil.to_s
-      # this changes the 4 tier values into 1
-      v['tier'] = tier_average
-      # checks if it's the right tier and star rating
-      (v['stars'] == star_rating) && catagory_vals.include?(tier_average)
-    end
-    by_stars = by_stars.to_h
-
-  else
+  # if type == 'tier'
+  #   by_stars = unit_info.select do |_, v|
+  #     # averages the 4 tier values
+  #     tier_average = (v['tier'].split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil.to_s
+  #     # this changes the 4 tier values into 1
+  #     v['tier'] = tier_average
+  #     # checks if it's the right tier and star rating
+  #     (v['stars'] == star_rating) && catagory_vals.include?(tier_average)
+  #   end
+  #   by_stars = by_stars.to_h
+  #
+  # else
     by_stars = unit_info.select { |_, v| v['stars'] == star_rating }.to_h
-  end
+  # end
 
   by_stars.sort_by { |k, _| k }.to_h
 end
@@ -204,7 +218,6 @@ end
 
 def find_unit_sc_from_keys(details, keys)
   results = []
-  tags = keys.split(" ")
   details.each do |name, info_hash|
     info_hash.each do |key, val|
       if val.to_s.downcase.include?(keys) || key.downcase.include?(keys) || name.downcase.include?(keys)
@@ -230,6 +243,10 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
   pname.include?(directory) ? pname : "#{directory}/" + pname
 end
 
+def sort_tier_catagory(tiers_arr, units, index)
+  units.sort_by {|k,v| v['tier'].split(' ')[index]}
+end
+
 def check_and_fetch_date(data, name)
   if data.key?(name)
     if data[name].key?('date')
@@ -238,7 +255,6 @@ def check_and_fetch_date(data, name)
   end
   ''
 end
-
 # ##################
 
 def render_markdown(file)
@@ -372,8 +388,18 @@ get '/childs/:star_rating/sort_by/:type' do
   @message_note = YAML.load_file(note)
   @type = type
   if %w[3 4 5].any? { |star| star_rating.include?(star) }
-    @sort_catagory_arr = sort_info_by_given_type(unit_info, type)
-    @units = sort_by_given_info(unit_info, star_rating, @sort_catagory_arr[1], type)
+    @sorted_arr = sort_info_by_given_type(unit_info, type)
+    @units = sort_by_given_info(unit_info, star_rating, @sorted_arr[1], type)
+
+    if type == 'tier'
+      pve = sort_tier_catagory(@sorted_arr, @units, 0)
+      pvp = sort_tier_catagory(@sorted_arr, @units, 1)
+      raid = sort_tier_catagory(@sorted_arr, @units, 2)
+      worldboss = sort_tier_catagory(@sorted_arr, @units, 3)
+      @sorted_catagories = [pve, pvp, raid, worldboss]
+      return erb :sort_by_tier
+    end
+
   else
     session[:message] = 'There are no units by that tier!'
     redirect '/'
@@ -534,7 +560,7 @@ post '/new_unit' do
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
   data[name]['element'] = params[:element]
-  data[name]['tier'] = params[:tier].upcase
+  data[name]['tier'] = params[:tier]
   data[name]['leader'] = params[:leader]
   data[name]['auto'] = params[:auto]
   data[name]['tap'] = params[:tap]

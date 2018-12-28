@@ -2,10 +2,10 @@ new_unit:
   pic: ''
   pic2: ''
   pic3: ''
-  stars: ''
+  stars: 5
   type: ''
   element: ''
-  tier: ''
+  tier: 0 0 0 0
   leader: ''
   auto: ''
   tap: ''
