@@ -440,32 +440,6 @@ love Sitri:
   notes: ''
   date: '2018-11-28'
   index: 48
-brigid:
-  pic: "/images/brigid0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: fire
-  tier: 7 7 7 7
-  leader: "+10% defense for fire allies (additional +10% on Underground)"
-  auto: Deal 92 auto attack damage.
-  tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-barrier"
-    (Cancel Barrier and do a 50% damage of the remaining barrier).
-  slide: Deal 525 damage to 2 targets randomly, Prioritizing 4 fire type allies, apply
-    "Pain Adapt" (Increase defense +600, delense increase in proportion to HPloss
-    [4% increase in defense per 2% decrease in HP, maximum increase to 80%]) for 14
-    seconds, plus apply "Damage Reflect" (Return 20% of the damage received in 14
-    seconds or 3 attacks). For Underground Only, recover sustained 118 HP (Once every
-    2 seconds) for 14 seconds.
-  drive: Deal 1443 damage to 2 targets randomly, Prioritizing 5 fire type allies.
-    increase defense +1200 and +1500 of Barrier (Shield consuming enemies attacks
-    over HP) for 20 seconds. For Underground Only, apply "Painful Sublimation" (Increase
-    attack +200, attack increases in proportion to HP loss [36% increase in attack
-    per 2% decrease in HP, maximum increase to 720%]).
-  notes: ''
-  date: '2018-11-28'
-  index: 49
 kouka:
   pic: "/images/kouka0.png"
   pic2: ''
@@ -2362,24 +2336,6 @@ party star medb:
   notes: ''
   date: '2018-11-28'
   index: 150
-maris:
-  pic: "/images/maris0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: water
-  tier: 8 8 8 10
-  leader: Tap Skill defense +5% to Water units.
-  auto: Deals 92 damage.
-  tap: Deals 314 damage to target and absorb 26% of the damage as HP.
-  slide: Deals 573 damage to target and gives +1200HP barrier to all allies and 118HP
-    Regeneration (Heal every 2seconds) to self for 14s.
-  drive: Deals 1466 damage to 3 random enemies and drive Skill defense +20% for 15s
-    to all allies.
-  notes: ''
-  date: '2018-11-28'
-  index: 73
 sitri:
   pic: "/images/sitri0.png"
   pic2: ''
@@ -3065,3 +3021,21 @@ christmas leda:
   notes: ''
   date: '2018-12-25'
   index: 161
+maris:
+  pic: "/images/maris0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: water
+  tier: 8 8 8 10
+  leader: Tap Skill defense +5% to Water units.
+  auto: Deals 92 damage.
+  tap: Deals 314 damage to target and absorb 26% of the damage as HP.
+  slide: Deals 573 damage to target and gives +1200HP barrier to all allies and 118HP
+    Regeneration (Heal every 2seconds) to self for 14s.
+  drive: Deals 1466 damage to 3 random enemies and drive Skill defense +20% for 15s
+    to all allies.
+  notes: ''
+  date: '2018-11-28'
+  index: 73
