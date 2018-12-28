@@ -115,7 +115,7 @@ span {
 
 .sort-buttons button {
 	align-self: center;
-	width: auto;
+	width: 25%;
 	justify-content: center;
 	font-size: 0.7em;
 	font-weight: bold;
