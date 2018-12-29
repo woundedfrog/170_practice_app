@@ -767,10 +767,10 @@ ai:
   pic: "/images/ai0.png"
   pic2: ''
   pic3: ''
-  tier: 4 3 3 3
   stars: '5'
   type: tank
   element: dark
+  tier: 4 3 3 3
   leader: Gives Reflect (returns 3% of damage received) to Dark units (bonus +3% on
     Ragnas)
   auto: Deals 90 damage.
@@ -2398,7 +2398,7 @@ mysterious saturn:
   notes: ''
   date: '2018-12-05'
   index: 153
-exchange student eve:
+student eve:
   pic: "/images/studenteve0.png"
   pic2: ''
   pic3: ''
