@@ -32,6 +32,18 @@ header {
 	background-color: #544d41;
 }
 
+/* small display styling for nav  */
+ul {
+	flex-direction: row;
+	height: auto;
+}
+
+li {
+	width: 50%;
+	padding: 1px;
+}
+/* small display styling for nav  */
+
 a, a:hover, .dropdown-item {
 	text-decoration: none;
 	color: white;
@@ -350,6 +362,19 @@ textarea {
 	#profile-sc {
 		width: 150px;
 	}
+	/* small display styling for nav  */
+  .nav-link {
+        display: block;
+  }
+
+  li { 
+    /* min-width: 50%;
+    max-width: 100%; */
+    width: auto;
+    margin-left: 0;
+    margin-right: 0;
+  }
+/* small display styling for nav  */
 }
 
 /* // Medium devices (tablets, 768px and up) */
