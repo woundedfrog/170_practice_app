@@ -408,24 +408,6 @@ europa:
   notes: ''
   date: '2018-12-24'
   index: 140
-bastet:
-  pic: "/images/bastet0.png"
-  pic2: "/images/bastet1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 5 5 5 7
-  leader: 'Drive skill damage +1000 to Light units. '
-  auto: 'Deals 111 damage. '
-  tap: "Deals Auto damage + Additional 135 damage 4 times to target. \r\nApply \"Blind\"
-    (-20% Accuracy) to target for 6 seconds."
-  slide: "Deals 761 damage to 3 highest attack enemies. \r\nApply \"Blind\" (-30%
-    Accuracy) to target for 12 seconds."
-  drive: Deals 2161 damage to 4 enemies with highest attack.
-  notes: ''
-  date: '2018-12-24'
-  index: 7
 elizabeth:
   pic: "/images/elizabeth0.png"
   pic2: ''
@@ -443,24 +425,6 @@ elizabeth:
   notes: ''
   date: '2018-12-24'
   index: 18
-aria:
-  pic: "/images/aria0.png"
-  pic2: "/images/aria1.png"
-  pic3: "/images/aria1.png"
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 5 5 6 7
-  leader: HP +800 to all allies (bonus +600 on Ragnas)
-  auto: Deals 99 damage.
-  tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
-  slide: Deals 555 damage to 2 random enemies and additional 300 ignore def damage,
-    and +100 ally drive gauge to all allies.
-  drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
-    2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-12-24'
-  index: 0
 dana:
   pic: "/images/dana0.png"
   pic2: ''
@@ -634,25 +598,6 @@ arges:
   notes: ''
   date: '2018-12-24'
   index: 125
-chang'e:
-  pic: "/images/kouga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  tier: 10 10 10 10
-  leader: Skill gauge charge rate +8% to Water units.
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target and 52.5% chance to fully charge skill gauge to
-    random ally (excluding self).
-  slide: Deals 663 damage to target and skill gauge charge +40% for 2 turns and slide
-    cooldown -2s to 2 allies with highest attack.
-  drive: Deals 1789 damage and 80% chance to stun for 12s to 3 enemies that are charging
-    skill and +400 drive gauge.
-  notes: ''
-  date: '2018-12-24'
-  index: 70
 krampus:
   pic: "/images/krampus0.png"
   pic2: "/images/krampus1.png"
@@ -829,26 +774,6 @@ epona:
   notes: ''
   date: '2018-12-24'
   index: 19
-naias:
-  pic: "/images/naiad0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  tier: 7 7 8 10
-  leader: Skill gauge charge rate +10% to all Water unit allies.
-  auto: Deals 99 damage.
-  tap: Deals 365 damage to target and gives +25% drive gauge charge speed for 10seconds
-    to 1 ally.
-  slide: Deals 550 damage and -30% skill gauge charge rate for 2 turns to 2 random
-    enemies, and gives cooldown -1s for 2 turns to 3 random allies.
-  drive: "Deals 1705 damage to 2 random enemies. \r\nGives Skill Gauge Charge Rate
-    +20% to all Allies for 20 seconds. \r\nGives Skill Gauge Charge Speed +20% to
-    all Allies for 20 seconds."
-  notes: ''
-  date: '2018-12-24'
-  index: 72
 mafdet:
   pic: "/images/mafdet0.png"
   pic2: "/images/mafdet1.png"
@@ -1767,3 +1692,78 @@ persephone:
   notes: ''
   date: '2018-12-24'
   index: 105
+naias:
+  pic: "/images/naiad0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 7 8 8 10
+  leader: Skill gauge charge rate +10% to all Water unit allies.
+  auto: Deals 99 damage.
+  tap: Deals 365 damage to target and gives +25% drive gauge charge speed for 10seconds
+    to 1 ally.
+  slide: Deals 550 damage and -30% skill gauge charge rate for 2 turns to 2 random
+    enemies, and gives cooldown -1s for 2 turns to 3 random allies.
+  drive: "Deals 1705 damage to 2 random enemies. \r\nGives Skill Gauge Charge Rate
+    +20% to all Allies for 20 seconds. \r\nGives Skill Gauge Charge Speed +20% to
+    all Allies for 20 seconds."
+  notes: ''
+  date: '2018-12-24'
+  index: 72
+bastet:
+  pic: "/images/bastet0.png"
+  pic2: "/images/bastet1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 5 6 5 7
+  leader: 'Drive skill damage +1000 to Light units. '
+  auto: 'Deals 111 damage. '
+  tap: "Deals Auto damage + Additional 135 damage 4 times to target. \r\nApply \"Blind\"
+    (-20% Accuracy) to target for 6 seconds."
+  slide: "Deals 761 damage to 3 highest attack enemies. \r\nApply \"Blind\" (-30%
+    Accuracy) to target for 12 seconds."
+  drive: Deals 2161 damage to 4 enemies with highest attack.
+  notes: ''
+  date: '2018-12-24'
+  index: 7
+aria:
+  pic: "/images/aria0.png"
+  pic2: "/images/aria1.png"
+  pic3: "/images/aria1.png"
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 5 6 6 7
+  leader: HP +800 to all allies (bonus +600 on Ragnas)
+  auto: Deals 99 damage.
+  tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
+  slide: Deals 555 damage to 2 random enemies and additional 300 ignore def damage,
+    and +100 ally drive gauge to all allies.
+  drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
+    2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
+  notes: ''
+  date: '2018-12-24'
+  index: 0
+chang'e:
+  pic: "/images/kouga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 10 10 10 10
+  leader: Skill gauge charge amount +8% to Water units.
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target and 52.5% chance to fully charge skill gauge to
+    random ally (excluding self).
+  slide: Deals 663 damage to target and skill gauge charge speed +40% for 2 turns
+    and slide cooldown -2s to 2 allies with highest attack.
+  drive: Deals 1789 damage and 80% chance to stun for 12s to 3 enemies that are charging
+    skill and +400 drive gauge.
+  notes: ''
+  date: '2018-12-24'
+  index: 70

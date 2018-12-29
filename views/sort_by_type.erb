@@ -21,7 +21,7 @@
   <% next unless @units.any? {|name, info| info[@type] == catagory_value } %>
   <div class="container">
     <% type = @sorted_arr[0] %>
-    <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory_value.capitalize %></h5>
+    <h4 id="sort_by_title"><%= type.capitalize %>: <%= catagory_value.capitalize %></h4>
   </div>
 
 <div class="container">
@@ -38,7 +38,7 @@
             </div>
             <% end %>
               <a href="/childs/<%= rating %>/<%= unit %>">
-                <img src="<%= unit_details['pic'] %>"/>
+                <img class="profile_imgs"  src="<%= unit_details['pic'] %>"/>
                 </a>
             <div class="index-stat-pic-container">
                 <%== format_stat("type", unit_details["type"]) %>

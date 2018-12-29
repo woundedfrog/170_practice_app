@@ -4,13 +4,13 @@
 
 <div class="container notice-board">
   <h4>Notice</h4>
-    <% if session[:username] %>
-      <a href="/maininfo/edit">Edit Main Notice</a>
-    <% end %>
+  <% if session[:username] %>
+    <a href="/maininfo/edit">Edit Main Notice</a>
+  <% end %>
   <h6><%== @message_note['home']['main'] %></h6>
   <p><%== @message_note['home']['sub'] %></p>
   <p><%== @message_note['home']['sub2'] %></p>
-  </div>
+</div>
 <div class="container">
 <h4>Recent Child Updates</h4>
     <div class="row justify-content-center">
@@ -26,7 +26,7 @@
             <% end %>
 
               <a href="/childs/<%= rating %>/<%= unit %>">
-                <img src="<%= unit_details['pic'] %>" alt="<%= unit %>"/>
+                <img class="profile_imgs" src="<%= unit_details['pic'] %>" alt="<%= unit %>"/>
                 </a>
             <div class="index-stat-pic-container">
                 <%== format_stat("type", unit_details["type"]) %>

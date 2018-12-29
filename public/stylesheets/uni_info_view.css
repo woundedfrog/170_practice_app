@@ -7,6 +7,16 @@ body {
 	color: #eae9e5;
 }
 
+.row {
+	margin-left: 0px;
+  margin-right: 0px;
+}
+
+.container {
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
 header {
 	background-color: #363333;
 }
@@ -41,6 +51,7 @@ a, a:hover, .dropdown-item {
 }
 
 h1,h2,h3,h4,h5,h6 {
+	font-size: 1em;
 	padding: 5px;
 	padding-bottom: 0px;
 	/* color: #ffd584; */
@@ -54,6 +65,10 @@ h1,h3,h4 {
 	font-weight: 600;
 	margin-bottom: 20px;
 }
+
+h4 {
+  font-size: 1.0em;
+  }
 
 /* SORTING ICONS */
 .sort-buttons {
@@ -125,23 +140,29 @@ color: #ffffff;
 .unit-grid-cols {
 	background-color: rgba(58, 58, 57, 1);
 	position: relative;
-	height: 320px;
-	width: 98px;
+	height: 200px;
+	width: 60px;
 	margin-top: 10px;
 	margin-left: 3px;
 	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 }
 
 .sc-grid-cols {
 	position: relative;
 	background-color: rgba(58, 58, 57, 1);
-	max-width: 110px;
+	max-width: 90px;
 	margin-top: 10px;
 	margin-left: 3px;
 }
 
 .sc_index_pic {
-	width: 110px;
+	width: 90px;
+}
+
+#profile-sc {
+	width: 100px;
 }
 
 .edit-remove-buttons {
@@ -164,9 +185,9 @@ color: #ffffff;
 
 .index-stat-pic-container {
 	position: absolute;
-	bottom: 50px;
-	left: 22px;
-	width: 70px;
+	top: 140px;
+	left: 10px;
+	height: 25px;
 }
 
 .element-type-pic {
@@ -189,10 +210,11 @@ color: #ffffff;
 }
 
 .unit-profile-title {
-	position: absolute;
-	padding-top: 3px;
-	width: 98px;
-	top: 275px;
+	font-size: 0.7em;
+	/* position: absolute; */
+	padding-top: 10px;
+	padding: 5px 5px 5px 5px;
+	/* top: 75px; */
 	text-align: center;
 }
 
@@ -217,10 +239,12 @@ color: #ffffff;
 .profile-stat-container {
 	padding-bottom: 10px;
 	background-color: #595857;
+	display: flex;
+	flex-direction: column;
+    flex: 1 0 auto;
 }
 
 .profile-stat-row-container {
-	padding-left: 15px;
 	max-width: 100%;
 }
 
@@ -248,13 +272,18 @@ img[alt$="-fullwidth"]{
 /* ////SC PROFILES view//// */
 
 /* ////SC PROFILES END//// */
-.profile-stat-col-cantainer {
+.profile-stat-col-container {
 	padding-left: 0px;
 	padding-right: 0px;
+	height: 100%;
 }
 
 .profile-pic-container {
 	width: 100%;
+}
+
+.profile_imgs {
+	max-height: 166px;
 }
 
 label {
@@ -292,8 +321,53 @@ textarea {
 /* // Small devices (landscape phones, 576px and up) */
 @media (min-width: 576px) {
 	h1 {
-	  font-size: 3em;
-	}
+			font-size: 3em;
+		}
+
+		h4 {
+		  font-size: 2em;
+		}
+
+	.index-stat-pic-container {
+	position: absolute;
+	top: 220px;
+	left: 15px;
+	/* display: flex; */
+	/* width: auto; */
+	height: 15px;
+	/* flex-direction: row;
+	flex-wrap: wrap; */
+}
+
+.unit-profile-title {
+	font-size: 1em;
+	padding: 10px;
+}
+
+.unit-grid-cols {
+	background-color: rgba(58, 58, 57, 1);
+	position: relative;
+	height: 330px;
+	width: 98px;
+	margin-top: 10px;
+	margin-left: 3px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
+}
+
+.sc-grid-cols {
+	max-width: 110px;
+}
+
+.sc_index_pic {
+	width: 110px;
+}
+
+#profile-sc {
+	width: 150px;
+}
+
 /* small display styling for nav  */
 	.nav-link {
 		display: block;
@@ -310,6 +384,14 @@ textarea {
 
 /* // Medium devices (tablets, 768px and up) */
 @media (min-width: 768px) {
+	.nav {
+		display: flex;
+	}
+
+	#hide-menu {
+		display: none;
+	}
+
 	.container {
 		width: 70%;
 		margin: auto;
@@ -336,7 +418,7 @@ textarea {
 	}
 	/* SORTING ICONS */
 
-	.profile-stat-col-cantainer {
+	.profile-stat-col-container {
 		/* width: calc(100% - 110px); */
 		padding-left: 0px;
 		padding-right: 0px;
@@ -346,6 +428,16 @@ textarea {
 		width: auto;
 		max-width: 210px;
 	}
+
+	.profile-pic-container {
+		width: auto;
+		max-width: 210px;
+	}
+
+	.profile_imgs {
+		max-height: 272px;
+	}
+
 	.profile-row-container {
 		margin-left: auto;
 	}
