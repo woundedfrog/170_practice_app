@@ -87,7 +87,7 @@ meat together:
   stars: '5'
   stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
     at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
-  passive: "Restriction: None. \r\nHealblock Resist +40%."
+  passive: "Restriction: None. \r\nHeal block Resist +40%."
   index: 34
 piercing blue sky:
   pic: "/images/sc/piercingbluesky.jpg"
