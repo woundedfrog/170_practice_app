@@ -1078,7 +1078,7 @@ titania:
     type.
   slide: Deals 90 damage plus Tap damage 3 times to 1 enemy with priority to Dark
     units and gains Reflect (returns 7% of damage received) for 15s.
-  drive: Deals 1324 damage to 4 random enemies, 90% chance to heal block (Excludes
+  drive: Deals 1324 damage to 4 random enemies, 90% chance to apply heal block (Excludes
     Lifesteal and HP absorption) for 10s.
   notes: ''
   date: '2018-11-28'
@@ -1774,10 +1774,10 @@ mafdet:
   auto: Deals 112 damage.
   tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
     type.
-  slide: Deals 797 damage plus 350 additional damage and heal block (excludes Lifesteal
-    and absorption) for 16s to 3 enemies with lowest HP.
-  drive: Deals 2341 damage to all enemies and heal block (excludes Lifesteal and absorption)
-    for 25s to 3 enemies with lowest HP.
+  slide: Deals 797 damage plus 350 additional damage and apply heal block (excludes
+    Lifesteal and absorption) for 16s to 3 enemies with lowest HP.
+  drive: Deals 2341 damage to all enemies and apply heal block (excludes Lifesteal
+    and absorption) for 25s to 3 enemies with lowest HP.
   notes: ''
   date: '2018-11-28'
   index: 30
@@ -2936,8 +2936,8 @@ neid:
   tap: Deals 300 damage and Bleeding (45 continuous damage every 2s) for 6s to target.
   slide: Deals 50 damage plus Tap damage 3 times to target plus 300 ignore Defense
     damage.
-  drive: Deals 1454 damage plus 500 ignore Defense damage and 90% chance to heal block
-    for 10s to 3 enemies with lowest HP.
+  drive: Deals 1454 damage plus 500 ignore Defense damage and 90% chance to apply
+    heal block for 10s to 3 enemies with lowest HP.
   notes: ''
   date: '2018-12-25'
   index: 115
