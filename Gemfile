@@ -10,3 +10,5 @@ gem "redcarpet"
 gem 'rack', '~> 2.0.1'
 # password encryption
 gem "bcrypt"
+gem 'rsense'
+gem 'rake'

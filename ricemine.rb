@@ -15,6 +15,14 @@ configure do
   set :session_secret, 'secret'
 end
 
+before do
+  @message_note = load_file_data('main')
+  @units = load_file_data('unit')
+  @soulcards = load_file_data('sc')
+  @new_unit = load_file_data('new_unit')['new_unit']
+  @new_sc = load_file_data('new_sc')['new_sc']
+end
+
 helpers do
   def special_key?(key)
     %w[pic pic2 pic3 tier stars type element].include?(key.to_s)
@@ -46,9 +54,6 @@ helpers do
       if type == 'tier'
         hash.each do |k, v|
           next if k != type
-
-          # tier_average = (v.split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil
-          # tier_average = (v.split(' ').map(&:to_i))
           keys << v.split(' ').map(&:to_i)
         end
         keys.flatten!
@@ -134,6 +139,22 @@ def file_path
   [units, cards]
 end
 
+def load_file_data(name)
+  case name
+  when 'unit'
+    load_unit_details
+  when 'sc'
+    load_soulcards_details
+  when 'main'
+    note = File.expand_path('data/maininfo.yml', __dir__)
+    YAML.load_file(note)
+  when 'new_sc'
+    load_new_soulcard
+  when 'new_unit'
+    load_new_unit
+  end
+end
+
 def load_soulcards_details
   unit_list = if ENV['RACK_ENV'] == 'test'
                 File.expand_path('test/data/sc/soul_cards.yml', __dir__)
@@ -183,26 +204,38 @@ def get_max_index_number(list)
   list.map { |_, v| v['index'] }.max + 1
 end
 
+def group_by_catagory_tier(details, catagory_vals)
+  groups = [pve = {}, pvp = {}, raid = {}, wb = {}]
+#            [],
+#            [],
+#            []]
+  info_hash = {}
+  groups.size.times do |idx|
+    catagory_vals.each do |num|
+      details.each do |name, info|
+        tiers = info['tier'].split(" ").map(&:to_i)
+        # p [tiers, num, tiers[idx] == num.to_i]
+        groups[idx][num.to_s] = {} if groups[idx][num].nil?
+        groups[idx][num][name] = info if tiers[idx] == num.to_i
+        # groups[idx] << {name => info} if tiers[idx] == num.to_i
+        # groups[k][num][name] = info if tiers[idx] == num.to_i
+        # groups[idx].sort
+
+      end
+    end
+  end
+  groups
+end
+
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
-  by_stars = nil
+  units_by_stars = nil
+  units_by_stars = unit_info.select { |_, v| v['stars'] == star_rating }.to_h
+  if type == 'tier'
+    return group_by_catagory_tier(units_by_stars, catagory_vals)
+  end
 
-  # if type == 'tier'
-  #   by_stars = unit_info.select do |_, v|
-  #     # averages the 4 tier values
-  #     tier_average = (v['tier'].split(' ').map(&:to_i).reduce(&:+).to_f / 4).ceil.to_s
-  #     # this changes the 4 tier values into 1
-  #     v['tier'] = tier_average
-  #     # checks if it's the right tier and star rating
-  #     (v['stars'] == star_rating) && catagory_vals.include?(tier_average)
-  #   end
-  #   by_stars = by_stars.to_h
-  #
-  # else
-    by_stars = unit_info.select { |_, v| v['stars'] == star_rating }.to_h
-  # end
-
-  by_stars.sort_by { |k, _| k }.to_h
+  units_by_stars.sort_by { |k, _| k }.to_h
 end
 
 def get_unit_or_sc_from_keys(keys)
@@ -210,16 +243,18 @@ def get_unit_or_sc_from_keys(keys)
   units = load_unit_details
   return [nil, nil] if keys.empty?
 
-  unit_results = find_unit_sc_from_keys(units, keys)
-  card_results = find_unit_sc_from_keys(cards, keys)
+  unit_results = search_stats_for_key(units, keys)
+  card_results = search_stats_for_key(cards, keys)
 
   [unit_results.to_h, card_results.to_h]
 end
 
-def find_unit_sc_from_keys(details, keys)
+def search_stats_for_key(stats, keys)
   results = []
 
-  details.each do |name, info_hash|
+  stats.each do |name, info_hash|
+    if name.to_s.downcase.include?(keys)
+    end
     info_hash.each do |key, val|
       if val.to_s.downcase.include?(keys) || key.to_s.downcase.include?(keys)
         results << [name, info_hash]
@@ -246,6 +281,18 @@ end
 
 def sort_tier_catagory(tiers_arr, units, index)
   units.sort_by {|k,v| v['tier'].split(' ')[index]}
+end
+
+def unit_or_sc_exist?(type, name)
+  data = if type == 'unit'
+    @units
+  else
+    @soulcards
+  end
+  if data.include?(name) == false
+    session[:message] = "#{name} doesn't exist."
+    redirect '/'
+  end
 end
 
 # ##################
@@ -302,10 +349,8 @@ get '/search/' do
 end
 
 get '/' do
-  note = File.expand_path('data/maininfo.yml', __dir__)
-  @message_note = YAML.load_file(note)
-  @units = load_unit_details.to_a.last(3).to_h
-  @soulcards = load_soulcards_details.to_a.last(3).to_h
+  @units = @units.to_a.last(3).to_h
+  @soulcards = @soulcards.to_a.last(3).to_h
   erb :home
 end
 
@@ -330,7 +375,9 @@ get '/download/:filename' do |filename|
   # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
   if filename.include?('soul')
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('unit') || filename.include?('maininfo') || filename.include?('basics.md')
+  elsif filename.include?('unit') ||
+        filename.include?('maininfo') ||
+        filename.include?('basics.md')
     send_file "./data/#{filename}", filename: fname, type: ftype
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
@@ -346,59 +393,66 @@ get '/show_files/:file_name/remove' do
 end
 
 get '/equips/new_sc' do
-  @card = load_new_soulcard['new_sc']
+  @card = @new_sc
   @max_index_val = get_max_index_number(load_soulcards_details)
   erb :new_sc
 end
 
+get '/new_unit' do
+  require_user_signin
+  @new_unit_info = @new_unit
+  @max_index_val = get_max_index_number(load_unit_details)
+  erb :new_unit
+end
+
 get '/childs/:star_rating/:unit_name' do
-  if load_unit_details.include?(params[:unit_name]) == false
-    session[:message] = "#{params[:unit_name]} doesn't exist."
-    redirect '/'
-  end
-  @units = load_unit_details
-  @unit_name = params[:unit_name].capitalize
-  @current_unit = @units[params[:unit_name]]
+  name = params[:unit_name]
+  unit_or_sc_exist?('unit', name)
+  @unit_name = name.capitalize
+  @current_unit = @units[name]
   erb :view_unit
 end
 
 get '/childs/:star_rating/:unit_name/edit' do
   require_user_signin
-  @unit_name = params[:unit_name]
-  @current_unit = load_unit_details[params[:unit_name]]
+  name = params[:unit_name]
+  @unit_name = name
+  @current_unit = @units[name]
   erb :edit_unit
 end
 
 get '/equips/:star_rating/:sc_name' do
-  @sc_name = params[:sc_name]
-  @current_card = load_soulcards_details[params[:sc_name]]
+  name = params[:sc_name]
+  unit_or_sc_exist?('soulcard', name)
+  @sc_name = name
+  @current_card = @soulcards[name]
   erb :view_sc
 end
 
 get '/equips/:star_rating/:sc_name/edit' do
   require_user_signin
-  @card_name = params['sc_name']
-  @current_card = load_soulcards_details[params[:sc_name]]
+  name = params[:sc_name]
+  @card_name = name
+  @current_card = @soulcards[name]
   erb :edit_sc
 end
 
 get '/childs/:star_rating/sort_by/:type' do
   star_rating = params[:star_rating]
   type = params[:type]
-  unit_info = load_unit_details
-  note = File.expand_path('data/maininfo.yml', __dir__)
-  @message_note = YAML.load_file(note)
-  @type = type
-  if %w[3 4 5].any? { |star| star_rating.include?(star) }
+  unit_info = @units
+
+  if %w[3 4 5].any? { |star| star_rating == star_rating }
     @sorted_arr = sort_info_by_given_type(unit_info, type)
     @units = sort_by_given_info(unit_info, star_rating, @sorted_arr[1], type)
 
     if type == 'tier'
-      pve = sort_tier_catagory(@sorted_arr, @units, 0)
-      pvp = sort_tier_catagory(@sorted_arr, @units, 1)
-      raid = sort_tier_catagory(@sorted_arr, @units, 2)
-      worldboss = sort_tier_catagory(@sorted_arr, @units, 3)
-      @sorted_catagories = [pve, pvp, raid, worldboss]
+      # pve = sort_tier_catagory(@sorted_arr, @units, 0)
+      # pvp = sort_tier_catagory(@sorted_arr, @units, 1)
+      # raid = sort_tier_catagory(@sorted_arr, @units, 2)
+      # worldboss = sort_tier_catagory(@sorted_arr, @units, 3)
+      # @sorted_catagories = [pve, pvp, raid, worldboss]
+      @sorted_catagories = @units#[@units[0], @units[1], @units[2], @units[3]]
       return erb :sort_by_tier
     end
 
@@ -453,13 +507,6 @@ get '/show_files' do
     File.basename(path)
   end
   erb :file_list
-end
-
-get '/new_unit' do
-  require_user_signin
-  @new_unit_info = load_new_unit['new_unit']
-  @max_index_val = get_max_index_number(load_unit_details)
-  erb :new_unit
 end
 
 get '/upload' do
