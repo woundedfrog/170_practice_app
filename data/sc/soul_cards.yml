@@ -462,3 +462,21 @@ starry stage:
     \ / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease Instant Heal received +800."
   index: 63
+nobalman's new year:
+  pic: "/images/sc/nobalnewyear.jpg"
+  stars: '5'
+  stats: "Attack: 600 at lvl0. \r\n\r\nCritical: 340 at lvl0."
+  passive: 'Restriction: Light. Increase Final attack +1150 at WorldBoss.'
+  index: 64
+i love sake!:
+  pic: "/images/sc/ilovesake.jpg"
+  stars: '5'
+  stats: "HP: 1100 at lvl0. \r\n\r\nDefense: 600 at lvl0."
+  passive: "Restriction: Light. \r\n\r\nIncrease Final Defense +800."
+  index: 65
+christmas gift:
+  pic: "/images/sc/christmasgift.jpg"
+  stars: '5'
+  stats: "Attack: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
+  passive: "Restriction: Attacker. \r\nSlide skill damage +350."
+  index: 66

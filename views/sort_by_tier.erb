@@ -23,7 +23,9 @@
   <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
 </div>
 
-<% @sorted_catagories.each_with_index do |units, idx| %>
+
+
+<% @units.each_with_index do |units, idx| %>
   <div class="main-container conatiner">
   <h4 class="container catagory_div <%= idx %>" id="sort_by_title"><%= catagory(idx) %></h4>
   <% units.each do |catagory_value, unit_list| %>

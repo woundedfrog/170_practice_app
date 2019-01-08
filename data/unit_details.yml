@@ -1,24 +1,4 @@
 ---
-horus:
-  pic: "/images/horus0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: light
-  tier: 5 3 4 3
-  leader: Attack -15% to Dark Type Enemies
-  auto: Deals 101 damage.
-  tap: Deals 386 damage and Reduce -700 Attack for 8 seconds and 60% chance to increase
-    "Curse" damage and duration for 8 seconds to target.
-  slide: Deals 604 damage and 500ignore defense to 2 highest attack enemies and Apply
-    "Blind" (40% chance to miss) for 12seconds.
-  drive: Dreals 1910 damage to 3 random enemies and Apply "Blind" (60% chance to miss)
-    for 14seconds and if they are inflicted with "Bleed", "Poison", "Curse" within
-    6seconds debuff duration is increased by +50% to 3random enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 32
 khepri:
   pic: "/images/khepri0.png"
   pic2: ''
@@ -39,24 +19,6 @@ khepri:
   notes: ''
   date: '2018-11-28'
   index: 34
-lan fei:
-  pic: "/images/lanfei0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 8 8 6 5
-  leader: Attack -15% to Light enemies
-  auto: Deals 101 damage.
-  tap: Deals 387 damage and attack -700 for 10s to target.
-  slide: Deals 608 damage plus 500 ignore Defense damage to 2 enemies with highest
-    attack and enemy drive gauge -8%.
-  drive: Deals 2012 damage to 3 enemies with the highest Defense, removes one buff
-    and enemy drive gauge -10%.
-  notes: Her special skills only worked on early raid bosses.
-  date: '2018-11-28'
-  index: 36
 astraeas:
   pic: "/images/astraea0.png"
   pic2: ''
@@ -154,77 +116,6 @@ chun-li:
   notes: ''
   date: '2018-11-28'
   index: 13
-pantheon:
-  pic: "/images/pantheon0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: dark
-  tier: 6 6 10 10
-  leader: Critical rate +15% to Dark units
-  auto: Deals 99 damage.
-  tap: Deals 364 damage to target and critical rate +35% for 7s to 1 random ally.
-  slide: Critical rate +40% and critical damage +30% for 18s to 2 allies with highest
-    attack.
-  drive: Deals 1705 damage to 2 random enemies, critical damage +50% and critical
-    rate +70% for 22s to 2 allies with highest attack.
-  notes: ''
-  date: '2018-11-28'
-  index: 37
-nirrti:
-  pic: "/images/nirrti0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: light
-  tier: 8 8 7 8
-  leader: Debuff evasion rate -15% to all dark enemies
-  auto: Deals 101 damage.
-  tap: Deals 391 damage and removes one buff to target.
-  slide: Deals 610 damage to 2 enemies with highest attack and 75% chance Confuse
-    for 10s to target with highest attack.
-  drive: Deals 2017 damage, removes one buff and enemy drive gauge -10% to 3 enemies
-    with the highest attack.
-  notes: ''
-  date: '2018-11-28'
-  index: 28
-maat:
-  pic: "/images/maat0.png"
-  pic2: "/images/maat1.png"
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: light
-  tier: 10 8 10 10
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Light units
-  auto: Deals 95 damage.
-  tap: Deals 330 damage to target, and removes freeze and petrification from 1 ally.
-  slide: Gives 146HP Regeneration (Heal every 2seconds) for 20s to all allies.
-  drive: Revives 1 dead ally to 1000HP and gives 300HP Regeneration (Heal every 2seconds)
-    for 16s to 3 allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 33
-hestia:
-  pic: "/images/hestia0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 8 8 8 8
-  leader: Drive skill damage +10% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
-    type.
-  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
-    with lowest HP with 120 additional damage if debuff type.
-  drive: Deals 2317 damage to all enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 27
 hermes:
   pic: "/images/hermes0.png"
   pic2: "/images/hermes1.png"
@@ -283,24 +174,6 @@ hades:
   notes: ''
   date: '2018-11-28'
   index: 24
-frey:
-  pic: "/images/frey0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 9 9 9 9
-  leader: Drive skill damage +1000 to Dark Units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
-    self.
-  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
-  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
-    enemy according to debuff) to all enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 22
 eshu:
   pic: "/images/eshu0.png"
   pic2: ''
@@ -339,24 +212,6 @@ epona:
   notes: ''
   date: '2018-11-28'
   index: 19
-dinashi:
-  pic: "/images/dinashi0.png"
-  pic2: "/images/dinashi1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: fire
-  tier: 5 3 9 6
-  leader: Tap Skill defense +5% to Fire units
-  auto: Deals 92 damage.
-  tap: Deals 326 damage to target and gives +500HP barrier for 8s to 5 Fire units.
-  slide: Deals 572 damage to target and gives 50% Double-Edge (increase attack and
-    reduce Defense) for 16s to 5 Fire units.
-  drive: Deals 1474 damage to 2 random enemies and drive Skill defense +30% for 15s
-    to 5 allies.
-  notes: ''
-  date: '2018-11-28'
-  index: 17
 bari:
   pic: "/images/bari0.png"
   pic2: ''
@@ -419,27 +274,6 @@ isolde:
   notes: ''
   date: '2018-11-28'
   index: 46
-love Sitri:
-  pic: "/images/lovesitri0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: grass
-  tier: 6 8 5 5
-  leader: Weakness Defense -8% to Water Types enemies
-  auto: Deal 101 auto attack damage
-  tap: With priority on Debuffers, Deal 390 damage and, if the target is a Debuffer
-    type, deal 160 additional damage.
-  slide: With priority on Attackers type, Deal 669 damage to 2 targets, plus skill
-    gauge charge speed -30% and a 70% chance to get "Attraction" (invalidates buffs,
-    can't be dispelled) for 12 seconds.
-  drive: "With priority on Debuffers, Deal 1967 damage to 3 targets, plus skill gauge
-    charge amount -33% for 16 seconds and a 80% chance of \"Stun\" (increase\r\nduration
-    of Stun by 1 second to max 5 seconds for each attack) for 4 seconds."
-  notes: ''
-  date: '2018-11-28'
-  index: 48
 kouka:
   pic: "/images/kouka0.png"
   pic2: ''
@@ -513,24 +347,6 @@ maiden detective:
   notes: ''
   date: '2018-11-28'
   index: 53
-orga(wola):
-  pic: "/images/orga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 9 9 3 3
-  leader: Skill gauge charge rate -15% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
-  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
-    for 5s to 2 random enemies.
-  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
-    gauge by 45% to 3 random enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 54
 anemone:
   pic: "/images/anemone0.png"
   pic2: "/images/anemone1.png"
@@ -574,24 +390,6 @@ redcross:
   notes: ''
   date: '2018-11-28'
   index: 55
-metis:
-  pic: "/images/metis0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: dark
-  tier: 6 6 7 3
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Dark units
-  auto: Deals 96 damage.
-  tap: Deals 335 damage to target and heals 201HP to ally with lowest HP.
-  slide: Gives 1.5%HP+21HP Regeneration (Heal every 2seconds) for 10s and Immortality
-    (HP won't go under 1) for 10s to 2 allies with lowest HP.
-  drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
-    unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 56
 maou davi:
   pic: "/images/maoudavi0.png"
   pic2: ''
@@ -611,23 +409,6 @@ maou davi:
   notes: ''
   date: '2018-11-28'
   index: 57
-medb:
-  pic: "/images/medb0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 6 6 9 8
-  leader: Tap damage +5% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 475 damage to target with 150 additional damage if enemy is buffed.
-  slide: Deals 100 damage plus Tap damage (including bonus damage effect on Tap skill)
-    2 times to 2 random enemies.
-  drive: Deals 2355 damage to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 58
 morgan:
   pic: "/images/morgan0.png"
   pic2: ''
@@ -666,24 +447,6 @@ tirfing:
   notes: ''
   date: '2018-11-28'
   index: 60
-jupiter:
-  pic: "/images/jupiter0.png"
-  pic2: "/images/jupiter1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 8 6 8 9
-  leader: Defense -10% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 369 damage and Defense -5% for 6s to target.
-  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
-    with lowest Defense.
-  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
-    enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 61
 verdel:
   pic: "/images/verdel0.png"
   pic2: ''
@@ -724,24 +487,6 @@ thanatos:
   notes: ''
   date: '2018-11-28'
   index: 63
-cube moa:
-  pic: "/images/moa0.png"
-  pic2: "/images/moa1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: light
-  tier: 7 8 3 3
-  leader: Dark enemy debuff evasion rate -10%
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
-  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
-    (unable to act for 10s or after being hit 2 times).
-  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
-    to act for 15s or after being hit 3 times).
-  notes: ''
-  date: '2018-11-28'
-  index: 31
 dark maat:
   pic: "/images/darkmaat0.png"
   pic2: ''
@@ -841,46 +586,6 @@ santa:
   notes: ''
   date: '2018-11-28'
   index: 67
-tethys:
-  pic: "/images/tethys0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 4 4 5 9
-  leader: Drive Gauge Charge -5% to all enemies (Additional 8% on Worldboss).
-  auto: Deals 101 damage
-  tap: "Deals 381 damage to target and Apply \"Poison\" (Deals 200 damages when attack
-    and receives attacks).\r\nWithin 8s debuff effect on 2 enemies will have it's
-    duration extended by 30% (from current remaining duration)."
-  slide: "Deals 617 damage to 2 random enemies and 70% chance to remove 1 buff from
-    the target (last applied buff).\r\nApply \"Debuff Explosion\" (removes first applied
-    debuff and deals damage according to the debuff type x200 modifier)."
-  drive: Deals 1983 damages to 3 random enemies and Apply "Poison" (Deals 800 damages
-    when attack and receives attacks) for 3turns.
-  notes: ''
-  date: '2018-11-28'
-  index: 68
-kouga:
-  pic: "/images/kouga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  tier: 10 10 10 10
-  leader: Skill gauge charge rate +8% to Water units.
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target and 52.5% chance to fully charge skill gauge to
-    random ally (excluding self).
-  slide: Deals 663 damage to target and skill gauge charge +40% for 2 turns and slide
-    cooldown -2s to 2 allies with highest attack.
-  drive: Deals 1789 damage and 80% chance to stun for 12s to 3 enemies that are charging
-    skill and +400 drive gauge.
-  notes: ''
-  date: '2018-11-28'
-  index: 70
 myrina:
   pic: "/images/myrina0.png"
   pic2: ''
@@ -900,26 +605,6 @@ myrina:
   notes: ''
   date: '2018-11-28'
   index: 71
-naiad:
-  pic: "/images/naiad0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: water
-  tier: 7 7 8 10
-  leader: Skill gauge charge rate +10% to all Water unit allies.
-  auto: Deals 99 damage.
-  tap: Deals 365 damage to target and gives +25% drive gauge charge speed for 10seconds
-    to 1 ally.
-  slide: Deals 550 damage and -30% skill gauge charge rate for 2 turns to 2 random
-    enemies, and gives cooldown -1s for 2 turns to 3 random allies.
-  drive: Deals 1705 damage to 2 random enemies. Gives Skill Gauge Charge Rate +20%
-    to all Allies for 20 seconds. Gives Skill Gauge Charge Speed +20% to all Allies
-    for 20 seconds.
-  notes: ''
-  date: '2018-11-28'
-  index: 72
 snow miku:
   pic: "/images/snowmiku0.png"
   pic2: ''
@@ -940,24 +625,6 @@ snow miku:
   notes: ''
   date: '2018-11-28'
   index: 74
-rusalka:
-  pic: "/images/rusalka0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: water
-  tier: 6 6 6 5
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Water units.
-  auto: Deals 96 damage.
-  tap: Heals 233HP to 2 allies with lowest HP.
-  slide: Gives 1.8%HP+21HP Regeneration (Heal every 2seconds) for 8s and Immortality
-    (HP won't go under 1) for 10s to 2 allies with lowest HP.
-  drive: Heals 12%HP+90HP and gives Immortality (HP won't go under 1) for 14s to 3
-    allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 75
 siren:
   pic: "/images/siren0.png"
   pic2: ''
@@ -1010,25 +677,6 @@ midas:
   notes: ''
   date: '2018-11-28'
   index: 79
-syrinx:
-  pic: "/images/syrinx0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: grass
-  tier: 9 9 8 5
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
-  auto: Deals 96 damage.
-  tap: Deals 335 damage to target and gives Invincibility for 10s or 2 hits to ally
-    with highest attack.
-  slide: Gives 141HP Regeneration (Heal every 2seconds) for 14s and Invincibility
-    for 20s or 4 hits to 2 allies with lowest HP.
-  drive: Gives 199HP Regeneration (Heal every 2seconds) for 16s and Invincibility
-    for 15s or 3 hits to 3 allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 81
 rudolph:
   pic: "/images/4rudolph0.png"
   pic2: ''
@@ -1584,30 +1232,6 @@ selene:
   notes: ''
   date: '2018-11-28'
   index: 141
-newbie mona:
-  pic: "/images/newbiemona0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 10 10 10 10
-  leader: Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble).
-  auto: Deals 101 damage.
-  tap: Deals 379 damage to target. 50% chance to remove "Bleed", "Poison" , "Curse"
-    from 2 allies. Gives "Lifesteal"(Absorbs 15% of the damage as HP) for 14s to 2
-    allies.
-  slide: Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for 2
-    turns to 2 highest attack allies. 70% chance to Apply "Cheer" (15% weakness skill
-    damage and increase attack based on the current number of buffs) for 2 turns to
-    2 highest attack allies.
-  drive: "Deals 1803 damage to 3 random enemies.\r\nGives +40% Skill Gauge Charge
-    for 3 turns to 3 allies (prioritizing grass Types). \r\nApply \"Cheer\" (15% weakness
-    skill damage and increase attack based on the current number of buffs) for 3 turns
-    to 3 allies (prioritizing grass Types)."
-  notes: ''
-  date: '2018-11-28'
-  index: 84
 bastet:
   pic: "/images/bastet0.png"
   pic2: "/images/bastet1.png"
@@ -1687,25 +1311,6 @@ luna:
   notes: ''
   date: '2018-11-28'
   index: 82
-medusa:
-  pic: "/images/medusa0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 6 6 3 3
-  leader: Debuff resist +15% from Light Types Enemies.
-  auto: Deals 101 damage.
-  tap: "·Deals 390 damage to target. \r\n·Reduce 12% Attack to target for 10s."
-  slide: "Deals 619 to 2 random enemies. \r\nApply \"Taunt\" (20% Provocation) to
-    self for 12s. Apply \"Counter Petrification\" (70% chance to apply \"Petrify\"
-    (unable to act for 10seconds or after being hit 1 time) enemies that attack Medusa)
-    to self for 12s."
-  drive: ''
-  notes: ''
-  date: '2018-11-28'
-  index: 83
 ruin:
   pic: "/images/ruin0.png"
   pic2: ''
@@ -1762,25 +1367,6 @@ charlotte:
   notes: ''
   date: '2018-11-28'
   index: 12
-mafdet:
-  pic: "/images/mafdet0.png"
-  pic2: "/images/mafdet1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 9 9 9 9
-  leader: Drive skill damage +10% to Light units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
-    type.
-  slide: Deals 797 damage plus 350 additional damage and apply heal block (excludes
-    Lifesteal and absorption) for 16s to 3 enemies with lowest HP.
-  drive: Deals 2341 damage to all enemies and apply heal block (excludes Lifesteal
-    and absorption) for 25s to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 30
 dark midas:
   pic: "/images/darkmidas0.png"
   pic2: ''
@@ -1863,24 +1449,6 @@ warwolf:
   notes: ''
   date: '2018-11-28'
   index: 38
-mammon:
-  pic: "/images/mammon0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: grass
-  tier: 5 5 5 3
-  leader: Tap Skill defense +5% to grass units.
-  auto: Deals 91 damage
-  tap: Deals 311 damage to target and Gives +25% defense for 15s to self.
-  slide: Deals 564 damage to target and Gives Skill defense +20% to self and Taunt
-    (90% provocation) for 12s.
-  drive: Deals 1456 damage to 2 random enemies and drive Skill defense +30% for 15s
-    to 5 allies.
-  notes: ''
-  date: '2018-11-28'
-  index: 80
 frey (light):
   pic: "/images/freylight0.png"
   pic2: ''
@@ -2005,24 +1573,6 @@ brigette:
   notes: ''
   date: '2018-11-28'
   index: 147
-gkouga:
-  pic: "/images/gkouga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 9 9 9 9
-  leader: "+5% to Tap damage for all allies. "
-  auto: Deals 113 damage.
-  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
-    or Frozen and 200 Ignore defense if target is Water type.
-  slide: Deals 400 damages + Tap damage 3times to 1 enemy  (Prioritizing attacker
-    Types) and absorb 200 damage as HP.
-  drive: Deals 2329 damage to 3 enemies with lowest hp
-  notes: ''
-  date: '2018-11-28'
-  index: 23
 kasumi:
   pic: "/images/kasumi0.png"
   pic2: "/images/kasumi1.png"
@@ -2100,43 +1650,6 @@ cammy:
   notes: ''
   date: '2018-11-28'
   index: 11
-diablo:
-  pic: "/images/diablo0.png"
-  pic2: "/images/diablo1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: light
-  tier: 6 7 5 3
-  leader: Tap Skill defense +5% to Light units
-  auto: Deals 91 damage.
-  tap: Deals 297 damage to target and Skill defense +18% for (24s or 3 hits) and Taunt
-    (88% provocation) for 10s to self.
-  slide: Deals 487 damage to 2 random enemy and gains Immortality (HP won't go under
-    1) and Fury (saves up to 350% damage and returns.
-  drive: Deals 1397 damage to 2 random enemies and Skill defense +25% for 20s to 5
-    Light units.
-  notes: ''
-  date: '2018-11-28'
-  index: 16
-eve:
-  pic: "/images/eve0.png"
-  pic2: "/images/eve1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 10 10 10 10
-  leader: Drive skill damage +10% to Water units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
-    Defense
-  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
-    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
-  drive: Deals 2437 damage to all enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 21
 aurora:
   pic: "/images/aurora0.png"
   pic2: "/images/aurora1.png"
@@ -2155,27 +1668,6 @@ aurora:
   notes: ''
   date: '2018-11-28'
   index: 5
-cleopatra:
-  pic: "/images/cleopatra0.png"
-  pic2: "/images/cleopatra1.png"
-  pic3: "/images/cleopatra1.png"
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 9 9 10 10
-  leader: Attack +10% to Light Allies
-  auto: Deals 113 damage.
-  tap: Deals 477 damage to target and Additional 100 damage IF target is Dark Type
-    and 55% chance to Apply "Concentration" (100% Critital Rate and Hit Rate) to self
-    for 13seconds.
-  slide: Deals 927 damage and 800 ignore defense and Apply "Curse" (80 damages per
-    2seconds and additional damage when "Curse" ends) for 8seconds to 2 lowest HP
-    enemies.
-  drive: Deals 2327 damage to 4 lowest Hp enemies and Additional 500 damage IF target
-    is cursed.
-  notes: ''
-  date: '2018-11-28'
-  index: 14
 aria:
   pic: "/images/aria0.png"
   pic2: "/images/aria1.png"
@@ -2215,24 +1707,6 @@ ashtoreth:
   notes: ''
   date: '2018-11-28'
   index: 6
-dana:
-  pic: "/images/dana0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: light
-  tier: 10 10 10 8
-  leader: Slide Skill defense +5% to Light units
-  auto: Deals 92 damage.
-  tap: Deals 319 damage to target and gains immunity to debuffs for 3s.
-  slide: Deals 578 damage to target and gives +1400HP barrier and +35% Defense for
-    14s to 5 allies with lowest HP.
-  drive: Deals 1480 damage to 2 random enemies and drive Skill defense +30% for 15s
-    to all allies.
-  notes: ''
-  date: '2018-11-28'
-  index: 15
 bikini lisa:
   pic: "/images/bikinilisa0.png"
   pic2: "/images/bikinilisa1.png"
@@ -2336,27 +1810,6 @@ party star medb:
   notes: ''
   date: '2018-11-28'
   index: 150
-sitri:
-  pic: "/images/sitri0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 6 7 10 10
-  leader: Maximum hp +1000 to all Light Allies (+3000 additional hp on Worldboss)
-  auto: Deals 100 Damages.
-  tap: Deals 380 Damages to 1 enemy. On Worldboss Only, removes 5 Attack and Defense
-    stacks.
-  slide: Deals 656 Damages to 1 enemy and Apply +1600 Attack to 9 allies (prioritizing
-    Lights). On Worldboss Only, Apply -2 Cooldown for 2 Turns and +1000 Slide Skill
-    Damage for 20seconds to 5highest attack Allies (prioritizing back row).
-  drive: Deals 1745 Damages to 2 random enemies and Apply +2000 barrier to 9 allies
-    lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
-    Allies (Prioritizing back row).
-  notes: ''
-  date: '2018-11-28'
-  index: 29
 lady bathory:
   pic: "/images/bathory0.png"
   pic2: "/images/bathory1.png"
@@ -2436,24 +1889,6 @@ erato:
   notes: ''
   date: '2018-11-28'
   index: 92
-freesia:
-  pic: "/images/4freesia0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: debuffer
-  element: fire
-  tier: 6 5 8 9
-  leader: Defense -8% to grass enemies.
-  auto: Deals 74 damage.
-  tap: Deals 240 damage to target with least Defense, and Defense -300 for 8s to enemy
-    with highest defense.
-  slide: Deals 441 damage and Defense -350 for 12s to 2 enemies with highest attack.
-  drive: Deals 1101 damage to 3 enemies with highest Defense, and Defense -1000 for
-    16s.
-  notes: ''
-  date: '2018-11-28'
-  index: 116
 neman:
   pic: "/images/4nevan0.png"
   pic2: ''
@@ -2508,60 +1943,6 @@ danu:
   notes: ''
   date: '2018-11-28'
   index: 124
-sonnet:
-  pic: "/images/4sonnet0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: water
-  tier: 7 6 7 10
-  leader: Auto damage +40 to Water units.
-  auto: Deals 80 damage.
-  tap: Deals 80 damage plus Auto damage 3 times to target.
-  slide: Deals 531 damage and Poison (Deals 380 damage when enemy attacks and receives
-    attacks) for 3 turns to 2 enemies with priority to fire units, if fire type deal
-    150 additional damage.
-  drive: Deals 1389 damage to 3 random enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 122
-elysium:
-  pic: "/images/4elysium0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: water
-  tier: 7 9 8 9
-  leader: Tap damage +80 to Water units.
-  auto: Deals 80 damage.
-  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
-    type.
-  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
-    attacks) for 3 turns to 3 enemies with lowest HP.
-  drive: Deals 1422 damage to 3 enemies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 123
-leda:
-  pic: "/images/4leda0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: light
-  tier: 10 6 9 9
-  leader: Healing +2.5% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
-  slide: Gives Regeneration (Heal every 2s) ability +30% to all allies and 60HP Regeneration
-    (Heal every 2s) for 16s to 2 allies with lowest HP.
-  drive: Deals 1108 damage to 2 random enemies and give Lifesteal (Absorbs 20% of
-    the damage as HP) for 20s to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 96
 hat-trick:
   pic: "/images/4hat-trick0.png"
   pic2: ''
@@ -2808,22 +2189,6 @@ mona:
   notes: ''
   date: '2018-11-28'
   index: 158
-tiamat:
-  pic: "/images/3tiamat0.png"
-  pic2: ''
-  pic3: ''
-  stars: '3'
-  type: debuffer
-  element: fire
-  tier: 6 6 7 8
-  leader: Defense -7% to all enemies.
-  auto: Deals 54 damage.
-  tap: Deals 156 damage and Defense -250 for 8s to target.
-  slide: Deals 306 damage and Defense -4% for 12s to 2 random enemies.
-  drive: Deals 831 damage and Defense -17% for 14s to 3 random enemies.
-  notes: ''
-  date: '2018-11-28'
-  index: 159
 davi:
   pic: "/images/3davi0.png"
   pic2: ''
@@ -2879,31 +2244,6 @@ agamemnon:
   notes: ''
   date: '2018-11-28'
   index: 87
-neptune:
-  pic: "/images/hardworkerneptune0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 7 7 10 9
-  leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
-    Increase instant heal +10%)."
-  auto: Deal 101 auto attack damage.
-  tap: "Deal 387 damage to target. \r\nPrioritizing allies with least HP remaining,
-    Heal +30% of HP to 2 allies for 20 seconds. \r\nFor Raid Boss only, delete target
-    stacking buff (Attack/ defense power) 5 times ONLY."
-  slide: "Deal 676 damage to target. \r\nPrioritizing allies with least HP remaining,
-    increase skill gauge speed +30% and heal 1251 HP for 16 seconds. \r\nFor Raid
-    Boss only, prioritizing an ally with the most attack power, get a 30% chance to
-    apply \"Double-Edge Sword\" (Increase attack power and reduce defense) for 16
-    seconds.\r\n"
-  drive: "Deal 1816 damage to 3 enemies randomly. \r\nApply \"Life Bind\" up to 5
-    allies (Convert 50% of the damage received into healing, the rest of the HP buff
-    is spread to 2 allies with the least HP) for 20 seconds. "
-  notes: ''
-  date: '2018-12-05'
-  index: 154
 victrix:
   pic: "/images/4victrix0.png"
   pic2: ''
@@ -3021,6 +2361,206 @@ christmas leda:
   notes: ''
   date: '2018-12-25'
   index: 161
+kouga:
+  pic: "/images/kouga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 10 10 10 10
+  leader: Skill gauge charge rate +8% to Water units.
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target and 52.5% chance to fully charge skill gauge to
+    random ally (excluding self).
+  slide: Deals 663 damage to target and skill gauge charge +40% for 2 turns and slide
+    cooldown -2s to 2 allies with highest attack.
+  drive: Deals 1789 damage and 80% chance to stun for 12s to 3 enemies that are charging
+    skill and +400 drive gauge.
+  notes: Kouga is the best support unit in the game and a must have. Her buffs can
+    help attackers deal more damage or help your team survive by targeting a healer
+    on the team - Healers have long cooldowns, so Kouga is great at decreasing it
+    with her slide. Her tap is usually more RNG even at +6 uncap, and even at 83%
+    she will not activate her tap passive skill if spammed. The tap skill will also
+    only fully charge an ally's skill gauge if they are not on a counter cooldown,
+    so use it wisely. Great with Dana or Syrinx.
+  date: '2018-11-28'
+  index: 70
+dana:
+  pic: "/images/dana0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: light
+  tier: 10 10 10 8
+  leader: Slide Skill defense +5% to Light units
+  auto: Deals 92 damage.
+  tap: Deals 319 damage to target and gains immunity to debuffs for 3s.
+  slide: Deals 578 damage to target and gives +1400HP barrier and +35% Defense for
+    14s to 5 allies with lowest HP.
+  drive: Deals 1480 damage to 2 random enemies and drive Skill defense +30% for 15s
+    to all allies.
+  notes: Dana is the best tank in the game in all modes, except WorldBoss where Maris
+    (water tank) is better. Her shields + defense up helps to survive against raid
+    drives. Running Dana with a single healer like Maat or Leda will give your team
+    high survivability.
+  date: '2018-11-28'
+  index: 15
+sonnet:
+  pic: "/images/4sonnet0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: water
+  tier: 7 6 7 10
+  leader: Auto damage +40 to Water units.
+  auto: Deals 80 damage.
+  tap: Deals 80 damage plus Auto damage 3 times to target.
+  slide: Deals 531 damage and Poison (Deals 380 damage when enemy attacks and receives
+    attacks) for 3 turns to 2 enemies with priority to fire units, if fire type deal
+    150 additional damage.
+  drive: Deals 1389 damage to 3 random enemies.
+  notes: Sonnet is good against single target fights such as Raids and WorldBoss,
+    because she has the highest poison per tick compared with Elysium and Eve. Can
+    easily be added to any element WB teams to give poison damage.
+  date: '2018-11-28'
+  index: 122
+elysium:
+  pic: "/images/4elysium0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: water
+  tier: 7 9 8 9
+  leader: Tap damage +80 to Water units.
+  auto: Deals 80 damage.
+  tap: Deals 295 damage to enemy with lowest HP with 100 additional damage if Fire
+    type.
+  slide: Deals 560 damage and Poison (Deals 350 damage when enemy attacks and recieves
+    attacks) for 3 turns to 3 enemies with lowest HP.
+  drive: Deals 1422 damage to 3 enemies with lowest HP.
+  notes: Not the strongest poison dealer, but hits more targets than Eve or Sonnest,
+    which makes her great for PVP teams.
+  date: '2018-11-28'
+  index: 123
+maat:
+  pic: "/images/maat0.png"
+  pic2: "/images/maat1.png"
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: light
+  tier: 10 8 10 10
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Light units
+  auto: Deals 95 damage.
+  tap: Deals 330 damage to target, and removes freeze and petrification from 1 ally.
+  slide: Gives 146HP Regeneration (Heal every 2seconds) for 20s to all allies.
+  drive: Revives 1 dead ally to 1000HP and gives 300HP Regeneration (Heal every 2seconds)
+    for 16s to 3 allies with lowest HP.
+  notes: Maat + Leda combos are really strong, especially with Leda's leader skill.
+    Maat is very useful in PVE and can be a real annoyance for the enemy in PVP.
+  date: '2018-11-28'
+  index: 33
+leda:
+  pic: "/images/4leda0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: buffer
+  element: light
+  tier: 10 6 9 9
+  leader: Healing +2.5% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 229 damage to target and gives a +250HP barrier for 8s to 1 random ally.
+  slide: Gives Regeneration (Heal every 2s) ability +30% to all allies and 60HP Regeneration
+    (Heal every 2s) for 16s to 2 allies with lowest HP.
+  drive: Deals 1108 damage to 2 random enemies and give Lifesteal (Absorbs 20% of
+    the damage as HP) for 20s to 2 allies with lowest HP.
+  notes: She isn't a healer, but doesn't have the long cooldowns that healers do.
+    A great supportive healer in content where a ton of damage is dealt, but can easily
+    be used as a solo healer. Arguably best "healer" in the game.
+  date: '2018-11-28'
+  index: 96
+nirrti:
+  pic: "/images/nirrti0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 8 8 7 8
+  leader: Debuff evasion rate -15% to all dark enemies
+  auto: Deals 101 damage.
+  tap: Deals 391 damage and removes one buff to target.
+  slide: Deals 610 damage to 2 enemies with highest attack and 75% chance Confuse
+    for 10s to target with highest attack.
+  drive: Deals 2017 damage, removes one buff and enemy drive gauge -10% to 3 enemies
+    with the highest attack.
+  notes: A very good unit that can steal buffs and cause enemies to attack themselves.
+    Good in PVP and PVE, and sometimes useable in Raids and WorldBoss.
+  date: '2018-11-28'
+  index: 28
+diablo:
+  pic: "/images/diablo0.png"
+  pic2: "/images/diablo1.png"
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: light
+  tier: 6 7 5 3
+  leader: Tap Skill defense +5% to Light units
+  auto: Deals 91 damage.
+  tap: Deals 297 damage to target and Skill defense +18% for (24s or 3 hits) and Taunt
+    (88% provocation) for 10s to self.
+  slide: Deals 487 damage to 2 random enemy and gains Immortality (HP won't go under
+    1) and Fury (saves up to 350% damage and returns.
+  drive: Deals 1397 damage to 2 random enemies and Skill defense +25% for 20s to 5
+    Light units.
+  notes: A good PVP tank and okay in PVE content.
+  date: '2018-11-28'
+  index: 16
+frey:
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 9 9 9 9
+  leader: Drive skill damage +1000 to Dark Units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
+    self.
+  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
+  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
+    enemy according to debuff) to all enemies.
+  notes: A really good damage dealer and can self-crit boost. Although he may seem
+    lackluster early, with higher unbinds he becomes probably the strongest attacker
+    in the game. Passive skill on Drive can give nice added damage.
+  date: '2018-11-28'
+  index: 22
+dinashi:
+  pic: "/images/dinashi0.png"
+  pic2: "/images/dinashi1.png"
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 5 3 9 7
+  leader: Tap Skill defense +5% to Fire units
+  auto: Deals 92 damage.
+  tap: Deals 326 damage to target and gives +500HP barrier for 8s to 5 Fire units.
+  slide: Deals 572 damage to target and gives 50% Double-Edge (increase attack and
+    reduce Defense) for 16s to 5 Fire units.
+  drive: Deals 1474 damage to 2 random enemies and drive Skill defense +30% for 15s
+    to 5 allies.
+  notes: A very good unit for Fire Raids and ok in WorldBoss, but she loses usefulness
+    when teams or the attackers are not Fire.
+  date: '2018-11-28'
+  index: 17
 maris:
   pic: "/images/maris0.png"
   pic2: ''
@@ -3036,6 +2576,577 @@ maris:
     Regeneration (Heal every 2seconds) to self for 14s.
   drive: Deals 1466 damage to 3 random enemies and drive Skill defense +20% for 15s
     to all allies.
-  notes: ''
+  notes: Not as great as Dana in terms of shield and damage protection, but is the
+    second best tank in the game and is the best tank in WorldBoss. She gives barrier
+    to all allies, regardless of element.
   date: '2018-11-28'
   index: 73
+gkouga:
+  pic: "/images/gkouga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 9 9 9 9
+  leader: "+5% to Tap damage for all allies. "
+  auto: Deals 113 damage.
+  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
+    or Frozen and 200 Ignore defense if target is Water type.
+  slide: Deals 400 damages + Tap damage 3times to 1 enemy  (Prioritizing attacker
+    Types) and absorb 200 damage as HP.
+  drive: Deals 2329 damage to 3 enemies with lowest hp
+  notes: The best attacker in her element and because she focusses single targets
+    she is great in PVP. Useful in all content.
+  date: '2018-11-28'
+  index: 23
+medb:
+  pic: "/images/medb0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 6 6 9 8
+  leader: Tap damage +5% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 475 damage to target with 150 additional damage if enemy is buffed.
+  slide: Deals 100 damage plus Tap damage (including bonus damage effect on Tap skill)
+    2 times to 2 random enemies.
+  drive: Deals 2355 damage to 3 enemies with lowest HP.
+  notes: A good Fire attacker, but really shines in Raids with her 4 hits to a single
+    target. Unfortunately, she doesn't have a bleed debuff skill.
+  date: '2018-11-28'
+  index: 58
+hestia:
+  pic: "/images/hestia0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 8 8 8 8
+  leader: Drive skill damage +10% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
+    type.
+  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
+    with lowest HP with 120 additional damage if debuff type.
+  drive: Deals 2317 damage to all enemies.
+  notes: One of the best Fire attackers with good damage and bleed on slide. Good
+    for eating through Syrinx' buffs in PVP.
+  date: '2018-11-28'
+  index: 27
+jupiter:
+  pic: "/images/jupiter0.png"
+  pic2: "/images/jupiter1.png"
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 8 6 9 9
+  leader: Defense -10% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 369 damage and Defense -5% for 6s to target.
+  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
+    with lowest Defense.
+  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
+    enemies.
+  notes: A great debuffer in all content and has added bonus of doing bleed damage
+    on slide. Jupiter > Freesia > Tiamat.
+  date: '2018-11-28'
+  index: 61
+freesia:
+  pic: "/images/4freesia0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: debuffer
+  element: fire
+  tier: 6 5 8 9
+  leader: Defense -8% to grass enemies.
+  auto: Deals 74 damage.
+  tap: Deals 240 damage to target with least Defense, and Defense -300 for 8s to enemy
+    with highest defense.
+  slide: Deals 441 damage and Defense -350 for 12s to 2 enemies with highest attack.
+  drive: Deals 1101 damage to 3 enemies with highest Defense, and Defense -1000 for
+    16s.
+  notes: 4 star version of Jupiter with some decrease in debuff power, but still a
+    great unit and is easier to uncap.
+  date: '2018-11-28'
+  index: 116
+tiamat:
+  pic: "/images/3tiamat0.png"
+  pic2: ''
+  pic3: ''
+  stars: '3'
+  type: debuffer
+  element: fire
+  tier: 6 6 7 8
+  leader: Defense -7% to all enemies.
+  auto: Deals 54 damage.
+  tap: Deals 156 damage and Defense -250 for 8s to target.
+  slide: Deals 306 damage and Defense -4% for 12s to 2 random enemies.
+  drive: Deals 831 damage and Defense -17% for 14s to 3 random enemies.
+  notes: Cheap version of Freesia and Jupiter, but easier to uncap and does great
+    debuff work in all content - cheap, but good.
+  date: '2018-11-28'
+  index: 159
+lan fei:
+  pic: "/images/lanfei0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 8 8 6 5
+  leader: Attack -15% to Light enemies
+  auto: Deals 101 damage.
+  tap: Deals 387 damage and attack -700 for 10s to target.
+  slide: Deals 608 damage plus 500 ignore Defense damage to 2 enemies with highest
+    attack and enemy drive gauge -8%.
+  drive: Deals 2012 damage to 3 enemies with the highest Defense, removes one buff
+    and enemy drive gauge -10%.
+  notes: "Her special skills only worked on early raid bosses. Good for PVP and PVE.\r\n"
+  date: '2018-11-28'
+  index: 36
+love sitri:
+  pic: "/images/lovesitri0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 6 8 5 5
+  leader: Weakness Defense -8% to Water Types enemies
+  auto: Deal 101 auto attack damage
+  tap: With priority on Debuffers, Deal 390 damage and, if the target is a Debuffer
+    type, deal 160 additional damage.
+  slide: With priority on Attackers type, Deal 669 damage to 2 targets, plus skill
+    gauge charge speed -30% and a 70% chance to get "Attraction" (invalidates buffs,
+    can't be dispelled) for 12 seconds.
+  drive: "With priority on Debuffers, Deal 1967 damage to 3 targets, plus skill gauge
+    charge amount -33% for 16 seconds and a 80% chance of \"Stun\" (increase\r\nduration
+    of Stun by 1 second to max 5 seconds for each attack) for 4 seconds."
+  notes: A PVP annoyance - great if she's on your team, not when she's on the enemy.
+    A clear counter to Kouga in PVP.
+  date: '2019-1-1'
+  index: 48
+mafdet:
+  pic: "/images/mafdet0.png"
+  pic2: "/images/mafdet1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 9 9 9 9
+  leader: Drive skill damage +10% to Light units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
+    type.
+  slide: Deals 797 damage plus 350 additional damage and apply heal block (excludes
+    Lifesteal and absorption) for 16s to 3 enemies with lowest HP.
+  drive: Deals 2341 damage to all enemies and apply heal block (excludes Lifesteal
+    and absorption) for 25s to 3 enemies with lowest HP.
+  notes: A very good damage dealer and very useful in PVP against teams with healers.
+  date: '2018-11-28'
+  index: 30
+naiad:
+  pic: "/images/naiad0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 7 7 8 10
+  leader: Skill gauge charge rate +10% to all Water unit allies.
+  auto: Deals 99 damage.
+  tap: Deals 365 damage to target and gives +25% drive gauge charge speed for 10seconds
+    to 1 ally.
+  slide: Deals 550 damage and -30% skill gauge charge rate for 2 turns to 2 random
+    enemies, and gives cooldown -1s for 2 turns to 3 random allies.
+  drive: Deals 1705 damage to 2 random enemies. Gives Skill Gauge Charge Rate +20%
+    to all Allies for 20 seconds. Gives Skill Gauge Charge Speed +20% to all Allies
+    for 20 seconds.
+  notes: Not as good as Kouga in some aspects, but her slide and drive are really
+    useful in WorldBoss events.
+  date: '2018-11-28'
+  index: 72
+newbie mona:
+  pic: "/images/newbiemona0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 10 10 10 10
+  leader: Skill Gauge Charge +8% to all Allies (Additional +8% in Devil Rumble).
+  auto: Deals 101 damage.
+  tap: Deals 379 damage to target. 50% chance to remove "Bleed", "Poison" , "Curse"
+    from 2 allies. Gives "Lifesteal"(Absorbs 15% of the damage as HP) for 14s to 2
+    allies.
+  slide: Deals 667 damage to 2 random enemies.·Gives +30% Skill Gauge Charge for 2
+    turns to 2 highest attack allies. 70% chance to Apply "Cheer" (15% weakness skill
+    damage and increase attack based on the current number of buffs) for 2 turns to
+    2 highest attack allies.
+  drive: "Deals 1803 damage to 3 random enemies.\r\nGives +40% Skill Gauge Charge
+    for 3 turns to 3 allies (prioritizing grass Types). \r\nApply \"Cheer\" (15% weakness
+    skill damage and increase attack based on the current number of buffs) for 3 turns
+    to 3 allies (prioritizing grass Types)."
+  notes: Great in all content and can easily replace Kouga when skill cooldown isn't
+    as important as speed buff and damage buff. Can be used with Kouga to get a really
+    speedy team.
+  date: '2018-11-28'
+  index: 84
+pantheon:
+  pic: "/images/pantheon0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 6 6 10 10
+  leader: Critical rate +15% to Dark units
+  auto: Deals 99 damage.
+  tap: Deals 364 damage to target and critical rate +35% for 7s to 1 random ally.
+  slide: Critical rate +40% and critical damage +30% for 18s to 2 allies with highest
+    attack.
+  drive: Deals 1705 damage to 2 random enemies, critical damage +50% and critical
+    rate +70% for 22s to 2 allies with highest attack.
+  notes: Can be used in all content, but is better in Raids and Worldboss events.
+  date: '2018-11-28'
+  index: 37
+rusalka:
+  pic: "/images/rusalka0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: water
+  tier: 6 6 6 5
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Water units.
+  auto: Deals 96 damage.
+  tap: Heals 233HP to 2 allies with lowest HP.
+  slide: Gives 1.8%HP+21HP Regeneration (Heal every 2seconds) for 8s and Immortality
+    (HP won't go under 1) for 10s to 2 allies with lowest HP.
+  drive: Heals 12%HP+90HP and gives Immortality (HP won't go under 1) for 14s to 3
+    allies with lowest HP.
+  notes: Her immortality can be a lifesaver sometimes, but her overall healing is
+    not very strong.
+  date: '2018-11-28'
+  index: 75
+metis:
+  pic: "/images/metis0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: dark
+  tier: 6 6 7 3
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to Dark units
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and heals 201HP to ally with lowest HP.
+  slide: Gives 1.5%HP+21HP Regeneration (Heal every 2seconds) for 10s and Immortality
+    (HP won't go under 1) for 10s to 2 allies with lowest HP.
+  drive: Gives Berserk (Increase attack by +70% and becomes immune to damage, afterwards
+    unit will be stunned for 5s) for 14s to 2 allies with lowest HP.
+  notes: Similar to Rusalka, but Metis' Berserk buff on drive is very useful in UndergroundEx
+    and even raids - The downside is that her drive is hard to get the attacker buffed
+    because she only buffs the lowest HP units, and then stuns for 5 seconds. With
+    RNG on your side she can be quite good.
+  date: '2018-11-28'
+  index: 56
+tethys:
+  pic: "/images/tethys0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 4 4 5 9
+  leader: Drive Gauge Charge -5% to all enemies (Additional 8% on Worldboss).
+  auto: Deals 101 damage
+  tap: "Deals 381 damage to target and Apply \"Poison\" (Deals 200 damages when attack
+    and receives attacks).\r\nWithin 8s debuff effect on 2 enemies will have it's
+    duration extended by 30% (from current remaining duration)."
+  slide: "Deals 617 damage to 2 random enemies and 70% chance to remove 1 buff from
+    the target (last applied buff).\r\nApply \"Debuff Explosion\" (removes first applied
+    debuff and deals damage according to the debuff type x200 modifier)."
+  drive: Deals 1983 damages to 3 random enemies and Apply "Poison" (Deals 800 damages
+    when attack and receives attacks) for 3turns.
+  notes: Similar to Nirrti, but more offensive than defensive in terms of skills.
+  date: '2018-11-28'
+  index: 68
+sitri:
+  pic: "/images/sitri0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 7 10 10
+  leader: Maximum hp +1000 to all Light Allies (+3000 additional hp on Worldboss)
+  auto: Deals 100 Damages.
+  tap: Deals 380 Damages to 1 enemy. On Worldboss Only, removes 5 Attack and Defense
+    stacks.
+  slide: Deals 656 Damages to 1 enemy and Apply +1600 Attack to 9 allies (prioritizing
+    Lights). On Worldboss Only, Apply -2 Cooldown for 2 Turns and +1000 Slide Skill
+    Damage for 20seconds to 5highest attack Allies (prioritizing back row).
+  drive: Deals 1745 Damages to 2 random enemies and Apply +2000 barrier to 9 allies
+    lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
+    Allies (Prioritizing back row).
+  notes: Attack buffer and specifically made for WB but can do just as well in other
+    modes.
+  date: '2018-11-28'
+  index: 29
+mammon:
+  pic: "/images/mammon0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: grass
+  tier: 5 5 5 3
+  leader: Tap Skill defense +5% to grass units.
+  auto: Deals 91 damage
+  tap: Deals 311 damage to target and Gives +25% defense for 15s to self.
+  slide: Deals 564 damage to target and Gives Skill defense +20% to self and Taunt
+    (90% provocation) for 12s.
+  drive: Deals 1456 damage to 2 random enemies and drive Skill defense +30% for 15s
+    to 5 allies.
+  notes: Pull him, lock him, then forget him, but don't diss him.
+  date: '2018-11-28'
+  index: 80
+cleopatra:
+  pic: "/images/cleopatra0.png"
+  pic2: "/images/cleopatra2.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 9 9 10 10
+  leader: Attack +10% to Light Allies
+  auto: Deals 113 damage.
+  tap: Deals 477 damage to target and Additional 100 damage if target is Dark Type
+    and 55% chance to Apply "Concentration" (100% Critital Rate and Hit Rate) to self
+    for 13seconds.
+  slide: Deals 927 damage and 800 ignore defense and Apply "Curse" (80 damages per
+    2seconds and additional damage when "Curse" ends) for 8seconds to 2 lowest HP
+    enemies.
+  drive: Deals 2327 damage to 4 lowest HP enemies and additional 500 damage if target
+    is cursed.
+  notes: A strong attacker in all content. Great against Dark Raids where her self-crit
+    will allow you to have crit during fever - Damage monster.
+  date: '2018-11-28'
+  index: 14
+medusa:
+  pic: "/images/medusa0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 6 6 3 3
+  leader: Debuff resist +15% from Light Types Enemies.
+  auto: Deals 101 damage.
+  tap: "·Deals 390 damage to target. \r\n·Reduce 12% Attack to target for 10s."
+  slide: "Deals 619 to 2 random enemies. \r\nApply \"Taunt\" (20% Provocation) to
+    self for 12s. Apply \"Counter Petrification\" (70% chance to apply \"Petrify\"
+    (unable to act for 10seconds or after being hit 1 time) enemies that attack Medusa)
+    to self for 12s."
+  drive: Deal 4837 damage to 3 enemies plus 500 additional damage to "Petrified" targets
+    and 90% change to "Petrify" (unable to act for 15 seconds or after being hit 2
+    times) to targets.
+  notes: Can be useful for PVP.
+  date: '2018-11-28'
+  index: 83
+eve:
+  pic: "/images/eve0.png"
+  pic2: "/images/eve1.png"
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 10 10 10 10
+  leader: Drive skill damage +10% to Water units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage with 250 additional damage if Fire type to enemy with lowest
+    Defense
+  slide: Deals 855 damage with 450 additional damage and Poison (300 damage when enemy
+    attacks and receives attacks) for 3 turns to 2 enemies with lowest HP.
+  drive: Deals 2437 damage to all enemies.
+  notes: She is great in all content. Though, at lower uncap levels she will not be
+    as great as Ely or Sonnet in regards to poison, but she does more raw damage.
+  date: '2018-11-28'
+  index: 21
+orga (wola):
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 9 9 3 3
+  leader: Skill gauge charge rate -15% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  notes: Wola is great for CC in PVP. His Leader skill is great helps you get to drive
+    before enemy does. Even though his debuffs aren't 100%, they are still high enough
+    for him to be a very useful unit to use in PVP and PVE. His debuffs are useless
+    in Raids and WorldBoss modes. Some SoulCards that can counter his "Silence" debuff.
+  date: '2018-12-30'
+  index: 54
+cube moa:
+  pic: "/images/moa0.png"
+  pic2: "/images/moa1.png"
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 7 8 3 3
+  leader: Dark enemy debuff evasion rate -10%
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
+  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
+    (unable to act for 10s or after being hit 2 times).
+  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
+    to act for 15s or after being hit 3 times).
+  notes: A PVP cc unit and great in combination with Wola. Also great with DoT teams
+    and Gkouga. Moa is great at stalling the enemies to get to fever/drive first.
+    Useless in Raids and WorldBoss.
+  date: '2018-11-28'
+  index: 31
+syrinx:
+  pic: "/images/syrinx0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: grass
+  tier: 9 9 8 5
+  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and gives Invincibility for 10s or 2 hits to ally
+    with highest attack.
+  slide: Gives 141HP Regeneration (Heal every 2seconds) for 14s and Invincibility
+    for 20s or 4 hits to 2 allies with lowest HP.
+  drive: Gives 199HP Regeneration (Heal every 2seconds) for 16s and Invincibility
+    for 15s or 3 hits to 3 allies with lowest HP.
+  notes: Syrinx doesn't have the strongest heals per tick, but her Fortitude (invincibility)
+    buffs help minimize(decrease to 0) the damage received and thus less healing is
+    required. In PVP her buff can help negate damage when a poisoned ally is attacking
+    since each attack (regardless of number of hits) only destroys one stack of Fortitude
+    - Bleeding destroys stacks much faster.. Not a great healer in WorldBoss.
+  date: '2018-11-28'
+  index: 81
+horus:
+  pic: "/images/horus0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 5 3 4 3
+  leader: Attack -15% to Dark Type Enemies
+  auto: Deals 101 damage.
+  tap: Deals 386 damage and Reduce -700 Attack for 8 seconds and 60% chance to increase
+    "Curse" damage and duration for 8 seconds to target.
+  slide: Deals 604 damage and 500ignore defense to 2 highest attack enemies and Apply
+    "Blind" (40% chance to miss) for 12seconds.
+  drive: Dreals 1910 damage to 3 random enemies and Apply "Blind" (60% chance to miss)
+    for 14seconds and if they are inflicted with "Bleed", "Poison", "Curse" within
+    6seconds debuff duration is increased by +50% to 3random enemies.
+  notes: ''
+  date: '2018-11-28'
+  index: 32
+neptune:
+  pic: "/images/hardworkerneptune0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 7 7 10 9
+  leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
+    Increase instant heal +10%)."
+  auto: Deal 101 auto attack damage.
+  tap: "Deal 387 damage to target. \r\nPrioritizing allies with least HP remaining,
+    Heal +30% of HP to 2 allies for 20 seconds. \r\nFor Raid Boss only, delete target
+    stacking buff (Attack/ defense power) 5 times ONLY."
+  slide: "Deal 676 damage to target. \r\nPrioritizing 2 allies with least HP remaining,
+    increase skill gauge speed +30% and heal 1251 HP for 16 seconds. \r\nFor Raid
+    Boss only, prioritizing an ally with the most attack power, get a 30% chance to
+    apply \"Double-Edge Sword\" (Increase attack power and reduce defense) for 16
+    seconds.\r\n"
+  drive: "Deal 1816 damage to 3 enemies randomly. \r\nApply \"Life Bind\" up to 5
+    allies (Convert 50% of the damage received into healing, the rest of the HP buff
+    is spread to 2 allies with the least HP) for 20 seconds. "
+  notes: ''
+  date: '2018-12-05'
+  index: 154
+bi moa:
+  pic: "/images/bimoa0.png"
+  pic2: "/images/bimoa1.png"
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: dark
+  tier: 5 5 5 3
+  leader: "+12% Defense for dark type allies."
+  auto: Deal 92 auto attack damage.
+  tap: Deal 315 to target and apply "Reflect" on self (returns 15% of received damage)
+    for 10 seconds.
+  slide: Deals 563 to target, Apply "Rage" on self (Stores up to 250% damage and adds
+    it to the next skill) and apply "Taunt" (with a 90% chance to activate) for 12
+    seconds.
+  drive: Deal 1469 damage to 2 enemies randomly, apply +30% defense for all enemy
+    skills for 20 seconds and apply "Taunt" (with a 98% chance to activate for 16
+    seconds.
+  notes: ''
+  date: '2019-1-3'
+  index: 165
+oiran bathory:
+  pic: "/images/oiranbathory0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 8 9 10 9
+  leader: "+10% Final slide skill damage for Fire allies (Additional +30% chance of
+    critical damage on self in Devil Rumble)"
+  auto: Deal 114 auto attack damage.
+  tap: Deal 495 damage to target, apply "Yell" to self (increase ATK +15%, can be
+    stacked up to 3 times) for 15 seconds and a 75% chance to apply "Direct Hit" (Attack
+    ignoring "Endure" effect).
+  slide: Prioritizing 2 enemies with highest attack, deal 986 twice, gives 489 defense
+    ignore damage and 300 additional damage.
+  drive: Prioritizing enemies with least HP, deal 2657 damage to 4 enemies.
+  notes: ''
+  date: '2019-1-3'
+  index: 163
+kagura warwolf:
+  pic: "/images/kagurawarwolf0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 7 6 8 10
+  leader: "-15% Defense against Dark type enemies (Additional -10% WeakPoint defense
+    in WorldBoss)."
+  auto: Deal 102 auto attack damage.
+  tap: Deal 394 to target and apply -400 Tap Defense for 8 seconds. For WorldBoss
+    only - get a 75% chance to cancel "Rage" buff to enemy.
+  slide: Deal 675 damage to 2 enemies randomly, gives 600 defense ignore damage and
+    apply -500 enemy slide skill defense for 12 seconds. For WoldBoss only - apply
+    -500 defense for all enemy skills for 12 seconds.
+  drive: Deal 2030 damage to 3 enemies randomly, apply -20% debuff evasion and -20%
+    defense for all enemy skills for 16 seconds.
+  notes: ''
+  date: '2019-1-3'
+  index: 166

@@ -48,21 +48,22 @@ helpers do
     end
   end
 
-  def sort_info_by_given_type(criteria, type)
+  def sort_by_and_select_type(unit_info, catagory_type)
     keys = []
-    criteria.values.each do |hash|
-      if type == 'tier'
-        hash.each do |k, v|
-          next if k != type
-          keys << v.split(' ').map(&:to_i)
+    unit_info.each do |_unit_name, unit_details|
+      if catagory_type == 'tier'
+        unit_details.each do |stat, value|
+          next if stat != catagory_type
+          keys << value.split(' ').map(&:to_i)
         end
         keys.flatten!
       else
-        hash.each { |k, v| keys << v if k == type }
+        unit_details.each { |stat, value| keys << value if stat == catagory_type }
       end
     end
 
-    [type, keys.uniq.sort.map!(&:to_s).reverse]
+    return keys.uniq.sort.map!(&:to_s).reverse if catagory_type == 'tier'
+    keys.uniq.sort.map!(&:to_s)
   end
 
   def upcase_name(name)
@@ -216,7 +217,7 @@ def group_by_catagory_tier(details, catagory_vals)
         tiers = info['tier'].split(" ").map(&:to_i)
         # p [tiers, num, tiers[idx] == num.to_i]
         groups[idx][num.to_s] = {} if groups[idx][num].nil?
-        groups[idx][num][name] = info if tiers[idx] == num.to_i
+        groups[idx][num][name] = info if tiers[idx] == num.to_s.to_i
         # groups[idx] << {name => info} if tiers[idx] == num.to_i
         # groups[k][num][name] = info if tiers[idx] == num.to_i
         # groups[idx].sort
@@ -229,13 +230,13 @@ end
 
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
-  units_by_stars = nil
-  units_by_stars = unit_info.select { |_, v| v['stars'] == star_rating }.to_h
+  # units_by_stars = nil
+  units_by_stars = unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
   if type == 'tier'
     return group_by_catagory_tier(units_by_stars, catagory_vals)
   end
 
-  units_by_stars.sort_by { |k, _| k }.to_h
+  units_by_stars.sort_by { |name, __stats| name }.to_h
 end
 
 def get_unit_or_sc_from_keys(keys)
@@ -438,24 +439,23 @@ get '/equips/:star_rating/:sc_name/edit' do
 end
 
 get '/childs/:star_rating/sort_by/:type' do
-  star_rating = params[:star_rating]
-  type = params[:type]
+  @star_rating = params[:star_rating]
+  @catagory_type = params[:type]
   unit_info = @units
 
-  if %w[3 4 5].any? { |star| star_rating == star_rating }
-    @sorted_arr = sort_info_by_given_type(unit_info, type)
-    @units = sort_by_given_info(unit_info, star_rating, @sorted_arr[1], type)
+  if %w[3 4 5].any? { |star| star == @star_rating[0] }
+    @catagories = sort_by_and_select_type(unit_info, @catagory_type)
+    @units = sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
 
-    if type == 'tier'
+    if @catagory_type == 'tier'
       # pve = sort_tier_catagory(@sorted_arr, @units, 0)
       # pvp = sort_tier_catagory(@sorted_arr, @units, 1)
       # raid = sort_tier_catagory(@sorted_arr, @units, 2)
       # worldboss = sort_tier_catagory(@sorted_arr, @units, 3)
       # @sorted_catagories = [pve, pvp, raid, worldboss]
-      @sorted_catagories = @units#[@units[0], @units[1], @units[2], @units[3]]
+      @units#[@units[0], @units[1], @units[2], @units[3]]
       return erb :sort_by_tier
     end
-
   else
     session[:message] = 'There are no units by that tier!'
     redirect '/'
