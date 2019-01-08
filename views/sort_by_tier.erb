@@ -25,18 +25,17 @@
 
 
 
-<% @units.each_with_index do |units, idx| %>
+<% @units.each_with_index do |tier_catagory, game_mode| %>
   <div class="main-container conatiner">
-  <h4 class="container catagory_div <%= idx %>" id="sort_by_title"><%= catagory(idx) %></h4>
-  <% units.each do |catagory_value, unit_list| %>
+  <h4 class="container catagory_div <%= game_mode %>" id="sort_by_title"><%= catagory(game_mode) %></h4>
+  <% tier_catagory.each do |catagory_value, unit_list| %>
+  <div class="catagory_div <%= game_mode %>">
 
-  <div class="catagory_div <%= idx %>">
-    <div class="container">
-      <% type = "Tier" %>
-      <h5 id="sort_by_title">Tier: <%= catagory_value.capitalize %></h5>
-    </div>
 
   <div class="container">
+      <% type = "Tier" %>
+      <h5 id="sort_by_title">Tier: <%= catagory_value.capitalize %></h5>
+
       <div class="row justify-content-center">
         <% unit_list.each do |unit, unit_details| %>
         <% rating = unit_details["stars"] + "stars" %>

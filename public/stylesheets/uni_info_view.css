@@ -296,6 +296,7 @@ label {
 #sort_by_title {
 	background-color: rgb(48, 58, 53, 0.7);
 	text-align: center;
+	width: 100%;
 }
 
 .file-list-box {
@@ -367,7 +368,7 @@ textarea {
         display: block;
   }
 
-  li { 
+  li {
     /* min-width: 50%;
     max-width: 100%; */
     width: auto;

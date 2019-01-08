@@ -17,7 +17,7 @@
     <% @catagories.each do |catagory| %>
     <% @catagory_type == 'type' ? unit = 'units' : unit = '' %>
       <div class="row justify-content-center">
-      <h4 class="container <%= unit %> <%= catagory %>" id="sort_by_title"><%= catagory.capitalize %></h4>
+      <h4 class="container catagory_div <%= unit %> <%= catagory %>" id="sort_by_title"><%= catagory.capitalize %></h4>
 
       <% @units.each do |name, unit_details| %>
         <% next unless unit_details[@catagory_type] == catagory %>

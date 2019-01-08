@@ -62,7 +62,9 @@ helpers do
       end
     end
 
-    return keys.uniq.sort.map!(&:to_s).reverse if catagory_type == 'tier'
+    if catagory_type == 'tier' || catagory_type == 'date'
+      return keys.uniq.sort.map!(&:to_s).reverse
+    end
     keys.uniq.sort.map!(&:to_s)
   end
 

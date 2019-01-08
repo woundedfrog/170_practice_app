@@ -2730,7 +2730,7 @@ love sitri:
     of Stun by 1 second to max 5 seconds for each attack) for 4 seconds."
   notes: A PVP annoyance - great if she's on your team, not when she's on the enemy.
     A clear counter to Kouga in PVP.
-  date: '2019-1-1'
+  date: '2018-11-28'
   index: 48
 mafdet:
   pic: "/images/mafdet0.png"
@@ -2979,27 +2979,6 @@ eve:
     as great as Ely or Sonnet in regards to poison, but she does more raw damage.
   date: '2018-11-28'
   index: 21
-orga (wola):
-  pic: "/images/orga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 9 9 3 3
-  leader: Skill gauge charge rate -15% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
-  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
-    for 5s to 2 random enemies.
-  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
-    gauge by 45% to 3 random enemies.
-  notes: Wola is great for CC in PVP. His Leader skill is great helps you get to drive
-    before enemy does. Even though his debuffs aren't 100%, they are still high enough
-    for him to be a very useful unit to use in PVP and PVE. His debuffs are useless
-    in Raids and WorldBoss modes. Some SoulCards that can counter his "Silence" debuff.
-  date: '2018-12-30'
-  index: 54
 cube moa:
   pic: "/images/moa0.png"
   pic2: "/images/moa1.png"
@@ -3150,3 +3129,24 @@ kagura warwolf:
   notes: ''
   date: '2019-1-3'
   index: 166
+orga (wola):
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 9 9 3 3
+  leader: Skill gauge charge rate -15% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  notes: Wola is great for CC in PVP. His Leader skill is great helps you get to drive
+    before enemy does. Even though his debuffs aren't 100%, they are still high enough
+    for him to be a very useful unit to use in PVP and PVE. His debuffs are useless
+    in Raids and WorldBoss modes. Some SoulCards that can counter his "Silence" debuff.
+  date: '2018-11-28'
+  index: 54
