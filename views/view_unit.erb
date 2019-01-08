@@ -1,8 +1,9 @@
+<div id="viewing_profile"></div>
 
 <div class="container">
   <div  class="special-links">
     <% stars = @current_unit["stars"] %>
-    <a href="/childs/<%= stars %>stars">Go back</a>
+    <a href="#" onclick="goBack()">Go back</a>
   <% if session[:username] %>
       <a href="/childs/<%= stars %>stars/<%= @unit_name.downcase %>/edit">  | Edit</a>
     <% end %>

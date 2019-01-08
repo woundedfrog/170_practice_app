@@ -1,7 +1,9 @@
+<div id="viewing_profile"></div>
+
 <div class="container">
 	<div  class="special-links">
 		<% stars = @current_card["stars"] %>
-		<a href="/equips/<%= stars %>stars">Go back</a>
+		<a href="#" onclick="goBack()">Go back</a>
 		<% if session[:username] %>
 				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">  | Edit</a>
 			<% end %>

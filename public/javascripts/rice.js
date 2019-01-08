@@ -1,5 +1,9 @@
 $( document ).ready(function() {
 
+  if($("#viewing_profile").length == 0){
+      $("header").show();
+  }
+
   jQuery.fn.highlight = function ( className) {
 
     return this.each(function () {
@@ -67,6 +71,7 @@ function  showUnitsTier(type) {
   $('.main-container').show();
   $('.catagory_div').show();
   $('.catagory_div').hide();
+  $('.0').hide();
   $('.' + type).show();
 };
 
@@ -87,8 +92,13 @@ function checkMe() {
     }
 };
 
+function goBack() {
+  window.history.back();
+}
+
 $(document).ready(function() {
   $('.main-container').hide();
+  $('.0').show();
 });
 
 // var docWidth = document.documentElement.offsetWidth;
