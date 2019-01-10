@@ -24,8 +24,16 @@ before do
 end
 
 helpers do
+  def long_stat_key?(key)
+    %w[leader auto tap slide drive notes date].include?(key.to_s)
+  end
+
+  def short_stat_key?(key)
+    %w[tier stars type element].include?(key.to_s)
+  end
+
   def special_key?(key)
-    %w[pic pic2 pic3 tier stars type element].include?(key.to_s)
+    %w[pic pic1 pic2 pic3 index].include?(key.to_s)
   end
 
   def format_image_from_tier(ratings)
@@ -217,13 +225,8 @@ def group_by_catagory_tier(details, catagory_vals)
     catagory_vals.each do |num|
       details.each do |name, info|
         tiers = info['tier'].split(" ").map(&:to_i)
-        # p [tiers, num, tiers[idx] == num.to_i]
         groups[idx][num.to_s] = {} if groups[idx][num].nil?
         groups[idx][num][name] = info if tiers[idx] == num.to_s.to_i
-        # groups[idx] << {name => info} if tiers[idx] == num.to_i
-        # groups[k][num][name] = info if tiers[idx] == num.to_i
-        # groups[idx].sort
-
       end
     end
   end
@@ -233,7 +236,8 @@ end
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
   # units_by_stars = nil
-  units_by_stars = unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
+  units_by_stars =
+  unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
   if type == 'tier'
     return group_by_catagory_tier(units_by_stars, catagory_vals)
   end
@@ -282,9 +286,9 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
   pname.include?(directory) ? pname : "#{directory}/" + pname
 end
 
-def sort_tier_catagory(tiers_arr, units, index)
-  units.sort_by {|k,v| v['tier'].split(' ')[index]}
-end
+# def sort_tier_catagory(tiers_arr, units, index)
+#   units.sort_by {|k,v| v['tier'].split(' ')[index]}
+# end
 
 def unit_or_sc_exist?(type, name)
   data = if type == 'unit'
@@ -371,7 +375,6 @@ get "/:filename/edit" do
   erb :edit_notice
 end
 
-
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
@@ -411,7 +414,7 @@ end
 get '/childs/:star_rating/:unit_name' do
   name = params[:unit_name]
   unit_or_sc_exist?('unit', name)
-  @unit_name = name.capitalize
+  @unit_name = name
   @current_unit = @units[name]
   erb :view_unit
 end
@@ -447,15 +450,11 @@ get '/childs/:star_rating/sort_by/:type' do
 
   if %w[3 4 5].any? { |star| star == @star_rating[0] }
     @catagories = sort_by_and_select_type(unit_info, @catagory_type)
-    @units = sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
+    @units =
+    sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
 
     if @catagory_type == 'tier'
-      # pve = sort_tier_catagory(@sorted_arr, @units, 0)
-      # pvp = sort_tier_catagory(@sorted_arr, @units, 1)
-      # raid = sort_tier_catagory(@sorted_arr, @units, 2)
-      # worldboss = sort_tier_catagory(@sorted_arr, @units, 3)
-      # @sorted_catagories = [pve, pvp, raid, worldboss]
-      @units#[@units[0], @units[1], @units[2], @units[3]]
+      @units
       return erb :sort_by_tier
     end
   else
@@ -489,15 +488,14 @@ get '/:catagory/:star_rating' do
 end
 
 get '/show_unit_details' do
-  @unit_details = load_unit_details
-  @sc_details = load_soulcards_details
+  @unit_details = @units
+  @sc_details = @soulcards
   erb :show_unit_details
 end
 
 get '/show_files' do
   units = File.join(file_path[0], '*')
   cards = File.join(file_path[1], '*')
-  # pattern = File.join(file_path, '*')
   @units = Dir.glob(units).map do |path|
     next if File.directory?(path)
 
@@ -517,21 +515,24 @@ end
 
 post '/equips/new_sc' do
   require_user_signin
-  card_data = load_soulcards_details
+  card_data = @soulcards
 
-  @current_unit = load_soulcards_details[params[:sc_name]]
-  @max_index_val = get_max_index_number(load_soulcards_details)
+  @current_unit = card_data[params[:sc_name]]
+  @max_index_val = get_max_index_number(card_data)
 
-  data = load_soulcards_details
+  data = card_data
   name = params[:sc_name].downcase
   index = params[:index].to_i
 
-  original_card = card_data.select { |unit, info| unit if index == info['index'].to_i }
+  original_card = card_data.select {
+    |unit, info| unit if index == info['index'].to_i
+  }
 
   pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
 
   if card_data.include?(name) && index != card_data[name]['index']
-    session[:message] = 'A card by that name already exists. Please create a different card.'
+    session[:message] =
+      'A card by that name already exists. Please create a different card.'
     status 422
 
     if params['edited']
@@ -559,22 +560,24 @@ end
 
 post '/new_unit' do
   require_user_signin
-  unit_data = load_unit_details
-  @current_unit = load_unit_details[params[:unit_name]]
-  @max_index_val = get_max_index_number(load_unit_details)
+  unit_data = @units
+  @current_unit = unit_data[params[:unit_name]]
+  @max_index_val = get_max_index_number(unit_data)
 
-  data = load_unit_details
+  data = unit_data
   name = params[:unit_name].downcase
   index = params[:index].to_i
   date = check_and_fetch_date(data, name)
 
-  original_unit = unit_data.select { |unit, info| unit if params['index'].to_i == info['index'].to_i }
+  original_unit = unit_data.select {
+    |unit, info| unit if params['index'].to_i == info['index'].to_i
+  }
 
   pname = create_file_from_upload(params[:file], params[:pic], 'public/images')
 
   if unit_data.include?(name) && index != unit_data[name]['index']
-    session[:message] = 'A unit by that name already exists. Please enter a different unit name.'
-
+    session[:message] =
+      'A unit by that name already exists. Please enter a different unit name.'
     status 422
 
     if params['edited']
@@ -590,23 +593,15 @@ post '/new_unit' do
 
   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.png')
 
-  data[name]['pic2'] =
-    if params[:pic2] == ''
-      ''
-    elsif params[:pic2].include?('images')
-      params[:pic2]
-    else
-      '/images/' + params[:pic2] + '.png'
-    end
-
-  data[name]['pic3'] =
-    if params[:pic3] == ''
-      ''
-    elsif params[:pic3].include?('images')
-      params[:pic3]
-    else
-      '/images/' + params[:pic3] + '.png'
-    end
+  ['pic2', 'pic3'].each do |param_name|
+    data[name][param_name] =
+      if params[param_name.to_sym] == ''
+        params[param_name.to_sym]
+      else
+        temp_pic_n = params[param_name.to_sym].gsub('/images/', '').gsub('.png', '')
+        '/images/' + temp_pic_n + '.png'
+      end
+  end
 
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
@@ -617,11 +612,7 @@ post '/new_unit' do
   data[name]['tap'] = params[:tap]
   data[name]['slide'] = params[:slide]
   data[name]['drive'] = params[:drive]
-  data[name]['notes'] = if params[:notes] != ''
-                          params[:notes]
-                        else
-                          ''
-                        end
+  data[name]['notes'] = params[:notes]
   data[name]['date'] = if date == ''
                          new_time = Time.now.utc.localtime('+09:00')
                          [new_time.year, new_time.month, new_time.day].join('-').to_s
@@ -638,7 +629,7 @@ end
 get '/childs/:star_rating/:unit_name/remove' do
   require_user_signin
   unit = params[:unit_name]
-  units_info = load_unit_details
+  units_info = @units
 
   if units_info.include?(params[:unit_name]) == false
     status 422
@@ -654,7 +645,7 @@ end
 get '/equips/:star_rating/:sc_name/remove' do
   require_user_signin
   card = params[:sc_name]
-  cards_info = load_soulcards_details
+  cards_info = @soulcards
 
   if cards_info.include?(params[:sc_name]) == false
     status 422
@@ -674,23 +665,21 @@ post '/upload' do
          (tmpfile = params[:file][:tempfile]) &&
          (name = params[:file][:filename])
     session[:message] = 'No file selected'
-    # return haml(:upload)
     redirect '/upload'
   end
 
-  directory = if name.include?('png')
-                file_path[0]
-              elsif name.include?('jpg')
-                file_path[1]
-              elsif ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
-                'data/'
-              elsif name == 'soul_cards.yml'
-                'data/sc/'
-              else
-
-                session[:message] = 'Filename must match original filename'
-                redirect '/upload'
-              end
+  directory =
+    if name.include?('png')
+      file_path[0]
+    elsif name.include?('jpg')
+      file_path[1]
+    elsif ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
+      'data/'
+    elsif name == 'soul_cards.yml'
+      'data/sc/'
+      session[:message] = 'Filename must match original filename'
+      redirect '/upload'
+    end
 
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
@@ -701,14 +690,14 @@ end
 post '/update/:filename' do
   name = params[:filename] + ".yml"
   content = params[:content]
-  directory = if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
-                session[:message] = "#{name} was updated"
-                'data/'
-              else
-
-                session[:message] = 'Filename must match original filename'
-                redirect '/upload'
-              end
+  directory =
+    if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
+      session[:message] = "#{name} was updated"
+      'data/'
+    else
+      session[:message] = 'Filename must match original filename'
+      redirect '/upload'
+    end
 
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(content) }

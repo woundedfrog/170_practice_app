@@ -6,6 +6,7 @@
 		<a href="#" onclick="goBack()">Go back</a>
 		<% if session[:username] %>
 				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">  | Edit</a>
+				<a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe()">Remove</a>
 			<% end %>
 	</div>
 
@@ -17,25 +18,21 @@
 
 		<div class="col-* stat-div-container">
 			<% @current_card.each do |info_key, info_val| %>
-			<% unless info_key == "index" || info_key == "pic" %>
-			<div class="profile-stat-container">
-				<h5 class="card-title"><%= info_key.capitalize %>:</h5>
-				<% if ["stars", "tier"].include?(info_key) %>
-					<%== format_stat(info_key, info_val) %>
-				<% else %>
-					<!-- <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p> -->
-
-					<% info_val.split(". ").each do |line| %>
-
-					<% if line[-1] != '.' && info_key != "stars" %>
-					<p><strong>·</strong> <%= line + "." %></p>
+			<% unless ["index", "pic"].include?(info_key) %>
+				<div class="profile-stat-container">
+					<h5 class="card-title"><%= info_key.capitalize %>:</h5>
+					<% if ["stars", "tier"].include?(info_key) %>
+						<%== format_stat(info_key, info_val) %>
 					<% else %>
-					<p><strong>·</strong> <%= line %></p>
+						<% info_val.split(". ").each do |line| %>
+							<% if line[-1] != '.' && info_key != "stars" %>
+								<p><strong>·</strong> <%= line + "." %></p>
+							<% else %>
+								<p><strong>·</strong> <%= line %></p>
+							<% end %>
+						<% end %>
 					<% end %>
-
-					<% end %>
-			<% end %>
-			</div>
+				</div>
 			<% end %>
 			<% end %>
 		</div> <!-- col div -->

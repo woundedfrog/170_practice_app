@@ -17,9 +17,9 @@
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
         <% elsif key == "stars" %>
-        <input class="content" name="<%= key %>" placeholder="" type="text"  value="">
+          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
-         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
+          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

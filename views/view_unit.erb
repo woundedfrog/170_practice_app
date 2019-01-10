@@ -5,7 +5,8 @@
     <% stars = @current_unit["stars"] %>
     <a href="#" onclick="goBack()">Go back</a>
   <% if session[:username] %>
-      <a href="/childs/<%= stars %>stars/<%= @unit_name.downcase %>/edit">  | Edit</a>
+      <a href="/childs/<%= stars %>stars/<%= @unit_name %>/edit">  | Edit</a>
+      <a href="/childs/<%= stars %>/<%= @unit_name %>/remove" onClick="return checkMe()">Remove</a>
     <% end %>
   </div>
 
@@ -21,7 +22,7 @@
     <div class="col profile-stat-col-container">
       <div class="row profile-stat-row-container">
         <% @current_unit.each do |info_key, info_val| %>
-        <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
+        <% unless long_stat_key?(info_key) || special_key?(info_key) %>
         <div class="profile-stat-container col-*">
           <% if ["stars"].include?(info_key) %>
             <h5 class="card-title"><%= info_key.capitalize %>:</h5>
@@ -43,7 +44,7 @@
 
     <% @current_unit.each do |info_key, info_val| %>
 
-    <% unless special_key?(info_key) || info_key == "index" %>
+    <% unless special_key?(info_key) || short_stat_key?(info_key) %>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
         <% if info_key == 'date' %>

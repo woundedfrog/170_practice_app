@@ -11,11 +11,11 @@ khepri:
   auto: Deals 113 Damages.
   tap: Deals 486 Damages, +100 ignore defense damage and +100 Additional damages if
     Debuff Type.
-  slide: Deals 100 additional Damages + Tap damage 2hits to 2 enemies (Prioritizing
-    Debuff Types) and Apply Blind (20% chance to miss) for 6seconds.
-  drive: Deals 2586 Damages to 4random enemies and 70% to apply Confuse to 2 random
+  slide: Deals 100 additional Damages + Tap damage 2 hits to 2 enemies (Prioritizing
+    Debuff Types) and Apply Blind (20% chance to miss) for 6 seconds.
+  drive: Deals 2586 Damages to 4 random enemies and 70% to apply Confuse to 2 random
     enemies (Confused Targets will attack their own allies and heals the enemy) for
-    6seconds.
+    6 seconds.
   notes: ''
   date: '2018-11-28'
   index: 34
@@ -1668,24 +1668,6 @@ aurora:
   notes: ''
   date: '2018-11-28'
   index: 5
-aria:
-  pic: "/images/aria0.png"
-  pic2: "/images/aria1.png"
-  pic3: "/images/aria1.png"
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 5 5 6 10
-  leader: HP +800 to all allies (bonus +600 on Ragnas)
-  auto: Deals 99 damage.
-  tap: Deals 370 damage to target and gives a +400HP barrier for 8s to a random ally.
-  slide: Deals 555 damage to 2 random enemies and additional 300 ignore def damage,
-    and +100 ally drive gauge to all allies.
-  drive: Deals 1751 damage to 2 random enemies, gives 80HP Regeneration (Heal every
-    2seconds) for 26s and +10% drive gauge to 2 allies with lowest HP.
-  notes: ''
-  date: '2018-11-28'
-  index: 0
 ashtoreth:
   pic: "/images/ashtoreth0.png"
   pic2: "/images/ashtoreth1.png"
@@ -3067,27 +3049,6 @@ neptune:
   notes: ''
   date: '2018-12-05'
   index: 154
-bi moa:
-  pic: "/images/bimoa0.png"
-  pic2: "/images/bimoa1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: dark
-  tier: 5 5 5 3
-  leader: "+12% Defense for dark type allies."
-  auto: Deal 92 auto attack damage.
-  tap: Deal 315 to target and apply "Reflect" on self (returns 15% of received damage)
-    for 10 seconds.
-  slide: Deals 563 to target, Apply "Rage" on self (Stores up to 250% damage and adds
-    it to the next skill) and apply "Taunt" (with a 90% chance to activate) for 12
-    seconds.
-  drive: Deal 1469 damage to 2 enemies randomly, apply +30% defense for all enemy
-    skills for 20 seconds and apply "Taunt" (with a 98% chance to activate for 16
-    seconds.
-  notes: ''
-  date: '2019-1-3'
-  index: 165
 oiran bathory:
   pic: "/images/oiranbathory0.png"
   pic2: ''
@@ -3150,3 +3111,24 @@ orga (wola):
     in Raids and WorldBoss modes. Some SoulCards that can counter his "Silence" debuff.
   date: '2018-11-28'
   index: 54
+bi moa:
+  pic: "/images/bimoa0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: dark
+  tier: 5 5 5 3
+  leader: "+12% Defense for dark type allies."
+  auto: Deal 92 auto attack damage.
+  tap: Deal 315 to target and apply "Reflect" on self (returns 15% of received damage)
+    for 10 seconds.
+  slide: Deals 563 to target, Apply "Rage" on self (Stores up to 250% damage and adds
+    it to the next skill) and apply "Taunt" (with a 90% chance to activate) for 12
+    seconds.
+  drive: Deal 1469 damage to 2 enemies randomly, apply +30% defense for all enemy
+    skills for 20 seconds and apply "Taunt" (with a 98% chance to activate for 16
+    seconds.
+  notes: ''
+  date: '2019-1-3'
+  index: 165
