@@ -3,8 +3,9 @@
 <div class="container">
 	<div  class="special-links">
 		<% stars = @current_card["stars"] %>
-		<a href="#" onclick="goBack()">Go back</a>
-		<% if session[:username] %>
+		<button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
+    <button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
+  	<% if session[:username] %>
 				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">  | Edit</a>
 				<a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe()">Remove</a>
 			<% end %>
@@ -13,7 +14,7 @@
 	<h3><%= upcase_name(@sc_name) %></h3>
 	<div class="row">
 		<div class="col-*">
-			<img id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
+			<img class="mobile" id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
 		</div>
 
 		<div class="col-* stat-div-container">

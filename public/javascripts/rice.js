@@ -1,6 +1,6 @@
 $( document ).ready(function() {
 
-  if($("#viewing_profile").length != 0){
+  if($("#viewing_profile").length != 0 && window.innerWidth < 768) {
       $("header").hide();
   };
 
