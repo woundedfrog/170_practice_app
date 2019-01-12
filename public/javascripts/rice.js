@@ -1,8 +1,8 @@
 $( document ).ready(function() {
 
-  if($("#viewing_profile").length == 0){
-      $("header").show();
-  }
+  if($("#viewing_profile").length != 0){
+      $("header").hide();
+  };
 
   jQuery.fn.highlight = function ( className) {
 
@@ -56,9 +56,14 @@ $('p').each(function() {
 
 });
 
+function mobileHide() {
+  $('.mobile').addClass('show');
+  $('.mobile-button').addClass('hide');
+};
+
 function  showUnitsOnly(type) {
-  $('.btn').removeClass('btn-success').addClass('btn-warning')
-  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.btn').removeClass('btn-success').addClass('btn-warning');
+  $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
   $('.units').show();
   $('.units').hide();
@@ -66,8 +71,8 @@ function  showUnitsOnly(type) {
 };
 
 function  showUnitsTier(type) {
-  $('.btn').removeClass('btn-success').addClass('btn-warning')
-  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.btn').removeClass('btn-success').addClass('btn-warning');
+  $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
   $('.catagory_div').show();
   $('.catagory_div').hide();
@@ -76,13 +81,12 @@ function  showUnitsTier(type) {
 };
 
 function  showAllUnits(type) {
-  $('.btn').removeClass('btn-success').addClass('btn-warning')
-  $('#'+type).removeClass('btn-warning').addClass('btn-success')
+  $('.btn').removeClass('btn-success').addClass('btn-warning');
+  $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
   $('.catagory_div').show();
   $('.units').show();
 };
-
 
 function checkMe() {
     if (confirm("Are you sure you want to delete profile? It can't be undone!")) {
@@ -94,7 +98,7 @@ function checkMe() {
 
 function goBack() {
   window.history.back();
-}
+};
 
 $(document).ready(function() {
   $('.main-container').hide();

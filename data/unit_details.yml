@@ -12,10 +12,10 @@ khepri:
   tap: Deals 486 Damages, +100 ignore defense damage and +100 Additional damages if
     Debuff Type.
   slide: Deals 100 additional Damages + Tap damage 2 hits to 2 enemies (Prioritizing
-    Debuff Types) and Apply Blind (20% chance to miss) for 6 seconds.
-  drive: Deals 2586 Damages to 4 random enemies and 70% to apply Confuse to 2 random
+    Debuff Types) and Apply Blind (20% chance to miss) for 6seconds.
+  drive: Deals 2586 Damages to 4random enemies and 70% to apply Confuse to 2 random
     enemies (Confused Targets will attack their own allies and heals the enemy) for
-    6 seconds.
+    6seconds.
   notes: ''
   date: '2018-11-28'
   index: 34
@@ -30,13 +30,13 @@ astraeas:
   leader: Instant Heal +8% to grass Allies
   auto: Deals 96 damage.
   tap: Deals 337 damage to target and Instant Heal for 214 HP and Apply "Secret Healing"
-    (Heals 200 damages when attack and receives attacks) for 2turns to 2 lowest HP
+    (Heals 200 damages when attack and receives attacks) for 2 turns to 2 lowest HP
     allies.
   slide: Deals 515 damage to target and Instant Heal for 1091 HP and 75% chance to
     remove "Heal Block" to 3 lowest HP allies.
   drive: Deals 1548 damage to 2 random enemies and Apply "Regeneration" (Heal 300
-    Hp per 2seconds) and Apply "Secret Healing" (Heals 1200 damages when attack and
-    receives attacks) for 16seconds to 3 lowest HP allies.
+    Hp per 2 seconds) and Apply "Secret Healing" (Heals 1200 damages when attack and
+    receives attacks) for 16 seconds to 3 lowest HP allies.
   notes: ''
   date: '2018-11-28'
   index: 4
@@ -677,24 +677,6 @@ midas:
   notes: ''
   date: '2018-11-28'
   index: 79
-rudolph:
-  pic: "/images/4rudolph0.png"
-  pic2: ''
-  pic3: ''
-  tier: 5 5 5 5
-  stars: '4'
-  type: debuffer
-  element: fire
-  leader: Attack +8% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 234 damage to target, 70% chance to remove freeze from ally.
-  slide: Deals 449 damage to target, 80% chance to swap attack and Defense for 20s
-    to 2 allies with lowest HP.
-  drive: Deals 1086 damage to 3 random units, attack +25% for 25s to 3 units with
-    highest attack.
-  notes: ''
-  date: '2018-11-28'
-  index: 89
 rednose:
   pic: "/images/4rednose0.png"
   pic2: ''
@@ -2961,6 +2943,27 @@ eve:
     as great as Ely or Sonnet in regards to poison, but she does more raw damage.
   date: '2018-11-28'
   index: 21
+orga (wola):
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 9 9 3 3
+  leader: Skill gauge charge rate -15% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  notes: Wola is great for CC in PVP. His Leader skill is great helps you get to drive
+    before enemy does. Even though his debuffs aren't 100%, they are still high enough
+    for him to be a very useful unit to use in PVP and PVE. His debuffs are useless
+    in Raids and WorldBoss modes. Some SoulCards can counter his "Silence" debuff.
+  date: '2018-11-28'
+  index: 54
 cube moa:
   pic: "/images/moa0.png"
   pic2: "/images/moa1.png"
@@ -3090,27 +3093,6 @@ kagura warwolf:
   notes: ''
   date: '2019-1-3'
   index: 166
-orga (wola):
-  pic: "/images/orga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 9 9 3 3
-  leader: Skill gauge charge rate -15% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
-  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
-    for 5s to 2 random enemies.
-  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
-    gauge by 45% to 3 random enemies.
-  notes: Wola is great for CC in PVP. His Leader skill is great helps you get to drive
-    before enemy does. Even though his debuffs aren't 100%, they are still high enough
-    for him to be a very useful unit to use in PVP and PVE. His debuffs are useless
-    in Raids and WorldBoss modes. Some SoulCards that can counter his "Silence" debuff.
-  date: '2018-11-28'
-  index: 54
 bi moa:
   pic: "/images/bimoa0.png"
   pic2: ''
@@ -3132,3 +3114,21 @@ bi moa:
   notes: ''
   date: '2019-1-3'
   index: 165
+rudolph:
+  pic: "/images/4rudolph0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: buffer
+  element: fire
+  tier: 5 5 5 5
+  leader: Attack +8% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 234 damage to target, 70% chance to remove freeze from ally.
+  slide: Deals 449 damage to target, 80% chance to swap attack and Defense for 20s
+    to 2 allies with lowest HP.
+  drive: Deals 1086 damage to 3 random units, attack +25% for 25s to 3 units with
+    highest attack.
+  notes: ''
+  date: '2018-11-28'
+  index: 89

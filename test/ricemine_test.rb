@@ -138,7 +138,7 @@ class RiceMineTest < Minitest::Test
     get "/childs/5stars/cleopatra"
     assert_equal last_response.status, 200
     assert_includes last_response.body, *["<h3>Cleopatra", "profile_imgs"]
-    assert_includes last_response.body, *["Go back", "Drive"]
+    assert_includes last_response.body, *["<button", "Drive"]
   end
 
   def test_unit_profile_not_found
