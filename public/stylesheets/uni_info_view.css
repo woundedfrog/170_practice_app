@@ -25,7 +25,8 @@ header {
 	display: flex;
 	flex-wrap: wrap;
 	padding: 5px;
-	background-color: rgb(73, 156, 131, 0.5);
+	/* background-color: rgb(73, 156, 131, 0.5); */
+	background-color: rgb(73, 156, 131, 1);
 	margin-bottom: 1px;
 	color: white;
 }
@@ -83,7 +84,8 @@ h4 {
 .sort-buttons button {
 	align-self: center;
 	width: 25%;
-	background-color: rgb(73, 156, 131, 0.5);
+	/* background-color: rgb(73, 156, 131, 0.5); */
+	background-color: rgb(73, 156, 131, 1);
 	color: #ffffff;
 	text-shadow: 1px 1px 2px darkblue;
 	justify-content: center;
@@ -94,7 +96,8 @@ h4 {
 }
 
 .btn-warning, .btn-warning:hover {
-	background-color: rgb(73, 156, 131, 0.5);
+	/* background-color: rgb(73, 156, 131, 0.5); */
+	background-color: rgb(73, 156, 131, 1);
 	color: #31987c;
 	border: 1px solid #08856e;
 	outline: 0;
@@ -128,7 +131,8 @@ h4 {
 }
 
 .offsite-link {
-		background-color: rgb(36, 77, 65, 0.5)
+		/* background-color: rgb(36, 77, 65, 0.5) */
+	background-color: rgb(36, 77, 65, 1);
 }
 
 ul {
@@ -181,7 +185,8 @@ color: #ffffff;
 	top: 0px;
 	width: 100%;
 	text-align: center;
-	background-color: rgb(69, 98, 124, 0.5);
+	/* background-color: rgb(69, 98, 124, 0.5); */
+	background-color: rgb(69, 98, 124, 1);
 }
 
 .container {
@@ -307,7 +312,8 @@ label {
 }
 
 #sort_by_title {
-	background-color: rgb(48, 58, 53, 0.7);
+	/* background-color: rgb(48, 58, 53, 0.7); */
+	background-color: rgb(48, 58, 53, 1);
 	text-align: center;
 	width: 100%;
 }
