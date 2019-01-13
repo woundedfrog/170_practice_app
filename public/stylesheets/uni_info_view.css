@@ -318,6 +318,7 @@ input, textarea {
 
 textarea {
 	width: inherit;
+	max-width: 100%;
 }
 
 /* end */

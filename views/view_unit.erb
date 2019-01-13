@@ -6,9 +6,9 @@
     <button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
     <button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
   <% if session[:username] %>
-      <a href="/childs/<%= stars %>stars/<%= @unit_name %>/edit">  | Edit</a>
-      <a href="/childs/<%= stars %>/<%= @unit_name %>/remove" onClick="return checkMe()">Remove</a>
-    <% end %>
+    <a href="/childs/<%= stars %>stars/<%= @unit_name %>/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>
+    <a href="/childs/<%= stars %>/<%= @unit_name %>/remove" onClick="return checkMe('<%= @unit_name %>')"><button type="button" class="btn btn-danger btn-xs">Remove</button></a>
+  <% end %>
   </div>
 
   <h3><%= upcase_name(@unit_name) %></h3>

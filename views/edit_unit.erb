@@ -5,7 +5,7 @@
         <label for="unit_name">Enter a unit name:</label>
       </dt>
       <dd>
-        <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
+        <input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
         <input name="edited" type="checkbox" required>
       </dd>
       <% @current_unit.each do |key, value| %>
@@ -18,8 +18,14 @@
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
 
-        <% elsif special_key?(key) %>
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+        <% elsif special_key?(key) || short_stat_key?(key) %>
+          <% if key == "type" %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
+          <% elsif key == "element" %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
+          <% else %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+          <% end %>
         <% elsif key == "index" || key == 'date' %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
         <% else %>
@@ -30,7 +36,7 @@
     </dl>
     <fieldset class="actions">
       <button type="submit" value="Save">Save</button>
-      <a href="/childs/<%= @current_unit['stars'] %>stars/<%= @unit_name.downcase %>">Cancel</a>
+      <a href="/childs/<%= @current_unit['stars'] %>stars/<%= @unit_name.downcase %>"><button type="button">Cancel</button></a>
     </fieldset>
   </form>
 </div>

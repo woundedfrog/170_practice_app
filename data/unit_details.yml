@@ -116,24 +116,6 @@ chun-li:
   notes: ''
   date: '2018-11-28'
   index: 13
-hermes:
-  pic: "/images/hermes0.png"
-  pic2: "/images/hermes1.png"
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: fire
-  tier: 6 6 8 9
-  leader: Attack +10% to Fire allies.
-  auto: Deals 99 damage.
-  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
-  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
-    attack +100 for 18s to 3 allies with highest attack.
-  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
-    attack +300 for 25s to 3 allies with highest attack.
-  notes: ''
-  date: '2018-11-28'
-  index: 26
 hera:
   pic: "/images/hera0.png"
   pic2: "/images/hera1.png"
@@ -3052,6 +3034,63 @@ neptune:
   notes: ''
   date: '2018-12-05'
   index: 154
+bi moa:
+  pic: "/images/bimoa0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: dark
+  tier: 5 5 5 3
+  leader: "+12% Defense for dark type allies."
+  auto: Deal 92 auto attack damage.
+  tap: Deal 315 to target and apply "Reflect" on self (returns 15% of received damage)
+    for 10 seconds.
+  slide: Deals 563 to target, Apply "Rage" on self (Stores up to 250% damage and adds
+    it to the next skill) and apply "Taunt" (with a 90% chance to activate) for 12
+    seconds.
+  drive: Deal 1469 damage to 2 enemies randomly, apply +30% defense for all enemy
+    skills for 20 seconds and apply "Taunt" (with a 98% chance to activate for 16
+    seconds.
+  notes: ''
+  date: '2019-1-3'
+  index: 165
+rudolph:
+  pic: "/images/4rudolph0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: buffer
+  element: fire
+  tier: 5 5 5 5
+  leader: Attack +8% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 234 damage to target, 70% chance to remove freeze from ally.
+  slide: Deals 449 damage to target, 80% chance to swap attack and Defense for 20s
+    to 2 allies with lowest HP.
+  drive: Deals 1086 damage to 3 random units, attack +25% for 25s to 3 units with
+    highest attack.
+  notes: ''
+  date: '2018-11-28'
+  index: 89
+hermes:
+  pic: "/images/hermes0.png"
+  pic2: "/images/hermes1.png"
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: fire
+  tier: 6 6 8 9
+  leader: Attack +10% to Fire allies.
+  auto: Deals 99 damage.
+  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
+  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
+    attack +100 for 18s to 3 allies with highest attack.
+  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
+    attack +300 for 25s to 3 allies with highest attack.
+  notes: ''
+  date: '2018-11-28'
+  index: 26
 oiran bathory:
   pic: "/images/oiranbathory0.png"
   pic2: ''
@@ -3093,42 +3132,3 @@ kagura warwolf:
   notes: ''
   date: '2019-1-3'
   index: 166
-bi moa:
-  pic: "/images/bimoa0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: dark
-  tier: 5 5 5 3
-  leader: "+12% Defense for dark type allies."
-  auto: Deal 92 auto attack damage.
-  tap: Deal 315 to target and apply "Reflect" on self (returns 15% of received damage)
-    for 10 seconds.
-  slide: Deals 563 to target, Apply "Rage" on self (Stores up to 250% damage and adds
-    it to the next skill) and apply "Taunt" (with a 90% chance to activate) for 12
-    seconds.
-  drive: Deal 1469 damage to 2 enemies randomly, apply +30% defense for all enemy
-    skills for 20 seconds and apply "Taunt" (with a 98% chance to activate for 16
-    seconds.
-  notes: ''
-  date: '2019-1-3'
-  index: 165
-rudolph:
-  pic: "/images/4rudolph0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: fire
-  tier: 5 5 5 5
-  leader: Attack +8% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 234 damage to target, 70% chance to remove freeze from ally.
-  slide: Deals 449 damage to target, 80% chance to swap attack and Defense for 20s
-    to 2 allies with lowest HP.
-  drive: Deals 1086 damage to 3 random units, attack +25% for 25s to 3 units with
-    highest attack.
-  notes: ''
-  date: '2018-11-28'
-  index: 89
