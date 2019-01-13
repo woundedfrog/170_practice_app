@@ -23,40 +23,39 @@
   <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
 </div>
 
-<% @sorted_catagories.each_with_index do |units, idx| %>
-  <div class="main-container conatiner">
-  <h4 class="container catagory_div <%= idx %>" id="sort_by_title"><%= catagory(idx) %></h4>
-  <% @sorted_arr[1].each do |catagory_value| %>
 
-  <div class="catagory_div <%= idx %>">
-    <div class="container">
-      <% type = @sorted_arr[0] %>
-      <h5 id="sort_by_title"><%= type.capitalize %>: <%= catagory_value.capitalize %></h5>
-    </div>
+
+<% @units.each_with_index do |tier_catagory, game_mode| %>
+  <div class="main-container conatiner <%= game_mode %>">
+  <h4 class="container catagory_div <%= game_mode %>" id="sort_by_title"><%= catagory(game_mode) %></h4>
+  <% tier_catagory.each do |catagory_value, unit_list| %>
+  <div class="catagory_div <%= game_mode %>">
+
 
   <div class="container">
-      <div class="row justify-content-center">
-      <% units.each do |unit, unit_details| %>
-      <% next unless unit_details['tier'].split(' ')[idx] == catagory_value %>
-      <% rating = unit_details["stars"] + "stars" %>
-            <div class="col-* unit-grid-cols units <%= unit_details["type"] %>">
-              <% if session[:username] %>
-              <div class="edit-remove-buttons">
-                <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
-                <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
-              </div>
-              <% end %>
-                <a href="/childs/<%= rating %>/<%= unit %>">
-                  <img class="profile_imgs" src="<%= unit_details['pic'] %>"/>
-                  </a>
-              <div class="index-stat-pic-container">
-                  <%== format_stat("type", unit_details["type"]) %>
-                  <%== format_stat("element", unit_details["element"]) %>
-              </div>
-              <h6 class="unit-profile-title"><%= upcase_name(unit) %></h6>
-          </div>
-      <% end %>
+      <% type = "Tier" %>
+      <h5 id="sort_by_title">Tier: <%= catagory_value.capitalize %></h5>
 
+      <div class="row justify-content-center">
+        <% unit_list.each do |unit, unit_details| %>
+        <% rating = unit_details["stars"] + "stars" %>
+              <div class="col-* unit-grid-cols units <%= unit_details["type"] %>">
+                <% if session[:username] %>
+                <div class="edit-remove-buttons">
+                  <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
+                  <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
+                </div>
+                <% end %>
+                  <a href="/childs/<%= rating %>/<%= unit %>">
+                    <img class="profile_imgs"  src="<%= unit_details['pic'] %>"/>
+                    </a>
+                <div class="index-stat-pic-container">
+                    <%== format_stat("type", unit_details["type"]) %>
+                    <%== format_stat("element", unit_details["element"]) %>
+                </div>
+                <h6 class="unit-profile-title"><%= upcase_name(unit) %></h6>
+            </div>
+        <% end %>
       </div>
   </div>
 </div>

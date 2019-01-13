@@ -1,26 +1,29 @@
+<div id="viewing_profile"></div>
 
 <div class="container">
   <div  class="special-links">
     <% stars = @current_unit["stars"] %>
-    <a href="/childs/<%= stars %>stars">Go back</a>
+    <button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
+    <button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
   <% if session[:username] %>
-      <a href="/childs/<%= stars %>stars/<%= @unit_name.downcase %>/edit">  | Edit</a>
-    <% end %>
+    <a href="/childs/<%= stars %>stars/<%= @unit_name %>/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>
+    <a href="/childs/<%= stars %>/<%= @unit_name %>/remove" onClick="return checkMe('<%= @unit_name %>')"><button type="button" class="btn btn-danger btn-xs">Remove</button></a>
+  <% end %>
   </div>
 
   <h3><%= upcase_name(@unit_name) %></h3>
 
   <div class="row profile-row-container">
-    <div class="col- profile-pic-container">
-      <img class="profile_imgs" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
-      <img class="profile_imgs" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
-      <img class="profile_imgs" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
+    <div class="col- profile-pic-container mobile">
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
     </div>
 
     <div class="col profile-stat-col-container">
       <div class="row profile-stat-row-container">
         <% @current_unit.each do |info_key, info_val| %>
-        <% unless info_key == "index" || info_key == "pic"  || info_key == "pic2"  || info_key == "pic3" || !special_key?(info_key) %>
+        <% unless long_stat_key?(info_key) || special_key?(info_key) %>
         <div class="profile-stat-container col-*">
           <% if ["stars"].include?(info_key) %>
             <h5 class="card-title"><%= info_key.capitalize %>:</h5>
@@ -42,20 +45,21 @@
 
     <% @current_unit.each do |info_key, info_val| %>
 
-    <% unless special_key?(info_key) || info_key == "index" %>
+    <% unless special_key?(info_key) || short_stat_key?(info_key) %>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
-      <ul>
-        <% info_val.split(". ").each do |line| %>
-
-        <% if line[-1] != '.' %>
-        <p><strong>·</strong> <%= line + "." %></p>
+        <% if info_key == 'date' %>
+          <p>Date added(Tokyo): <%= info_val %></p>
         <% else %>
-        <p><strong>·</strong> <%= line %></p>
-        <% end %>
 
-        <% end %>
-      </ul>
+          <% info_val.split(". ").each do |line| %>
+            <% if line[-1] != '.' %>
+            <p><strong>·</strong> <%= line + "." %></p>
+            <% else %>
+            <p><strong>·</strong> <%= line %></p>
+            <% end %>
+          <% end %>
+      <% end %>
     </div>
     <% end %>
 

@@ -116,6 +116,17 @@ h4 {
 	font-weight: 600;
 }
 
+.mobile {
+	display: none;
+}
+
+.show {
+	display: flex;
+}
+.hide {
+	display: none;
+}
+
 .offsite-link {
 		background-color: rgb(36, 77, 65, 0.5)
 }
@@ -291,16 +302,14 @@ label {
 	background-color: #363a30;
 }
 
-/* .special-links, .special-links a {
-	text-decoration: underline;
-	color: orange;
-	margin-top: 10px;
-	margin-left: 5px;
-} */
+.special-links, .special-links a {
+ font-size: 1.2em;
+}
 
 #sort_by_title {
 	background-color: rgb(48, 58, 53, 0.7);
 	text-align: center;
+	width: 100%;
 }
 
 .file-list-box {
@@ -314,6 +323,7 @@ input, textarea {
 
 textarea {
 	width: inherit;
+	max-width: 100%;
 }
 
 /* end */
@@ -392,6 +402,14 @@ textarea {
 		display: none;
 	}
 
+	.mobile {
+		display: block;
+	}
+
+	.mobile-button {
+		display: none;
+	}
+
 	.container {
 		width: 70%;
 		margin: auto;
@@ -448,6 +466,10 @@ textarea {
 /* // Large devices (desktops, 992px and up) */
 @media (min-width: 992px) {
 
+	.mobile {
+		display: flex;
+		flex-wrap: wrap;
+	}
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */

@@ -1,39 +1,39 @@
+<div id="viewing_profile"></div>
+
 <div class="container">
 	<div  class="special-links">
 		<% stars = @current_card["stars"] %>
-		<a href="/equips/<%= stars %>stars">Go back</a>
-		<% if session[:username] %>
-				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">  | Edit</a>
-			<% end %>
+			<button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
+			<button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
+	  	<% if session[:username] %>
+				<button type="button" class="btn btn-primary btn-xs"><a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">Edit</a></button>
+				<button type="button" class="btn btn-danger btn-xs"><a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe('<%= @sc_name %>')">Remove</a></button>
+		  <% end %>
 	</div>
 
 	<h3><%= upcase_name(@sc_name) %></h3>
 	<div class="row">
 		<div class="col-*">
-			<img id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
+			<img class="mobile" id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
 		</div>
 
 		<div class="col-* stat-div-container">
 			<% @current_card.each do |info_key, info_val| %>
-			<% unless info_key == "index" || info_key == "pic" %>
-			<div class="profile-stat-container">
-				<h5 class="card-title"><%= info_key.capitalize %>:</h5>
-				<% if ["stars", "tier"].include?(info_key) %>
-					<%== format_stat(info_key, info_val) %>
-				<% else %>
-					<!-- <p class="short-stat-content"><%== format_stat(info_key, info_val) %></p> -->
-
-					<% info_val.split(". ").each do |line| %>
-
-					<% if line[-1] != '.' && info_key != "stars" %>
-					<p><strong>·</strong> <%= line + "." %></p>
+			<% unless ["index", "pic"].include?(info_key) %>
+				<div class="profile-stat-container">
+					<h5 class="card-title"><%= info_key.capitalize %>:</h5>
+					<% if ["stars", "tier"].include?(info_key) %>
+						<%== format_stat(info_key, info_val) %>
 					<% else %>
-					<p><strong>·</strong> <%= line %></p>
+						<% info_val.split(". ").each do |line| %>
+							<% if line[-1] != '.' && info_key != "stars" %>
+								<p><strong>·</strong> <%= line + "." %></p>
+							<% else %>
+								<p><strong>·</strong> <%= line %></p>
+							<% end %>
+						<% end %>
 					<% end %>
-
-					<% end %>
-			<% end %>
-			</div>
+				</div>
 			<% end %>
 			<% end %>
 		</div> <!-- col div -->

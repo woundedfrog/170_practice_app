@@ -4,8 +4,7 @@ afternoon nap:
   stars: '5'
   stats: "HP: 1040 at lvl0 / 2020 at lvl50 / 3535 at lvl50 +5. \r\n\r\nCritical: 270
     at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: None. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5)  in World
-    Boss"
+  passive: "Restriction: None. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
   index: 4
 wisteria tree:
   pic: "/images/sc/wisteriatree.jpg"
@@ -87,7 +86,7 @@ meat together:
   stars: '5'
   stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
     at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
-  passive: "Restriction: None. \r\nHeal block Resist +40%."
+  passive: "Restriction: None. \r\nHealblock Resist +40%."
   index: 34
 piercing blue sky:
   pic: "/images/sc/piercingbluesky.jpg"
@@ -463,3 +462,21 @@ starry stage:
     \ / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease Instant Heal received +800."
   index: 63
+nobalman's new year:
+  pic: "/images/sc/nobalnewyear.jpg"
+  stars: '5'
+  stats: "Attack: 600 at lvl0. \r\n\r\nCritical: 340 at lvl0."
+  passive: 'Restriction: Light. Increase Final attack +1150 at WorldBoss.'
+  index: 64
+i love sake!:
+  pic: "/images/sc/ilovesake.jpg"
+  stars: '5'
+  stats: "HP: 1100 at lvl0. \r\n\r\nDefense: 600 at lvl0."
+  passive: "Restriction: Light. \r\n\r\nIncrease Final Defense +800."
+  index: 65
+christmas gift:
+  pic: "/images/sc/christmasgift.jpg"
+  stars: '5'
+  stats: "Attack: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
+  passive: "Restriction: Attacker. \r\nSlide skill damage +350."
+  index: 66
