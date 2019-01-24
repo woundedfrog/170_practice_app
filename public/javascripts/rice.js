@@ -88,8 +88,8 @@ function  showAllUnits(type) {
   $('.units').show();
 };
 
-function checkMe() {
-    if (confirm("Are you sure you want to delete profile? It can't be undone!")) {
+function checkMe(name) {
+    if (confirm("Are you sure you want to delete '" + name.toUpperCase() + "' profile? It can't be undone!")) {
         return true;
     } else {
         return false;
