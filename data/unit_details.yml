@@ -1871,6 +1871,25 @@ melpomene:
   notes: ''
   date: '2018-11-28'
   index: 107
+aria:
+  pic: "/images/aria0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 7 7 7 8
+  leader: Max HP +800 for all Allies (in raids +600 added)
+  auto: Deal 99 damage to target
+  tap: Deal 370 damage, grant Barrier (absorbs +400 damage before HP is affected)
+    on 1 random Ally for 8 seconds
+  slide: Deal 555 Damage to 2 random Enemies and 300 of Ignore DEF Damage, Ally Drive
+    Gauge +100
+  drive: Deal 1751 Damage to 2 random Enemies, Regen 80 HP (once per 2 seconds) for
+    2 Allies (Lowest HP) for 26 seconds and Drive Gauge + 10% for allies
+  notes: Aria is an important child for helping you to reach 4th fever in world boss
+  date: '2019-1-24'
+  index: 165
 danu:
   pic: "/images/4danu0.png"
   pic2: ''
