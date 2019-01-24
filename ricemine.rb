@@ -213,8 +213,17 @@ def get_unit_name(data_path, index)
 end
 
 def get_max_index_number(list)
-  list.sort_by { |_, v| v['index'] }.to_h
-  list.map { |_, v| v['index'] }.max + 1
+  indexes = []
+  list.each do |unit, stats|
+    indexes << stats['index']
+  end
+  indexes.sort!
+
+  max = indexes.max + 1
+  available_indexes = (1..max).to_a - indexes
+  # list.sort_by { |_, v| v['index'] }.to_h
+  # list.map { |_, v| v['index'] }.max + 1
+  available_indexes.min
 end
 
 def group_by_catagory_tier(details, catagory_vals)
@@ -398,14 +407,14 @@ end
 
 get '/equips/new_sc' do
   @card = @new_sc
-  @max_index_val = get_max_index_number(load_soulcards_details)
+  @max_index_val = get_max_index_number(@soulcards)
   erb :new_sc
 end
 
 get '/new_unit' do
   require_user_signin
   @new_unit_info = @new_unit
-  @max_index_val = get_max_index_number(load_unit_details)
+  @max_index_val = get_max_index_number(@units)
   erb :new_unit
 end
 
@@ -554,6 +563,7 @@ end
 post '/new_unit' do
   require_user_signin
   unit_data = @units
+
   @current_unit = unit_data[params[:unit_name]]
   @max_index_val = get_max_index_number(unit_data)
 
