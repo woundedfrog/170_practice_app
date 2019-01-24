@@ -21,7 +21,7 @@
             <% if session[:username] %>
             <div class="edit-remove-buttons">
               <a href="/childs/<%= rating %>/<%= unit %>/edit">Edit</a>|
-              <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe()">Remove</a>
+              <a href="/childs/<%= rating %>/<%= unit %>/remove" onClick="return checkMe('<%= unit %>')">Remove</a>
             </div>
             <% end %>
 

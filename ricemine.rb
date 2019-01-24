@@ -640,7 +640,7 @@ get '/childs/:star_rating/:unit_name/remove' do
   else
     units_info.delete(unit)
     File.write('data/unit_details.yml', YAML.dump(units_info))
-    session[:message] = 'That unit was successfully deleted.'
+    session[:message] = "#{unit.upcase} unit was successfully deleted."
   end
   redirect '/'
 end
@@ -656,7 +656,7 @@ get '/equips/:star_rating/:sc_name/remove' do
   else
     cards_info.delete(card)
     File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
-    session[:message] = 'That unit successfully deleted.'
+    session[:message] = "#{card.upcase} SoulCard successfully deleted."
   end
   redirect '/'
 end
