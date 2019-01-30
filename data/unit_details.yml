@@ -551,25 +551,6 @@ davi:
   notes: ''
   date: '2018-12-24'
   index: 158
-lisa:
-  pic: "/images/3lisa0.png"
-  pic2: ''
-  pic3: ''
-  stars: '3'
-  type: buffer
-  element: water
-  tier: 6 6 7 9
-  leader: Attack +8% to all allies.
-  auto: Deals 149 damage to target and skill gauge charge rate +20% for 8s to 1 ally
-    with highest attack.
-  tap: 'Deals 307 damage to target and attack +500 for 14s to all allies. '
-  slide: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and
-    skill gauge charge +40% for 23s to 2 allies with highest attack.
-  drive: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and
-    skill gauge charge +40% for 23s to 2 allies with highest attack.
-  notes: ''
-  date: '2018-12-24'
-  index: 160
 tiamat:
   pic: "/images/3tiamat0.png"
   pic2: ''
@@ -754,26 +735,6 @@ mars:
   notes: ''
   date: '2018-12-24'
   index: 73
-hades:
-  pic: "/images/hades0.png"
-  pic2: "/images/hades1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: fire
-  tier: 5 5 4 3
-  leader: Tap Skill defense +10% to Fire units
-  auto: Deals 91 damage.
-  tap: Deals 313 damage to target and gains +600 barrier for 4s and Fury (saves up
-    to 300% damage received and returns 1 time).
-  slide: Deals 517 damage to 2 random enemies and gains Reflect (returns 25% of damage
-    received) and Taunt (88% provocation) for 10s.
-  drive: Deals 1409 damage to 2 random enemies and gives a +15%HP barrier for 20s
-    to 3 units with lowest HP, including self (if own HP is the lowest, barrier will
-    only be applied to 2 targets).
-  notes: ''
-  date: '2018-12-24'
-  index: 24
 hera:
   pic: "/images/hera0.png"
   pic2: "/images/hera1.png"
@@ -1784,27 +1745,6 @@ chang'e:
     ranked costume.
   date: '2018-12-24'
   index: 70
-jupiter:
-  pic: "/images/jupiter0.png"
-  pic2: "/images/jupiter1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 7 8 8 10
-  leader: Defense -10% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 369 damage and Defense -5% for 6s to target.
-  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
-    with lowest Defense.
-  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
-    enemies.
-  notes: "Jupiter requires very high uncaps (+5 +6), his bleed scales very well. \r\nAt
-    low uncaps he is very underwhelming, at high uncaps he is a monster and deserves
-    a higher tier. \r\nHis pvp tier is 8 right now as global players don't have much
-    uncaps, his tier will be bumped up to 9 once players start having enough uncaps."
-  date: '2018-12-24'
-  index: 61
 hatsune miku:
   pic: "/images/hatsunemiku0.png"
   pic2: ''
@@ -1843,6 +1783,25 @@ elizabeth:
   notes: ''
   date: '2018-12-24'
   index: 18
+aria:
+  pic: "/images/aria0.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 7 7 7 8
+  leader: Max HP +800 for all Allies (in raids +600 added)
+  auto: Deal 99 damage to target
+  tap: Deal 370 damage, grant Barrier (absorbs +400 damage before HP is affected)
+    on 1 random Ally for 8 seconds
+  slide: Deal 555 Damage to 2 random Enemies and 300 of Ignore DEF Damage, Ally Drive
+    Gauge +100
+  drive: Deal 1751 Damage to 2 random Enemies, Regen 80 HP (once per 2 seconds) for
+    2 Allies (Lowest HP) for 26 seconds and Drive Gauge + 10% for allies
+  notes: Aria is an important child for helping you to reach 4th fever in world boss
+  date: '2018-12-24'
+  index: 165
 myrina:
   pic: "/images/myrina0.png"
   pic2: ''
@@ -1863,22 +1822,62 @@ myrina:
     Chang'e in most fire ragna teams.
   date: '2019-1-23'
   index: 0
-aria:
-  pic: "/images/aria0.png"
-  pic2: ''
+jupiter:
+  pic: "/images/jupiter0.png"
+  pic2: "/images/jupiter1.png"
   pic3: ''
   stars: '5'
+  type: debuffer
+  element: fire
+  tier: 7 8 8 8
+  leader: Defense -10% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 369 damage and Defense -5% for 6s to target.
+  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
+    with lowest Defense.
+  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
+    enemies.
+  notes: "Jupiter requires very high uncaps (+5 +6), his bleed scales very well. \r\nAt
+    low uncaps he is very underwhelming, at high uncaps he is a monster and deserves
+    a higher tier. \r\nHis pvp tier is 8 right now as global players don't have much
+    uncaps, his tier will be bumped up to 9 once players start having enough uncaps."
+  date: '2018-12-24'
+  index: 61
+lisa:
+  pic: "/images/3lisa0.png"
+  pic2: ''
+  pic3: ''
+  stars: '3'
   type: buffer
-  element: light
-  tier: 7 7 7 8
-  leader: Max HP +800 for all Allies (in raids +600 added)
-  auto: Deal 99 damage to target
-  tap: Deal 370 damage, grant Barrier (absorbs +400 damage before HP is affected)
-    on 1 random Ally for 8 seconds
-  slide: Deal 555 Damage to 2 random Enemies and 300 of Ignore DEF Damage, Ally Drive
-    Gauge +100
-  drive: Deal 1751 Damage to 2 random Enemies, Regen 80 HP (once per 2 seconds) for
-    2 Allies (Lowest HP) for 26 seconds and Drive Gauge + 10% for allies
-  notes: Aria is an important child for helping you to reach 4th fever in world boss
-  date: '2019-1-24'
-  index: 165
+  element: water
+  tier: 6 6 7 9
+  leader: Attack +8% to all allies.
+  auto: Deals 149 damage to target and skill gauge charge rate +20% for 8s to 1 ally
+    with highest attack.
+  tap: 'Deals 307 damage to target and attack +500 for 14s to all allies. '
+  slide: Deals 307 damage to target and attack +500 for 14s to all allies.
+  drive: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and
+    skill gauge charge +40% for 23s to 2 allies with highest attack.
+  notes: ''
+  date: '2018-12-24'
+  index: 160
+hades:
+  pic: "/images/hades0.png"
+  pic2: "/images/hades1.png"
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 6 7 4 5
+  leader: Tap Skill defense +10% to Fire units
+  auto: Deals 91 damage.
+  tap: Deals 313 damage to target and gains +600 barrier for 4s and Fury (saves up
+    to 300% damage received and returns 1 time).
+  slide: Deals 517 damage to 2 random enemies and gains Reflect (returns 25% of damage
+    received) and Taunt (88% provocation) for 10s.
+  drive: Deals 1409 damage to 2 random enemies and gives a +15%HP barrier for 20s
+    to 3 units with lowest HP, including self (if own HP is the lowest, barrier will
+    only be applied to 2 targets).
+  notes: ''
+  date: '2018-12-24'
+  index: 24
