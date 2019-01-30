@@ -72,7 +72,7 @@ helpers do
     end
 
     if %w(tier date).include?(catagory_type)
-      return keys.uniq.sort.map!(&:to_s).reverse
+      return keys.uniq.map!(&:to_s).sort! { |a,b| DateTime.parse(a) <=> DateTime.parse(b) }.reverse
     end
 
     keys.uniq.sort.map!(&:to_s)
