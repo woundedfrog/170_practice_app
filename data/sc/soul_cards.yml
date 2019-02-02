@@ -480,3 +480,86 @@ christmas gift:
   stats: "Attack: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
   passive: "Restriction: Attacker. \r\nSlide skill damage +350."
   index: 66
+racing suit:
+  pic: "/images/sc/racingsuit.jpg"
+  stars: '5'
+  stats: "Attack: 620 at lvl0 / 2800 at lvl50 +5. \r\n\r\nCritical: 350 at lvl0 /
+    2327 at lvl50 +5."
+  passive: "Restriction: Dark attacker. \r\n\r\nSlide skill critical damage +11%."
+  index: 70
+tba2:
+  pic: "/images/sc/brieftranquility.jpg"
+  stars: '5'
+  stats: "Attack: 620 at lvl0 / 2800 at lvl50 +5. \r\n\r\nCritical: 350 at lvl0 /
+    2327 at lvl50 +5."
+  passive: "Restriction: Water attacker. \r\nSlide skill critical damage + 11%."
+  index: 69
+tba1:
+  pic: "/images/sc/handsomeadventure.jpg"
+  stars: '5'
+  stats: "Attack: 620 at lvl0 / 2800 at lvl50 +5. \r\n\r\nAgility: 350 at lvl0 / 2327
+    at lvl50 +5."
+  passive: "Restriction: Water attacker. \r\n\r\nIncrease critical rate by 6%."
+  index: 68
+cake aesthetics:
+  pic: "/images/sc/cakeaesthetics.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nCritical: 340 at lvl0 /
+    2310 at lvl50 +5."
+  passive: "Restriction: Fire attacker. \r\n\r\nSlide skill critical damage +10%"
+  index: 67
+melty christmas:
+  pic: "/images/sc/meltychristmas.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nCritical: 340 at lvl0 /
+    2310 at lvl50 +5."
+  passive: "Restriction: Grass attacker. \r\n\r\nSlide skill critical damage +10%."
+  index: 73
+go home club (ny):
+  pic: "/images/sc/kitakubunewyear.jpg"
+  stars: '5'
+  stats: "Defense: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
+  passive: "Restriction: none.\r\n\r\n9% of agility becomes HP."
+  index: 78
+dark town mistress:
+  pic: "/images/sc/darktownleader.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nAgility: 340 at lvl0 / 2310
+    at lvl50 +5."
+  passive: "Restriction: Dark attacker. \r\n\r\nIncrease critical hit chance by 5%."
+  index: 76
+dangerous gambler:
+  pic: "/images/sc/dangerousgambler.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nAgility: 340 at lvl0 / 2310
+    at lvl50 +5."
+  passive: "Restriction: Light attacker. \r\n\r\nSlide skill critical damage +10%."
+  index: 71
+important present:
+  pic: "/images/sc/importantttreasure.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nAgility: 340 at lvl0 / 2310
+    at lvl50 +5."
+  passive: "Restriction: Grass attacker. \r\nIncrease Critical hit chance by 5%.\r\n"
+  index: 72
+god have mercy:
+  pic: "/images/sc/godhavemercy.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nAgility: 340 at lvl0 / 2310
+    at lvl50 +5."
+  passive: "Restriction: Light attacker. \r\n\r\nIncrease critical hit chance by 5%."
+  index: 75
+treasure hunter:
+  pic: "/images/sc/treasurehunter.jpg"
+  stars: '5'
+  stats: "Attack: 610 at lvl0 / 2782 at lvl50 +5. \r\n\r\nAgility: 340 at lvl0 / 2310
+    at lvl50 +5."
+  passive: "Restriction: Fire attacker. \r\nIncrease Critical hit chance by 5%.\r\n"
+  index: 74
+"(callthecops) tba":
+  pic: "/images/sc/callthecops.jpg"
+  stars: '5'
+  stats: "[stat]: [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\n[stat]:
+    [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: [if none write none]. \r\n\r\n[Write info]"
+  index: 77
