@@ -5,10 +5,22 @@ require 'redcarpet'
 require 'yaml'
 require 'fileutils'
 require 'bcrypt'
+require 'pg'
+
+# data = PG.connect("postgres://curmet:nay0ka@localhost/destinydb")
+
+# RESULT = DB.exec("SELECT units.id, name, stars, type, element FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id")
+
+def reload_db
+  @data = PG.connect(dbname: "dc")
+  @result = @data.exec("SELECT units.id, name, stars, type, element, tier, leader, auto, tap, slide, drive FROM units FULL OUTER JOIN mainstats on unit_id = units.id
+FULL OUTER JOIN substats ON substats.unit_id = units.id;
+")
+end
 
 configure do
   set :erb, escape_html: true
-end
+  end
 
 configure do
   enable :sessions
@@ -415,6 +427,17 @@ get '/equips/new_sc' do
   erb :new_sc
 end
 
+
+get '/test' do
+  @test = reload_db.fields
+  data = PG.connect(dbname: "dc")
+  current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+  @new_id = current_max_id.first['id'].to_i + 1
+  @new_unit_info = @new_unit
+  @max_index_val = get_max_index_number(@units)
+  erb :test
+end
+
 get '/new_unit' do
   require_user_signin
   @new_unit_info = @new_unit
@@ -647,6 +670,35 @@ get '/childs/:star_rating/:unit_name/remove' do
     session[:message] = "#{unit.upcase} unit was successfully deleted."
   end
   redirect '/'
+end
+
+post '/new_unit2' do
+  unit_data = @units
+
+  @current_unit = unit_data[params[:unit_name]]
+  @max_index_val = get_max_index_number(unit_data)
+
+  data = unit_data
+  name = params[:unit_name].downcase
+
+data = PG.connect(dbname: "dc")
+
+data.exec("INSERT INTO units (name) VALUES ('#{name}')")
+  reload_db
+
+  current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+  new_id = current_max_id.first['id'].to_i
+
+  data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES
+  ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{params[:element]}', '#{params[:tier]}')")
+reload_db
+
+data.exec("INSERT INTO substats (leader, auto, tap, slide, drive) VALUES
+('#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}')")
+  reload_db
+
+  session[:message] = "New unit called #{name.upcase} has been created."
+  redirect "/test"
 end
 
 get '/equips/:star_rating/:sc_name/remove' do
