@@ -6,30 +6,40 @@
       </dt>
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
-        <input name="edited" type="checkbox" required>
+
+        <!-- <input name="edited" type="checkbox" required> -->
       </dd>
-      <% @current_unit.each do |key, value| %>
+
+      <% @current_unit.each do |col_name, value| %>
+        <% next if col_name == 'id' || col_name == 'name' %>
       <dt>
-        <label for="<% key %>"><%= key.capitalize %> info:</label>
+        <label for="<% col_name %>"><%= col_name.capitalize %> info:</label>
       </dt>
       <dd>
-        <% if key == "pic" %>
-          <label for="upload"><em>upload a file or enter filename (from server)</em></label>
-          <input type="file" name="file" value="upload">
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
 
-        <% elsif special_key?(key) || short_stat_key?(key) %>
-          <% if key == "type" %>
-            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
-          <% elsif key == "element" %>
-            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
+
+        <% if col_name.include?('pic') %>
+        <label for="upload"><em>upload a file or enter filename (from server)</em></label>
+        <input type="file" name="file<%= col_name %>" value="upload">
+        <input class="content" name="<%= col_name %>" placeholder="file-name" type="text"  value="<%= params[col_name.to_sym] ||  value %>">
+        <% end %>
+      </dd>
+      <dd>
+
+        <% if special_key?(col_name) || short_stat_key?(col_name) %>
+          <% if col_name == "type" %>
+            <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= params[col_name.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
+          <% elsif col_name == "element" %>
+            <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= params[col_name.to_sym] || value %>"> Example: water, fire, grass, light, dark
           <% else %>
-            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+            <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= params[col_name.to_sym] || value %>">
           <% end %>
-        <% elsif key == "index" || key == 'date' %>
-         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
+        <% elsif col_name == "index" || col_name == 'date' %>
+         <input class="content" name="<%= col_name %>" placeholder="" type="text"  value=" <%= params[col_name.to_sym] || value %>">
+         <% elsif ['pic2', 'pic3', 'pic4'].include?(col_name) %>
+          <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= value || '' %>">
         <% else %>
-          <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
+          <textarea class="content" name="<%= col_name %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>
       </dd>
       <% end %>

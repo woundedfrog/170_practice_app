@@ -2029,6 +2029,8 @@ fairy:
     for 10s to self.
   drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
     to 2 allies with lowest hp.
+  notes: ''
+  date: '2018-11-28'
   index: 90
 thoth:
   pic: "/images/4thoth0.png"

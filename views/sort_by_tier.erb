@@ -23,14 +23,11 @@
   <button type="button" class="btn btn-warning btn-xs" id="debuffer" onClick="return showUnitsOnly('debuffer')">Debuffers</button>
 </div>
 
-
-
 <% @units.each_with_index do |tier_catagory, game_mode| %>
   <div class="main-container conatiner <%= game_mode %>">
   <h4 class="container catagory_div <%= game_mode %>" id="sort_by_title"><%= catagory(game_mode) %></h4>
   <% tier_catagory.each do |catagory_value, unit_list| %>
   <div class="catagory_div <%= game_mode %>">
-
 
   <div class="container">
       <% type = "Tier" %>
@@ -47,7 +44,7 @@
                 </div>
                 <% end %>
                   <a href="/childs/<%= rating %>/<%= unit %>">
-                    <img class="profile_imgs"  src="<%= unit_details['pic'] %>"/>
+                    <img class="profile_imgs"  src="<%= unit_details['pic1'] %>"/>
                     </a>
                 <div class="index-stat-pic-container">
                     <%== format_stat("type", unit_details["type"]) %>

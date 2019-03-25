@@ -12,9 +12,9 @@ require 'pg'
 # RESULT = DB.exec("SELECT units.id, name, stars, type, element FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id")
 
 def reload_db
-  @data = PG.connect(dbname: "dc")
-  @result = @data.exec("SELECT units.id, name, stars, type, element, tier, leader, auto, tap, slide, drive FROM units FULL OUTER JOIN mainstats on unit_id = units.id
-FULL OUTER JOIN substats ON substats.unit_id = units.id;
+  @data = PG.connect(dbname: "dcdb")
+  @result = @data.exec("SELECT name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id
+RIGHT OUTER JOIN substats ON substats.unit_id = units.id;
 ")
 end
 
@@ -33,6 +33,7 @@ before do
   @soulcards = load_file_data('sc')
   @new_unit = load_file_data('new_unit')['new_unit']
   @new_sc = load_file_data('new_sc')['new_sc']
+  reload_db
 end
 
 helpers do
@@ -70,18 +71,18 @@ helpers do
 
   def sort_by_and_select_type(unit_info, catagory_type)
     keys = []
-    unit_info.each do |_unit_name, unit_details|
+    unit_info.each do |_unit_name|
       if catagory_type == 'tier'
-        unit_details.each do |stat, value|
+        _unit_name.each do |stat, value|
           next if stat != catagory_type
 
           keys << value.split(' ').map(&:to_i)
         end
         keys.flatten!
       else
-        unit_details.each { |stat, value| keys << value if stat == catagory_type }
+        _unit_name.each { |stat, value| keys << value if stat == catagory_type }
       end
-    end
+  end
 
     if "date" == catagory_type
       return keys.uniq.map!(&:to_s).sort! { |a,b| DateTime.parse(a) <=> DateTime.parse(b) }.reverse
@@ -246,12 +247,20 @@ def group_by_catagory_tier(details, catagory_vals)
   groups = [{}, {}, {}, {}]
   groups.size.times do |idx|
     catagory_vals.each do |num|
-      details.each do |name, info|
-        tiers = info['tier'].split(' ').map(&:to_i)
+      details.each do |unit|
+        tiers = unit['tier'].split(' ').map(&:to_i)
         groups[idx][num.to_s] = {} if groups[idx][num].nil?
-        groups[idx][num][name] = info if tiers[idx] == num.to_s.to_i
+        groups[idx][num][unit['name']] = unit if tiers[idx] == num.to_s.to_i
       end
     end
+
+    # catagory_vals.each do |num|
+    #   details.each do |name, info|
+    #     tiers = info['tier'].split(' ').map(&:to_i)
+    #     groups[idx][num.to_s] = {} if groups[idx][num].nil?
+    #     groups[idx][num][name] = info if tiers[idx] == num.to_s.to_i
+    #   end
+    # end
   end
   groups
 end
@@ -259,12 +268,11 @@ end
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
   # units_by_stars = nil
-  units_by_stars =
-   unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
+  units_by_stars = unit_info
+   # unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
 
   return group_by_catagory_tier(units_by_stars, catagory_vals) if type == 'tier'
 
-  units_by_stars.sort_by { |name, __stats| name }.to_h
 end
 
 def get_unit_or_sc_from_keys(keys)
@@ -301,7 +309,7 @@ def create_file_from_upload(uploaded_file, pic_param, directory)
     (tmpfile = uploaded_file[:tempfile]) && (pname = uploaded_file[:filename])
     path = File.join(directory, pname)
     File.open(path, 'wb') { |f| f.write(tmpfile.read) }
-  elsif params[:pic].empty?
+  elsif pic_param.empty?
     pname = 'emptyunit0.png'
   else
     pname = pic_param
@@ -427,23 +435,23 @@ get '/equips/new_sc' do
   erb :new_sc
 end
 
-
-get '/test' do
-  @test = reload_db.fields
-  data = PG.connect(dbname: "dc")
-  current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
-  @new_id = current_max_id.first['id'].to_i + 1
-  @new_unit_info = @new_unit
-  @max_index_val = get_max_index_number(@units)
-  erb :test
-end
-
 get '/new_unit' do
-  require_user_signin
-  @new_unit_info = @new_unit
-  @max_index_val = get_max_index_number(@units)
+  @new_profile = reload_db.fields
+  data = PG.connect(dbname: "dcdb")
+  # current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+  # @new_id = current_max_id.first['id'].to_i + 1
+  @profile_pic_table = data.exec("SELECT * FROM profilepics")
+  # @new_unit_info = @new_unit
+  # @max_index_val = get_max_index_number(@units)
   erb :new_unit
 end
+
+# get '/new_unit' do
+#   require_user_signin
+#   @new_unit_info = @new_unit
+#   @max_index_val = get_max_index_number(@units)
+#   erb :new_unit
+# end
 
 get '/:catagory/:star_rating' do
   star_rating = params[:star_rating]
@@ -457,6 +465,8 @@ get '/:catagory/:star_rating' do
     unit_info = @units
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
+
+
     erb :index_child
   else
     unit_info = @soulcards
@@ -466,21 +476,68 @@ get '/:catagory/:star_rating' do
   end
 end
 
-get '/childs/:star_rating/:unit_name' do
+
+# get '/childs/:star_rating/:unit_name/edit' do
+#   require_user_signin
+#   name = params[:unit_name]
+#   @unit_name = name
+#   @current_unit = @units[name]
+#
+#   @x = ["abaddon", "agamemnon", "ai", "ambrosia", "amor", "anemone", "ankh", "arges", "aria", "artemis", "ashtoreth", "astraeas", "aten", "athena", "aurora", "bakje", "bari", "bast", "bastet", "bi moa", "bikini davi", "bikini lisa", "brigette", "brownie", "buster lisa", "calchas", "calypso", "cammy", "charlotte", "chimaera", "christmas leda", "chun-li", "cleopatra", "cube moa", "cybele", "dana", "danu", "daphne", "dark maat", "dark midas", "davi", "diablo", "dinashi", "durandal", "el dorado", "elizabeth", "elysium", "epona", "erato", "eshu", "europa", "eve", "fairy", "fenrir", "flora", "fortuna", "freesia", "frey", "frey (light)", "frigga", "gkouga", "guillotine", "hades", "halloween", "hat-trick", "hatsune miku", "hector", "hera", "heracles", "hermes", "hestia", "hildr", "honoka", "horus", "inanna", "innocent venus", "ishtar", "isis", "isolde", "jiseihi", "jupiter", "kagura warwolf", "kasumi", "khepri", "kirinus", "korra", "kouga", "kouka", "krampus", "lady", "lady bathory", "lan fei", "leda", "lisa", "love sitri", "luna", "maat", "mafdet", "magician ailill", "magician ohad", "maiden detective", "mammon", "maou davi", "marie rose", "maris", "maya", "medb", "medusa", "melpomene", "merlin", "metis", "midas", "mona", "morgan", "morrigu", "muse", "myrina", "mysterious saturn", "naiad", "neid", "neman", "neptune", "nevan (light)", "newbie mona", "nicole", "nirrti", "oiran bathory", "orga (wola)", "orora", "pallas", "pan", "pantheon", "party star medb", "persephone", "pomona", "pretty mars", "redcross", "rednose", "rita", "rudolph", "ruin", "rusalka", "santa", "scuba mona", "selene", "siren", "sitri", "snow miku", "sonnet", "student eve", "syrinx", "tethys", "thanatos", "thoth", "tiamat", "tirfing", "tisiphone", "titania", "verdel", "victrix", "warwolf", "willow", "yaga", "yuna", "zelos"]
+#   data = PG.connect(dbname: "dcdb")
+#    @name_list = data.exec("SELECT name FROM units")
+#   erb :edit_unit_old
+# end
+
+get '/childs/:star_rating/:unit_name/edit' do
+  # @test = reload_db.fields
   name = params[:unit_name]
-  unit_or_sc_exist?('unit', name)
   @unit_name = name
   @current_unit = @units[name]
+
+  data = PG.connect(dbname: "dcdb")
+  current_id = data.exec("SELECT * FROM units WHERE name = '#{name}';")
+  @new_id = current_id.first['id'].to_i
+
+  @current_unit = data.exec("SELECT enabled, id, name,  pic1, pic2, pic3, pic4, stars, type, element, tier, leader, auto, tap, slide, drive, notes, created_on
+  FROM units
+  RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
+  RIGHT OUTER JOIN substats ON substats.unit_id = units.id
+  RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
+  WHERE name = '#{name}'").first
+  # @profile_pic_table = data.exec("SELECT pic1, pic2, pic3, pic4 FROM profilepics WHERE unit_id = '#{@new_id}'").first
+  # @unit = data.exec("SELECT * FROM units WHERE name = '#{name}';")
+
+  erb :edit_unit
+end
+
+get '/childs/:star_rating/:unit_name' do
+  name = params[:unit_name]
+  db = PG.connect(dbname: 'dcdb')
+
+  @unit_data = db.exec("SELECT units.id, name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units
+  RIGHT OUTER JOIN mainstats on unit_id = units.id
+  RIGHT OUTER JOIN substats ON substats.unit_id = units.id;")
+  # unit_or_sc_exist?('unit', name)
+  id = db.exec("SELECT id FROM units WHERE name = '#{name}';")[0]['id']
+  @unit = db.exec("SELECT name, created_on AS date FROM units WHERE name = '#{name}';")[0]
+
+  @mainstats = db.exec("SELECT stars, type, element, tier FROM mainstats WHERE unit_id = #{id};")[0]
+
+  @substats = db.exec("SELECT leader, auto, tap, slide, drive, notes FROM substats WHERE unit_id = #{id};")[0]
+  @pics = db.exec("SELECT * FROM profilepics WHERE unit_id = #{id};")[0]
+
   erb :view_unit
 end
 
-get '/childs/:star_rating/:unit_name/edit' do
-  require_user_signin
-  name = params[:unit_name]
-  @unit_name = name
-  @current_unit = @units[name]
-  erb :edit_unit
-end
+# get '/childs/:star_rating/:unit_name' do
+#   name = params[:unit_name]
+#   unit_or_sc_exist?('unit', name)
+#   @unit_name = name
+#   @current_unit = @units[name]
+#   erb :view_unit
+# end
+
 
 get '/equips/:star_rating/:sc_name' do
   name = params[:sc_name]
@@ -503,16 +560,28 @@ get '/childs/:star_rating/sort_by/:type' do
   @catagory_type = params[:type]
   unit_info = @units
 
+  db = PG.connect(dbname: 'dcdb')
+  @unit_data = db.exec("SELECT name, created_on AS date, stars, type, element, tier, pic1 FROM units
+  RIGHT OUTER JOIN mainstats on unit_id = units.id
+  RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
+  WHERE stars = '#{@star_rating[0]}' AND enabled = 't'")
+
+
   if %w[3 4 5].any? { |star| star == @star_rating[0] }
-    @catagories = sort_by_and_select_type(unit_info, @catagory_type)
+    @catagories = sort_by_and_select_type(@unit_data, @catagory_type)
     @units =
-      sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
+      sort_by_given_info(@unit_data, @star_rating, @catagories, @catagory_type)
 
     return erb :sort_by_tier if @catagory_type == 'tier'
   else
     session[:message] = 'There are no units by that tier!'
     redirect '/'
   end
+  @units = db.exec("SELECT name, created_on AS date, stars, type, element, tier, pic1 FROM units
+  RIGHT OUTER JOIN mainstats on unit_id = units.id
+  RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
+  WHERE stars = '#{@star_rating[0]}' AND enabled = 't' ORDER BY element ASC")
+
   erb :sort_by_type
 end
 
@@ -587,92 +656,97 @@ post '/equips/new_sc' do
   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
-post '/new_unit' do
-  require_user_signin
-  unit_data = @units
-
-  @current_unit = unit_data[params[:unit_name]]
-  @max_index_val = get_max_index_number(unit_data)
-
-  data = unit_data
-  name = params[:unit_name].downcase
-  index = params[:index].to_i
-  date = check_and_fetch_date(data, name)
-
-  original_unit = unit_data.select do |unit, info|
-    unit if params['index'].to_i == info['index'].to_i
-  end
-
-  pname = create_file_from_upload(params[:file], params[:pic], 'public/images')
-
-  if unit_data.include?(name) && index != unit_data[name]['index']
-    session[:message] =
-      'A unit by that name already exists. Please enter a different unit name.'
-    status 422
-
-    if params['edited']
-      temp_name = get_unit_name(unit_data, index)
-      redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
-    else
-      redirect '/new_unit'
-    end
-  else
-    data.delete(original_unit.keys.first)
-    data[name] = {}
-  end
-
-  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.png')
-
-  %w(pic2 pic3).each do |param_name|
-    data[name][param_name] =
-      if params[param_name.to_sym] == ''
-        params[param_name.to_sym]
-      else
-        temp_pic_n = params[param_name.to_sym].gsub('/images/', '').gsub('.png', '')
-        '/images/' + temp_pic_n + '.png'
-      end
-  end
-
-  data[name]['stars'] = params[:stars]
-  data[name]['type'] = params[:type]
-  data[name]['element'] = params[:element]
-  data[name]['tier'] = params[:tier].upcase
-  data[name]['leader'] = params[:leader]
-  data[name]['auto'] = params[:auto]
-  data[name]['tap'] = params[:tap]
-  data[name]['slide'] = params[:slide]
-  data[name]['drive'] = params[:drive]
-  data[name]['notes'] = params[:notes]
-  data[name]['date'] = if date == ''
-                         new_time = Time.now.utc.localtime('+09:00')
-                         [new_time.year, new_time.month, new_time.day].join('-')
-                       else
-                         date
-                       end
-  data[name]['index'] = index
-
-  File.write('data/unit_details.yml', YAML.dump(data))
-  session[:message] = "New unit called #{name.upcase} has been created."
-  redirect "/childs/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
-end
+# Old post ## REMOVE when finished
+# post '/new_unit' do
+#   require_user_signin
+#   unit_data = @units
+#
+#   @current_unit = unit_data[params[:unit_name]]
+#   @max_index_val = get_max_index_number(unit_data)
+#
+#   data = unit_data
+#   name = params[:unit_name].downcase
+#   index = params[:index].to_i
+#   date = check_and_fetch_date(data, name)
+#
+#   original_unit = unit_data.select do |unit, info|
+#     unit if params['index'].to_i == info['index'].to_i
+#   end
+#
+#   pname = create_file_from_upload(params[:file], params[:pic], 'public/images')
+#
+#   if unit_data.include?(name) && index != unit_data[name]['index']
+#     session[:message] =
+#       'A unit by that name already exists. Please enter a different unit name.'
+#     status 422
+#
+#     if params['edited']
+#       temp_name = get_unit_name(unit_data, index)
+#       redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
+#     else
+#       redirect '/new_unit'
+#     end
+#   else
+#     data.delete(original_unit.keys.first)
+#     data[name] = {}
+#   end
+#
+#   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.png')
+#
+#   %w(pic2 pic3).each do |param_name|
+#     data[name][param_name] =
+#       if params[param_name.to_sym] == ''
+#         params[param_name.to_sym]
+#       else
+#         temp_pic_n = params[param_name.to_sym].gsub('/images/', '').gsub('.png', '')
+#         '/images/' + temp_pic_n + '.png'
+#       end
+#   end
+#
+#   data[name]['stars'] = params[:stars]
+#   data[name]['type'] = params[:type]
+#   data[name]['element'] = params[:element]
+#   data[name]['tier'] = params[:tier].upcase
+#   data[name]['leader'] = params[:leader]
+#   data[name]['auto'] = params[:auto]
+#   data[name]['tap'] = params[:tap]
+#   data[name]['slide'] = params[:slide]
+#   data[name]['drive'] = params[:drive]
+#   data[name]['notes'] = params[:notes]
+#   data[name]['date'] = if date == ''
+#                          new_time = Time.now.utc.localtime('+09:00')
+#                          [new_time.year, new_time.month, new_time.day].join('-')
+#                        else
+#                          date
+#                        end
+#   data[name]['index'] = index
+#
+#   File.write('data/unit_details.yml', YAML.dump(data))
+#   session[:message] = "New unit called #{name.upcase} has been created."
+#   redirect "/childs/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
+# end
 
 get '/childs/:star_rating/:unit_name/remove' do
   require_user_signin
   unit = params[:unit_name]
   units_info = @units
 
-  if units_info.include?(params[:unit_name]) == false
+  data = PG.connect(dbname: "dcdb")
+  unit_found = data.exec("SELECT * FROM units WHERE name = '#{unit}'").first
+  if unit_found.nil?
     status 422
     session[:message] = "That unit doesn't exist."
   else
-    units_info.delete(unit)
-    File.write('data/unit_details.yml', YAML.dump(units_info))
+
+    data.exec("DELETE FROM units WHERE name = '#{unit}'")
+    # units_info.delete(unit)
+    # File.write('data/unit_details.yml', YAML.dump(units_info))
     session[:message] = "#{unit.upcase} unit was successfully deleted."
   end
   redirect '/'
 end
 
-post '/new_unit2' do
+post '/new_unit' do
   unit_data = @units
 
   @current_unit = unit_data[params[:unit_name]]
@@ -681,25 +755,129 @@ post '/new_unit2' do
   data = unit_data
   name = params[:unit_name].downcase
 
-data = PG.connect(dbname: "dc")
+  data = PG.connect(dbname: "dcdb")
+  unit_found = data.exec("SELECT * FROM units WHERE name = '#{name}'").first
 
-data.exec("INSERT INTO units (name) VALUES ('#{name}')")
-  reload_db
+  pname1 = create_file_from_upload(params[:filepic1], params[:pic1], 'public/images')
+  pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
+  pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')
+  pname4 = create_file_from_upload(params[:filepic4], params[:pic4], 'public/images')
 
-  current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
-  new_id = current_max_id.first['id'].to_i
+  if unit_found.nil?
 
-  data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES
-  ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{params[:element]}', '#{params[:tier]}')")
-reload_db
+    data.exec("INSERT INTO units (name) VALUES ('#{name}')")
+    reload_db
 
-data.exec("INSERT INTO substats (leader, auto, tap, slide, drive) VALUES
-('#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}')")
-  reload_db
+    current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+    new_id = current_max_id.first['id'].to_i
+
+    if params[:element] == 'grass'
+      element = 'earth'
+    else
+      element = params[:element]
+    end
+    data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES
+    ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{element}', '#{params[:tier]}')")
+
+    data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
+    ('#{new_id}', '#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}', '#{params[:notes]}')")
+
+    data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES
+    ('#{new_id}', '#{pname1}', '#{pname2}', '#{pname3}', '#{pname4}')")
+    reload_db
+  else
+
+    data.exec("UPDATE units SET name = '#{name}', enabled = '#{params[:enabled]}' WHERE name = '#{name}'")
+    reload_db
+
+    current_max_id = data.exec("SELECT id FROM units WHERE name = '#{name}'")
+    new_id = current_max_id.first['id'].to_i
+
+    if params[:element] == 'grass'
+      element = 'earth'
+    else
+      element = params[:element]
+    end
+    data.exec("UPDATE mainstats SET stars = '#{params[:stars]}', type = '#{params[:type]}', element = '#{element}', tier = '#{params[:tier]}' WHERE unit_id = '#{new_id}'")
+    # reload_db
+
+    data.exec("UPDATE substats SET leader = '#{params[:leader]}', auto = '#{params[:auto]}', tap = '#{params[:tap]}', slide = '#{params[:slide]}', drive = '#{params[:drive]}', notes = '#{params[:notes]}' WHERE unit_id = '#{new_id}'")
+
+    data.exec("UPDATE profilepics SET pic1 = '#{pname1}', pic2 = '#{pname2}', pic3 = '#{pname3}', pic4 = '#{pname4}' WHERE unit_id = '#{new_id}'")
+    reload_db
+  end
 
   session[:message] = "New unit called #{name.upcase} has been created."
-  redirect "/test"
+  redirect "/"
 end
+
+###### this is used to save and import from YML to sql
+# post '/new_unit2' do
+#   unit_data = @units
+#
+#   @current_unit = unit_data[params[:unit_name]]
+#   @max_index_val = get_max_index_number(unit_data)
+#
+#   data = unit_data
+#   name = params[:unit_name].downcase
+#
+#
+#   # pname1 = params[:pic1]
+#   #
+#   # if params[:pic2] == '' || params[:pic2].nil?
+#   #   pname2 = 'emptyunit0.png'
+#   # else
+#   #   pname2 = params[:pic2]
+#   # end
+#   # if params[:pic3] == '' || params[:pic3].nil?
+#   #   pname3 = 'emptyunit0.png'
+#   # else
+#   #   pname3 = params[:pic3]
+#   # end
+#   # if params[:pic4] == '' || params[:pic4].nil?
+#   #   pname4 = 'emptyunit0.png'
+#   # else
+#   #   pname4 = params[:pic4]
+#   # end
+#
+#     pname1 = create_file_from_upload(params[:filepic], params[:pic], 'public/images')
+#     pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
+#     pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')
+#     pname4 = create_file_from_upload(params[:filepic4], params[:pic4], 'public/images')
+#   #
+#   # piname1 = pname1.include?('.') ? pname1 : (pname1 + '.png')
+#   # piname2 = pname2.include?('.') ? pname2 : (pname2 + '.png')
+#   # piname3 = pname3.include?('.') ? pname3 : (pname3 + '.png')
+#   # piname4 = pname4.include?('.') ? pname4 : (pname4 + '.png')
+#
+#   data = PG.connect(dbname: "dcdb")
+#
+#   data.exec("INSERT INTO units (name, created_on) VALUES ('#{name}', '#{params[:date]}')")
+#   reload_db
+#
+#   current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+#   new_id = current_max_id.first['id'].to_i
+#
+#   if params[:element] == 'grass'
+#     element = 'earth'
+#   else
+#     element = params[:element]
+#   end
+#   data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES
+#   ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{element}', '#{params[:tier]}')")
+#   # reload_db
+#
+#   data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
+#   ('#{new_id}', '#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}', '#{params[:notes]}')")
+#
+#   data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES
+#   ('#{new_id}', '#{pname1}', '#{pname2}', '#{pname3}', '#{pname4}')")
+#   reload_db
+#
+#   session[:message] = "New unit called #{name.upcase} has been created."
+#   redirect "/test"
+# end
+########
 
 get '/equips/:star_rating/:sc_name/remove' do
   require_user_signin

@@ -11,32 +11,30 @@
   <button type="button" class="btn btn-warning btn-xs" id="tank" onClick="return showUnitsOnly('tank')">Tanks</button>
 </div>
 
-
-
 <div class="container">
     <% @catagories.each do |catagory| %>
     <% @catagory_type == 'type' ? unit = 'units' : unit = '' %>
       <div class="row justify-content-center">
       <h4 class="container catagory_div <%= unit %> <%= catagory %>" id="sort_by_title"><%= catagory.capitalize %></h4>
 
-      <% @units.each do |name, unit_details| %>
-        <% next unless unit_details[@catagory_type] == catagory %>
+      <% @units.each do |unit| %>
+        <% next unless unit[@catagory_type] == catagory %>
 
-        <div class="col-* unit-grid-cols units <%= unit_details['type'] %>">
+        <div class="col-* unit-grid-cols units <%= unit['type'] %>">
           <% if session[:username] %>
             <div class="edit-remove-buttons">
-              <a href="/childs/<%= @star_rating %>/<%= name %>/edit">Edit</a>|
-              <a href="/childs/<%= @star_rating %>/<%= name %>/remove" onClick="return checkMe()">Remove</a>
+              <a href="/childs/<%= @star_rating %>/<%= unit['name'] %>/edit">Edit</a>|
+              <a href="/childs/<%= @star_rating %>/<%= unit['name'] %>/remove" onClick="return checkMe()">Remove</a>
             </div>
           <% end %>
-          <a href="/childs/<%= @star_rating %>/<%= name %>">
-              <img class="profile_imgs"  src="<%= unit_details['pic'] %>"/>
+          <a href="/childs/<%= @star_rating %>/<%= unit['name'] %>">
+              <img class="profile_imgs"  src="<%= unit['pic1'] %>"/>
           </a>
           <div class="index-stat-pic-container">
-            <%== format_stat("type", unit_details["type"]) %>
-            <%== format_stat("element", unit_details["element"]) %>
+            <%== format_stat("type", unit["type"]) %>
+            <%== format_stat("element", unit["element"]) %>
           </div>
-          <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+          <h6 class="unit-profile-title"><%= upcase_name(unit['name']) %></h6>
         </div>
       <% end %>
 
@@ -44,4 +42,3 @@
 
     <% end %>
 </div>
-Z

@@ -2,7 +2,7 @@
 
 <div class="container">
   <div  class="special-links">
-    <% stars = @mainstats['stars'] %>
+    <% stars = @current_unit["stars"] %>
     <button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
     <button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
   <% if session[:username] %>
@@ -11,20 +11,18 @@
   <% end %>
   </div>
 
-  <h3><%= upcase_name(@unit['name']) %></h3>
+  <h3><%= upcase_name(@unit_name) %></h3>
 
   <div class="row profile-row-container">
     <div class="col- profile-pic-container mobile">
-      <% @pics.each do |key, value| %>
-      <% next if key == 'unit_id' %>
-      <% break if ['pic2', 'pic3', 'pic4'].include?(key) && value.include?('emptyunit0') %>
-      <img class="profile_imgs mobile" src="<%= value %>" alt="<%= value %>"/>
-      <% end %>
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
+      <img class="profile_imgs mobile" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
     </div>
 
     <div class="col profile-stat-col-container">
       <div class="row profile-stat-row-container">
-        <% @mainstats.each do |info_key, info_val| %>
+        <% @current_unit.each do |info_key, info_val| %>
         <% unless long_stat_key?(info_key) || special_key?(info_key) %>
         <div class="profile-stat-container col-*">
           <% if ["stars"].include?(info_key) %>
@@ -44,12 +42,14 @@
         <% end %>
     </div>
 
-    <% @substats.each do |info_key, info_val| %>
+
+    <% @current_unit.each do |info_key, info_val| %>
+
     <% unless special_key?(info_key) || short_stat_key?(info_key) %>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
         <% if info_key == 'date' %>
-
+          <p>Date added(Tokyo): <%= info_val %></p>
         <% else %>
 
           <% info_val.split(". ").each do |line| %>
@@ -64,12 +64,7 @@
     <% end %>
 
     <% end %>
-
-    <div class="profile-stat-container">
-      <h5 class="card-title">Date:</h5>
-      <p>Date added(Tokyo): <%= @unit['date'] %></p>
-    </div>
-
   </div>
+
 </div>
 </div>

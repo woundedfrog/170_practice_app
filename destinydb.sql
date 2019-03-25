@@ -179,7 +179,7 @@ ALTER SEQUENCE public.substats_unit_id_seq OWNED BY public.substats.unit_id;
 --
 
 CREATE TABLE public.units (
-    id integer NOT NULL,
+    id serial NOT NULL,
     name character varying(60) NOT NULL,
     created_on date DEFAULT CURRENT_DATE
 );

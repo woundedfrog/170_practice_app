@@ -1,0 +1,44 @@
+<div class="container-fluid">
+  
+  <form action="/new_unit2" method="post" enctype="multipart/form-data">
+    <dl>
+      <dt>
+        <label for="unit_name">Enter a unit name:</label>
+      </dt>
+      <dd>
+        <input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
+        <!-- <input name="edited" type="checkbox" required> -->
+      </dd>
+      <% @current_unit.each do |key, value| %>
+      <dt>
+        <label for="<% key %>"><%= key.capitalize %> info:</label>
+      </dt>
+      <dd>
+        <% if key.include?('pic')  %>
+          <label for="upload"><em>upload a file or enter filename (from server)</em></label>
+          <input type="file" name="file<%= key %>" value="upload">
+          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+
+        <% elsif special_key?(key) || short_stat_key?(key) %>
+          <% if key == "type" %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
+          <% elsif key == "element" %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
+          <% else %>
+            <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+          <% end %>
+        <% elsif key == "index" || key == 'date' %>
+         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
+        <% else %>
+          <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
+        <% end %>
+      </dd>
+      <% end %>
+    </dl>
+    <input class="content" name="pic4" placeholder="file-name" type="text"  value="">
+    <fieldset class="actions">
+      <button type="submit" value="Save">Save</button>
+      <a href="/childs/<%= @current_unit['stars'] %>stars/<%= @unit_name.downcase %>"><button type="button">Cancel</button></a>
+    </fieldset>
+  </form>
+</div>

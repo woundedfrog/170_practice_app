@@ -1,0 +1,41 @@
+<div class="container-fluid">
+  <form action="/new_unit" method="post" enctype="multipart/form-data">
+    <dl>
+      <dt>
+        <label for="unit_name">Enter a unit name:</label>
+      </dt>
+      <dd>
+        <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
+      </dd>
+      <% @new_unit_info.each do |key, value| %>
+        <% next if key == 'date' %>
+      <dt>
+        <label for="<% key %>"><%= key.capitalize %> info:</label>
+      </dt>
+      <dd>
+        <% if key == "pic" %>
+          <label for="upload"><em>upload a file or enter filename (from server)</em></label>
+          <input type="file" name="file" value="upload">
+          <input class="content" name="<%= key %>" placeholder="file-name" type="text"  value="<%= params[key.to_sym] %>">
+          <% elsif special_key?(key) || short_stat_key?(key) %>
+            <% if key == "type" %>
+              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
+            <% elsif key == "element" %>
+              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
+              <% elsif key == "index" %>
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
+              <% else %>
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+            <% end %>
+        <% else %>
+          <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>
+        <% end %>
+      </dd>
+      <% end %>
+    </dl>
+    <fieldset class="actions">
+      <button type="submit" value="Save">Save</button>
+      <a href="/">Cancel</a>
+    </fieldset>
+  </form>
+</div>
