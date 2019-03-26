@@ -381,7 +381,18 @@ end
 
 get '/search/' do
   keys = params[:search_query].downcase
-  @units = get_unit_or_sc_from_keys(keys)[0]
+
+  database = PG.connect(dbname: 'dcdb')
+
+  @units2 =
+    database.exec("SELECT name,  pic1, stars, type, element, leader, auto, tap, slide, drive, notes
+    FROM units
+    RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
+    RIGHT OUTER JOIN substats ON substats.unit_id = units.id
+    RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
+    WHERE name LIKE '#{keys}' OR leader LIKE '%#{keys}%' OR auto LIKE '%#{keys}%' OR tap LIKE '%#{keys}%' OR slide LIKE '%#{keys}%' OR drive LIKE '%#{keys}%' OR notes LIKE '%#{keys}%' ORDER BY name")
+
+  # @units = get_unit_or_sc_from_keys(keys)[0]
   @soulcards = get_unit_or_sc_from_keys(keys)[1]
   erb :search
 end
@@ -409,7 +420,7 @@ end
 get '/download/:filename' do |filename|
   fname = filename
   ftype = 'Application/octet-stream'
-  # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
+
   if filename.include?('soul')
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
   elsif filename.include?('unit') ||
@@ -438,11 +449,7 @@ end
 get '/new_unit' do
   @new_profile = reload_db.fields
   data = PG.connect(dbname: "dcdb")
-  # current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
-  # @new_id = current_max_id.first['id'].to_i + 1
   @profile_pic_table = data.exec("SELECT * FROM profilepics")
-  # @new_unit_info = @new_unit
-  # @max_index_val = get_max_index_number(@units)
   erb :new_unit
 end
 
@@ -529,6 +536,15 @@ get '/childs/:star_rating/:unit_name' do
 
   erb :view_unit
 end
+
+#shows a list of all units in the database.
+get '/unit_index' do
+  database = PG.connect(dbname: 'dcdb')
+  @unit_index = database.exec("SELECT id, name, stars, enabled, created_on FROM units RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id ORDER BY id ASC, name DESC")
+
+  erb :unit_index
+end
+###
 
 # get '/childs/:star_rating/:unit_name' do
 #   name = params[:unit_name]

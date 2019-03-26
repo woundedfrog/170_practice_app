@@ -1,0 +1,16 @@
+<div class="container col-sm">
+<% @unit_index.each do |hash| %>
+<div class="container col-*">
+  <p>
+    ID: <%=hash['id']%> , NAME: <%=hash['name']%> , STARS: <%=hash['stars']%>
+    , ENABLED: <%=hash['enabled']%> , DATE: <%=hash['created_on']%>
+  </p>
+<% if session[:username] %>
+  <div class="">
+    <a href="/childs/<%= hash['stars'] %>/<%= hash['name'] %>/edit">Edit</a>
+    <a href="/childs/<%= hash['stars'] %>/<%= hash['name'] %>/remove" onClick="return checkMe()">Remove</a>
+  </div>
+  <% end %>
+</div>
+<% end %>
+</div>
