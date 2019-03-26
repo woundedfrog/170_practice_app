@@ -3,10 +3,34 @@
 <% end %>
 
 <div class="container static-container">
+  <div class="row justify-content-center">
+  <% @units1.each do |row| %>
+  <% rating = row["stars"] + "stars" %>
+      <div class="col-* unit-grid-cols">
 
+          <% if session[:username] %>
+          <div class="edit-remove-buttons">
+            <a href="/childs/<%= rating %>/<%= row['name'] %>/edit">Edit</a>|
+            <a href="/childs/<%= rating %>/<%= row['name'] %>/remove" onClick="return checkMe()">Remove</a>
+          </div>
+          <% end %>
+
+            <a href="/childs/<%= rating %>/<%= row['name'] %>">
+              <img class="profile_imgs" src="<%= row['pic1'] %>" alt="<%= row['name'] %>"/>
+            </a>
+
+          <div class="index-stat-pic-container">
+              <%== format_stat("type", row['type']) %>
+              <%== format_stat("element", row['element']) %>
+          </div>
+          <h6 class="unit-profile-title"><%= upcase_name(row['name']) %></h6>
+      </div>
+  <% end %>
+  </div>
 
     <div class="row justify-content-center">
     <% @units2.each do |row| %>
+    <% next if @exclude_list.include?(row['name']) %>
     <% rating = row["stars"] + "stars" %>
         <div class="col-* unit-grid-cols">
 

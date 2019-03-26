@@ -384,14 +384,22 @@ get '/search/' do
 
   database = PG.connect(dbname: 'dcdb')
 
-  @units2 =
-    database.exec("SELECT name,  pic1, stars, type, element, leader, auto, tap, slide, drive, notes
+  @units1 =
+    database.exec("SELECT name, pic1, stars, type, element, leader, auto, tap, slide, drive, notes
     FROM units
     RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
     RIGHT OUTER JOIN substats ON substats.unit_id = units.id
     RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
-    WHERE name LIKE '#{keys}' OR leader LIKE '%#{keys}%' OR auto LIKE '%#{keys}%' OR tap LIKE '%#{keys}%' OR slide LIKE '%#{keys}%' OR drive LIKE '%#{keys}%' OR notes LIKE '%#{keys}%' ORDER BY name")
+    WHERE name LIKE '%#{keys}%' ORDER BY name")
 
+    @exclude_list = @units1.map {|row| row['name']}
+    @units2 =
+      database.exec("SELECT name, pic1, stars, type, element, leader, auto, tap, slide, drive, notes
+      FROM units
+      RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
+      RIGHT OUTER JOIN substats ON substats.unit_id = units.id
+      RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
+      WHERE leader LIKE '%#{keys}%' OR auto LIKE '%#{keys}%' OR tap LIKE '%#{keys}%' OR slide LIKE '%#{keys}%' OR drive LIKE '%#{keys}%' OR notes LIKE '%#{keys}%' ORDER BY name")
   # @units = get_unit_or_sc_from_keys(keys)[0]
   @soulcards = get_unit_or_sc_from_keys(keys)[1]
   erb :search
