@@ -2,24 +2,27 @@
   <form action="/equips/new_sc" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
-        <label for="sc_name">Enter a card name:</label>
+        <label for="sc_name">Enter a unit name:</label>
       </dt>
       <dd>
         <input class="content" name="sc_name" placeholder="" type="text"  value="<%= params[:sc_name] %>" required>
       </dd>
-      <% @card.each do |key, value| %>
+      <dd>
+        Enable this card?(Makes it visible)<input type="hidden" name="enabled" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+      </dd>
+      <% @new_profile.fields.each do |key, value| %>
+      <% next if key == 'enabled' || key == 'name' %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
       <dd>
-        <% if key == "pic" %>
+        <% if key == "pic1" %>
           <label for="upload"><em>upload a file or enter filename (from server)</em></label>
           <input type="file" name="file" value="upload">
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] %>">
-        <% elsif key == "stars" %>
+          <input class="content" name="<%= key %>" placeholder="" type="text" value="<%= params[key.to_sym] || value %>">
+
+        <% elsif special_key?(key) || key == 'stars'%>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
-        <% elsif key == "index" %>
-          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

@@ -56,20 +56,40 @@
 </div>
 <div class="container static-container">
     <div class="row justify-content-center">
-      <% @soulcards.each do |card, card_details| %>
-        <% rating = card_details["stars"] + "stars" %>
+      <% @soulcards.each do |card| %>
+        <% rating = card["stars"] + "stars" %>
       <div class="col-* sc-grid-cols">
           <% if session[:username] %>
           <div class="edit-remove-buttons">
-            <a href="/equips/<%= rating %>/<%= card %>/edit">Edit</a>|
-            <a href="/equips/<%= rating %>/<%= card %>/remove" onClick="return checkMe()">Remove</a>
+            <a href="/equips/<%= rating %>/<%= card['name'] %>/edit">Edit</a>|
+            <a href="/equips/<%= rating %>/<%= card['name'] %>/remove" onClick="return checkMe()">Remove</a>
           </div>
           <% end %>
 
-            <a href="/equips/<%= rating %>/<%= card %>">
-              <img class="sc_index_pic" src="<%= card_details['pic'] %>" alt="<%= card %>"/>
+            <a href="/equips/<%= rating %>/<%= card['name'] %>">
+              <img class="sc_index_pic" src="<%= card['pic1'] %>" alt="<%= card['pic1'] %>"/>
             </a>
-          <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
+          <h6 class="sc-profile-title"><%= upcase_name(card['name']) %></h6>
+      </div>
+  <% end %>
+  </div>
+</div>
+<div class="container static-container">
+    <div class="row justify-content-center">
+      <% @soulcards2.each do |card| %>
+        <% rating = card["stars"] + "stars" %>
+      <div class="col-* sc-grid-cols">
+          <% if session[:username] %>
+          <div class="edit-remove-buttons">
+            <a href="/equips/<%= rating %>/<%= card['name'] %>/edit">Edit</a>|
+            <a href="/equips/<%= rating %>/<%= card['name'] %>/remove" onClick="return checkMe()">Remove</a>
+          </div>
+          <% end %>
+
+            <a href="/equips/<%= rating %>/<%= card['name'] %>">
+              <img class="sc_index_pic" src="<%= card['pic1'] %>" alt="<%= card['pic1'] %>"/>
+            </a>
+          <h6 class="sc-profile-title"><%= upcase_name(card['name']) %></h6>
       </div>
   <% end %>
   </div>

@@ -5,23 +5,29 @@
         <label for="sc_name">Enter a unit name:</label>
       </dt>
       <dd>
+        <h5>Original</h5><input class="content" type="hidden" name="original_unit_name" placeholder="<%= @card_name.downcase %>" type="text" value="<%= @card_name.downcase %>">
         <input class="content" name="sc_name" placeholder="" type="text"  value="<%= params[:sc_name] %>" required>
-        <input name="edited" type="checkbox" required>
+      </dd>
+      <dd>
+        Enable this card?(Makes it visible)<input type="hidden" name="enabled" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
       </dd>
       <% @current_card.each do |key, value| %>
+      <% next if key == 'enabled'%>
+      <% if key == 'id' %>
+        <input class="content" type="hidden" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
+        <% next %>
+      <% end %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
       <dd>
-        <% if key == "pic" %>
+        <% if key == "pic1" %>
           <label for="upload"><em>upload a file or enter filename (from server)</em></label>
           <input type="file" name="file" value="upload">
           <input class="content" name="<%= key %>" placeholder="" type="text" value="<%= params[key.to_sym] || value %>">
 
         <% elsif special_key?(key) || key == 'stars'%>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
-        <% elsif key == "index" %>
-         <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

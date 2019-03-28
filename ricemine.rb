@@ -46,7 +46,7 @@ helpers do
   end
 
   def special_key?(key)
-    %w[pic pic1 pic2 pic3 index].include?(key.to_s)
+    %w[pic pic1 pic2 pic3 pic4].include?(key.to_s)
   end
 
   def format_image_from_tier(ratings)
@@ -268,11 +268,12 @@ end
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
   # units_by_stars = nil
-  units_by_stars = unit_info
-   # unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
 
-  return group_by_catagory_tier(units_by_stars, catagory_vals) if type == 'tier'
-
+  if catagory_vals == 'equips'
+    unit_info = unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
+  end
+  return group_by_catagory_tier(unit_info, catagory_vals) if type == 'tier'
+  unit_info
 end
 
 def get_unit_or_sc_from_keys(keys)
@@ -328,8 +329,11 @@ def unit_or_sc_exist?(type, name)
            @units
          else
            @soulcards
+           data = PG.connect(dbname: 'dcdb')
+           data.exec("SELECT * FROM soulcards
+           RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE name = '#{name}'")
          end
-  if data.include?(name) == false
+  if data.first['name'].include?(name) == false
     session[:message] = "#{name} doesn't exist."
     redirect '/'
   end
@@ -400,14 +404,32 @@ get '/search/' do
       RIGHT OUTER JOIN substats ON substats.unit_id = units.id
       RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
       WHERE leader LIKE '%#{keys}%' OR auto LIKE '%#{keys}%' OR tap LIKE '%#{keys}%' OR slide LIKE '%#{keys}%' OR drive LIKE '%#{keys}%' OR notes LIKE '%#{keys}%' ORDER BY name")
+
   # @units = get_unit_or_sc_from_keys(keys)[0]
-  @soulcards = get_unit_or_sc_from_keys(keys)[1]
+  # @soulcards = get_unit_or_sc_from_keys(keys)[1]
+
+    @soulcards = database.exec("SELECT name, stars, pic1 FROM soulcards
+     RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE name LIKE '%#{keys}%'")
+
+     @soulcards2 = database.exec("SELECT name, stars, pic1 FROM soulcards RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE LOWER(passive) LIKE '%#{keys}%'")
+
   erb :search
 end
 
 get '/' do
-  @units = @units.to_a.last(3).to_h
-  @soulcards = @soulcards.to_a.last(3).to_h
+  data = PG.connect(dbname: 'dcdb')
+
+  # @units = @units.to_a.last(3).to_h
+  # @soulcards = @soulcards.to_a.last(3).to_h
+
+  @new_units = data.exec("SELECT name, stars, pic1, created_on FROM units
+   RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id
+   RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id ORDER BY created_on DESC LIMIT 4")
+
+  @new_soulcards = data.exec("SELECT name, stars, pic1 FROM soulcards
+   RIGHT OUTER JOIN scstats ON sc_id = soulcards.id ORDER BY created_on DESC LIMIT 4")
+
+
   erb :home
 end
 
@@ -450,7 +472,10 @@ end
 
 get '/equips/new_sc' do
   @card = @new_sc
-  @max_index_val = get_max_index_number(@soulcards)
+  @data = PG.connect(dbname: "dcdb")
+  result = @data.exec("SELECT pic1, stars, stats, passive FROM soulcards RIGHT OUTER JOIN scstats on sc_id = soulcards.id")
+  @new_profile = result
+
   erb :new_sc
 end
 
@@ -469,25 +494,21 @@ end
 # end
 
 get '/:catagory/:star_rating' do
-  star_rating = params[:star_rating]
+  star_rating = params[:star_rating][0]
 
-  if ![5, 4, 3].include?(star_rating[0].to_i)
+  if ![5, 4, 3].include?(star_rating.to_i)
     session[:message] = 'There are no units or soulcards by that tier!'
     redirect '/'
   end
 
-  if params[:catagory] == 'childs'
-    unit_info = @units
-    @catagory = 'childs'
-    @units = sort_by_given_info(unit_info, params[:star_rating])
+  if params[:catagory] == 'equips'
+    data = PG.connect(dbname: "dcdb")
 
-
-    erb :index_child
-  else
-    unit_info = @soulcards
-    @catagory = 'equips'
-    @cards = sort_by_given_info(unit_info, params[:star_rating])
+    @cards = data.exec("SELECT name, pic1, stars FROM soulcards
+     RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE stars = '#{star_rating}' AND enabled = 't'")
     erb :index_sc
+  else
+    redirect '/'
   end
 end
 
@@ -508,7 +529,7 @@ get '/childs/:star_rating/:unit_name/edit' do
   # @test = reload_db.fields
   name = params[:unit_name]
   @unit_name = name
-  @current_unit = @units[name]
+  # @current_unit = @units[name]
 
   data = PG.connect(dbname: "dcdb")
   current_id = data.exec("SELECT * FROM units WHERE name = '#{name}';")
@@ -546,9 +567,16 @@ get '/childs/:star_rating/:unit_name' do
 end
 
 #shows a list of all units in the database.
-get '/unit_index' do
+get '/db_index' do
   database = PG.connect(dbname: 'dcdb')
-  @unit_index = database.exec("SELECT id, name, stars, enabled, created_on FROM units RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id ORDER BY id ASC, name DESC")
+  @enabled_index = database.exec("SELECT id, name, stars, enabled, created_on FROM units RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id
+  WHERE enabled = 't' ORDER BY id ASC, name DESC")
+
+  @disabled_sc = database.exec("SELECT id, name, stars, enabled, created_on FROM soulcards RIGHT OUTER JOIN scstats ON scstats.sc_id = soulcards.id
+  WHERE enabled = 'f' ORDER BY id ASC, name DESC")
+
+  @disabled_index = database.exec("SELECT id, name, stars, enabled, created_on FROM units RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id
+  WHERE enabled = 'f' ORDER BY id ASC, name DESC")
 
   erb :unit_index
 end
@@ -566,8 +594,11 @@ end
 get '/equips/:star_rating/:sc_name' do
   name = params[:sc_name]
   unit_or_sc_exist?('soulcard', name)
-  @sc_name = name
-  @current_card = @soulcards[name]
+
+  data = PG.connect(dbname: 'dcdb')
+  @current_card = data.exec("SELECT name, pic1, stars, stats, passive FROM soulcards
+  RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE name = '#{name}'")
+  @sc_name = @current_card[0]["name"]
   erb :view_sc
 end
 
@@ -575,9 +606,25 @@ get '/equips/:star_rating/:sc_name/edit' do
   require_user_signin
   name = params[:sc_name]
   @card_name = name
-  @current_card = @soulcards[name]
+  # @current_card = @soulcards[name]  # needed to migrate data from yml to db
+  # current_id = data.exec("SELECT * FROM units WHERE name = '#{name}';")
+  # @new_id = current_id.first['id'].to_i
+
+  data = PG.connect(dbname: "dcdb")
+  @current_card = data.exec("SELECT id, enabled, pic1, stars, stats, passive FROM soulcards
+   RIGHT OUTER JOIN scstats ON sc_id = soulcards.id
+   WHERE name = '#{name}'").first
+   @new_id = @current_card['id']
+
   erb :edit_sc
 end
+# get '/equips/:star_rating/:sc_name/edit' do
+#   require_user_signin
+#   name = params[:sc_name]
+#   @card_name = name
+#   @current_card = @soulcards[name]
+#   erb :edit_sc
+# end
 
 get '/childs/:star_rating/sort_by/:type' do
   @star_rating = params[:star_rating]
@@ -637,48 +684,100 @@ end
 
 post '/equips/new_sc' do
   require_user_signin
-  card_data = @soulcards
+  # card_data = @soulcards
 
-  @current_unit = card_data[params[:sc_name]]
-  @max_index_val = get_max_index_number(card_data)
+  # @current_unit = card_data[params[:sc_name]]
 
-  data = card_data
+  original_name = params[:original_unit_name]
+  unit_id = params['id'].to_i
   name = params[:sc_name].downcase
-  index = params[:index].to_i
 
-  original_card = card_data.select do |unit, info|
-    unit if index == info['index'].to_i
-  end
+#change this params[:pic] to params[:pic1] after old data had migrated
+  pname = create_file_from_upload(params[:filepic1], params[:pic1], 'public/images/sc')
 
-  pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
+  data = PG.connect(dbname: "dcdb")
+  unit_found = data.exec("SELECT * FROM soulcards WHERE name = '#{name}'").first
 
-  if card_data.include?(name) && index != card_data[name]['index']
-    session[:message] =
-      'A card by that name already exists. Please create a different card.'
-    status 422
+if data.exec("SELECT * FROM soulcards WHERE id = '#{unit_id}'").first.nil? == true
 
-    if params['edited']
-      temp_name = get_unit_name(card_data, index)
-      redirect "/equips/#{params[:stars]}stars/#{temp_name}/edit"
-    else
-      redirect '/equips/new_sc'
-    end
+    check_enabled = (params[:enabled] == '1') ? 't' : 'f'
+
+    data.exec("INSERT INTO soulcards (name, enabled) VALUES ('#{name}', '#{check_enabled}')")
+    reload_db
+
+    current_max_id = data.exec("SELECT * FROM soulcards WHERE name = '#{name}' ORDER BY id DESC LIMIT 1")
+    new_id = current_max_id.first['id'].to_i
+
+
+    data.exec("INSERT INTO scstats (sc_id, pic1, stars, stats, passive) VALUES
+    ('#{new_id}', '#{pname}', '#{params[:stars]}', '#{params[:stats]}', '#{params[:passive]}')")
+
 
   else
-    data.delete(original_card.keys.first)
-    data[name] = {}
+
+    check_enabled = (params[:enabled].to_i == 1) ? 't' : 'f'
+
+    data.exec("UPDATE soulcards SET name = '#{name}', enabled = '#{check_enabled}' WHERE name = '#{original_name}' AND id = '#{unit_id}'")
+    reload_db
+    #
+    # current_max_id = data.exec("SELECT id FROM soulcards WHERE name = '#{name}'")
+    # new_id = current_max_id.first['id'].to_i
+
+    data.exec("UPDATE scstats SET pic1 = '#{pname}', stars = '#{params[:stars]}', stats = '#{params[:stats]}', passive = '#{check_enabled}' WHERE sc_id = '#{unit_id}'")
+    # reload_db
   end
+    reload_db
 
-  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
-  data[name]['stars'] = params[:stars]
-  data[name]['stats'] = params[:stats]
-  data[name]['passive'] = params[:passive]
-  data[name]['index'] = index
 
-  File.write('data/sc/soul_cards.yml', YAML.dump(data))
+  # File.write('data/sc/soul_cards.yml', YAML.dump(data))
   session[:message] = "New Soulcard called #{name.upcase} has been created."
   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
+
+# post '/equips/new_sc' do
+#   require_user_signin
+#   card_data = @soulcards
+#
+#   @current_unit = card_data[params[:sc_name]]
+#   @max_index_val = get_max_index_number(card_data)
+#
+#   data = card_data
+#   name = params[:sc_name].downcase
+#   index = params[:index].to_i
+#
+#   original_card = card_data.select do |unit, info|
+#     unit if index == info['index'].to_i
+#   end
+#
+#   pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
+#
+#   if card_data.include?(name) && index != card_data[name]['index']
+#     session[:message] =
+#       'A card by that name already exists. Please create a different card.'
+#     status 422
+#
+#     if params['edited']
+#       temp_name = get_unit_name(card_data, index)
+#       redirect "/equips/#{params[:stars]}stars/#{temp_name}/edit"
+#     else
+#       redirect '/equips/new_sc'
+#     end
+#
+#   else
+#     data.delete(original_card.keys.first)
+#     data[name] = {}
+#   end
+#
+#   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
+#   data[name]['stars'] = params[:stars]
+#   data[name]['stats'] = params[:stats]
+#   data[name]['passive'] = params[:passive]
+#   data[name]['index'] = index
+#
+#   File.write('data/sc/soul_cards.yml', YAML.dump(data))
+#   session[:message] = "New Soulcard called #{name.upcase} has been created."
+#   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
+# end
 
 # Old post ## REMOVE when finished
 # post '/new_unit' do
@@ -773,26 +872,29 @@ end
 post '/new_unit' do
   unit_data = @units
 
-  @current_unit = unit_data[params[:unit_name]]
-  @max_index_val = get_max_index_number(unit_data)
+  # @current_unit = unit_data[params[:unit_name]]
+  # @max_index_val = get_max_index_number(unit_data)
 
-  data = unit_data
+  # data = unit_data
+  original_name = params[:original_unit_name]
   name = params[:unit_name].downcase
-
+  unit_id = params['id'].to_i
   data = PG.connect(dbname: "dcdb")
-  unit_found = data.exec("SELECT * FROM units WHERE name = '#{name}'").first
 
   pname1 = create_file_from_upload(params[:filepic1], params[:pic1], 'public/images')
   pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
   pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')
   pname4 = create_file_from_upload(params[:filepic4], params[:pic4], 'public/images')
 
-  if unit_found.nil?
+  check_enabled = (params[:enabled].to_i == 1) ? 't' : 'f'
 
-    data.exec("INSERT INTO units (name) VALUES ('#{name}')")
+# this checks if there is a existing unit @ the specific ID
+  if data.exec("SELECT * FROM units WHERE id = '#{unit_id}'").first.nil? == true
+
+    data.exec("INSERT INTO units (name, enabled) VALUES ('#{name}', '#{check_enabled}')")
     reload_db
 
-    current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
+    current_max_id = data.exec("SELECT id FROM units where name = '#{name}' ORDER BY id DESC LIMIT 1")
     new_id = current_max_id.first['id'].to_i
 
     if params[:element] == 'grass'
@@ -809,25 +911,23 @@ post '/new_unit' do
     data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES
     ('#{new_id}', '#{pname1}', '#{pname2}', '#{pname3}', '#{pname4}')")
     reload_db
-  else
 
-    data.exec("UPDATE units SET name = '#{name}', enabled = '#{params[:enabled]}' WHERE name = '#{name}'")
+else
+# IF there is a unit then it is updated by using the original name and it's ID
+    data.exec("UPDATE units SET name = '#{name}', enabled = '#{check_enabled}' WHERE name = '#{original_name}' AND id = '#{unit_id}'")
     reload_db
-
-    current_max_id = data.exec("SELECT id FROM units WHERE name = '#{name}'")
-    new_id = current_max_id.first['id'].to_i
 
     if params[:element] == 'grass'
       element = 'earth'
     else
       element = params[:element]
     end
-    data.exec("UPDATE mainstats SET stars = '#{params[:stars]}', type = '#{params[:type]}', element = '#{element}', tier = '#{params[:tier]}' WHERE unit_id = '#{new_id}'")
+    data.exec("UPDATE mainstats SET stars = '#{params[:stars]}', type = '#{params[:type]}', element = '#{element}', tier = '#{params[:tier]}' WHERE unit_id = #{unit_id}")
     # reload_db
 
-    data.exec("UPDATE substats SET leader = '#{params[:leader]}', auto = '#{params[:auto]}', tap = '#{params[:tap]}', slide = '#{params[:slide]}', drive = '#{params[:drive]}', notes = '#{params[:notes]}' WHERE unit_id = '#{new_id}'")
+    data.exec("UPDATE substats SET leader = '#{params[:leader]}', auto = '#{params[:auto]}', tap = '#{params[:tap]}', slide = '#{params[:slide]}', drive = '#{params[:drive]}', notes = '#{params[:notes]}' WHERE unit_id = #{unit_id}")
 
-    data.exec("UPDATE profilepics SET pic1 = '#{pname1}', pic2 = '#{pname2}', pic3 = '#{pname3}', pic4 = '#{pname4}' WHERE unit_id = '#{new_id}'")
+    data.exec("UPDATE profilepics SET pic1 = '#{pname1}', pic2 = '#{pname2}', pic3 = '#{pname3}', pic4 = '#{pname4}' WHERE unit_id = #{unit_id}")
     reload_db
   end
 
@@ -908,14 +1008,27 @@ get '/equips/:star_rating/:sc_name/remove' do
   card = params[:sc_name]
   cards_info = @soulcards
 
-  if cards_info.include?(params[:sc_name]) == false
+  data = PG.connect(dbname: "dcdb")
+  card_found = data.exec("SELECT * FROM soulcards WHERE name = '#{card}'").first
+  if card_found.nil?
     status 422
-    session[:message] = "That unit doesn't exist."
+    session[:message] = "That soulcard doesn't exist."
   else
-    cards_info.delete(card)
-    File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
-    session[:message] = "#{card.upcase} SoulCard successfully deleted."
+
+    data.exec("DELETE FROM soulcards WHERE name = '#{card}'")
+    # units_info.delete(unit)
+    # File.write('data/unit_details.yml', YAML.dump(units_info))
+    session[:message] = "#{card.upcase} unit was successfully deleted."
   end
+
+  # if cards_info.include?(params[:sc_name]) == false
+  #   status 422
+  #   session[:message] = "That unit doesn't exist."
+  # else
+  #   cards_info.delete(card)
+  #   File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
+  #   session[:message] = "#{card.upcase} SoulCard successfully deleted."
+  # end
   redirect '/'
 end
 

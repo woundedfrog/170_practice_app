@@ -310,6 +310,10 @@ label {
 .file-list-box {
 	border: 1px solid black;
 }
+.file-list-box img {
+	border: 1px solid black;
+	width: 50%
+}
 
 input, textarea {
 	background-color: lightgrey;

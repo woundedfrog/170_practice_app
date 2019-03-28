@@ -5,13 +5,18 @@
         <label for="unit_name">Enter a unit name:</label>
       </dt>
       <dd>
-        <input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
-
-        <!-- <input name="edited" type="checkbox" required> -->
+        <h5>Original</h5><input class="content" type="hidden" name="original_unit_name" placeholder="<%= @unit_name.downcase %>" type="text" value="<%= @unit_name.downcase %>">
+        <h5>New</h5><input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
       </dd>
-
+      <dd>
+        Enable this unit?(Makes it visible)<input type="hidden" name="enabled" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+      </dd>
       <% @current_unit.each do |col_name, value| %>
-        <% next if col_name == 'id' || col_name == 'name' %>
+        <% next if col_name == 'name' || col_name == 'enabled'%>
+        <% if col_name == 'id' %>
+          <input class="content" type="hidden" name="<%= col_name %>" placeholder="" type="text"  value="<%= value %>">
+          <% next %>
+        <% end %>
       <dt>
         <label for="<% col_name %>"><%= col_name.capitalize %> info:</label>
       </dt>
@@ -25,8 +30,8 @@
         <% end %>
       </dd>
       <dd>
-
         <% if special_key?(col_name) || short_stat_key?(col_name) %>
+        <% next if col_name.include?('pic') %>
           <% if col_name == "type" %>
             <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= params[col_name.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
           <% elsif col_name == "element" %>
@@ -34,10 +39,8 @@
           <% else %>
             <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= params[col_name.to_sym] || value %>">
           <% end %>
-        <% elsif col_name == "index" || col_name == 'date' %>
-         <input class="content" name="<%= col_name %>" placeholder="" type="text"  value=" <%= params[col_name.to_sym] || value %>">
-         <% elsif ['pic2', 'pic3', 'pic4'].include?(col_name) %>
-          <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= value || '' %>">
+        <% elsif col_name == 'created_on' %>
+         <input class="content" name="<%= col_name %>" placeholder="" type="text"  value="<%= value %>" disabled>
         <% else %>
           <textarea class="content" name="<%= col_name %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

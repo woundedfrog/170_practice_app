@@ -8,7 +8,9 @@
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
       </dd>
-
+      <dd>
+        Enable this unit?(Makes it visible)<input type="hidden" name="enabled" value="0"><input type="checkbox" onclick="this.previousSibling.value=1-this.previousSibling.value">
+      </dd>
         <% @profile_pic_table.fields.each do |col_name| %>
           <% next if col_name == 'unit_id' %>
           <% if col_name.include?('pic') %>
