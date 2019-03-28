@@ -11,7 +11,7 @@
   <% end %>
   </div>
 
-  <h3><%= upcase_name(@unit['name']) %></h3>
+  <h3><%= upcase_name(@unit[0]['name']) %></h3>
 
   <div class="row profile-row-container">
     <div class="col- profile-pic-container mobile">
@@ -67,7 +67,7 @@
 
     <div class="profile-stat-container">
       <h5 class="card-title">Date:</h5>
-      <p>Date added(Tokyo): <%= @unit['date'] %></p>
+      <p>Date added(Tokyo): <%= @unit[0]['date'] %></p>
     </div>
 
   </div>
