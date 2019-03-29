@@ -6,6 +6,7 @@ require 'yaml'
 require 'fileutils'
 require 'bcrypt'
 require 'pg'
+require 'pry'
 
 def reload_db
   @data = PG.connect(dbname: "dcdb")
@@ -744,7 +745,7 @@ post '/new_unit' do
   name = params[:unit_name].downcase
   unit_id = params['id'].to_i
   data = PG.connect(dbname: "dcdb")
-
+  
   pname1 = create_file_from_upload(params[:filepic1], params[:pic1], 'public/images')
   pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
   pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')

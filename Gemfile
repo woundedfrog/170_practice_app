@@ -13,3 +13,4 @@ gem "bcrypt"
 gem 'rsense'
 gem 'rake'
 gem 'pg'
+gem 'pry'
