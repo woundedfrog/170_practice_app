@@ -376,7 +376,7 @@ get '/search/' do
   RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
   RIGHT OUTER JOIN substats ON substats.unit_id = units.id
   RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
-  WHERE name LIKE '%#{keys}%' ORDER BY name")
+  WHERE name LIKE $$%#{keys}%$$ ORDER BY name")
 
   @exclude_list = @units1.map {|row| row['name']}
   @units2 =
@@ -385,18 +385,19 @@ get '/search/' do
   RIGHT OUTER JOIN mainstats on mainstats.unit_id = units.id
   RIGHT OUTER JOIN substats ON substats.unit_id = units.id
   RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id
-  WHERE leader LIKE '%#{keys}%' OR auto LIKE '%#{keys}%' OR tap LIKE '%#{keys}%' OR slide LIKE '%#{keys}%' OR drive LIKE '%#{keys}%' OR notes LIKE '%#{keys}%' ORDER BY name")
+  WHERE leader LIKE $$%#{keys}%$$ OR auto LIKE $$%#{keys}%$$ OR tap LIKE $$%#{keys}%$$ OR slide LIKE $$%#{keys}%$$ OR drive LIKE $$%#{keys}%$$ OR notes LIKE $$%#{keys}%$$ ORDER BY name")
 
   @soulcards = database.exec("SELECT name, stars, pic1 FROM soulcards
-  RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE name LIKE '%#{keys}%'")
+  RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE name LIKE $$%#{keys}%$$")
 
-  @soulcards2 = database.exec("SELECT name, stars, pic1 FROM soulcards RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE LOWER(passive) LIKE '%#{keys}%'")
+  @soulcards2 = database.exec("SELECT name, stars, pic1 FROM soulcards RIGHT OUTER JOIN scstats ON sc_id = soulcards.id WHERE LOWER(passive) LIKE $$%#{keys}%$$")
 
   erb :search
 end
 
 get '/' do
   data = PG.connect(dbname: 'dcdb')
+
   @new_units = data.exec("SELECT name, stars, pic1, created_on FROM units
    RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id
    RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id ORDER BY created_on DESC, id DESC LIMIT 4")
@@ -595,6 +596,10 @@ end
 get '/show_unit_details' do
   @unit_details = @units
   @sc_details = @soulcards
+
+  db = PG.connect(dbname: 'dcdb')
+  @unit_details = db.exec("SELECT name AS total FROM units ORDER BY name")
+  @sc_details = db.exec("SELECT name AS total FROM soulcards ORDER BY name")
   erb :show_unit_details
 end
 
@@ -765,7 +770,7 @@ post '/new_unit' do
     ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{element}', '#{params[:tier]}')")
 
     data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
-    ('#{new_id}', '#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}', '#{params[:notes]}')")
+    ('#{new_id}', $$#{params[:leader]}$$, $$#{params[:auto]}$$, $$#{params[:tap]}$$, $$#{params[:slide]}$$, $$#{params[:drive]}$$, $$#{params[:notes]}$$)")
 
     data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES
     ('#{new_id}', '#{pname1}', '#{pname2}', '#{pname3}', '#{pname4}')")
@@ -784,7 +789,7 @@ else
     data.exec("UPDATE mainstats SET stars = '#{params[:stars]}', type = '#{params[:type]}', element = '#{element}', tier = '#{params[:tier]}' WHERE unit_id = #{unit_id}")
     # reload_db
 
-    data.exec("UPDATE substats SET leader = '#{params[:leader]}', auto = '#{params[:auto]}', tap = '#{params[:tap]}', slide = '#{params[:slide]}', drive = '#{params[:drive]}', notes = '#{params[:notes]}' WHERE unit_id = #{unit_id}")
+    data.exec("UPDATE substats SET leader = $$#{params[:leader]}$$, auto = $$#{params[:auto]}$$, tap = $$#{params[:tap]}$$, slide = $$#{params[:slide]}$$, drive = $$#{params[:drive]}$$, notes = $$#{params[:notes]}$$ WHERE unit_id = #{unit_id}")
 
     data.exec("UPDATE profilepics SET pic1 = '#{pname1}', pic2 = '#{pname2}', pic3 = '#{pname3}', pic4 = '#{pname4}' WHERE unit_id = #{unit_id}")
     reload_db
