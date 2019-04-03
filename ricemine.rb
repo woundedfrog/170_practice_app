@@ -10,9 +10,10 @@ require 'pry'
 
 def reload_db
   @data = PG.connect(dbname: "dcdb")
-#   @result = @data.exec("SELECT name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id
-# RIGHT OUTER JOIN substats ON substats.unit_id = units.id;
-# ")
+  #needed for creating new units/cards
+  @result = @data.exec("SELECT name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id
+RIGHT OUTER JOIN substats ON substats.unit_id = units.id;")
+
 end
 
 configure do
