@@ -10,9 +10,9 @@ require 'pry'
 
 def reload_db
   @data = PG.connect(dbname: "dcdb")
-  @result = @data.exec("SELECT name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id
-RIGHT OUTER JOIN substats ON substats.unit_id = units.id;
-")
+#   @result = @data.exec("SELECT name, stars, type, element, tier, leader, auto, tap, slide, drive, notes FROM units RIGHT OUTER JOIN mainstats on unit_id = units.id
+# RIGHT OUTER JOIN substats ON substats.unit_id = units.id;
+# ")
 end
 
 configure do
@@ -31,6 +31,67 @@ before do
   @new_unit = load_file_data('new_unit')['new_unit']
   @new_sc = load_file_data('new_sc')['new_sc']
   reload_db
+end
+
+def convert_yml_to_sql
+  # return
+  # arr = []
+  # data = PG.connect(dbname: 'globaldc')  #this is the database it will pour the data into. BE CAREFUL
+  # @units.first(50).each_with_index do |unit, idx|
+  #
+  #   name = unit.first
+  #   unit = unit.last
+  #
+  # done =  data.exec("SELECT * FROM units WHERE name = $$#{name}$$").ntuples > 0
+  # next if done
+
+  #     data.exec("INSERT INTO units (name, enabled) VALUES ($$#{name}$$, true)")
+  #     data = PG.connect(dbname: 'globaldc')
+  #     unit_id = data.exec("SELECT id FROM units WHERE name = $$#{name}$$").first['id']
+  #   if unit['element'] == 'grass'
+  #     element = 'earth'
+  #   else
+  #     element = unit['element']
+  #   end
+  #         data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES (#{unit_id.to_i}, '#{unit['stars']}', '#{unit['type']}', '#{element}', '#{unit['tier']}')")
+  #         data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
+  #         (#{unit_id.to_i}, $$#{unit['leader']}$$, $$#{unit['auto']}$$, $$#{unit['tap']}$$, $$#{unit['slide']}$$, $$#{unit['drive']}$$, $$#{unit['notes']}$$)")
+  #   data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES (#{unit_id.to_i}, '#{unit['pic']}', '#{unit['pic2']}', '#{unit['pic3']}', 'emptyunit0.png')")
+  #
+  #
+  # end
+  #
+  # data.close
+#  SPLITS THE LOAD. Hide the part below, then unhide it and hide top part then refresh the page ELSE connects are too many.
+
+  # data = PG.connect(dbname: 'globaldc')
+  # @units.drop(50).each_with_index do |unit, idx|
+  #
+  #   name = unit.first
+  #   unit = unit.last
+  #
+  #   # arr << unit['stars']
+  #   # arr << unit['tier']
+  #   # arr << unit['element']
+  #   # arr << unit['type']
+  #
+  # done =  data.exec("SELECT * FROM units WHERE name = $$#{name}$$").ntuples > 0
+  # next if done
+  #     data.exec("INSERT INTO units (name, enabled) VALUES ($$#{name}$$, true)")
+  #     data = PG.connect(dbname: 'globaldc')
+  #     unit_id = data.exec("SELECT id FROM units WHERE name = $$#{name}$$").first['id']
+  #   if unit['element'] == 'grass'
+  #     element = 'earth'
+  #   else
+  #     element = unit['element']
+  #   end
+  #         data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES (#{unit_id.to_i}, '#{unit['stars']}', '#{unit['type']}', '#{element}', '#{unit['tier']}')")
+  #         data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
+  #         (#{unit_id.to_i}, $$#{unit['leader']}$$, $$#{unit['auto']}$$, $$#{unit['tap']}$$, $$#{unit['slide']}$$, $$#{unit['drive']}$$, $$#{unit['notes']}$$)")
+  #   data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES (#{unit_id.to_i}, '#{unit['pic']}', '#{unit['pic2']}', '#{unit['pic3']}', 'emptyunit0.png')")
+  #
+  #
+  # end
 end
 
 helpers do
@@ -397,6 +458,13 @@ get '/search/' do
 end
 
 get '/' do
+  convert_yml_to_sql  #don't need to run this unless you want to convert the databases.
+
+  # data = PG.connect(dbname: 'dcdb')
+  # @units = data.exec("SELECT name, stars, pic1, created_on FROM units
+  #  RIGHT OUTER JOIN mainstats ON mainstats.unit_id = units.id
+  #  RIGHT OUTER JOIN profilepics ON profilepics.unit_id = units.id ORDER BY created_on DESC, id DESC LIMIT 4")
+
   data = PG.connect(dbname: 'dcdb')
 
   @new_units = data.exec("SELECT name, stars, pic1, created_on FROM units
@@ -745,7 +813,7 @@ post '/new_unit' do
   name = params[:unit_name].downcase
   unit_id = params['id'].to_i
   data = PG.connect(dbname: "dcdb")
-  
+
   pname1 = create_file_from_upload(params[:filepic1], params[:pic1], 'public/images')
   pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
   pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')
