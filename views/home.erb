@@ -28,8 +28,8 @@
               <a href="/childs/<%= rating %>/<%= unit['name'] %>/remove" onClick="return checkMe('<%= unit['name'] %>')">Remove</a>
             </div>
             <% end %>
-
-              <a href="/childs/<%= rating %>/<%= unit['name'] %>">
+<!-- remove LINKADDRESS from a link below -->
+              <a class="linkaddress" href="/childs/<%= rating %>/<%= unit['name'] %>">
                 <img class="profile_imgs" src="<%= unit['pic1'] %>" alt="<%= unit['pic1'].split("/").last %>"/>
                 </a>
             <div class="index-stat-pic-container">

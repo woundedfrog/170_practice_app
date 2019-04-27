@@ -738,51 +738,6 @@ if data.exec("SELECT * FROM soulcards WHERE id = '#{unit_id}'").first.nil? == tr
   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
-# post '/equips/new_sc' do
-#   require_user_signin
-#   card_data = @soulcards
-#
-#   @current_unit = card_data[params[:sc_name]]
-#   @max_index_val = get_max_index_number(card_data)
-#
-#   data = card_data
-#   name = params[:sc_name].downcase
-#   index = params[:index].to_i
-#
-#   original_card = card_data.select do |unit, info|
-#     unit if index == info['index'].to_i
-#   end
-#
-#   pname = create_file_from_upload(params[:file], params[:pic], 'public/images/sc')
-#
-#   if card_data.include?(name) && index != card_data[name]['index']
-#     session[:message] =
-#       'A card by that name already exists. Please create a different card.'
-#     status 422
-#
-#     if params['edited']
-#       temp_name = get_unit_name(card_data, index)
-#       redirect "/equips/#{params[:stars]}stars/#{temp_name}/edit"
-#     else
-#       redirect '/equips/new_sc'
-#     end
-#
-#   else
-#     data.delete(original_card.keys.first)
-#     data[name] = {}
-#   end
-#
-#   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
-#   data[name]['stars'] = params[:stars]
-#   data[name]['stats'] = params[:stats]
-#   data[name]['passive'] = params[:passive]
-#   data[name]['index'] = index
-#
-#   File.write('data/sc/soul_cards.yml', YAML.dump(data))
-#   session[:message] = "New Soulcard called #{name.upcase} has been created."
-#   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
-# end
-
 get '/childs/:star_rating/:unit_name/remove' do
   require_user_signin
   unit = params[:unit_name]
@@ -796,8 +751,6 @@ get '/childs/:star_rating/:unit_name/remove' do
   else
 
     data.exec("DELETE FROM units WHERE name = '#{unit}'")
-    # units_info.delete(unit)
-    # File.write('data/unit_details.yml', YAML.dump(units_info))
     session[:message] = "#{unit.upcase} unit was successfully deleted."
   end
   redirect '/'
@@ -806,10 +759,6 @@ end
 post '/new_unit' do
   unit_data = @units
 
-  # @current_unit = unit_data[params[:unit_name]]
-  # @max_index_val = get_max_index_number(unit_data)
-
-  # data = unit_data
   original_name = params[:original_unit_name]
   name = params[:unit_name].downcase
   unit_id = params['id'].to_i
@@ -868,74 +817,6 @@ else
   session[:message] = "New unit called #{name.upcase} has been created."
   redirect "/"
 end
-
-###### this is used to save and import from YML to sql
-# post '/new_unit2' do
-#   unit_data = @units
-#
-#   @current_unit = unit_data[params[:unit_name]]
-#   @max_index_val = get_max_index_number(unit_data)
-#
-#   data = unit_data
-#   name = params[:unit_name].downcase
-#
-#
-#   # pname1 = params[:pic1]
-#   #
-#   # if params[:pic2] == '' || params[:pic2].nil?
-#   #   pname2 = 'emptyunit0.png'
-#   # else
-#   #   pname2 = params[:pic2]
-#   # end
-#   # if params[:pic3] == '' || params[:pic3].nil?
-#   #   pname3 = 'emptyunit0.png'
-#   # else
-#   #   pname3 = params[:pic3]
-#   # end
-#   # if params[:pic4] == '' || params[:pic4].nil?
-#   #   pname4 = 'emptyunit0.png'
-#   # else
-#   #   pname4 = params[:pic4]
-#   # end
-#
-#     pname1 = create_file_from_upload(params[:filepic], params[:pic], 'public/images')
-#     pname2 = create_file_from_upload(params[:filepic2], params[:pic2], 'public/images')
-#     pname3 = create_file_from_upload(params[:filepic3], params[:pic3], 'public/images')
-#     pname4 = create_file_from_upload(params[:filepic4], params[:pic4], 'public/images')
-#   #
-#   # piname1 = pname1.include?('.') ? pname1 : (pname1 + '.png')
-#   # piname2 = pname2.include?('.') ? pname2 : (pname2 + '.png')
-#   # piname3 = pname3.include?('.') ? pname3 : (pname3 + '.png')
-#   # piname4 = pname4.include?('.') ? pname4 : (pname4 + '.png')
-#
-#   data = PG.connect(dbname: "dcdb")
-#
-#   data.exec("INSERT INTO units (name, created_on) VALUES ('#{name}', '#{params[:date]}')")
-#   reload_db
-#
-#   current_max_id = data.exec("SELECT * FROM units ORDER BY id DESC LIMIT 1")
-#   new_id = current_max_id.first['id'].to_i
-#
-#   if params[:element] == 'grass'
-#     element = 'earth'
-#   else
-#     element = params[:element]
-#   end
-#   data.exec("INSERT INTO mainstats (unit_id, stars, type, element, tier) VALUES
-#   ('#{new_id}', '#{params[:stars]}', '#{params[:type]}', '#{element}', '#{params[:tier]}')")
-#   # reload_db
-#
-#   data.exec("INSERT INTO substats (unit_id, leader, auto, tap, slide, drive, notes) VALUES
-#   ('#{new_id}', '#{params[:leader]}', '#{params[:auto]}', '#{params[:tap]}', '#{params[:slide]}', '#{params[:drive]}', '#{params[:notes]}')")
-#
-#   data.exec("INSERT INTO profilepics (unit_id, pic1, pic2, pic3, pic4) VALUES
-#   ('#{new_id}', '#{pname1}', '#{pname2}', '#{pname3}', '#{pname4}')")
-#   reload_db
-#
-#   session[:message] = "New unit called #{name.upcase} has been created."
-#   redirect "/test"
-# end
-########
 
 get '/equips/:star_rating/:sc_name/remove' do
   require_user_signin

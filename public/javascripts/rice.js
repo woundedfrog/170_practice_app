@@ -1,4 +1,7 @@
+
 $( document ).ready(function() {
+  // remove thsi popout hide method if needed.
+  $('#popout').hide();
 
   if($("#viewing_profile").length != 0 && window.innerWidth < 768) {
       $("header").hide();
@@ -11,6 +14,23 @@ $( document ).ready(function() {
       });
 
 };
+
+// THIS IS FOR THE POPUP info when clicking on a unit. Delete if not using;
+$(document).on('click', '.linkaddress', function(e){
+  $('#popout').show();
+  $('main').hide();
+    e.preventDefault();
+  var path = this.href;
+  $('#popout').load(path + ' .popping');
+});
+
+$(document).on('click', '.profile-row-container', function(e){
+$('#popout').hide();
+$('main').show();
+  $('#popout').find('.popping').remove('.popping');
+});
+
+//  ^^^^^ THIS IS FOR THE POPUP info when clicking on a unit. Delete if not using;
 
 $('p').each(function() {
   // checks if a <p> element has img imbedded.

@@ -12,6 +12,17 @@ body {
   margin-right: 0px;
 }
 
+#popout {
+	display: flex;
+	height: 100vh;
+	width: 100%;
+	background-color: rgb( 0,0,0, 0.7 );
+	position: absolute;
+	z-index: 100;
+	top: 0;
+	padding-top: 10px;
+	}
+
 /* main {
 	background-image: url("https://cache.desktopnexus.com/cropped-wallpapers/2341/2341156-1920x983-[DesktopNexus.com].jpg?st=zLfpALlg3yTGF4xNYt39TA&e=1553843043");
 	min-height: 500px;
@@ -428,6 +439,9 @@ textarea {
     margin-right: 0;
   }
 /* small display styling for nav  */
+	#popout {
+	padding-top: 50px;
+	}
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -503,6 +517,9 @@ textarea {
 			display: flex;
 			flex-wrap: wrap;
 		}
+		#popout {
+			padding-top: 120px;
+			}
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */
