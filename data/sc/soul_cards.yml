@@ -515,12 +515,6 @@ melty christmas:
     2310 at lvl50 +5."
   passive: "Restriction: Grass attacker. \r\n\r\nSlide skill critical damage +10%."
   index: 73
-go home club (ny):
-  pic: "/images/sc/kitakubunewyear.jpg"
-  stars: '5'
-  stats: "Defense: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
-  passive: "Restriction: none.\r\n\r\n9% of agility becomes HP."
-  index: 78
 dark town mistress:
   pic: "/images/sc/darktownleader.jpg"
   stars: '5'
@@ -556,10 +550,67 @@ treasure hunter:
     at lvl50 +5."
   passive: "Restriction: Fire attacker. \r\nIncrease Critical hit chance by 5%.\r\n"
   index: 74
-"(callthecops) tba":
+go-home club:
+  pic: "/images/sc/kitakubunewyear.jpg"
+  stars: '5'
+  stats: "Defense: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
+  passive: "Restriction: none. \r\n\r\nHP +9% of agility."
+  index: 78
+home-made chocolate:
   pic: "/images/sc/callthecops.jpg"
   stars: '5'
-  stats: "[stat]: [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\n[stat]:
-    [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: [if none write none]. \r\n\r\n[Write info]"
+  stats: "HP: 1090 at lvl0 / [lvl50 +5 number] at lvl50 +5.  \r\n\r\nDefense: 59 at
+    lvl0 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: None. \r\n9% of defense stat is added to critical hit chance.
+    \r\n"
   index: 77
+stray lamb:
+  pic: "/images/sc/straylamb.jpg"
+  stars: '5'
+  stats: "Attack: 520 at lvl0. \r\n\r\nCritical: 270 at lvl0."
+  passive: "Restriction: none. \r\n\r\nFinal Agility +250."
+  index: 79
+extreme carnage:
+  pic: "/images/sc/extremecarnage.jpg"
+  stars: '5'
+  stats: "Defense: 520 at lvl0. \r\nAgility: 270 at lvl0."
+  passive: "Restriction: none. \r\nFinal HP +1000."
+  index: 80
+lost dream:
+  pic: "/images/sc/lostdream.jpg"
+  stars: '5'
+  stats: "[stat]: 1100 at lvl0. \r\n[stat]: 600 at lvl0."
+  passive: "Restriction: Fire. \r\n\"Deadly poison\" damage +250."
+  index: 81
+glossy peach:
+  pic: "/images/sc/glossypeach.jpg"
+  stars: '5'
+  stats: "HP: 1020 at lvl0. \r\nDefense: 520 at lvl0."
+  passive: "Restriction: none. \r\n\r\nSustained recovery (HoT) increased by 125 at
+    lvl0."
+  index: 83
+fluffy melons:
+  pic: "/images/sc/fluffymelons.jpg"
+  stars: '5'
+  stats: "HP: 520 at lvl0. \r\n\r\nDefense: 1020 at lvl0."
+  passive: "Restriction: none. \r\n\r\nInstant recovery increased by 850 lvl0.\r\n"
+  index: 82
+ppp on stage:
+  pic: "/images/sc/ppponstage.jpg"
+  stars: '5'
+  stats: "HP: 1110 at lvl0. \r\n\r\nAttack: 610 at lvl0."
+  passive: "Restriction: none. \r\nDeal 350 Ignore Defense damage when using Slide
+    skill in PVE.\r\n"
+  index: 84
+onsen:
+  pic: "/images/sc/onsen.jpg"
+  stars: '5'
+  stats: "Defense: 610 at lvl0. \r\nAgility: 360 at lvl0."
+  passive: "Restriction: none. \r\nIn DevilRumble, heal 250HP when attacked."
+  index: 85
+moon-night spa:
+  pic: "/images/sc/moonnightspa.jpg"
+  stars: '5'
+  stats: "HP: 1110 at lvl0. \r\n\r\nAgility: 360 at lvl0."
+  passive: "Restriction: none. \r\nCurse avoidance rate increased by 30%."
+  index: 86

@@ -1,9 +1,9 @@
 <div id="viewing_profile"></div>
 
-<div class="container">
+<div class="container popping">
   <div  class="special-links">
     <% stars = @current_unit["stars"] %>
-    <button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
+    <button type="button" class="btn btn-success btn-xs back-button" id="back" onclick="goBack()">Go Back</button>
     <button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
   <% if session[:username] %>
     <a href="/childs/<%= stars %>stars/<%= @unit_name %>/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>

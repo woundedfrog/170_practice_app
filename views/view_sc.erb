@@ -1,6 +1,6 @@
 <div id="viewing_profile"></div>
 
-<div class="container">
+<div class="container popping">
 	<div  class="special-links">
 		<% stars = @current_card["stars"] %>
 			<button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
@@ -12,7 +12,7 @@
 	</div>
 
 	<h3><%= upcase_name(@sc_name) %></h3>
-	<div class="row">
+	<div class="row sc-container">
 		<div class="col-*">
 			<img class="mobile" id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
 		</div>

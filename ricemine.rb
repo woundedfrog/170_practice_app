@@ -367,8 +367,8 @@ get '/search/' do
 end
 
 get '/' do
-  @units = @units.to_a.last(3).to_h
-  @soulcards = @soulcards.to_a.last(3).to_h
+  @units = @units.to_a.last(5).to_h
+  @soulcards = @soulcards.to_a.last(4).to_h
   erb :home
 end
 
