@@ -7,6 +7,12 @@
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
       </dd>
+      <dt>
+        <label for="enabled">Check to make profile public:</label>
+      </dt>
+      <dd>
+        <input class="content" name="enabled" placeholder="" type="checkbox">
+      </dd>
       <% @new_unit_info.each do |key, value| %>
         <% next if key == 'date' %>
       <dt>

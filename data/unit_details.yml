@@ -19,6 +19,7 @@ khepri:
   notes: ''
   date: '2018-11-28'
   index: 34
+  enabled: 'true'
 astraeas:
   pic: "/images/astraea0.png"
   pic2: ''
@@ -40,6 +41,7 @@ astraeas:
   notes: ''
   date: '2018-11-28'
   index: 4
+  enabled: 'true'
 brownie:
   pic: "/images/brownie0.png"
   pic2: ''
@@ -60,6 +62,7 @@ brownie:
   notes: ''
   date: '2018-11-28'
   index: 8
+  enabled: 'true'
 buster lisa:
   pic: "/images/busterliza0.png"
   pic2: ''
@@ -80,6 +83,7 @@ buster lisa:
   notes: ''
   date: '2018-11-28'
   index: 9
+  enabled: 'true'
 calypso:
   pic: "/images/calypso0.png"
   pic2: ''
@@ -99,6 +103,7 @@ calypso:
   notes: ''
   date: '2018-11-28'
   index: 10
+  enabled: 'true'
 chun-li:
   pic: "/images/chunli0.png"
   pic2: ''
@@ -116,6 +121,7 @@ chun-li:
   notes: ''
   date: '2018-11-28'
   index: 13
+  enabled: 'true'
 hera:
   pic: "/images/hera0.png"
   pic2: "/images/hera1.png"
@@ -136,6 +142,7 @@ hera:
   notes: ''
   date: '2018-11-28'
   index: 25
+  enabled: 'true'
 hades:
   pic: "/images/hades0.png"
   pic2: "/images/hades1.png"
@@ -156,6 +163,7 @@ hades:
   notes: ''
   date: '2018-11-28'
   index: 24
+  enabled: 'true'
 eshu:
   pic: "/images/eshu0.png"
   pic2: ''
@@ -175,6 +183,7 @@ eshu:
   notes: ''
   date: '2018-11-28'
   index: 20
+  enabled: 'true'
 epona:
   pic: "/images/epona0.png"
   pic2: ''
@@ -194,6 +203,7 @@ epona:
   notes: ''
   date: '2018-11-28'
   index: 19
+  enabled: 'true'
 bari:
   pic: "/images/bari0.png"
   pic2: ''
@@ -215,6 +225,7 @@ bari:
   notes: ''
   date: '2018-11-28'
   index: 39
+  enabled: 'true'
 willow:
   pic: "/images/yanagi0.png"
   pic2: ''
@@ -235,6 +246,7 @@ willow:
   notes: ''
   date: '2018-11-28'
   index: 40
+  enabled: 'true'
 isolde:
   pic: "/images/isolde0.png"
   pic2: "/images/isolde1.png"
@@ -256,6 +268,7 @@ isolde:
   notes: ''
   date: '2018-11-28'
   index: 46
+  enabled: 'true'
 kouka:
   pic: "/images/kouka0.png"
   pic2: ''
@@ -276,6 +289,7 @@ kouka:
   notes: ''
   date: '2018-11-28'
   index: 50
+  enabled: 'true'
 orora:
   pic: "/images/4orora0.png"
   pic2: ''
@@ -294,6 +308,7 @@ orora:
   notes: ''
   date: '2018-11-28'
   index: 51
+  enabled: 'true'
 calchas:
   pic: "/images/4calchas0.png"
   pic2: ''
@@ -311,6 +326,7 @@ calchas:
   notes: ''
   date: '2018-11-28'
   index: 52
+  enabled: 'true'
 maiden detective:
   pic: "/images/4maidendetective0.png"
   pic2: ''
@@ -329,6 +345,7 @@ maiden detective:
   notes: ''
   date: '2018-11-28'
   index: 53
+  enabled: 'true'
 anemone:
   pic: "/images/anemone0.png"
   pic2: "/images/anemone1.png"
@@ -351,6 +368,7 @@ anemone:
   notes: ''
   date: '2018-11-28'
   index: 47
+  enabled: 'true'
 redcross:
   pic: "/images/redcross0.png"
   pic2: ''
@@ -372,6 +390,7 @@ redcross:
   notes: ''
   date: '2018-11-28'
   index: 55
+  enabled: 'true'
 maou davi:
   pic: "/images/maoudavi0.png"
   pic2: ''
@@ -391,6 +410,7 @@ maou davi:
   notes: ''
   date: '2018-11-28'
   index: 57
+  enabled: 'true'
 tirfing:
   pic: "/images/tyrfing0.png"
   pic2: ''
@@ -411,6 +431,7 @@ tirfing:
   notes: ''
   date: '2018-11-28'
   index: 60
+  enabled: 'true'
 verdel:
   pic: "/images/verdel0.png"
   pic2: ''
@@ -433,6 +454,7 @@ verdel:
   notes: ''
   date: '2018-11-28'
   index: 62
+  enabled: 'true'
 thanatos:
   pic: "/images/thanatos0.png"
   pic2: ''
@@ -451,6 +473,7 @@ thanatos:
   notes: ''
   date: '2018-11-28'
   index: 63
+  enabled: 'true'
 dark maat:
   pic: "/images/darkmaat0.png"
   pic2: ''
@@ -472,6 +495,7 @@ dark maat:
   notes: ''
   date: '2018-11-28'
   index: 35
+  enabled: 'true'
 ai:
   pic: "/images/ai0.png"
   pic2: ''
@@ -493,6 +517,7 @@ ai:
   notes: ''
   date: '2018-11-28'
   index: 3
+  enabled: 'true'
 hildr:
   pic: "/images/hildr0.png"
   pic2: ''
@@ -513,6 +538,7 @@ hildr:
   notes: ''
   date: '2018-11-28'
   index: 42
+  enabled: 'true'
 bikini davi:
   pic: "/images/bikinidavi0.png"
   pic2: "/images/bikinidavi1.png"
@@ -532,6 +558,7 @@ bikini davi:
   notes: ''
   date: '2018-11-28'
   index: 44
+  enabled: 'true'
 santa:
   pic: "/images/santa0.png"
   pic2: ''
@@ -550,6 +577,7 @@ santa:
   notes: ''
   date: '2018-11-28'
   index: 67
+  enabled: 'true'
 myrina:
   pic: "/images/myrina0.png"
   pic2: ''
@@ -569,6 +597,7 @@ myrina:
   notes: ''
   date: '2018-11-28'
   index: 71
+  enabled: 'true'
 snow miku:
   pic: "/images/snowmiku0.png"
   pic2: ''
@@ -589,6 +618,7 @@ snow miku:
   notes: ''
   date: '2018-11-28'
   index: 74
+  enabled: 'true'
 siren:
   pic: "/images/siren0.png"
   pic2: ''
@@ -606,6 +636,7 @@ siren:
   notes: ''
   date: '2018-11-28'
   index: 76
+  enabled: 'true'
 krampus:
   pic: "/images/krampus0.png"
   pic2: "/images/krampus1.png"
@@ -623,6 +654,7 @@ krampus:
   notes: ''
   date: '2018-11-28'
   index: 78
+  enabled: 'true'
 midas:
   pic: "/images/midas0.png"
   pic2: ''
@@ -641,6 +673,7 @@ midas:
   notes: ''
   date: '2018-11-28'
   index: 79
+  enabled: 'true'
 rednose:
   pic: "/images/4rednose0.png"
   pic2: ''
@@ -658,6 +691,7 @@ rednose:
   notes: ''
   date: '2018-11-28'
   index: 91
+  enabled: 'true'
 titania:
   pic: "/images/4titania0.png"
   pic2: ''
@@ -677,6 +711,7 @@ titania:
   notes: ''
   date: '2018-11-28'
   index: 93
+  enabled: 'true'
 ishtar:
   pic: "/images/4ishtar0.png"
   pic2: ''
@@ -693,6 +728,7 @@ ishtar:
   notes: ''
   date: '2018-11-28'
   index: 95
+  enabled: 'true'
 heracles:
   pic: "/images/4heracles0.png"
   pic2: ''
@@ -712,6 +748,7 @@ heracles:
   notes: ''
   date: '2018-11-28'
   index: 97
+  enabled: 'true'
 frigga:
   pic: "/images/4frigga0.png"
   pic2: ''
@@ -730,6 +767,7 @@ frigga:
   notes: ''
   date: '2018-11-28'
   index: 98
+  enabled: 'true'
 pomona:
   pic: "/images/4pomona0.png"
   pic2: ''
@@ -747,6 +785,7 @@ pomona:
   notes: ''
   date: '2018-11-28'
   index: 99
+  enabled: 'true'
 merlin:
   pic: "/images/4merlin0.png"
   pic2: ''
@@ -766,6 +805,7 @@ merlin:
   notes: ''
   date: '2018-11-28'
   index: 100
+  enabled: 'true'
 inanna:
   pic: "/images/4inanna0.png"
   pic2: ''
@@ -783,6 +823,7 @@ inanna:
   notes: ''
   date: '2018-11-28'
   index: 102
+  enabled: 'true'
 morrigu:
   pic: "/images/4morrigu0.png"
   pic2: ''
@@ -800,6 +841,7 @@ morrigu:
   notes: ''
   date: '2018-11-28'
   index: 103
+  enabled: 'true'
 persephone:
   pic: "/images/4persephone0.png"
   pic2: ''
@@ -818,6 +860,7 @@ persephone:
   notes: ''
   date: '2018-11-28'
   index: 105
+  enabled: 'true'
 aten:
   pic: "/images/4aten0.png"
   pic2: ''
@@ -836,6 +879,7 @@ aten:
   notes: ''
   date: '2018-11-28'
   index: 109
+  enabled: 'true'
 cybele:
   pic: "/images/4cybele0.png"
   pic2: ''
@@ -856,6 +900,7 @@ cybele:
   notes: ''
   date: '2018-11-28'
   index: 110
+  enabled: 'true'
 zelos:
   pic: "/images/4zelos0.png"
   pic2: ''
@@ -875,6 +920,7 @@ zelos:
   notes: ''
   date: '2018-11-28'
   index: 111
+  enabled: 'true'
 fenrir:
   pic: "/images/4fenrir0.png"
   pic2: ''
@@ -893,6 +939,7 @@ fenrir:
   notes: ''
   date: '2018-11-28'
   index: 112
+  enabled: 'true'
 hector:
   pic: "/images/4hector0.png"
   pic2: ''
@@ -911,6 +958,7 @@ hector:
   notes: ''
   date: '2018-11-28'
   index: 113
+  enabled: 'true'
 yuna:
   pic: "/images/4yuna0.png"
   pic2: ''
@@ -929,6 +977,7 @@ yuna:
   notes: ''
   date: '2018-11-28'
   index: 114
+  enabled: 'true'
 fortuna:
   pic: "/images/4fortuna0.png"
   pic2: ''
@@ -947,6 +996,7 @@ fortuna:
   notes: ''
   date: '2018-11-28'
   index: 117
+  enabled: 'true'
 lady:
   pic: "/images/4lady0.png"
   pic2: ''
@@ -965,6 +1015,7 @@ lady:
   notes: ''
   date: '2018-11-28'
   index: 118
+  enabled: 'true'
 el dorado:
   pic: "/images/4eldorado0.png"
   pic2: ''
@@ -982,6 +1033,7 @@ el dorado:
   notes: ''
   date: '2018-11-28'
   index: 119
+  enabled: 'true'
 yaga:
   pic: "/images/4yaga0.png"
   pic2: ''
@@ -999,6 +1051,7 @@ yaga:
   notes: ''
   date: '2018-11-28'
   index: 126
+  enabled: 'true'
 kirinus:
   pic: "/images/4kirinus0.png"
   pic2: ''
@@ -1017,6 +1070,7 @@ kirinus:
   notes: ''
   date: '2018-11-28'
   index: 127
+  enabled: 'true'
 maya:
   pic: "/images/4mayahuel0.png"
   pic2: ''
@@ -1036,6 +1090,7 @@ maya:
   notes: ''
   date: '2018-11-28'
   index: 128
+  enabled: 'true'
 isis:
   pic: "/images/4isis0.png"
   pic2: ''
@@ -1053,6 +1108,7 @@ isis:
   notes: ''
   date: '2018-11-28'
   index: 131
+  enabled: 'true'
 tisiphone:
   pic: "/images/4tisiphone0.png"
   pic2: ''
@@ -1070,6 +1126,7 @@ tisiphone:
   notes: ''
   date: '2018-11-28'
   index: 132
+  enabled: 'true'
 ambrosia:
   pic: "/images/4ambrosia0.png"
   pic2: ''
@@ -1087,6 +1144,7 @@ ambrosia:
   notes: ''
   date: '2018-11-28'
   index: 133
+  enabled: 'true'
 korra:
   pic: "/images/4korra0.png"
   pic2: ''
@@ -1105,6 +1163,7 @@ korra:
   notes: ''
   date: '2018-11-28'
   index: 134
+  enabled: 'true'
 muse:
   pic: "/images/4muse0.png"
   pic2: ''
@@ -1123,6 +1182,7 @@ muse:
   notes: ''
   date: '2018-11-28'
   index: 136
+  enabled: 'true'
 flora:
   pic: "/images/4flora0.png"
   pic2: ''
@@ -1141,6 +1201,7 @@ flora:
   notes: ''
   date: '2018-11-28'
   index: 137
+  enabled: 'true'
 europa:
   pic: "/images/4europa0.png"
   pic2: ''
@@ -1159,6 +1220,7 @@ europa:
   notes: ''
   date: '2018-11-28'
   index: 140
+  enabled: 'true'
 selene:
   pic: "/images/4selene0.png"
   pic2: ''
@@ -1178,6 +1240,7 @@ selene:
   notes: ''
   date: '2018-11-28'
   index: 141
+  enabled: 'true'
 bastet:
   pic: "/images/bastet0.png"
   pic2: "/images/bastet1.png"
@@ -1196,6 +1259,7 @@ bastet:
   notes: ''
   date: '2018-11-28'
   index: 7
+  enabled: 'true'
 durandal:
   pic: "/images/durandal0.png"
   pic2: ''
@@ -1217,6 +1281,7 @@ durandal:
   notes: ''
   date: '2018-11-28'
   index: 86
+  enabled: 'true'
 jiseihi:
   pic: "/images/jiseihi0.png"
   pic2: ''
@@ -1236,6 +1301,7 @@ jiseihi:
   notes: ''
   date: '2018-11-28'
   index: 77
+  enabled: 'true'
 luna:
   pic: "/images/luna0.png"
   pic2: ''
@@ -1257,6 +1323,7 @@ luna:
   notes: ''
   date: '2018-11-28'
   index: 82
+  enabled: 'true'
 ruin:
   pic: "/images/ruin0.png"
   pic2: ''
@@ -1278,6 +1345,7 @@ ruin:
   notes: ''
   date: '2018-11-28'
   index: 85
+  enabled: 'true'
 abaddon:
   pic: "/images/abaddon0.png"
   pic2: ''
@@ -1296,6 +1364,7 @@ abaddon:
   notes: ''
   date: '2018-11-28'
   index: 1
+  enabled: 'true'
 charlotte:
   pic: "/images/charlotte0.png"
   pic2: ''
@@ -1313,6 +1382,7 @@ charlotte:
   notes: ''
   date: '2018-11-28'
   index: 12
+  enabled: 'true'
 dark midas:
   pic: "/images/darkmidas0.png"
   pic2: ''
@@ -1338,6 +1408,7 @@ dark midas:
   notes: ''
   date: '2018-11-28'
   index: 41
+  enabled: 'true'
 hatsune miku:
   pic: "/images/hatsunemiku0.png"
   pic2: ''
@@ -1358,6 +1429,7 @@ hatsune miku:
   notes: ''
   date: '2018-11-28'
   index: 69
+  enabled: 'true'
 elizabeth:
   pic: "/images/elizabeth0.png"
   pic2: ''
@@ -1375,6 +1447,7 @@ elizabeth:
   notes: ''
   date: '2018-11-28'
   index: 18
+  enabled: 'true'
 warwolf:
   pic: "/images/warwolf0.png"
   pic2: "/images/warwolf1.png"
@@ -1395,6 +1468,7 @@ warwolf:
   notes: ''
   date: '2018-11-28'
   index: 38
+  enabled: 'true'
 frey (light):
   pic: "/images/freylight0.png"
   pic2: ''
@@ -1413,6 +1487,7 @@ frey (light):
   notes: ''
   date: '2018-11-28'
   index: 64
+  enabled: 'true'
 rita:
   pic: "/images/rita0.png"
   pic2: ''
@@ -1433,6 +1508,7 @@ rita:
   notes: ''
   date: '2018-11-28'
   index: 66
+  enabled: 'true'
 nevan (light):
   pic: "/images/nevanlight0.png"
   pic2: ''
@@ -1452,6 +1528,7 @@ nevan (light):
   notes: ''
   date: '2018-11-28'
   index: 65
+  enabled: 'true'
 pallas:
   pic: "/images/pallas0.png"
   pic2: ''
@@ -1472,6 +1549,7 @@ pallas:
   notes: ''
   date: '2018-11-28'
   index: 143
+  enabled: 'true'
 athena:
   pic: "/images/athena0.png"
   pic2: ''
@@ -1493,6 +1571,7 @@ athena:
   notes: ''
   date: '2018-11-28'
   index: 142
+  enabled: 'true'
 kasumi:
   pic: "/images/kasumi0.png"
   pic2: "/images/kasumi1.png"
@@ -1513,6 +1592,7 @@ kasumi:
   notes: ''
   date: '2018-11-28'
   index: 146
+  enabled: 'true'
 marie rose:
   pic: "/images/marierose0.png"
   pic2: "/images/marierose1.png"
@@ -1532,6 +1612,7 @@ marie rose:
   notes: ''
   date: '2018-11-28'
   index: 144
+  enabled: 'true'
 honoka:
   pic: "/images/honoka0.png"
   pic2: "/images/honoka1.png"
@@ -1551,6 +1632,7 @@ honoka:
   notes: ''
   date: '2018-11-28'
   index: 145
+  enabled: 'true'
 cammy:
   pic: "/images/cammy0.png"
   pic2: ''
@@ -1570,6 +1652,7 @@ cammy:
   notes: ''
   date: '2018-11-28'
   index: 11
+  enabled: 'true'
 aurora:
   pic: "/images/aurora0.png"
   pic2: "/images/aurora1.png"
@@ -1588,6 +1671,7 @@ aurora:
   notes: ''
   date: '2018-11-28'
   index: 5
+  enabled: 'true'
 ashtoreth:
   pic: "/images/ashtoreth0.png"
   pic2: "/images/ashtoreth1.png"
@@ -1609,6 +1693,7 @@ ashtoreth:
   notes: ''
   date: '2018-11-28'
   index: 6
+  enabled: 'true'
 bikini lisa:
   pic: "/images/bikinilisa0.png"
   pic2: "/images/bikinilisa1.png"
@@ -1630,6 +1715,7 @@ bikini lisa:
   notes: ''
   date: '2018-11-28'
   index: 45
+  enabled: 'true'
 scuba mona:
   pic: "/images/scubamona0.png"
   pic2: "/images/scubamona1.png"
@@ -1650,6 +1736,7 @@ scuba mona:
   notes: ''
   date: '2018-11-28'
   index: 43
+  enabled: 'true'
 magician ohad:
   pic: "/images/magicianohad0.png"
   pic2: "/images/magicianohad1.png"
@@ -1671,6 +1758,7 @@ magician ohad:
   notes: ''
   date: '2018-11-28'
   index: 148
+  enabled: 'true'
 magician ailill:
   pic: "/images/magicianailill0.png"
   pic2: ''
@@ -1689,6 +1777,7 @@ magician ailill:
   notes: ''
   date: '2018-11-28'
   index: 149
+  enabled: 'true'
 party star medb:
   pic: "/images/partystarmedb0.png"
   pic2: "/images/partystarmedb1.png"
@@ -1712,6 +1801,7 @@ party star medb:
   notes: ''
   date: '2018-11-28'
   index: 150
+  enabled: 'true'
 lady bathory:
   pic: "/images/bathory0.png"
   pic2: "/images/bathory1.png"
@@ -1734,6 +1824,7 @@ lady bathory:
   notes: ''
   date: '2018-12-05'
   index: 151
+  enabled: 'true'
 mysterious saturn:
   pic: "/images/mysterioussaturn0.png"
   pic2: ''
@@ -1753,6 +1844,7 @@ mysterious saturn:
   notes: ''
   date: '2018-12-05'
   index: 153
+  enabled: 'true'
 student eve:
   pic: "/images/studenteve0.png"
   pic2: ''
@@ -1773,6 +1865,7 @@ student eve:
   notes: ''
   date: '2018-12-05'
   index: 152
+  enabled: 'true'
 erato:
   pic: "/images/4erato0.png"
   pic2: ''
@@ -1791,6 +1884,7 @@ erato:
   notes: ''
   date: '2018-11-28'
   index: 92
+  enabled: 'true'
 neman:
   pic: "/images/4nevan0.png"
   pic2: ''
@@ -1809,6 +1903,7 @@ neman:
   notes: ''
   date: '2018-11-28'
   index: 106
+  enabled: 'true'
 melpomene:
   pic: "/images/4melpomene0.png"
   pic2: ''
@@ -1827,6 +1922,7 @@ melpomene:
   notes: ''
   date: '2018-11-28'
   index: 107
+  enabled: 'true'
 aria:
   pic: "/images/aria0.png"
   pic2: ''
@@ -1846,6 +1942,7 @@ aria:
   notes: Aria is an important child for helping you to reach 4th fever in world boss
   date: '2018-11-28'
   index: 2
+  enabled: 'true'
 danu:
   pic: "/images/4danu0.png"
   pic2: ''
@@ -1864,6 +1961,7 @@ danu:
   notes: ''
   date: '2018-11-28'
   index: 124
+  enabled: 'true'
 hat-trick:
   pic: "/images/4hat-trick0.png"
   pic2: ''
@@ -1882,6 +1980,7 @@ hat-trick:
   notes: ''
   date: '2018-11-28'
   index: 139
+  enabled: 'true'
 halloween:
   pic: "/images/4halloween0.png"
   pic2: ''
@@ -1899,6 +1998,7 @@ halloween:
   notes: ''
   date: '2018-11-28'
   index: 129
+  enabled: 'true'
 guillotine:
   pic: "/images/4guillotine0.png"
   pic2: ''
@@ -1915,6 +2015,7 @@ guillotine:
   notes: ''
   date: '2018-11-28'
   index: 101
+  enabled: 'true'
 ankh:
   pic: "/images/4ankh0.png"
   pic2: ''
@@ -1934,6 +2035,7 @@ ankh:
   notes: ''
   date: '2018-11-28'
   index: 138
+  enabled: 'true'
 bakje:
   pic: "/images/4bakje0.png"
   pic2: ''
@@ -1952,6 +2054,7 @@ bakje:
   notes: ''
   date: '2018-11-28'
   index: 108
+  enabled: 'true'
 chimaera:
   pic: "/images/4chimaera0.png"
   pic2: ''
@@ -1970,6 +2073,7 @@ chimaera:
   notes: ''
   date: '2018-11-28'
   index: 120
+  enabled: 'true'
 fairy:
   pic: "/images/4fairy0.png"
   pic2: ''
@@ -1985,7 +2089,9 @@ fairy:
     for 10s to self.
   drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
     to 2 allies with lowest hp.
+  date: '2018-11-28'
   index: 90
+  enabled: 'true'
 thoth:
   pic: "/images/4thoth0.png"
   pic2: ''
@@ -2004,6 +2110,7 @@ thoth:
   notes: ''
   date: '2018-11-28'
   index: 130
+  enabled: 'true'
 artemis:
   pic: "/images/4artemis0.png"
   pic2: ''
@@ -2021,6 +2128,7 @@ artemis:
   notes: ''
   date: '2018-11-28'
   index: 104
+  enabled: 'true'
 bast:
   pic: "/images/4bast0.png"
   pic2: ''
@@ -2039,6 +2147,7 @@ bast:
   notes: ''
   date: '2018-11-28'
   index: 88
+  enabled: 'true'
 daphne:
   pic: "/images/4daphne0.png"
   pic2: ''
@@ -2057,6 +2166,7 @@ daphne:
   notes: ''
   date: '2018-11-28'
   index: 121
+  enabled: 'true'
 arges:
   pic: "/images/4arges0.png"
   pic2: ''
@@ -2073,6 +2183,7 @@ arges:
   notes: ''
   date: '2018-11-28'
   index: 125
+  enabled: 'true'
 lisa:
   pic: "/images/3lisa0.png"
   pic2: ''
@@ -2091,6 +2202,7 @@ lisa:
   notes: ''
   date: '2018-11-28'
   index: 157
+  enabled: 'true'
 mona:
   pic: "/images/3mona0.png"
   pic2: ''
@@ -2110,6 +2222,7 @@ mona:
   notes: ''
   date: '2018-11-28'
   index: 158
+  enabled: 'true'
 davi:
   pic: "/images/3davi0.png"
   pic2: ''
@@ -2127,6 +2240,7 @@ davi:
   notes: ''
   date: '2018-11-28'
   index: 160
+  enabled: 'true'
 pretty mars:
   pic: "/images/prettymars0.png"
   pic2: "/images/prettymars1.png"
@@ -2146,6 +2260,7 @@ pretty mars:
   notes: ''
   date: '2018-12-05'
   index: 155
+  enabled: 'true'
 agamemnon:
   pic: "/images/4agamemnon0.png"
   pic2: ''
@@ -2165,6 +2280,7 @@ agamemnon:
   notes: ''
   date: '2018-11-28'
   index: 87
+  enabled: 'true'
 victrix:
   pic: "/images/4victrix0.png"
   pic2: ''
@@ -2184,6 +2300,7 @@ victrix:
   notes: ''
   date: '2018-12-25'
   index: 94
+  enabled: 'true'
 neid:
   pic: "/images/4neid0.png"
   pic2: ''
@@ -2202,6 +2319,7 @@ neid:
   notes: ''
   date: '2018-12-25'
   index: 115
+  enabled: 'true'
 amor:
   pic: "/images/4amor0.png"
   pic2: ''
@@ -2220,6 +2338,7 @@ amor:
   notes: ''
   date: '2018-11-28'
   index: 135
+  enabled: 'true'
 innocent venus:
   pic: "/images/innocentvenus0.png"
   pic2: ''
@@ -2240,6 +2359,7 @@ innocent venus:
   notes: ''
   date: '2018-12-05'
   index: 156
+  enabled: 'true'
 nicole:
   pic: "/images/nicole0.png"
   pic2: "/images/nicole1.png"
@@ -2259,6 +2379,7 @@ nicole:
   notes: ''
   date: '2018-12-25'
   index: 162
+  enabled: 'true'
 christmas leda:
   pic: "/images/christmasleda0.png"
   pic2: ''
@@ -2282,6 +2403,7 @@ christmas leda:
   notes: ''
   date: '2018-12-25'
   index: 161
+  enabled: 'true'
 kouga:
   pic: "/images/kouga0.png"
   pic2: ''
@@ -2307,6 +2429,7 @@ kouga:
     so use it wisely. Great with Dana or Syrinx.
   date: '2018-11-28'
   index: 70
+  enabled: 'true'
 dana:
   pic: "/images/dana0.png"
   pic2: ''
@@ -2328,6 +2451,7 @@ dana:
     high survivability.
   date: '2018-11-28'
   index: 15
+  enabled: 'true'
 sonnet:
   pic: "/images/4sonnet0.png"
   pic2: ''
@@ -2348,6 +2472,7 @@ sonnet:
     easily be added to any element WB teams to give poison damage.
   date: '2018-11-28'
   index: 122
+  enabled: 'true'
 elysium:
   pic: "/images/4elysium0.png"
   pic2: ''
@@ -2367,6 +2492,7 @@ elysium:
     which makes her great for PVP teams.
   date: '2018-11-28'
   index: 123
+  enabled: 'true'
 maat:
   pic: "/images/maat0.png"
   pic2: "/images/maat1.png"
@@ -2385,6 +2511,7 @@ maat:
     Maat is very useful in PVE and can be a real annoyance for the enemy in PVP.
   date: '2018-11-28'
   index: 33
+  enabled: 'true'
 leda:
   pic: "/images/4leda0.png"
   pic2: ''
@@ -2405,6 +2532,7 @@ leda:
     be used as a solo healer. Arguably best "healer" in the game.
   date: '2018-11-28'
   index: 96
+  enabled: 'true'
 nirrti:
   pic: "/images/nirrti0.png"
   pic2: ''
@@ -2424,6 +2552,7 @@ nirrti:
     Good in PVP and PVE, and sometimes useable in Raids and WorldBoss.
   date: '2018-11-28'
   index: 28
+  enabled: 'true'
 diablo:
   pic: "/images/diablo0.png"
   pic2: "/images/diablo1.png"
@@ -2443,6 +2572,7 @@ diablo:
   notes: A good PVP tank and okay in PVE content.
   date: '2018-11-28'
   index: 16
+  enabled: 'true'
 frey:
   pic: "/images/frey0.png"
   pic2: ''
@@ -2463,6 +2593,7 @@ frey:
     in the game. Passive skill on Drive can give nice added damage.
   date: '2018-11-28'
   index: 22
+  enabled: 'true'
 dinashi:
   pic: "/images/dinashi0.png"
   pic2: "/images/dinashi1.png"
@@ -2482,6 +2613,7 @@ dinashi:
     when teams or the attackers are not Fire.
   date: '2018-11-28'
   index: 17
+  enabled: 'true'
 maris:
   pic: "/images/maris0.png"
   pic2: ''
@@ -2502,6 +2634,7 @@ maris:
     to all allies, regardless of element.
   date: '2018-11-28'
   index: 73
+  enabled: 'true'
 gkouga:
   pic: "/images/gkouga0.png"
   pic2: ''
@@ -2521,6 +2654,7 @@ gkouga:
     she is great in PVP. Useful in all content.
   date: '2018-11-28'
   index: 23
+  enabled: 'true'
 medb:
   pic: "/images/medb0.png"
   pic2: ''
@@ -2539,6 +2673,7 @@ medb:
     target. Unfortunately, she doesn't have a bleed debuff skill.
   date: '2018-11-28'
   index: 58
+  enabled: 'true'
 hestia:
   pic: "/images/hestia0.png"
   pic2: ''
@@ -2558,6 +2693,7 @@ hestia:
     for eating through Syrinx' buffs in PVP.
   date: '2018-11-28'
   index: 27
+  enabled: 'true'
 jupiter:
   pic: "/images/jupiter0.png"
   pic2: "/images/jupiter1.png"
@@ -2577,6 +2713,7 @@ jupiter:
     on slide. Jupiter > Freesia > Tiamat.
   date: '2018-11-28'
   index: 61
+  enabled: 'true'
 freesia:
   pic: "/images/4freesia0.png"
   pic2: ''
@@ -2596,6 +2733,7 @@ freesia:
     great unit and is easier to uncap.
   date: '2018-11-28'
   index: 116
+  enabled: 'true'
 tiamat:
   pic: "/images/3tiamat0.png"
   pic2: ''
@@ -2613,6 +2751,7 @@ tiamat:
     debuff work in all content - cheap, but good.
   date: '2018-11-28'
   index: 159
+  enabled: 'true'
 lan fei:
   pic: "/images/lanfei0.png"
   pic2: ''
@@ -2631,6 +2770,7 @@ lan fei:
   notes: "Her special skills only worked on early raid bosses. Good for PVP and PVE.\r\n"
   date: '2018-11-28'
   index: 36
+  enabled: 'true'
 love sitri:
   pic: "/images/lovesitri0.png"
   pic2: ''
@@ -2653,6 +2793,7 @@ love sitri:
     A clear counter to Kouga in PVP.
   date: '2018-11-28'
   index: 48
+  enabled: 'true'
 mafdet:
   pic: "/images/mafdet0.png"
   pic2: "/images/mafdet1.png"
@@ -2672,6 +2813,7 @@ mafdet:
   notes: A very good damage dealer and very useful in PVP against teams with healers.
   date: '2018-11-28'
   index: 30
+  enabled: 'true'
 naiad:
   pic: "/images/naiad0.png"
   pic2: ''
@@ -2693,6 +2835,7 @@ naiad:
     useful in WorldBoss events.
   date: '2018-11-28'
   index: 72
+  enabled: 'true'
 newbie mona:
   pic: "/images/newbiemona0.png"
   pic2: ''
@@ -2719,6 +2862,7 @@ newbie mona:
     speedy team.
   date: '2018-11-28'
   index: 84
+  enabled: 'true'
 pantheon:
   pic: "/images/pantheon0.png"
   pic2: ''
@@ -2737,6 +2881,7 @@ pantheon:
   notes: Can be used in all content, but is better in Raids and Worldboss events.
   date: '2018-11-28'
   index: 37
+  enabled: 'true'
 rusalka:
   pic: "/images/rusalka0.png"
   pic2: ''
@@ -2756,6 +2901,7 @@ rusalka:
     not very strong.
   date: '2018-11-28'
   index: 75
+  enabled: 'true'
 metis:
   pic: "/images/metis0.png"
   pic2: ''
@@ -2777,6 +2923,7 @@ metis:
     RNG on your side she can be quite good.
   date: '2018-11-28'
   index: 56
+  enabled: 'true'
 tethys:
   pic: "/images/tethys0.png"
   pic2: ''
@@ -2798,6 +2945,7 @@ tethys:
   notes: Similar to Nirrti, but more offensive than defensive in terms of skills.
   date: '2018-11-28'
   index: 68
+  enabled: 'true'
 sitri:
   pic: "/images/sitri0.png"
   pic2: ''
@@ -2820,6 +2968,7 @@ sitri:
     modes.
   date: '2018-11-28'
   index: 29
+  enabled: 'true'
 mammon:
   pic: "/images/mammon0.png"
   pic2: ''
@@ -2838,6 +2987,7 @@ mammon:
   notes: Pull him, lock him, then forget him, but don't diss him.
   date: '2018-11-28'
   index: 80
+  enabled: 'true'
 medusa:
   pic: "/images/medusa0.png"
   pic2: ''
@@ -2859,6 +3009,7 @@ medusa:
   notes: Can be useful for PVP.
   date: '2018-11-28'
   index: 83
+  enabled: 'true'
 eve:
   pic: "/images/eve0.png"
   pic2: "/images/eve1.png"
@@ -2878,6 +3029,7 @@ eve:
     as great as Ely or Sonnet in regards to poison, but she does more raw damage.
   date: '2018-11-28'
   index: 21
+  enabled: 'true'
 orga (wola):
   pic: "/images/orga0.png"
   pic2: ''
@@ -2899,6 +3051,7 @@ orga (wola):
     in Raids and WorldBoss modes. Some SoulCards can counter his "Silence" debuff.
   date: '2018-11-28'
   index: 54
+  enabled: 'true'
 cube moa:
   pic: "/images/moa0.png"
   pic2: "/images/moa1.png"
@@ -2919,6 +3072,7 @@ cube moa:
     Useless in Raids and WorldBoss.
   date: '2018-11-28'
   index: 31
+  enabled: 'true'
 syrinx:
   pic: "/images/syrinx0.png"
   pic2: ''
@@ -2942,6 +3096,7 @@ syrinx:
     - Bleeding destroys stacks much faster.. Not a great healer in WorldBoss.
   date: '2018-11-28'
   index: 81
+  enabled: 'true'
 horus:
   pic: "/images/horus0.png"
   pic2: ''
@@ -2962,6 +3117,7 @@ horus:
   notes: ''
   date: '2018-11-28'
   index: 32
+  enabled: 'true'
 neptune:
   pic: "/images/hardworkerneptune0.png"
   pic2: ''
@@ -2987,6 +3143,7 @@ neptune:
   notes: ''
   date: '2018-12-05'
   index: 154
+  enabled: 'true'
 bi moa:
   pic: "/images/bimoa0.png"
   pic2: ''
@@ -3008,6 +3165,7 @@ bi moa:
   notes: ''
   date: '2019-1-3'
   index: 165
+  enabled: 'true'
 rudolph:
   pic: "/images/4rudolph0.png"
   pic2: ''
@@ -3026,6 +3184,7 @@ rudolph:
   notes: ''
   date: '2018-11-28'
   index: 89
+  enabled: 'true'
 hermes:
   pic: "/images/hermes0.png"
   pic2: "/images/hermes1.png"
@@ -3044,6 +3203,7 @@ hermes:
   notes: ''
   date: '2018-11-28'
   index: 26
+  enabled: 'true'
 oiran bathory:
   pic: "/images/oiranbathory0.png"
   pic2: ''
@@ -3064,6 +3224,7 @@ oiran bathory:
   notes: ''
   date: '2019-1-3'
   index: 163
+  enabled: 'true'
 kagura warwolf:
   pic: "/images/kagurawarwolf0.png"
   pic2: ''
@@ -3085,6 +3246,7 @@ kagura warwolf:
   notes: ''
   date: '2019-1-3'
   index: 166
+  enabled: 'true'
 pan:
   pic: "/images/pan0.png"
   pic2: ''
@@ -3104,6 +3266,7 @@ pan:
   notes: ''
   date: '2019-1-28'
   index: 49
+  enabled: 'true'
 princess miku:
   pic: "/images/princessmiku0.png"
   pic2: ''
@@ -3124,6 +3287,7 @@ princess miku:
   notes: ''
   date: '2019-1-31'
   index: 164
+  enabled: 'true'
 bes:
   pic: "/images/bes0.png"
   pic2: "/images/bes1.png"
@@ -3147,6 +3311,7 @@ bes:
   notes: "(call-the-cops)"
   date: '2019-2-7'
   index: 167
+  enabled: 'true'
 morgan:
   pic: "/images/morgan0.png"
   pic2: ''
@@ -3168,6 +3333,7 @@ morgan:
   notes: Buffed
   date: '2018-11-28'
   index: 59
+  enabled: 'true'
 brigette:
   pic: "/images/brigette.png"
   pic2: ''
@@ -3194,24 +3360,7 @@ brigette:
   notes: ''
   date: '2018-11-28'
   index: 147
-banshee:
-  pic: "/images/banshee0.png"
-  pic2: "/images/banshee1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 6 9 5 7
-  leader: "-15% to debuff accuracy for enemy debuffer units. "
-  auto: ''
-  tap: "Prioritizing enemy debuffers, reduce debuff accuracy by -11%. \r\n"
-  slide: 'Hits 2 targets with 72% chance to inflict Sleep (can''t atttack and Def
-    becomes 0) for 8 seconds, and Attack -1950 for 12 seconds. '
-  drive: Hits 3 targets prioritizing enemy with highest Attack stat, then inflict
-    Attack -40% and Defense -30% for 16 seconds.
-  notes: ''
-  date: '2019-2-26'
-  index: 168
+  enabled: 'true'
 deino:
   pic: "/images/dino0.png"
   pic2: ''
@@ -3232,6 +3381,7 @@ deino:
   notes: ''
   date: '2019-2-28'
   index: 170
+  enabled: 'true'
 cleopatra:
   pic: "/images/cleopatra0.png"
   pic2: "/images/cleopatra2.png"
@@ -3254,6 +3404,7 @@ cleopatra:
     will allow you to have crit during fever - Damage monster.
   date: '2018-11-28'
   index: 14
+  enabled: 'true'
 demeter:
   pic: "/images/demeter0.png"
   pic2: "/images/demeter1.png"
@@ -3274,26 +3425,7 @@ demeter:
   notes: ''
   date: '2019-2-28'
   index: 169
-prophet dana:
-  pic: "/images/profdana0.png"
-  pic2: "/images/profdana1.png"
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: fire
-  tier: 7 7 8 8
-  leader: Excluding self, resurrect the first ally that dies, and revives with 50%
-    HP.
-  auto: Deals 96 damage.
-  tap: Deal 337 damage to enemy, for 20 seconds increase recovery amount (heal, regen)
-    by 32% to 3 allies with lowest HP.
-  slide: Heals 1291 and Grants +1400 shield to 3 allies with the lowest HP allies
-    for 14 seconds.
-  drive: Deals 1549 damage to 2 enemies with lowest HP, Heals 1791 and 220 HP Regeneration
-    (Heal every 2s) to 3 allies with lowest HP for 16 seconds.
-  notes: ''
-  date: '2019-3-14'
-  index: 171
+  enabled: 'true'
 babel:
   pic: "/images/babel0.png"
   pic2: "/images/babel1.png"
@@ -3313,6 +3445,7 @@ babel:
   notes: ''
   date: '2019-3-14'
   index: 172
+  enabled: 'true'
 ganesh:
   pic: "/images/ganesh0.png"
   pic2: ''
@@ -3333,6 +3466,7 @@ ganesh:
   notes: ''
   date: '2019-3-29'
   index: 173
+  enabled: 'true'
 daphnis:
   pic: "/images/daphnis0.png"
   pic2: "/images/daphnis1.png"
@@ -3352,6 +3486,7 @@ daphnis:
   notes: ''
   date: '2019-3-29'
   index: 174
+  enabled: 'true'
 serval:
   pic: "/images/serval0.png"
   pic2: "/images/serval1.png"
@@ -3370,6 +3505,7 @@ serval:
   notes: ''
   date: '2019-4-13'
   index: 175
+  enabled: 'true'
 araiguma:
   pic: "/images/raccoon0.png"
   pic2: "/images/raccoon1.png"
@@ -3387,6 +3523,85 @@ araiguma:
   notes: ''
   date: '2019-4-13'
   index: 176
+  enabled: 'true'
+unknown:
+  pic: "/images/unknown0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: healer
+  element: dark
+  tier: 5 5 5 5
+  leader: Debuff evasion +8% to all Dark allies.
+  auto: Deals 71 damage.
+  tap: Deals 206 damage to target, heals 735HP to an ally with the lowest HP.
+  slide: Deals 379 damage to target, heals 886 to 2 allies with the lowest HP and
+    grants +10% debuff evasion for 12s.
+  drive: Deals 854 damage to 2 enemies, heals 1102 to 3 allies with the lowest HP
+    and 60% chance of removing 1 debuff.
+  notes: ''
+  date: '2019-4-30'
+  index: 180
+  enabled: 'true'
+prophet dana:
+  pic: "/images/profdana0.png"
+  pic2: "/images/profdana1.png"
+  pic3: ''
+  stars: '5'
+  type: healer
+  element: fire
+  tier: 7 7 8 8
+  leader: Excluding self, resurrect the first ally that dies, and revives with 50%
+    HP.
+  auto: Deals 96 damage.
+  tap: Deal 337 damage to enemy, for 20 seconds increase recovery amount (heal, regen)
+    by 32% to 3 allies with lowest HP.
+  slide: Heals 1291 and Grants +1400 shield to 3 allies with the lowest HP for 14
+    seconds.
+  drive: Deals 1549 damage to 2 enemies with lowest HP, Heals 1791 and 220 HP Regeneration
+    (Heal every 2s) to 3 allies with lowest HP for 16 seconds.
+  notes: ''
+  date: '2019-3-14'
+  index: 171
+  enabled: 'true'
+banshee:
+  pic: "/images/banshee0.png"
+  pic2: "/images/banshee1.png"
+  pic3: ''
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 6 9 5 7
+  leader: "-15% to debuff accuracy for enemy debuffer units. "
+  auto: Deal 102 damage.
+  tap: Prioritizing debuffers, Deals 394 damage to 1 target. Debuff accuracy -9.6%.
+  slide: "\r\nDeal 675 damage to 2 random targets with 70% chance to inflict Sleep
+    (can't atttack and Def becomes 0) for 8 seconds, and Attack -1500 for 12 seconds."
+  drive: Deal 2032 damage to 3 targets prioritizing enemy with highest Attack stat,
+    then inflict Attack -40% and Defense -30% for 16 seconds.
+  notes: ''
+  date: '2019-2-26'
+  index: 168
+  enabled: 'true'
+tristan:
+  pic: "/images/4tristan0.png"
+  pic2: ''
+  pic3: ''
+  stars: '4'
+  type: attacker
+  element: grass
+  tier: 6 6 7 8
+  leader: Slide skill damage +100 to wood allies.
+  auto: Deal 81 damage.
+  tap: Deal 301 damage to target and grant LifeSteal (Heals 3% HP per attack) to self
+    for 16 seconds.
+  slide: Deal 565 damage plus 3x tap to target, plus 500 ignore defense damage.
+  drive: Deal 1278 damage to 4 random targets, plus 300 bonus damage if target is
+    water type.
+  notes: ''
+  date: '2018-12-05'
+  index: 181
+  enabled: 'true'
 fennec:
   pic: "/images/fennec0.png"
   pic2: "/images/fennec1.png"
@@ -3406,6 +3621,27 @@ fennec:
   notes: ''
   date: '2019-4-13'
   index: 177
+  enabled: 'true'
+king slime:
+  pic: "/images/slimeking.png"
+  pic2: ''
+  pic3: ''
+  stars: '5'
+  type: tank
+  element: light
+  tier: 7 7 7 8
+  leader: "+12% Defense to all allies."
+  auto: Deals 92 damage.
+  tap: Deals 316 damage to target, and gives a +800HP barrier for 10s to 2 allies
+    with the lowest HP.
+  slide: Deals 563 damage to target, gains Fury (saves up to 350% damage and returns)
+    to self and +35% defense to all allies for 14s.
+  drive: Deals 1469 damage to 2 enemies, gives +2500 barrier and drive defense +30%
+    for 15s to 5 allies with the lowest HP.
+  notes: a.k.a Slime boie.
+  date: '2019-4-30'
+  index: 179
+  enabled: 'true'
 kubaba:
   pic: "/images/kubaba0.png"
   pic2: "/images/kubaba1.png"
@@ -3426,40 +3662,23 @@ kubaba:
   notes: ''
   date: '2019-4-30'
   index: 178
-king slime:
-  pic: "/images/slimeking.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: light
-  tier: 7 7 7 8
-  leader: "+12% Defense to all allies."
-  auto: Deals 92 damage.
-  tap: Deals 316 damage to target, and gives a +800HP barrier for 10s to 2 allies
-    with the lowest HP.
-  slide: Deals 563 damage to target, gains Fury (saves up to 350% damage and returns)
-    to self and +35% defense to all allies for 14s.
-  drive: Deals 1469 damage to 2 enemies, gives +2500 barrier and drive defense +30%
-    for 15s to 5 allies with the lowest HP.
-  notes: a.k.a Slime boie.
-  date: '2019-4-30'
-  index: 179
-unknown:
-  pic: "/images/unknown0.png"
+  enabled: 'true'
+creature:
+  pic: "/images/emptyunit0.png"
   pic2: ''
   pic3: ''
   stars: '4'
-  type: healer
-  element: dark
-  tier: 5 5 5 5
-  leader: Debuff evasion +8% to all Dark allies.
-  auto: Deals 71 damage.
-  tap: Deals 206 damage to target, heals 735HP to an ally with the lowest HP.
-  slide: Deals 379 damage to target, heals 886 to 2 allies with the lowest HP and
-    grants +10% debuff evasion for 12s.
-  drive: Deals 854 damage to 2 enemies, heals 1102 to 3 allies with the lowest HP
-    and 60% chance of removing 1 debuff.
+  type: buffer
+  element: fire
+  tier: 5 5 7 7
+  leader: Attack + 8% to fire type allies.
+  auto: Deal 73 damage.
+  tap: Deal 233 damage to target and apply a 60% chance to remove one debuff from
+    one ally.
+  slide: Deal 448 damage to 2 targets and +1000 attack to 2 allies with the highest
+    attack for 16 seconds.
+  drive: Deal 1084 damage to 3 random targets. Attack and defense +20% for 20 seconds.
   notes: ''
-  date: '2019-4-30'
-  index: 180
+  date: '2019-2-13'
+  index: 182
+  enabled: 'true'

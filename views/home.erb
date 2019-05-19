@@ -14,7 +14,7 @@
 <div class="container">
 <h4>Recent Child Updates</h4>
     <div class="row justify-content-center">
-    <% @units.each do |unit, unit_details| %>
+    <% @new_units.each do |unit, unit_details| %>
     <% rating = unit_details["stars"] + "stars" %>
         <div class="col-* unit-grid-cols">
 
@@ -42,7 +42,7 @@
 <div class="container">
 <h4>Recent Soul-Card Updates</h4>
     <div class="row justify-content-center">
-      <% @soulcards.each do |card, card_details| %>
+      <% @new_soulcards.each do |card, card_details| %>
         <% rating = card_details["stars"] + "stars" %>
       <div class="col-* sc-grid-cols">
           <% if session[:username] %>

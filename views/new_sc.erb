@@ -7,6 +7,12 @@
       <dd>
         <input class="content" name="sc_name" placeholder="" type="text"  value="<%= params[:sc_name] %>" required>
       </dd>
+      <dt>
+        <label for="enabled">Check to make profile public:</label>
+      </dt>
+      <dd>
+        <input class="content" name="enabled" placeholder="" type="checkbox">
+      </dd>
       <% @card.each do |key, value| %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>

@@ -12,3 +12,4 @@ gem 'rack', '~> 2.0.1'
 gem "bcrypt"
 gem 'rsense'
 gem 'rake'
+gem 'pry'

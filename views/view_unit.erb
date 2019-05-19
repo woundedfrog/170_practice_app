@@ -23,7 +23,7 @@
     <div class="col profile-stat-col-container">
       <div class="row profile-stat-row-container">
         <% @current_unit.each do |info_key, info_val| %>
-        <% unless long_stat_key?(info_key) || special_key?(info_key) %>
+        <% unless long_stat_key?(info_key) || special_key?(info_key) || info_key == 'enabled' %>
         <div class="profile-stat-container col-*">
           <% if ["stars"].include?(info_key) %>
             <h5 class="card-title"><%= info_key.capitalize %>:</h5>
@@ -45,7 +45,7 @@
 
     <% @current_unit.each do |info_key, info_val| %>
 
-    <% unless special_key?(info_key) || short_stat_key?(info_key) %>
+    <% unless special_key?(info_key) || short_stat_key?(info_key) || info_key == 'enabled'%>
     <div class="profile-stat-container">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
         <% if info_key == 'date' %>

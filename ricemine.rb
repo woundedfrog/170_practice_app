@@ -5,6 +5,7 @@ require 'redcarpet'
 require 'yaml'
 require 'fileutils'
 require 'bcrypt'
+require 'pry'
 
 configure do
   set :erb, escape_html: true
@@ -256,23 +257,22 @@ def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
 end
 
 def get_unit_or_sc_from_keys(keys)
-  cards = @soulcards
-  units = @units
   return [nil, nil] if keys.empty?
 
-  unit_results = search_stats_for_key(units, keys)
-  card_results = search_stats_for_key(cards, keys)
+  unit_results = search_stats_for_key(@units, keys)
+  card_results = search_stats_for_key(@soulcards, keys)
 
   [unit_results.to_h, card_results.to_h]
 end
 
-def search_stats_for_key(stats, words)
+def search_stats_for_key(stats, words, name_or_all = 'all')
   results = []
 
   stats.each do |name, info_hash|
     if name.to_s.downcase.include?(words.downcase)
       results << [name, info_hash]
     else
+      next unless name_or_all == 'all'
       info_hash.each do |key, val|
         val = val.to_s.downcase
         if val.include?(words) || key.include?(words)
@@ -305,14 +305,26 @@ end
 
 def unit_or_sc_exist?(type, name)
   data = if type == 'unit'
-           @units
+           load_unit_details
          else
-           @soulcards
+           load_soulcards_details
          end
   if data.include?(name) == false
     session[:message] = "#{name} doesn't exist."
     redirect '/'
   end
+end
+
+def select_disabled_profiles(details)
+  details.select {|k, v| v['enabled'] == 'false'}
+end
+
+def select_enabled_profiles(details)
+  details.select {|k, v| v['enabled'] == 'true'}
+end
+
+def exclude_specific_profiles_from_list(data, keys)
+  data.select { |k,v| [k,v] unless k == keys || k.include?(keys) }
 end
 
 # ##################
@@ -359,16 +371,43 @@ post '/users/signin' do
   end
 end
 
-get '/search/' do
+get '/search' do
   keys = params[:search_query].downcase
-  @units = get_unit_or_sc_from_keys(keys)[0]
+  # @named_units = get_unit_or_sc_from_keys(keys)[0]
+  @by_name = search_stats_for_key(@units, keys, 'names')
+
+  units = get_unit_or_sc_from_keys(keys)[0]
+  @units = exclude_specific_profiles_from_list(units, keys)
+
   @soulcards = get_unit_or_sc_from_keys(keys)[1]
   erb :search
 end
 
+def add_enabled_key
+  @scs = load_soulcards_details
+  @uts = load_unit_details
+  binding.pry
+  @scs.each do |k, v|
+    v['enabled'] = 'true'
+  end
+  File.write('data/sc/soul_cards.yml', YAML.dump(@scs))
+  @uts.each do |k, v|
+    v['enabled'] = 'true'
+  end
+  binding.pry
+  File.write('data/unit_details.yml', YAML.dump(@uts))
+end
+
+
 get '/' do
-  @units = @units.to_a.last(5).to_h
-  @soulcards = @soulcards.to_a.last(4).to_h
+  # add_enabled_key  # this is to add the enabled key to database
+  # @new_units = @units.to_a.last(5).to_h
+  # @new_units = @units.select {|k, v| v['enabled'] == 'true'}.to_a.last(5).to_h.sort_by {|k,v| [v['date'], k]}
+  # @new_units = select_enabled_profiles(@units).select {|k,v| k unless v['date']}
+  @new_units = select_enabled_profiles(@units).sort_by {|k,v| [v['date'], k]}.last(5).to_h
+  # @soulcards = @soulcards.to_a.last(4).to_h
+  # @new_soulcards = @soulcards.select {|k, v| v['enabled'] == 'true'}.to_a.last(4).to_h.to_h.sort_by {|k,v| [v['date'], k]}
+  @new_soulcards = select_enabled_profiles(@soulcards).to_a.last(4).to_h
   erb :home
 end
 
@@ -431,12 +470,12 @@ get '/:catagory/:star_rating' do
   end
 
   if params[:catagory] == 'childs'
-    unit_info = @units
+    unit_info = select_enabled_profiles(@units)
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
     erb :index_child
   else
-    unit_info = @soulcards
+    unit_info = select_enabled_profiles(@soulcards)
     @catagory = 'equips'
     @cards = sort_by_given_info(unit_info, params[:star_rating])
     erb :index_sc
@@ -478,7 +517,7 @@ end
 get '/childs/:star_rating/sort_by/:type' do
   @star_rating = params[:star_rating]
   @catagory_type = params[:type]
-  unit_info = @units
+  unit_info = select_enabled_profiles(@units)
 
   if %w[3 4 5].any? { |star| star == @star_rating[0] }
     @catagories = sort_by_and_select_type(unit_info, @catagory_type)
@@ -494,8 +533,10 @@ get '/childs/:star_rating/sort_by/:type' do
 end
 
 get '/show_unit_details' do
-  @unit_details = @units
-  @sc_details = @soulcards
+  @unit_details = select_enabled_profiles(@units)
+  @disabled_units = select_disabled_profiles(@units)
+  @sc_details = select_enabled_profiles(@soulcards)
+  @disabled_sc = select_disabled_profiles(@soulcards)
   erb :show_unit_details
 end
 
@@ -554,6 +595,11 @@ post '/equips/new_sc' do
   end
 
   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
+  data[name]['enabled'] = if params[:enabled]
+                            'true'
+                          else
+                            'false'
+                          end
   data[name]['stars'] = params[:stars]
   data[name]['stats'] = params[:stats]
   data[name]['passive'] = params[:passive]
@@ -610,6 +656,12 @@ post '/new_unit' do
       end
   end
 
+
+  data[name]['enabled'] = if params[:enabled]
+                            'true'
+                          else
+                            'false'
+                          end
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
   data[name]['element'] = params[:element]

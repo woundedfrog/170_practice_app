@@ -19,7 +19,7 @@
 
 		<div class="col-* stat-div-container">
 			<% @current_card.each do |info_key, info_val| %>
-			<% unless ["index", "pic"].include?(info_key) %>
+			<% unless ["index", "pic"].include?(info_key) || info_key == 'enabled'%>
 				<div class="profile-stat-container">
 					<h5 class="card-title"><%= info_key.capitalize %>:</h5>
 					<% if ["stars", "tier"].include?(info_key) %>
