@@ -80,10 +80,13 @@ header {
 	margin-bottom: 1px;
 	color: white;
 }
+
 /* extra shadows */
 .nav-link:hover  {
 	margin: 0;
 	box-shadow: 0px 0px 10px  yellow;
+
+		transition: box-shadow 200ms;
 }
 
 .dropdown-menu {
@@ -110,6 +113,7 @@ a, a:hover, .dropdown-item {
 
 .dropdown-item:hover {
 box-shadow: 0px 0px 20px  yellow;
+transition: box-shadow 200ms;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -182,30 +186,40 @@ span {
 	/* extra shadows */
 	border: 1px solid #985631;
 	box-shadow: 0px 0px 10px  black;
+	border-radius: 15px; /* Rounded corners */
 }
 
 /* extra shadows */
 .unit-grid-cols:hover {
-	margin: 0;
-	margin-left: 3px;
+	margin-top: 0px;
 	box-shadow: 0px 0px 20px  yellow;
+
+	transition: margin 300ms;
+
 }
 
 .sc-grid-cols {
 	position: relative;
 	background-color: rgba(58, 58, 57, 1);
 	max-width: 90px;
+	height: 234px;
 	margin-top: 10px;
 	margin-left: 3px;
+	overflow: hidden;
+	display: flex;
+	flex-direction: column;
 	/* extra shadows */
 	border: 1px solid #985631;
 	box-shadow: 0px 0px 10px  black;
+	border-radius: 15px; /* Rounded corners */
 }
 /* extra shadows */
 .sc-grid-cols:hover {
-	margin: 0;
-	margin-left: 3px;
+	margin-top: 0px;
 	box-shadow: 0px 0px 20px  yellow;
+
+transition: margin 300ms;
+
 }
 
 .sc_index_pic {
@@ -221,7 +235,7 @@ span {
 	top: 0px;
 	width: 100%;
 	text-align: center;
-	background-color: rgb(69, 98, 124, 0.5);
+	background-color: rgb(69, 98, 124, 0.7);
 }
 
 .container {
@@ -251,6 +265,7 @@ span {
 
 .btn-warning, .btn-warning:hover {
 	background-color: #f6d38f;
+	
 }
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
 	background-color: #985631;
@@ -258,6 +273,9 @@ span {
 	outline: 0;
 	   -webkit-box-shadow: none;
 	   box-shadow: none;
+}
+
+.btn {
 }
 
 /* SORTING ICONS */
@@ -503,7 +521,7 @@ textarea {
 	}
 
 	.notice-board {
-		width: 30%;
+		width: 50%;
 	}
 
 	/* ////SC PROFILES view//// */
