@@ -13,16 +13,49 @@ body {
 }
 
 #popout {
-	display: flex;
+	/* display: flex; */
 	height: 100vh;
 	width: 100%;
-	background-color: rgb( 0,0,0, 0.7 );
-	position: absolute;
+	background-color: rgb( 0,0,0, 0.9 );
+	position: fixed;
 	z-index: 100;
 	top: 0;
-	padding-top: 10px;
+	overflow-y: auto;
+	/* padding-top: 1px; */
 	}
 
+	#myBtn {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Fixed/sticky position */
+	  bottom: 20px; /* Place the button at the bottom of the page */
+	  right: 20px; /* Place the button 30px from the right */
+	  z-index: 99; /* Make sure it does not overlap */
+	  border: none; /* Remove borders */
+	  outline: none; /* Remove outline */
+	  background-color: #f6d38f; /* Set a background color */
+	  color: black; /* Text color */
+	  cursor: pointer; /* Add a mouse pointer on hover */
+	  padding: 10px; /* Some padding */
+	  border-radius: 10px; /* Rounded corners */
+	  font-size: 18px; /* Increase font size */
+		box-shadow: 0px 0px 10px black;
+	}
+
+	#myBtn:hover {
+		background-color: #f6e38e;
+		color: grey;
+	  padding: 12px; /* Some padding */
+		bottom: 18px; /* Place the button at the bottom of the page */
+	  right: 18px;
+	   /* Add a dark-grey background on hover */
+	}
+
+.exit-button2 {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	z-index: 2000;
+}
 /* main {
 	background-image: url("https://cache.desktopnexus.com/cropped-wallpapers/2341/2341156-1920x983-[DesktopNexus.com].jpg?st=zLfpALlg3yTGF4xNYt39TA&e=1553843043");
 	min-height: 500px;
@@ -440,7 +473,7 @@ textarea {
   }
 /* small display styling for nav  */
 	#popout {
-	padding-top: 50px;
+	padding-top: 10px;
 	}
 }
 
@@ -518,7 +551,7 @@ textarea {
 			flex-wrap: wrap;
 		}
 		#popout {
-			padding-top: 120px;
+			padding-top: 0px;
 			}
 }
 

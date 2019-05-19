@@ -352,6 +352,10 @@ not_found do
   redirect '/'
 end
 
+# get '/childs/:stars' do
+#   redirect "/childs/#{params[:stars]}/sort_by/tier"
+# end
+
 get '/users/signin' do
   erb :signin
 end

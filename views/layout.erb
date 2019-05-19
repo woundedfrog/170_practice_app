@@ -102,10 +102,11 @@
       <% end %>
     </ul>
   </header>
-  <section id="popout">
 
+  <button type="button" class="btn btn-success btn-xs exit-button2" style="display: none;">X</button>
+  <section id="popout" style="display: none;" >
   </section>
-
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top</button>
   <main>
     <% if session[:message] %>
       <p class="message"><%= session.delete(:message) %></p>
