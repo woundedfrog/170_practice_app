@@ -265,7 +265,7 @@ transition: margin 300ms;
 
 .btn-warning, .btn-warning:hover {
 	background-color: #f6d38f;
-	
+
 }
 .btn-success, .btn-success:hover, .btn-success:active, .btn-success:focus {
 	background-color: #985631;
@@ -273,9 +273,6 @@ transition: margin 300ms;
 	outline: 0;
 	   -webkit-box-shadow: none;
 	   box-shadow: none;
-}
-
-.btn {
 }
 
 /* SORTING ICONS */
