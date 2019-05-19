@@ -26,8 +26,10 @@
           <% else %>
             <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
           <% end %>
-        <% elsif key == "index" || key == 'date' %>
+        <% elsif key == "index" || key == 'date'%>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
+         <% elsif key == "enabled" %>
+         <input class="content" name="enabled" placeholder="" type="checkbox">
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

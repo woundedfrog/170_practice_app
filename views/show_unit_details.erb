@@ -1,5 +1,5 @@
 <div class="container-fluid">
-  <p class="special-links" ><a href="/">BACK TO MAIN MENU</a></p>
+  <!-- <p class="special-links" ><a href="/">BACK TO MAIN MENU</a></p> -->
 
 <h4>Unit details:</h4>
 <p>There are <%= @unit_details.keys.size %> units in the file. </p>
@@ -23,5 +23,47 @@
 <p class="special-links" ><a href="/download/maininfo.yml">Get main page notes</a></p>
 <p class="special-links" ><a href="/download/basics.md">Get starterguide file</a></p>
 
+<h4>All Disabled Units and Soulcards:</h4>
+<p>There are <%= @disabled_units.keys.size %> units in the file. </p>
+<p>Their names are: <%= @disabled_units.keys.sort %></p>
+<% @disabled_units.each do |unit_name, unit_details| %>
+<% rating = unit_details["stars"] + "stars" %>
+    <div class="col-* unit-grid-cols">
+    <% if session[:username] %>
+    <div class="edit-remove-buttons">
+      <a href="/childs/<%= unit_details['stars'] %>stars/<%= unit_name %>/edit">Edit</a>|
+      <a href="/childs/<%= unit_details['stars'] %>stars/<%= unit_name %>/remove" onClick="return checkMe('<%= unit_name %>')">Remove</a>
+    </div>
+    <% end %>
+
+    <a class="linkaddress" href="/childs/<%= rating %>/<%= unit_name %>">
+      <img class="profile_imgs" src="<%= unit_details['pic'] %>" alt="<%= unit_name %>"/>
+      </a>
+  <div class="index-stat-pic-container">
+      <%== format_stat("type", unit_details["type"]) %>
+      <%== format_stat("element", unit_details["element"]) %>
+  </div>
+  <h6 class="unit-profile-title"><%= upcase_name(unit_name) %></h6>
+</div>
+<% end %>
+
+
+  <% @disabled_sc.each do |card, card_details| %>
+    <% rating = card_details["stars"] + "stars" %>
+  <div class="col-* sc-grid-cols">
+      <% if session[:username] %>
+      <div class="edit-remove-buttons">
+        <a href="/equips/<%= rating %>/<%= card %>/edit">Edit</a>|
+        <a href="/equips/<%= rating %>/<%= card %>/remove" onClick="return checkMe()">Remove</a>
+      </div>
+      <% end %>
+
+        <a class="linkaddress" href="/equips/<%= rating %>/<%= card %>">
+          <img class="sc_index_pic" src="<%= card_details['pic'] %>" alt="<%= card %>"/>
+        </a>
+      <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
+  </div>
+<% end %>
+<p>-------------------</p>
 
 </div>

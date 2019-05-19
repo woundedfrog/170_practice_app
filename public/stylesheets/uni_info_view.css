@@ -12,6 +12,61 @@ body {
   margin-right: 0px;
 }
 
+#popout {
+	/* display: flex; */
+	height: 100vh;
+	width: 100%;
+	background-color: rgb( 0,0,0, 0.9 );
+	position: fixed;
+	z-index: 100;
+	top: 0;
+	overflow-y: auto;
+	/* padding-top: 1px; */
+	}
+
+	#myBtn {
+	  display: none; /* Hidden by default */
+	  position: fixed; /* Fixed/sticky position */
+	  bottom: 20px; /* Place the button at the bottom of the page */
+	  right: 20px; /* Place the button 30px from the right */
+	  z-index: 99; /* Make sure it does not overlap */
+	  border: none; /* Remove borders */
+	  outline: none; /* Remove outline */
+	  background-color: #f6d38f; /* Set a background color */
+	  color: black; /* Text color */
+	  cursor: pointer; /* Add a mouse pointer on hover */
+	  padding: 10px; /* Some padding */
+	  border-radius: 10px; /* Rounded corners */
+	  font-size: 18px; /* Increase font size */
+		box-shadow: 0px 0px 10px black;
+	}
+
+	#myBtn:hover {
+		background-color: #f6e38e;
+		color: grey;
+	  padding: 12px; /* Some padding */
+		bottom: 18px; /* Place the button at the bottom of the page */
+	  right: 18px;
+	   /* Add a dark-grey background on hover */
+	}
+
+.exit-button2 {
+	position: fixed;
+	top: 15px;
+	right: 15px;
+	z-index: 2000;
+}
+
+/* main {
+	background-image: url("https://cache.desktopnexus.com/cropped-wallpapers/2341/2341156-1920x983-[DesktopNexus.com].jpg?st=zLfpALlg3yTGF4xNYt39TA&e=1553843043");
+	min-height: 500px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+} */
+
+
 .container {
 	padding-left: 0px;
 	padding-right: 0px;
@@ -29,6 +84,12 @@ header {
 	background-color: rgb(73, 156, 131, 1);
 	margin-bottom: 1px;
 	color: white;
+}
+
+/* extra shadows */
+.nav-link:hover  {
+	margin: 0;
+	box-shadow: 0px 0px 10px  yellow;
 }
 
 .dropdown-menu {
@@ -50,6 +111,11 @@ a, a:hover, .dropdown-item {
 	text-decoration: none;
 	color: white;
 }
+
+.dropdown-item:hover {
+box-shadow: 0px 0px 20px lightgreen;
+}
+
 
 h1,h2,h3,h4,h5,h6 {
 	font-size: 1em;
@@ -147,6 +213,10 @@ p {
 	padding-left: 10px;
 }
 
+#picture {
+	color: black;
+}
+
 span {
 color: #ffffff;
 	text-shadow: 1px 1px 2px darkblue;
@@ -162,6 +232,14 @@ color: #ffffff;
 	overflow: hidden;
 	display: flex;
 	flex-direction: column;
+	box-shadow: 0px 0px 10px  black;
+	border-radius: 15px; /* rounded corners*/
+}
+
+.unit-grid-cols:hover {
+	margin: 0;
+	margin-left: 3px;
+	box-shadow: 0px 0px 20px lightgreen;
 }
 
 .sc-grid-cols {
@@ -170,6 +248,15 @@ color: #ffffff;
 	max-width: 90px;
 	margin-top: 10px;
 	margin-left: 3px;
+	overflow: hidden;
+	box-shadow: 0px 0px 10px  black;
+	border-radius: 15px; /* rounded corners*/
+}
+
+.sc-grid-cols:hover {
+	margin: 0;
+	margin-left: 3px;
+	box-shadow: 0px 0px 20px lightgreen;
 }
 
 .sc_index_pic {
@@ -186,7 +273,7 @@ color: #ffffff;
 	width: 100%;
 	text-align: center;
 	/* background-color: rgb(69, 98, 124, 0.5); */
-	background-color: rgb(69, 98, 124, 1);
+	background-color: rgb(69, 78, 104, 1);
 }
 
 .container {
@@ -321,6 +408,11 @@ label {
 .file-list-box {
 	border: 1px solid black;
 }
+.file-list-box img {
+	border: 1px solid black;
+	width: 50%;
+}
+
 
 input, textarea {
 	background-color: lightgrey;
@@ -396,6 +488,9 @@ textarea {
 		margin-right: 0;
 	}
 	/* small display styling for nav  */
+	#popout {
+	padding-top: 10px;
+	}
 }
 
 /* // Medium devices (tablets, 768px and up) */
@@ -423,7 +518,7 @@ textarea {
 	}
 
 	.notice-board {
-		width: 30%;
+		width: 50%;
 	}
 
 	/* ////SC PROFILES view//// */
@@ -476,6 +571,10 @@ textarea {
 		display: flex;
 		flex-wrap: wrap;
 	}
+
+	#popout {
+		padding-top: 0px;
+		}
 }
 
 /* // Extra large devices (large desktops, 1200px and up) */

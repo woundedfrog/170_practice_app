@@ -1,25 +1,25 @@
 <div id="viewing_profile"></div>
 
-<div class="container">
+<div class="container popping">
 	<div  class="special-links">
 		<% stars = @current_card["stars"] %>
-			<button type="button" class="btn btn-success btn-xs" id="back" onclick="goBack()">Go Back</button>
+			<button type="button" class="btn btn-success btn-xs back-button" onclick="goBack()">Back to List</button>
 			<button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
 	  	<% if session[:username] %>
-				<button type="button" class="btn btn-primary btn-xs"><a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit">Edit</a></button>
-				<button type="button" class="btn btn-danger btn-xs"><a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe('<%= @sc_name %>')">Remove</a></button>
+				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>
+				<a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe('<%= @sc_name %>')"><button type="button" class="btn btn-danger btn-xs">Remove</button></a>
 		  <% end %>
 	</div>
 
 	<h3><%= upcase_name(@sc_name) %></h3>
-	<div class="row">
+	<div class="row sc-container">
 		<div class="col-*">
 			<img class="mobile" id="profile-sc" src="<%= @current_card["pic"] %>" alt="<%= @sc_name %>"/>
 		</div>
 
 		<div class="col-* stat-div-container">
 			<% @current_card.each do |info_key, info_val| %>
-			<% unless ["index", "pic"].include?(info_key) %>
+			<% unless ["index", "pic"].include?(info_key) || info_key == 'enabled'%>
 				<div class="profile-stat-container">
 					<h5 class="card-title"><%= info_key.capitalize %>:</h5>
 					<% if ["stars", "tier"].include?(info_key) %>

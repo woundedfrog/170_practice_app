@@ -7,6 +7,12 @@
       <dd>
         <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
       </dd>
+      <dt>
+        <label for="enabled">Check to make profile public:</label>
+      </dt>
+      <dd>
+        <input class="content" name="enabled" placeholder="" type="checkbox">
+      </dd>
       <% @new_unit_info.each do |key, value| %>
         <% next if key == 'date' %>
       <dt>
@@ -22,10 +28,10 @@
               <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
             <% elsif key == "element" %>
               <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
-            <% elsif key == "index" %>
-              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
-            <% else %>
-              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+              <% elsif key == "index" %>
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
+              <% else %>
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
             <% end %>
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>

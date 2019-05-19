@@ -1,4 +1,7 @@
+
 $( document ).ready(function() {
+  // remove thsi popout hide method if needed.
+  $('#popout').hide();
 
   if($("#viewing_profile").length != 0 && window.innerWidth < 768) {
       $("header").hide();
@@ -11,6 +14,53 @@ $( document ).ready(function() {
       });
 
 };
+
+// THIS IS FOR THE POPUP info when clicking on a unit. Delete if not using;
+$(document).on('click', '.linkaddress', function(e){
+  $('#popout').show();
+  $('.exit-button2').show();
+  // $('.exit-button2').css("visibility", "visible")
+
+  $('main').css("visibility", "hidden")
+    e.preventDefault();
+  var path = this.href;
+  $('#popout').load(path + ' .popping', function() {
+
+    $('.back-button').hide();
+
+  // highlight function
+    $('p').each(function() {
+      // checks if a <p> element has img imbedded.
+      // if it does, then it skips the HIGHLIGHTING, else it highlights
+      var name = $(this).children("img").length == 0;  // checks if the img element returns 0 or not
+
+      if (name) {
+        $(this).highlight("highlight");
+      } else  {
+          return;
+        }
+    });
+  });
+
+});
+
+$(document).on('click', '.exit-button2', function(e){
+  $('#popout').hide();
+  $('.exit-button2').hide();
+
+  $('main').css("visibility", "visible")
+  $('#popout').find('.popping').remove('.popping');
+});
+
+$(document).on('click', '.exit-button2', function(e){
+  $('#popout').hide();
+  $('.exit-button2').hide();
+
+  $('main').css("visibility", "visible")
+  $('#popout').find('.popping').remove('.popping');
+});
+
+//  ^^^^^ THIS IS FOR THE POPUP info when clicking on a unit. Delete if not using;
 
 $('p').each(function() {
   // checks if a <p> element has img imbedded.
@@ -96,14 +146,38 @@ function checkMe(name) {
     }
 };
 
-function goBack() {
-  window.history.back();
+function goBack(e) {
+  // if (document.referrer.indexOf(window.location.host) !== -1) {
+  // window.history.back();
+  if (e == 'units') {
+    window.location = window.location.pathname.substring(0,14) + '/sort_by/tier';
+  } else {
+    window.location = window.location.pathname.substring(0,14);
+  };
 };
 
 $(document).ready(function() {
   $('.main-container').hide();
   $('.0').show();
 });
+
+// back to top scroll button
+
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+    document.getElementById("myBtn").style.display = "block";
+  } else {
+    document.getElementById("myBtn").style.display = "none";
+  }
+}
+
+// When the user clicks on the button, scroll to the top of the document
+function topFunction() {
+  document.body.scrollTop = 0; // For Safari
+  document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+}
 
 // var docWidth = document.documentElement.offsetWidth;
 //

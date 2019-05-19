@@ -6,13 +6,7 @@ afternoon nap:
     at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
   index: 4
-wisteria tree:
-  pic: "/images/sc/wisteriatree.jpg"
-  stars: '5'
-  stats: "HP: 1030 at lvl0 / 2010at lvl50 / 3517 at lvl50 +5. \r\n\r\nCritical: 270
-    at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Grass type. \r\n\r\nBleed Resist +35% (50% at lvl50 +5)\t\r\n"
-  index: 37
+  enabled: 'false'
 vacation:
   pic: "/images/sc/vacation.jpg"
   stars: '5'
@@ -21,6 +15,7 @@ vacation:
   passive: "Restrictions: None. \r\nPoison evasion +35% (50% at lvl50 +5) in Devil
     Rumble."
   index: 2
+  enabled: 'false'
 ass baring devil:
   pic: "/images/sc/assbaringdevil.jpg"
   stars: '5'
@@ -28,6 +23,7 @@ ass baring devil:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: none. \r\n\r\nBleed + 200 (400 at lvl50 +5) in WorldBoss."
   index: 6
+  enabled: 'false'
 believe:
   pic: "/images/sc/believe.jpg"
   stars: '5'
@@ -36,6 +32,7 @@ believe:
   passive: "Restriction: Grass type. \r\n\r\nPoison damage received -250 (500 at lvl50
     +5) in Devil Rumble."
   index: 9
+  enabled: 'false'
 hero of legends:
   pic: "/images/sc/herooflegends.jpg"
   stars: '5'
@@ -44,6 +41,7 @@ hero of legends:
   passive: "Restriction: Attacker. \r\n\r\nIgnore Defense Damage + 200 (450 at lvl50
     +5) on slide in Devil Rumble."
   index: 16
+  enabled: 'false'
 higgins daughters:
   pic: "/images/sc/higginsdaughters.jpg"
   stars: '5'
@@ -51,6 +49,7 @@ higgins daughters:
     320 at lvl0  / 1300 at lvl50 / 2275 at lvl50 +5."
   passive: "Restriction: none. \r\n\r\n(14%) of critical is added to attack."
   index: 17
+  enabled: 'false'
 endo siblings:
   pic: "/images/sc/endosiblings.jpg"
   stars: '5'
@@ -58,6 +57,7 @@ endo siblings:
     at lvl0  / 1300 at lvl50 / 2275 at lvl50 +5."
   passive: "Restriction: none. \r\n(14%) of agility is added to attack."
   index: 13
+  enabled: 'false'
 hunting devil:
   pic: "/images/sc/huntingdevil.jpg"
   stars: '5'
@@ -65,6 +65,7 @@ hunting devil:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Dark. \r\n\r\nCritical damage +4000 in Ragna."
   index: 19
+  enabled: 'true'
 late night partner:
   pic: "/images/sc/latenightpartner.jpg"
   stars: '5'
@@ -73,6 +74,7 @@ late night partner:
   passive: "Restriction: Tank.  \r\nEffectiveness of Reflect +3% (11.5% at lvl50 +5)
     in Devil Rumble."
   index: 21
+  enabled: 'true'
 judgement day:
   pic: "/images/sc/judgementday.jpg"
   stars: '5'
@@ -81,13 +83,15 @@ judgement day:
   passive: "Restriction: Light. \r\n\r\nPoison damage received -250 (500 at lvl50
     +5) in Devil Rumble."
   index: 20
+  enabled: 'false'
 meat together:
   pic: "/images/sc/togetherwithmeat.jpg"
   stars: '5'
   stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
     at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
-  passive: "Restriction: None. \r\nHealblock Resist +40%."
+  passive: "Restriction: None. \r\nHeal block Resist +40%."
   index: 34
+  enabled: 'true'
 piercing blue sky:
   pic: "/images/sc/piercingbluesky.jpg"
   stars: '5'
@@ -96,13 +100,7 @@ piercing blue sky:
   passive: "Restriction: Light + Attacker. \r\n50% (65% at lvl50 +5) chance to ignore
     provocation."
   index: 23
-power of smile:
-  pic: "/images/sc/powerofsmile.jpg"
-  stars: '5'
-  stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
-    at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
-  passive: "Restriction: Grass + Attacker. \r\nPoison Resist +35% (50% at lvl50 +5)."
-  index: 24
+  enabled: 'true'
 princess carry:
   pic: "/images/sc/princesscarry.jpg"
   stars: '5'
@@ -110,13 +108,7 @@ princess carry:
     at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
   passive: "Restriction: None. \r\nBleed +200 (400 at lvl50 +5) in Underground."
   index: 25
-stf:
-  pic: "/images/sc/stf.jpg"
-  stars: '5'
-  stats: "Attack: 530 at lvl0 / 1510 at lvl50 / 2642 at lvl50 +5. \r\n\r\nCritical:
-    270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Light. \r\n\r\nCurse +200."
-  index: 28
+  enabled: 'false'
 summer night:
   pic: "/images/sc/summerfestivalnight.jpg"
   stars: '5'
@@ -124,6 +116,7 @@ summer night:
     lvl0  / 1248 at lvl50 / 2184 at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nFreeze evasion +8.5% (18.5%)."
   index: 30
+  enabled: 'false'
 throne:
   pic: "/images/sc/throne.jpg"
   stars: '5'
@@ -132,6 +125,7 @@ throne:
   passive: "Restriction: None. \r\nSilence Resist +25% (50% at lvl50 +5) in Devil
     Rumble."
   index: 32
+  enabled: 'false'
 training expert:
   pic: "/images/sc/trainingexpert.jpg"
   stars: '5'
@@ -140,13 +134,7 @@ training expert:
   passive: "Restriction: Tank. \r\nWhen less than 3000 (5000) Hp, evasion +20% (27.5%
     at lvl50 +5)  in Devil Rumble."
   index: 35
-undersea date:
-  pic: "/images/sc/underseadate.jpg"
-  stars: '5'
-  stats: "Defense: 540 at lvl0 / 1520 at lvl50 / 2660 at lvl50 +5. \r\n\r\nAgility:
-    280 at lvl0  / 1260 at lvl50 / 2205 at lvl50 +5."
-  passive: "Restriction: Water type. \r\n\r\nPoison +500 (+750 at lvl50 +5) in Underground."
-  index: 3
+  enabled: 'false'
 wandering doctor:
   pic: "/images/sc/wanderingdoctor.jpg"
   stars: '5'
@@ -154,6 +142,7 @@ wandering doctor:
     540 at lvl0  / 1520 at lvl50 / 2660 at lvl50 +5."
   passive: "Restriction: Attacker. \r\n\r\nLifesteal +200 (450 at lvl50 +5) in Underground."
   index: 36
+  enabled: 'false'
 baptism goddess:
   pic: "/images/sc/baptismgoddess.jpg"
   stars: '4'
@@ -161,6 +150,7 @@ baptism goddess:
     at lvl0  / 975 at lvl40 / 1326 at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nRegeneration Received +25 (125 at lvl40 +4)."
   index: 8
+  enabled: 'true'
 castle of pleasure:
   pic: "/images/sc/castlepleasure.jpg"
   stars: '4'
@@ -168,6 +158,7 @@ castle of pleasure:
     at lvl0  / 980 at lvl40 / 1332 at lvl40 +4."
   passive: "Restriction: Grass. \r\n\r\nInstant Heal Received +400 (800 at lvl40 +4)."
   index: 11
+  enabled: 'true'
 hero:
   pic: "/images/sc/hero.jpg"
   stars: '4'
@@ -175,6 +166,7 @@ hero:
     at lvl0 / 787 at lvl40 / 1070 at lvl40 +4.\r\n"
   passive: "Restriction: None. \r\n\r\nAbsorb 100HP in Devil Rumble."
   index: 15
+  enabled: 'true'
 high jump:
   pic: "/images/sc/highjump.jpg"
   stars: '4'
@@ -182,6 +174,7 @@ high jump:
     202 at lvl0 / 787 at lvl40 / 1070 at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nBleed +70."
   index: 18
+  enabled: 'true'
 strategist night:
   pic: "/images/sc/strategistnight.jpg"
   stars: '4'
@@ -189,6 +182,7 @@ strategist night:
     at lvl0 / 980 at lvl40 / 1332 at lvl40 +4."
   passive: "Restriction: Tank. \r\n\r\nFinal Defense +10%."
   index: 29
+  enabled: 'true'
 good moa:
   pic: "/images/sc/goodmoa.jpg"
   stars: '4'
@@ -196,6 +190,7 @@ good moa:
     at lvl0  / 787 at lvl40 / 1070 at lvl40 +4."
   passive: "Restriction: None. \r\nPoison +50 (250 at lvl40 +4).\r\n"
   index: 14
+  enabled: 'true'
 time over:
   pic: "/images/sc/timeover.jpg"
   stars: '4'
@@ -204,6 +199,7 @@ time over:
   passive: "Restriction: None. \r\n\r\nSilence Resist +10% (16% at lvl40 +4) in Devil
     Rumble."
   index: 33
+  enabled: 'true'
 afternoon train:
   pic: "/images/sc/afternoontrain.jpg"
   stars: '3'
@@ -211,6 +207,7 @@ afternoon train:
     lvl0 / 787 at lvl30 / 1070 at lvl30 +3."
   passive: "Restriction: Light. \r\n\r\nCurse +20."
   index: 5
+  enabled: 'true'
 marine idol:
   pic: "/images/sc/marineidol.jpg"
   stars: '3'
@@ -218,6 +215,7 @@ marine idol:
     at lvl0 / 425 at lvl30 / 648 at lvl30 +3."
   passive: "Restriction: Water. \r\nPoison +30 (120 at lvl30 +3)."
   index: 22
+  enabled: 'true'
 secret date:
   pic: "/images/sc/secretdate.jpg"
   stars: '3'
@@ -225,6 +223,7 @@ secret date:
     lvl0 / 425 at lvl30 / 648 at lvl30 +3."
   passive: "Restriction: Grass. \r\n\r\nHP +200."
   index: 38
+  enabled: 'true'
 serious worker:
   pic: "/images/sc/seriousworker.jpg"
   stars: '3'
@@ -232,6 +231,7 @@ serious worker:
     at lvl0 / 425 at lvl30 / 648 at lvl30 +3."
   passive: "Restriction: Dark. \r\n\r\nFinal Defense +200."
   index: 26
+  enabled: 'true'
 sweet propose:
   pic: "/images/sc/sweetpropose.jpg"
   stars: '3'
@@ -239,6 +239,7 @@ sweet propose:
     / 550 at lvl30 / 839 at lvl30 +3."
   passive: "Restriction: None. \r\n\r\nBleed +20."
   index: 31
+  enabled: 'true'
 small assailant:
   pic: "/images/sc/smallassailant.jpg"
   stars: '3'
@@ -246,6 +247,7 @@ small assailant:
     lvl0 / 425 at lvl30 / 648 at lvl30 +3."
   passive: "Restriction: Attacker. \r\n\r\nFinal Attack +300 (600 at lvl30 +3)."
   index: 27
+  enabled: 'true'
 blade of hot sun:
   pic: "/images/sc/bladesun.jpg"
   stars: '5'
@@ -253,6 +255,7 @@ blade of hot sun:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nFinal attack +700 (1200 at lvl50 +5) in Underground."
   index: 10
+  enabled: 'false'
 seaside goddess:
   pic: "/images/sc/seasidegoddess.jpg"
   stars: '5'
@@ -260,6 +263,7 @@ seaside goddess:
     at lvl0  / 1530 at lvl50 / 2677 at lvl50 +5."
   passive: "Restrictions: None. \r\n\r\nBleed +220 (320 at lvl50 +5) in Devil Rumble."
   index: 1
+  enabled: 'false'
 beach relaxation:
   pic: "/images/sc/beachrelax.jpg"
   stars: '5'
@@ -268,6 +272,7 @@ beach relaxation:
   passive: "Restriction: Grass type. \r\n\r\nFinal attack +700 in Ragna. \r\nIf card
     is +5 then +1200 in Ragna."
   index: 0
+  enabled: 'false'
 azure girl:
   pic: "/images/sc/azuregirl.jpg"
   stars: '5'
@@ -275,6 +280,7 @@ azure girl:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Water type. \r\n\r\nPoison +1000 (1500) in WorldBoss."
   index: 7
+  enabled: 'false'
 dive:
   pic: "/images/sc/dive.jpg"
   stars: '5'
@@ -283,12 +289,14 @@ dive:
     [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
   index: 42
+  enabled: 'false'
 sc booster 5:
   pic: "/images/sc/scupgrade5.jpg"
   stars: '5'
   stats: Increases + EXP by 480.
   passive: 'Restriction: None.'
   index: 44
+  enabled: 'true'
 sow:
   pic: "/images/sc/sow.jpg"
   stars: '5'
@@ -297,18 +305,21 @@ sow:
     [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
   index: 45
+  enabled: 'false'
 sc booster 4:
   pic: "/images/sc/scupgrade4.jpg"
   stars: '4'
   stats: Increases + EXP by 84.
   passive: 'Restriction: none.'
   index: 50
+  enabled: 'true'
 sc booster 3:
   pic: "/images/sc/scupgrade3.jpg"
   stars: '3'
   stats: Increase + EXP by 28.
   passive: 'Restriction: None.'
   index: 56
+  enabled: 'true'
 dream team:
   pic: "/images/sc/dreamteam.jpg"
   stars: '4'
@@ -316,6 +327,7 @@ dream team:
     at lvl0 / 960 at lvl40 / 1305 at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nHeal 700 (1500 at lvl40 +4) HP when kill enemy."
   index: 12
+  enabled: 'true'
 feeling tremors:
   pic: "/images/sc/shakingfeeling.jpg"
   stars: '5'
@@ -323,6 +335,7 @@ feeling tremors:
     530 at lvl0  / [lvl50 number] at lvl50 / 2642 at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease 12% chance to stun in Devil Rumble."
   index: 46
+  enabled: 'false'
 crossed hearts:
   pic: "/images/sc/crossedheart.jpg"
   stars: '5'
@@ -330,6 +343,7 @@ crossed hearts:
     at lvl50 +5."
   passive: "Restriction: none. \r\n\r\nIncrease Stun Ignore by 30% in Devil Rumble."
   index: 43
+  enabled: 'false'
 7th runaway:
   pic: "/images/sc/runaway.jpg"
   stars: '5'
@@ -337,6 +351,7 @@ crossed hearts:
     2222 at lvl50 +5."
   passive: "Restriction: Light. \r\n\r\nIncrease Critical attack by 800 in Raid Boss."
   index: 40
+  enabled: 'false'
 forbidden fruit:
   pic: "/images/sc/forbiddenfruit.jpg"
   stars: '5'
@@ -344,6 +359,7 @@ forbidden fruit:
     2222 at lvl50 +5."
   passive: "Restriction: none. \r\n\r\n30% chance to ignore Death Heal in Raid Boss."
   index: 55
+  enabled: 'false'
 iced americano:
   pic: "/images/sc/icedamericano.jpg"
   stars: '5'
@@ -352,6 +368,7 @@ iced americano:
   passive: "Restriction: Attacker. \r\n\r\nUsing a slide skill grants a 40% (45.5%)
     chance to get 700HP(1250HP) barrier for 10 seconds in Underground."
   index: 39
+  enabled: 'false'
 luna:
   pic: "/images/sc/runa.jpg"
   stars: '4'
@@ -359,6 +376,7 @@ luna:
     at lvl0  / [lvl40 +4 number] at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
   index: 52
+  enabled: 'false'
 kokoro:
   pic: "/images/sc/kokoro.jpg"
   stars: '3'
@@ -366,6 +384,7 @@ kokoro:
     at lvl0 / [lvl30 +3 number] at lvl30 +3."
   passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
   index: 53
+  enabled: 'false'
 misaki:
   pic: "/images/sc/misaki.jpg"
   stars: '3'
@@ -373,6 +392,7 @@ misaki:
     145 at lvl0  / [lvl30 +3 number] at lvl30 +3."
   passive: "Restriction: none. \r\n\r\nIncrease HoT received by +15."
   index: 54
+  enabled: 'false'
 in the clouds:
   pic: "/images/sc/lookupatclouds.jpg"
   stars: '4'
@@ -381,6 +401,7 @@ in the clouds:
   passive: "Restriction: none. \r\n\r\nAdd 3% of your Final attack power to your Final
     agility power."
   index: 48
+  enabled: 'false'
 lacia:
   pic: "/images/sc/lacia.jpg"
   stars: '4'
@@ -389,6 +410,7 @@ lacia:
   passive: "Restriction: none. \r\n\r\nAdd 2% of your Final attack power to your Final
     critical power."
   index: 49
+  enabled: 'false'
 tamaki:
   pic: "/images/sc/tamaki.jpg"
   stars: '5'
@@ -396,6 +418,7 @@ tamaki:
     at lvl0  / [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: Attacker. \r\n\r\nHeal 1500HP when enemy is killed."
   index: 47
+  enabled: 'false'
 ayane:
   pic: "/images/sc/ayane.jpg"
   stars: '5'
@@ -403,6 +426,7 @@ ayane:
     at lvl0 / [lvl50 +5 number] at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease Petrify resist +30% in Devil Rumble."
   index: 41
+  enabled: 'false'
 nyotengu:
   pic: "/images/sc/onnatengu.jpg"
   stars: '4'
@@ -410,6 +434,7 @@ nyotengu:
     lvl0  / [lvl40 +4 number] at lvl40 +4."
   passive: "Restriction: Light. \r\n \r\nIncrease Curse damage by +75."
   index: 51
+  enabled: 'false'
 ganryu davi:
   pic: "/images/sc/ganryudavi.jpg"
   stars: '5'
@@ -418,6 +443,7 @@ ganryu davi:
   passive: "Restriction: None. \r\nAdd 9% of your final defense to your final attack
     power."
   index: 60
+  enabled: 'false'
 halloween diva:
   pic: "/images/sc/halloweendiva.jpg"
   stars: '5'
@@ -425,6 +451,7 @@ halloween diva:
     at lvl0  / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: none.\r\n\r\nIncrease Final HP +1500."
   index: 58
+  enabled: 'false'
 under the rose:
   pic: "/images/sc/undertherose.jpg"
   stars: '5'
@@ -433,6 +460,7 @@ under the rose:
   passive: "Restriction: None. \r\n\r\nIncrease \"Dancing Blade\" debuff damage in
     Devil Rumble +170."
   index: 59
+  enabled: 'false'
 show time!:
   pic: "/images/sc/showtime.jpg"
   stars: '5'
@@ -440,6 +468,7 @@ show time!:
     lvl0  / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: Fire. \r\nIncrease 15% chance to debuff in WorldBoss."
   index: 57
+  enabled: 'false'
 queen of the night:
   pic: "/images/sc/queenofnight.jpg"
   stars: '5'
@@ -447,6 +476,7 @@ queen of the night:
     lvl0  / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease Final Attack +500."
   index: 61
+  enabled: 'false'
 inspiration:
   pic: "/images/sc/inspiration.jpg"
   stars: '5'
@@ -455,6 +485,7 @@ inspiration:
   passive: "Restriction: Dark. \r\n\r\nIgnore Damage +350 added to normal skill in
     Raid Boss."
   index: 62
+  enabled: 'false'
 starry stage:
   pic: "/images/sc/starrystage.jpg"
   stars: '5'
@@ -462,24 +493,28 @@ starry stage:
     \ / ~ at lvl50 / ~ at lvl50 +5."
   passive: "Restriction: None. \r\n\r\nIncrease Instant Heal received +800."
   index: 63
+  enabled: 'false'
 nobalman's new year:
   pic: "/images/sc/nobalnewyear.jpg"
   stars: '5'
   stats: "Attack: 600 at lvl0. \r\n\r\nCritical: 340 at lvl0."
   passive: 'Restriction: Light. Increase Final attack +1150 at WorldBoss.'
   index: 64
+  enabled: 'false'
 i love sake!:
   pic: "/images/sc/ilovesake.jpg"
   stars: '5'
   stats: "HP: 1100 at lvl0. \r\n\r\nDefense: 600 at lvl0."
   passive: "Restriction: Light. \r\n\r\nIncrease Final Defense +800."
   index: 65
+  enabled: 'false'
 christmas gift:
   pic: "/images/sc/christmasgift.jpg"
   stars: '5'
   stats: "Attack: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
   passive: "Restriction: Attacker. \r\nSlide skill damage +350."
   index: 66
+  enabled: 'false'
 racing suit:
   pic: "/images/sc/racingsuit.jpg"
   stars: '5'
@@ -487,6 +522,7 @@ racing suit:
     2327 at lvl50 +5."
   passive: "Restriction: Dark attacker. \r\n\r\nSlide skill critical damage +11%."
   index: 70
+  enabled: 'false'
 tba2:
   pic: "/images/sc/brieftranquility.jpg"
   stars: '5'
@@ -494,6 +530,7 @@ tba2:
     2327 at lvl50 +5."
   passive: "Restriction: Water attacker. \r\nSlide skill critical damage + 11%."
   index: 69
+  enabled: 'false'
 tba1:
   pic: "/images/sc/handsomeadventure.jpg"
   stars: '5'
@@ -501,6 +538,7 @@ tba1:
     at lvl50 +5."
   passive: "Restriction: Water attacker. \r\n\r\nIncrease critical rate by 6%."
   index: 68
+  enabled: 'false'
 cake aesthetics:
   pic: "/images/sc/cakeaesthetics.jpg"
   stars: '5'
@@ -508,6 +546,7 @@ cake aesthetics:
     2310 at lvl50 +5."
   passive: "Restriction: Fire attacker. \r\n\r\nSlide skill critical damage +10%"
   index: 67
+  enabled: 'false'
 melty christmas:
   pic: "/images/sc/meltychristmas.jpg"
   stars: '5'
@@ -515,12 +554,7 @@ melty christmas:
     2310 at lvl50 +5."
   passive: "Restriction: Grass attacker. \r\n\r\nSlide skill critical damage +10%."
   index: 73
-go home club (ny):
-  pic: "/images/sc/kitakubunewyear.jpg"
-  stars: '5'
-  stats: "Defense: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
-  passive: "Restriction: none.\r\n\r\n9% of agility becomes HP."
-  index: 78
+  enabled: 'false'
 dark town mistress:
   pic: "/images/sc/darktownleader.jpg"
   stars: '5'
@@ -528,6 +562,7 @@ dark town mistress:
     at lvl50 +5."
   passive: "Restriction: Dark attacker. \r\n\r\nIncrease critical hit chance by 5%."
   index: 76
+  enabled: 'false'
 dangerous gambler:
   pic: "/images/sc/dangerousgambler.jpg"
   stars: '5'
@@ -535,6 +570,7 @@ dangerous gambler:
     at lvl50 +5."
   passive: "Restriction: Light attacker. \r\n\r\nSlide skill critical damage +10%."
   index: 71
+  enabled: 'false'
 important present:
   pic: "/images/sc/importantttreasure.jpg"
   stars: '5'
@@ -542,6 +578,7 @@ important present:
     at lvl50 +5."
   passive: "Restriction: Grass attacker. \r\nIncrease Critical hit chance by 5%.\r\n"
   index: 72
+  enabled: 'false'
 god have mercy:
   pic: "/images/sc/godhavemercy.jpg"
   stars: '5'
@@ -549,6 +586,7 @@ god have mercy:
     at lvl50 +5."
   passive: "Restriction: Light attacker. \r\n\r\nIncrease critical hit chance by 5%."
   index: 75
+  enabled: 'false'
 treasure hunter:
   pic: "/images/sc/treasurehunter.jpg"
   stars: '5'
@@ -556,10 +594,110 @@ treasure hunter:
     at lvl50 +5."
   passive: "Restriction: Fire attacker. \r\nIncrease Critical hit chance by 5%.\r\n"
   index: 74
-"(callthecops)tba":
+  enabled: 'false'
+go-home club:
+  pic: "/images/sc/kitakubunewyear.jpg"
+  stars: '5'
+  stats: "Defense: 590 at lvl0. \r\n\r\nAgility: 330 at lvl0."
+  passive: "Restriction: none. \r\n\r\nHP +9% of agility."
+  index: 78
+  enabled: 'false'
+home-made chocolate:
   pic: "/images/sc/callthecops.jpg"
   stars: '5'
-  stats: "[stat]: [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\n[stat]:
-    [basenumber] at lvl0 / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: [if none write none]. \r\n\r\n[Write info]"
+  stats: "HP: 1090 at lvl0 / [lvl50 +5 number] at lvl50 +5.  \r\n\r\nDefense: 59 at
+    lvl0 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: None. \r\n9% of defense stat is added to critical hit chance.
+    \r\n"
   index: 77
+  enabled: 'false'
+stray lamb:
+  pic: "/images/sc/straylamb.jpg"
+  stars: '5'
+  stats: "Attack: 520 at lvl0. \r\n\r\nCritical: 270 at lvl0."
+  passive: "Restriction: none. \r\n\r\nFinal Agility +250."
+  index: 79
+  enabled: 'false'
+extreme carnage:
+  pic: "/images/sc/extremecarnage.jpg"
+  stars: '5'
+  stats: "Defense: 520 at lvl0. \r\nAgility: 270 at lvl0."
+  passive: "Restriction: none. \r\nFinal HP +1000."
+  index: 80
+  enabled: 'false'
+lost dream:
+  pic: "/images/sc/lostdream.jpg"
+  stars: '5'
+  stats: "[stat]: 1100 at lvl0. \r\n[stat]: 600 at lvl0."
+  passive: "Restriction: Fire. \r\n\"Deadly poison\" damage +250."
+  index: 81
+  enabled: 'false'
+glossy peach:
+  pic: "/images/sc/glossypeach.jpg"
+  stars: '5'
+  stats: "HP: 1020 at lvl0. \r\nDefense: 520 at lvl0."
+  passive: "Restriction: none. \r\n\r\nSustained recovery (HoT) increased by 125 at
+    lvl0."
+  index: 83
+  enabled: 'false'
+fluffy melons:
+  pic: "/images/sc/fluffymelons.jpg"
+  stars: '5'
+  stats: "HP: 520 at lvl0. \r\n\r\nDefense: 1020 at lvl0."
+  passive: "Restriction: none. \r\n\r\nInstant recovery increased by 850 lvl0.\r\n"
+  index: 82
+  enabled: 'false'
+ppp on stage:
+  pic: "/images/sc/ppponstage.jpg"
+  stars: '5'
+  stats: "HP: 1110 at lvl0. \r\n\r\nAttack: 610 at lvl0."
+  passive: "Restriction: none. \r\nDeal 350 Ignore Defense damage when using Slide
+    skill in PVE.\r\n"
+  index: 84
+  enabled: 'false'
+onsen:
+  pic: "/images/sc/onsen.jpg"
+  stars: '5'
+  stats: "Defense: 610 at lvl0. \r\nAgility: 360 at lvl0."
+  passive: "Restriction: none. \r\nIn DevilRumble, heal 250HP when attacked."
+  index: 85
+  enabled: 'false'
+moon-night spa:
+  pic: "/images/sc/moonnightspa.jpg"
+  stars: '5'
+  stats: "HP: 1110 at lvl0. \r\n\r\nAgility: 360 at lvl0."
+  passive: "Restriction: none. \r\nCurse avoidance rate increased by 30%."
+  index: 86
+  enabled: 'false'
+power of smile:
+  enabled: 'true'
+  pic: "/images/sc/powerofsmile.jpg"
+  stars: '5'
+  stats: "HP: 1020 at lvl0 / 2000 at lvl50 / 3500 at lvl50 +5. \r\n\r\nAttack: 520
+    at lvl0  / 1500 at lvl50 / 2625 at lvl50 +5."
+  passive: "Restriction: Grass + Attacker. \r\nPoison Resist +35% (50% at lvl50 +5)."
+  index: 24
+undersea date:
+  enabled: 'true'
+  pic: "/images/sc/underseadate.jpg"
+  stars: '5'
+  stats: "Defense: 540 at lvl0 / 1520 at lvl50 / 2660 at lvl50 +5. \r\n\r\nAgility:
+    280 at lvl0  / 1260 at lvl50 / 2205 at lvl50 +5."
+  passive: "Restriction: Water type. \r\n\r\nPoison +500 (+750 at lvl50 +5) in Underground."
+  index: 3
+wisteria tree:
+  enabled: 'true'
+  pic: "/images/sc/wisteriatree.jpg"
+  stars: '5'
+  stats: "HP: 1030 at lvl0 / 2010at lvl50 / 3517 at lvl50 +5. \r\n\r\nCritical: 270
+    at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
+  passive: "Restriction: Grass type. \r\n\r\nBleed Resist +35% (50% at lvl50 +5)\t\r\n"
+  index: 37
+stf:
+  enabled: 'true'
+  pic: "/images/sc/stf.jpg"
+  stars: '5'
+  stats: "Attack: 530 at lvl0 / 1510 at lvl50 / 2642 at lvl50 +5. \r\n\r\nCritical:
+    270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
+  passive: "Restriction: Light. \r\n\r\nCurse +200."
+  index: 28
