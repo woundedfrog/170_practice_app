@@ -3682,3 +3682,27 @@ creature:
   date: '2019-2-13'
   index: 182
   enabled: 'true'
+botan:
+  pic: "/images/botan0.png"
+  pic2: "/images/botan1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 7 7 7 7
+  leader: Skill gauge speed +12% to wood allies [For UG only, all allies +15% attack]
+  auto: Deals 100 damage
+  tap: Deals 385 damage to target. 70% chance to remove Defense down debuffs from
+    2 allies.
+  slide: 'Deals 675 damage to target. For 16 seconds, apply Max HP +1600 (Priority:
+    Lowest HP) to 2 allies, 70% chance to apply “Time distortion” (removes -gauge
+    speed debuffs and increases skill gauge speed +40%) and[For UG only, gives +15%
+    attack 2 allies with highest attack.]'
+  drive: Deals 1764 damage to 3 enemies. To the ally with the highest attack, gives
+    Berserk (Increase attack by +90% and becomes immune to damage, afterwards unit
+    will be stunned for 5s) for 20s and prioritizing grass allies, 3 allies skill
+    gauge charge +50%
+  notes: ''
+  date: '2019-5-24'
+  index: 183

@@ -6,6 +6,7 @@ require 'yaml'
 require 'fileutils'
 require 'bcrypt'
 require 'pry'
+require 'zip' # allows for zipping files
 
 configure do
   set :erb, escape_html: true
@@ -226,8 +227,6 @@ def get_max_index_number(list)
 
   max = indexes.max + 1
   available_indexes = (1..max).to_a - indexes
-  # list.sort_by { |_, v| v['index'] }.to_h
-  # list.map { |_, v| v['index'] }.max + 1
   available_indexes.min
 end
 
@@ -247,7 +246,6 @@ end
 
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
-  # units_by_stars = nil
   units_by_stars =
    unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
 
@@ -346,15 +344,60 @@ def check_and_fetch_date(data, name)
   ''
 end
 
+#zipping IMAGE files
+def zip_it(path)
+  if path.include?('unit')
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  else
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/sc/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  end
+end
+#zipping IMAGE files END
 # ##################
 
 not_found do
   redirect '/'
 end
 
-# get '/childs/:stars' do
-#   redirect "/childs/#{params[:stars]}/sort_by/tier"
-# end
+get '/backup/:files'do
+
+  require_user_signin
+  files = params[:files]
+
+  if files.include?('unit')
+    path = './backup/unit_imgs.zip'
+    File.delete(path) if File.exist?(path)
+
+    zip_it(path)
+    fname = 'unit_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+
+  elsif files.include?('sc')
+    path = './backup/sc_imgs.zip'
+    File.delete(path) if File.exist?(path)
+    zip_it(path)
+
+    fname = '/sc_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+  end
+  redirect '/'
+end
 
 get '/users/signin' do
   erb :signin
@@ -404,13 +447,7 @@ end
 
 
 get '/' do
-  # add_enabled_key  # this is to add the enabled key to database
-  # @new_units = @units.to_a.last(5).to_h
-  # @new_units = @units.select {|k, v| v['enabled'] == 'true'}.to_a.last(5).to_h.sort_by {|k,v| [v['date'], k]}
-  # @new_units = select_enabled_profiles(@units).select {|k,v| k unless v['date']}
   @new_units = select_enabled_profiles(@units).sort_by {|k,v| [v['date'], k]}.last(5).to_h
-  # @soulcards = @soulcards.to_a.last(4).to_h
-  # @new_soulcards = @soulcards.select {|k, v| v['enabled'] == 'true'}.to_a.last(4).to_h.to_h.sort_by {|k,v| [v['date'], k]}
   @new_soulcards = select_enabled_profiles(@soulcards).to_a.last(4).to_h
   erb :home
 end

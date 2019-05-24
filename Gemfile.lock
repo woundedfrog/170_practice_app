@@ -66,6 +66,7 @@ GEM
       sinatra
       spoon (~> 0.0.4)
     ruby-progressbar (1.10.0)
+    rubyzip (1.2.3)
     sinatra (2.0.3)
       mustermann (~> 1.0)
       rack (~> 2.0)
@@ -101,6 +102,7 @@ DEPENDENCIES
   rake
   redcarpet
   rsense
+  rubyzip (>= 1.0.0)
   sinatra
   sinatra-contrib
 
