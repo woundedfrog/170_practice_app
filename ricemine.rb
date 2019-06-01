@@ -381,6 +381,10 @@ get '/backup/:files'do
   require_user_signin
   files = params[:files]
 
+  unless File.directory?('./backup') #creates a folder if it doesn't exist
+    Dir.mkdir './backup'
+  end
+
   if files.include?('unit')
     path = './backup/unit_imgs.zip'
     File.delete(path) if File.exist?(path)

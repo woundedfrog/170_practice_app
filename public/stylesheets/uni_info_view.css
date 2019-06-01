@@ -56,6 +56,16 @@ body {
 	right: 15px;
 	z-index: 2000;
 }
+
+#disabled-profiles {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#disabled-profiles div {
+	width: 100px;
+}
+
 /* main {
 	background-image: url("https://cache.desktopnexus.com/cropped-wallpapers/2341/2341156-1920x983-[DesktopNexus.com].jpg?st=zLfpALlg3yTGF4xNYt39TA&e=1553843043");
 	min-height: 500px;

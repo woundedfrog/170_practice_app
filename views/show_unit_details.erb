@@ -24,8 +24,11 @@
 <p class="special-links" ><a href="/download/basics.md">Get starterguide file</a></p>
 
 <h4>All Disabled Units and Soulcards:</h4>
-<p>There are <%= @disabled_units.keys.size %> units in the file. </p>
-<p>Their names are: <%= @disabled_units.keys.sort %></p>
+<p>There are <%= @disabled_units.keys.size + @disabled_sc.keys.size %> units in the file. </p>
+<p>Their names are: <%= @disabled_units.keys.sort + @disabled_sc.keys.sort%></p>
+
+<div id="disabled-profiles">
+
 <% @disabled_units.each do |unit_name, unit_details| %>
 <% rating = unit_details["stars"] + "stars" %>
     <div class="col-* unit-grid-cols">
@@ -64,6 +67,7 @@
       <h6 class="sc-profile-title"><%= upcase_name(card) %></h6>
   </div>
 <% end %>
+</div>
 <p>-------------------</p>
 
 </div>
