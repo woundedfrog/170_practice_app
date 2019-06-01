@@ -203,7 +203,7 @@ h4 {
 }
 
 .show {
-	display: flex;
+	display: block;
 }
 .hide {
 	display: none;

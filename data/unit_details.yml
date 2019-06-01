@@ -2349,3 +2349,64 @@ neamhain:
   date: '2018-12-25'
   index: 106
   enabled: 'true'
+honoka:
+  pic: "/images/honoka0.png"
+  pic2: "/images/honoka1.png"
+  pic3: "/images/honoka2.png"
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: fire
+  tier: 6 5 7 6
+  leader: CRT Rate +15% for Fire Type Allies (during Rumbles, gain +15% CRT Rate to
+    self)
+  auto: Deal 95 Auto Attack damage to the target
+  tap: 'Deal 331 Damage, Heal 318 HP for 1 Ally (Priority: Lowest HP)'
+  slide: 'Regen 150 HP for 2 allies (Priority: Lowest HP) for 14 seconds, and gain
+    +35% Skill Gauge when Critical Damage occurs'
+  drive: 'Deal 1527 Damage to 2 random Enemies, Regen 267 HP each for 5 Allies (Priority:
+    Lowest HP) for 16 seconds, +2000 CRT'
+  notes: ''
+  date: '2019-5-31'
+  index: 39
+marie rose:
+  pic: "/images/marierose0.png"
+  pic2: "/images/marierose1.png"
+  pic3: "/images/marierose2.png"
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: grass
+  tier: 7 7 7 5
+  leader: Slide Skill Damage DEF +5% against Enemies for Wood Type Allies
+  auto: Deal 92 Auto Attack damage
+  tap: Deal 316 Damage, gain Skill Damage DEF +20% (removed after 24 seconds or upon
+    taking 3 attacks)
+  slide: Deal 575 Damage to target and grant Fortitude (removed after 14 seconds or
+    upon taking 2 attacks) to 3 Allies (excluding self), with a +20% chance to gain
+    Silence EVA for 14 seconds
+  drive: Deal 1444 Damage to 2 random Enemies, grant +40% Defense for 20 seconds and
+    +50% Debuff EVA for continuous damage up to 5 Allies
+  notes: ''
+  date: '2019-5-31'
+  index: 35
+kasumi:
+  pic: "/images/kasumi0.png"
+  pic2: "/images/kasumi1.png"
+  pic3: "/images/kasumi3.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 7 7 7 8
+  leader: ATK +10% for Water Type Allies
+  auto: Deal 112 Auto Attack damage
+  tap: Deal 473 Damage, deal 150 Bonus Damage on Poisoned targets
+  slide: 'Deal 818 Damage and 500 Ignore DEF Damage to 3 Enemies (Priority: Highest
+    ATK), and 60% chance to inflict Stun (stunned for 1 second more when attacked,
+    up to 5 seconds max) for 4 seconds when Critical Damage occurs)'
+  drive: Deal 2353 Damage to 4 random Enemies and deal 700 Bonus Damage of gain EVA
+    with a +40% chance for 20 seconds
+  notes: ''
+  date: '2019-5-31'
+  index: 34

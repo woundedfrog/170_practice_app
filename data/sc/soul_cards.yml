@@ -369,30 +369,6 @@ iced americano:
     chance to get 700HP(1250HP) barrier for 10 seconds in Underground."
   index: 39
   enabled: 'false'
-luna:
-  pic: "/images/sc/runa.jpg"
-  stars: '4'
-  stats: "Defense: 395 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nAgility: 210
-    at lvl0  / [lvl40 +4 number] at lvl40 +4."
-  passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
-  index: 52
-  enabled: 'false'
-kokoro:
-  pic: "/images/sc/kokoro.jpg"
-  stars: '3'
-  stats: "Attack: 270 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nDefense: 250
-    at lvl0 / [lvl30 +3 number] at lvl30 +3."
-  passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
-  index: 53
-  enabled: 'false'
-misaki:
-  pic: "/images/sc/misaki.jpg"
-  stars: '3'
-  stats: "Defense: 260 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nCritical:
-    145 at lvl0  / [lvl30 +3 number] at lvl30 +3."
-  passive: "Restriction: none. \r\n\r\nIncrease HoT received by +15."
-  index: 54
-  enabled: 'false'
 in the clouds:
   pic: "/images/sc/lookupatclouds.jpg"
   stars: '4'
@@ -410,30 +386,6 @@ lacia:
   passive: "Restriction: none. \r\n\r\nAdd 2% of your Final attack power to your Final
     critical power."
   index: 49
-  enabled: 'false'
-tamaki:
-  pic: "/images/sc/tamaki.jpg"
-  stars: '5'
-  stats: "Attack: 580 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\nDefense: 540
-    at lvl0  / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: Attacker. \r\n\r\nHeal 1500HP when enemy is killed."
-  index: 47
-  enabled: 'false'
-ayane:
-  pic: "/images/sc/ayane.jpg"
-  stars: '5'
-  stats: "HP: 1070 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n \r\nAgility: 300
-    at lvl0 / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: None. \r\n\r\nIncrease Petrify resist +30% in Devil Rumble."
-  index: 41
-  enabled: 'false'
-nyotengu:
-  pic: "/images/sc/onnatengu.jpg"
-  stars: '4'
-  stats: "HP: 775 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nCritical: 210 at
-    lvl0  / [lvl40 +4 number] at lvl40 +4."
-  passive: "Restriction: Light. \r\n \r\nIncrease Curse damage by +75."
-  index: 51
   enabled: 'false'
 ganryu davi:
   pic: "/images/sc/ganryudavi.jpg"
@@ -701,3 +653,51 @@ stf:
     270 at lvl0  / 1250 at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Light. \r\n\r\nCurse +200."
   index: 28
+ayane:
+  enabled: 'true'
+  pic: "/images/sc/ayane.jpg"
+  stars: '5'
+  stats: "HP: 1070 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n \r\nAgility: 300
+    at lvl0 / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: None. \r\n\r\nIncrease Petrify resist +30% in Devil Rumble."
+  index: 41
+tamaki:
+  enabled: 'true'
+  pic: "/images/sc/tamaki.jpg"
+  stars: '5'
+  stats: "Attack: 580 at lvl0 / [lvl50 +5 number] at lvl50 +5. \r\n\r\nDefense: 540
+    at lvl0  / [lvl50 +5 number] at lvl50 +5."
+  passive: "Restriction: Attacker. \r\n\r\nHeal 1500HP when enemy is killed."
+  index: 47
+luna:
+  enabled: 'true'
+  pic: "/images/sc/runa.jpg"
+  stars: '4'
+  stats: "Defense: 395 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nAgility: 210
+    at lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
+  index: 52
+nyotengu:
+  enabled: 'true'
+  pic: "/images/sc/onnatengu.jpg"
+  stars: '4'
+  stats: "HP: 775 at lvl0 / [lvl40 +4 number] at lvl40 +4. \r\n\r\nCritical: 210 at
+    lvl0  / [lvl40 +4 number] at lvl40 +4."
+  passive: "Restriction: Light. \r\n \r\nIncrease Curse damage by +75."
+  index: 51
+misaki:
+  enabled: 'true'
+  pic: "/images/sc/misaki.jpg"
+  stars: '3'
+  stats: "Defense: 260 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nCritical:
+    145 at lvl0  / [lvl30 +3 number] at lvl30 +3."
+  passive: "Restriction: none. \r\n\r\nIncrease HoT received by +15."
+  index: 54
+kokoro:
+  enabled: 'true'
+  pic: "/images/sc/kokoro.jpg"
+  stars: '3'
+  stats: "Attack: 270 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nDefense: 250
+    at lvl0 / [lvl30 +3 number] at lvl30 +3."
+  passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
+  index: 53
