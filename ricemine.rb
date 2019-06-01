@@ -249,8 +249,11 @@ def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   units_by_stars =
    unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
 
+if stars == 'all'
+  return group_by_catagory_tier(unit_info, catagory_vals) if type == 'tier'
+else
   return group_by_catagory_tier(units_by_stars, catagory_vals) if type == 'tier'
-
+end
   units_by_stars.sort_by { |name, __stats| name }.to_h
 end
 
@@ -561,6 +564,12 @@ get '/childs/:star_rating/sort_by/:type' do
   unit_info = select_enabled_profiles(@units)
 
   if %w[3 4 5].any? { |star| star == @star_rating[0] }
+    @catagories = sort_by_and_select_type(unit_info, @catagory_type)
+    @units =
+      sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
+
+    return erb :sort_by_tier if @catagory_type == 'tier'
+  elsif @star_rating == 'all'
     @catagories = sort_by_and_select_type(unit_info, @catagory_type)
     @units =
       sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)

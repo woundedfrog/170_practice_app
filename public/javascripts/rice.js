@@ -1,5 +1,9 @@
 
 $( document ).ready(function() {
+
+    // ScrollReveal().reveal('.units', { delay: 50 });
+    //   ScrollReveal().reveal('.sc', { delay: 50 });
+    
   // remove thsi popout hide method if needed.
   $('#popout').hide();
 
@@ -114,6 +118,7 @@ function mobileHide() {
 };
 
 function  showUnitsOnly(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
@@ -123,6 +128,7 @@ function  showUnitsOnly(type) {
 };
 
 function  showUnitsTier(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
@@ -133,6 +139,7 @@ function  showUnitsTier(type) {
 };
 
 function  showAllUnits(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();

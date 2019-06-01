@@ -701,3 +701,10 @@ moon-night spa:
   passive: "Restriction: none. \r\nCurse avoidance rate increased by 30%."
   index: 86
   enabled: 'true'
+eternal oath:
+  pic: "/images/sc/eternaloath.jpg"
+  enabled: 'true'
+  stars: '5'
+  stats: "Attack: 590 at lvl0.\r\n\r\nDefense: 630 at lvl0."
+  passive: "Restriction: [if none write none]\r\n\r\nDebuff evasion +10%."
+  index: 87

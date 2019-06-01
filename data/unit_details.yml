@@ -1904,25 +1904,6 @@ neman:
   date: '2018-11-28'
   index: 106
   enabled: 'true'
-melpomene:
-  pic: "/images/4melpomene0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: dark
-  tier: 6 6 7 7
-  leader: Critical rate +10% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 233 damage to target and critical rate +30% for 10s to 1 random ally.
-  slide: Critical rate +30% and critical damage +25% for 16s to 2 allies with highest
-    attack.
-  drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
-    with highest attack and 75% confusion for 10s to 1 random enemy.
-  notes: ''
-  date: '2018-11-28'
-  index: 107
-  enabled: 'true'
 aria:
   pic: "/images/aria0.png"
   pic2: ''
@@ -3706,3 +3687,84 @@ botan:
   notes: ''
   date: '2019-5-24'
   index: 183
+iphis:
+  pic: "/images/iphis0.png"
+  pic2: "/images/iphis1.png"
+  pic3: "/images/iphis2.png"
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 7 7 5 6
+  leader: All enemies debuff evasion -12%
+  auto: Deals 102 damage
+  tap: 'Deals 394 damage to target, target’s debuff evasion -15% for 10 seconds. '
+  slide: 'Prioritizing 2 lowest HP targets, deal 674 damage, apply “damage resonance”
+    (Causes damage to two other childs (priority: lowest HP) equal to 20% of the damage
+    received by the childs afflicted by this debuff) for 12 seconds and 70% chance
+    of remove one buff from target. '
+  drive: 'Deal 2029 damage to 3 enemies, apply “damage resonance” (Causes damage to
+    two other childs (priority: lowest HP) equal to 35% of the damage received by
+    the childs afflicted by this debuff) for 16 seconds. '
+  notes: ''
+  date: '2019-5-31'
+  index: 186
+pure bride hildr:
+  pic: "/images/purehildr0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 6 6 10 9
+  leader: Light allies +15% atk [During Ragna, WeakPoint skill damage +10%]
+  auto: 'Deals 113 damage. '
+  tap: Deals 491 damage to target, 250 additional damage if Dark type.
+  slide: Prioritizing lowest HP enemies, deal 958 damage to 2 target, 1300 defense
+    ignore damage, and if the target is a Dark type, deal 1050 additional damage.
+  drive: 'Deals 1764 damage to all enemies. Apply "Concentration" (100% Critital Rate
+    and Hit Rate) to self. '
+  notes: ''
+  date: '2019-5-31'
+  index: 184
+pure bride pomona:
+  pic: "/images/purepomona0.png"
+  pic2: "/images/purepomono1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: light
+  tier: 7 7 8 9
+  leader: 'Light allies heal and regeneration +15%. '
+  auto: 'Deals  96 damage. '
+  tap: 'Deals 337 damage to target, gives +15% debuff evasion to 2 allies with the
+    lowest HP. '
+  slide: 'Prioritizing 2 allies with the lowest HP, Regen 191 HP (once per 2 seconds)
+    and cleanse all debuffs then gain immunity to one debuff for 14 seconds. '
+  drive: 'Revives 1 dead ally to 1000HP and Heal 1791HP to 3 allies with the lowest
+    HP. '
+  notes: ''
+  date: '2019-5-31'
+  index: 185
+melpomene:
+  pic: "/images/4melpomene0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: dark
+  tier: 6 6 7 7
+  leader: Critical rate +10% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 233 damage to target and critical rate +30% for 10s to 1 random ally.
+  slide: Critical rate +30% and critical damage +25% for 16s to 2 allies with highest
+    attack.
+  drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
+    with highest attack and 75% confusion for 10s to 1 random enemy.
+  notes: She's a cheaper version of Pantheon. She's not as good as he is, but is still
+    good at higher uncaps.
+  date: '2018-11-28'
+  index: 107

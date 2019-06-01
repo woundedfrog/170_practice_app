@@ -6,7 +6,7 @@
     <div class="row justify-content-center">
       <% @cards.each do |card, card_details| %>
         <% rating = card_details["stars"] + "stars" %>
-      <div class="col-* sc-grid-cols">
+      <div class="col-* sc-grid-cols sc">
         <!-- <div class="index-profile-title"><h6><%= upcase_name(card) %></h6></div> -->
           <% if session[:username] %>
           <div class="edit-remove-buttons">
