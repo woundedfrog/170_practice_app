@@ -1637,24 +1637,6 @@ fennec:
   date: '2019-4-26'
   index: 31
   enabled: 'true'
-serval:
-  pic: "/images/serval0.png"
-  pic2: "/images/serval1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 6 6 6 7
-  leader: CRT Rate +15% for Wood Type Allies
-  auto: Deal 112 Auto Attack damage
-  tap: Deal 475 Damage, gain Vampirism (recover 15% HP on attack) for 20 seconds
-  slide: 'Deal 768 Damage to 1 Enemy (Priority: Supporter) and 3 additional hits of
-    100 Ignore DEF Damage, and gain EVA +25% for 12 if a Critical hit occurs'
-  drive: 'Deal 2455 Damage to 4 Enemies (Priority: Lowest HP)'
-  notes: ''
-  date: '2019-4-26'
-  index: 20
-  enabled: 'true'
 brownie:
   pic: "/images/brownie0.png"
   pic2: ''
@@ -2410,3 +2392,23 @@ kasumi:
   notes: ''
   date: '2019-5-31'
   index: 34
+serval:
+  pic: "/images/serval0.png"
+  pic2: "/images/serval1.png"
+  pic3: ''
+  enabled: 'false'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 6 7 8
+  leader: CRT Rate +15% for Wood Type Allies
+  auto: Deal 112 Auto Attack damage
+  tap: Deal 475 Damage, gain Vampirism (recover 15% HP on attack) for 20 seconds
+  slide: 'Deal 768 Damage to 1 Enemy (Priority: Supporter) and 3 additional hits of
+    100 Ignore DEF Damage, and gain EVA +25% for 12 if a Critical hit occurs'
+  drive: 'Deal 2455 Damage to 4 Enemies (Priority: Lowest HP)'
+  notes: Global's skill translation is misleading for Serval. Her 3 hits for slide
+    includes both the base damage and Ignore Def damage, making her significantly
+    better than the description otherwise implies.
+  date: '2019-4-26'
+  index: 20

@@ -16,7 +16,12 @@ configure do
 end
 
 before do
-  @message_note = load_file_data('main')
+  begin
+    @message_note = load_file_data('main')
+  rescue Psych::SyntaxError => ex
+    p ex.file
+    p ex.message
+  end
   @units = load_file_data('unit')
   @soulcards = load_file_data('sc')
   @new_unit = load_file_data('new_unit')['new_unit']
@@ -347,6 +352,34 @@ def add_enabled_key
   File.write('data/unit_details.yml', YAML.dump(@uts))
 end
 
+def skills_splitter(skills)
+  leader, auto, tap, slide, drive = [], [] , [], [], []
+  key = ''
+
+  skills.split.each_with_index do |word, idx|
+    if %w(leader lead slide tap drive auto).include?(word.downcase)
+      key = word.downcase
+      next
+    end
+
+   case key#%w(leader slide tap drive).include?(word)
+   when 'lead'
+     leader << word
+   when 'leader'
+     leader << word
+   when 'slide'
+     slide << word
+   when 'tap'
+     tap << word
+   when 'auto'
+     auto << word
+   else
+     drive << word
+   end
+  end
+  [leader, auto, tap, slide, drive].map{ |x| x.join(" ")}
+end
+
 # ##################
 
 def render_markdown(file)
@@ -419,7 +452,13 @@ end
 get "/:filename/edit" do
   file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
   @name = params[:filename]
-  @content = YAML.dump(YAML.load_file(file))
+  begin
+    @content = YAML.dump(YAML.load_file(file))
+  rescue Psych::SyntaxError => ex
+    p ex.file
+    p ex.message
+  end
+# @content = YAML.dump(YAML.load_file(file))
 
   erb :edit_notice
 end
@@ -668,11 +707,19 @@ post '/new_unit' do
   data[name]['type'] = params[:type]
   data[name]['element'] = params[:element]
   data[name]['tier'] = params[:tier].upcase
-  data[name]['leader'] = params[:leader]
-  data[name]['auto'] = params[:auto]
-  data[name]['tap'] = params[:tap]
-  data[name]['slide'] = params[:slide]
-  data[name]['drive'] = params[:drive]
+
+  if (params[:skillsdump].nil? || params[:skillsdump].empty?)
+    data[name]['leader'] = params[:leader]
+    data[name]['auto'] = params[:auto]
+    data[name]['tap'] = params[:tap]
+    data[name]['slide'] = params[:slide]
+    data[name]['drive'] = params[:drive]
+  else
+    data[name]['leader'], data[name]['auto'],
+    data[name]['tap'], data[name]['slide'], data[name]['drive'] =
+    skills_splitter(params[:skillsdump])
+  end
+
   data[name]['notes'] = params[:notes]
   data[name]['date'] = if date == ''
                          new_time = Time.now.utc.localtime('+09:00')
@@ -751,7 +798,7 @@ end
 
 post '/update/:filename' do
   name = params[:filename] + '.yml'
-  content = params[:content]
+  content = params[:content].gsub("script", '')
   directory =
     if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
       session[:message] = "#{name} was updated"
