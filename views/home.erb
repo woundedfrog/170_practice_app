@@ -7,9 +7,15 @@
   <% if session[:username] %>
     <a href="/maininfo/edit">Edit Main Notice</a>
   <% end %>
+  <% if !@message_note%>
+    <h6>Welcome</h6>
+    <p></p>
+    <p></p>
+  <% else %>
   <h6><%== @message_note['home']['main'] %></h6>
   <p><%== @message_note['home']['sub'] %></p>
   <p><%== @message_note['home']['sub2'] %></p>
+<% end %>
 </div>
 <div class="container">
 <h4>Recent Child Updates</h4>

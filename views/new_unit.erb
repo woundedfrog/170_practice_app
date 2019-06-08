@@ -28,9 +28,9 @@
               <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: attacker, healer, tank, buffer, debuffer
             <% elsif key == "element" %>
               <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
-              <% elsif key == "index" %>
+            <% elsif key == "index" %>
                 <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
-              <% else %>
+            <% else %>
                 <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
             <% end %>
         <% else %>
@@ -38,6 +38,8 @@
         <% end %>
       </dd>
       <% end %>
+      <label for="upload"><em>or use Skills dump</em></label>
+      <textarea class="content" name="skillsdump" rows="5" cols="50"></textarea> Dump all the skils here for auto sorting
     </dl>
     <fieldset class="actions">
       <button type="submit" value="Save">Save</button>

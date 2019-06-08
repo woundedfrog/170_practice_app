@@ -328,6 +328,34 @@ def exclude_specific_profiles_from_list(data, keys)
   data.select { |k,v| [k,v] unless k == keys || k.include?(keys) }
 end
 
+def skills_splitter(skills)
+  leader, auto, tap, slide, drive = [], [] , [], [], []
+  key = ''
+
+  skills.split.each_with_index do |word, idx|
+    if %w(leader lead slide tap drive auto).include?(word.downcase)
+      key = word.downcase
+      next
+    end
+
+   case key#%w(leader slide tap drive).include?(word)
+   when 'lead'
+     leader << word
+   when 'leader'
+     leader << word
+   when 'slide'
+     slide << word
+   when 'tap'
+     tap << word
+   when 'auto'
+     auto << word
+   else
+     drive << word
+   end
+  end
+  [leader, auto, tap, slide, drive].map{ |x| x.join(" ")}
+end
+
 # ##################
 
 def render_markdown(file)
@@ -710,7 +738,6 @@ post '/new_unit' do
       end
   end
 
-
   data[name]['enabled'] = if params[:enabled]
                             'true'
                           else
@@ -719,12 +746,20 @@ post '/new_unit' do
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
   data[name]['element'] = params[:element]
-  data[name]['tier'] = params[:tier].upcase
-  data[name]['leader'] = params[:leader]
-  data[name]['auto'] = params[:auto]
-  data[name]['tap'] = params[:tap]
-  data[name]['slide'] = params[:slide]
-  data[name]['drive'] = params[:drive]
+  data[name]['tier'] = params[:tier]
+
+  if params[:skillsdump].empty?
+    data[name]['leader'] = params[:leader]
+    data[name]['auto'] = params[:auto]
+    data[name]['tap'] = params[:tap]
+    data[name]['slide'] = params[:slide]
+    data[name]['drive'] = params[:drive]
+  else
+    data[name]['leader'], data[name]['auto'],
+    data[name]['tap'], data[name]['slide'], data[name]['drive'] =
+    skills_splitter(params[:skillsdump])
+  end
+
   data[name]['notes'] = params[:notes]
   data[name]['date'] = if date == ''
                          new_time = Time.now.utc.localtime('+09:00')
@@ -803,7 +838,8 @@ end
 
 post '/update/:filename' do
   name = params[:filename] + '.yml'
-  content = params[:content]
+  # binding.pry
+  content = params[:content].gsub("script", '')
   directory =
     if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
       session[:message] = "#{name} was updated"
