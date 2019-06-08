@@ -18,7 +18,13 @@ configure do
 end
 
 before do
-  @message_note = load_file_data('main')
+
+  begin
+    @message_note = load_file_data('main')
+  rescue Psych::SyntaxError => ex
+    p ex.file
+    p ex.message
+  end
   @units = load_file_data('unit')
   @soulcards = load_file_data('sc')
   @new_unit = load_file_data('new_unit')['new_unit']
@@ -496,7 +502,13 @@ end
 get '/:filename/edit' do
   file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
   @name = params[:filename]
-  @content = YAML.dump(YAML.load_file(file))
+  begin
+    @content = YAML.dump(YAML.load_file(file))
+  rescue Psych::SyntaxError => ex
+    p ex.file
+    p ex.message
+  end
+  # @content = YAML.dump(YAML.load_file(file))
 
   erb :edit_notice
 end

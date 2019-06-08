@@ -7,11 +7,12 @@
   <% if session[:username] %>
     <a href="/maininfo/edit">Edit Main Notice</a>
   <% end %>
-  <% if !@message_note%>
+  <% if !@message_note || @message_note.class != Hash %>
     <h6>Welcome</h6>
     <p></p>
     <p></p>
   <% else %>
+  <%=@message_note.class %>
   <h6><%== @message_note['home']['main'] %></h6>
   <p><%== @message_note['home']['sub'] %></p>
   <p><%== @message_note['home']['sub2'] %></p>
