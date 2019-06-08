@@ -760,7 +760,7 @@ post '/new_unit' do
   data[name]['element'] = params[:element]
   data[name]['tier'] = params[:tier]
 
-  if params[:skillsdump].empty?
+  if (params[:skillsdump].nil? || params[:skillsdump].empty?)
     data[name]['leader'] = params[:leader]
     data[name]['auto'] = params[:auto]
     data[name]['tap'] = params[:tap]
