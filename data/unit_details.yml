@@ -510,25 +510,6 @@ hera:
   date: '2018-12-24'
   index: 25
   enabled: 'true'
-mammon:
-  pic: "/images/mammon0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: grass
-  tier: 4 3 3 3
-  leader: Tap Skill defense +10% to grass units.
-  auto: Deals 91 damage
-  tap: Deals 311 damage to target and Gives +25% defense for 15s to self.
-  slide: Deals 564 damage to target and Gives Skill defense +20% to self and Taunt
-    (90% provocation) for 12s.
-  drive: Deals 1456 damage to 2 random enemies and drive Skill defense +30% for 15s
-    to 5 allies.
-  notes: ''
-  date: '2018-12-24'
-  index: 80
-  enabled: 'true'
 red cross:
   pic: "/images/redcross0.png"
   pic2: ''
@@ -1113,27 +1094,6 @@ snow miku:
   date: '2019-1-12'
   index: 164
   enabled: 'true'
-moa:
-  pic: "/images/moa0.png"
-  pic2: "/images/moa1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: light
-  tier: 7 9 3 3
-  leader: Dark enemy debuff evasion rate -10%
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
-  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
-    (unable to act for 10s or after being hit 2 times).
-  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
-    to act for 15s or after being hit 3 times).
-  notes: A PVP cc unit and great in combination with Olga. Also great with DoT teams.
-    Moa is great at stalling the enemies to get to fever/drive first. Useless in Raids
-    and WorldBoss.
-  date: '2019-1-12'
-  index: 161
-  enabled: 'true'
 chang'e:
   pic: "/images/kouga0.png"
   pic2: ''
@@ -1238,28 +1198,6 @@ princess snow miku:
     of which are better choices for Ragna/World Boss.
   date: '2019-1-31'
   index: 2
-  enabled: 'true'
-jupiter:
-  pic: "/images/jupiter0.png"
-  pic2: "/images/jupiter1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 7 9 8 8
-  leader: Defense -10% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 369 damage and Defense -5% for 6s to target.
-  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
-    with lowest Defense.
-  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
-    enemies.
-  notes: "Jupiter requires very high uncaps (+5 +6), his bleed scales very well. \r\nAt
-    low uncaps he is very underwhelming, at high uncaps he is a monster and deserves
-    a higher tier. \r\nKeep in mind that a +0-+3 Jupiter will NOT work well. His bleed
-    requires very high uncaps"
-  date: '2018-12-24'
-  index: 61
   enabled: 'true'
 myrina:
   pic: "/images/myrina0.png"
@@ -1516,27 +1454,6 @@ dark buster lisa:
   date: '2019-3-28'
   index: 12
   enabled: 'true'
-hestia:
-  pic: "/images/hestia0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 8 8 8 8
-  leader: Drive skill damage +10% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
-    type.
-  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
-    with lowest HP with 120 additional damage if debuff type.
-  drive: Deals 2317 damage to all enemies.
-  notes: "Hestia's Bleed is significantly Buffed in Global, she is very strong at
-    high uncaps.   \r\nHestia is hard countered by Eve, however she is incredibly
-    strong facing pvp teams without a water attacker."
-  date: '2018-12-24'
-  index: 27
-  enabled: 'true'
 erato:
   pic: "/images/4erato0.png"
   pic2: ''
@@ -1598,25 +1515,6 @@ mafdet:
     to finish off targets.
   date: '2018-12-24'
   index: 30
-  enabled: 'true'
-raccoon:
-  pic: "/images/raccoon0.png"
-  pic2: "/images/raccoon1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: water
-  tier: 7 7 5 6
-  leader: DEF +10% for Water Type Allies
-  auto: Deal 91 Auto Attack damage
-  tap: Deal 308 Damage, gain Barrier (absorbs +600 damage before HP is affected) for
-    10 seconds
-  slide: Deal 567 Damage, gain EVA +25% and Taunt (88% chance to activate) for 12
-    seconds
-  drive: Deal 1445 Damage to 2 random Enemies, all Allies have EVA% +50% for 15 seconds
-  notes: ''
-  date: '2019-4-26'
-  index: 29
   enabled: 'true'
 fennec:
   pic: "/images/fennec0.png"
@@ -1850,26 +1748,6 @@ elizabeth:
   date: '2018-12-24'
   index: 18
   enabled: 'true'
-guardian chang'e:
-  pic: "/images/gkouga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 7 8 6 7
-  leader: "+5% to Tap damage for all allies. "
-  auto: Deals 113 damage.
-  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
-    or Frozen and 200 Ignore defense if target is Water type.
-  slide: Deals 778 3 times to 1 enemy  (Prioritizing attacker Types) and absorb 200
-    damage as HP.
-  drive: 'Deals 2329 damage to 3 enemies with lowest HP. '
-  notes: Has one of the longer attacker cooldowns at 9 seconds. Great at targeting
-    the enemy's water DPS and sniping them with the help of another DPS.
-  date: '2018-12-31'
-  index: 23
-  enabled: 'true'
 abaddon:
   pic: "/images/abaddon0.png"
   pic2: ''
@@ -1948,26 +1826,6 @@ nirrti:
     \r\nNote: Global skill description is not worded well. Confuse only hits 1 target."
   date: '2018-12-24'
   index: 28
-  enabled: 'true'
-frey:
-  pic: "/images/frey0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 9 8 9 9
-  leader: Drive skill damage +1000 to Dark Units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
-    self.
-  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
-  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
-    enemy according to debuff) to all enemies.
-  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
-    good gear. At low uncaps, he's lackluster, but can deal hefty damage at high uncaps.
-  date: '2018-12-24'
-  index: 22
   enabled: 'true'
 maou davi:
   pic: "/images/maoudavi0.png"
@@ -2392,11 +2250,183 @@ kasumi:
   notes: ''
   date: '2019-5-31'
   index: 34
+moa:
+  pic: "/images/moa0.png"
+  pic2: "/images/moa1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 7 9 3 3
+  leader: Dark enemy debuff evasion rate -10%
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
+  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
+    (unable to act for 10s or after being attacked 2 times).
+  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
+    to act for 15s or after being hit 3 times).
+  notes: A PVP cc unit and great in combination with Olga. Also great with DoT teams.
+    Moa is great at stalling the enemies to get to fever/drive first. Useless in Raids
+    and WorldBoss.
+  date: '2019-1-12'
+  index: 161
+luin:
+  pic: "/images/ruin0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 5 5 5 5
+  leader: DEF -15% for Water Type Enemies
+  auto: Deal 101 Auto Attack damage
+  tap: 'Deal 390 Damage to 1 Enemy (Priority: Highest DEF), DEF -350 for 8 seconds'
+  slide: 'Deal 619 Damage to 2 Enemies (Priority: Lowest HP), inflict Anti-Barrier
+    (Cancels Barrier and deals damage equal to 70% of remaining Barrier HP) and Debuff
+    duration +20% for 12 seconds'
+  drive: 'Deal 1916 Damage to 3 Enemies (Priority: Fortified) and inflict Fortitude
+    Explosion (Cancels 2 counts or less of Fortitude, deals damage equal to 1500 of
+    each count remaining afterwards)'
+  notes: 'Anti-barrier is too niche to be useful. Increased debuff duration is a tiny
+    increase in overall damage. '
+  date: '2019-6-14'
+  index: 41
+durandal:
+  pic: "/images/durandal0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 7 6 7 9
+  leader: CRT Rate +15% for Allies (During Devil Rumble, Critical Damage +20%)
+  auto: Deal 100 Auto Attack damage
+  tap: Deal 380 Damage, CRT Rate +30% for self and 1 Attacker Ally for 10 seconds
+  slide: 'Deal 860 Damage to 2 random Enemies, Skill Gauge Charge Amount +35% and
+    Slide Skill Damage +1200 for 3 Allies (Priority: Dark Type Attackers) for 15 seconds'
+  drive: 'Deal 2032 Damage to 3 Enemies (Priority: Light Type), inflict Blind (decrease
+    Attack ACC 60%) for 25 seconds, and ATK +30% for 3 Allies (Priority: Highest ATK)
+    for 25 seconds'
+  notes: Mediocre in PvP even with the extra 20% crit damage leader because of his
+    low-impact slide. Pantheon is a much better PvP buffer for dark childs. Great
+    for Light World Boss as there's currently no competition for slide damage increase.
+  date: '2019-6-14'
+  index: 40
+ashtoreth:
+  pic: "/images/ashtoreth1.png"
+  pic2: "/images/ashtoreth1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 6 6 6 7
+  leader: ''
+  auto: Deal 113 Attack damage
+  tap: 'Deal 504 Damage to 1 Enemy (Priority: Highest ATK), 65% chance to Direct Hit
+    (ignores a target''s Fortitude status) for 13 seconds Skill Damage +8% for Light
+    Type Allies'
+  slide: 'Deal 829 Damage with 3 attacks and 120 Ignore DEF Damage to 1 Enemy (Priority:
+    Confused), on Confused or Fortified targets deal 175 Bonus Damage'
+  drive: 'Deal 2334 Damage to 4 Enemies (Priority: Highest ATK), 70% chance to randomly
+    inflict Confuse on 1 Enemy for 10 seconds, 90% chance to Direct Hit (ignores a
+    target''s Fortitude status) for 18 seconds'
+  notes: Weak slide target priority for slide as confusion is unreliable in PvP. Requiring
+    a RNG tap first to ignore fortitude is much slower compared to just needing to
+    slide or tap.
+  date: '2019-6-14'
+  index: 42
+jupiter:
+  pic: "/images/jupiter0.png"
+  pic2: "/images/jupiter1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 8 9 8 8
+  leader: Defense -10% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 369 damage and Defense -5% for 6s to target.
+  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
+    with lowest Defense.
+  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
+    enemies.
+  notes: "Jupiter requires very high uncaps (+5 +6), his bleed scales very well. \r\nAt
+    low uncaps he is very underwhelming, at high uncaps he is a monster and deserves
+    a higher tier. \r\nKeep in mind that a +0-+3 Jupiter will NOT work well. His bleed
+    requires very high uncaps"
+  date: '2018-12-24'
+  index: 61
+guardian chang'e:
+  pic: "/images/gkouga0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 9 6 7
+  leader: "+5% to Tap damage for all allies. "
+  auto: Deals 113 damage.
+  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
+    or Frozen and 200 Ignore defense if target is Water type.
+  slide: Deals 778 3 times to 1 enemy  (Prioritizing attacker Types) and absorb 200
+    damage as HP.
+  drive: 'Deals 2329 damage to 3 enemies with lowest HP. '
+  notes: Has one of the longer attacker cooldowns at 9 seconds. Great at targeting
+    the enemy's water DPS and sniping them with the help of another DPS.
+  date: '2018-12-31'
+  index: 23
+frey:
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 8 7 9 9
+  leader: Drive skill damage +1000 to Dark Units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
+    self.
+  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
+  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
+    enemy according to debuff) to all enemies.
+  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
+    good gear. At low uncaps, he's lackluster, but can deal hefty damage at high uncaps.
+  date: '2018-12-24'
+  index: 22
+hestia:
+  pic: "/images/hestia0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 8 7 8 8
+  leader: Drive skill damage +10% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
+    type.
+  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
+    with lowest HP with 120 additional damage if debuff type.
+  drive: Deals 2317 damage to all enemies.
+  notes: "Hestia's Bleed is significantly Buffed in Global, she is very strong at
+    high uncaps.   \r\nHestia is hard countered by Eve, however she is incredibly
+    strong facing pvp teams without a water attacker."
+  date: '2018-12-24'
+  index: 27
 serval:
   pic: "/images/serval0.png"
   pic2: "/images/serval1.png"
   pic3: ''
-  enabled: 'false'
+  enabled: 'true'
   stars: '5'
   type: attacker
   element: grass
@@ -2412,3 +2442,41 @@ serval:
     better than the description otherwise implies.
   date: '2019-4-26'
   index: 20
+raccoon:
+  pic: "/images/raccoon0.png"
+  pic2: "/images/raccoon1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: water
+  tier: 6 6 5 6
+  leader: DEF +10% for Water Type Allies
+  auto: Deal 91 Auto Attack damage
+  tap: Deal 308 Damage, gain Barrier (absorbs +600 damage before HP is affected) for
+    10 seconds
+  slide: Deal 567 Damage, gain EVA +25% and Taunt (88% chance to activate) for 12
+    seconds
+  drive: Deal 1445 Damage to 2 random Enemies, all Allies have EVA% +50% for 15 seconds
+  notes: ''
+  date: '2019-4-26'
+  index: 29
+mammon:
+  pic: "/images/mammon0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: grass
+  tier: 4 3 3 3
+  leader: Tap Skill defense +10% to grass units.
+  auto: Deals 91 damage
+  tap: Deals 311 damage to target and Gives +25% defense for 15s to self.
+  slide: Deals 564 damage to target and Gives Skill defense +20% to self and Taunt
+    (90% provocation) for 12s.
+  drive: Deals 1456 damage to 2 random enemies and drive Skill defense +30% for 15s
+    to 5 allies.
+  notes: ''
+  date: '2018-12-24'
+  index: 80
