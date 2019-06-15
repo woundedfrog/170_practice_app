@@ -1,12 +1,4 @@
 ---
-afternoon nap:
-  pic: "/images/sc/afternoonnap.jpg"
-  stars: '5'
-  stats: "HP: 1040 at lvl0 / 2020 at lvl50 / 3535 at lvl50 +5. \r\n\r\nCritical: 270
-    at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: None. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
-  index: 4
-  enabled: 'true'
 wisteria tree:
   pic: "/images/sc/wisteriatree.jpg"
   stars: '5'
@@ -708,3 +700,11 @@ eternal oath:
   stats: "Attack: 590 at lvl0.\r\n\r\nDefense: 630 at lvl0."
   passive: "Restriction: [if none write none]\r\n\r\nDebuff evasion +10%."
   index: 87
+afternoon nap:
+  pic: "/images/sc/afternoonnap.jpg"
+  enabled: 'true'
+  stars: '5'
+  stats: "HP: 1040 at lvl0 / 2020 at lvl50 / 3535 at lvl50 +5. \r\n\r\nCritical: 270
+    at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
+  passive: "Restriction: Fire. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
+  index: 4

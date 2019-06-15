@@ -1802,29 +1802,6 @@ party star medb:
   date: '2018-11-28'
   index: 150
   enabled: 'true'
-lady bathory:
-  pic: "/images/bathory0.png"
-  pic2: "/images/bathory1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: grass
-  tier: 7 9 6 7
-  leader: Final drive skill damage for all enemies -25% (Additional, deduce DoT debuff
-    damage -50% in Devil Rumble).
-  auto: Deal 102 auto attack damage.
-  tap: Prioritizing enemies with many buffs, deal 399 damage to target, reduce debuff
-    evasion of enemy -10% for 20 seconds and reduce defense power -10% for 8 seconds.
-  slide: Prioritizing enemies with the least HP, deal 702 damage to do 2 enemies,
-    apply "Dancing blade" (Reduce defense power -20% and apply 200 DoT every 2 seconds)
-    for 14 seconds and reduce Defense power -700.
-  drive: Prioritizing enemies with many buffs, deal 2089 to 3 enemies and apply "Stigma"
-    (Continuous damage every 4 seconds [Buffs target number +1] x 250 continuous damage,
-    maximum 6 buffs [Final tick 7]) for 20 seconds.
-  notes: ''
-  date: '2018-12-05'
-  index: 151
-  enabled: 'true'
 mysterious saturn:
   pic: "/images/mysterioussaturn0.png"
   pic2: ''
@@ -2320,47 +2297,6 @@ amor:
   date: '2018-11-28'
   index: 135
   enabled: 'true'
-innocent venus:
-  pic: "/images/innocentvenus0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: light
-  tier: 9 9 9 9
-  leader: Increase HP recovery of all allies (instant or HoT) +10%.
-  auto: Deal 96 auto attack damage.
-  tap: Prioritizing allies with the lowest HP remaining, heal 314 to 2 allies.
-  slide: "For 8 seconds to 4 allies except herself, apply \"Immortal\" (HP cannot
-    drop below 1 when being attacked). \r\nPrioritizing allies with least HP, HoT
-    231 (once every 2 seconds) to 2 allies for 12 seconds. "
-  drive: "Deal 1597 damage to 4 enemies randomly. \r\nPrioritizing allies with least
-    HP remaining, apply \"Debuff Clear\" to 3 allies (Cancels after 14 seconds or
-    2 debuff attacks) and heals 1691 HP."
-  notes: ''
-  date: '2018-12-05'
-  index: 156
-  enabled: 'true'
-nicole:
-  pic: "/images/nicole0.png"
-  pic2: "/images/nicole1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 7 7 10 10
-  leader: "+8% Final slide skill damage for Wood element allies. "
-  auto: 'Deal 113 auto damage. '
-  tap: 'Deal 3 tap skills plus 250 damage to the target and absorb 220 of damage as
-    HP. '
-  slide: 'Prioritizing the enemies with least HP, Deal 2206 damage to 2 enemies, gives
-    945 defense ignore damage and apply 220 damage per buff (up to 8 applications). '
-  drive: Deal 5544 damage to 4 enemies randomly and apply "Snow Bomb" to a enemy randomly
-    (After 10 seconds, deal 1500 damage and reset skill gauge)
-  notes: ''
-  date: '2018-12-25'
-  index: 162
-  enabled: 'true'
 christmas leda:
   pic: "/images/christmasleda0.png"
   pic2: ''
@@ -2675,26 +2611,6 @@ hestia:
   date: '2018-11-28'
   index: 27
   enabled: 'true'
-jupiter:
-  pic: "/images/jupiter0.png"
-  pic2: "/images/jupiter1.png"
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 8 6 9 9
-  leader: Defense -10% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 369 damage and Defense -5% for 6s to target.
-  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
-    with lowest Defense.
-  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
-    enemies.
-  notes: A great debuffer in all content and has added bonus of doing bleed damage
-    on slide. Jupiter > Freesia > Tiamat.
-  date: '2018-11-28'
-  index: 61
-  enabled: 'true'
 freesia:
   pic: "/images/4freesia0.png"
   pic2: ''
@@ -2927,29 +2843,6 @@ tethys:
   date: '2018-11-28'
   index: 68
   enabled: 'true'
-sitri:
-  pic: "/images/sitri0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 6 7 10 10
-  leader: Maximum hp +1000 to all Light Allies (+3000 additional hp on Worldboss)
-  auto: Deals 100 Damages.
-  tap: Deals 380 Damages to 1 enemy. On Worldboss Only, removes 5 Attack and Defense
-    stacks.
-  slide: Deals 656 Damages to 1 enemy and Apply +1600 Attack to 9 allies (prioritizing
-    Lights). On Worldboss Only, Apply -2 Cooldown for 2 Turns and +1000 Slide Skill
-    Damage for 20seconds to 5highest attack Allies (prioritizing back row).
-  drive: Deals 1745 Damages to 2 random enemies and Apply +2000 barrier to 9 allies
-    lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
-    Allies (Prioritizing back row).
-  notes: Attack buffer and specifically made for WB but can do just as well in other
-    modes.
-  date: '2018-11-28'
-  index: 29
-  enabled: 'true'
 mammon:
   pic: "/images/mammon0.png"
   pic2: ''
@@ -2968,28 +2861,6 @@ mammon:
   notes: Pull him, lock him, then forget him, but don't diss him.
   date: '2018-11-28'
   index: 80
-  enabled: 'true'
-medusa:
-  pic: "/images/medusa0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 6 6 3 3
-  leader: Debuff resist +15% from Light Types Enemies.
-  auto: Deals 101 damage.
-  tap: "·Deals 390 damage to target. \r\n·Reduce 12% Attack to target for 10s."
-  slide: "Deals 619 to 2 random enemies. \r\nApply \"Taunt\" (20% Provocation) to
-    self for 12s. Apply \"Counter Petrification\" (70% chance to apply \"Petrify\"
-    (unable to act for 10seconds or after being hit 1 time) enemies that attack Medusa)
-    to self for 12s."
-  drive: Deal 4837 damage to 3 enemies plus 500 additional damage to "Petrified" targets
-    and 90% change to "Petrify" (unable to act for 15 seconds or after being hit 2
-    times) to targets.
-  notes: Can be useful for PVP.
-  date: '2018-11-28'
-  index: 83
   enabled: 'true'
 eve:
   pic: "/images/eve0.png"
@@ -3098,32 +2969,6 @@ horus:
   notes: ''
   date: '2018-11-28'
   index: 32
-  enabled: 'true'
-neptune:
-  pic: "/images/hardworkerneptune0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 7 7 10 9
-  leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
-    Increase instant heal +10%)."
-  auto: Deal 101 auto attack damage.
-  tap: "Deal 387 damage to target. \r\nPrioritizing allies with least HP remaining,
-    Heal +30% of HP to 2 allies for 20 seconds. \r\nFor Raid Boss only, delete target
-    stacking buff (Attack/ defense power) 5 times ONLY."
-  slide: "Deal 676 damage to target. \r\nPrioritizing 2 allies with least HP remaining,
-    increase skill gauge speed +30% and heal 1251 HP for 16 seconds. \r\nFor Raid
-    Boss only, prioritizing an ally with the most attack power, get a 30% chance to
-    apply \"Double-Edge Sword\" (Increase attack power and reduce defense) for 16
-    seconds.\r\n"
-  drive: "Deal 1816 damage to 3 enemies randomly. \r\nApply \"Life Bind\" up to 5
-    allies (Convert 50% of the damage received into healing, the rest of the HP buff
-    is spread to 2 allies with the least HP) for 20 seconds. "
-  notes: ''
-  date: '2018-12-05'
-  index: 154
   enabled: 'true'
 bi moa:
   pic: "/images/bimoa0.png"
@@ -3468,25 +3313,6 @@ daphnis:
   date: '2019-3-29'
   index: 174
   enabled: 'true'
-serval:
-  pic: "/images/serval0.png"
-  pic2: "/images/serval1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 7 7 7 7
-  leader: "+15% crit rate for grass type allies"
-  auto: Deals 113 damage
-  tap: Deals 482 damage to target, Apply "Lifesteal" (15 % of damage dealt restores
-    HP) for 20 seconds to self.
-  slide: Prioritizing support types, deal 902 damage and 570 Ignore defense + Tap
-    damage 3 times to target, and gains +25% evasion to self for 12s.
-  drive: Deals 2479 damage to 4 enemies with lowest HP.
-  notes: ''
-  date: '2019-4-13'
-  index: 175
-  enabled: 'true'
 araiguma:
   pic: "/images/raccoon0.png"
   pic2: "/images/raccoon1.png"
@@ -3644,49 +3470,6 @@ kubaba:
   date: '2019-4-30'
   index: 178
   enabled: 'true'
-creature:
-  pic: "/images/emptyunit0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: fire
-  tier: 5 5 7 7
-  leader: Attack + 8% to fire type allies.
-  auto: Deal 73 damage.
-  tap: Deal 233 damage to target and apply a 60% chance to remove one debuff from
-    one ally.
-  slide: Deal 448 damage to 2 targets and +1000 attack to 2 allies with the highest
-    attack for 16 seconds.
-  drive: Deal 1084 damage to 3 random targets. Attack and defense +20% for 20 seconds.
-  notes: ''
-  date: '2019-2-13'
-  index: 182
-  enabled: 'true'
-botan:
-  pic: "/images/botan0.png"
-  pic2: "/images/botan1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 7 7 7 7
-  leader: Skill gauge speed +12% to wood allies [For UG only, all allies +15% attack]
-  auto: Deals 100 damage
-  tap: Deals 385 damage to target. 70% chance to remove Defense down debuffs from
-    2 allies.
-  slide: 'Deals 675 damage to target. For 16 seconds, apply Max HP +1600 (Priority:
-    Lowest HP) to 2 allies, 70% chance to apply “Time distortion” (removes -gauge
-    speed debuffs and increases skill gauge speed +40%) and[For UG only, gives +15%
-    attack 2 allies with highest attack.]'
-  drive: Deals 1764 damage to 3 enemies. To the ally with the highest attack, gives
-    Berserk (Increase attack by +90% and becomes immune to damage, afterwards unit
-    will be stunned for 5s) for 20s and prioritizing grass allies, 3 allies skill
-    gauge charge +50%
-  notes: ''
-  date: '2019-5-24'
-  index: 183
 iphis:
   pic: "/images/iphis0.png"
   pic2: "/images/iphis1.png"
@@ -3768,3 +3551,242 @@ melpomene:
     good at higher uncaps.
   date: '2018-11-28'
   index: 107
+jupiter:
+  pic: "/images/jupiter0.png"
+  pic2: "/images/jupiter1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 8 8 9 9
+  leader: Defense -10% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 369 damage and Defense -5% for 6s to target.
+  slide: Deals 588 damage and Bleeding (100 damage every 2s) for 14s to 2 enemies
+    with lowest Defense.
+  drive: Deals 1806 damage, removes one buff and Defense -25% for 20s to 3 random
+    enemies.
+  notes: A great debuffer in all content and has added bonus of doing bleed damage
+    on slide. Jupiter > Freesia > Tiamat.
+  date: '2018-11-28'
+  index: 61
+creature:
+  pic: "/images/4creature0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: fire
+  tier: 5 5 7 7
+  leader: Attack + 8% to fire type allies.
+  auto: Deal 73 damage.
+  tap: Deal 233 damage to target and apply a 60% chance to remove one debuff from
+    one ally.
+  slide: Deal 448 damage to 2 targets and +1000 attack to 2 allies with the highest
+    attack for 16 seconds.
+  drive: Deal 1084 damage to 3 random targets. Attack and defense +20% for 20 seconds.
+  notes: ''
+  date: '2019-2-13'
+  index: 182
+medusa:
+  pic: "/images/medusa0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 6 6 3 3
+  leader: Debuff resist +15% from Light Types Enemies.
+  auto: Deals 101 damage.
+  tap: "·Deals 390 damage to target. \r\n·Reduce 12% Attack to target for 10s."
+  slide: "Deals 619 to 2 random enemies. \r\nApply \"Taunt\" (20% Provocation) to
+    self for 12s. Apply \"Counter Petrification\" (70% chance to apply \"Petrify\"
+    (unable to act for 10seconds or after being hit 1 time) enemies that attack Medusa)
+    to self for 12s."
+  drive: Deal 4837 damage to 3 enemies plus 500 additional damage to "Petrified" targets
+    and 90% change to "Petrify" (unable to act for 15 seconds or after being hit 2
+    times) to targets.
+  notes: Can be useful for PVP.
+  date: '2018-11-28'
+  index: 83
+serval:
+  pic: "/images/serval0.png"
+  pic2: "/images/serval1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 7 7 7
+  leader: Wood type allies critical rate +15%
+  auto: Deals 113 damage
+  tap: Deals 482 damage to target, Apply "Lifesteal" (15 % of damage dealt restores
+    HP) for 20 seconds to self.
+  slide: Prioritizing support types, deal 902 damage and 570 Ignore defense damage,
+    3 times to target,  gains +25% evasion to self for 12s if a critical hit occurs
+  drive: Deals 2479 damage to 4 enemies with lowest HP.
+  notes: ''
+  date: '2019-4-13'
+  index: 175
+maruru:
+  pic: "/images/maruru0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 6 8 5 7
+  leader: Defense -15% to all enemies
+  auto: Deals 293 damage
+  tap: Deals 1535 damage to target, 62.7% chance to apply “Robbery” (steals a buff
+    from the target and apply it to herself)
+  slide: Prioritizing 2 highest defence enemies, deals 2037 damage, 77% chance apply
+    Transition (attack and defense are swapped) for 20 seconds & 77% chance to confuse
+    for 10 seconds
+  drive: Prioritizing enemies with buffs, deal 6081 damage to 3 targets, 70% chance
+    to apply “Robbery” (steals a buff from the target and apply it to herself) & skill
+    gauge charge amount -35% for 16 seconds
+  notes: ''
+  date: '2019-6-12'
+  index: 187
+botan:
+  pic: "/images/botan0.png"
+  pic2: "/images/botan1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 7 8 9 6
+  leader: Skill gauge speed +12% to wood allies [For UG only, all allies +15% attack]
+  auto: Deals 100 damage
+  tap: Deals 385 damage to target. 70% chance to remove Defense down debuffs from
+    2 allies.
+  slide: 'Deals 675 damage to target. For 16 seconds, apply Max HP +1600 (Priority:
+    Lowest HP) to 2 allies, 70% chance to apply “Time distortion” (removes -gauge
+    speed debuffs and increases skill gauge speed +40%) and[For UG only, gives +15%
+    attack 2 allies with highest attack.]'
+  drive: Deals 1764 damage to 3 enemies. To the ally with the highest attack, gives
+    Berserk (Increase attack by +90% and becomes immune to damage, afterwards unit
+    will be stunned for 5s) for 20s and prioritizing grass allies, 3 allies skill
+    gauge charge +50%
+  notes: ''
+  date: '2019-5-24'
+  index: 183
+sitri:
+  pic: "/images/sitri0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 7 7 10
+  leader: Maximum hp +1000 to all Light Allies (+3000 additional hp on Worldboss)
+  auto: Deals 100 Damages.
+  tap: Deals 380 Damages to 1 enemy. On Worldboss Only, removes 5 Attack and Defense
+    stacks.
+  slide: Deals 656 Damages to 1 enemy and Apply +1600 Attack to 9 allies (prioritizing
+    Lights). On Worldboss Only, Apply -2 Cooldown for 2 Turns and +1000 Slide Skill
+    Damage for 20seconds to 5highest attack Allies (prioritizing back row).
+  drive: Deals 1745 Damages to 2 random enemies and Apply +2000 barrier to 9 allies
+    lowest HP (Prioritizing front row) and +1500 Tap Skill Damage to 9 highest attacks
+    Allies (Prioritizing back row).
+  notes: Attack buffer and specifically made for WB but can do just as well in other
+    modes.
+  date: '2018-11-28'
+  index: 29
+lady bathory:
+  pic: "/images/bathory0.png"
+  pic2: "/images/bathory1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 9 10 9 10
+  leader: Final drive skill damage for all enemies -25% (Additional, deduce DoT debuff
+    damage -50% in Devil Rumble).
+  auto: Deal 102 auto attack damage.
+  tap: Prioritizing enemies with many buffs, deal 399 damage to target, reduce debuff
+    evasion of enemy -10% for 20 seconds and reduce defense power -10% for 8 seconds.
+  slide: Prioritizing enemies with the least HP, deal 702 damage to 2 enemies, apply
+    "Dancing blade" (Reduce defense power -20% and apply 200 DoT every 2 seconds)
+    for 14 seconds and Defence -700 .
+  drive: Prioritizing enemies with many buffs, deal 2089 to 3 enemies and apply "Stigma"
+    (Continuous damage every 4 seconds [Buffs target number +1] x 250 continuous damage,
+    maximum 6 buffs [Final tick 7]) for 20 seconds.
+  notes: A must need in PvP
+  date: '2018-12-05'
+  index: 151
+neptune:
+  pic: "/images/hardworkerneptune0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 9 9 10 9
+  leader: "+8% increase skill gauge speed for all allies (Additional in Raid Boss,
+    Increase instant heal +10%)."
+  auto: Deal 101 auto attack damage.
+  tap: "Deal 387 damage to target. \r\nPrioritizing allies with least HP remaining,
+    Heal +30% of HP to 2 allies for 20 seconds. \r\nFor Raid Boss only, delete target
+    stacking buff (Attack/ defense power) 5 times ONLY."
+  slide: "Deal 676 damage to target. \r\nPrioritizing 2 allies with least HP remaining,
+    increase skill gauge speed +30% and heal 1251 HP for 16 seconds. \r\nFor Raid
+    Boss only, prioritizing an ally with the most attack power, get a 30% chance to
+    apply \"Double-Edge Sword\" (Increase attack power and reduce defense) for 16
+    seconds.\r\n"
+  drive: "Deal 1816 damage to 3 enemies randomly. \r\nApply \"Life Bind\" up to 5
+    allies (Convert 50% of the damage received into healing, the rest of the HP buff
+    is spread to 2 allies with the least HP) for 20 seconds. "
+  notes: ''
+  date: '2018-12-05'
+  index: 154
+nicole:
+  pic: "/images/nicole0.png"
+  pic2: "/images/nicole1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 8 9 8 9
+  leader: "+8% Final slide skill damage for Wood element allies. "
+  auto: 'Deal 113 auto damage. '
+  tap: 'Deal 3 tap skills plus 250 damage to the target and absorb 220 of damage as
+    HP. '
+  slide: 'Prioritizing the enemies with least HP, Deal 2206 damage to 2 enemies, gives
+    945 defense ignore damage and apply 220 damage per buff (up to 8 applications). '
+  drive: Deal 5544 damage to 4 enemies randomly and apply "Snow Bomb" to a enemy randomly
+    (After 10 seconds, deal 1500 damage and reset skill gauge)
+  notes: ''
+  date: '2018-12-25'
+  index: 162
+venus:
+  pic: "/images/innocentvenus0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: light
+  tier: 6 7 7 6
+  leader: Increase HP recovery of all allies (instant or HoT) +10%.
+  auto: Deal 96 auto attack damage.
+  tap: Prioritizing allies with the lowest HP remaining, heal 314 to 2 allies.
+  slide: "For 8 seconds to 4 allies except herself, apply \"Immortal\" (HP cannot
+    drop below 1 when being attacked). \r\nPrioritizing allies with least HP, HoT
+    231 (once every 2 seconds) to 2 allies for 12 seconds. "
+  drive: "Deal 1597 damage to 4 enemies randomly. \r\nPrioritizing allies with least
+    HP remaining, apply \"Debuff Clear\" to 3 allies (Cancels after 14 seconds or
+    2 debuff attacks) and heals 1691 HP."
+  notes: ''
+  date: '2018-12-05'
+  index: 156

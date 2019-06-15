@@ -169,10 +169,10 @@ class RiceMineTest < Minitest::Test
   end
 
   def test_editing_updating_unit
-    get "/childs/5stars/cleopatra/edit", {:unit_name => "cleopatra"}, admin_session
+    get "/childs/5stars/cleopatra/edit", {:current_unit_name => "cleopatra"}, admin_session
     assert_includes last_response.body, "cleopatra"
 
-    post "/new_unit", {:unit_name => "cleopatra1", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :index => 0}, admin_session
+    post "/new_unit", {:current_unit_name => "cleopatra", :new_unit_name => "cleopatra1", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :index => 0}, admin_session
 
     assert_equal "New unit called CLEOPATRA1 has been created.", session[:message]
 
@@ -183,19 +183,19 @@ class RiceMineTest < Minitest::Test
   end
 
   def test_editing_updating_unit_and_redirect
-    post "/new_unit", {:unit_name => "cleopatra1", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :stars => 5, :slide => '', :tap => '', :drive => '', :leader => '', :auto => '', :notes => '', :index => 0}, admin_session
+    post "/new_unit", {:new_unit_name => "cleopatra1", :tier => "S", :pic => '', :pic2 => '', :pic3 => '', :stars => 5, :slide => '', :tap => '', :drive => '', :leader => '', :auto => '', :notes => '', :index => 0}, admin_session
 
     assert_equal 302, last_response.status
     assert_equal "New unit called CLEOPATRA1 has been created.", session[:message]
 
-    get last_response["location"], {:unit_name => "cleopatra"}
+    get last_response["location"]
     assert_includes last_response.body, *["<h3>Cleopatra1", "profile_imgs"]
   end
 
   def test_creating_new_unit
     # img_file = "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png")
 
-    post "/new_unit", {:unit_name => "eve", :tier => "S", "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png"), :pic2 => '', :pic3 => '', :index => 3}, admin_session
+    post "/new_unit", {:new_unit_name => "eve", :tier => "S", "file" => Rack::Test::UploadedFile.new("testunit.png", "image/png"), :pic2 => '', :pic3 => '', :index => 3}, admin_session
 
 
     assert_equal "New unit called EVE has been created.", session[:message]

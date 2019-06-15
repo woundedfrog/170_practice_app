@@ -2,11 +2,17 @@
   <form action="/new_unit" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
-        <label for="unit_name">Enter a unit name:</label>
+        <label for="current_unit_name">Unit name:</label>
       </dt>
       <dd>
-        <input class="content" name="unit_name" placeholder="" type="text" value="<%= params[:unit_name] %>" required>
-        <input name="edited" type="checkbox" required>
+        <input class="content" name="current_unit_name" placeholder="" type="text" value="<%= @unit_name %>" readonly="readonly">
+        <input name="edited" type="checkbox" required> Check box to enable editing
+      </dd>
+      <dt>
+        <label for="new_unit_name">Enter New unit name:  (Leave empty unless you want to change the name)</label>
+      </dt>
+      <dd>
+        <input class="content" name="new_unit_name" placeholder="" type="text" value="<%= params[:new_unit_name] %>">
       </dd>
       <% @current_unit.each do |key, value| %>
       <dt>
@@ -29,7 +35,7 @@
         <% elsif key == "index" || key == 'date'%>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
          <% elsif key == "enabled" %>
-         <input class="content" name="enabled" placeholder="" type="checkbox">
+         <input class="content" name="enabled" placeholder="" type="checkbox"> Check to hide profile from public view
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

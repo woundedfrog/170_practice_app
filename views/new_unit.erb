@@ -2,13 +2,13 @@
   <form action="/new_unit" method="post" enctype="multipart/form-data">
     <dl>
       <dt>
-        <label for="unit_name">Enter a unit name:</label>
+        <label for="new_unit_name">Enter a unit name:</label>
       </dt>
       <dd>
-        <input class="content" name="unit_name" placeholder="" type="text"  value="<%= params[:unit_name] %>" required>
+        <input class="content" name="new_unit_name" placeholder="" type="text"  value="<%= params[:new_unit_name] %>" required>
       </dd>
       <dt>
-        <label for="enabled">Check to make profile public:</label>
+        <label for="enabled"> Check to hide profile from public view:</label>
       </dt>
       <dd>
         <input class="content" name="enabled" placeholder="" type="checkbox">

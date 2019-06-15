@@ -690,9 +690,9 @@ post '/equips/new_sc' do
 
   data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
   data[name]['enabled'] = if params[:enabled]
-                            'true'
-                          else
                             'false'
+                          else
+                            'true'
                           end
   data[name]['stars'] = params[:stars]
   data[name]['stats'] = params[:stats]
@@ -708,28 +708,32 @@ post '/new_unit' do
   require_user_signin
   unit_data = @units
 
-  @current_unit = unit_data[params[:unit_name]]
+  @new_unit_name = params[:new_unit_name].downcase
+  @original_name = params[:current_unit_name] ? params[:current_unit_name].downcase : ''
+  @current_unit = unit_data.select{ |name, details| [name => details] if name == @new_unit_name }
   @max_index_val = get_max_index_number(unit_data)
 
   data = unit_data
-  name = params[:unit_name].downcase
+  name = @new_unit_name == '' ? @original_name : @new_unit_name
   index = params[:index].to_i
-  date = check_and_fetch_date(data, name)
+  date = check_and_fetch_date(data, @original_name)
 
   original_unit = unit_data.select do |unit, info|
-    unit if params['index'].to_i == info['index'].to_i
+    unit if params['index'].to_i == info['index'].to_i && unit == @original_name
   end
 
   pname = create_file_from_upload(params[:file], params[:pic], 'public/images')
 
-  if unit_data.include?(name) && index != unit_data[name]['index']
+  if (unit_data.include?(@original_name) && index != unit_data[@original_name]['index']) ||
+     (unit_data.include?(@new_unit_name) && index != unit_data[@new_unit_name]['index'])
+
     session[:message] =
       'A unit by that name already exists. Please enter a different unit name.'
     status 422
 
     if params['edited']
       temp_name = get_unit_name(unit_data, index)
-      redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit"
+      redirect "/childs/#{params[:stars]}stars/#{temp_name}/edit".gsub(' ', '%20')
     else
       redirect '/new_unit'
     end
@@ -751,9 +755,9 @@ post '/new_unit' do
   end
 
   data[name]['enabled'] = if params[:enabled]
-                            'true'
-                          else
                             'false'
+                          else
+                            'true'
                           end
   data[name]['stars'] = params[:stars]
   data[name]['type'] = params[:type]
@@ -771,7 +775,6 @@ post '/new_unit' do
     data[name]['tap'], data[name]['slide'], data[name]['drive'] =
     skills_splitter(params[:skillsdump])
   end
-
   data[name]['notes'] = params[:notes]
   data[name]['date'] = if date == ''
                          new_time = Time.now.utc.localtime('+09:00')
