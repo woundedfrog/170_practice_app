@@ -118,6 +118,7 @@ def delete_selected_file(name)
       FileUtils.rm(f + name)
     end
   end
+  history_update("deleted file: #{name}")
 end
 
 def valid_credentials?(username, password)
@@ -404,6 +405,22 @@ def zip_it(path)
   end
 end
 #zipping IMAGE files END
+
+def history_update(info)
+  path = File.expand_path('data/history.yml', __dir__)
+  data = YAML.load_file(path)
+
+    if data.size == 100
+      data.shift(10)
+      time = Time.now.utc.localtime('+09:00').to_s + " " + info
+    else
+      time = Time.now.utc.localtime('+09:00').to_s + " " + info
+    end
+    data << time
+    File.write('data/history.yml', YAML.dump(data))
+  @history = YAML.load_file(path)
+end
+
 # ##################
 
 not_found do
@@ -494,6 +511,10 @@ get '/' do
 end
 
 get '/basics' do
+
+  path = File.expand_path('data/history.yml', __dir__)
+  @history = YAML.load_file(path)
+
   path = File.expand_path('data/basics.md', __dir__)
   @markdown = load_file_content(path)
   erb :starterguide
@@ -701,6 +722,7 @@ post '/equips/new_sc' do
 
   File.write('data/sc/soul_cards.yml', YAML.dump(data))
   session[:message] = "New Soulcard called #{name.upcase} has been created."
+  history_update(session[:message])
   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
@@ -786,6 +808,7 @@ post '/new_unit' do
 
   File.write('data/unit_details.yml', YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
+  history_update(session[:message])
   redirect "/childs/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
@@ -801,6 +824,7 @@ get '/childs/:star_rating/:unit_name/remove' do
     units_info.delete(unit)
     File.write('data/unit_details.yml', YAML.dump(units_info))
     session[:message] = "#{unit.upcase} unit was successfully deleted."
+    history_update(session[:message])
   end
   redirect '/'
 end
@@ -817,6 +841,7 @@ get '/equips/:star_rating/:sc_name/remove' do
     cards_info.delete(card)
     File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
     session[:message] = "#{card.upcase} SoulCard successfully deleted."
+    history_update(session[:message])
   end
   redirect '/'
 end
@@ -848,12 +873,12 @@ post '/upload' do
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
+  history_update("File uploaded: #{name}")
   erb :upload
 end
 
 post '/update/:filename' do
   name = params[:filename] + '.yml'
-  # binding.pry
   content = params[:content].gsub("script", '')
   directory =
     if ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
