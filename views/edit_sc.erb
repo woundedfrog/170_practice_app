@@ -22,13 +22,25 @@
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
-         <% elsif key == "enabled" %>
+        <% elsif key == "enabled" %>
          <input class="content" name="enabled" placeholder="" type="checkbox">
+        <% elsif key == 'stats' %>
+          <textarea class="content" name="normal" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= value %></textarea>
+          <label for="prism">Prism info:</label>
+          <textarea class="content" name="prism" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= value %></textarea>
+        <% elsif ['prism', 'normal', 'passive'].include?(key) %>
+          <textarea class="content" name="<%= key %>" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= flatten_if_possible(value) %></textarea>
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>
       </dd>
       <% end %>
+      <dd>
+        <% if @current_card['prism'].nil? %>
+          <label for="prism">Prism info:</label>
+          <textarea class="content" name="prism" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"></textarea>
+        <% end %>
+        </dd>
     </dl>
     <fieldset class="actions">
       <button type="submit" value="Save">Save</button>

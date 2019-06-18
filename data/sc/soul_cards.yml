@@ -401,14 +401,6 @@ luna:
   passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
   index: 52
   enabled: 'true'
-kokoro:
-  pic: "/images/sc/kokoro.jpg"
-  stars: '3'
-  stats: "Attack: 270 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nDefense: 250
-    at lvl0 / [lvl30 +3 number] at lvl30 +3."
-  passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
-  index: 53
-  enabled: 'true'
 misaki:
   pic: "/images/sc/misaki.jpg"
   stars: '3'
@@ -693,13 +685,6 @@ moon-night spa:
   passive: "Restriction: none. \r\nCurse avoidance rate increased by 30%."
   index: 86
   enabled: 'true'
-eternal oath:
-  pic: "/images/sc/eternaloath.jpg"
-  enabled: 'true'
-  stars: '5'
-  stats: "Attack: 590 at lvl0.\r\n\r\nDefense: 630 at lvl0."
-  passive: "Restriction: [if none write none]\r\n\r\nDebuff evasion +10%."
-  index: 87
 afternoon nap:
   pic: "/images/sc/afternoonnap.jpg"
   enabled: 'true'
@@ -708,11 +693,50 @@ afternoon nap:
     at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
   passive: "Restriction: Fire. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
   index: 4
-sc booster 1:
-  pic: "/images/sc/scupgrade3.jpg"
+eternal oath:
+  pic: "/images/sc/eternaloath.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '590'
+    - '0'
+    - '0'
+  - - Defense
+    - '630'
+    - '0'
+    - '0'
+  prism:
+  - - Attack
+    - '590'
+    - '0'
+    - '0'
+  - - Defense
+    - '630'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - none
+  - - ability
+    - Debuff evasion +10%
+  index: 87
+kokoro:
+  pic: "/images/sc/kokoro.jpg"
   enabled: 'true'
   stars: '3'
-  normal: [['attack', 100, 200, 300], ['defense', 110, 210, 310]]
-  prism: [['attack', 100, 200, 300], ['defense', 110, 210, 310]]
-  passive: [["restrictions", 'none'], ['ability', 'Attack increased by 9000']]
-  index: 88
+  normal:
+  - - Attack
+    - '270'
+    - '0'
+    - '0'
+  - - Defense
+    - '250'
+    - '0'
+    - '0'
+  passive:
+  - - restriction
+    - none
+  - - ability
+    - Increase Final critical by +100
+  index: 53

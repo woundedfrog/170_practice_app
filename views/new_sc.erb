@@ -8,12 +8,13 @@
         <input class="content" name="sc_name" placeholder="" type="text"  value="<%= params[:sc_name] %>" required>
       </dd>
       <dt>
-        <label for="enabled">Check to make profile public:</label>
+        <label for="enabled"> Check to hide profile from public view:</label>
       </dt>
       <dd>
         <input class="content" name="enabled" placeholder="" type="checkbox">
       </dd>
       <% @card.each do |key, value| %>
+      <% next if key == 'enabled' %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
       </dt>
@@ -26,8 +27,10 @@
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
+        <% elsif ['prism', 'normal'].include?(key) %>
+          <textarea class="content" name="<%= key %>" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= value %></textarea>
         <% else %>
-          <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
+          <textarea class="content" name="<%= key %>" placeholder="restrictions restrictions-details ability ability-details" rows="3" cols="50"><%= value %></textarea>
         <% end %>
       </dd>
       <% end %>
