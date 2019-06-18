@@ -363,6 +363,14 @@ def skills_splitter(skills)
   [leader, auto, tap, slide, drive].map{ |x| x.join(" ")}
 end
 
+def sc_formatter(stats)
+  if stats[-1] == '.'
+    return stats
+  else
+    return stats + '.'
+  end
+end
+
 # ##################
 
 def render_markdown(file)
@@ -542,7 +550,8 @@ get '/download/:filename' do |filename|
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
   elsif filename.include?('unit') ||
         filename.include?('maininfo') ||
-        filename.include?('basics.md')
+        filename.include?('basics.md') ||
+        filename.include?('history')
     send_file "./data/#{filename}", filename: fname, type: ftype
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype

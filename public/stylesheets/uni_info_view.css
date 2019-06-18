@@ -75,6 +75,22 @@ body {
   background-size: cover;
 } */
 
+/* table styling for soulcards */
+th {
+	background-color: grey;
+	/* background-color: #3a3630; */
+	/* color: #f6d38f; */
+	font-size: .9em;
+}
+th, td {
+  padding: 5px;
+}
+
+.tt1 {
+	border: 1px solid black;
+}
+
+/* table styling for soulcards */
 .container {
 	padding-left: 0px;
 	padding-right: 0px;

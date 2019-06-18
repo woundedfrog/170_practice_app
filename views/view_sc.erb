@@ -24,14 +24,40 @@
 					<h5 class="card-title"><%= info_key.capitalize %>:</h5>
 					<% if ["stars", "tier"].include?(info_key) %>
 						<%== format_stat(info_key, info_val) %>
-					<% else %>
-						<% info_val.split(". ").each do |line| %>
-							<% if line[-1] != '.' && info_key != "stars" %>
-								<p><strong>·</strong> <%= line + "." %></p>
-							<% else %>
-								<p><strong>·</strong> <%= line %></p>
-							<% end %>
-						<% end %>
+
+					<% elsif ['normal', 'prism'].include?(info_key)%>
+					<table style="width:100%">
+					  <tr>
+							<td colspan="2"></td>
+					    <th class="tt1" colspan="2">L1</th>
+					    <th class="tt1" colspan="2">L<%= @current_card['stars'] %>0 +0</th>
+					    <th class="tt1" colspan="2">L<%= @current_card['stars'] %>0 +<%= @current_card['stars'] %></th>
+					  </tr>
+						<tr>
+					    <th class="tt1" colspan="2"><%= info_val[0][0].capitalize %></th>
+							<td class="tt1" colspan="2"><%= info_val[0][1] %></td>
+							<td class="tt1" colspan="2"><%= info_val[0][2] %></td>
+							<td class="tt1" colspan="2"><%= info_val[0][3] %></td>
+						</tr>
+					 <tr>
+ 						 <th class="tt1" colspan="2"><%= info_val[1][0] %></th>
+						 <td class="tt1" colspan="2"><%= info_val[0][1] %></td>
+						 <td class="tt1" colspan="2"><%= info_val[0][2] %></td>
+						 <td class="tt1" colspan="2"><%= info_val[0][3] %></td>
+					 </tr>
+					</table>
+					<% elsif info_key == 'passive' %>
+					<table style="width:100%">
+						<tr>
+							<th class="tt1" colspan="2"><%= info_val[0][0].capitalize %></th>
+							<td class="tt1" colspan="2"><%= sc_formatter(info_val[0][1]) %></td>
+						</tr>
+						<tr>
+							<!-- passive skill header and info -->
+							<th class="tt1" colspan="2"><%= info_val[1][0].capitalize %></th>
+							<td class="tt1" colspan="2"><%= sc_formatter(info_val[1][1]) %></td>
+						</tr>
+						</table>
 					<% end %>
 				</div>
 			<% end %>
@@ -39,5 +65,5 @@
 		</div> <!-- col div -->
 
 	</div>  <!-- row div -->
-
+	
 </div> <!-- inner main container -->
