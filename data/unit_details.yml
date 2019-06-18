@@ -1137,25 +1137,6 @@ hatsune miku:
   date: '2019-1-12'
   index: 163
   enabled: 'true'
-lisa:
-  pic: "/images/3lisa0.png"
-  pic2: ''
-  pic3: ''
-  stars: '3'
-  type: buffer
-  element: water
-  tier: 6 6 7 9
-  leader: Attack +8% to all allies.
-  auto: Deals 149 damage to target and skill gauge charge rate +20% for 8s to 1 ally
-    with highest attack.
-  tap: 'Deals 307 damage to target and attack +500 for 14s to all allies. '
-  slide: Deals 307 damage to target and attack +500 for 14s to all allies.
-  drive: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and
-    skill gauge charge +40% for 23s to 2 allies with highest attack.
-  notes: ''
-  date: '2018-12-24'
-  index: 160
-  enabled: 'true'
 hades:
   pic: "/images/hades0.png"
   pic2: "/images/hades1.png"
@@ -1645,30 +1626,6 @@ calypso:
   date: '2019-4-11'
   index: 14
   enabled: 'true'
-syrinx:
-  pic: "/images/syrinx0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: healer
-  element: grass
-  tier: 9 10 8 7
-  leader: Heal and Regeneration (Heal every 2seconds) amount +5% to grass units
-  auto: Deals 96 damage.
-  tap: Deals 335 damage to target and gives Fortitude (removed after 10 seconds or
-    upon taking 2 physical attacks)1 ally with highest attack.
-  slide: 'Grant Fortitude (removed after 20 seconds or upon taking 3 physical attacks)
-    and Regen 141 HP (once per 2 seconds) for 2 Allies (Priority: Lowest HP) for 14
-    seconds.'
-  drive: 'Grant Fortitude (removed after 15 seconds or upon taking 3 physical attacks)
-    Regen 199 HP (Heal every 2 seconds) for 3 Allies (Priority: Lowest HP) for 16
-    seconds.'
-  notes: "Syrinx is the best PVP healer as she doesn't get completely shut down by
-    Mafdet. \r\nFortitude protects your team from Ragna Drives\r\nDamaging dots (poison,
-    bleed) remove Fortitude stacks"
-  date: '2018-12-24'
-  index: 81
-  enabled: 'true'
 maat:
   pic: "/images/maat0.png"
   pic2: "/images/maat1.png"
@@ -1786,26 +1743,6 @@ siren:
     sustain stay alive to deal more damage.
   date: '2018-12-24'
   index: 76
-  enabled: 'true'
-thanatos:
-  pic: "/images/thanatos0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 8 9 7 8
-  leader: Drive skill damage +1000 for Water Type Allies
-  auto: Deals 111 damage.
-  tap: Deals 436 damage 4 times.
-  slide: Deals 733 damage and Poison (deals 400 damage when enemy attacks and receives
-    attacks) for 4 turns to 2 enemies with highest attack with 175 additional damage
-    if Fire type.
-  drive: Deals 2151 damage to 4 enemies with lowest HP.
-  notes: 'His optimal use is probably in manual pvp: slide to apply poison, followed
-    by tap afterwards to take advantage of his multi-tap while the poison is applied.'
-  date: '2018-12-24'
-  index: 63
   enabled: 'true'
 nirrti:
   pic: "/images/nirrti0.png"
@@ -1965,29 +1902,6 @@ ankh:
   notes: ''
   date: '2019-5-16'
   index: 138
-  enabled: 'true'
-cleopatra:
-  pic: "/images/cleopatra0.png"
-  pic2: "/images/cleopatra2.png"
-  pic3: "/images/cleo3.png"
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 9 9 10 10
-  leader: ATK +10% for Light Type Allies
-  auto: Deals 112 damage.
-  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
-    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
-    13 seconds.
-  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
-    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
-    enemies.
-  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
-    is cursed.
-  notes: A strong attacker in all content. Great against Dark Raids where her self-crit
-    will allow you to have crit during fever - Damage monster.
-  date: '2019-5-16'
-  index: 9
   enabled: 'true'
 bastet:
   pic: "/images/bastet0.png"
@@ -2480,3 +2394,89 @@ mammon:
   notes: ''
   date: '2018-12-24'
   index: 80
+thanatos:
+  pic: "/images/thanatos0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 9 9 9 10
+  leader: Drive skill damage +1000 for Water Type Allies
+  auto: Deals 111 damage.
+  tap: Deals 436 damage 4 times.
+  slide: Deals 733 damage and Poison (deals 400 damage when enemy attacks and receives
+    attacks) for 4 turns to 2 enemies with highest attack with 175 additional damage
+    if Fire type.
+  drive: Deals 2151 damage to 4 enemies with lowest HP.
+  notes: 'His optimal use is probably in manual pvp: slide to apply poison, followed
+    by tap afterwards to take advantage of his multi-tap while the poison is applied.'
+  date: '2018-12-24'
+  index: 63
+cleopatra:
+  pic: "/images/cleopatra0.png"
+  pic2: "/images/cleopatra2.png"
+  pic3: "/images/cleo3.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 9 9 10 9
+  leader: ATK +10% for Light Type Allies
+  auto: Deals 112 damage.
+  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
+    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
+    13 seconds.
+  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
+    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
+    enemies.
+  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
+    is cursed.
+  notes: A strong attacker in all content. Great against Dark Raids where her self-crit
+    will allow you to have crit during fever - Damage monster.
+  date: '2019-5-16'
+  index: 9
+syrinx:
+  pic: "/images/syrinx0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: grass
+  tier: 9 10 8 7
+  leader: Recovery amount (Heal and Regen) +5% to Wood type allies.
+  auto: Deals 96 damage.
+  tap: Deals 335 damage to target and gives Fortitude (removed after 10 seconds or
+    upon taking 2 physical attacks) to 1 ally with highest attack.
+  slide: 'Grant Fortitude (removed after 20 seconds or upon taking 3 physical attacks)
+    and Regen 141 HP (once per 2 seconds) for 2 Allies (Priority: Lowest HP) for 14
+    seconds.'
+  drive: 'Grant Fortitude (removed after 15 seconds or upon taking 3 physical attacks)
+    Regen 199 HP (Heal every 2 seconds) for 3 Allies (Priority: Lowest HP) for 16
+    seconds.'
+  notes: "Syrinx is the best PVP healer as she doesn't get completely shut down by
+    Mafdet. \r\nFortitude protects your team from Ragna Drives\r\nDamaging dots (poison,
+    bleed) remove Fortitude stacks"
+  date: '2018-12-24'
+  index: 81
+lisa:
+  pic: "/images/3lisa0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '3'
+  type: buffer
+  element: water
+  tier: 6 6 7 9
+  leader: Attack +8% to all allies.
+  auto: Deal 54 Auto Attack damage to the target (automatic)
+  tap: Deals 149 Damage, Skill Gauge Charge Amount +20% for 1 Ally (Highest ATK) for
+    8 seconds
+  slide: Deals 307 damage to target and attack +500 for 14s to all allies.
+  drive: Deals 753 damage to 2 random enemies and skill gauge charge rate +45% and
+    skill gauge charge +40% for 23s to 2 allies with highest attack.
+  notes: ''
+  date: '2018-12-24'
+  index: 160
