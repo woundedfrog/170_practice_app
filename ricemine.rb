@@ -372,11 +372,13 @@ def skills_splitter(skills)
 end
 
 def sc_formatter(stats)
-  # if stats[-1] == '.'
-  #   return stats
-  # else
-  #   return stats + '.'
-  # end
+  if stats == nil
+    stats = ''
+  elsif stats[-1] == '.'
+    return stats
+  else
+    return stats + '.'
+  end
   stats
 end
 
@@ -424,6 +426,7 @@ end
 #zipping IMAGE files END
 ## format stats from Create new SC
 def format_input_stats(stats, passive_skill = false)
+  stats.gsub!(':', '')
   arr = [[],[]]
   if !passive_skill
     stats.split(' ').each_with_index do |part, idx|
@@ -436,9 +439,14 @@ def format_input_stats(stats, passive_skill = false)
   else
     key = ''
     stats.split(' ').each_with_index do |word, idx|
-
-      key = word if ['restriction', 'restrictions'].include?(word.downcase) || ['ability', 'abilities'].include?(word.downcase)
-      if key.downcase.include?('restrict')
+      if ['restriction', 'restrictions'].include?(word.downcase)
+        key = 'Restriction'
+        word = key
+      elsif ['ability', 'abilities'].include?(word.downcase)
+        key = key = 'Ability'
+        word = key
+      end
+      if key == 'Restriction'
         arr[0] << word
       else
         arr[1] << word
@@ -510,14 +518,12 @@ end
 def format_sc
   scs = load_soulcards_details
   scs.each do |k, v|
-    v['normal'] = [[v['stats']],['']]
-    v['prism'] = [[v['stats']],['']]
+    v['normal'] = [[v['stats'].flatten,['']],[''],['']]
+    v['prism'] = [[v['stats'].flatten,['']],[''],['']]
     v.delete_if {|key, value| key == 'stats' }
-    # binding.pry
   end
   File.write('data/sc/soul_cards.yml', YAML.dump(scs))
 
-  # binding.pry
 end
 
 get '/form' do
@@ -551,20 +557,18 @@ get '/search' do
   erb :search
 end
 # method to add enabled key to YML files. Not needed when finished
-def add_enabled_key
-  @scs = load_soulcards_details
-  @uts = load_unit_details
-  binding.pry
-  @scs.each do |k, v|
-    v['enabled'] = 'true'
-  end
-  File.write('data/sc/soul_cards.yml', YAML.dump(@scs))
-  @uts.each do |k, v|
-    v['enabled'] = 'true'
-  end
-  binding.pry
-  File.write('data/unit_details.yml', YAML.dump(@uts))
-end
+# def add_enabled_key
+#   @scs = load_soulcards_details
+#   @uts = load_unit_details
+#   @scs.each do |k, v|
+#     v['enabled'] = 'true'
+#   end
+#   File.write('data/sc/soul_cards.yml', YAML.dump(@scs))
+#   @uts.each do |k, v|
+#     v['enabled'] = 'true'
+#   end
+#   File.write('data/unit_details.yml', YAML.dump(@uts))
+# end
 ###########
 
 get '/' do
@@ -781,16 +785,17 @@ post '/equips/new_sc' do
                           end
   data[name]['stars'] = params[:stars]
   data[name]['normal'] = format_input_stats(params[:normal])
+
   if data[name]['stars'] == '5'
-    data[name]['prism'] = format_input_stats(params[:prism])
-    # binding.pry
-    # data[name]['prism'] =
-    #  if params[:prism] == ''
-    #    data[name]['normal']
-    #  else
-    #   format_input_stats(params[:prism])
-    #  end
+
+    data[name]['prism'] =
+     if params[:prism] == '' || params[:prism].nil?
+       data[name]['normal']
+     else
+      format_input_stats(params[:prism])
+     end
    end
+
   data[name]['passive'] = format_input_stats(params[:passive], true)
   data[name]['index'] = index
 

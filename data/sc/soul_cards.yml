@@ -207,14 +207,6 @@ strategist night:
   passive: "Restriction: Tank. \r\n\r\nFinal Defense +10%."
   index: 29
   enabled: 'true'
-good moa:
-  pic: "/images/sc/goodmoa.jpg"
-  stars: '4'
-  stats: "HP: 765 at lvl0 / 1350 at lvl40 / 1836 at lvl40 +4. \r\n\r\nAgility: 202
-    at lvl0  / 787 at lvl40 / 1070 at lvl40 +4."
-  passive: "Restriction: None. \r\nPoison +50 (250 at lvl40 +4).\r\n"
-  index: 14
-  enabled: 'true'
 time over:
   pic: "/images/sc/timeover.jpg"
   stars: '4'
@@ -400,6 +392,14 @@ luna:
     at lvl0  / [lvl40 +4 number] at lvl40 +4."
   passive: "Restriction: None. \r\n\r\nIncrease Blind Resist by +15% in Devil Rumble."
   index: 52
+  enabled: 'true'
+kokoro:
+  pic: "/images/sc/kokoro.jpg"
+  stars: '3'
+  stats: "Attack: 270 at lvl0 / [lvl30 +3 number] at lvl30 +3. \r\n\r\nDefense: 250
+    at lvl0 / [lvl30 +3 number] at lvl30 +3."
+  passive: "Restriction: none. \r\n\r\nIncrease Final critical by +100."
+  index: 53
   enabled: 'true'
 misaki:
   pic: "/images/sc/misaki.jpg"
@@ -689,15 +689,35 @@ afternoon nap:
   pic: "/images/sc/afternoonnap.jpg"
   enabled: 'true'
   stars: '5'
-  stats: "HP: 1040 at lvl0 / 2020 at lvl50 / 3535 at lvl50 +5. \r\n\r\nCritical: 270
-    at lvl0  / 1250] at lvl50 / 2187 at lvl50 +5."
-  passive: "Restriction: Fire. \r\n\r\nDoT Accuracy +30% (55% at lvl50 +5) in WorldBoss"
+  normal:
+  - - HP
+    - '1040'
+    - "-"
+    - "-"
+  - - Critical
+    - '270'
+    - "-"
+    - "-"
+  prism:
+  - - HP
+    - '1040'
+    - "-"
+    - "-"
+  - - Critical
+    - '270'
+    - "-"
+    - "-"
+  passive:
+  - - Restriction
+    - Fire.
+  - - ability
+    - DoT Accuracy +30% (55% at lvl50 +5) in WorldBoss
   index: 4
 eternal oath:
   pic: "/images/sc/eternaloath.jpg"
   enabled: 'true'
   stars: '5'
-  normal:
+  normal: &1
   - - Attack
     - '590'
     - '0'
@@ -706,37 +726,29 @@ eternal oath:
     - '630'
     - '0'
     - '0'
-  prism:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Defense
-    - '630'
-    - '0'
-    - '0'
+  prism: *1
   passive:
   - - Restriction
-    - none
+    - "[if none write none]"
   - - ability
-    - Debuff evasion +10%
+    - Debuff evasion +10%.
   index: 87
-kokoro:
-  pic: "/images/sc/kokoro.jpg"
+good moa:
+  pic: "/images/sc/goodmoa.jpg"
   enabled: 'true'
-  stars: '3'
+  stars: '4'
   normal:
-  - - Attack
-    - '270'
-    - '0'
-    - '0'
-  - - Defense
-    - '250'
-    - '0'
-    - '0'
+  - - HP
+    - '765'
+    - '1350'
+    - '1836'
+  - - Agility
+    - '202'
+    - '787'
+    - '1070'
   passive:
-  - - restriction
-    - none
-  - - ability
-    - Increase Final critical by +100
-  index: 53
+  - - Restriction
+    - None.
+  - - Ability
+    - Poison +50 (250 at lvl40 +4).
+  index: 14
