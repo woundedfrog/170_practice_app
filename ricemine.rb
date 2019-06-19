@@ -944,6 +944,8 @@ post '/upload' do
       'data/'
     elsif name == 'soul_cards.yml'
       'data/sc/'
+    elsif name.include?('.css')
+      'public/stylesheets/'
     else
       session[:message] = 'Filename must match original filename'
       redirect '/upload'

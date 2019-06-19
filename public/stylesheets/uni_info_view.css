@@ -2,7 +2,7 @@
 basic styles
 ===================== */
 body {
-	background-color: #585858;
+	background-color: #474747;
 	min-width: 100%;
 	color: #f2f2f2;
 }
@@ -97,7 +97,7 @@ th, td {
 }
 
 header {
-	background-color: #3e3d3d;
+	background-color: #333131;
 }
 
 .nav-link {
@@ -320,15 +320,9 @@ transition: margin 300ms;
 }
 
 .element-type-pic {
-	width: 45%;
+	width: 35%;
 	padding-left: 0px;
 	padding-right: 5px;
-}
-
-.star_rating {
-	width: 100%;
-	/* padding-left: 5px; */
-	padding: 0px;
 }
 
 .tier_rating {
@@ -353,7 +347,14 @@ transition: margin 300ms;
 
 .short-stat-content {
 	text-align: center;
+	max-width: 100%;
+}
+
+.star_rating {
 	max-width: 100px;
+  max-height: 30px;
+	/* padding-left: 5px; */
+	padding: 0px;
 }
 
 .tier-div {
@@ -426,7 +427,8 @@ label {
 }
 
 #sort_by_title {
-	background-color: rgb(48, 58, 53, 0.7);
+	background-color: rgb(48, 48, 43);
+	box-shadow: 0px 0px 5px rgb(48, 48, 43);;
 	text-align: center;
 	width: 100%;
 }
