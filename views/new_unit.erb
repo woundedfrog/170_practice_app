@@ -8,7 +8,7 @@
         <input class="content" name="new_unit_name" placeholder="" type="text"  value="<%= params[:new_unit_name] %>" required>
       </dd>
       <dt>
-         <label for="enabled"> Check to hide profile from public view:</label>
+        <label for="enabled"> Check to hide profile from public view:</label>
       </dt>
       <dd>
         <input class="content" name="enabled" placeholder="" type="checkbox">
@@ -29,9 +29,9 @@
             <% elsif key == "element" %>
               <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>"> Example: water, fire, grass, light, dark
             <% elsif key == "index" %>
-              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= @max_index_val %>">
             <% else %>
-              <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
+                <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
             <% end %>
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"></textarea>

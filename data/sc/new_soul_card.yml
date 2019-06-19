@@ -1,7 +1,8 @@
 new_sc:
-  pic: ""
+  pic: "/images/sc/scupgrade3.jpg"
+  enabled: 'true'
   stars: '5'
-  stats: "[stat]: [basenumber] at lvl0 / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5.\r\n\r\n[stat]:
-      [basenumber] at lvl0  / [lvl50 number] at lvl50 / [lvl50 +5 number] at lvl50 +5."
-  passive: "Restriction: [if none write none]\r\n\r\n[Write info]"
+  normal:
+  prism:
+  passive: 
   index: 0

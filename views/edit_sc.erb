@@ -22,8 +22,17 @@
           <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= params[key.to_sym] || value %>">
         <% elsif key == "index" %>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
-         <% elsif key == "enabled" %>
-         <input class="content" name="enabled" placeholder="" type="checkbox">
+        <% elsif key == "enabled" %>
+         <input class="content" name="enabled" placeholder="" type="checkbox"> Check to hide profile from public view
+        <% elsif key == 'stats' %>
+          <textarea class="content" name="normal" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= value %></textarea> <i>stat num1 num2 num3 stat num1 num2 num3</i>
+          <label for="prism">Prism info:</label>
+          <textarea class="content" name="prism" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= value %></textarea> <i>If it's a 3* or 4* just ignore this.</i>
+        <% elsif ['prism', 'normal'].include?(key) %>
+          <textarea class="content" name="<%= key %>" placeholder="attack 100 200 300 defense 110 210 310" rows="3" cols="50"><%= flatten_if_possible(value) %></textarea>
+        <% elsif ['passive'].include?(key) %>
+          <textarea class="content" name="<%= key %>" placeholder="Restriction restriction-detail ability ability-detail." rows="3" cols="50"><%= flatten_if_possible(value) %></textarea>
+          <i>Example: restriction fire attacker ability +200 to bleed. Keywords 'restriction' and 'ability need to be included'</i>
         <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>

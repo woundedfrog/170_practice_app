@@ -2207,28 +2207,6 @@ luin:
     increase in overall damage. '
   date: '2019-6-14'
   index: 41
-durandal:
-  pic: "/images/durandal0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: dark
-  tier: 7 6 7 9
-  leader: CRT Rate +15% for Allies (During Devil Rumble, Critical Damage +20%)
-  auto: Deal 100 Auto Attack damage
-  tap: Deal 380 Damage, CRT Rate +30% for self and 1 Attacker Ally for 10 seconds
-  slide: 'Deal 860 Damage to 2 random Enemies, Skill Gauge Charge Amount +35% and
-    Slide Skill Damage +1200 for 3 Allies (Priority: Dark Type Attackers) for 15 seconds'
-  drive: 'Deal 2032 Damage to 3 Enemies (Priority: Light Type), inflict Blind (decrease
-    Attack ACC 60%) for 25 seconds, and ATK +30% for 3 Allies (Priority: Highest ATK)
-    for 25 seconds'
-  notes: Mediocre in PvP even with the extra 20% crit damage leader because of his
-    low-impact slide. Pantheon is a much better PvP buffer for dark childs. Great
-    for Light World Boss as there's currently no competition for slide damage increase.
-  date: '2019-6-14'
-  index: 40
 ashtoreth:
   pic: "/images/ashtoreth1.png"
   pic2: "/images/ashtoreth1.png"
@@ -2480,3 +2458,25 @@ lisa:
   notes: ''
   date: '2018-12-24'
   index: 160
+durandal:
+  pic: "/images/durandal0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 7 6 8 9
+  leader: CRT Rate +15% for Allies (During Devil Rumble, Critical Damage +20%)
+  auto: Deal 100 Auto Attack damage
+  tap: Deal 380 Damage, CRT Rate +30% for self and 1 Attacker Ally for 10 seconds
+  slide: 'Deal 860 Damage to 2 random Enemies, Skill Gauge Charge Amount +35% and
+    Slide Skill Damage +1200 for 3 Allies (Priority: Dark Type Attackers) for 15 seconds'
+  drive: 'Deal 2032 Damage to 3 Enemies (Priority: Light Type), inflict Blind (decrease
+    Attack ACC 60%) for 25 seconds, and ATK +30% for 3 Allies (Priority: Highest ATK)
+    for 25 seconds'
+  notes: Mediocre in PvP even with the extra 20% crit damage leader because of his
+    low-impact slide. Pantheon is a much better PvP buffer for dark childs. Great
+    for Light World Boss as there's currently no competition for slide damage increase.
+  date: '2019-6-14'
+  index: 40

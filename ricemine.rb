@@ -5,6 +5,8 @@ require 'redcarpet'
 require 'yaml'
 require 'fileutils'
 require 'bcrypt'
+# require 'pry'
+require 'zip' # allows for zipping files
 
 configure do
   set :erb, escape_html: true
@@ -16,6 +18,7 @@ configure do
 end
 
 before do
+
   begin
     @message_note = load_file_data('main')
   rescue Psych::SyntaxError => ex
@@ -103,6 +106,14 @@ helpers do
       'WORLD BOSS'
     end
   end
+
+  def flatten_if_possible(value)
+    if value.class == Array
+      value.flatten.join(' ')
+    else
+      value
+    end
+  end
 end
 
 def delete_selected_file(name)
@@ -115,6 +126,7 @@ def delete_selected_file(name)
       FileUtils.rm(f + name)
     end
   end
+  history_update("deleted file: #{name}")
 end
 
 def valid_credentials?(username, password)
@@ -230,8 +242,6 @@ def get_max_index_number(list)
 
   max = indexes.max + 1
   available_indexes = (1..max).to_a - indexes
-  # list.sort_by { |_, v| v['index'] }.to_h
-  # list.map { |_, v| v['index'] }.max + 1
   available_indexes.min
 end
 
@@ -251,21 +261,18 @@ end
 
 def sort_by_given_info(unit_info, stars, catagory_vals = nil, type = nil)
   star_rating = stars[0]
-  # units_by_stars = nil
   units_by_stars =
    unit_info.select { |_name, stat| stat['stars'] == star_rating }.to_h
 
-   if stars == 'all'
-     return group_by_catagory_tier(unit_info, catagory_vals) if type == 'tier'
-   else
-     return group_by_catagory_tier(units_by_stars, catagory_vals) if type == 'tier'
-   end
-   units_by_stars.sort_by { |name, __stats| name }.to_h
+if stars == 'all'
+  return group_by_catagory_tier(unit_info, catagory_vals) if type == 'tier'
+else
+  return group_by_catagory_tier(units_by_stars, catagory_vals) if type == 'tier'
+end
+  units_by_stars.sort_by { |name, __stats| name }.to_h
 end
 
 def get_unit_or_sc_from_keys(keys)
-  # cards = @soulcards
-  # units = @units
   return [nil, nil] if keys.empty?
 
   unit_results = search_stats_for_key(@units, keys)
@@ -314,9 +321,9 @@ end
 
 def unit_or_sc_exist?(type, name)
   data = if type == 'unit'
-           @units
+           load_unit_details
          else
-           @soulcards
+           load_soulcards_details
          end
   if data.include?(name) == false
     session[:message] = "#{name} doesn't exist."
@@ -334,22 +341,6 @@ end
 
 def exclude_specific_profiles_from_list(data, keys)
   data.select { |k,v| [k,v] unless k == keys || k.include?(keys) }
-end
-
-# delete after converting detailes to include new specified key - value pair.
-def add_enabled_key
-  @scs = load_soulcards_details
-  @uts = load_unit_details
-  # binding.pry
-  @scs.each do |k, v|
-    v['enabled'] = 'true'
-  end
-  File.write('data/sc/soul_cards.yml', YAML.dump(@scs))
-  @uts.each do |k, v|
-    v['enabled'] = 'true'
-  end
-  # binding.pry
-  File.write('data/unit_details.yml', YAML.dump(@uts))
 end
 
 def skills_splitter(skills)
@@ -380,6 +371,17 @@ def skills_splitter(skills)
   [leader, auto, tap, slide, drive].map{ |x| x.join(" ")}
 end
 
+def sc_formatter(stats)
+  if stats == nil
+    stats = ''
+  elsif stats[-1] == '.'
+    return stats
+  else
+    return stats + '.'
+  end
+  stats
+end
+
 # ##################
 
 def render_markdown(file)
@@ -399,14 +401,133 @@ def check_and_fetch_date(data, name)
   ''
 end
 
+#zipping IMAGE files
+def zip_it(path)
+  if path.include?('unit')
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  else
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/sc/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  end
+end
+#zipping IMAGE files END
+## format stats from Create new SC
+def format_input_stats(stats, passive_skill = false)
+  stats.gsub!(':', '')
+  arr = [[],[]]
+  if !passive_skill
+    stats.split(' ').each_with_index do |part, idx|
+      if idx < 4
+        arr[0] << part
+      else
+        arr[1] << part
+      end
+    end
+  else
+    key = ''
+    stats.split(' ').each_with_index do |word, idx|
+      if ['restriction', 'restrictions'].include?(word.downcase)
+        key = 'Restriction'
+        word = key
+      elsif ['ability', 'abilities'].include?(word.downcase)
+        key = key = 'Ability'
+        word = key
+      end
+      if key == 'Restriction'
+        arr[0] << word
+      else
+        arr[1] << word
+      end
+    end
+    arr[0] = [arr[0][0], arr[0][1..-1].join(' ')]
+    arr[1] = [arr[1][0], arr[1][1..-1].join(' ')]
+    arr
+  end
+  arr
+end
+##
+
+def history_update(info)
+  path = File.expand_path('data/history.yml', __dir__)
+  data = YAML.load_file(path)
+
+    if data.size == 100
+      data.shift(10)
+      time = Time.now.utc.localtime('+09:00').to_s + " " + info
+    else
+      time = Time.now.utc.localtime('+09:00').to_s + " " + info
+    end
+    data << time
+    File.write('data/history.yml', YAML.dump(data))
+  @history = YAML.load_file(path)
+end
+
 # ##################
 
 not_found do
   redirect '/'
 end
 
+get '/backup/:files'do
+
+  require_user_signin
+  files = params[:files]
+
+  unless File.directory?('./backup') #creates a folder if it doesn't exist
+    Dir.mkdir './backup'
+  end
+
+  if files.include?('unit')
+    path = './backup/unit_imgs.zip'
+    File.delete(path) if File.exist?(path)
+
+    zip_it(path)
+    fname = 'unit_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+
+  elsif files.include?('sc')
+    path = './backup/sc_imgs.zip'
+    File.delete(path) if File.exist?(path)
+    zip_it(path)
+
+    fname = '/sc_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+  end
+  redirect '/'
+end
+
 get '/users/signin' do
   erb :signin
+end
+
+def format_sc
+  scs = load_soulcards_details
+  scs.each do |k, v|
+    v['normal'] = [[v['stats'].flatten,['']],[''],['']]
+    v['prism'] = [[v['stats'].flatten,['']],[''],['']]
+    v.delete_if {|key, value| key == 'stats' }
+  end
+  File.write('data/sc/soul_cards.yml', YAML.dump(scs))
+
+end
+
+get '/form' do
+  format_sc
 end
 
 post '/users/signin' do
@@ -435,21 +556,38 @@ get '/search' do
   @soulcards = get_unit_or_sc_from_keys(keys)[1]
   erb :search
 end
+# method to add enabled key to YML files. Not needed when finished
+# def add_enabled_key
+#   @scs = load_soulcards_details
+#   @uts = load_unit_details
+#   @scs.each do |k, v|
+#     v['enabled'] = 'true'
+#   end
+#   File.write('data/sc/soul_cards.yml', YAML.dump(@scs))
+#   @uts.each do |k, v|
+#     v['enabled'] = 'true'
+#   end
+#   File.write('data/unit_details.yml', YAML.dump(@uts))
+# end
+###########
 
 get '/' do
-  # add_enabled_key
   @new_units = select_enabled_profiles(@units).sort_by {|k,v| [v['date'], k]}.last(5).to_h
   @new_soulcards = select_enabled_profiles(@soulcards).to_a.last(4).to_h
   erb :home
 end
 
 get '/basics' do
+
+  path = File.expand_path('data/history.yml', __dir__)
+  @history = YAML.load_file(path)
+
   path = File.expand_path('data/basics.md', __dir__)
   @markdown = load_file_content(path)
   erb :starterguide
 end
 
-get "/:filename/edit" do
+get '/:filename/edit' do
   file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
   @name = params[:filename]
   begin
@@ -458,7 +596,7 @@ get "/:filename/edit" do
     p ex.file
     p ex.message
   end
-# @content = YAML.dump(YAML.load_file(file))
+  # @content = YAML.dump(YAML.load_file(file))
 
   erb :edit_notice
 end
@@ -469,7 +607,10 @@ get '/download/:filename' do |filename|
   # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
   if filename.include?('soul')
     send_file "./data/sc/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('unit') || filename.include?('maininfo') || filename.include?('basics.md')
+  elsif filename.include?('unit') ||
+        filename.include?('maininfo') ||
+        filename.include?('basics.md') ||
+        filename.include?('history')
     send_file "./data/#{filename}", filename: fname, type: ftype
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
@@ -496,7 +637,7 @@ get '/new_unit' do
   @max_index_val = get_max_index_number(@units)
   erb :new_unit
 end
- #### remove if double
+
 get '/:catagory/:star_rating' do
   star_rating = params[:star_rating]
 
@@ -517,7 +658,7 @@ get '/:catagory/:star_rating' do
     erb :index_sc
   end
 end
-####
+
 get '/childs/:star_rating/:unit_name' do
   name = params[:unit_name]
   unit_or_sc_exist?('unit', name)
@@ -562,9 +703,9 @@ get '/childs/:star_rating/sort_by/:type' do
 
     return erb :sort_by_tier if @catagory_type == 'tier'
   elsif @star_rating == 'all'
-     @catagories = sort_by_and_select_type(unit_info, @catagory_type)
-     @units =
-    sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
+    @catagories = sort_by_and_select_type(unit_info, @catagory_type)
+    @units =
+      sort_by_given_info(unit_info, @star_rating, @catagories, @catagory_type)
 
     return erb :sort_by_tier if @catagory_type == 'tier'
   else
@@ -636,19 +777,31 @@ post '/equips/new_sc' do
     data[name] = {}
   end
 
+  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
   data[name]['enabled'] = if params[:enabled]
                             'false'
                           else
                             'true'
                           end
-  data[name]['pic'] = pname.include?('.') ? pname : (pname + '.jpg')
   data[name]['stars'] = params[:stars]
-  data[name]['stats'] = params[:stats]
-  data[name]['passive'] = params[:passive]
+  data[name]['normal'] = format_input_stats(params[:normal])
+
+  if data[name]['stars'] == '5'
+
+    data[name]['prism'] =
+     if params[:prism] == '' || params[:prism].nil?
+       data[name]['normal']
+     else
+      format_input_stats(params[:prism])
+     end
+   end
+
+  data[name]['passive'] = format_input_stats(params[:passive], true)
   data[name]['index'] = index
 
   File.write('data/sc/soul_cards.yml', YAML.dump(data))
   session[:message] = "New Soulcard called #{name.upcase} has been created."
+  history_update(session[:message])
   redirect "/equips/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
@@ -734,6 +887,7 @@ post '/new_unit' do
 
   File.write('data/unit_details.yml', YAML.dump(data))
   session[:message] = "New unit called #{name.upcase} has been created."
+  history_update(session[:message])
   redirect "/childs/#{params[:stars]}stars/#{name.gsub(' ', '%20')}"
 end
 
@@ -749,6 +903,7 @@ get '/childs/:star_rating/:unit_name/remove' do
     units_info.delete(unit)
     File.write('data/unit_details.yml', YAML.dump(units_info))
     session[:message] = "#{unit.upcase} unit was successfully deleted."
+    history_update(session[:message])
   end
   redirect '/'
 end
@@ -765,6 +920,7 @@ get '/equips/:star_rating/:sc_name/remove' do
     cards_info.delete(card)
     File.write('data/sc/soul_cards.yml', YAML.dump(cards_info))
     session[:message] = "#{card.upcase} SoulCard successfully deleted."
+    history_update(session[:message])
   end
   redirect '/'
 end
@@ -788,6 +944,8 @@ post '/upload' do
       'data/'
     elsif name == 'soul_cards.yml'
       'data/sc/'
+    elsif name.include?('.css')
+      'public/stylesheets/'
     else
       session[:message] = 'Filename must match original filename'
       redirect '/upload'
@@ -796,6 +954,7 @@ post '/upload' do
   path = File.join(directory, name)
   File.open(path, 'wb') { |f| f.write(tmpfile.read) }
   session[:message] = 'file uploaded!'
+  history_update("File uploaded: #{name}")
   erb :upload
 end
 

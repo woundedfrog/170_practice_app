@@ -10,8 +10,10 @@
       </dd>
       <dt>
         <label for="new_unit_name">Enter New unit name:  (Leave empty unless you want to change the name)</label>
+      </dt>
+      <dd>
         <input class="content" name="new_unit_name" placeholder="" type="text" value="<%= params[:new_unit_name] %>">
-       </dt>
+      </dd>
       <% @current_unit.each do |key, value| %>
       <dt>
         <label for="<% key %>"><%= key.capitalize %> info:</label>
@@ -33,8 +35,8 @@
         <% elsif key == "index" || key == 'date'%>
          <input class="content" name="<%= key %>" placeholder="" type="text"  value="<%= value %>">
          <% elsif key == "enabled" %>
-          <input class="content" name="enabled" placeholder="" type="checkbox"> Check to hide profile from public view
-         <% else %>
+         <input class="content" name="enabled" placeholder="" type="checkbox"> Check to hide profile from public view
+        <% else %>
           <textarea class="content" name="<%= key %>" rows="5" cols="50"><%= value %></textarea>
         <% end %>
       </dd>
