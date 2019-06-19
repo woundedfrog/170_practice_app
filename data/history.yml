@@ -1,95 +1,97 @@
 ---
-- 2019-06-17 04:53:07 +0900 New unit called MAAT has been created.
-- 2019-06-17 04:50:38 +0900 New unit called FENNEC has been created.
-- 2019-06-17 04:48:59 +0900 New unit called PALLAS has been created.
-- 2019-06-17 04:41:21 +0900 New unit called WARWOLF has been created.
-- 2019-06-17 04:37:43 +0900 New unit called HERMES has been created.
-- 2019-06-17 04:36:16 +0900 New unit called PARTY STAR MEDB has been created.
-- 2019-06-17 04:34:40 +0900 New unit called BIKINI DAVI has been created.
-- 2019-06-17 04:32:28 +0900 New unit called BIKINI DAVI has been created.
-- 2019-06-17 04:32:00 +0900 New unit called BIKINI DAVI has been created.
-- 2019-06-17 04:20:26 +0900 New unit called SCUBA MONA has been created.
-- 2019-06-17 04:06:34 +0900 New unit called SCUBA MONA has been created.
-- 2019-06-17 04:05:45 +0900 New unit called SCUBA MONA has been created.
-- 2019-06-17 00:08:34 +0900 New unit called ASTRAEA has been created.
-- 2019-06-17 00:00:43 +0900 New unit called SYRINX has been created.
-- 2019-06-16 23:51:28 +0900 New unit called PROPHET DANA has been created.
-- 2019-06-16 23:44:34 +0900 New unit called HONOKA has been created.
 - 2019-06-16 23:36:44 +0900 New unit called AURORA has been created.
-- 2019-06-16 23:21:50 +0900 New unit called DARK MIDAS has been created.
-- 2019-06-16 22:51:41 +0900 New unit called METIS has been created.
-- 2019-06-16 22:31:30 +0900 New unit called ESHU has been created.
-- 2019-06-16 22:30:41 +0900 New unit called MARIS has been created.
-- 2019-06-16 22:27:18 +0900 New unit called ESHU has been created.
-- 2019-06-16 22:15:20 +0900 New unit called BES has been created.
-- 2019-06-16 22:02:08 +0900 New unit called RACCOON has been created.
-- 2019-06-16 21:59:33 +0900 New unit called AURORA KING has been created.
-- 2019-06-16 21:56:13 +0900 New unit called DIABLO has been created.
-- 2019-06-16 21:45:20 +0900 New unit called BRIGETTE has been created.
-- 2019-06-16 21:43:02 +0900 New unit called DANA has been created.
-- 2019-06-16 21:40:24 +0900 New unit called ATHENA has been created.
-- 2019-06-16 21:29:35 +0900 New unit called MARIE ROSE has been created.
-- 2019-06-16 21:23:31 +0900 New unit called KING SLIME has been created.
-- 2019-06-16 21:22:21 +0900 New unit called MAMMON has been created.
-- 2019-06-16 21:18:45 +0900 New unit called HERA has been created.
-- 2019-06-16 21:08:21 +0900 New unit called HADES has been created.
-- 2019-06-16 21:03:17 +0900 New unit called DINASHI has been created.
-- 2019-06-16 21:00:48 +0900 New unit called DINASHI has been created.
-- 2019-06-16 20:55:31 +0900 New unit called BRIGETTE has been created.
-- 2019-06-18 14:06:14 +0900 New Soulcard called SC BOOSTER 1 has been created.
-- 2019-06-18 17:24:09 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 18:07:12 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 18:07:59 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 18:11:16 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 18:15:44 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 19:07:00 +0900 New Soulcard called KOKORO has been created.
-- 2019-06-18 19:09:10 +0900 New Soulcard called KOKORO has been created.
-- 2019-06-18 19:10:17 +0900 New Soulcard called KOKORO has been created.
-- 2019-06-18 19:16:41 +0900 New Soulcard called KOKORO has been created.
-- 2019-06-18 19:20:31 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 19:20:43 +0900 TEST2 SoulCard successfully deleted.
-- 2019-06-18 19:21:51 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 19:23:22 +0900 New Soulcard called KOKORO has been created.
-- 2019-06-18 19:24:18 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:25:55 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:39:31 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:39:40 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:39:55 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:41:28 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:41:36 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:42:15 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:42:37 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:46:35 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:46:47 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:47:28 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:49:10 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:49:28 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:49:44 +0900 New Soulcard called TEST has been created.
-- 2019-06-18 19:49:55 +0900 TEST SoulCard successfully deleted.
-- 2019-06-18 19:55:53 +0900 New Soulcard called KOKOR2O has been created.
-- 2019-06-18 19:56:02 +0900 New Soulcard called KOKOR2O has been created.
-- 2019-06-18 20:03:10 +0900 New Soulcard called AFTERNOON NAP has been created.
-- 2019-06-18 20:12:28 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:13:34 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:13:57 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:14:43 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:14:56 +0900 New Soulcard called AFTERNOON NAP has been created.
-- 2019-06-18 20:15:27 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:15:36 +0900 New Soulcard called ETERNAL OATH has been created.
-- 2019-06-18 20:15:45 +0900 New unit called TEST has been created.
-- 2019-06-18 20:15:49 +0900 TEST unit was successfully deleted.
-- 2019-06-18 20:19:29 +0900 New Soulcard called FGD has been created.
-- 2019-06-18 20:21:07 +0900 New Soulcard called FGD3 has been created.
-- 2019-06-18 20:24:34 +0900 New Soulcard called FGD3 has been created.
-- 2019-06-18 20:24:47 +0900 New Soulcard called FGD3 has been created.
-- 2019-06-18 20:25:04 +0900 New Soulcard called FGD3 has been created.
-- 2019-06-18 20:25:15 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 20:25:30 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 20:25:35 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 20:25:45 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 20:25:50 +0900 New Soulcard called TEST2 has been created.
-- 2019-06-18 20:26:13 +0900 New Soulcard called TEST3 has been created.
-- 2019-06-18 20:26:20 +0900 FGD SoulCard successfully deleted.
-- 2019-06-18 20:26:23 +0900 TEST2 SoulCard successfully deleted.
-- 2019-06-18 20:26:25 +0900 TEST3 SoulCard successfully deleted.
-- 2019-06-18 20:29:05 +0900 New Soulcard called GOOD MOA has been created.
+- 2019-06-16 23:44:34 +0900 New unit called HONOKA has been created.
+- 2019-06-16 23:51:28 +0900 New unit called PROPHET DANA has been created.
+- 2019-06-17 00:00:43 +0900 New unit called SYRINX has been created.
+- 2019-06-17 00:08:34 +0900 New unit called ASTRAEA has been created.
+- 2019-06-17 04:05:45 +0900 New unit called SCUBA MONA has been created.
+- 2019-06-17 04:06:34 +0900 New unit called SCUBA MONA has been created.
+- 2019-06-17 04:20:26 +0900 New unit called SCUBA MONA has been created.
+- 2019-06-17 04:32:00 +0900 New unit called BIKINI DAVI has been created.
+- 2019-06-17 04:32:28 +0900 New unit called BIKINI DAVI has been created.
+- 2019-06-17 04:34:40 +0900 New unit called BIKINI DAVI has been created.
+- 2019-06-17 04:36:16 +0900 New unit called PARTY STAR MEDB has been created.
+- 2019-06-17 04:37:43 +0900 New unit called HERMES has been created.
+- 2019-06-17 04:41:21 +0900 New unit called WARWOLF has been created.
+- 2019-06-17 04:48:59 +0900 New unit called PALLAS has been created.
+- 2019-06-17 04:50:38 +0900 New unit called FENNEC has been created.
+- 2019-06-17 04:53:07 +0900 New unit called MAAT has been created.
+- 2019-06-17 04:54:33 +0900 New unit called VERDEL has been created.
+- 2019-06-17 04:55:40 +0900 New unit called EPONA has been created.
+- 2019-06-17 04:59:18 +0900 New unit called MIDAS has been created.
+- 2019-06-17 05:01:38 +0900 New unit called PURE BRIDE POMONA has been created.
+- 2019-06-17 05:07:51 +0900 New unit called VENUS has been created.
+- 2019-06-17 05:09:35 +0900 New unit called VENUS has been created.
+- 2019-06-17 05:11:56 +0900 New unit called RUSALKA has been created.
+- 2019-06-17 05:16:07 +0900 New unit called SNOW MIKU has been created.
+- 2019-06-17 05:16:48 +0900 New unit called HONOKA has been created.
+- 2019-06-17 05:17:47 +0900 New unit called TETHYS has been created.
+- 2019-06-17 05:17:54 +0900 New unit called RACCOON has been created.
+- 2019-06-18 01:51:49 +0900 New unit called KOUGA has been created.
+- 2019-06-18 01:52:42 +0900 New unit called KOUGA has been created.
+- 2019-06-18 01:55:02 +0900 New unit called NEWBIE MONA has been created.
+- 2019-06-18 01:56:16 +0900 New unit called PANTHEON has been created.
+- 2019-06-18 01:58:01 +0900 New unit called DANA has been created.
+- 2019-06-18 02:09:22 +0900 New unit called DEMETER has been created.
+- 2019-06-18 02:39:52 +0900 New unit called DEINO has been created.
+- 2019-06-18 02:44:38 +0900 New unit called ARIA has been created.
+- 2019-06-18 05:04:46 +0900 New unit called MARURU has been created.
+- 2019-06-19 07:27:43 +0900 New unit called MIDAS has been created.
+- 2019-06-19 07:33:50 +0900 New unit called OIRAN BATHORY has been created.
+- 2019-06-19 07:41:01 +0900 New unit called STUDENT EVE has been created.
+- 2019-06-19 08:02:36 +0900 New unit called MORGAN has been created.
+- 2019-06-19 08:17:38 +0900 New unit called BES has been created.
+- 2019-06-19 08:21:46 +0900 New unit called ASHTORETH has been created.
+- 2019-06-19 08:29:57 +0900 New unit called ASHTORETH has been created.
+- 2019-06-19 08:35:06 +0900 New unit called MAOU DAVI has been created.
+- 2019-06-19 08:39:58 +0900 New unit called DINASHI has been created.
+- 2019-06-19 08:48:31 +0900 New unit called NEPTUNE has been created.
+- 2019-06-19 08:54:07 +0900 New unit called KOUGA has been created.
+- 2019-06-19 09:07:24 +0900 New unit called ANEMONE has been created.
+- 2019-06-19 09:11:31 +0900 New unit called DURANDAL has been created.
+- 2019-06-19 09:14:10 +0900 New unit called LUNA has been created.
+- 2019-06-19 09:18:43 +0900 New unit called NAIAD has been created.
+- 2019-06-19 09:21:37 +0900 New unit called ABADDON has been created.
+- 2019-06-19 09:29:56 +0900 New unit called HORUS has been created.
+- 2019-06-19 09:30:21 +0900 New unit called DURANDAL has been created.
+- 2019-06-19 09:32:07 +0900 New unit called BASTET has been created.
+- 2019-06-19 09:35:19 +0900 New unit called KHEPRI has been created.
+- 2019-06-19 10:07:51 +0900 New unit called MYRINA has been created.
+- 2019-06-19 10:13:49 +0900 New unit called VERDEL has been created.
+- 2019-06-19 10:18:39 +0900 New unit called SANTA has been created.
+- 2019-06-19 10:21:02 +0900 New unit called ISOLDE has been created.
+- 2019-06-19 10:26:32 +0900 New unit called SNOW MIKU has been created.
+- 2019-06-19 10:27:03 +0900 New unit called SNOW MIKU has been created.
+- 2019-06-19 10:33:06 +0900 New unit called HESTIA has been created.
+- 2019-06-19 10:35:44 +0900 New unit called CHARLOTTE has been created.
+- 2019-06-19 10:37:06 +0900 New unit called CHARLOTTE has been created.
+- 2019-06-19 10:40:16 +0900 New unit called CALYPSO has been created.
+- 2019-06-19 10:48:00 +0900 New unit called KASUMI has been created.
+- 2019-06-19 10:56:22 +0900 New unit called CLEOPATRA has been created.
+- 2019-06-19 10:59:50 +0900 New unit called MAFDET has been created.
+- 2019-06-19 11:01:21 +0900 New unit called MAFDET has been created.
+- 2019-06-19 11:01:36 +0900 New unit called BARI has been created.
+- 2019-06-19 11:02:47 +0900 New unit called BARI has been created.
+- 2019-06-19 11:07:21 +0900 New unit called RITA has been created.
+- 2019-06-19 11:11:26 +0900 New unit called NEVAN (LIGHT) has been created.
+- 2019-06-19 11:30:51 +0900 New unit called BIKINI LISA has been created.
+- 2019-06-19 11:35:17 +0900 New unit called PARTY STAR MEDB has been created.
+- 2019-06-19 11:37:19 +0900 New unit called MYRINA has been created.
+- 2019-06-19 11:37:58 +0900 New unit called MYRINA has been created.
+- 2019-06-19 11:38:30 +0900 New unit called PARTY STAR MEDB has been created.
+- 2019-06-19 11:38:47 +0900 New unit called BIKINI LISA has been created.
+- 2019-06-19 11:40:41 +0900 New unit called PURE BRIDE HILDR has been created.
+- 2019-06-19 11:42:42 +0900 New unit called SATURN has been created.
+- 2019-06-19 11:51:12 +0900 New unit called KAGURA WARWOLF has been created.
+- 2019-06-19 11:51:42 +0900 New unit called KAGURA WARWOLF has been created.
+- 2019-06-19 11:54:20 +0900 New unit called JISEIHI has been created.
+- 2019-06-19 11:57:40 +0900 New unit called MIDAS has been created.
+- 2019-06-19 11:58:47 +0900 New unit called MIDAS has been created.
+- 2019-06-19 12:03:00 +0900 New unit called LUNA has been created.
+- 2019-06-19 12:06:01 +0900 New unit called CAMMY has been created.
+- 2019-06-19 12:10:24 +0900 New unit called ORGA (WOLA) has been created.
+- 2019-06-19 12:12:40 +0900 New unit called JUPITER has been created.
+- 2019-06-19 12:14:11 +0900 New unit called BABEL has been created.
+- 2019-06-19 12:16:41 +0900 New unit called MEDUSA has been created.
+- 2019-06-19 12:21:36 +0900 New unit called EVE has been created.
+- 2019-06-19 12:24:05 +0900 New unit called THANATOS has been created.
