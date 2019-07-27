@@ -571,28 +571,6 @@ hercules:
   date: '2019-1-1'
   index: 97
   enabled: 'true'
-epona:
-  pic: "/images/epona0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 7 7 7 5
-  leader: Defense +8% to grass units
-  auto: Deals 99 damage
-  tap: Deals 363 damages to target and Gives +20% Defense and +15% Debuff Evasion
-    to 2 lowest HP allies for 10secs.
-  slide: Gives +1800 Barrier and Apply "Lifesteal" (15% of damage dealt restores HP)
-    for 22seconds to 3 lowest HP allies.
-  drive: Deals 1703 damage to 2 random enemies and Defense +35% and +2000HP barrier
-    for 25s to 3 allies with lowest HP
-  notes: Epona can be used as a tank, if you equip her to be your second highest attack
-    in the team, Chang'e can speed buff her which is extremely strong as your team
-    will constantly have shields reapplied.
-  date: '2018-12-24'
-  index: 19
-  enabled: 'true'
 amor:
   pic: "/images/4amor0.png"
   pic2: ''
@@ -1475,28 +1453,6 @@ daphne:
   date: '2018-12-24'
   index: 121
   enabled: 'true'
-mafdet:
-  pic: "/images/mafdet0.png"
-  pic2: "/images/mafdet1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 8 8 8 8
-  leader: Drive skill damage +10% to Light units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
-    type.
-  slide: Deals 797 damage plus 350 additional damage and heal block (excludes Lifesteal
-    and absorption) for 16s to 3 enemies with lowest HP.
-  drive: Deals 2341 damage to all enemies and heal block (excludes Lifesteal and absorption)
-    for 25s to 3 enemies with lowest HP.
-  notes: Mafdet is strong in PvP against teams relying on healing. However, she doesn't
-    do very well against Syrinx's fortitude stacks and will need another attacker
-    to finish off targets.
-  date: '2018-12-24'
-  index: 30
-  enabled: 'true'
 fennec:
   pic: "/images/fennec0.png"
   pic2: "/images/fennec1.png"
@@ -1515,53 +1471,6 @@ fennec:
   notes: ''
   date: '2019-4-26'
   index: 31
-  enabled: 'true'
-brownie:
-  pic: "/images/brownie0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 7 7 5 6
-  leader: Skill Gauge Charge +8% to grass Allies
-  auto: Deals 99 damage
-  tap: Deals 368 damage to target and gives +150 skill gauge to 2 grass Attacker.
-  slide: Deals 578 damage to target and gives +30% skill gauge charge and debuff duration
-    -20% (excluding petrification) for 15seconds to 3 grass allies.
-  drive: Deals 1673 damage to 3 random enemies and 70% chance to apply Stun for 14seconds
-    (target is unable to use skills and any attack received increases Stun duration
-    by 1sec to a max of 5secs) and gives "LifeSteal" (25% of damage dealt restores
-    HP) to 3 lowest HP allies. Buff is Stackable.
-  notes: Brownie requires you to have at least 2 other wood childs to take full advantage
-    of her buff, which limits her teambuilding capabilities - however, in the right
-    team, she can be strong.
-  date: '2019-3-13'
-  index: 11
-  enabled: 'true'
-diablo:
-  pic: "/images/diablo0.png"
-  pic2: "/images/diablo1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: light
-  tier: 6 7 6 7
-  leader: Tap Skill defense +8% to Light units
-  auto: Deals 91 damage.
-  tap: Deal 297 Damage, gain Skill Def +18% (Removed after 24s or upon taking 4 attacks)
-    and Taunt (88% chance to activate) for 10 seconds.
-  slide: Deals 487 damage to 2 random Enemies, gain Immortal (HP cannot drop below
-    1) and Enrage (stores up to 350% of damage taken and retaliates with it once)
-    for 12 seconds.
-  drive: Deal 1397 Damage to 2 random Enemies, grant up to 5 Light Type allies +25%
-    DEF against all Enemies' Skill Damage for 20 seconds.
-  notes: Can tank an entire fever with a well-timed slide. Taunt on tap means you
-    can keep the ability activated nearly all the time due to the short cooldown.
-    Enrage can retaliate with stored damage up to the listed skill damage multiplied
-    by the listed percentage, after which the stored damage falls back to zero.
-  date: '2018-12-24'
-  index: 16
   enabled: 'true'
 metis:
   pic: "/images/metis0.png"
@@ -1583,28 +1492,6 @@ metis:
     \r\nOverall a very good offensive healer to help squeeze in more damage."
   date: '2018-12-24'
   index: 56
-  enabled: 'true'
-liberated maat:
-  pic: "/images/darkmaat0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 4 4 4 3
-  leader: "  +5% slide damage to Dark allies"
-  auto: Deal 113 damage.
-  tap: Attack 2 targets twice each, dealing 447 damage per hit (prioritizes enemies
-    with buff effects).
-  slide: Deal 872 damage to all enemies, plus 500 defense ignoring damage, with a
-    70% chance to apply Chaser (upon killing an enemy, deal 1500 additional bonus
-    damage to 1 random remaining enemy) to self for 14 seconds.
-  drive: Deal 2267 damage to all enemies and apply Resurrect to self for 10 seconds
-    (upon dying, revive with 50% HP, fully charge skill gauge, and Attack Up (5x stacks)).
-  notes: Only useful at high uncaps for manual top damage ranking attempts for Light
-    Ragna.
-  date: '2019-2-27'
-  index: 8
   enabled: 'true'
 calypso:
   pic: "/images/calypso0.png"
@@ -1666,45 +1553,6 @@ naias:
   date: '2018-12-24'
   index: 72
   enabled: 'true'
-aria:
-  pic: "/images/aria0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 7 6 6 8
-  leader: Max HP +800 for all Allies (in raids +600 added)
-  auto: Deal 99 damage to target
-  tap: Deal 370 damage, grant Barrier (absorbs +400 damage before HP is affected)
-    on 1 random Ally for 8 seconds
-  slide: Deal 555 Damage to 2 random Enemies and 300 of Ignore DEF Damage, Ally Drive
-    Gauge +100
-  drive: Deal 1751 Damage to 2 random Enemies, Regen 80 HP (once per 2 seconds) for
-    2 Allies (Lowest HP) for 26 seconds and Drive Gauge + 10% for allies
-  notes: Aria is an important child for helping you to reach 3rd fever in World Boss.
-  date: '2018-12-24'
-  index: 165
-  enabled: 'true'
-elizabeth:
-  pic: "/images/elizabeth0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 7 7 8 8
-  leader: Slide skill damage +4% to Dark units
-  auto: Deals 111 damage.
-  tap: Deals 442 damage 4 times to target.
-  slide: Deals 528 (120%) damage to 3 random enemies.
-  drive: Deals 2992 (250%) damage to target and Bleeding (200 damage every 2s) for
-    12s to 4 random enemies.
-  notes: Strong DPS option for Ragna due to her 4-hit tap and scaling 3-hit slide.
-    Evolution and uncaps will benefit her slide more than other attackers.
-  date: '2018-12-24'
-  index: 18
-  enabled: 'true'
 abaddon:
   pic: "/images/abaddon0.png"
   pic2: ''
@@ -1743,26 +1591,6 @@ siren:
     sustain stay alive to deal more damage.
   date: '2018-12-24'
   index: 76
-  enabled: 'true'
-nirrti:
-  pic: "/images/nirrti0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: light
-  tier: 6 6 7 6
-  leader: Debuff evasion rate -15% to all dark enemies
-  auto: Deals 101 damage.
-  tap: Deals 391 damage and removes one buff to target.
-  slide: Deals 610 damage to 2 enemies with highest attack and 75% chance Confuse
-    for 10s to target with highest attack.
-  drive: Deals 2017 damage, removes one buff and enemy drive gauge -10% to 3 enemies
-    with the highest attack.
-  notes: "For certain raids (Cleo) you can confuse the boss and steal important buffs.
-    \r\nNote: Global skill description is not worded well. Confuse only hits 1 target."
-  date: '2018-12-24'
-  index: 28
   enabled: 'true'
 maou davi:
   pic: "/images/maoudavi0.png"
@@ -1864,25 +1692,6 @@ horus:
   date: '2019-5-16'
   index: 32
   enabled: 'true'
-bast:
-  pic: "/images/4bast0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: light
-  tier: 7 6 8 7
-  leader: Weakness Defense +5% to Light Allies.
-  auto: Deals 73 damage.
-  tap: Deals 233 damage and 60% chance to remove "Confusion" from 1 allies.
-  slide: Deals 446 damage to target and Give "Regeneration" (Heal 67HP per 2s) for
-    16s and 70% chance to remove "Bleed", "Poison", "Curse" to 2 lowest HP allies.
-  drive: Deals 1098 damge to 3 random enemies and Instant Heal 3 lowest Hp Allies
-    for 516 HP.
-  notes: ''
-  date: '2019-5-16'
-  index: 88
-  enabled: 'true'
 ankh:
   pic: "/images/4ankh0.png"
   pic2: ''
@@ -1902,25 +1711,6 @@ ankh:
   notes: ''
   date: '2019-5-16'
   index: 138
-  enabled: 'true'
-bastet:
-  pic: "/images/bastet0.png"
-  pic2: "/images/bastet1.png"
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 7 7 7 7
-  leader: Drive Skill Damage +1000 for Light Type Allies
-  auto: Deal 111 Auto Attack damage
-  tap: Deal 439 damage 4 times, inflict Blind (Attack ACC 20% decrease) for 6 seconds
-  slide: Deal 761 damage to 3 Enemies (Highest ATK) and inflict Blind (Attack ACC
-    30% decrease) for 12 seconds
-  drive: 'Deal 2161 damage to 4 Enemies (Priority: Highest ATK)'
-  notes: Blind doesn't affect debuff hit rate - as that's separate from attack accuracy
-    - making her ability much less useful in PvP
-  date: '2018-12-24'
-  index: 7
   enabled: 'true'
 werewolf:
   pic: "/images/warwolf0.png"
@@ -2046,24 +1836,6 @@ quirinus:
     speed buffers' amount charge speed speed buff.
   date: '2018-12-25'
   index: 127
-  enabled: 'true'
-pietas:
-  pic: "/images/pietas1.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: dark
-  tier: 7 7 8 7
-  leader: CRT +10% for all Allies
-  auto: Deal 81 damage
-  tap: Deal 297 damage, gain CRT Attack Rate +20% for 12 seconds
-  slide: 'Attack 2 Enemies (Priority: Lowest HP) 2 times, inflicting 394 Damage on
-    each with 220 Bonus Damage.'
-  drive: deal 1108 Damage to 4 random Enemies
-  notes: ''
-  date: '2019-2-15'
-  index: 10
   enabled: 'true'
 midas:
   pic: "/images/midas0.png"
@@ -2273,47 +2045,6 @@ guardian chang'e:
     the enemy's water DPS and sniping them with the help of another DPS.
   date: '2018-12-31'
   index: 23
-frey:
-  pic: "/images/frey0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 8 7 9 9
-  leader: Drive skill damage +1000 to Dark Units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
-    self.
-  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
-  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
-    enemy according to debuff) to all enemies.
-  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
-    good gear. At low uncaps, he's lackluster, but can deal hefty damage at high uncaps.
-  date: '2018-12-24'
-  index: 22
-hestia:
-  pic: "/images/hestia0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 8 7 8 8
-  leader: Drive skill damage +10% to Fire units
-  auto: Deals 112 damage.
-  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
-    type.
-  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
-    with lowest HP with 120 additional damage if debuff type.
-  drive: Deals 2317 damage to all enemies.
-  notes: "Hestia's Bleed is significantly Buffed in Global, she is very strong at
-    high uncaps.   \r\nHestia is hard countered by Eve, however she is incredibly
-    strong facing pvp teams without a water attacker."
-  date: '2018-12-24'
-  index: 27
 serval:
   pic: "/images/serval0.png"
   pic2: "/images/serval1.png"
@@ -2372,49 +2103,6 @@ mammon:
   notes: ''
   date: '2018-12-24'
   index: 80
-thanatos:
-  pic: "/images/thanatos0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 9 9 9 10
-  leader: Drive skill damage +1000 for Water Type Allies
-  auto: Deals 111 damage.
-  tap: Deals 436 damage 4 times.
-  slide: Deals 733 damage and Poison (deals 400 damage when enemy attacks and receives
-    attacks) for 4 turns to 2 enemies with highest attack with 175 additional damage
-    if Fire type.
-  drive: Deals 2151 damage to 4 enemies with lowest HP.
-  notes: 'His optimal use is probably in manual pvp: slide to apply poison, followed
-    by tap afterwards to take advantage of his multi-tap while the poison is applied.'
-  date: '2018-12-24'
-  index: 63
-cleopatra:
-  pic: "/images/cleopatra0.png"
-  pic2: "/images/cleopatra2.png"
-  pic3: "/images/cleo3.png"
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 9 9 10 9
-  leader: ATK +10% for Light Type Allies
-  auto: Deals 112 damage.
-  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
-    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
-    13 seconds.
-  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
-    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
-    enemies.
-  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
-    is cursed.
-  notes: A strong attacker in all content. Great against Dark Raids where her self-crit
-    will allow you to have crit during fever - Damage monster.
-  date: '2019-5-16'
-  index: 9
 syrinx:
   pic: "/images/syrinx0.png"
   pic2: ''
@@ -2458,6 +2146,87 @@ lisa:
   notes: ''
   date: '2018-12-24'
   index: 160
+jacheongbi:
+  pic: "/images/jiseihi0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 6 10 9
+  leader: Tap Skill Damage +5% for Wood Type Allies (on raids +10% added)
+  auto: Deal 113 Attack damage
+  tap: 'Deal 488 Damage 3 times, gain Weak Point Skill Final Blow Damage +300 to self
+    for 16 seconds '
+  slide: Deal 955 Damage to 3 random Enemies, absorb 350 damage of the attack as own
+    HP, and on Water Type targets deal 1200 Bonus Damage
+  drive: 'Deal 2489 Damage to 4 random Enemies, on Water Type targets deal 700 Bonus
+    Damage, and during a Raid: deal 4000 Ignore DEF Damage on Water Type targets'
+  notes: ''
+  date: '2019-6-28'
+  index: 44
+bari:
+  pic: "/images/bari0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 7 7 7 7
+  leader: Damage +5% for Water Type Allies
+  auto: Deal 113 Attack damage
+  tap: Deal 482 Damage, has a 70% chance to inflict Recovery Block (except from Vampirism/HP
+    Drain) for 8 seconds
+  slide: 'Deal 828 Damage to 2 Enemies (Priority: Buffed), on Defender targets deal
+    800 Ignore DEF Damage, and inflict Brand (Deals [No. of buffs on target +1] x
+    50 DoT every 4 seconds, max of 6 buffs [final multiplier of 7]) for 20 seconds
+    Skill '
+  drive: 'Deal 2232 Damage to 4 random Enemies, and on debuffed targets: inflict Debuff
+    Blast (remove 1st Debuff and deal damage based on its effect)'
+  notes: ''
+  date: '2019-6-28'
+  index: 43
+willow doryeong:
+  pic: "/images/yanagi0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 5 6 5 6
+  leader: Skill Gauge Charge Speed +8% for all Allies
+  auto: Deal 99 Attack damage
+  tap: 'Heal 330 HP for 2 Allies (Priority: Lowest HP)'
+  slide: 'Deal 579 Damage, Regen 79 HP (once per 2 seconds) and +700 DEF for 2 Allies
+    (Priority: Lowest HP) for 14 seconds, and 70% chance to grant Antidote (removes
+    Poison and heals damage dealt by 1 round of Poison) to 2 Poisoned Allies '
+  drive: Heals 1224 HP for all Allies, and 90% chance to grant Antidote (removes Poison
+    and heals damage dealt by 1 round of Poison) to 3 Poisoned Allies
+  notes: ''
+  date: '2019-6-28'
+  index: 45
+bast:
+  pic: "/images/4bast0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: light
+  tier: 7 9 9 7
+  leader: Weakness Defense +5% to Light Allies.
+  auto: Deals 73 damage.
+  tap: Deals 233 damage and 60% chance to remove "Confusion" from 1 allies.
+  slide: Deals 446 damage to target and Give "Regeneration" (Heal 67HP per 2s) for
+    16s and 70% chance to remove "Bleed", "Poison", "Curse" to 2 lowest HP allies.
+  drive: Deals 1098 damge to 3 random enemies and Instant Heal 3 lowest Hp Allies
+    for 516 HP.
+  notes: ''
+  date: '2019-5-16'
+  index: 88
 durandal:
   pic: "/images/durandal0.png"
   pic2: ''
@@ -2466,7 +2235,7 @@ durandal:
   stars: '5'
   type: buffer
   element: dark
-  tier: 7 6 8 9
+  tier: 8 8 8 9
   leader: CRT Rate +15% for Allies (During Devil Rumble, Critical Damage +20%)
   auto: Deal 100 Auto Attack damage
   tap: Deal 380 Damage, CRT Rate +30% for self and 1 Attacker Ally for 10 seconds
@@ -2475,8 +2244,395 @@ durandal:
   drive: 'Deal 2032 Damage to 3 Enemies (Priority: Light Type), inflict Blind (decrease
     Attack ACC 60%) for 25 seconds, and ATK +30% for 3 Allies (Priority: Highest ATK)
     for 25 seconds'
-  notes: Mediocre in PvP even with the extra 20% crit damage leader because of his
-    low-impact slide. Pantheon is a much better PvP buffer for dark childs. Great
-    for Light World Boss as there's currently no competition for slide damage increase.
+  notes: High variance in PvP if you don't run dark attackers, but his slide can potentially
+    speed up your entire team. 15% crit rate increase for the entire team is great
+    as well. Great for Light World Boss as there's currently no competition for slide
+    damage increase.
   date: '2019-6-14'
   index: 40
+frey:
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 8 7 8 9
+  leader: Drive skill damage +1000 to Dark Units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
+    self.
+  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
+  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
+    enemy according to debuff) to all enemies.
+  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
+    good gear. At low uncaps, he's lackluster, but can deal hefty damage at high uncaps.
+  date: '2018-12-24'
+  index: 22
+elizabeth:
+  pic: "/images/elizabeth0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 7 9 9
+  leader: Slide skill damage +4% to Dark units
+  auto: Deals 111 damage.
+  tap: Deals 442 damage 4 times to target.
+  slide: Deals 528 (120%) damage to 3 random enemies.
+  drive: Deals 2992 (250%) damage to target and Bleeding (200 damage every 2s) for
+    12s to 4 random enemies.
+  notes: Strong DPS option for Ragna due to her 4-hit tap and scaling 3-hit slide.
+    Evolution and uncaps will benefit her slide more than other attackers.
+  date: '2018-12-24'
+  index: 18
+thanatos:
+  pic: "/images/thanatos0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 9 9 9 9
+  leader: Drive skill damage +1000 for Water Type Allies
+  auto: Deals 111 damage.
+  tap: Deals 436 damage 4 times.
+  slide: Deals 733 damage and Poison (deals 400 damage when enemy attacks and receives
+    attacks) for 4 turns to 2 enemies with highest attack with 175 additional damage
+    if Fire type.
+  drive: Deals 2151 damage to 4 enemies with lowest HP.
+  notes: 'His optimal use is probably in manual pvp: slide to apply poison, followed
+    by tap afterwards to take advantage of his multi-tap while the poison is applied.'
+  date: '2018-12-24'
+  index: 63
+sytry:
+  pic: "/images/sitri0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 7 7 10
+  leader: Max HP +1000 for Light Type Allies (on World Bosses +3000 added)
+  auto: Deal 100 Attack damage to the target (Automatic)
+  tap: Deal 382 Damage, remove 5 of World Bosses' boost buff (ATK, DEF stacks) Skill
+    Damage when fighting a World Boss for 14 seconds
+  slide: 'Deal 658 Damage, ATK +1600 for 9 Allies (Priority: Light Type) for 14 seconds
+    and Skill cooldown -2 seconds on World Bosses for 2 turns and Skill damage +1000
+    for 5 Allies (Priority: Highest ATK) in the back row for 20 seconds'
+  drive: 'Deal 1751 Damage to 2 random Enemies, grant 9 Allies in the front row (Priority:
+    Lowest HP) +2000 Barrier (absorbs damage before HP is affected) and 9 Allies in
+    the back row (Priority: Highest ATK) +1500'
+  notes: 'One of the best World Boss buffers available due to her slide and drive. '
+  date: '2019-7-12'
+  index: 46
+khepri:
+  pic: "/images/khepri0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 6 8 8
+  leader: Tap Skill Damage +8% for Dark Type Allies
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 486 Damage, 100 of Ignore DEF Damage and Deal 100 Bonus Damage to Debuffer
+    targets
+  slide: 'Deal 704 Damage 2 times each to 2 Enemies (Priority: Debuffer), inflict
+    Blind (Attack ACC 20%) for 6 seconds'
+  drive: Deal 2585 Damage to 4 random Enemies and randomly inflict Confuse on one
+    enemy with a 80% chance for 10 seconds
+  notes: ''
+  date: '2019-7-12'
+  index: 47
+liberated maat:
+  pic: "/images/darkmaat0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 5 4 9 3
+  leader: "  +5% slide damage to Dark allies"
+  auto: Deal 113 damage.
+  tap: Attack 2 targets twice each, dealing 447 damage per hit (prioritizes enemies
+    with buff effects).
+  slide: Deal 872 damage to all enemies, plus 500 defense ignoring damage, with a
+    70% chance to apply Chaser (upon killing an enemy, deal 1500 additional bonus
+    damage to 1 random remaining enemy) to self for 14 seconds.
+  drive: Deal 2267 damage to all enemies and apply Resurrect to self for 10 seconds
+    (upon dying, revive with 50% HP, fully charge skill gauge, and Attack Up (5x stacks)).
+  notes: Only viable for manual play - she's very mediocre on auto. Numbers wise,
+    she is the best 4-hit dark tapper for Light Ragna. At low uncaps, unless you want
+    to manual all your runs, it's better to look for another attacker.
+  date: '2019-2-27'
+  index: 8
+brownie:
+  pic: "/images/brownie0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 7 7 6 7
+  leader: Skill Gauge Charge +8% to grass Allies
+  auto: Deals 99 damage
+  tap: Deals 368 damage to target and gives +150 skill gauge to 2 grass Attacker.
+  slide: Deals 578 damage to target and gives +30% skill gauge charge and debuff duration
+    -20% (excluding petrification) for 15seconds to 3 grass allies.
+  drive: Deals 1673 damage to 3 random enemies and 70% chance to apply Stun for 14seconds
+    (target is unable to use skills and any attack received increases Stun duration
+    by 1sec to a max of 5secs) and gives "LifeSteal" (25% of damage dealt restores
+    HP) to 3 lowest HP allies. Buff is Stackable.
+  notes: Brownie requires you to have at least 2 other wood childs to take full advantage
+    of her buff, which limits her teambuilding capabilities - however, in the right
+    team, she can be strong.
+  date: '2019-3-13'
+  index: 11
+pietas:
+  pic: "/images/pietas0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: attacker
+  element: dark
+  tier: 7 7 8 7
+  leader: CRT +10% for all Allies
+  auto: Deal 81 damage
+  tap: Deal 297 damage, gain CRT Attack Rate +20% for 12 seconds
+  slide: 'Attack 2 Enemies (Priority: Lowest HP) 2 times, inflicting 394 Damage on
+    each with 220 Bonus Damage.'
+  drive: deal 1108 Damage to 4 random Enemies
+  notes: ''
+  date: '2019-2-15'
+  index: 10
+mafdet:
+  pic: "/images/mafdet0.png"
+  pic2: "/images/mafdet1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 8 8 8 9
+  leader: Drive skill damage +10% to Light units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if Dark
+    type.
+  slide: Deals 797 damage plus 350 additional damage and heal block (excludes Lifesteal
+    and absorption) for 16s to 3 enemies with lowest HP.
+  drive: Deals 2341 damage to all enemies and heal block (excludes Lifesteal and absorption)
+    for 25s to 3 enemies with lowest HP.
+  notes: Mafdet is strong in PvP against teams relying on healing. However, she doesn't
+    do very well against Syrinx's fortitude stacks and will need another attacker
+    to finish off targets.
+  date: '2018-12-24'
+  index: 30
+aria:
+  pic: "/images/aria0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 7 6 6 9
+  leader: Max HP +800 for all Allies (in raids +600 added)
+  auto: Deal 99 damage to target
+  tap: Deal 370 damage, grant Barrier (absorbs +400 damage before HP is affected)
+    on 1 random Ally for 8 seconds
+  slide: Deal 555 Damage to 2 random Enemies and 300 of Ignore DEF Damage, Ally Drive
+    Gauge +100
+  drive: Deal 1751 Damage to 2 random Enemies, Regen 80 HP (once per 2 seconds) for
+    2 Allies (Lowest HP) for 26 seconds and Drive Gauge + 10% for allies
+  notes: Aria is an important child for helping you to reach 3rd fever in World Boss.
+  date: '2018-12-24'
+  index: 165
+diablo:
+  pic: "/images/diablo0.png"
+  pic2: "/images/diablo1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: light
+  tier: 6 7 6 6
+  leader: Tap Skill defense +8% to Light units
+  auto: Deals 91 damage.
+  tap: Deal 297 Damage, gain Skill Def +18% (Removed after 24s or upon taking 4 attacks)
+    and Taunt (88% chance to activate) for 10 seconds.
+  slide: Deals 487 damage to 2 random Enemies, gain Immortal (HP cannot drop below
+    1) and Enrage (stores up to 350% of damage taken and retaliates with it once)
+    for 12 seconds.
+  drive: Deal 1397 Damage to 2 random Enemies, grant up to 5 Light Type allies +25%
+    DEF against all Enemies' Skill Damage for 20 seconds.
+  notes: Can tank an entire fever with a well-timed slide. Taunt on tap means you
+    can keep the ability activated nearly all the time due to the short cooldown.
+    Enrage can retaliate with stored damage up to the listed skill damage multiplied
+    by the listed percentage, after which the stored damage falls back to zero.
+  date: '2018-12-24'
+  index: 16
+hestia:
+  pic: "/images/hestia0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 8 7 8 7
+  leader: Drive skill damage +10% to Fire units
+  auto: Deals 112 damage.
+  tap: Deals 477 damage to enemy with lowest HP with 150 additional damage if grass
+    type.
+  slide: Deals 797 damage and Bleeding (100 damage every 2s) for 12s to 2 enemies
+    with lowest HP with 120 additional damage if debuff type.
+  drive: Deals 2317 damage to all enemies.
+  notes: "Hestia's Bleed is significantly Buffed in Global, she is very strong at
+    high uncaps.   \r\nHestia is hard countered by Eve, however she is incredibly
+    strong facing pvp teams without a water attacker."
+  date: '2018-12-24'
+  index: 27
+bastet:
+  pic: "/images/bastet0.png"
+  pic2: "/images/bastet1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 7 7 7 8
+  leader: Drive Skill Damage +1000 for Light Type Allies
+  auto: Deal 111 Auto Attack damage
+  tap: Deal 439 damage 4 times, inflict Blind (Attack ACC 20% decrease) for 6 seconds
+  slide: Deal 761 damage to 3 Enemies (Highest ATK) and inflict Blind (Attack ACC
+    30% decrease) for 12 seconds
+  drive: 'Deal 2161 damage to 4 Enemies (Priority: Highest ATK)'
+  notes: Blind doesn't affect debuff hit rate - as that's separate from attack accuracy
+    - making her ability much less useful in PvP
+  date: '2018-12-24'
+  index: 7
+nirrti:
+  pic: "/images/nirrti0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 6 8 7 7
+  leader: Debuff evasion rate -15% to all dark enemies
+  auto: Deals 101 damage.
+  tap: Deals 391 damage and removes one buff to target.
+  slide: Deals 610 damage to 2 enemies with highest attack and 75% chance Confuse
+    for 10s to target with highest attack.
+  drive: Deals 2017 damage, removes one buff and enemy drive gauge -10% to 3 enemies
+    with the highest attack.
+  notes: Ragna and World Boss have very high debuff resist, making her confuse unreliable.
+    Her confuse only hits 1 target; however, with good timing, this can still be very
+    strong in PvP.
+  date: '2018-12-24'
+  index: 28
+epona:
+  pic: "/images/epona0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 7 7 7 6
+  leader: Defense +8% to grass units
+  auto: Deals 99 damage
+  tap: Deals 363 damages to target and Gives +20% Defense and +15% Debuff Evasion
+    to 2 lowest HP allies for 10secs.
+  slide: Gives +1800 Barrier and Apply "Lifesteal" (15% of damage dealt restores HP)
+    for 22seconds to 3 lowest HP allies.
+  drive: Deals 1703 damage to 2 random enemies and Defense +35% and +2000HP barrier
+    for 25s to 3 allies with lowest HP
+  notes: Epona can be used as a pseudo-tank if you manipulate her attack to be 2nd
+    highest in the team, allowing Chang'e to speed her up for more shield and vampirism
+    uptime. During Ragna, she can keep your whole team healthy by herself if you play
+    manually. However, this won't be the case on auto, as AI loves to use her tap
+    instead of her slide.
+  date: '2018-12-24'
+  index: 19
+cleopatra:
+  pic: "/images/cleopatra0.png"
+  pic2: "/images/cleopatra2.png"
+  pic3: "/images/cleo3.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 8 8 10 8
+  leader: ATK +10% for Light Type Allies
+  auto: Deals 112 damage.
+  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
+    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
+    13 seconds.
+  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
+    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
+    enemies.
+  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
+    is cursed.
+  notes: Great against Dark Raids where her Focus buff will allow you to deal critical
+    damage during fever. Her Curse in PvP can get value even when cleansed. In World
+    Boss she requires a speed buff as AI will make her continually tap to get Focus
+    otherwise. Like Jupiter's Bleed, her Curse gets much better at high uncaps.
+  date: '2019-5-16'
+  index: 9
+astraea:
+  pic: "/images/astraea0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: grass
+  tier: 7 8 8 6
+  leader: Heal Amount +8% for Wood Type Allies
+  auto: Deal 96 Attack damage
+  tap: 'Deal 337 Damage, heal 214 HP for 2 Allies (Priority: Lowest HP) and grant
+    Secret Heal (recover 200 of HP each time the unit acts or is attacked) for 12
+    seconds'
+  slide: 'Deal 514 Damage, 75% chance to remove Recovery Block from 3 Allies (Priority:
+    Lowest HP) and heal 1091 HP'
+  drive: 'Deal 1547 Damage to 2 random Enemies, Regen 300 HP for 3 Allies (Priority:
+    Lowest HP) for 16 seconds, Secret Heal for 2 Allies (Priority: Poisoned) (recover
+    1000 of HP each time the unit acts or is attacked)'
+  notes: Secret Heal acts as the healing version of the poison debuff. Has potential
+    at higher uncaps to completely mitigate enemy damage in PvP. Recovery block isn't
+    prevalent, making her not too useful at low uncaps.
+  date: '2019-7-22'
+  index: 48
+agamemnon:
+  pic: "/images/4agamemnon0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: debuffer
+  element: grass
+  tier: 7 7 5 5
+  leader: Water Type Enemies' Skill Charge Speed -10%
+  auto: Deal 74 Attack damage
+  tap: Deal 242 Damage, ATK -400 for 8 seconds & 40% chance to remove 1 Buff
+  slide: 'Deal 456 Damage to 2 Enemies (Priority: Skill Charge Acceleration Buff)
+    and 300 Ignore DEF Damage, plus 40% chance to inflict Time Alteration (remove
+    all time-related buffs from the target and reduce Skill Gauge Charge Speed by
+    40%) for 12 seconds'
+  drive: Deal 1196 Damage to 3 random Enemies, Skill Gauge charge amount -30% for
+    16 seconds
+  notes: ''
+  date: '2019-7-22'
+  index: 49

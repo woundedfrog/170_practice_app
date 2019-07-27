@@ -89,26 +89,12 @@ training expert:
     at lvl50 +5)  in Devil Rumble."
   index: 35
   enabled: 'false'
-wandering doctor:
-  pic: "/images/sc/wanderingdoctor.jpg"
-  stars: '5'
-  stats: "Attack: 500   1480  2590    \r\n\r\nDefense: 540    1520  2660 "
-  passive: "Restriction: Attacker. \r\n\r\nLifesteal +200 (450 at lvl50 +5) in Underground."
-  index: 36
-  enabled: 'false'
 blade of hot sun:
   pic: "/images/sc/bladesun.jpg"
   stars: '5'
   stats: "Attack: 560   1540  2695    \r\n\r\nAgility: 270    1250  2187 "
   passive: "Restriction: None. \r\n\r\nFinal attack +700 (1200 at lvl50 +5) in Underground."
   index: 10
-  enabled: 'false'
-seaside goddess:
-  pic: "/images/sc/seasidegoddess.jpg"
-  stars: '5'
-  stats: "HP: 1040   2020  3535    \r\n\r\nDefense: 550 1530  2677   "
-  passive: "Restrictions: None. \r\n\r\nBleed +220 (320 at lvl50 +5) in Devil Rumble."
-  index: 1
   enabled: 'false'
 beach relaxation:
   pic: "/images/sc/beachrelax.jpg"
@@ -485,63 +471,6 @@ secret date:
   - - Ability
     - HP +200.
   index: 38
-serious worker:
-  pic: "/images/sc/seriousworker.jpg"
-  enabled: 'true'
-  stars: '3'
-  normal:
-  - - Attack
-    - '260'
-    - '550'
-    - '838'
-  - - Critical
-    - '135'
-    - '425'
-    - '648'
-  passive:
-  - - Restriction
-    - Dark.
-  - - Ability
-    - Final Defense +200.
-  index: 26
-small assailant:
-  pic: "/images/sc/smallassailant.jpg"
-  enabled: 'true'
-  stars: '3'
-  normal:
-  - - Attack
-    - '260'
-    - '550'
-    - '838'
-  - - Agility
-    - '135'
-    - '425'
-    - '648'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Final Attack +300 (600 +3).
-  index: 27
-sweet propose:
-  pic: "/images/sc/sweetpropose.jpg"
-  enabled: 'true'
-  stars: '3'
-  normal:
-  - - HP
-    - '510'
-    - '800'
-    - '1220'
-  - - Attack
-    - '260'
-    - '550'
-    - '839'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Bleed +20.
-  index: 31
 sc booster 3:
   pic: "/images/sc/scupgrade3.jpg"
   enabled: 'true'
@@ -561,101 +490,6 @@ sc booster 3:
   - - Ability
     - Increase + EXP by 28.
   index: 56
-marine idol:
-  pic: "/images/sc/marineidol.jpg"
-  enabled: 'true'
-  stars: '3'
-  normal:
-  - - HP
-    - '510'
-    - '800'
-    - '1220'
-  - - Agility
-    - '135'
-    - '425'
-    - '648'
-  passive:
-  - - Restriction
-    - Water.
-  - - Ability
-    - Poison +30 (120 at lvl30 +3).
-  index: 22
-baptism goddess:
-  pic: "/images/sc/baptismgoddess.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '765'
-    - '1350'
-    - '1836'
-  - - Defense
-    - '390'
-    - '975'
-    - '1326'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Regeneration Received +25 (125 at lvl40 +4).
-  index: 8
-castle of pleasure:
-  pic: "/images/sc/castlepleasure.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '775'
-    - '1340'
-    - '1849'
-  - - Defense
-    - '395'
-    - '980'
-    - '1332'
-  passive:
-  - - Restriction
-    - Grass.
-  - - Ability
-    - Instant Heal Received +400 (800 at lvl40 +4).
-  index: 11
-dream team:
-  pic: "/images/sc/dreamteam.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - Attack
-    - '415'
-    - '1000'
-    - '1360'
-  - - Defense
-    - '365'
-    - '960'
-    - '1305'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Heal 700 (1500 at lvl40 at lvl40 +4) HP when kill enemy.
-  index: 12
-good moa:
-  pic: "/images/sc/goodmoa.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '765'
-    - '1350'
-    - '1836'
-  - - Agility
-    - '202'
-    - '787'
-    - '1070'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Poison +50 (250 at lvl40 +4).
-  index: 14
 hero:
   pic: "/images/sc/hero.jpg"
   enabled: 'true'
@@ -770,165 +604,6 @@ strategist night:
   - - Ability
     - Final Defense +10%.
   index: 29
-time over:
-  pic: "/images/sc/timeover.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '765'
-    - '1350'
-    - '1836'
-  - - Attack
-    - '390'
-    - '975'
-    - '1326'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Silence Resist +10% (16% at lvl40 +4) in Devil Rumble.
-  index: 33
-ayane:
-  pic: "/images/sc/ayane.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1070'
-    - '0'
-    - '0'
-  - - Agility
-    - '300'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1070'
-    - '0'
-    - '0'
-  - - Agility
-    - '300'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Increase Petrify resist +30% in Devil Rumble.
-  index: 41
-hunting devil:
-  pic: "/images/sc/huntingdevil.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Dark.
-  - - Ability
-    - Critical damage +4000 in Ragna.
-  index: 19
-late night partner:
-  pic: "/images/sc/latenightpartner.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1000'
-    - '1980'
-    - '3465'
-  - - Defense
-    - '530'
-    - '1510'
-    - '2642'
-  prism:
-  - - HP
-    - '1000'
-    - '1980'
-    - '3465'
-  - - Defense
-    - '530'
-    - '1510'
-    - '2642'
-  passive:
-  - - Restriction
-    - Tank.
-  - - Ability
-    - Effectiveness of Reflect +3% (11.5% at lvl50 +5) in Devil Rumble.
-  index: 21
-meat together:
-  pic: "/images/sc/togetherwithmeat.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Heal block Resist +40%.
-  index: 34
-piercing blue sky:
-  pic: "/images/sc/piercingbluesky.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Light + Attacker.
-  - - Ability
-    - 50% (65% at lvl50 +5) chance to ignore provocation.
-  index: 23
 sc booster 5:
   pic: "/images/sc/scupgrade5.jpg"
   enabled: 'true'
@@ -957,143 +632,510 @@ sc booster 5:
   - - Ability
     - Increases + EXP by 480.
   index: 44
+a castle of pleasure:
+  pic: "/images/sc/castlepleasure.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '775'
+    - '1340'
+    - '1849'
+  - - Defense
+    - '395'
+    - '980'
+    - '1332'
+  passive:
+  - - Restriction
+    - Wood.
+  - - Ability
+    - Instant Heal Received +400 (800 at lvl40 +4).
+  index: 11
+baptism of the goddess:
+  pic: "/images/sc/baptismgoddess.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '765'
+    - '1350'
+    - '1836'
+  - - DEF
+    - '390'
+    - '975'
+    - '1326'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Regeneration Received +25 (125 at lvl40 +4).
+  index: 8
+time’s up!:
+  pic: "/images/sc/timeover.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '765'
+    - '1350'
+    - '1836'
+  - - ATK
+    - '390'
+    - '975'
+    - '1326'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Silence Resist +10% (16% at lvl40 +4) in Devil Rumble.
+  index: 33
+today i’m nice moa:
+  pic: "/images/sc/goodmoa.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '765'
+    - '1350'
+    - '1836'
+  - - AGI
+    - '202'
+    - '787'
+    - '1070'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Poison +50 (250 at lvl40 +4).
+  index: 14
+the dream team:
+  pic: "/images/sc/dreamteam.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - Attack
+    - '415'
+    - '1000'
+    - '1360'
+  - - Defense
+    - '365'
+    - '960'
+    - '1305'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Heal 700 (1500 at lvl40 at lvl40 +4) HP when kill enemy.
+  index: 12
+an eager employee:
+  pic: "/images/sc/seriousworker.jpg"
+  enabled: 'true'
+  stars: '3'
+  normal:
+  - - Attack
+    - '260'
+    - '550'
+    - '838'
+  - - Critical
+    - '135'
+    - '425'
+    - '648'
+  passive:
+  - - Restriction
+    - Dark.
+  - - Ability
+    - Final Defense +200.
+  index: 26
+a little looter:
+  pic: "/images/sc/smallassailant.jpg"
+  enabled: 'true'
+  stars: '3'
+  normal:
+  - - Attack
+    - '260'
+    - '550'
+    - '838'
+  - - Agility
+    - '135'
+    - '425'
+    - '648'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Final Attack +300 (600 +3).
+  index: 27
+the sweetest proposal:
+  pic: "/images/sc/sweetpropose.jpg"
+  enabled: 'true'
+  stars: '3'
+  normal:
+  - - HP
+    - '510'
+    - '800'
+    - '1220'
+  - - ATK
+    - '260'
+    - '550'
+    - '839'
+  passive:
+  - - Restriction
+    - Fire type.
+  - - Ability
+    - Bleed +20.
+  index: 31
+nautical pop star:
+  pic: "/images/sc/marineidol.jpg"
+  enabled: 'true'
+  stars: '3'
+  normal:
+  - - HP
+    - '510'
+    - '800'
+    - '1220'
+  - - Agility
+    - '135'
+    - '425'
+    - '648'
+  passive:
+  - - Restriction
+    - Water.
+  - - Ability
+    - Poison +30 (120 at lvl30 +3).
+  index: 22
+wandering doryeong:
+  pic: "/images/sc/wanderingdoctor.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '535'
+    - '1270'
+    - '1841'
+  - - Critical
+    - '255'
+    - '990'
+    - '1435'
+  prism:
+  - - Attack
+    - '535'
+    - '535'
+    - '535'
+  - - Critical
+    - '255'
+    - '255'
+    - '255'
+  passive:
+  - - Restriction
+    - Wood Attacker
+  - - Ability
+    - When equipped, increase Tap Skill Damage by 500(750) during a Raid
+  index: 36
+seaside goddess:
+  pic: "/images/sc/seasidegoddess.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - ATK
+    - '575'
+    - '1310'
+    - '1900'
+  - - AGL
+    - '295'
+    - '1030'
+    - '1494'
+  prism:
+  - - ATK
+    - '627'
+    - '1362'
+    - '1975'
+  - - AGL
+    - '321'
+    - '1056'
+    - '1532'
+  passive:
+  - - Restriction
+    - Light
+  - - Ability
+    - Increase Max ATK by 1150 for World Bosses. (Note Prism stats may be slight off)
+  index: 1
+hunting devil:
+  pic: "/images/sc/huntingdevil.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '525'
+    - '1260'
+    - '1827'
+  - - Agility
+    - '265'
+    - '1000'
+    - '1450'
+  prism:
+  - - Attack
+    - '573'
+    - '1308'
+    - '1896'
+  - - Agility
+    - '289'
+    - '1024'
+    - '1484'
+  passive:
+  - - Restriction
+    - Dark.
+  - - Ability
+    - Critical damage +4000(6500)[+100 if Prism] in Ragna.
+  index: 19
 stf:
   pic: "/images/sc/stf.jpg"
   enabled: 'true'
   stars: '5'
   normal:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
+  - - ATTACK
+    - '525'
+    - '1260'
+    - '1827'
   - - Critical
-    - '270'
-    - '1250'
-    - '2187'
+    - '265'
+    - '1000'
+    - '1450'
   prism:
   - - Attack
-    - '530'
-    - '1510'
-    - '2642'
+    - '573'
+    - '1308'
+    - '1896'
   - - Critical
-    - '270'
-    - '1250'
-    - '2187'
+    - '289'
+    - '1024'
+    - '1484'
   passive:
   - - Restriction
     - Light.
   - - Ability
-    - Curse +200.
+    - Curse +200(300)[+20 if Prism].
   index: 28
-tamaki:
-  pic: "/images/sc/tamaki.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '580'
-    - '0'
-    - '0'
-  - - Defense
-    - '540'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '580'
-    - '0'
-    - '0'
-  - - Defense
-    - '540'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Heal 1500HP when enemy is killed.
-  index: 47
-undersea date:
+a subaquatic date:
   pic: "/images/sc/underseadate.jpg"
   enabled: 'true'
   stars: '5'
   normal:
   - - Defense
-    - '540'
-    - '1520'
-    - '2660'
+    - '535'
+    - '1270'
+    - '1841'
   - - Agility
-    - '280'
-    - '1260'
-    - '2205'
+    - '275'
+    - '1010'
+    - '1464'
   prism:
   - - Defense
-    - '540'
-    - '1520'
-    - '2660'
+    - '584'
+    - '1319'
+    - '1912'
   - - Agility
-    - '280'
-    - '1260'
-    - '2205'
+    - '299'
+    - '1034'
+    - '1499'
   passive:
   - - Restriction
     - Water type.
   - - Ability
-    - Poison +500 (+750 at lvl50 +5) in Underground.
+    - Increase Poison Damage by 500(750)[+15 if prism] in Underground.
   index: 3
-wisteria tree:
-  pic: "/images/sc/wisteriatree.jpg"
+piercing blue sky:
+  pic: "/images/sc/piercingbluesky.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '515'
+    - '1250'
+    - '1812'
+  - - Critical
+    - '265'
+    - '1000'
+    - '1450'
+  prism:
+  - - Attack
+    - '563'
+    - '1298'
+    - '1882'
+  - - Critical
+    - '288'
+    - '1023'
+    - '1483'
+  passive:
+  - - Restriction
+    - Light Attacker.
+  - - Ability
+    - 50%(65%)[+1 if prism] chance to ignore enemy's Taunt and attack
+  index: 23
+meat together:
+  pic: "/images/sc/togetherwithmeat.jpg"
   enabled: 'true'
   stars: '5'
   normal:
   - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Agility
-    - '270'
+    - '1015'
+    - '1750'
+    - '2537'
+  - - Attack
+    - '515'
     - '1250'
-    - '2187'
+    - '1812'
   prism:
   - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
+    - '1111'
+    - '1846'
+    - '2676'
+  - - Attack
+    - '563'
+    - '1298'
+    - '1882'
   passive:
   - - Restriction
-    - Grass type.
+    - None.
   - - Ability
-    - Bleed Resist +35% (50% at lvl50 +5)
-  index: 37
+    - Increase Recovery Block EVA by 40%(65%)[+1 if Prism].
+  index: 34
+midnight partners:
+  pic: "/images/sc/latenightpartner.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '995'
+    - '1730'
+    - '2508'
+  - - DEF
+    - '525'
+    - '1260'
+    - '1827'
+  prism:
+  - - HP
+    - '1089'
+    - '1824'
+    - '2644'
+  - - DEF
+    - '573'
+    - '1308'
+    - '1896'
+  passive:
+  - - Restriction
+    - Tank.
+  - - Ability
+    - Increase Reflect Damage +3% (11.5%)[+0.5 if prism] in Devil Rumble.
+  index: 21
 power of smile:
   pic: "/images/sc/powerofsmile.jpg"
   enabled: 'true'
   stars: '5'
   normal:
   - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
+    - '1015'
+    - '1750'
+    - '2537'
+  - - ATK
+    - '515'
+    - '1250'
+    - '1812'
   prism:
   - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
+    - '1111'
+    - '1846'
+    - '2676'
+  - - ATK
+    - '563'
+    - '1298'
+    - '1882'
   passive:
   - - Restriction
-    - Grass + Attacker.
+    - Wood Attacker.
   - - Ability
-    - Poison Resist +35% (50% at lvl50 +5).
+    - Increase Poison EVA by 35% (50%)[+0.5 if prism]
   index: 24
+tamaki:
+  pic: "/images/sc/tamaki.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '575'
+    - '1310'
+    - '1899'
+  - - Defense
+    - '535'
+    - '1270'
+    - '1841.5'
+  prism:
+  - - Attack
+    - '628'
+    - '1363'
+    - '1976'
+  - - Defense
+    - '584'
+    - '1319'
+    - '1912'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Recover 1500HP(3000)[+120 if Prism] by Defeating Enemies
+  index: 47
+wisteria tree:
+  pic: "/images/sc/wisteriatree.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1025'
+    - '1760'
+    - '2552'
+  - - Agility
+    - '265'
+    - '1000'
+    - '1450'
+  prism:
+  - - HP
+    - '1121'
+    - '1856'
+    - '2691'
+  - - Agility
+    - '289'
+    - '1024'
+    - '1484'
+  passive:
+  - - Restriction
+    - Wood type.
+  - - Ability
+    - Increase Bleed EVA by 35%(50%)[+0.5 if Prism].
+  index: 37
+ayane:
+  pic: "/images/sc/ayane.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1065'
+    - '1800'
+    - '2610'
+  - - Agility
+    - '295'
+    - '1030'
+    - '1493'
+  prism:
+  - - HP
+    - '1070'
+    - '0'
+    - '0'
+  - - Agility
+    - '300'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase Petrify EVA by 30%(50%)[+1.5 if prism] in Devil Rumble.
+  index: 41
