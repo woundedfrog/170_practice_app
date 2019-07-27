@@ -1,32 +1,4 @@
 ---
-afternoon nap:
-  pic: "/images/sc/afternoonnap.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1040'
-    - "-"
-    - "-"
-  - - Critical
-    - '270'
-    - "-"
-    - "-"
-  prism:
-  - - HP
-    - '1040'
-    - "-"
-    - "-"
-  - - Critical
-    - '270'
-    - "-"
-    - "-"
-  passive:
-  - - Restriction
-    - Fire.
-  - - ability
-    - DoT Accuracy +30% (55%  +5) in WorldBoss
-  index: 4
 afternoon train:
   pic: "/images/sc/afternoontrain.jpg"
   enabled: 'true'
@@ -122,63 +94,6 @@ sc booster 3:
   - - Ability
     - Increase + EXP by 28.
   index: 56
-baptism goddess:
-  pic: "/images/sc/baptismgoddess.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '765'
-    - '1350'
-    - '1836'
-  - - Defense
-    - '390'
-    - '975'
-    - '1326'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Regeneration Received +25 (125 at lvl40 +4).
-  index: 8
-castle of pleasure:
-  pic: "/images/sc/castlepleasure.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - HP
-    - '775'
-    - '1340'
-    - '1849'
-  - - Defense
-    - '395'
-    - '980'
-    - '1332'
-  passive:
-  - - Restriction
-    - Grass.
-  - - Ability
-    - Instant Heal Received +400 (800 at lvl40 +4).
-  index: 11
-dream team:
-  pic: "/images/sc/dreamteam.jpg"
-  enabled: 'true'
-  stars: '4'
-  normal:
-  - - Attack
-    - '415'
-    - '1000'
-    - '1360'
-  - - Defense
-    - '365'
-    - '960'
-    - '1305'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Heal 700 (1500 at lvl40 +4) HP when enemy is killed.
-  index: 12
 good moa:
   pic: "/images/sc/goodmoa.jpg"
   enabled: 'true'
@@ -369,1290 +284,6 @@ time over:
   - - Ability
     - Silence Resist +10% (16% at lvl40 +4) in Devil Rumble.
   index: 33
-7th runaway:
-  pic: "/images/sc/runaway.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '560'
-    - '0'
-    - '2695'
-  - - Critical
-    - '290'
-    - '0'
-    - '2222'
-  prism:
-  - - Attack
-    - '560'
-    - '0'
-    - '2695'
-  - - Critical
-    - '290'
-    - '0'
-    - '2222'
-  passive:
-  - - Restriction
-    - Light.
-  - - Ability
-    - Increase Critical attack by 800 in Raid Boss.
-  index: 40
-ass baring devil:
-  pic: "/images/sc/assbaringdevil.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Defense
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Defense
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Bleed + 200 (400  +5) in WorldBoss.
-  index: 6
-ayane:
-  pic: "/images/sc/ayane.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1070'
-    - '0'
-    - '0'
-  - - Agility
-    - '300'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1070'
-    - '0'
-    - '0'
-  - - Agility
-    - '300'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Increase Petrify resist +30% in Devil Rumble.
-  index: 41
-azure girl:
-  pic: "/images/sc/azuregirl.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Water type.
-  - - Ability
-    - Poison +1000 (1500) in WorldBoss.
-  index: 7
-beach relaxation:
-  pic: "/images/sc/beachrelax.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '540'
-    - '1200'
-    - '2660'
-  - - Critical
-    - '280'
-    - '1260'
-    - '2205'
-  prism:
-  - - Attack
-    - '540'
-    - '1200'
-    - '2660'
-  - - Critical
-    - '280'
-    - '1260'
-    - '2205'
-  passive:
-  - - Restriction
-    - Grass type.
-  - - Ability
-    - Final attack +700 in Ragna. If card is +5 then +1200 in Ragna.
-  index: 0
-believe:
-  pic: "/images/sc/believe.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '1250'
-    - '1250'
-    - '2187'
-  prism:
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '1250'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Grass type.
-  - - Ability
-    - Poison damage received -250 (500 at lvl50 +5) in Devil Rumble.
-  index: 9
-blade of hot sun:
-  pic: "/images/sc/bladesun.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '560'
-    - '1540'
-    - '2695'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '560'
-    - '1540'
-    - '2695'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Final attack +700 (1200 +5) in Underground.
-  index: 10
-cake aesthetics:
-  pic: "/images/sc/cakeaesthetics.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '2782'
-    - Critical
-  - - '340'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '2782'
-    - Critical
-  - - '340'
-    - '2310'
-  passive:
-  - - Restriction
-    - Fire attacker.
-  - - Ability
-    - Slide skill critical damage +10%
-  index: 67
-christmas gift:
-  pic: "/images/sc/christmasgift.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Slide skill damage +350.
-  index: 66
-crossed hearts:
-  pic: "/images/sc/crossedheart.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1050'
-    - '0'
-    - '3552'
-  - - Defense
-    - '560'
-    - '0'
-    - '2695'
-  prism:
-  - - HP
-    - '1050'
-    - '0'
-    - '3552'
-  - - Defense
-    - '560'
-    - '0'
-    - '2695'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Increase Stun Ignore by 30% in Devil Rumble.
-  index: 43
-dangerous gambler:
-  pic: "/images/sc/dangerousgambler.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Light attacker.
-  - - Ability
-    - Slide skill critical damage +10%.
-  index: 71
-dark town mistress:
-  pic: "/images/sc/darktownleader.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Dark attacker.
-  - - Ability
-    - Increase critical hit chance by 5%.
-  index: 76
-dive:
-  pic: "/images/sc/dive.jpg"
-  enabled: 'false'
-  stars: '5'
-  normal:
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  prism:
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none
-  - - Ability
-    - unknown
-  index: 42
-endo siblings:
-  pic: "/images/sc/endosiblings.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '570'
-    - '1550'
-    - '2712'
-  - - Agility
-    - '320'
-    - '1300'
-    - '2275'
-  prism:
-  - - Attack
-    - '570'
-    - '1550'
-    - '2712'
-  - - Agility
-    - '320'
-    - '1300'
-    - '2275'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - "(14%) of agility is added to attack."
-  index: 13
-eternal oath:
-  pic: "/images/sc/eternaloath.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Defense
-    - '630'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Defense
-    - '630'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - "[if none write none]"
-  - - Ability
-    - Debuff evasion +10%.
-  index: 87
-extreme carnage:
-  pic: "/images/sc/extremecarnage.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '520'
-    - '0'
-    - '0'
-  - - Agility
-    - '270'
-    - '0'
-    - '0'
-  prism:
-  - - Defense
-    - '520'
-    - '0'
-    - '0'
-  - - Agility
-    - '270'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Final HP +1000.
-  index: 80
-feeling tremors:
-  pic: "/images/sc/shakingfeeling.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1040'
-    - '0'
-    - '3535'
-  - - Attack
-    - '530'
-    - '0'
-    - '2642'
-  prism:
-  - - HP
-    - '1040'
-    - '0'
-    - '3535'
-  - - Attack
-    - '530'
-    - '0'
-    - '2642'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Increase 12% chance to stun in Devil Rumble.
-  index: 46
-fluffy melons:
-  pic: "/images/sc/fluffymelons.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '520'
-    - '0'
-    - '0'
-  - - Defense
-    - '1020'
-    - '0'
-  prism:
-  - - HP
-    - '520'
-    - '0'
-    - '0'
-  - - Defense
-    - '1020'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Instant recovery increased by 850 lvl0.
-  index: 82
-forbidden fruit:
-  pic: "/images/sc/forbiddenfruit.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '560'
-    - '0'
-    - '2695'
-  - - Agility
-    - '290'
-    - '0'
-    - '2222'
-  prism:
-  - - Attack
-    - '560'
-    - '0'
-    - '2695'
-  - - Agility
-    - '290'
-    - '0'
-    - '2222'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - 30% chance to ignore Death Heal in Raid Boss.
-  index: 55
-ganryu davi:
-  pic: "/images/sc/ganryudavi.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '550'
-    - '0'
-    - '0'
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '550'
-    - '0'
-    - '0'
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Add 9% of your final defense to your final attack power.
-  index: 60
-glossy peach:
-  pic: "/images/sc/glossypeach.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '0'
-    - '0'
-  - - Defense
-    - '520'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1020'
-    - '0'
-    - '0'
-  - - Defense
-    - '520'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Sustained recovery (HoT) increased by 125 at lvl0.
-  index: 83
-go-home club:
-  pic: "/images/sc/kitakubunewyear.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  prism:
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - HP +9% of agility.
-  index: 78
-god have mercy:
-  pic: "/images/sc/godhavemercy.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Light attacker.
-  - - Ability
-    - Increase critical hit chance by 5%.
-  index: 75
-halloween diva:
-  pic: "/images/sc/halloweendiva.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '550'
-    - '0'
-    - '0'
-  - - Agility
-    - '310'
-    - '0'
-    - '0'
-  prism:
-  - - Defense
-    - '550'
-    - '0'
-    - '0'
-  - - Agility
-    - '310'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Increase Final HP +1500.
-  index: 58
-hero of legends:
-  pic: "/images/sc/herooflegends.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Ignore Defense Damage + 200 (450 at lvl50 +5) on slide in Devil Rumble.
-  index: 16
-higgins daughters:
-  pic: "/images/sc/higginsdaughters.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '570'
-    - '1550'
-    - '2712'
-  - - Critical
-    - '320'
-    - '1300'
-    - '2275'
-  prism:
-  - - Attack
-    - '570'
-    - '1550'
-    - '2712'
-  - - Critical
-    - '320'
-    - '1300'
-    - '2275'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - "(14%) of critical is added to attack."
-  index: 17
-home-made chocolate:
-  pic: "/images/sc/callthecops.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1090'
-    - '0'
-    - '0'
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1090'
-    - '0'
-    - '0'
-  - - Defense
-    - '590'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - 9% of defense stat is added to critical hit chance.
-  index: 77
-hunting devil:
-  pic: "/images/sc/huntingdevil.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Dark.
-  - - Ability
-    - Critical damage +4000 in Ragna.
-  index: 19
-i love sake!:
-  pic: "/images/sc/ilovesake.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1100'
-    - '0'
-    - '0'
-  - - Defense
-    - '600'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1100'
-    - '0'
-    - '0'
-  - - Defense
-    - '600'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Light.
-  - - Ability
-    - Increase Final Defense +800.
-  index: 65
-iced americano:
-  pic: "/images/sc/icedamericano.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1078'
-    - '2058'
-    - '3601'
-  - - Defence
-    - '586'
-    - '1566'
-    - '2740'
-  prism:
-  - - HP
-    - '1078'
-    - '2058'
-    - '3601'
-  - - Defence
-    - '586'
-    - '1566'
-    - '2740'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Using a slide skill grants a 40% (45.5%) chance to get 700HP(1250HP) barrier
-      for 10 seconds in Underground.
-  index: 39
-important present:
-  pic: "/images/sc/importantttreasure.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Grass attacker.
-  - - Ability
-    - Increase Critical hit chance by 5%.
-  index: 72
-inspiration:
-  pic: "/images/sc/inspiration.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Critical
-    - '310'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '590'
-    - '0'
-    - '0'
-  - - Critical
-    - '310'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Dark.
-  - - Ability
-    - Ignore Damage +350 added to normal skill in Raid Boss.
-  index: 62
-judgement day:
-  pic: "/images/sc/judgementday.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Defense
-    - '530'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Defense
-    - '530'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - Light.
-  - - Ability
-    - Poison damage received -250 (500 at lvl50 +5) in Devil Rumble.
-  index: 20
-late night partner:
-  pic: "/images/sc/latenightpartner.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1000'
-    - '1980'
-    - '3465'
-  - - Defense
-    - '530'
-    - '1510'
-    - '2642'
-  prism:
-  - - HP
-    - '1000'
-    - '1980'
-    - '3465'
-  - - Defense
-    - '530'
-    - '1510'
-    - '2642'
-  passive:
-  - - Restriction
-    - Tank.
-  - - Ability
-    - Effectiveness of Reflect +3% (11.5% +5) in Devil Rumble.
-  index: 21
-lost dream:
-  pic: "/images/sc/lostdream.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - "?"
-    - '1100'
-    - '0'
-    - '0'
-  - - "?"
-    - '600'
-    - '0'
-    - '0'
-  prism:
-  - - "?"
-    - '1100'
-    - '0'
-    - '0'
-  - - "?"
-    - '600'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Fire.
-  - - Ability
-    - '"Deadly poison" damage +250.'
-  index: 81
-meat together:
-  pic: "/images/sc/togetherwithmeat.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Heal block Resist +40%.
-  index: 34
-melty christmas:
-  pic: "/images/sc/meltychristmas.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Critical
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Critical
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Grass attacker.
-  - - Ability
-    - Slide skill critical damage +10%.
-  index: 73
-moon-night spa:
-  pic: "/images/sc/moonnightspa.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1110'
-    - '0'
-    - '0'
-  - - Agility
-    - '360'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1110'
-    - '0'
-    - '0'
-  - - Agility
-    - '360'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Curse avoidance rate increased by 30%.
-  index: 86
-nobalman's new year:
-  pic: "/images/sc/nobalnewyear.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '600'
-    - '0'
-    - '0'
-  - - Critical
-    - '340'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '600'
-    - '0'
-    - '0'
-  - - Critical
-    - '340'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Light.
-  - - Ability
-    - Increase Final attack +1150 at WorldBoss.
-  index: 64
-onsen:
-  pic: "/images/sc/onsen.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '610'
-    - '0'
-    - '0'
-  - - Agility
-    - '360'
-    - '0'
-    - '0'
-  prism:
-  - - Defense
-    - '610'
-    - '0'
-    - '0'
-  - - Agility
-    - '360'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - In DevilRumble, heal 250HP when attacked.
-  index: 85
-piercing blue sky:
-  pic: "/images/sc/piercingbluesky.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Light + Attacker.
-  - - Ability
-    - 50% (65% +5) chance to ignore provocation.
-  index: 23
-power of smile:
-  pic: "/images/sc/powerofsmile.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - Grass Attacker.
-  - - Ability
-    - Poison Resist +35% (50% +5).
-  index: 24
-ppp on stage:
-  pic: "/images/sc/ppponstage.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1110'
-    - '0'
-    - '0'
-  - - Attack
-    - '610'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1110'
-    - '0'
-    - '0'
-  - - Attack
-    - '610'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Deal 350 Ignore Defense damage when using Slide skill in PVE.
-  index: 84
-princess carry:
-  pic: "/images/sc/princesscarry.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Bleed +200 (400 +5) in Underground.
-  index: 25
-queen of the night:
-  pic: "/images/sc/queenofnight.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '0'
-    - '0'
-  - - Critical
-    - '270'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1020'
-    - '0'
-    - '0'
-  - - Critical
-    - '270'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Increase Final Attack +500.
-  index: 61
-racing suit:
-  pic: "/images/sc/racingsuit.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Critical
-    - '350'
-    - '0'
-    - '2327'
-  prism:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Critical
-    - '350'
-    - '0'
-    - '2327'
-  passive:
-  - - Restriction
-    - Dark attacker.
-  - - Ability
-    - Slide skill critical damage +11%.
-  index: 70
 sc booster 5:
   pic: "/images/sc/scupgrade5.jpg"
   enabled: 'true'
@@ -1681,482 +312,6 @@ sc booster 5:
   - - Ability
     - Increases + EXP by 480.
   index: 44
-seaside goddess:
-  pic: "/images/sc/seasidegoddess.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1040'
-    - '2020'
-    - '3535'
-  - - Defense
-    - '550'
-    - '1530'
-    - '2677'
-  prism:
-  - - HP
-    - '1040'
-    - '2020'
-    - '3535'
-  - - Defense
-    - '550'
-    - '1530'
-    - '2677'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Bleed +220 (320 +5) in Devil Rumble.
-  index: 1
-show time!:
-  pic: "/images/sc/showtime.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1080'
-    - '0'
-    - '0'
-  - - Critical
-    - '300'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1080'
-    - '0'
-    - '0'
-  - - Critical
-    - '300'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Fire.
-  - - Ability
-    - Increase 15% chance to debuff in WorldBoss.
-  index: 57
-sow:
-  pic: "/images/sc/sow.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  prism:
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  - - "?"
-    - '0'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - "[if none write none]"
-  - - Ability
-    - "[Write info]"
-  index: 45
-starry stage:
-  pic: "/images/sc/starrystage.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1090'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  prism:
-  - - HP
-    - '1090'
-    - '0'
-    - '0'
-  - - Agility
-    - '330'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Increase Instant Heal received +800.
-  index: 63
-stf:
-  pic: "/images/sc/stf.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '530'
-    - '1510'
-    - '2642'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Light.
-  - - Ability
-    - Curse +200.
-  index: 28
-stray lamb:
-  pic: "/images/sc/straylamb.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '0'
-    - '0'
-  - - Critical
-    - '270'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '520'
-    - '0'
-    - '0'
-  - - Critical
-    - '270'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Final Agility +250.
-  index: 79
-summer night:
-  pic: "/images/sc/summerfestivalnight.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1018'
-    - '1998'
-    - '3296'
-  - - Agility
-    - '268'
-    - '1248'
-    - '2184'
-  prism:
-  - - HP
-    - '1018'
-    - '1998'
-    - '3296'
-  - - Agility
-    - '268'
-    - '1248'
-    - '2184'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Freeze evasion +8.5% (18.5%).
-  index: 30
-tamaki:
-  pic: "/images/sc/tamaki.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '580'
-    - '0'
-    - '0'
-  - - Defense
-    - '540'
-    - '0'
-    - '0'
-  prism:
-  - - Attack
-    - '580'
-    - '0'
-    - '0'
-  - - Defense
-    - '540'
-    - '0'
-    - '0'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Heal 1500HP when enemy is killed.
-  index: 47
-tba1:
-  pic: "/images/sc/handsomeadventure.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Agility
-    - '350'
-    - '0'
-    - '2327'
-  prism:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Agility
-    - '350'
-    - '0'
-    - '2327'
-  passive:
-  - - Restriction
-    - Water attacker.
-  - - Ability
-    - Increase critical rate by 6%.
-  index: 68
-tba2:
-  pic: "/images/sc/brieftranquility.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Critical
-    - '350'
-    - '0'
-    - '2327'
-  prism:
-  - - Attack
-    - '620'
-    - '0'
-    - '2800'
-  - - Critical
-    - '350'
-    - '0'
-    - '2327'
-  passive:
-  - - Restriction
-    - Water attacker.
-  - - Ability
-    - Slide skill critical damage + 11%.
-  index: 69
-throne:
-  pic: "/images/sc/throne.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1020'
-    - '2000'
-    - '3500'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Silence Resist +25% (50% +5) in Devil Rumble.
-  index: 32
-training expert:
-  pic: "/images/sc/trainingexpert.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  prism:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Defense
-    - '520'
-    - '1500'
-    - '2625'
-  passive:
-  - - Restriction
-    - Tank.
-  - - Ability
-    - When less than 3000 (5000) Hp, evasion +20% (27.5% +5) in Devil Rumble.
-  index: 35
-treasure hunter:
-  pic: "/images/sc/treasurehunter.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  prism:
-  - - Attack
-    - '610'
-    - '0'
-    - '2782'
-  - - Agility
-    - '340'
-    - '0'
-    - '2310'
-  passive:
-  - - Restriction
-    - Fire attacker.
-  - - Ability
-    - Increase Critical hit chance by 5%.
-  index: 74
-undersea date:
-  pic: "/images/sc/underseadate.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '540'
-    - '1520'
-    - '2660'
-  - - Agility
-    - '280'
-    - '1260'
-    - '2205'
-  prism:
-  - - Defense
-    - '540'
-    - '1520'
-    - '2660'
-  - - Agility
-    - '280'
-    - '1260'
-    - '2205'
-  passive:
-  - - Restriction
-    - Water type.
-  - - Ability
-    - Poison +500 (+750 +5) in Underground.
-  index: 3
-vacation:
-  pic: "/images/sc/vacation.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Defense
-    - '550'
-    - '1530'
-    - '2677'
-  - - Agility
-    - '280'
-    - '1260'
-    - '2205'
-  prism:
-  - - Defense
-    - '550'
-    - '1530'
-    - '2677'
-  - - Agility
-    - '280'
-    - '1260'
-    - '2205'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Poison evasion +35% (50% +5) in Devil Rumble.
-  index: 2
-wandering doctor:
-  pic: "/images/sc/wanderingdoctor.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '500'
-    - '1480'
-    - '2590'
-  - - Defense
-    - '540'
-    - '1520'
-    - '2660'
-  prism:
-  - - Attack
-    - '500'
-    - '1480'
-    - '2590'
-  - - Defense
-    - '540'
-    - '1520'
-    - '2660'
-  passive:
-  - - Restriction
-    - Attacker.
-  - - Ability
-    - Lifesteal +200 (450 +5) in Underground.
-  index: 36
-wisteria tree:
-  pic: "/images/sc/wisteriatree.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - HP
-    - '1030'
-    - '2010'
-    - '3517'
-  - - Critical
-    - '270'
-    - '1250'
-    - '2187'
-  passive:
-  - - Restriction
-    - Grass type.
-  - - Ability
-    - Bleed Resist +35% (50% +5)
-  index: 37
 secret date:
   pic: "/images/sc/secretdate.jpg"
   enabled: 'true'
@@ -2233,6 +388,1101 @@ sweet propose:
   - - Ability
     - Bleed +20.
   index: 31
+test:
+  pic: "/images/sc/azuregirl.jpg"
+  enabled: 'false'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - '0'
+    - '0'
+  - - Agility
+    - '270'
+    - '0'
+    - '0'
+  prism:
+  - - Attack
+    - '520'
+    - '620'
+    - '720'
+  - - Agility
+    - '270'
+    - '370'
+    - '470'
+  passive:
+  - - Restriction
+    - Nothing is restricted
+  - - Ability
+    - I can do anything. (Especially if I am a 5*)
+  index: 88
+lost dream:
+  pic: "/images/sc/lostdream.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1100'
+    - '2080'
+    - '3640'
+  - - Defense
+    - '600'
+    - '1580'
+    - '2765'
+  prism:
+  - - HP
+    - '1118'
+    - '2098'
+    - '3671'
+  - - Defense
+    - '616'
+    - '1596'
+    - '2793'
+  passive:
+  - - Restriction
+    - Fire.
+  - - Ability
+    - '"Deadly poison" damage +200 (250) [+10 if Prism]'
+  index: 81
+dive:
+  pic: "/images/sc/dive.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1090'
+    - '2070'
+    - '3622'
+  - - Def
+    - '540'
+    - '1520'
+    - '2660'
+  prism:
+  - - HP
+    - N/A
+    - N/A
+    - N/A
+  - - Def
+    - N/A
+    - N/A
+    - N/A
+  passive:
+  - - Restriction
+    - Attacker
+  - - Ability
+    - In PvP only, upon using Tap Skill, 25% (40%) chance of gaining 800 (1300) Barrier
+      for 10s to self
+  index: 42
+eternal oath:
+  pic: "/images/sc/eternaloath.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '590'
+    - '1570'
+    - '2747'
+  - - Defense
+    - '630'
+    - '1610'
+    - '2817'
+  prism:
+  - - Attack
+    - '616'
+    - '1586'
+    - '2775'
+  - - Defense
+    - '646'
+    - '1626'
+    - '2845'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - Debuff Evasion +10%(15%) [+1% if Prism]
+  index: 87
+7th runaway:
+  pic: "/images/sc/runaway.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '560'
+    - '1540'
+    - '2695'
+  - - Critical
+    - '290'
+    - '1270'
+    - '2222'
+  prism:
+  - - Attack
+    - '576'
+    - '1556'
+    - '2723'
+  - - Critical
+    - '302'
+    - '1282'
+    - '2243'
+  passive:
+  - - Restriction
+    - Light.
+  - - Ability
+    - Increase Critical stat by 800(1300)[+25 if prism] in Raid Boss.
+  index: 40
+adventure of the genius:
+  pic: "/images/sc/handsomeadventure.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - Agility
+    - '350'
+    - '1330'
+    - '2328'
+  prism:
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - Agility
+    - '362'
+    - '1342'
+    - '2348'
+  passive:
+  - - Restriction
+    - Water attacker.
+  - - Ability
+    - Increase critical rate by 6%(16%)[+0.5 if prism]
+  index: 68
+afternoon nap:
+  pic: "/images/sc/afternoonnap.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1040'
+    - '2020'
+    - '3535'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2188'
+  prism:
+  - - HP
+    - '1058'
+    - '2038'
+    - '3566'
+  - - Critical
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Fire.
+  - - Ability
+    - DoT Accuracy +30% (55%)[+5 if prism] in WorldBoss
+  index: 4
+ayane:
+  pic: "/images/sc/ayane.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1070'
+    - '2050'
+    - '3587'
+  - - Agility
+    - '300'
+    - '1280'
+    - '2240'
+  prism:
+  - - HP
+    - '1088'
+    - '2068'
+    - '3619'
+  - - Agility
+    - '312'
+    - '1292'
+    - '2261'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase Petrify resist +30%(50%)[+1.5 if prism] in Devil Rumble.
+  index: 41
+azure girl:
+  pic: "/images/sc/azuregirl.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  - - Agility
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Water type.
+  - - Ability
+    - Poison +1000 (1500)[+100 if prism] in WorldBoss.
+  index: 7
+ass baring devil:
+  pic: "/images/sc/assbaringdevil.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  - - Defense
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  - - Defense
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - Bleed + 200 (400)[+10 if prism] in WorldBoss.
+  index: 6
+believe:
+  pic: "/images/sc/believe.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '520'
+    - '1500'
+    - '2625'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Defense
+    - '526'
+    - '1506'
+    - '2635'
+  - - Critical
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Wood type.
+  - - Ability
+    - Reduce poison damage received by 250 (500)[+15 if prism] in Devil Rumble.
+  index: 9
+blade of hot sun:
+  pic: "/images/sc/bladesun.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '560'
+    - '1540'
+    - '2695'
+  - - Agility
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '576'
+    - '1556'
+    - '2723'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Attack stat +700 (1200)[+25 if prism] in Underground.
+  index: 10
+cake aesthetics:
+  pic: "/images/sc/cakeaesthetics.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Critical
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Critical
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Fire attacker.
+  - - Ability
+    - Slide skill critical damage +10%(20%)[+0.5 if prism]
+  index: 67
+christmas gift:
+  pic: "/images/sc/christmasgift.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '590'
+    - '1570'
+    - '2747'
+  - - Agility
+    - '330'
+    - '1310'
+    - '2292'
+  prism:
+  - - Attack
+    - '606'
+    - '1586'
+    - '2775'
+  - - Agility
+    - '342'
+    - '1322'
+    - '2313'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Slide skill damage +350(500)[+15 if prism]
+  index: 66
+crossed hearts:
+  pic: "/images/sc/crossedheart.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1050'
+    - '2030'
+    - '3552'
+  - - Defense
+    - '560'
+    - '1540'
+    - '2695'
+  prism:
+  - - HP
+    - '1065'
+    - '2045'
+    - '3578'
+  - - Defense
+    - '566'
+    - '1546'
+    - '2705'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - Increase Stun Ignore by 30%(50%)[+1.5 if prism] in Devil Rumble.
+  index: 43
+dangerous gambler:
+  pic: "/images/sc/dangerousgambler.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Agility
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Light attacker.
+  - - Ability
+    - Slide skill critical damage +10%(20%)[+0.5 if prism]
+  index: 71
+dark town mistress:
+  pic: "/images/sc/darktownleader.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Agility
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Dark attacker.
+  - - Ability
+    - Increase critical hit chance by 5%(15%)[+0.5 if prism].
+  index: 76
+endo siblings:
+  pic: "/images/sc/endosiblings.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '570'
+    - '1550'
+    - '2712'
+  - - Agility
+    - '320'
+    - '1300'
+    - '2275'
+  prism:
+  - - Attack
+    - N/A
+    - N/A
+    - N/A
+  - - Agility
+    - N/A
+    - N/A
+    - N/A
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - 9%(14%) of agility is added to attack.
+  index: 13
+fluffy melons:
+  pic: "/images/sc/fluffymelons.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '520'
+    - N/A
+    - N/A
+  - - Defense
+    - '1020'
+    - N/A
+    - N/A
+  prism:
+  - - HP
+    - '536'
+    - '1516'
+    - '2653'
+  - - Defense
+    - '1038'
+    - '2018'
+    - '3531'
+  passive:
+  - - Restriction
+    - none. Note Only comes in Prism form, only obtainable from April fools event.
+  - - Ability
+    - Instant heal increased by 850(1350)
+  index: 82
+glossy peach:
+  pic: "/images/sc/glossypeach.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - N/A
+    - N/A
+  - - Defense
+    - '520'
+    - N/A
+    - N/A
+  prism:
+  - - HP
+    - '536'
+    - '1516'
+    - '2653'
+  - - Defense
+    - '1038'
+    - '2018'
+    - '3531'
+  passive:
+  - - Restriction
+    - none. Note* Only comes in Prism form, only obtainable from April fools event.
+  - - Ability
+    - Sustained recovery (HoT) increased by 145(245)
+  index: 83
+forbidden fruit:
+  pic: "/images/sc/forbiddenfruit.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '560'
+    - '1540'
+    - '2695'
+  - - Agility
+    - '290'
+    - '1270'
+    - '2222'
+  prism:
+  - - Attack
+    - '576'
+    - '1556'
+    - '2723'
+  - - Agility
+    - '302'
+    - '1282'
+    - '2243'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - 30%(80%)[+2.5 if Prism] chance to ignore Death Heal in Raid Boss.
+  index: 55
+ganryu davi:
+  pic: "/images/sc/ganryudavi.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '550'
+    - N/A
+    - N/A
+  - - Defense
+    - '590'
+    - N/A
+    - N/A
+  prism:
+  - - Attack
+    - '566'
+    - '1546'
+    - '2705'
+  - - Defense
+    - '606'
+    - '1586'
+    - '2775'
+  passive:
+  - - Restriction
+    - None. Note* Only comes in Prism form, only obtainable from a collab event.
+  - - Ability
+    - Add 9.5%(14.5%) of your defense to your attack power.
+  index: 60
+god have mercy:
+  pic: "/images/sc/godhavemercy.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Agility
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Light attacker.
+  - - Ability
+    - Increase critical hit chance by 5%(15%)[+0.5 if Prism].
+  index: 75
+halloween diva:
+  pic: "/images/sc/halloweendiva.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '550'
+    - '1530'
+    - '2677'
+  - - Agility
+    - '310'
+    - '1290'
+    - '2257'
+  prism:
+  - - Defense
+    - '566'
+    - '1546'
+    - '2705'
+  - - Agility
+    - '322'
+    - '1302'
+    - '2278'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - Increase Final HP +1500(2500)[+20 if Prism]
+  index: 58
+higgins daughters:
+  pic: "/images/sc/higginsdaughters.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '570'
+    - '1550'
+    - '2712'
+  - - Critical
+    - '320'
+    - '1300'
+    - '2275'
+  prism:
+  - - Attack
+    - N/A
+    - N/A
+    - N/A
+  - - Critical
+    - N/A
+    - N/A
+    - N/A
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - 9%(14%) of critical is added to attack.
+  index: 17
+home-made chocolate:
+  pic: "/images/sc/callthecops.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1090'
+    - '2070'
+    - '3622'
+  - - Defense
+    - '590'
+    - '1570'
+    - '2747'
+  prism:
+  - - HP
+    - '1108'
+    - '2088'
+    - '3654'
+  - - Defense
+    - '606'
+    - '1586'
+    - '2775'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - 9%(14%)[+0.5 if Prism] of defense stat is added to critical.
+  index: 77
+iced americano:
+  pic: "/images/sc/icedamericano.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1060'
+    - '2040'
+    - '3570'
+  - - Def
+    - '570'
+    - '1550'
+    - '2712'
+  prism:
+  - - HP
+    - '1078'
+    - '2058'
+    - '3601'
+  - - Def
+    - '586'
+    - '1566'
+    - '2740'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Using slide skill grants a 40% (45%)[+0.5 if Prism]chance to get 700HP(1200HP)[+50
+      if Prism] barrier for 10 seconds in Underground.
+  index: 39
+inspiration:
+  pic: "/images/sc/inspiration.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '590'
+    - '1570'
+    - '2747'
+  - - Critical
+    - '310'
+    - '1290'
+    - '2257'
+  prism:
+  - - Attack
+    - '606'
+    - '1586'
+    - '2775'
+  - - Critical
+    - '322'
+    - '1302'
+    - '2278'
+  passive:
+  - - Restriction
+    - Dark.
+  - - Ability
+    - Ignore Damage +350(500)[+15 if Prism] added to Tap Skill in Raid Boss.
+  index: 62
+melty christmas:
+  pic: "/images/sc/meltychristmas.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Critical
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Critical
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Grass attacker.
+  - - Ability
+    - Slide skill critical damage +10%(20%)[+0.5 if Prism]
+  index: 73
+nobalman's new year:
+  pic: "/images/sc/nobalnewyear.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '600'
+    - '1580'
+    - '2765'
+  - - Critical
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '616'
+    - '1596'
+    - '2793'
+  - - Critical
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Light.
+  - - Ability
+    - Attack stat +1150(1900)[+25 if Prism] at WorldBoss.
+  index: 64
+queen of the night:
+  pic: "/images/sc/queenofnight.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - Critical
+    - '282'
+    - '1262'
+    - '2208'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Attack +500(1000)[+25 if Prism]
+  index: 61
+ppp on stage:
+  pic: "/images/sc/ppponstage.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Atk
+    - '610'
+    - '1590'
+    - '2782'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Atk
+    - '626'
+    - '1606'
+    - '2810'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - Deal 350(600)[+15 if Prism] Ignore Defense damage when using Slide Skill in
+      PVE.
+  index: 84
+piercing blue sky:
+  pic: "/images/sc/piercingbluesky.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  - - Critical
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Light Attacker.
+  - - Ability
+    - 50% (65%)[+1 if Prism] chance to ignore Taunt.
+  index: 23
+go-home club:
+  pic: "/images/sc/kitakubunewyear.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '590'
+    - '1570'
+    - '2747'
+  - - Agility
+    - '330'
+    - '1310'
+    - '2292'
+  prism:
+  - - Defense
+    - '606'
+    - '1586'
+    - '2775'
+  - - Agility
+    - '342'
+    - '1322'
+    - '2313'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - 9%(14%)[+0.5 if Prism] of Agility is added to HP
+  index: 78
+i love sake!:
+  pic: "/images/sc/ilovesake.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1100'
+    - '2080'
+    - '3640'
+  - - Defense
+    - '600'
+    - '1580'
+    - '2765'
+  prism:
+  - - HP
+    - '1118'
+    - '2098'
+    - '3671'
+  - - Defense
+    - '616'
+    - '1596'
+    - '2793'
+  passive:
+  - - Restriction
+    - Light.
+  - - Ability
+    - Defense +800(1300)[+25 if Prism]
+  index: 65
+seaside goddess:
+  pic: "/images/sc/seasidegoddess.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1040'
+    - '2020'
+    - '3535'
+  - - Def
+    - '550'
+    - '1530'
+    - '2677'
+  prism:
+  - - HP
+    - '1058'
+    - '2038'
+    - '3566'
+  - - Def
+    - '556'
+    - '1536'
+    - '2688'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Bleed +220 (320)[+10 if Prism] in Devil Rumble.
+  index: 1
+vacation:
+  pic: "/images/sc/vacation.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '550'
+    - '1530'
+    - '2677'
+  - - Agility
+    - '280'
+    - '1260'
+    - '2205'
+  prism:
+  - - Defense
+    - '606'
+    - '1586'
+    - '2775'
+  - - Agility
+    - '288'
+    - '1268'
+    - '2219'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Poison evasion +35% (50%)[+0.5 if Prism] in Devil Rumble.
+  index: 2
+wandering doctor:
+  pic: "/images/sc/wanderingdoctor.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '500'
+    - '1480'
+    - '2590'
+  - - Defense
+    - '540'
+    - '1520'
+    - '2660'
+  prism:
+  - - Attack
+    - '505'
+    - '1485'
+    - '2598'
+  - - Defense
+    - '547'
+    - '1527'
+    - '2672'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Vampirism/HP Absorb +200 (450)[+15 if Prism] in Underground.
+  index: 36
+wisteria tree:
+  pic: "/images/sc/wisteriatree.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1030'
+    - '2010'
+    - '3517'
+  - - AGI
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - HP
+    - '1048'
+    - '2028'
+    - '3549'
+  - - AGI
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Wood type.
+  - - Ability
+    - Bleed Evasion +35% (50%)[+0.5 if Prism]
+  index: 37
 under the rose:
   pic: "/images/sc/undertherose.jpg"
   enabled: 'true'
@@ -2240,24 +1490,867 @@ under the rose:
   normal:
   - - Defense
     - '590'
-    - '0'
-    - '0'
+    - '1570'
+    - '2747'
   - - Agility
     - '320'
-    - '0'
-    - '0'
+    - '1300'
+    - '2275'
   prism:
   - - Defense
-    - '590'
-    - '0'
-    - '0'
+    - '606'
+    - '1586'
+    - '2775'
   - - Agility
-    - '320'
-    - '0'
-    - '0'
+    - '332'
+    - '1312'
+    - '2296'
   passive:
   - - Restriction
     - None.
   - - Ability
-    - Increase "Dancing Blade" debuff damage in Devil Rumble +170.
+    - '"Dancing Blade" debuff damage +170(270)[+10 if Prism] in Devil Rumble'
   index: 59
+meat together:
+  pic: "/images/sc/togetherwithmeat.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Heal block Resist +40%(65%)[+1 if Prism]
+  index: 34
+s. t. f.:
+  pic: "/images/sc/stf.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '530'
+    - '1510'
+    - '2642'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '536'
+    - '1516'
+    - '2653'
+  - - Critical
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Light.
+  - - Ability
+    - Curse damage +200(300)[+20 if Prism]
+  index: 28
+tranquil peace:
+  pic: "/images/sc/brieftranquility.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - Critical
+    - '350'
+    - '1330'
+    - '2327'
+  prism:
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - Critical
+    - '362'
+    - '1342'
+    - '2348'
+  passive:
+  - - Restriction
+    - Water attacker.
+  - - Ability
+    - Slide skill critical damage + 11%(21%)[+0.5 if Prism]
+  index: 69
+treasure hunter:
+  pic: "/images/sc/treasurehunter.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - Agility
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Fire attacker.
+  - - Ability
+    - Increase Critical hit chance by 5%(15%)[+0.5 if Prism]
+  index: 74
+the power of a smile:
+  pic: "/images/sc/powerofsmile.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - Grass Attacker.
+  - - Ability
+    - Poison Resist +35% (50%)[+0.5 if Prism]
+  index: 24
+tamaki:
+  pic: "/images/sc/tamaki.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '580'
+    - '1560'
+    - '2730'
+  - - Defense
+    - '540'
+    - '1520'
+    - '2660'
+  prism:
+  - - Attack
+    - '596'
+    - '1576'
+    - '2758'
+  - - Defense
+    - '556'
+    - '1536'
+    - '2688'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Heal 1500(3000)[+120 if Prism] when defeating an Enemy
+  index: 47
+show time!:
+  pic: "/images/sc/showtime.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1080'
+    - '2060'
+    - '3605'
+  - - Critical
+    - '300'
+    - '1280'
+    - '2240'
+  prism:
+  - - HP
+    - '1098'
+    - '2078'
+    - '3636'
+  - - Critical
+    - '312'
+    - '1292'
+    - '2261'
+  passive:
+  - - Restriction
+    - Fire.
+  - - Ability
+    - "+15%(30%)[+1.5 if Prism] chance to debuff in WorldBoss."
+  index: 57
+sow:
+  pic: "/images/sc/sow.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '500'
+    - '1480'
+    - '2590'
+  - - Agility
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '505'
+    - '1485'
+    - '2598'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Light
+  - - Ability
+    - "+350(600)[+15 if Prism] Agility"
+  index: 45
+starry stage:
+  pic: "/images/sc/starrystage.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1090'
+    - '2070'
+    - '3622'
+  - - Agility
+    - '330'
+    - '1310'
+    - '2292'
+  prism:
+  - - HP
+    - '1108'
+    - '2088'
+    - '3654'
+  - - Agility
+    - '342'
+    - '1322'
+    - '2313'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Instant Heal received +800(1150)[+75 if Prism]
+  index: 63
+summer night:
+  pic: "/images/sc/summerfestivalnight.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1000'
+    - '1980'
+    - '3465'
+  - - Agility
+    - '260'
+    - '1240'
+    - '2170'
+  prism:
+  - - HP
+    - '1018'
+    - '1998'
+    - '3296'
+  - - Agility
+    - '268'
+    - '1248'
+    - '2184'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Freeze evasion +8% (18%)[+0.5 if Prism]
+  index: 30
+feeling tremors:
+  pic: "/images/sc/shakingfeeling.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1040'
+    - '2020'
+    - '3535'
+  - - ATk
+    - '530'
+    - '1510'
+    - '2642'
+  prism:
+  - - HP
+    - '1058'
+    - '2038'
+    - '3566'
+  - - ATK
+    - '536'
+    - '1516'
+    - '2653'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - "+12%(27%)[+1.5 if Prism] chance to stun in Devil Rumble."
+  index: 46
+stray lamb:
+  pic: "/images/sc/straylamb.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - N/A
+    - N/A
+  - - Critical
+    - '270'
+    - N/A
+    - N/A
+  prism:
+  - - Attack
+    - '536'
+    - '1516'
+    - '2653'
+  - - Critical
+    - '282'
+    - '1262'
+    - '2208'
+  passive:
+  - - Restriction
+    - none.
+  - - Ability
+    - "+265(765) Agility"
+  index: 79
+extreme carnage:
+  pic: "/images/sc/extremecarnage.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '520'
+    - N/A
+    - N/A
+  - - Agility
+    - '270'
+    - N/A
+    - N/A
+  prism:
+  - - Defense
+    - '536'
+    - '1516'
+    - '2653'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Max HP +1120(1620)
+  index: 80
+onsen:
+  pic: "/images/sc/onsen.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '360'
+    - '1340'
+    - '2345'
+  prism:
+  - - Defense
+    - '626'
+    - '1606'
+    - '2810'
+  - - Agility
+    - '372'
+    - '1352'
+    - '2366'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - In Devil Rumble, 250(550)[+25 if Prism] HP Recovery when attacked
+  index: 85
+racing suit:
+  pic: "/images/sc/racingsuit.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - Critical
+    - '350'
+    - '1330'
+    - '2327'
+  prism:
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - Critical
+    - '362'
+    - '1342'
+    - '2348'
+  passive:
+  - - Restriction
+    - Dark attacker.
+  - - Ability
+    - Slide skill critical damage +11%(21%)[+0.5 if Prism]
+  index: 70
+important present:
+  pic: "/images/sc/importantttreasure.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - Agility
+    - '340'
+    - '1320'
+    - '2310'
+  prism:
+  - - Attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - '2782'
+    - Agility
+    - '352'
+    - '1332'
+    - '2331'
+  passive:
+  - - Restriction
+    - Grass attacker.
+  - - Ability
+    - Increase Critical hit chance by 5%(15%)[+0.5 if Prism]
+  index: 72
+moon-night spa:
+  pic: "/images/sc/moonnightspa.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - AGI
+    - '360'
+    - '1340'
+    - '2345'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - AGI
+    - '372'
+    - '1352'
+    - '2366'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Curse Evasion +30%(45%)[+0.5 if Prism]
+  index: 86
+beach relaxation:
+  pic: "/images/sc/beachrelax.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '540'
+    - '1200'
+    - '2660'
+  - - Critical
+    - '280'
+    - '1260'
+    - '2205'
+  prism:
+  - - Attack
+    - '546'
+    - '1526'
+    - '2670'
+  - - Critical
+    - '288'
+    - '1268'
+    - '2219'
+  passive:
+  - - Restriction
+    - Wood type.
+  - - Ability
+    - Attack +700(1200)[+25 if Prism] in Ragna
+  index: 0
+hero of legends:
+  pic: "/images/sc/herooflegends.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1030'
+    - '2010'
+    - '3517'
+  - - Defense
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1048'
+    - '2028'
+    - '3549'
+  - - Defense
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - Attacker.
+  - - Ability
+    - Ignore Defense Damage +200(450)[+15 if Prism] on Slide Skill in Devil Rumble.
+  index: 16
+hunting devil:
+  pic: "/images/sc/huntingdevil.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '530'
+    - '1510'
+    - '2642'
+  - - Agility
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '536'
+    - '1516'
+    - '2653'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Dark.
+  - - Ability
+    - Critical damage +4000(6500)[+100 if Prism] in Ragna.
+  index: 19
+throne:
+  pic: "/images/sc/throne.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - Defense
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - Defense
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Silence Evasion +25%(50%)[+0.5 if Prism] in Devil Rumble.
+  index: 32
+training expert:
+  pic: "/images/sc/trainingexpert.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1030'
+    - '2010'
+    - '3517'
+  - - DEF
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1048'
+    - '2028'
+    - '3549'
+  - - DEF
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - Tank.
+  - - Ability
+    - When less than 3000(5000)[+100 if Prism] Hp, Evasion +20%(27.5%)[+1 if Prism]
+      in Devil Rumble.
+  index: 35
+princess carry:
+  pic: "/images/sc/princesscarry.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - ATK
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - ATK
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Bleed +200(400)[+10 if Prism] in Underground.
+  index: 25
+judgement day:
+  pic: "/images/sc/judgementday.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1020'
+    - '2000'
+    - '3500'
+  - - Defense
+    - '530'
+    - '1500'
+    - '2625'
+  prism:
+  - - HP
+    - '1038'
+    - '2018'
+    - '3531'
+  - - Defense
+    - '526'
+    - '1506'
+    - '2635'
+  passive:
+  - - Restriction
+    - Light.
+  - - Ability
+    - Poison damage received -250(500)[+15 if Prism] in Devil Rumble.
+  index: 20
+a subaquatic date:
+  pic: "/images/sc/underseadate.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Defense
+    - '540'
+    - '1520'
+    - '2660'
+  - - Agility
+    - '280'
+    - '1260'
+    - '2205'
+  prism:
+  - - Defense
+    - '546'
+    - '1526'
+    - '2670'
+  - - Agility
+    - '288'
+    - '1268'
+    - '2219'
+  passive:
+  - - Restriction
+    - Water type.
+  - - Ability
+    - Poison +500 (+750)[+15 if Prism] in Underground.
+  index: 3
+midnight partners:
+  pic: "/images/sc/latenightpartner.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1000'
+    - '1980'
+    - '3465'
+  - - DEF
+    - '530'
+    - '1510'
+    - '2642'
+  prism:
+  - - HP
+    - '1018'
+    - '1998'
+    - '3496'
+  - - DEF
+    - '536'
+    - '1516'
+    - '2653'
+  passive:
+  - - Restriction
+    - Tank.
+  - - Ability
+    - Effectiveness of Reflect +3% (11.5%)[+0.5 if Prism] in Devil Rumble.
+  index: 21
+a castle of pleasure:
+  pic: "/images/sc/castlepleasure.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '775'
+    - '1340'
+    - '1849'
+  - - DEF
+    - '395'
+    - '980'
+    - '1332'
+  passive:
+  - - Restriction
+    - Wood type.
+  - - Ability
+    - Instant Heal Received +400 (800 at lvl40 +4).
+  index: 11
+baptism of the goddess:
+  pic: "/images/sc/baptismgoddess.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - HP
+    - '765'
+    - '1350'
+    - '1836'
+  - - DEF
+    - '390'
+    - '975'
+    - '1326'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Regeneration Received +25 (125 at lvl40 +4).
+  index: 8
+the dream team:
+  pic: "/images/sc/dreamteam.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - Attack
+    - '415'
+    - '1000'
+    - '1360'
+  - - Defense
+    - '365'
+    - '960'
+    - '1305'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Heal 700 (1500 at lvl40 +4) HP when enemy is killed.
+  index: 12
+god's dream:
+  pic: "/images/sc/godsdream.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '610'
+    - '1590'
+    - '2782'
+  - - agility
+    - '360'
+    - '1340'
+    - '2345'
+  prism:
+  - - attack
+    - '626'
+    - '1606'
+    - '2810'
+  - - agility
+    - '372'
+    - '1352'
+    - '2366'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - Sleep Evasion +30%(50%)[+1.5% if Prism] in Devil Rumble only.
+  index: 90
+three best friends:
+  pic: "/images/sc/3friends.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '1110'
+    - '2090'
+    - '3657'
+  - - critical
+    - '360'
+    - '1340'
+    - '2345'
+  prism:
+  - - hp
+    - '1128'
+    - '2108'
+    - '3689'
+  - - critical
+    - '372'
+    - '1352'
+    - '2366'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - Evasion +15%(22.5)[+1% if prism] in Devil Rumble only.
+  index: 89
