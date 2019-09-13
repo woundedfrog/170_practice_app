@@ -2354,3 +2354,88 @@ three best friends:
   - - Ability
     - Evasion +15%(22.5)[+1% if prism] in Devil Rumble only.
   index: 89
+pool-side:
+  pic: "/images/sc/pc0.pck.56.56.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1350'
+    - '2362'
+  passive:
+  - - Restriction
+    - Wood
+  - - Ability
+    - Critical damage +4000(6500)[+100 if prism] in Ragna.
+  index: 91
+dominus duo:
+  pic: "/images/sc/twinds.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '520'
+    - '1500'
+    - '2625'
+  - - defense
+    - '520'
+    - '1500'
+    - '2625'
+  prism:
+  - - attack
+    - '536'
+    - '1516'
+    - '2653'
+  - - defense
+    - '536'
+    - '1516'
+    - '2653'
+  passive:
+  - - Restriction
+    - None
+  - - Ability
+    - Increase Vampirism and Absorption by 100(300)[+15 if prism] (only works for
+      Childs with these skills)
+  index: 92
+karma:
+  pic: "/images/sc/ontogyou.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '1110'
+    - '2090'
+    - '3657'
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - hp
+    - '1142'
+    - '2122'
+    - '3689'
+  - - attack
+    - '648'
+    - '1628'
+    - '2828'
+  passive:
+  - - Restriction
+    - Water types.
+  - - Ability
+    - Increase Weakpoint Skill Damage by 1000(2000)[+100 if Prism] in WB.
+  index: 93

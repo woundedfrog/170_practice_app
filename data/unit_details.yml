@@ -1463,29 +1463,6 @@ hildr:
   notes: Average attacker that performs decent in all content. T H I C C
   date: '2018-11-28'
   index: 42
-buster lisa:
-  pic: "/images/busterliza0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 6 4 4 6
-  leader: Tap Skill Damage +5% to Water Allies
-  auto: Deals 113 Damages.
-  tap: Deals 140 Damages plus auto attack 3 times and Apply "Poison" (Deals 100 damages
-    when attack and receives attacks) for 2 turns.
-  slide: "Deals 883 damages and +500 piercing damage to 3 Lowest HP enemies.\r\n66%
-    chance to Apply \"Overload\" (+30% all skills damages except \"Drives skills\"
-    and Skill Cooldown Increased + Skill Charge Rate Descreased) to self for 23 seconds."
-  drive: 'Deals 2496 damages to 4 Lowest HP enemies and if target is suffering a DoT
-    debuff, apply "Outbreak" (remove first applied debuff and damage target according
-    to debuff duration) '
-  notes: The overload "buff" is more of a debuff to DB Liza than a buff and what makes
-    her a horrible unit.
-  date: '2018-11-28'
-  index: 9
 love sitri:
   pic: "/images/lovesitri0.png"
   pic2: ''
@@ -1509,25 +1486,6 @@ love sitri:
   notes: A PVP annoyance - great if she's on your team, not when she's on the enemy.
   date: '2018-11-28'
   index: 48
-chun-li:
-  pic: "/images/chunli0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 7 6 7 8
-  leader: Slide Skill Damage +5% to Water Allies
-  auto: Deals 113 Damages.
-  tap: Deals 477 Damages to 1 enemy and +180 additional damages if target is a Tank
-    Type.
-  slide: Prioritizing stunned enemies, Deals 70 additional damages +  Tap Skill 2x
-    to 2 targets. If target is stunned, +100 piercing damage.
-  drive: Deals 2130 Damages to all enemies and +500 bonus damage if stunned.
-  notes: Limited child from Street Fighter Collab. Not available anymore.
-  date: '2018-11-28'
-  index: 13
 botan:
   pic: "/images/botan0.png"
   pic2: "/images/botan1.png"
@@ -1575,26 +1533,6 @@ ruin:
   notes: ''
   date: '2018-11-28'
   index: 85
-daphnis:
-  pic: "/images/daphnis0.png"
-  pic2: "/images/daphnis1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 8 8 8 9
-  leader: "+15% attack for Wood type allies."
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to target, if the target is a Tank type, deal 150 bonus damage.
-  slide: Prioritizing Tank types, deal 855 to 2 targets 2 times,  if the target is
-    a defense type, deal 400 bonus damage and absorbs 350 damage as HP.
-  drive: Deals 2489 damage to all enemies, 70% chance apply Stun to 2 random enemies
-    for 4s (target is unable to attack, Stun duration increases by 1 second when hit
-    up to max of 5 additional seconds.).
-  notes: ''
-  date: '2019-3-29'
-  index: 174
 krampus:
   pic: "/images/krampus0.png"
   pic2: "/images/krampus1.png"
@@ -1613,26 +1551,6 @@ krampus:
   notes: Decent damage from slide and life steal makes her very hard to kill.
   date: '2018-11-28'
   index: 78
-nicole:
-  pic: "/images/nicole0.png"
-  pic2: "/images/nicole1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 8 9 9 9
-  leader: "+8% Final slide skill damage for Wood element allies. "
-  auto: 'Deal 113 auto damage. '
-  tap: 'Deal 200 damage plus auto damage 3 times to target and absorb 200 of damage
-    as HP. '
-  slide: 'Prioritizing the enemies with least HP, Deal 928 damage to 2 enemies, plus
-    800 piercing damage and apply 148 damage per buff (up to 8 applications). '
-  drive: Deal 2480 damage to 4 random enemies and apply "Snow Bomb" to 1 random enemy
-    (After 10 seconds, deal 1500 damage and reset skill gauge)
-  notes: The more buffs she has, the stronger her slide damage is.
-  date: '2018-12-25'
-  index: 162
 serval:
   pic: "/images/serval0.png"
   pic2: "/images/serval1.png"
@@ -2024,30 +1942,6 @@ astraea:
     3 Allies literally un-killable for 16s. Most effective when played manually.
   date: '2018-11-28'
   index: 4
-scuba mona:
-  pic: "/images/scubamona0.png"
-  pic2: "/images/scubamona1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 6 6 7 10
-  leader: "-15% skill charge speed for all enemies."
-  auto: Deal 101 auto attack damage.
-  tap: Deal 392 damage and -350 defense to target for 8 second.
-  slide: 'Deal 673 damage to 2 enemies (Prioritizing the highest defense enemies).
-    For 12 seconds apply "Scald" (Skill Damage Defense -5%). Apply "Burn" (100 DoT
-    every 2 seconds for 8 seconds). (During Scald''s effect, Burn is reapplied every
-    time the target receives an attack except during Fever Time) '
-  drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
-    Power -20% and 300 DoT every 2 seconds) for 16 seconds.
-  notes: At +6 Scald's Skill Damage Defense goes to -15.4% and Burn deal 487 damage.
-    Burn acts similar to poison on hit, where damage is applied when the target is
-    hit; for the 12s that Scald is active, every hit on the target will apply a tick
-    of burn.
-  date: '2018-11-28'
-  index: 43
 bikini davi:
   pic: "/images/bikinidavi0.png"
   pic2: "/images/bikinidavi1.png"
@@ -2866,28 +2760,6 @@ myrina:
   notes: ''
   date: '2018-11-28'
   index: 71
-bikini lisa:
-  pic: "/images/bikinilisa0.png"
-  pic2: "/images/bikinilisa1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 6 5 8 9
-  leader: "+10% Weak Point Damage for Wood Types (Additional +10% on Raid Boss)"
-  auto: Deal 100 auto attack damage.
-  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Heal 104 to
-    2 allies (Every 2 Seconds) for 8 seconds, and a chance of 70% to remove "Water
-    Balloon" debuff.
-  slide: Deal 662 damage to target. Apply +25% Defense to 3 wood type allies with
-    highest attack. +10% Weak Point Skill Damage and a 70% chance to remove "Freeze"
-    debuff for 16 seconds.
-  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
-    attack power, Attack +30% and Tap Skill Damage +800 for 20 seconds.
-  notes: ''
-  date: '2018-11-28'
-  index: 45
 pure bride hildr:
   pic: "/images/purehildr0.png"
   pic2: ''
@@ -4813,31 +4685,6 @@ makoto:
     else. '
   date: '2019-7-10'
   index: 272
-nine:
-  pic: "/images/nine0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: fire
-  tier: 8 9 6 7
-  leader: Skill Gauge Charge Amount -15% for all Debuffer type enemies [For PvP only,
-    Skill Gauge Charge Amount -5% to all enemies]
-  auto: Deals 102 damage
-  tap: Deals 396 damage to target, apply Skill Gauge Charge Amount -20% for 10s
-  slide: Prioritizing Debuffer types, deals 677 damage to 2 enemies, 70% to reset
-    enemy skill gauge and apply Heal block (prevent recovery except Vampirism and
-    Absorption) for 12s
-  drive: 'Prioritizing targets with Debuffs, deal 2036 damage to 3 enemies, Debuff
-    explosion (remove one Debuff and deal damage based on its effect) and for 16 seconds
-    apply Scald (Skill Damage Defense -10%) and apply Burn (500 DoT every 2 seconds
-    for 8 seconds) (During Scald''s effect, Burn is reapplied every time the target
-    receives an attack except during Fever Time). '
-  notes: Limited Blazblue Centralfiction event collab. She is a 9 (hehe) in PvP, meh
-    everywhere else. Good counter for grass debuffers (coughBathorycough).
-  date: '2019-7-10'
-  index: 274
 noel:
   pic: "/images/noel0.png"
   pic2: "/images/noel1.png"
@@ -5455,3 +5302,289 @@ bathory:
   notes: A must need in PvP
   date: '2018-12-05'
   index: 151
+nine:
+  pic: "/images/nine0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 8 9 6 7
+  leader: Skill Gauge Charge Amount -15% for all Debuffer type enemies [For PvP only,
+    Skill Gauge Charge Amount -5% to all enemies]
+  auto: Deals 102 damage
+  tap: Deals 396 damage to target, apply Skill Gauge Charge Amount -20% for 10s
+  slide: Prioritizing Debuffer types, deals 677 damage to 2 enemies, 70% to reset
+    enemy skill gauge and apply Heal block (prevent recovery except Vampirism and
+    Absorption) for 12s
+  drive: 'Prioritizing targets with Debuffs, deal 2036 damage to 3 enemies, Debuff
+    explosion (remove one Debuff and deal damage based on its effect) and for 16 seconds
+    apply Burn (Skill Damage Defense -10%) and apply Scald(500 DoT every 2 seconds
+    for 8 seconds) (During Burn''s effect, Scald is reapplied every time the target
+    receives an attack except during Fever Time). '
+  notes: Limited Blazblue Centralfiction event collab. She is a 9 (hehe) in PvP, meh
+    everywhere else. Good counter for grass debuffers (coughBathorycough).
+  date: '2019-7-10'
+  index: 274
+buster lisa:
+  pic: "/images/busterliza0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 6 4 4 6
+  leader: Tap Skill Damage +5% to Water Allies
+  auto: Deals 113 Damages.
+  tap: Deals 140 Damages plus auto attack 3 times and Apply "Poison" (causes 100 damage
+    each time target acts; triggers 30% of poison damage when they receive an attack)
+    for 2 turns.
+  slide: "Deals 883 damages and 500 Ignore Defense damage to 3 Lowest HP enemies.\r\n66%
+    chance to Apply \"Overload\" (all skills damages +30% except for Drives Skills
+    and Skill Cooldown Increased + Skill Charge Speed decreased) to self for 23 seconds."
+  drive: 'Deals 2496 damages to 4 Lowest HP enemies, inflict "Buff Explosion" (remove
+    first applied debuff and damage target according to debuff) '
+  notes: The overload "buff" is more of a debuff to DB Liza than a buff and what makes
+    her a horrible unit.
+  date: '2018-11-28'
+  index: 9
+chun-li:
+  pic: "/images/chunli0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 7 6 7 8
+  leader: Slide Skill Damage +5% to Water Allies
+  auto: Deals 113 Damages.
+  tap: Deals 477 damage to target and on Tank type targets, deal 180 Bonus damage
+  slide: Prioritizing stunned enemies, Deals 70 Bonus damage +  Tap Skill 2 times
+    to 2 targets. On stunned targets, deal 100 Ignore Defense damage.
+  drive: Deals 2130 Damages to all enemies and On stunned targets, deal 500 bonus
+    damage
+  notes: Limited child from Street Fighter Collab. Not available anymore.
+  date: '2018-11-28'
+  index: 13
+daphnis:
+  pic: "/images/daphnis0.png"
+  pic2: "/images/daphnis1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 7 9 9
+  leader: "+15% attack for Wood type allies."
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to target, if the target is a Tank type, deal 150 bonus damage.
+  slide: Prioritizing Tank types, deal 855 to 2 targets 2 times,  if the target is
+    a defense type, deal 400 bonus damage and absorbs 350 damage as HP.
+  drive: Deals 2489 damage to all enemies, 70% chance apply Stun to 2 random enemies
+    for 4s (target is unable to attack, Stun duration increases by 1 second when hit
+    up to max of 5 additional seconds.).
+  notes: ''
+  date: '2019-3-29'
+  index: 174
+nicole:
+  pic: "/images/nicole0.png"
+  pic2: "/images/nicole1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 8 9 8 9
+  leader: "+8% Final slide skill damage for Wood element allies. "
+  auto: 'Deal 113 auto damage. '
+  tap: 'Deal 200 damage plus auto damage 3 times to target and absorb 200 of damage
+    as HP. '
+  slide: 'Prioritizing lowest HP enemies, deal 928 damage to 2 enemies, plus 800 Ignore
+    Defense damage and apply 148 damage per buff (up to 8 applications). '
+  drive: Deal 2480 damage to 4 random enemies and apply "Snow Bomb" to 1 random enemy
+    (After 10 seconds, deal 1500 damage and reset skill gauge)
+  notes: The more buffs she has, the stronger her slide damage is.
+  date: '2018-12-25'
+  index: 162
+annie:
+  pic: "/images/annie0.png"
+  pic2: "/images/annie1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: " 7 7 10 9"
+  leader: Wood type allies Critical Rate +18% [In Ragna only, Critical Damage +40%]
+  auto: Deals 114 damage
+  tap: Deals 494 damage to target, on water type enemies, deal 350 Bonus damage. On
+    a critical hit, apply "Vampirism" (restores 10% of damage dealt as HP) to self
+    for 20s
+  slide: Prioritizing 1 target with the lowest HP, deals 960 damage and 680 Denfese
+    Ignore damage 3 times and on a debuffed target, deal 550 bonus damage. In Ragna
+    only, on a critical hit, deal 5000 fixed damage.
+  drive: Deal 3756(300%) damage to a random enemy, Skill Damage +40% to self for 20s
+  notes: Excels in Water Ragna. Successfully powercreeped JCB (Jiseihi) in Ragna when
+    paired with debuffer + crit comp
+  date: '2019-7-30'
+  index: 276
+bikini lisa:
+  pic: "/images/bikinilisa0.png"
+  pic2: "/images/bikinilisa1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 6 5 9 9
+  leader: "+10% Weak Point Damage for Wood Types (Additional +10% on Raid Boss)"
+  auto: Deal 100 auto attack damage.
+  tap: Deal 381 damage to target. Prioritizing allies with lowest HP. Regen 104 HP
+    to 2 allies (once per 2 Seconds) for 8 seconds, and a chance of 70% to remove
+    "Water Balloon" debuff.
+  slide: Deal 662 damage to target. Grant +25% Defense to 3 wood type allies with
+    highest attack. +10% Weak Point Skill Damage and 70% chance to remove "Freeze"
+    debuff for 16 seconds.
+  drive: Deal 1763 damage to 3 random enemies. Prioritizing 2 allies with highest
+    attack power, Attack +30% and Tap Skill Damage +800 for 20 seconds.
+  notes: ''
+  date: '2018-11-28'
+  index: 45
+kei'no:
+  pic: "/images/keino0.png"
+  pic2: "/images/keino1.png"
+  pic3: "/images/keino2.png"
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 7 8 7 6
+  leader: "Fire type allies Slide Skill Defense +12%\r\n"
+  auto: Deals 92 damage
+  tap: Deals 317 damage to target, apply Taunt (88% chance to activate) and +800 Slide
+    Skill Defense for 10 seconds
+  slide: 'Deals 588 damage to 2 random targets, for only 3 fire type allies, (Priority:
+    highest attack) 70% chance to remove and be invulnerable to disabling debuffs
+    (Petrify, Silence, Confuse, Stun, Sleep) and gives +1800HP Barrier for 14 seconds'
+  drive: Deal 1496 damage to 2 random targets, apply Taunt (98% chance to activate)
+    and Reflect (returns 40% of damage received) for 20 seconds
+  notes: Requires running at least 2 other fire type allies on a team to maximize
+    her usefulness
+  date: '2019-8-15'
+  index: 277
+billy:
+  pic: "/images/billy0.png"
+  pic2: "/images/billy4.png"
+  pic3: "/images/billy2.png"
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 7 8 7 9
+  leader: Skill Gauge Charge Amount -15% for all Fire type enemies
+  auto: Deals 102 damage
+  tap: Deals 394 damage to target, Skill Gauge -30%
+  slide: Prioritizing lowest HP enemies, deals 675 damage and 600 Denfese Ignore damage
+    to 2 enemies. Apply “Water Snake” (Skill Gauge Charge Amount -40% and when attacked
+    by a water type child, deals 500 damage [damage changes according to the debuffed
+    target's attribute]) for 12s
+  drive: Deal 2031 damage to 3 random enemies, apply Heal Block and "Tsunami" (deal
+    700 Bonus damage for every Water Allies in the party, max 10 times).
+  notes: 'Water Snake debuff damage explanation: +40% damage if the debuffed target
+    is a Fire type, while -40% damage if the debuffed target is a Wood type; otherwise,
+    its the damage written on the skill. At +6 Water Snake debuff hits for 1605 damage.
+    Very likely to be useful in the upcoming Fire WB'
+  date: '2019-7-30'
+  index: 275
+tamamo:
+  pic: "/images/tamamo0.png"
+  pic2: "/images/tamamo1.png"
+  pic3: "/images/tamamo2.png"
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 8 8 7 8
+  leader: Wood type enemies Debuff accuracy -15%
+  auto: Deals 102 damage
+  tap: Prioritizing enemies with Bleed, deal 396 damage to 1 target. 65% chance to
+    inflict "Wounded" (increase Bleed duration and damage) for 12 seconds.
+  slide: Prioritizing Support type enemies, deals 677 damage and 600 Defense ignore
+    damage to 2 targets, apply Bleed (200 damage every 2 seconds) for 12 seconds.
+  drive: Prioritizing Attacker type enemies, deals 2036 damage to 3 targets. Remove
+    one buff from enemy and 80% chance to apply "Attraction" (invalidates buffs, can't
+    be dispelled) for 16 seconds.
+  notes: A slightly better version of Jupiter
+  date: '2019-8-29'
+  index: 278
+justice mafdet:
+  pic: "/images/mafdettoo0.png"
+  pic2: "/images/mafdettoo1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 7 7 8 9
+  leader: ATK +15% to Water allies (For WB only, ATK +15% to all allies)
+  auto: Deals 114 damage
+  tap: Deal 494 damage to target, 70% to apply Heal Block (prevent recovery except
+    Vampirism and Absorption) for 8s. For WB only, 70% chance to gain "Awaken"(+30%
+    Critical Damage and Slide Skill damage (increase by the number of buffs)) to self.
+  slide: 'Prioritizing enemies with debuffs, deals 960 damage and 400 Ignore Defense
+    damage 2 times to 2 targets, on Fire type targets, deal 350 Bonus damage '
+  drive: Deals 2603 damage to 4 random enemies.
+  notes: Best Lead for Fire WB at the moment
+  date: '2019-8-29'
+  index: 279
+scuba mona:
+  pic: "/images/scubamona0.png"
+  pic2: "/images/scubamona1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: fire
+  tier: 6 6 7 10
+  leader: "-15% skill charge speed for all enemies."
+  auto: Deal 101 auto attack damage.
+  tap: Deal 392 damage and -350 defense to target for 8 second.
+  slide: 'Deal 673 damage to 2 enemies (Prioritizing the highest defense enemies).
+    For 12 seconds apply "Burn" (Skill Damage Defense -5%). Apply "Scald" (100 DoT
+    every 2 seconds for 8 seconds). (During Burn''s effect, Scald is reapplied every
+    time the target receives an attack except during Fever Time) '
+  drive: Deal 2026 damage to 3 enemies randomly and apply "Blade Dancer" (Defense
+    Power -20% and 300 DoT every 2 seconds) for 16 seconds.
+  notes: At +6 Skill Damage Defense goes up to -15.4% and Scald deals 487 damage.
+    Scald acts similar to poison on hit, where damage is applied when the target is
+    hit; for the 12s that burn is active, every hit on the target will apply a tick
+    of burn.
+  date: '2018-11-28'
+  index: 43
+tisbe:
+  pic: "/images/tisbe0.png"
+  pic2: "/images/tisbe1.png"
+  pic3: "/images/tisbe2.png"
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 8 9 7 8
+  leader: Skill Gauge Charge Speed +12% to all allies (For PvP only, additional Skill
+    Gauge Charge Speed +8% to Water allies)
+  auto: Deals 259 damage
+  tap: Deal 1269 damage to target, prioritizing highest attack, Skill Gauge Charge
+    Amount +34.5% for 20 seconds and gives debuff immunity (cleanse all current debuffs
+    and negate 1 incoming debuff after for 10 seconds) to 1 ally
+  slide: Deal 1767 damage to target, prioritizing childs with the least skill gauge
+    charge, increase Skill Gauge by +39.1% and Slide Skill Cooldown -2 seconds for
+    16 seconds. In PvP only, for 2 allies with the lowest HP grant Immortality (HP
+    won't go under 1) for 10s
+  drive: 'Deals 4445 damage to 3 random enemies, prioritizing highest attack, Skill
+    gauge charge amount +60% for 2 turns to 3 allies & Drive Gauge +500 '
+  notes: ''
+  date: '2019-9-11'
+  index: 280
