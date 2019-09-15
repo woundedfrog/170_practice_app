@@ -114,7 +114,21 @@ helpers do
       value
     end
   end
+
+  def get_img_link(name)
+  # this gets the full-size image for a link and send placeholder if not found.
+    # ../../../images/full_size/full<%= @name.gsub(/\s+/, "")
+    name = 'full' + name.gsub(/\s+/, "")
+    path = "./public/images/full_size/#{name}.png"
+    if File.exist?(path)
+      return "/images/full_size/#{name}.png"
+    else
+      return "/images/full_size/fullmissingpic1.png"
+    end
+
+  end
 end
+# #####helper methods end ####
 
 def delete_selected_file(name)
   if !name.include?('.jpg')
@@ -163,14 +177,17 @@ end
 def file_path
   cards = ''
   units = ''
+  fullsize = ''
   if ENV['RACK_ENV'] == 'test'
     cards = File.expand_path('test/public/images/sc/', __dir__)
     units = File.expand_path('test/public/images/', __dir__)
+    fullsize = File.expand_path('test/public/images/full_size/', __dir__)
   else
     cards = File.expand_path('public/images/sc/', __dir__)
     units = File.expand_path('public/images/', __dir__)
+    fullsize = File.expand_path('public/images/full_size/', __dir__)
   end
-  [units, cards]
+  [units, cards, fullsize]
 end
 
 def load_file_data(name)
@@ -412,11 +429,20 @@ def zip_it(path)
         zipfile.add(filename, filepath)
       end
     end
-  else
+  elsif path.include?('sc')
     zip_name = path
     Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
       # Find all .csv files in the exports directory
       Dir.glob("./public/images/sc/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  elsif path.include?('full')
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/full_size/*") do |filepath|
         filename = filepath.split("/").pop
         zipfile.add(filename, filepath)
       end
@@ -475,6 +501,17 @@ def history_update(info)
   @history = YAML.load_file(path)
 end
 
+# ########live 2d stuff ######
+
+def load_id_file
+  path = File.expand_path('data/char_un_id.yml', __dir__)
+  YAML.load_file(path)
+end
+
+def get_id_from_name(name)
+  data = load_id_file
+  data[name]
+end
 # ##################
 
 not_found do
@@ -505,6 +542,15 @@ get '/backup/:files'do
     zip_it(path)
 
     fname = '/sc_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+
+  elsif files.include?('full')
+    path = './backup/full_size.zip'
+    File.delete(path) if File.exist?(path)
+    zip_it(path)
+
+    fname = '/full_size.zip'
     ftype = 'Application/octet-stream'
     send_file "./backup/#{fname}", filename: fname, type: ftype
   end
@@ -663,6 +709,7 @@ get '/childs/:star_rating/:unit_name' do
   name = params[:unit_name]
   unit_or_sc_exist?('unit', name)
   @unit_name = name
+  @unit_id = get_id_from_name(name) # LIVE 2d id.
   @current_unit = @units[name]
   erb :view_unit
 end
@@ -936,10 +983,12 @@ post '/upload' do
   end
 
   directory =
-    if name.include?('png')
-      file_path[0]
+    if name.include?('png') && name[0..3] == 'full'
+      file_path[2]
     elsif name.include?('jpg')
       file_path[1]
+    elsif name.include?('png') && name[0..3] != 'full'
+      file_path[0]
     elsif ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
       'data/'
     elsif name == 'soul_cards.yml'
@@ -947,7 +996,7 @@ post '/upload' do
     elsif name.include?('.css')
       'public/stylesheets/'
     else
-      session[:message] = 'Filename must match original filename'
+      session[:message] = 'Not a valid file-type'
       redirect '/upload'
     end
 

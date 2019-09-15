@@ -3,7 +3,7 @@ $( document ).ready(function() {
 
     // ScrollReveal().reveal('.units', { delay: 50 });
     //   ScrollReveal().reveal('.sc', { delay: 50 });
-    
+
   // remove thsi popout hide method if needed.
   $('#popout').hide();
 
@@ -49,6 +49,7 @@ $(document).on('click', '.linkaddress', function(e){
   });
 
 });
+
 
 $(document).on('click', '.exit-button2', function(e){
   $('#popout').hide();
@@ -114,6 +115,8 @@ $('p').each(function() {
 
 function mobileHide() {
   $('.mobile').addClass('show');
+  $('.mobile').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
   $('.mobile-button').addClass('hide');
 };
 
@@ -198,3 +201,22 @@ function topFunction() {
 //     }
 //   }
 // );
+
+$(document).on('click', '.profile_imgs', function(e){
+  console.log('clicked');
+  $('.profile_imgs').addClass('show');
+  $('.profile_imgs').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
+});
+
+$(document).on('click', '.exit-button2', function(e){
+  $('.profile_imgs').css('visibility', 'visible');
+    $('.profile_imgs').css('display', 'unset');
+  $('.profile-stat-col-container').css('position', 'unset');
+  $('.profile-stat-col-container').removeClass('profile-adj');
+  $('.profile-stat-container').removeClass('stat-cont-opacity');
+});

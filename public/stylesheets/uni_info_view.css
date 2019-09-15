@@ -102,7 +102,7 @@ header {
 
 .nav-link {
 	padding: 5px;
-	background-color: rgb(142, 113, 55, 0.5);
+	background-color: rgba(142, 113, 55, 0.5);
 	margin-bottom: 1px;
 	color: white;
 }
@@ -179,7 +179,7 @@ h4 {
 }
 
 .offsite-link {
-		background-color: rgb(102, 23, 05, 0.5)
+		background-color: rgba(102, 23, 05, 0.5)
 }
 
 ul {
@@ -261,7 +261,7 @@ transition: margin 300ms;
 	top: 0px;
 	width: 100%;
 	text-align: center;
-	background-color: rgb(69, 98, 124, 0.7);
+	background-color: rgba(69, 98, 124, 0.7);
 }
 
 .container {
