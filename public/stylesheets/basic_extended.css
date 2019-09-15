@@ -17,6 +17,11 @@ body {
 .full_unit_imgs {
     width: 100%;
     margin-left: -40px;
+
+
+    width: auto;
+    max-height: 400px;
+    margin: auto;
 }
 
 .show {
@@ -123,7 +128,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-adj {
 position: absolute;
-right: 150px;
+right: 80px;
 width: 50%;
 }
 
@@ -147,16 +152,43 @@ width: 50%;
   padding-left: 0px;
     padding-right: 0px;
     /* height: auto; */
-    width: 50%;
-    max-width: 930px;
+    /* width: 50%; */
+    width: auto;
+    /* max-width: 600px; */
+    max-height: 500px;
     position: absolute;
     /* display: flex; */
-    left: -50px;
+    left: 10px;
     top: 130px;
 }
 
 #popout {
   overflow-y: hidden;
 }
+
+}
+
+@media (min-width: 1680px) {
+  .profile-adj {
+  position: absolute;
+  right: 110px;
+  width: 50%;
+  }
+
+
+  .full_unit_imgs {
+    visibility: hidden;
+    padding-left: 0px;
+      padding-right: 0px;
+      /* height: auto; */
+      /* width: 50%; */
+      width: auto;
+      /* max-width: 600px; */
+      max-height: 600px;
+      position: absolute;
+      /* display: flex; */
+      left: 130px;
+      top: 130px;
+  }
 
 }

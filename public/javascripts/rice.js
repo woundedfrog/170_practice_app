@@ -114,12 +114,24 @@ $('p').each(function() {
 });
 
 function mobileHide() {
-  $('.mobile').addClass('show');
-    $('.profile_imgs').addClass('hide');
 
-  $('.mobile').css('visibility', 'hidden');
+  $('.mobile').addClass('show');
+
+  // // $('.profile_imgs').addClass('hide');
+  //
+  // $('.mobile').css('visibility', 'hidden');
   $('.full_unit_imgs').css('visibility', 'visible');
   $('.mobile-button').addClass('hide');
+
+  $('.profile_imgs').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'block');
+  $('.profile_imgs').removeClass('show');
+  $('.profile_imgs').css('display', 'contents');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
 };
 
 function  showUnitsOnly(type) {
@@ -204,8 +216,8 @@ function topFunction() {
 //   }
 // );
 
-$(document).on('click', '.profile_imgs', function(e){
-  console.log('clicked');
+var loader = $(document).on('click', '.profile_imgs', function(e){
+  // console.log('clicked');
   // $('.profile_imgs').addClass('show');
   $('.profile_imgs').css('visibility', 'hidden');
   $('.full_unit_imgs').css('visibility', 'visible');
@@ -219,7 +231,7 @@ $(document).on('click', '.profile_imgs', function(e){
 });
 
 $(document).on('click', '.full_unit_imgs', function(e){
-  console.log('clicked');
+  // console.log('clicked');
   $('.profile_imgs').addClass('show');
   $('.profile_imgs').css('visibility', 'visible');
   $('.full_unit_imgs').css('display', 'none');
