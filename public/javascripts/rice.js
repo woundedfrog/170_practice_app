@@ -115,6 +115,8 @@ $('p').each(function() {
 
 function mobileHide() {
   $('.mobile').addClass('show');
+    $('.profile_imgs').addClass('hide');
+
   $('.mobile').css('visibility', 'hidden');
   $('.full_unit_imgs').css('visibility', 'visible');
   $('.mobile-button').addClass('hide');
@@ -204,9 +206,24 @@ function topFunction() {
 
 $(document).on('click', '.profile_imgs', function(e){
   console.log('clicked');
-  $('.profile_imgs').addClass('show');
+  // $('.profile_imgs').addClass('show');
   $('.profile_imgs').css('visibility', 'hidden');
   $('.full_unit_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'block');
+  $('.profile_imgs').removeClass('show');
+  $('.profile_imgs').css('display', 'contents');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
+});
+
+$(document).on('click', '.full_unit_imgs', function(e){
+  console.log('clicked');
+  $('.profile_imgs').addClass('show');
+  $('.profile_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'none');
+  $('.profile_imgs').css('display', 'unset');
 
 
   $('.profile-stat-col-container').addClass('profile-adj');

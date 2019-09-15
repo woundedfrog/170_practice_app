@@ -17,9 +17,9 @@
   <div class="row profile-row-container">
 
     <div class="col- profile-pic-container mobile">
-      <img class="profile_imgs mobile" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
-      <img class="profile_imgs mobile" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
-      <img class="profile_imgs mobile" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
+      <img class="profile_imgs" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
       <!-- <img class="profile_imgs mobile" src="../../../images/emptyunit0.png" alt="empty_pic"/> -->
       <!-- <img class="full_unit_imgs" src="../../../images/full_size/full<%= @unit_name.gsub(/\s+/, "") %>.png" alt="<%= @unit_name %>_full"/> -->
       <img class="full_unit_imgs" src="<%= get_img_link(@unit_name) %>" alt="<%= @unit_name %>_full"/>

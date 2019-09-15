@@ -20,8 +20,9 @@ body {
 }
 
 .show {
-  display: contents;
+  display: block;
 }
+
 #paypal-form {
   display: flex;
   /* flex-wrap: wrap; */
@@ -96,11 +97,12 @@ h1, h2, h3, h4, h5, h6 {
 
 .profile-row-container {
   display: flex;
-    flex-wrap: wrap;
+  flex-wrap: wrap;
     /* flex-flow: column; */
 }
 
 .profile-pic-container {
+  width: 100%;
   max-width: 100%;
 }
 
