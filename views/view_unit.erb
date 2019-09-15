@@ -20,8 +20,6 @@
       <img class="profile_imgs" src="<%= @current_unit["pic"] %>" alt="<%= @current_unit["pic"] %>"/>
       <img class="profile_imgs" src="<%= @current_unit["pic2"] %>" alt="<%= @current_unit["pic2"] %>"/>
       <img class="profile_imgs" src="<%= @current_unit["pic3"] %>" alt="<%= @current_unit["pic3"] %>"/>
-      <!-- <img class="profile_imgs mobile" src="../../../images/emptyunit0.png" alt="empty_pic"/> -->
-      <!-- <img class="full_unit_imgs" src="../../../images/full_size/full<%= @unit_name.gsub(/\s+/, "") %>.png" alt="<%= @unit_name %>_full"/> -->
       <img class="full_unit_imgs" src="<%= get_img_link(@unit_name) %>" alt="<%= @unit_name %>_full"/>
     </div>
 
@@ -29,7 +27,7 @@
       <div class="row profile-stat-row-container">
         <% @current_unit.each do |info_key, info_val| %>
         <% unless long_stat_key?(info_key) || special_key?(info_key) || info_key == 'enabled' %>
-        <div class="profile-stat-container col-*">
+        <div class="profile-stat-container col-* stat-cont-opacity">
           <% if ["stars"].include?(info_key) %>
             <h5 class="card-title"><%= info_key.capitalize %>:</h5>
             <%== format_stat(info_key, info_val) %>
@@ -51,7 +49,7 @@
     <% @current_unit.each do |info_key, info_val| %>
 
     <% unless special_key?(info_key) || short_stat_key?(info_key) || info_key == 'enabled'%>
-    <div class="profile-stat-container">
+    <div class="profile-stat-container stat-cont-opacity">
       <h5 class="card-title"><%= info_key.capitalize %>:</h5>
         <% if info_key == 'date' %>
           <p>Date added(Tokyo): <%= info_val %></p>
