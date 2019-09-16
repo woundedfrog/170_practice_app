@@ -123,7 +123,7 @@ helpers do
     if File.exist?(path)
       return "/images/full_size/#{name}.png"
     else
-      return "/images/full_size/fullmissingpic1.png"
+      return "/images/full_size/fullmissingpic.png"
     end
 
   end
