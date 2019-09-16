@@ -627,25 +627,6 @@ artemis:
   date: '2018-12-24'
   index: 104
   enabled: 'true'
-olga:
-  pic: "/images/orga0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 8 10 3 3
-  leader: Skill gauge charge rate -8% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
-  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
-    for 5s to 2 random enemies.
-  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
-    gauge by 45% to 3 random enemies.
-  notes: Olga's debuffs don't work against raid bosses
-  date: '2018-12-24'
-  index: 54
-  enabled: 'true'
 maya:
   pic: "/images/4mayahuel0.png"
   pic2: ''
@@ -1429,26 +1410,6 @@ naias:
   date: '2018-12-24'
   index: 72
   enabled: 'true'
-abaddon:
-  pic: "/images/abaddon0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 8 8 8 8
-  leader: Drive skill damage +1000 to all grass type allies. (bonus +1000 drive damage
-    to all allies on Ragnas)
-  auto: Deals 112 damage.
-  tap: Deals 447 damage 4 times
-  slide: Deals 771 damages to 3 random enemies and Absorb 350 damage as HP.
-  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
-    for 2 turn to self.
-  notes: Highest damage 4-hit tap in the game. The sustain being on his slide makes
-    him weaker than Siren, as you want to be constantly tapping Abaddon.
-  date: '2018-12-24'
-  index: 1
-  enabled: 'true'
 siren:
   pic: "/images/siren0.png"
   pic2: ''
@@ -1770,27 +1731,6 @@ marie rose:
   notes: ''
   date: '2019-5-31'
   index: 35
-moa:
-  pic: "/images/moa0.png"
-  pic2: "/images/moa1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: light
-  tier: 7 9 3 3
-  leader: Dark enemy debuff evasion rate -10%
-  auto: Deals 100 damage.
-  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
-  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
-    (unable to act for 10s or after being attacked 2 times).
-  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
-    to act for 15s or after being hit 3 times).
-  notes: A PVP cc unit and great in combination with Olga. Also great with DoT teams.
-    Moa is great at stalling the enemies to get to fever/drive first. Useless in Raids
-    and WorldBoss.
-  date: '2019-1-12'
-  index: 161
 luin:
   pic: "/images/ruin0.png"
   pic2: ''
@@ -2101,28 +2041,6 @@ thanatos:
     by tap afterwards to take advantage of his multi-tap while the poison is applied.'
   date: '2018-12-24'
   index: 63
-sytry:
-  pic: "/images/sitri0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: light
-  tier: 6 7 7 10
-  leader: Max HP +1000 for Light Type Allies (on World Bosses +3000 added)
-  auto: Deal 100 Attack damage to the target (Automatic)
-  tap: Deal 382 Damage, remove 5 of World Bosses' boost buff (ATK, DEF stacks) Skill
-    Damage when fighting a World Boss for 14 seconds
-  slide: 'Deal 658 Damage, ATK +1600 for 9 Allies (Priority: Light Type) for 14 seconds
-    and Skill cooldown -2 seconds on World Bosses for 2 turns and Skill damage +1000
-    for 5 Allies (Priority: Highest ATK) in the back row for 20 seconds'
-  drive: 'Deal 1751 Damage to 2 random Enemies, grant 9 Allies in the front row (Priority:
-    Lowest HP) +2000 Barrier (absorbs damage before HP is affected) and 9 Allies in
-    the back row (Priority: Highest ATK) +1500'
-  notes: 'One of the best World Boss buffers available due to her slide and drive. '
-  date: '2019-7-12'
-  index: 46
 liberated maat:
   pic: "/images/darkmaat0.png"
   pic2: ''
@@ -2360,32 +2278,6 @@ agamemnon:
   notes: ''
   date: '2019-7-22'
   index: 49
-cleopatra:
-  pic: "/images/cleopatra0.png"
-  pic2: "/images/cleopatra2.png"
-  pic3: "/images/cleo3.png"
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 8 9 10 8
-  leader: ATK +10% for Light Type Allies
-  auto: Deals 112 damage.
-  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
-    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
-    13 seconds.
-  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
-    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
-    enemies.
-  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
-    is cursed.
-  notes: Great against Dark Raids where her Focus buff will allow you to deal critical
-    damage during fever. Her Curse in PvP can do a lot of damage even when cleansed.
-    In World Boss she requires a speed buff as AI will make her continually tap to
-    get Focus otherwise. Like Jupiter's Bleed, her Curse gets much better at high
-    uncaps.
-  date: '2019-5-16'
-  index: 9
 makoto:
   pic: "/images/makoto1.png"
   pic2: "/images/makoto0.png"
@@ -2407,29 +2299,6 @@ makoto:
   notes: ''
   date: '2019-7-30'
   index: 50
-isolde:
-  pic: "/images/isolde0.png"
-  pic2: "/images/isolde1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 7 9 5 5
-  leader: ATK -15% for Fire Type Enemies
-  auto: Deal 101 Attack damage
-  tap: Deal 387 Damage, 60% chance to inflict Freeze (Skill Gauge Charge Speed, charge
-    amount decreased and DoT debuff damage increased) for 8 seconds
-  slide: 'Deal 645 Damage to 2 Enemies (Priority: Highest ATK), Skill Gauge Charge
-    Speed -20% for 14 seconds, and inflict Water Balloon (Deal 300 damage upon being
-    attacked, Skill Gauge reset if attacked 2 time(s) or 10 seconds pass)'
-  drive: 'Deal 1968 Damage to 3 Enemies (Priority: Healer), 90% chance to inflict
-    Freeze (Skill Gauge Charge Speed, charge amount decreased and DoT debuff damage
-    increased) for 16 seconds'
-  notes: Water Balloon's damage is pure damage (will hit for the amount said on the
-    skill). Freeze increases DoT damage by around 15%.
-  date: '2019-8-17'
-  index: 60
 bikini lisa:
   pic: "/images/bikinilisa0.png"
   pic2: "/images/bikinilisa1.png"
@@ -2787,28 +2656,6 @@ myrina:
     buff your water attackers while the fire DPS get speed buffed.
   date: '2019-1-23'
   index: 0
-bathory:
-  pic: "/images/bathory0.png"
-  pic2: "/images/bathory1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: grass
-  tier: 9 10 9 10
-  leader: Drive Skill Final Blow -25% to all Enemies (During PVP, DoT -50% to all
-    Enemies)
-  auto: Deal 102 Attack damage
-  tap: 'Deal 398 Damage to 1 Enemy (Priority: Most Buffs), Debuff EVA -10% for 20
-    seconds, DEF -10% for 8 seconds'
-  slide: 'Deal 690 Damage to 2 Enemies (Priority: Lowest HP), inflict Dancing Blade
-    (DEF -20% and 200 DoT every 2 sec.) for 14 seconds, DEF -700'
-  drive: 'Deal 2065 Damage to 3 Enemies (Priority: Most Buffs), inflict Brand (Deals
-    [Number of buffs on target + 1] x 250 DoT every 4 seconds, max of 6 buffs [final
-    multiplier of 7]) for 20 seconds '
-  notes: A must have in current DoT infested PvP meta.
-  date: '2019-9-11'
-  index: 69
 charlotte:
   pic: "/images/charlotte0.png"
   pic2: ''
@@ -2846,3 +2693,218 @@ noel:
   notes: ''
   date: '2019-7-30'
   index: 59
+bathory:
+  pic: "/images/bathory0.png"
+  pic2: "/images/bathory1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 9 10 9 10
+  leader: Drive Skill Final Blow -25% to all Enemies (During PVP, DoT -50% to all
+    Enemies)
+  auto: Deal 102 Attack damage
+  tap: 'Deal 398 Damage to 1 Enemy (Priority: Most Buffs), Debuff EVA -10% for 20
+    seconds, DEF -10% for 8 seconds'
+  slide: 'Deal 690 Damage to 2 Enemies (Priority: Lowest HP), inflict Dancing Blade
+    (DEF -20% and 200 DoT every 2 sec.) for 14 seconds, DEF -700'
+  drive: 'Deal 2065 Damage to 3 Enemies (Priority: Most Buffs), inflict Brand (Deals
+    [Number of buffs on target + 1] x 250 DoT every 4 seconds, max of 6 buffs [final
+    multiplier of 7]) for 20 seconds '
+  notes: 'A must have in current DoT infested PvP meta due to her leader ability.
+    Defense debuff on slide can allow childs such as Jupiter target the same enemies. '
+  date: '2019-9-11'
+  index: 69
+isolde:
+  pic: "/images/isolde0.png"
+  pic2: "/images/isolde1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 7 9 5 5
+  leader: ATK -15% for Fire Type Enemies
+  auto: Deal 101 Attack damage
+  tap: Deal 387 Damage, 60% chance to inflict Freeze (Skill Gauge Charge Speed, charge
+    amount decreased and DoT debuff damage increased) for 8 seconds
+  slide: 'Deal 645 Damage to 2 Enemies (Priority: Highest ATK), Skill Gauge Charge
+    Speed -20% for 14 seconds, and inflict Water Balloon (Deal 300 damage upon being
+    attacked, Skill Gauge reset if attacked 2 time(s) or 10 seconds pass)'
+  drive: 'Deal 1968 Damage to 3 Enemies (Priority: Healer), 90% chance to inflict
+    Freeze (Skill Gauge Charge Speed, charge amount decreased and DoT debuff damage
+    increased) for 16 seconds'
+  notes: Water Balloon's damage is pure damage (will hit for the amount said on the
+    skill). Freeze increases DoT damage by around 15%.
+  date: '2019-8-17'
+  index: 60
+olga:
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 8 9 3 3
+  leader: Skill gauge charge rate -8% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  notes: Prevalence of silence resist carta makes Olga less effective for PvP.
+  date: '2018-12-24'
+  index: 54
+cleopatra:
+  pic: "/images/cleopatra0.png"
+  pic2: "/images/cleopatra2.png"
+  pic3: "/images/cleo3.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 8 10 10 8
+  leader: ATK +10% for Light Type Allies
+  auto: Deals 112 damage.
+  tap: Deals 472 damage to target and Additional 209 damage if target is Dark Type
+    and 55% chance to Apply "Focus" (100% Critital Rate and Hit Rate) to self for
+    13 seconds.
+  slide: Deals 922 damage and 800 ignore defense and Apply "Curse" (80 damages per
+    2seconds and additional damage when "Curse" ends) for 8 seconds to 2 lowest HP
+    enemies.
+  drive: Deals 2315 damage to 4 lowest HP enemies and additional 500 damage if target
+    is cursed.
+  notes: Great against Dark Raids where her Focus buff will allow you to deal critical
+    damage during fever. Her Curse in PvP can do a lot of damage even when cleansed.
+    In World Boss she requires a speed buff as AI will make her continually tap to
+    get Focus otherwise. Like Jupiter's Bleed, her Curse gets much better at high
+    uncaps.
+  date: '2019-5-16'
+  index: 9
+sytry:
+  pic: "/images/sitri0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 6 7 10
+  leader: Max HP +1000 for Light Type Allies (on World Bosses +3000 added)
+  auto: Deal 100 Attack damage to the target (Automatic)
+  tap: Deal 382 Damage, remove 5 of World Bosses' boost buff (ATK, DEF stacks) Skill
+    Damage when fighting a World Boss for 14 seconds
+  slide: 'Deal 658 Damage, ATK +1600 for 9 Allies (Priority: Light Type) for 14 seconds
+    and Skill cooldown -2 seconds on World Bosses for 2 turns and Skill damage +1000
+    for 5 Allies (Priority: Highest ATK) in the back row for 20 seconds'
+  drive: 'Deal 1751 Damage to 2 random Enemies, grant 9 Allies in the front row (Priority:
+    Lowest HP) +2000 Barrier (absorbs damage before HP is affected) and 9 Allies in
+    the back row (Priority: Highest ATK) +1500'
+  notes: 'One of the best World Boss buffers available due to her slide and drive. '
+  date: '2019-7-12'
+  index: 46
+moa:
+  pic: "/images/moa0.png"
+  pic2: "/images/moa1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: light
+  tier: 7 9 3 3
+  leader: Dark enemy debuff evasion rate -10%
+  auto: Deals 100 damage.
+  tap: Deals 381 damage to target, and debuff evasion rate -10% for 8s.
+  slide: Deals 595 damage to 2 enemies with highest attack, and 70% chance to petrify
+    (unable to act for 10s or after being attacked 2 times).
+  drive: Deals 2096 damage to 2 random enemies, and 90% chance to petrify (unable
+    to act for 15s or after being hit 3 times).
+  notes: Her slide provides consistent CC to the same two highest attack enemies,
+    making her one of the best PvP debuffers. Great with stall or DoT teams, as DoT
+    doesn't take off petrify stacks.
+  date: '2019-1-12'
+  index: 161
+abaddon:
+  pic: "/images/abaddon0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 8 7 8 8
+  leader: Drive skill damage +1000 to all grass type allies. (bonus +1000 drive damage
+    to all allies on Ragnas)
+  auto: Deals 112 damage.
+  tap: Deals 447 damage 4 times
+  slide: Deals 771 damages to 3 random enemies and Absorb 350 damage as HP.
+  drive: Deals 2237 damages to 4 lowest HP enemies and Gives +50% Skill Gauge Charge
+    for 2 turn to self.
+  notes: Highest damage 4-hit tap in the game. The sustain being on his slide makes
+    him weaker than Siren, as you want to be constantly tapping Abaddon.
+  date: '2018-12-24'
+  index: 1
+resurrected frej:
+  pic: "/images/freylight0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 7 6 9 9
+  leader: 'Slide Skill Damage +8% for Light Type Allies (During Raid: Weak Point Skill
+    Damage +8%)'
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 438 (105%) Damage, 300 Ignore DEF Damage on Dark Type targets
+  slide: 'Deal 955 Damage 2 times to 2 Enemies (Priority: Debuffer), and 150 Ignore
+    DEF Damage. For Raids only: 300 Bonus Damage to Dark Type Enemies'
+  drive: Deal 3222 (260%) Damage, inflict Curse (300 DoT every 2 seconds and Bonus
+    Damage at end of duration or if removed) on 2 random Enemies for 8 seconds
+  notes: ''
+  date: '2019-9-14'
+  index: 77
+catgirl neamhain:
+  pic: "/images/nevanlight0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 6 6 9 7
+  leader: 'Debuff EVA +10% for Light Type Allies (During Raid: additional +10%)'
+  auto: Deal 100 Attack damage to the target (Automatic)
+  tap: Deal 381 Damage, 70% chance to remove Death Heal from 2 Allies if they are
+    inflicted with Death Heal
+  slide: 'Deal 663 Damage, ATK +1200 for 3 Allies (Light Type & Highest ATK) for 16
+    seconds, Skill Damage +1400. For Raids only: Skill Gauge +20% for 2 Light Type
+    Allies'
+  drive: Deal 1738 Damage to 3 random Enemies, 2 Allies (Highest ATK) gain ATK +40%
+    for 20 seconds and grant Nullify Silence for 10 seconds
+  notes: ''
+  date: '2019-9-14'
+  index: 74
+rita:
+  pic: "/images/rita0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 7 7 7 6
+  leader: Debuff EVA -10% for all Enemies
+  auto: Deal 101 Attack damage to the target (Automatic)
+  tap: Deal 387 Damage to 1 Enemy (Highest ATK), ATK -15% for 10 seconds
+  slide: 'Deal 644 Damage to 2 Enemies (Priority: Lowest HP), 70% chance to inflict
+    Death Heal (amount recovered by target is converted to same amount of damage,
+    except for certain effects) for 14 seconds, Skill Gauge -35%'
+  drive: Deal 1968 Damage to 3 random Enemies, inflict Necrosis (500 DoT every 2 sec.,
+    unable to cut or extend debuff) for 14 seconds
+  notes: ''
+  date: '2019-9-14'
+  index: 71

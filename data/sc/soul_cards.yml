@@ -112,20 +112,6 @@ crossed hearts:
   passive: "Restriction: none. \r\n\r\nIncrease Stun Ignore by 30% in Devil Rumble."
   index: 43
   enabled: 'false'
-7th runaway:
-  pic: "/images/sc/runaway.jpg"
-  stars: '5'
-  stats: "Attack: 560   2695    \r\n\r\nCritical: 290   / 2222   "
-  passive: "Restriction: Light. \r\n\r\nIncrease Critical attack by 800 in Raid Boss."
-  index: 40
-  enabled: 'false'
-forbidden fruit:
-  pic: "/images/sc/forbiddenfruit.jpg"
-  stars: '5'
-  stats: "Attack: 560   2695    \r\n\r\nAgility: 290    / 2222   "
-  passive: "Restriction: none. \r\n\r\n30% chance to ignore Death Heal in Raid Boss."
-  index: 55
-  enabled: 'false'
 iced americano:
   pic: "/images/sc/icedamericano.jpg"
   stars: '5'
@@ -1221,3 +1207,51 @@ afternoon nap:
   - - Ability
     - Increase Slide Skill Damage by 750 for World Bosses
   index: 4
+forbidden fruit:
+  pic: "/images/sc/forbiddenfruit.jpg"
+  enabled: 'false'
+  stars: '5'
+  normal:
+  - - HP
+    - '1015'
+    - '0'
+    - DEF
+  - - '515'
+    - '0'
+  prism:
+  - - HP
+    - '0'
+    - '0'
+    - DEF
+  - - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - Increase Regen by 100 when equipped
+  index: 55
+seventh time running away:
+  pic: "/images/sc/runaway.jpg"
+  enabled: 'false'
+  stars: '5'
+  normal:
+  - - atk
+    - '595'
+    - '0'
+    - crt
+  - - '325'
+    - '0'
+  prism:
+  - - atk
+    - '0'
+    - '0'
+    - crt
+  - - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - Light Attacker
+  - - Ability
+    - Increase Slide Skill Damage by 750 in Raids
+  index: 40

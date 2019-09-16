@@ -1,18 +1,30 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <!-- Global site tag (gtag.js) - Google Analytics -->
-  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131352133-2"></script>
-  <script>
-    window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
-    gtag('js', new Date());
-
-    gtag('config', 'UA-131352133-2');
-  </script>
-  <title>RiceMine</title>
+  <title>RiceMine(GL)</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width" />
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.google-analytics.com/analytics.js"></script>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-131352133-2"></script>
+  <script>
+    window.ga=window.ga||function(){(ga.q=ga.q||[]).push(arguments)};ga.l=+new Date;
+
+    ga('create', 'UA-131352133-2', 'auto');
+    // Replace the following lines with the plugins you want to use.
+    ga('require', 'cleanUrlTracker');
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'urlChangeTracker', {
+        fieldsObj: {
+        dimension1: 'virtual'
+          }
+    });
+    ga('send', 'pageview', {
+      dimension1: 'page load'
+    });
+  </script>
+  <script src="/javascripts/autotrack.js"></script>
   <script
   src="https://code.jquery.com/jquery-2.2.1.min.js"
   integrity="sha256-gvQgAFzTH6trSrAWoH1iPo9Xc96QxSZ3feW6kem+O00="

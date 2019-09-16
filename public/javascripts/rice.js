@@ -23,7 +23,12 @@ $(document).on('click', '.linkaddress', function(e){
 
   $('main').css("visibility", "hidden")
     e.preventDefault();
-  var path = this.href;
+    var path = this.href;
+    // this code below send google link info/redirect/ajax for analytics
+    ga('send', 'pageview', path, {
+      dimension1: 'page load'
+    });
+    //
   $('#popout').load(path + ' .popping', function() {
 
     $('.back-button').hide();
