@@ -1,11 +1,11 @@
 
 <div class="container">
 <div class="row">
-<% @units.each do |name| %>
+<% @files.each do |name| %>
   <div class="col file-list-box">
      <% unless name.nil? %>
        <div><%= name %></div>
-        <img src="../images/<%= name %>">
+        <img src="<%= @path %><%= name %>">
         <div>
         <a  href="/download/<%= name %>">Download file</a>
       </div>
@@ -13,18 +13,4 @@
      <% end %>
   </div>
 <% end %>
-<% @soulcards.each do |name| %>
-  <div class="col file-list-box">
-     <% unless name.nil? %>
-       <div><%= name %></div>
-        <img src="../images/sc/<%= name %>">
-        <div>
-        <a  href="/download/<%= name %>">Download file</a>
-      </div>
-      <a href="/show_files/<%= name %>/remove">Delete</a>
-     <% end %>
-  </div>
-<% end %>
-
-</div>
 </div>

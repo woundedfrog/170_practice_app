@@ -5,7 +5,7 @@ require 'redcarpet'
 require 'yaml'
 require 'fileutils'
 require 'bcrypt'
-# require 'pry'
+require 'pry'
 require 'zip' # allows for zipping files
 
 configure do
@@ -114,7 +114,21 @@ helpers do
       value
     end
   end
+
+  def get_img_link(name)
+  # this gets the full-size image for a link and send placeholder if not found.
+    # ../../../images/full_size/full<%= @name.gsub(/\s+/, "")
+    name = 'full' + name.gsub(/\s+/, "")
+    path = "./public/images/full_size/#{name}.png"
+    if File.exist?(path)
+      return "/images/full_size/#{name}.png"
+    else
+      return "/images/full_size/fullmissingpic.png"
+    end
+
+  end
 end
+# #####helper methods end ####
 
 def delete_selected_file(name)
   if !name.include?('.jpg')
@@ -163,14 +177,17 @@ end
 def file_path
   cards = ''
   units = ''
+  fullsize = ''
   if ENV['RACK_ENV'] == 'test'
     cards = File.expand_path('test/public/images/sc/', __dir__)
     units = File.expand_path('test/public/images/', __dir__)
+    fullsize = File.expand_path('test/public/images/full_size/', __dir__)
   else
     cards = File.expand_path('public/images/sc/', __dir__)
     units = File.expand_path('public/images/', __dir__)
+    fullsize = File.expand_path('public/images/full_size/', __dir__)
   end
-  [units, cards]
+  [units, cards, fullsize]
 end
 
 def load_file_data(name)
@@ -412,11 +429,20 @@ def zip_it(path)
         zipfile.add(filename, filepath)
       end
     end
-  else
+  elsif path.include?('sc')
     zip_name = path
     Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
       # Find all .csv files in the exports directory
       Dir.glob("./public/images/sc/*") do |filepath|
+        filename = filepath.split("/").pop
+        zipfile.add(filename, filepath)
+      end
+    end
+  elsif path.include?('full')
+    zip_name = path
+    Zip::File.open(zip_name, Zip::File::CREATE) do |zipfile|
+      # Find all .csv files in the exports directory
+      Dir.glob("./public/images/full_size/*") do |filepath|
         filename = filepath.split("/").pop
         zipfile.add(filename, filepath)
       end
@@ -443,7 +469,7 @@ def format_input_stats(stats, passive_skill = false)
         key = 'Restriction'
         word = key
       elsif ['ability', 'abilities'].include?(word.downcase)
-        key = key = 'Ability'
+        key = 'Ability'
         word = key
       end
       if key == 'Restriction'
@@ -475,6 +501,17 @@ def history_update(info)
   @history = YAML.load_file(path)
 end
 
+# ########live 2d stuff ######
+
+def load_id_file
+  path = File.expand_path('data/char_un_id.yml', __dir__)
+  YAML.load_file(path)
+end
+
+def get_id_from_name(name)
+  data = load_id_file
+  data[name]
+end
 # ##################
 
 not_found do
@@ -490,7 +527,7 @@ get '/backup/:files'do
     Dir.mkdir './backup'
   end
 
-  if files.include?('unit')
+  if 'units'.include?(files)
     path = './backup/unit_imgs.zip'
     File.delete(path) if File.exist?(path)
 
@@ -499,12 +536,21 @@ get '/backup/:files'do
     ftype = 'Application/octet-stream'
     send_file "./backup/#{fname}", filename: fname, type: ftype
 
-  elsif files.include?('sc')
+  elsif ['soulcard','sc','cards','card'].include?(files)
     path = './backup/sc_imgs.zip'
     File.delete(path) if File.exist?(path)
     zip_it(path)
 
     fname = '/sc_imgs.zip'
+    ftype = 'Application/octet-stream'
+    send_file "./backup/#{fname}", filename: fname, type: ftype
+
+  elsif ['fullsize','full','profile'].include?(files)
+    path = './backup/full_size.zip'
+    File.delete(path) if File.exist?(path)
+    zip_it(path)
+
+    fname = '/full_size.zip'
     ftype = 'Application/octet-stream'
     send_file "./backup/#{fname}", filename: fname, type: ftype
   end
@@ -620,6 +666,41 @@ get '/download/:filename' do |filename|
   redirect '/'
 end
 
+get '/show_files/:type' do
+  file_type = params[:type]
+  units = File.join(file_path[0], '*')
+  cards = File.join(file_path[1], '*')
+  full = File.join(file_path[2], '*')
+
+  if file_type.include?('unit')
+    @files = Dir.glob(units).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/"
+
+  elsif file_type.include?('cards') || file_type.include?('soul') || file_type.include?('sc')
+    @files = Dir.glob(cards).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/sc/"
+
+  else
+
+    @files = Dir.glob(full).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/full_size/"
+
+  end
+  erb :file_list
+end
+
 get '/show_files/:file_name/remove' do
   delete_selected_file(params[:file_name])
   redirect '/show_files'
@@ -650,7 +731,7 @@ get '/:catagory/:star_rating' do
     unit_info = select_enabled_profiles(@units)
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
-    erb :index_child
+    redirect "/childs/#{star_rating}/sort_by/element"
   else
     unit_info = select_enabled_profiles(@soulcards)
     @catagory = 'equips'
@@ -663,6 +744,7 @@ get '/childs/:star_rating/:unit_name' do
   name = params[:unit_name]
   unit_or_sc_exist?('unit', name)
   @unit_name = name
+  @unit_id = get_id_from_name(name) # LIVE 2d id.
   @current_unit = @units[name]
   erb :view_unit
 end
@@ -723,22 +805,6 @@ get '/show_unit_details' do
   erb :show_unit_details
 end
 
-get '/show_files' do
-  units = File.join(file_path[0], '*')
-  cards = File.join(file_path[1], '*')
-  @units = Dir.glob(units).map do |path|
-    next if File.directory?(path)
-
-    File.basename(path)
-  end
-  @soulcards = Dir.glob(cards).map do |path|
-    next if File.directory?(path)
-
-    File.basename(path)
-  end
-  erb :file_list
-end
-
 get '/upload' do
   erb :upload
 end
@@ -784,7 +850,12 @@ post '/equips/new_sc' do
                             'true'
                           end
   data[name]['stars'] = params[:stars]
-  data[name]['normal'] = format_input_stats(params[:normal])
+
+  if params[:normal] == '' || params[:normal].nil?
+    data[name]['normal'] = format_input_stats("stat1 0 0 0 stat2 0 0 0")
+  else
+    data[name]['normal'] = format_input_stats(params[:normal])
+  end
 
   if data[name]['stars'] == '5'
 
@@ -792,11 +863,15 @@ post '/equips/new_sc' do
      if params[:prism] == '' || params[:prism].nil?
        data[name]['normal']
      else
-      format_input_stats(params[:prism])
+       format_input_stats(params[:prism])
      end
    end
 
-  data[name]['passive'] = format_input_stats(params[:passive], true)
+   if params[:passive] == '' || params[:passive].nil?
+     data[name]['passive'] = format_input_stats("restrictions na ability na", true)
+   else
+     data[name]['passive'] = format_input_stats(params[:passive], true)
+   end
   data[name]['index'] = index
 
   File.write('data/sc/soul_cards.yml', YAML.dump(data))
@@ -936,10 +1011,12 @@ post '/upload' do
   end
 
   directory =
-    if name.include?('png')
-      file_path[0]
+    if name.include?('png') && name[0..3] == 'full'
+      file_path[2]
     elsif name.include?('jpg')
       file_path[1]
+    elsif name.include?('png') && name[0..3] != 'full'
+      file_path[0]
     elsif ['unit_details.yml', 'maininfo.yml', 'basics.md'].include?(name)
       'data/'
     elsif name == 'soul_cards.yml'
@@ -947,7 +1024,7 @@ post '/upload' do
     elsif name.include?('.css')
       'public/stylesheets/'
     else
-      session[:message] = 'Filename must match original filename'
+      session[:message] = 'Not a valid file-type'
       redirect '/upload'
     end
 

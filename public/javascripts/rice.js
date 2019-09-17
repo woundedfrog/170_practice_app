@@ -1,5 +1,9 @@
 
 $( document ).ready(function() {
+
+    // ScrollReveal().reveal('.units', { delay: 50 });
+    //   ScrollReveal().reveal('.sc', { delay: 50 });
+
   // remove thsi popout hide method if needed.
   $('#popout').hide();
 
@@ -22,17 +26,20 @@ $(document).on('click', '.linkaddress', function(e){
   // $('.exit-button2').css("visibility", "visible")
 
   $('main').css("visibility", "hidden")
+
     e.preventDefault();
-    var path = this.href;
-    // this code below send google link info/redirect/ajax for analytics
-    ga('send', 'pageview', path, {
-      dimension1: 'page load'
-    });
-    //
+
+
+  var path = this.href;
+  // this code below send google link info/redirect/ajax for analytics
+  ga('send', 'pageview', path, {
+    dimension1: 'page load'
+  });
+  //
+
   $('#popout').load(path + ' .popping', function() {
 
     $('.back-button').hide();
-
   // highlight function
     $('p').each(function() {
       // checks if a <p> element has img imbedded.
@@ -45,9 +52,12 @@ $(document).on('click', '.linkaddress', function(e){
           return;
         }
     });
+
+
   });
 
 });
+
 
 $(document).on('click', '.exit-button2', function(e){
   $('#popout').hide();
@@ -57,7 +67,7 @@ $(document).on('click', '.exit-button2', function(e){
   $('#popout').find('.popping').remove('.popping');
 });
 
-$(document).on('click', '.exit-button2', function(e){
+$(document).on('click', '.sc-container', function(e){
   $('#popout').hide();
   $('.exit-button2').hide();
 
@@ -112,11 +122,28 @@ $('p').each(function() {
 });
 
 function mobileHide() {
+
   $('.mobile').addClass('show');
+
+  // // $('.profile_imgs').addClass('hide');
+  //
+  // $('.mobile').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
   $('.mobile-button').addClass('hide');
+
+  $('.profile_imgs').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'block');
+  $('.profile_imgs').removeClass('show');
+  $('.profile_imgs').css('display', 'contents');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
 };
 
 function  showUnitsOnly(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
@@ -126,6 +153,7 @@ function  showUnitsOnly(type) {
 };
 
 function  showUnitsTier(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
@@ -136,6 +164,7 @@ function  showUnitsTier(type) {
 };
 
 function  showAllUnits(type) {
+  $('.container').removeClass('hide');
   $('.btn').removeClass('btn-success').addClass('btn-warning');
   $('#'+type).removeClass('btn-warning').addClass('btn-success');
   $('.main-container').show();
@@ -194,3 +223,37 @@ function topFunction() {
 //     }
 //   }
 // );
+
+var loader = $(document).on('click', '.profile_imgs', function(e){
+  // console.log('clicked');
+  // $('.profile_imgs').addClass('show');
+  $('.profile_imgs').css('visibility', 'hidden');
+  $('.full_unit_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'block');
+  $('.profile_imgs').removeClass('show');
+  $('.profile_imgs').css('display', 'contents');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
+});
+
+$(document).on('click', '.full_unit_imgs', function(e){
+  // console.log('clicked');
+  $('.profile_imgs').addClass('show');
+  $('.profile_imgs').css('visibility', 'visible');
+  $('.full_unit_imgs').css('display', 'none');
+  $('.profile_imgs').css('display', 'unset');
+
+
+  $('.profile-stat-col-container').addClass('profile-adj');
+  $('.profile-stat-container').addClass('stat-cont-opacity');
+});
+
+$(document).on('click', '.exit-button2', function(e){
+  $('.profile_imgs').css('visibility', 'visible');
+    $('.profile_imgs').css('display', 'unset');
+  $('.profile-stat-col-container').css('position', 'unset');
+  $('.profile-stat-col-container').removeClass('profile-adj');
+  $('.profile-stat-container').removeClass('stat-cont-opacity');
+});
