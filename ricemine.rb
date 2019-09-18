@@ -660,6 +660,8 @@ get '/download/:filename' do |filename|
     send_file "./data/#{filename}", filename: fname, type: ftype
   elsif filename.include?('.jpg')
     send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('full')
+    send_file "./public/images/full_size/#{filename}", filename: fname, type: ftype
   else
     send_file "./public/images/#{filename}", filename: fname, type: ftype
   end
