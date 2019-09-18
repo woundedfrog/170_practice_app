@@ -2847,26 +2847,6 @@ abaddon:
     him weaker than Siren, as you want to be constantly tapping Abaddon.
   date: '2018-12-24'
   index: 1
-resurrected frej:
-  pic: "/images/freylight0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: light
-  tier: 7 6 9 9
-  leader: 'Slide Skill Damage +8% for Light Type Allies (During Raid: Weak Point Skill
-    Damage +8%)'
-  auto: Deal 113 Attack damage to the target (Automatic)
-  tap: Deal 438 (105%) Damage, 300 Ignore DEF Damage on Dark Type targets
-  slide: 'Deal 955 Damage 2 times to 2 Enemies (Priority: Debuffer), and 150 Ignore
-    DEF Damage. For Raids only: 300 Bonus Damage to Dark Type Enemies'
-  drive: Deal 3222 (260%) Damage, inflict Curse (300 DoT every 2 seconds and Bonus
-    Damage at end of duration or if removed) on 2 random Enemies for 8 seconds
-  notes: ''
-  date: '2019-9-14'
-  index: 77
 catgirl neamhain:
   pic: "/images/nevanlight0.png"
   pic2: ''
@@ -2908,3 +2888,24 @@ rita:
   notes: ''
   date: '2019-9-14'
   index: 71
+resurrected frej:
+  pic: "/images/freylight0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: light
+  tier: 7 6 9 9
+  leader: 'Slide Skill Damage +8% for Light Type Allies (During Raid: Weak Point Skill
+    Damage +8%)'
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 438 (105%) Damage, 300 Ignore DEF Damage on Dark Type targets
+  slide: 'Deal 955 Damage 2 times to 2 Enemies (Priority: Debuffer), and 150 Ignore
+    DEF Damage. For Raids only: 300 Bonus Damage to Dark Type Enemies'
+  drive: Deal 3222 (260%) Damage, inflict Curse (300 DoT every 2 seconds and Bonus
+    Damage at end of duration or if removed) on 2 random Enemies for 8 seconds
+  notes: A slightly improved Medb for light. Great in Dark Ragna and Dark World Boss
+    due to the quad hit slide.
+  date: '2019-9-14'
+  index: 77
