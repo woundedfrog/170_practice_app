@@ -469,7 +469,7 @@ def format_input_stats(stats, passive_skill = false)
         key = 'Restriction'
         word = key
       elsif ['ability', 'abilities'].include?(word.downcase)
-        key = key = 'Ability'
+        key = 'Ability'
         word = key
       end
       if key == 'Restriction'
@@ -527,7 +527,7 @@ get '/backup/:files'do
     Dir.mkdir './backup'
   end
 
-  if files.include?('unit')
+  if 'units'.include?(files)
     path = './backup/unit_imgs.zip'
     File.delete(path) if File.exist?(path)
 
@@ -536,7 +536,7 @@ get '/backup/:files'do
     ftype = 'Application/octet-stream'
     send_file "./backup/#{fname}", filename: fname, type: ftype
 
-  elsif files.include?('sc')
+  elsif ['soulcard','sc','cards','card'].include?(files)
     path = './backup/sc_imgs.zip'
     File.delete(path) if File.exist?(path)
     zip_it(path)
@@ -545,7 +545,7 @@ get '/backup/:files'do
     ftype = 'Application/octet-stream'
     send_file "./backup/#{fname}", filename: fname, type: ftype
 
-  elsif files.include?('full')
+  elsif ['fullsize','full','profile'].include?(files)
     path = './backup/full_size.zip'
     File.delete(path) if File.exist?(path)
     zip_it(path)
@@ -666,6 +666,41 @@ get '/download/:filename' do |filename|
   redirect '/'
 end
 
+get '/show_files/:type' do
+  file_type = params[:type]
+  units = File.join(file_path[0], '*')
+  cards = File.join(file_path[1], '*')
+  full = File.join(file_path[2], '*')
+
+  if file_type.include?('unit')
+    @files = Dir.glob(units).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/"
+
+  elsif file_type.include?('cards') || file_type.include?('soul') || file_type.include?('sc')
+    @files = Dir.glob(cards).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/sc/"
+
+  else
+
+    @files = Dir.glob(full).map do |path|
+      next if File.directory?(path)
+
+      File.basename(path)
+    end
+    @path = "../images/full_size/"
+
+  end
+  erb :file_list
+end
+
 get '/show_files/:file_name/remove' do
   delete_selected_file(params[:file_name])
   redirect '/show_files'
@@ -696,7 +731,7 @@ get '/:catagory/:star_rating' do
     unit_info = select_enabled_profiles(@units)
     @catagory = 'childs'
     @units = sort_by_given_info(unit_info, params[:star_rating])
-    erb :index_child
+    redirect "/childs/#{star_rating}/sort_by/element"
   else
     unit_info = select_enabled_profiles(@soulcards)
     @catagory = 'equips'
@@ -770,22 +805,6 @@ get '/show_unit_details' do
   erb :show_unit_details
 end
 
-get '/show_files' do
-  units = File.join(file_path[0], '*')
-  cards = File.join(file_path[1], '*')
-  @units = Dir.glob(units).map do |path|
-    next if File.directory?(path)
-
-    File.basename(path)
-  end
-  @soulcards = Dir.glob(cards).map do |path|
-    next if File.directory?(path)
-
-    File.basename(path)
-  end
-  erb :file_list
-end
-
 get '/upload' do
   erb :upload
 end
@@ -831,7 +850,12 @@ post '/equips/new_sc' do
                             'true'
                           end
   data[name]['stars'] = params[:stars]
-  data[name]['normal'] = format_input_stats(params[:normal])
+
+  if params[:normal] == '' || params[:normal].nil?
+    data[name]['normal'] = format_input_stats("stat1 0 0 0 stat2 0 0 0")
+  else
+    data[name]['normal'] = format_input_stats(params[:normal])
+  end
 
   if data[name]['stars'] == '5'
 
@@ -839,11 +863,15 @@ post '/equips/new_sc' do
      if params[:prism] == '' || params[:prism].nil?
        data[name]['normal']
      else
-      format_input_stats(params[:prism])
+       format_input_stats(params[:prism])
      end
    end
 
-  data[name]['passive'] = format_input_stats(params[:passive], true)
+   if params[:passive] == '' || params[:passive].nil?
+     data[name]['passive'] = format_input_stats("restrictions na ability na", true)
+   else
+     data[name]['passive'] = format_input_stats(params[:passive], true)
+   end
   data[name]['index'] = index
 
   File.write('data/sc/soul_cards.yml', YAML.dump(data))

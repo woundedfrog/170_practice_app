@@ -5588,3 +5588,24 @@ tisbe:
   notes: ''
   date: '2019-9-11'
   index: 280
+sole sword tiamat:
+  pic: "/images/tiamatwb0.png"
+  pic2: "/images/tiamatwb1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 7 6 9 8
+  leader: Tap Skill damage +12% for Fire allies. (During Race, Weak Point Skill damage
+    +12% for Fire allies).
+  auto: Deals 114 damage
+  tap: Deal 495 damage to target, and deal an additional 500 ignore defense damage
+    if target is a Wood type. Grant Weakness Final Damage +1000 to self for 20 seconds.
+  slide: Deal 961 damage and 850 ignore defense damage to 3 random targets. During
+    Race only, deal an additional 800 Bonus damage.
+  drive: Deal 2607 damage to 4 random targets, deal an additional 700 Bonus damage
+    to Wood type targets.
+  notes: Designed to be used in Race Challenge. Dat Ass.
+  date: '2019-9-16'
+  index: 281
