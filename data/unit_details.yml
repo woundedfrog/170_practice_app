@@ -5564,30 +5564,6 @@ scuba mona:
     of burn.
   date: '2018-11-28'
   index: 43
-tisbe:
-  pic: "/images/tisbe0.png"
-  pic2: "/images/tisbe1.png"
-  pic3: "/images/tisbe2.png"
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: water
-  tier: 8 9 7 8
-  leader: Skill Gauge Charge Speed +12% to all allies (For PvP only, additional Skill
-    Gauge Charge Speed +8% to Water allies)
-  auto: Deals 259 damage
-  tap: Deal 1269 damage to target, prioritizing highest attack, Skill Gauge Charge
-    Amount +34.5% for 20 seconds and gives debuff immunity (cleanse all current debuffs
-    and negate 1 incoming debuff after for 10 seconds) to 1 ally
-  slide: Deal 1767 damage to target, prioritizing childs with the least skill gauge
-    charge, increase Skill Gauge by +39.1% and Slide Skill Cooldown -2 seconds for
-    16 seconds. In PvP only, for 2 allies with the lowest HP grant Immortality (HP
-    won't go under 1) for 10s
-  drive: 'Deals 4445 damage to 3 random enemies, prioritizing highest attack, Skill
-    gauge charge amount +60% for 2 turns to 3 allies & Drive Gauge +500 '
-  notes: ''
-  date: '2019-9-11'
-  index: 280
 sole sword tiamat:
   pic: "/images/tiamatwb0.png"
   pic2: "/images/tiamatwb1.png"
@@ -5609,3 +5585,27 @@ sole sword tiamat:
   notes: Designed to be used in Race Challenge. Dat Ass.
   date: '2019-9-16'
   index: 281
+tisbe:
+  pic: "/images/tisbe0.png"
+  pic2: "/images/tisbe1.png"
+  pic3: "/images/tisbe2.png"
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 8 9 7 8
+  leader: Skill Gauge Charge Speed +12% to all allies (For PvP only, additional Skill
+    Gauge Charge Speed +8% to Water allies)
+  auto: Deals 101 damage
+  tap: Deal 391 damage to target, prioritizing highest attack, Skill Gauge Charge
+    Amount +30% for 20 seconds and gives debuff immunity (cleanse all current debuffs
+    and negate 1 incoming debuff after for 10 seconds) to 1 ally
+  slide: Deal 704 damage to target, prioritizing childs with the least skill gauge
+    charge, increase Skill Gauge by +35% and Slide Skill Cooldown -2 seconds for 16
+    seconds. In PvP only, for 2 allies with the lowest HP grant Immortality (HP won't
+    go under 1) for 10s
+  drive: 'Deals 1826 damage to 3 random enemies, prioritizing highest attack, Skill
+    gauge charge amount +60% for 2 turns to 3 allies & Drive Gauge +500 '
+  notes: Applies -2s CD before skill gauge charge
+  date: '2019-9-11'
+  index: 280
