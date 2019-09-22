@@ -8,6 +8,8 @@ require 'bcrypt'
 require 'pry'
 require 'zip' # allows for zipping files
 
+require './expanded' #for testing new stuff
+
 configure do
   set :erb, escape_html: true
 end

@@ -1,0 +1,134 @@
+
+
+<div class="main-layout">
+
+  <% @file.each do |tier, data| %>
+  <section id="ragna-section-container">
+    <div class="tiers">
+          <h4> Tier </h4>
+          <div class="aux-div">
+      <h3><%= tier %></h3>
+    </div>
+  </div>
+    <!--  -->
+    <div class="division-divs">
+
+      <h4> main </h4>
+      <div class="aux-div">
+        <div class="row justify-content-center">
+          <!-- @file  -->
+          <h6> attacker </h6>
+          <% data['attack'].each do |name| %>
+          <% unit = @units[name] %>
+
+          <% rating = unit["stars"] + "stars" %>
+          <div class="col-* unit-grid-cols team-comp-profile" data-keywords="<%= name %>">
+            <a href="/childs/<%= rating %>/<%= name %>">
+              <img class="profile_imgs" src="<%= unit['pic'] %>" alt="<%= unit %>"/>
+            </a>
+            <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+          </div>
+
+          <% end %>
+        </div>
+      </div>
+    </div>
+    <!-- AUX -->
+
+    <div class="division-divs">
+
+      <h4> auxiliary </h4>
+      <div class="aux-div">
+        <div class="row justify-content-center">
+          <!-- @file  -->
+          <h6> speed </h6>
+          <% data['speed'].each do |name| %>
+          <% unit = @units[name] %>
+
+          <% rating = unit["stars"] + "stars" %>
+          <div class="col-* unit-grid-cols team-comp-profile" data-keywords="<%= name %>">
+            <a href="/childs/<%= rating %>/<%= name %>">
+              <img class="profile_imgs" src="<%= unit['pic'] %>" alt="<%= unit %>"/>
+            </a>
+            <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+          </div>
+
+          <% end %>
+        </div>
+        <div class="row justify-content-center">
+          <!-- @file  -->
+          <h6> damage </h6>
+          <% data['damage'].each do |name| %>
+          <% unit = @units[name] %>
+
+          <% rating = unit["stars"] + "stars" %>
+          <div class="col-* unit-grid-cols team-comp-profile" data-keywords="<%= name %>">
+            <a href="/childs/<%= rating %>/<%= name %>">
+              <img class="profile_imgs" src="<%= unit['pic'] %>" alt="<%= unit %>"/>
+            </a>
+            <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+          </div>
+
+          <% end %>
+        </div>
+      </div>
+
+
+    </div>
+
+    <div class="division-divs">
+      <h4> Defense </h4>
+      <div class="aux-div">
+      <div class="row justify-content-center">
+        <!-- @file  -->
+        <h6> recovery </h6>
+        <% data['recovery'].each do |name| %>
+        <% unit = @units[name] %>
+
+        <% rating = unit["stars"] + "stars" %>
+        <div class="col-* unit-grid-cols team-comp-profile" data-keywords="<%= name %>">
+          <a href="/childs/<%= rating %>/<%= name %>">
+            <img class="profile_imgs" src="<%= unit['pic'] %>" alt="<%= unit %>"/>
+          </a>
+          <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+        </div>
+
+        <% end %>
+      </div>
+      <div class="row justify-content-center">
+        <!-- @file  -->
+        <h6> vamp </h6>
+        <% if data['vamp'] %>
+        <% data['vamp'].each do |name| %>
+        <% unit = @units[name] %>
+
+        <% rating = unit["stars"] + "stars" %>
+        <div class="col-* unit-grid-cols team-comp-profile" data-keywords="<%= name %>">
+          <a href="/childs/<%= rating %>/<%= name %>">
+            <img class="profile_imgs" src="<%= unit['pic'] %>" alt="<%= unit %>"/>
+          </a>
+          <h6 class="unit-profile-title"><%= upcase_name(name) %></h6>
+        </div>
+
+        <% end %>
+        <% end %>
+      </div>
+    </div>
+    </div>
+
+    <div class="division-divs">
+
+        <h4> NOTES </h4>
+      <div class="aux-div aux-div-notes">
+      <div class="row justify-content-center">
+        <h6>#</h6>
+      <div>
+        <p><%= data['guide'] %></p>
+      </div>
+
+      </div>
+            </div>
+                  </div>
+  </section>
+  <% end %>
+</div>

@@ -1,0 +1,18 @@
+s-a:
+  attack:
+    - eve
+    - elysium
+  speed:
+    - kouga
+    - newbie mona
+  damage:
+    - pantheon
+  recovery:
+    - syrinx
+    - maat
+  vamp:
+    - europa
+    - maat
+    - europa
+    - maat
+  guide: 1) Applies death heal, which turns all healing into damage. 2) Inflicts Necrosis, a DoT which can't be reduced in duration. 3) Silences CHild with highest attack.
