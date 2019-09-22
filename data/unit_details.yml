@@ -224,43 +224,6 @@ chimaera:
   date: '2018-12-24'
   index: 120
   enabled: 'true'
-fairy:
-  pic: "/images/4fairy0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: tank
-  element: fire
-  tier: 3 3 3 3
-  leader: Maximum HP +800 to Fire units.
-  auto: Deals 67 damage.
-  tap: Deals 187 damage to target, and Defense +580 for 10s to self.
-  slide: Deals 383 damage to target, +1200 HP Barrier and Taunt (85% Provocation)
-    for 10s to self.
-  drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
-    to 2 allies with lowest hp.
-  date: '2018-11-28'
-  index: 90
-  enabled: 'true'
-thoth:
-  pic: "/images/4thoth0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: tank
-  element: water
-  tier: 3 3 3 3
-  leader: HP +800 to Water units.
-  auto: Deals 68 damage.
-  tap: Deals 194 damage to target and Defense +520 for 12s to 2 Water units.
-  slide: Deals 378 damage to target, gives Defense +20% and 800HP barrier to 5 Water
-    units.
-  drive: Deals 819 damage to 2 random enemies, skill damage Defense +20% for 16s to
-    3 Water units.
-  notes: ''
-  date: '2018-12-24'
-  index: 130
-  enabled: 'true'
 pomona:
   pic: "/images/4pomona0.png"
   pic2: ''
@@ -627,26 +590,6 @@ artemis:
   date: '2018-12-24'
   index: 104
   enabled: 'true'
-maya:
-  pic: "/images/4mayahuel0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: water
-  tier: 6 4 6 6
-  leader: Skill gauge charge +4% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 232 damage to target and skill gauge charge speed 25% for 6s to 1 random
-    ally.
-  slide: Deals 435 damage to target and skill gauge charge amount +26% for 18s to
-    2 allies with highest attack.
-  drive: Deals 1120 damage and 75% chance to Confuse for 10s to 2 random enemies and
-    heal 250HP to 3 allies with lowest HP.
-  notes: He's a dude
-  date: '2018-12-24'
-  index: 128
-  enabled: 'true'
 rudolph:
   pic: "/images/4rudolph0.png"
   pic2: ''
@@ -665,24 +608,6 @@ rudolph:
   notes: ''
   date: '2018-12-24'
   index: 89
-  enabled: 'true'
-danu:
-  pic: "/images/4danu0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: water
-  tier: 7 7 7 8
-  leader: Critical +400 to Water units.
-  auto: Deals 81 damage.
-  tap: Deals 300 damage and Poison (Deals 150 damage when enemy attacks and recieves
-    attacks) for 3 turns to target.
-  slide: Deals 439 damage 3 times to target and 300 ignore Defense damage.
-  drive: Deals 1319 damage to 4 random enemies.
-  notes: ''
-  date: '2018-12-24'
-  index: 124
   enabled: 'true'
 eos:
   pic: "/images/4orora0.png"
@@ -991,28 +916,6 @@ pantheon:
   date: '2018-12-24'
   index: 37
   enabled: 'true'
-melpomene:
-  pic: "/images/4melpomene0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: dark
-  tier: 8 8 7 9
-  leader: Critical rate +10% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 233 damage to target and critical rate +30% for 10s to 1 random ally.
-  slide: Critical rate +30% and critical damage +25% for 16s to 2 allies with highest
-    attack.
-  drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
-    with highest attack and 75% confusion for 10s to 1 random enemy.
-  notes: "A +6 Melpomeme is comparable to a +3/+4 Pantheon (depending on if you are
-    using Melpomeme as leader). \r\nIn global PVP, crit buffers are doing well when
-    paired with a Multi-Tap attacker: Combined with Chang'e providing quick recharge,
-    Multi-Tap attackers are very devastating in PVP."
-  date: '2018-12-24'
-  index: 107
-  enabled: 'true'
 snow miku:
   pic: "/images/snowmiku0.png"
   pic2: ''
@@ -1289,27 +1192,6 @@ dark buster lisa:
   notes: ''
   date: '2019-3-28'
   index: 12
-  enabled: 'true'
-erato:
-  pic: "/images/4erato0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: light
-  tier: 7 8 9 8
-  leader: Maximum HP +500 to all allies
-  auto: Deals 73 damage
-  tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
-  slide: Gives 60 HP Regeneration for 16s to 2 allies with lowest HP and 70% chance
-    to remove bleeding and poison debuff from 2 allies.
-  drive: Deals 1070 damage to 2 random enemies, give Reflect (returns 10% of damaged
-    received) for 20s to 2 allies with lowest HP.
-  notes: "Erato not only functions as a healer, she also removes most damage over
-    time (DOT) debuffs, making her extremely useful for certain ragnas. \r\nHowever,
-    Erato requires high uncaps to function as a healer due to her low base healing."
-  date: '2018-12-24'
-  index: 92
   enabled: 'true'
 daphne:
   pic: "/images/4daphne0.png"
@@ -2909,3 +2791,126 @@ resurrected frej:
     due to the quad hit slide.
   date: '2019-9-14'
   index: 77
+maya:
+  pic: "/images/4mayahuel0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: water
+  tier: 6 5 7 6
+  leader: Skill gauge charge +4% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 232 damage to target and skill gauge charge speed 25% for 6s to 1 random
+    ally.
+  slide: Deals 435 damage to target and skill gauge charge amount +26% for 18s to
+    2 allies with highest attack.
+  drive: Deals 1120 damage and 75% chance to Confuse for 10s to 2 random enemies and
+    heal 250HP to 3 allies with lowest HP.
+  notes: He's a dude
+  date: '2018-12-24'
+  index: 128
+danu:
+  pic: "/images/4danu0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: attacker
+  element: water
+  tier: 8 7 7 9
+  leader: Critical +400 to Water units.
+  auto: Deals 81 damage.
+  tap: Deals 300 damage and Poison (Deals 150 damage when enemy attacks and recieves
+    attacks) for 3 turns to target.
+  slide: Deals 439 damage 3 times to target and 300 ignore Defense damage.
+  drive: Deals 1319 damage to 4 random enemies.
+  notes: Doesn't overwrite your poison during World Boss due to the ability being
+    on tap, which has less priority than slide for poison application.
+  date: '2018-12-24'
+  index: 124
+fairy:
+  pic: "/images/4fairy0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: tank
+  element: fire
+  tier: 4 4 3 3
+  leader: Maximum HP +800 to Fire units.
+  auto: Deals 67 damage.
+  tap: Deals 187 damage to target, and Defense +580 for 10s to self.
+  slide: Deals 383 damage to target, +1200 HP Barrier and Taunt (85% Provocation)
+    for 10s to self.
+  drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
+    to 2 allies with lowest hp.
+  notes:
+  date: '2018-11-28'
+  index: 90
+thoth:
+  pic: "/images/4thoth0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: tank
+  element: water
+  tier: 5 5 3 3
+  leader: HP +800 to Water units.
+  auto: Deals 68 damage.
+  tap: Deals 194 damage to target and Defense +520 for 12s to 2 Water units.
+  slide: Deals 378 damage to target, gives Defense +20% and 800HP barrier to 5 Water
+    units.
+  drive: Deals 819 damage to 2 random enemies, skill damage Defense +20% for 16s to
+    3 Water units.
+  notes: Only good when you have a mostly water team, which makes him limited in team
+    building.
+  date: '2018-12-24'
+  index: 130
+melpomene:
+  pic: "/images/4melpomene0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: dark
+  tier: 8 8 8 9
+  leader: Critical rate +10% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 233 damage to target and critical rate +30% for 10s to 1 random ally.
+  slide: Critical rate +30% and critical damage +25% for 16s to 2 allies with highest
+    attack.
+  drive: Deals 1119 damage to 2 random enemies, skill damage +25% for 16s to 2 allies
+    with highest attack and 75% confusion for 10s to 1 random enemy.
+  notes: "A +6 Melpomeme is comparable to a +3/+4 Pantheon (depending on if you are
+    using Melpomeme as leader). \r\nShe pairs well with quad-hit tappers(childs with
+    4 hits on tap)for PvP for devastating single target burst damage."
+  date: '2018-12-24'
+  index: 107
+erato:
+  pic: "/images/4erato0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: light
+  tier: 7 9 9 8
+  leader: Maximum HP +500 to all allies
+  auto: Deals 73 damage
+  tap: Deals 230 damage to target, and 50% chance to remove silence from ally.
+  slide: Gives 60 HP Regeneration for 16s to 2 allies with lowest HP and 70% chance
+    to remove bleeding and poison debuff from 2 allies.
+  drive: Deals 1070 damage to 2 random enemies, give Reflect (returns 10% of damaged
+    received) for 20s to 2 allies with lowest HP.
+  notes: "Erato not only functions as a healer, she also removes most damage over
+    time (DOT) debuffs, making her extremely useful for certain Ragna Breaks. \r\nHowever,
+    Erato requires high uncaps to function as a healer due to her low base healing.
+    She fills a similar function as Bast, but does not do damage on her slide. This
+    is actually preferable if you're running Moa in PvP, as you do not want the petrify
+    stacks to wear off quickly."
+  date: '2018-12-24'
+  index: 92
