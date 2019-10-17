@@ -1984,28 +1984,6 @@ warwolf:
   notes: ''
   date: '2018-11-28'
   index: 38
-pallas:
-  pic: "/images/pallas0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: dark
-  tier: 6 8 6 5
-  leader: -10% duration of debuffs (Except "Wither") (Additional -10% in Devil Rumble).
-  auto: Deal 100 damage.
-  tap: Deal 337 damage to target and a 70% change to apply "Target" (Concentrate attacks
-    on one target) for 12 seconds.
-  slide: 'Deal 660 damage to target, prioritizing 2 allies with less HP, Regen 144
-    HP (once every 2 seconds) for 16 seconds, and 75% chance to Cleanse DoTs from
-    2 allies '
-  drive: Deal 3307 damage to 3 enemies randomly, prioritizing 3 allies with the least
-    HP apply Skill Damage Defense +30% (Cancels after 32 seconds or 4 attacks) and
-    apply "Immortality" (HP won't go under 1) for 14 seconds.
-  notes: ''
-  date: '2018-11-28'
-  index: 143
 fennec:
   pic: "/images/fennec0.png"
   pic2: "/images/fennec1.png"
@@ -2219,27 +2197,6 @@ pantheon:
   notes: Can be used in all content, but is better in Raids and Worldboss events.
   date: '2018-11-28'
   index: 37
-deino:
-  pic: "/images/dino0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 8 7 9 8
-  leader: Slide final damage +8% for water allies and (during Ragna, +40% critical
-    damage to self).
-  auto: Deals 113 damage.
-  tap: Deals 491 damage to enemy. On Fire type targets, deal 500 Ignore Defense damage
-  slide: Prioritizing fire types, deal 958 to 3 targets plus 800 Ignore Defense damage.
-    On Fire type targets, deal 600 bonus damage.
-  drive: Deals 2598 damage to 4 random enemies, Gives Berserk (Increase attack by
-    +90% and becomes immune to damage, afterwards unit will be stunned for 5s) to
-    self for 14s.
-  notes: 'At higher uncaps, Deino will outperform Eve on Wood Ragna. '
-  date: '2019-2-28'
-  index: 170
 aria:
   pic: "/images/aria0.png"
   pic2: ''
@@ -4807,36 +4764,6 @@ erato:
   notes: ''
   date: '2018-11-28'
   index: 92
-brigette:
-  pic: "/images/brigette.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: tank
-  element: fire
-  tier: 9 8 8 5
-  leader: "+10% Defense for Fire Type allies (in Underground, additional +10% Defense
-    to all allies)"
-  auto: Deal 92 attack damage.
-  tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-Barrier"
-    (Cancel Barrier and do 50% damage of the remaining barrier).
-  slide: Deal 525 damage to 2 random targets. For 14 seconds, prioritizing 4 Fire
-    type allies, apply Pain Adaptation (Defense +850, Defense increase in proportion
-    to HP allies loss [4% increase in defense per 2% decrease in HP, maximum increase
-    to 160%) and Damage Reflect (reflects 20% of received damage for 14 seconds or
-    upon receiving 3 hits), and exclusive for PvE, self regen 118 HP (heals every
-    2 seconds) for 14 seconds
-  drive: Deal 1443 damage to 2 random targets, Prioritizing 5 fire type allies, increase
-    defense +2000 and grant Barrier (adsorbs +2000 HP before HP is affected). For
-    PvE only, apply Pain Sublimation (attack +200, attack increases in proportion
-    to HP allies loss [60% increase in attack per 2% decrease in HP, maximum increase
-    to 2400%])
-  notes: 'Buffed in around March 2019. Her drive is insane but it just requires an
-    ally HP to lose 40% health to get the 2400% attack boost. She may be an interesting
-    pick to add to the team in Ragna/WB '
-  date: '2018-11-28'
-  index: 147
 morgan:
   pic: "/images/morgan0.png"
   pic2: ''
@@ -5520,6 +5447,50 @@ tamamo:
   notes: A slightly better version of Jupiter
   date: '2019-8-29'
   index: 278
+sole sword tiamat:
+  pic: "/images/tiamatwb0.png"
+  pic2: "/images/tiamatwb1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 7 6 9 8
+  leader: Tap Skill damage +12% for Fire allies. (During Race, Weak Point Skill damage
+    +12% for Fire allies).
+  auto: Deals 114 damage
+  tap: Deal 495 damage to target, and deal an additional 500 ignore defense damage
+    if target is a Wood type. Grant Weakness Final Damage +1000 to self for 20 seconds.
+  slide: Deal 961 damage and 850 ignore defense damage to 3 random targets. During
+    Race only, deal an additional 800 Bonus damage.
+  drive: Deal 2607 damage to 4 random targets, deal an additional 700 Bonus damage
+    to Wood type targets.
+  notes: Designed to be used in Race Challenge. Dat Ass.
+  date: '2019-9-16'
+  index: 281
+pallas:
+  pic: "/images/pallas0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 6 8 6 5
+  leader: -10% duration of debuffs (Except "Decomposition") (Additional -10% in Devil
+    Rumble).
+  auto: Deal 100 damage.
+  tap: Deal 337 damage to target and a 70% change to apply "Target" (Concentrate attacks
+    on one target) for 12 seconds.
+  slide: 'Deal 660 damage to target, prioritizing 2 allies with less HP, Regen 144
+    HP (once every 2 seconds) for 16 seconds, and 75% chance to Cleanse DoTs from
+    2 allies '
+  drive: Deal 3307 damage to 3 enemies randomly, prioritizing 3 allies with the least
+    HP apply Skill Damage Defense +30% (Cancels after 32 seconds or 4 attacks) and
+    apply "Immortality" (HP won't go under 1) for 14 seconds.
+  notes: ''
+  date: '2018-11-28'
+  index: 143
 justice mafdet:
   pic: "/images/mafdettoo0.png"
   pic2: "/images/mafdettoo1.png"
@@ -5533,7 +5504,8 @@ justice mafdet:
   auto: Deals 114 damage
   tap: Deal 494 damage to target, 70% to apply Heal Block (prevent recovery except
     Vampirism and Absorption) for 8s. For WB only, 70% chance to gain "Awaken"(+30%
-    Critical Damage and Slide Skill damage (increase by the number of buffs)) to self.
+    Critical Damage and Slide Skill damage (increase by the number of buffs)) to self
+    for 15s
   slide: 'Prioritizing enemies with debuffs, deals 960 damage and 400 Ignore Defense
     damage 2 times to 2 targets, on Fire type targets, deal 350 Bonus damage '
   drive: Deals 2603 damage to 4 random enemies.
@@ -5561,30 +5533,77 @@ scuba mona:
   notes: At +6 Skill Damage Defense goes up to -15.4% and Scald deals 487 damage.
     Scald acts similar to poison on hit, where damage is applied when the target is
     hit; for the 12s that burn is active, every hit on the target will apply a tick
-    of burn.
+    of burn. For WB, Afternoon Nap SC does NOT help with Burn, use Show Time! SC instead
   date: '2018-11-28'
   index: 43
-sole sword tiamat:
-  pic: "/images/tiamatwb0.png"
-  pic2: "/images/tiamatwb1.png"
+brigette:
+  pic: "/images/brigette.png"
+  pic2: ''
   pic3: ''
   enabled: 'true'
   stars: '5'
-  type: attacker
+  type: tank
   element: fire
-  tier: 7 6 9 8
-  leader: Tap Skill damage +12% for Fire allies. (During Race, Weak Point Skill damage
-    +12% for Fire allies).
-  auto: Deals 114 damage
-  tap: Deal 495 damage to target, and deal an additional 500 ignore defense damage
-    if target is a Wood type. Grant Weakness Final Damage +1000 to self for 20 seconds.
-  slide: Deal 961 damage and 850 ignore defense damage to 3 random targets. During
-    Race only, deal an additional 800 Bonus damage.
-  drive: Deal 2607 damage to 4 random targets, deal an additional 700 Bonus damage
-    to Wood type targets.
-  notes: Designed to be used in Race Challenge. Dat Ass.
-  date: '2019-9-16'
-  index: 281
+  tier: 7 6 7 7
+  leader: "+10% Defense for Fire Type allies (in Underground, additional +10% Defense
+    to all allies)"
+  auto: Deal 92 attack damage.
+  tap: Prioritizing enemies with "Barrier", deal 320 damage to target and give "Anti-Barrier"
+    (Cancel Barrier and do 50% damage of the remaining barrier).
+  slide: Deal 525 damage to 2 random targets. For 14 seconds, prioritizing 4 Fire
+    type allies, apply Pain Adaptation (Defense +850, Defense increase in proportion
+    to HP allies loss [4% increase in defense per 2% decrease in HP, maximum increase
+    to 160%) and Damage Reflect (reflects 20% of received damage for 14 seconds or
+    upon receiving 3 hits). For PvE only, apply Regen 118 HP (heals every 2 seconds)
+    to self for 14 seconds
+  drive: Deal 1443 damage to 2 random targets, for 20s, prioritizing 5 fire type allies,
+    Defense +2000 and grant Barrier (adsorbs 2000 HP before HP is affected). For PvE
+    only, apply Pain Sublimation (attack +200 [increase in attack per 2% decrease
+    in HP, maximum increase of 2400% in attack power])
+  notes: 'Buffed in around March 2019. FYI: PvE includes Race Challenge'
+  date: '2018-11-28'
+  index: 147
+katherine:
+  pic: "/images/katherine0.png"
+  pic2: "/images/katherine1.png"
+  pic3: "/images/katherine2.png"
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 7 8 6 6
+  leader: 'Water type enemies ATK -15% '
+  auto: Deals 102 damage
+  tap: Deal 394 damage to target, DEF -500 to target for 10s
+  slide: Deal 675 damage to 2 random targets. 65% chance of to apply "Attraction"
+    (invalidates buffs, can't be dispelled) for 12 seconds. To 1 target, 70% chance
+    to apply “Target” (attacks will be focus on said child [However, “Taunt” will
+    take priority over “Target”])
+  drive: Deal 2031 damage to 3 random targets, apply "Blind" (Attack Accuracy -60%)
+    to target for 16 seconds. Drive Skill Gauge -12%
+  notes: ''
+  date: '2019-9-30'
+  index: 282
+rin:
+  pic: "/images/rin0.png"
+  pic2: "/images/rin1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: water
+  tier: 7 7 6 6
+  leader: Water type allies Heal amount +15%
+  auto: Deals 96 damage
+  tap: Deal 335 damage to target, prioritizing 2 lowest HP allies, Heal amount +35%
+    for 20s
+  slide: Deal 513 damage to target, prioritizing 3 lowest HP allies, Heal 1290 HP
+    and Debuff Duration -30% for 14s
+  drive: Deal 1545 damage to 2 random targets, 3 lowest HP allies, Heal 1790 HP and
+    if the ally is debuffed, apply Max HP +2000 for 16s
+  notes: Trap
+  date: '2019-9-30'
+  index: 284
 tisbe:
   pic: "/images/tisbe0.png"
   pic2: "/images/tisbe1.png"
@@ -5593,7 +5612,7 @@ tisbe:
   stars: '5'
   type: buffer
   element: water
-  tier: 8 9 7 8
+  tier: 8 9 9 9
   leader: Skill Gauge Charge Speed +12% to all allies (For PvP only, additional Skill
     Gauge Charge Speed +8% to Water allies)
   auto: Deals 101 damage
@@ -5606,6 +5625,91 @@ tisbe:
     go under 1) for 10s
   drive: 'Deals 1826 damage to 3 random enemies, prioritizing highest attack, Skill
     gauge charge amount +60% for 2 turns to 3 allies & Drive Gauge +500 '
-  notes: Applies -2s CD before skill gauge charge
+  notes: Applies -2s CD before skill gauge charge. One of the top tier speed buffer
+    for Ranking comps in Ragna
   date: '2019-9-11'
   index: 280
+deino:
+  pic: "/images/dino0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 8 7 9 9
+  leader: Slide final damage +8% for water allies and (during Ragna, +40% critical
+    damage to self).
+  auto: Deals 113 damage.
+  tap: Deals 491 damage to enemy. On Fire type targets, deal 500 Ignore Defense damage
+  slide: Prioritizing fire types, deal 958 to 3 targets plus 800 Ignore Defense damage.
+    On Fire type targets, deal 600 bonus damage.
+  drive: Deals 2598 damage to 4 random enemies, Gives Berserk (Increase attack by
+    +90% and becomes immune to damage, afterwards unit will be stunned for 5s) to
+    self for 14s.
+  notes: 'At higher uncaps, Deino will outperform Eve on Fire Ragna. '
+  date: '2019-2-28'
+  index: 170
+laima:
+  pic: "/images/laima0.png"
+  pic2: "/images/laima1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 0 0 0 0
+  leader: Dark type allies Skill gauge charge amount  +12%
+  auto: Deals 100 damage
+  tap: Deal 379 damage to target, for 2 debuffed allies, 60% chance to cleanse 1 debuff
+  slide: Deal 663 damage to target, to 2 allies with the highest attack, skill gauge
+    charge amount +36.5% and debuff EVA +20% for 16s
+  drive: Deal 2040 damage to 3 random targets, prioritizing dark type childs, skill
+    gauge charge amount +50% and tap skill damage +1500 to 3 allies for 20s
+  notes: ''
+  date: '2019-10-17'
+  index: 285
+typhon:
+  pic: "/images/typhon0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 0 0 0 0
+  leader: Dark type allies Max HP +800
+  auto: Deals 73 damage
+  tap: Deal 233 damage to target, to the highest attack ally, critical rate +30% for
+    10s
+  slide: Deal 448 damage to 2 random targets, prioritizing to 2 allies with the lowest
+    HP, gives AGI +800 and Barrier +1000 HP
+  drive: Deal 1120 damage to 3 random targets, prioritizing to 3 allies with the lowest
+    HP, gives Barrier +1500 HP
+  notes: ''
+  date: '2019-10-17'
+  index: 286
+catherine:
+  pic: "/images/catherine0.png"
+  pic2: "/images/catherine1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 6 7 8 5
+  leader: All Allies Def +15% (During Ragna, Weak Point Skill damage +12% for Fire
+    allies)
+  auto: Deals 92 damage
+  tap: Deal 319 damage to target, prioritizing lowest HP allies, grant Barrier (adsorbs
+    +800 HP before HP is affected) to 2 targets for 10s. During Ragna, Heal 9%+26HP
+    to self
+  slide: Deal 591 damage to target, gains Taunt (90% provocation) and Immortality
+    (HP won't go under 1) for 10s. During Ragna, apply "Life Bind" (Convert 20% of
+    the damage received into healing, the rest of the HP buff is spread to 2 allies
+    with the least HP) to self for 12s
+  drive: Deal 1501 damage to 2 random targets, prioritizing lowest HP allies, grants
+    Reflect (returns 35% of damage received) to 5 allies for 20s
+  notes: Only good in Fire Ragna for her lead, and if you need more survivability.
+  date: '2019-9-30'
+  index: 283

@@ -641,34 +641,6 @@ azure girl:
   - - Ability
     - Poison +1000 (1500)[+100 if prism] in WorldBoss.
   index: 7
-ass baring devil:
-  pic: "/images/sc/assbaringdevil.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '520'
-    - '1500'
-    - '2625'
-  - - Defense
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '526'
-    - '1506'
-    - '2635'
-  - - Defense
-    - '278'
-    - '1258'
-    - '2201'
-  passive:
-  - - Restriction
-    - none.
-  - - Ability
-    - Bleed + 200 (400)[+10 if prism] in WorldBoss.
-  index: 6
 believe:
   pic: "/images/sc/believe.jpg"
   enabled: 'true'
@@ -697,34 +669,6 @@ believe:
   - - Ability
     - Reduce poison damage received by 250 (500)[+15 if prism] in Devil Rumble.
   index: 9
-blade of hot sun:
-  pic: "/images/sc/bladesun.jpg"
-  enabled: 'true'
-  stars: '5'
-  normal:
-  - - Attack
-    - '560'
-    - '1540'
-    - '2695'
-  - - Agility
-    - '270'
-    - '1250'
-    - '2187'
-  prism:
-  - - Attack
-    - '576'
-    - '1556'
-    - '2723'
-  - - Agility
-    - '278'
-    - '1258'
-    - '2201'
-  passive:
-  - - Restriction
-    - None.
-  - - Ability
-    - Attack stat +700 (1200)[+25 if prism] in Underground.
-  index: 10
 cake aesthetics:
   pic: "/images/sc/cakeaesthetics.jpg"
   enabled: 'true'
@@ -2439,3 +2383,134 @@ karma:
   - - Ability
     - Increase Weakpoint Skill Damage by 1000(2000)[+100 if Prism] in WB.
   index: 93
+blade of hot sun:
+  pic: "/images/sc/bladesun.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '560'
+    - '1540'
+    - '2695'
+  - - Agility
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '576'
+    - '1556'
+    - '2723'
+  - - Agility
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Fire Type.
+  - - Ability
+    - Attack stat +700 (1200)[+25 if prism] in Underground.
+  index: 10
+ass baring devil:
+  pic: "/images/sc/assbaringdevil.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - Attack
+    - '520'
+    - '1500'
+    - '2625'
+  - - Critical
+    - '270'
+    - '1250'
+    - '2187'
+  prism:
+  - - Attack
+    - '526'
+    - '1506'
+    - '2635'
+  - - Critical
+    - '278'
+    - '1258'
+    - '2201'
+  passive:
+  - - Restriction
+    - Fire Type.
+  - - Ability
+    - Bleed + 200 (400)[+10 if prism] in WorldBoss.
+  index: 6
+growing feelings:
+  pic: "/images/sc/growingfeelings.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - agility
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - agility
+    - '382'
+    - '1362'
+    - '2383'
+  passive:
+  - - Restriction
+    - Fire Attacker
+  - - Ability
+    - Deal an additional 400(850)[+15 if prism] defense ignore damage.
+  index: 95
+angel's smile:
+  pic: "/images/sc/angel'ssmile.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '1110'
+    - '2090'
+    - '3657'
+  - - defense
+    - '580'
+    - '1560'
+    - '2730'
+  prism:
+  - - hp
+    - '1128'
+    - '2108'
+    - '3689'
+  - - defense
+    - '596'
+    - '1576'
+    - '2758'
+  passive:
+  - - Restriction
+    - Water
+  - - Ability
+    - Final defense +800(1300)[+25 if prism]
+  index: 94
+nightmare:
+  pic: "/images/sc/nightmare.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - attack
+    - '430'
+    - '1015'
+    - '1380'
+  - - critical
+    - '206'
+    - '791'
+    - '1075'
+  passive:
+  - - Restriction
+    - None
+  - - Ability
+    - Final attack +400(800)
+  index: 96
