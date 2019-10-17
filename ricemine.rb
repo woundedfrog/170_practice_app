@@ -618,7 +618,7 @@ end
 ###########
 
 get '/' do
-  @new_units = select_enabled_profiles(@units).sort_by {|k,v| [v['date'], k]}.last(5).to_h
+  @new_units = select_enabled_profiles(@units).sort_by {|k,v| [DateTime.parse(v['date']), k]}.last(5).to_h
   @new_soulcards = select_enabled_profiles(@soulcards).to_a.last(4).to_h
   erb :home
 end

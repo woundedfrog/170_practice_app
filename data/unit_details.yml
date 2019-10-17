@@ -835,25 +835,6 @@ hector:
   date: '2018-12-24'
   index: 113
   enabled: 'true'
-fenrir:
-  pic: "/images/4fenrir0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: attacker
-  element: fire
-  tier: 7 7 5 6
-  leader: Attack +500 to Fire units.
-  auto: Deals 80 damage.
-  tap: Deals 275 damage 3 times to target.
-  slide: Deals 458 damage to 2 enemies and Bleeding (60 continuous damage every 2s)
-    for 10s, with 80 additional damage if grass type.
-  drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
-    2s) for 8s.
-  notes: ''
-  date: '2018-12-24'
-  index: 112
-  enabled: 'true'
 muse:
   pic: "/images/4muse0.png"
   pic2: ''
@@ -1114,25 +1095,6 @@ yaga:
   date: '2018-12-24'
   index: 126
   enabled: 'true'
-daoine sidhe:
-  pic: "/images/dinashi0.png"
-  pic2: "/images/dinashi1.png"
-  pic3: ''
-  stars: '5'
-  type: tank
-  element: fire
-  tier: 7 4 10 10
-  leader: Tap Skill defense +10% to Fire units
-  auto: Deals 92 damage.
-  tap: Deals 326 damage to target and gives +500HP barrier for 8s to 5 Fire units.
-  slide: Deals 572 damage to target and gives 70% Double-Edge (increase attack and
-    reduce Defense) for 16s to 5 Fire units.
-  drive: Deals 1474 damage to 2 random enemies and drive Skill defense +30% for 15s
-    to 5 allies.
-  notes: ''
-  date: '2018-12-24'
-  index: 17
-  enabled: 'true'
 medb:
   pic: "/images/medb0.png"
   pic2: ''
@@ -1311,26 +1273,6 @@ siren:
   date: '2018-12-24'
   index: 76
   enabled: 'true'
-maou davi:
-  pic: "/images/maoudavi0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 6 6 5 6
-  leader: Slide Skills Damage +8% to Fire Allies.
-  auto: Deals 113 damage
-  tap: Deals 50 damage 3times to target.
-  slide: Deals 1205 damage to 2 highest attack enemies and 700 ignore defense additional
-    500 damage to target with "Regeneration" buff and 35% chance to Apply "Double-Edge"(Increase
-    Attack and Decrease Defense) to self for 23seconds.
-  drive: "Deals 1488 damage to all enemies and Apply \"Bleed\"(250 damage per 2seconds)
-    to 2 lowest HP enemies for 12seconds.\r\n\r\n"
-  notes: Her own Double-Edge will override Daoine's Double-Edge.
-  date: '2019-4-11'
-  index: 13
-  enabled: 'true'
 morrigan:
   pic: "/images/4morrigu0.png"
   pic2: ''
@@ -1367,28 +1309,6 @@ fortuna:
   notes: ''
   date: '2018-12-24'
   index: 117
-  enabled: 'true'
-lan fei:
-  pic: "/images/lanfei0.png"
-  pic2: ''
-  pic3: ''
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 8 8 7 5
-  leader: ATK -15% for Light Type Enemies
-  auto: Deal 101 Auto Attack damage
-  tap: Deal 387 Damage, Target's ATK -700 for 10 seconds
-  slide: 'Deal 608 Damage to 2 Enemies (Priority: Highest ATK), 500 of Ignore DEF
-    Damage, target''s Drive Gauge -8%'
-  drive: 'Deal 2012 Damage to 3 Enemies (Priority: Highest DEF), remove 1 Buff and
-    Enemies'' Drive Gauge is -10%'
-  notes: Her special skills only worked on early raid bosses. Works great in fever
-    stall teams that aim to win through being the first to reach fever time. Relatively
-    weak at low uncaps, but becomes strong at high uncaps. Drive gauge removal can't
-    be resisted in PvP.
-  date: '2018-12-24'
-  index: 36
   enabled: 'true'
 horus:
   pic: "/images/horus0.png"
@@ -1513,26 +1433,6 @@ leda:
     \ \r\n"
   date: '2018-12-24'
   index: 96
-  enabled: 'true'
-quirinus:
-  pic: "/images/4kirinus0.png"
-  pic2: ''
-  pic3: ''
-  stars: '4'
-  type: buffer
-  element: water
-  tier: 6 3 6 8
-  leader: Skill gauge charge speed +5% to all allies.
-  auto: Deals 73 damage.
-  tap: Deals 231 damage to target, and agility +300 to 2 allies with highest attack.
-  slide: Deals 408 damage to target and skill gauge charge speed 20% for 16s to 2
-    allies with highest attack.
-  drive: Deals 1075 damage to 2 random enemies and Attack +1000 for 18s to 2 allies
-    with highest attack.
-  notes: Has use in World Boss as her gauge charge speed buff can stack with all other
-    speed buffers' amount charge speed speed buff.
-  date: '2018-12-25'
-  index: 127
   enabled: 'true'
 midas:
   pic: "/images/midas0.png"
@@ -1802,26 +1702,6 @@ jacheongbi:
   notes: ''
   date: '2019-6-28'
   index: 44
-willow doryeong:
-  pic: "/images/yanagi0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: grass
-  tier: 5 6 5 6
-  leader: Skill Gauge Charge Speed +8% for all Allies
-  auto: Deal 99 Attack damage
-  tap: 'Heal 330 HP for 2 Allies (Priority: Lowest HP)'
-  slide: 'Deal 579 Damage, Regen 79 HP (once per 2 seconds) and +700 DEF for 2 Allies
-    (Priority: Lowest HP) for 14 seconds, and 70% chance to grant Antidote (removes
-    Poison and heals damage dealt by 1 round of Poison) to 2 Poisoned Allies '
-  drive: Heals 1224 HP for all Allies, and 90% chance to grant Antidote (removes Poison
-    and heals damage dealt by 1 round of Poison) to 3 Poisoned Allies
-  notes: ''
-  date: '2019-6-28'
-  index: 45
 bast:
   pic: "/images/4bast0.png"
   pic2: ''
@@ -2201,26 +2081,6 @@ bikini lisa:
   notes: ''
   date: '2019-8-17'
   index: 62
-guardian chang'e:
-  pic: "/images/gkouga0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 7 8 6 7
-  leader: "+5% to Tap damage for all allies. "
-  auto: Deals 113 damage.
-  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
-    or Frozen and 200 Ignore defense if target is Water type.
-  slide: Deals 778 3 times to 1 enemy  (Prioritizing attacker Types) and absorb 200
-    damage as HP.
-  drive: 'Deals 2329 damage to 3 enemies with lowest HP. '
-  notes: Has one of the longer attacker cooldowns at 9 seconds. Great at targeting
-    the enemy's water DPS and sniping them with the help of another DPS.
-  date: '2018-12-31'
-  index: 23
 tristan:
   pic: "/images/4tristan0.png"
   pic2: ''
@@ -2621,25 +2481,6 @@ isolde:
     skill). Freeze increases DoT damage by around 15%.
   date: '2019-8-17'
   index: 60
-olga:
-  pic: "/images/orga0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: water
-  tier: 8 9 3 3
-  leader: Skill gauge charge rate -8% to all enemies
-  auto: Deals 100 damage.
-  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
-  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
-    for 5s to 2 random enemies.
-  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
-    gauge by 45% to 3 random enemies.
-  notes: Prevalence of silence resist carta makes Olga less effective for PvP.
-  date: '2018-12-24'
-  index: 54
 cleopatra:
   pic: "/images/cleopatra0.png"
   pic2: "/images/cleopatra2.png"
@@ -2750,26 +2591,6 @@ catgirl neamhain:
   notes: ''
   date: '2019-9-14'
   index: 74
-rita:
-  pic: "/images/rita0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: debuffer
-  element: dark
-  tier: 7 7 7 6
-  leader: Debuff EVA -10% for all Enemies
-  auto: Deal 101 Attack damage to the target (Automatic)
-  tap: Deal 387 Damage to 1 Enemy (Highest ATK), ATK -15% for 10 seconds
-  slide: 'Deal 644 Damage to 2 Enemies (Priority: Lowest HP), 70% chance to inflict
-    Death Heal (amount recovered by target is converted to same amount of damage,
-    except for certain effects) for 14 seconds, Skill Gauge -35%'
-  drive: Deal 1968 Damage to 3 random Enemies, inflict Necrosis (500 DoT every 2 sec.,
-    unable to cut or extend debuff) for 14 seconds
-  notes: ''
-  date: '2019-9-14'
-  index: 71
 resurrected frej:
   pic: "/images/freylight0.png"
   pic2: ''
@@ -2914,3 +2735,287 @@ erato:
     stacks to wear off quickly."
   date: '2018-12-24'
   index: 92
+guardian chang'e:
+  pic: "/images/gkouga0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 7 6 7
+  leader: "+5% to Tap damage for all allies. "
+  auto: Deals 113 damage.
+  tap: Deal 527 damage to target and additional 300 damage if target is Petrified
+    or Frozen and 200 Ignore defense if target is Water type.
+  slide: Deals 778 3 times to 1 enemy  (Prioritizing attacker Types) and absorb 200
+    damage as HP.
+  drive: 'Deals 2329 damage to 3 enemies with lowest HP. '
+  notes: Has one of the longer attacker cooldowns at 9 seconds. Great at targeting
+    the enemy's water DPS and sniping them with the help of another DPS. With the
+    shift of PvP meta to more debuffers and fewer attackers, Guardian Chang'e suffers
+    from having fewer targets.
+  date: '2018-12-31'
+  index: 23
+lan fei:
+  pic: "/images/lanfei0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 7 8 6 5
+  leader: ATK -15% for Light Type Enemies
+  auto: Deal 101 Auto Attack damage
+  tap: Deal 387 Damage, Target's ATK -700 for 10 seconds
+  slide: 'Deal 608 Damage to 2 Enemies (Priority: Highest ATK), 500 of Ignore DEF
+    Damage, target''s Drive Gauge -8%'
+  drive: 'Deal 2012 Damage to 3 Enemies (Priority: Highest DEF), remove 1 Buff and
+    Enemies'' Drive Gauge is -10%'
+  notes: Works great in teams that aim to stall the enemy and reach fever time first.
+    Relatively weak at low uncaps, but becomes very strong at high uncaps due to the
+    scaling on her slide. Drive gauge removal can't be resisted in PvP. Not effective
+    for Ragna Break or World Boss
+  date: '2018-12-24'
+  index: 36
+daoine sidhe:
+  pic: "/images/dinashi0.png"
+  pic2: "/images/dinashi1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 7 4 10 10
+  leader: Tap Skill defense +10% to Fire units
+  auto: Deals 92 damage.
+  tap: Deals 326 damage to target and gives +500HP barrier for 8s to 5 Fire units.
+  slide: Deals 572 damage to target and gives 70% Double-Edge (increase attack and
+    reduce Defense) for 16s to 5 Fire units.
+  drive: Deals 1474 damage to 2 random enemies and drive Skill defense +30% for 15s
+    to 5 allies.
+  notes: She should be categorized as a damage buffer rather than a tank, as she doesn't
+    do much tanking and can actually make your childs take more damage. Amazing in
+    Wood Ragna as well as all non-water World Bosses. Her damage buff allows your
+    fire DPS to keep up with the other elementally advantaged attackers in World Boss,
+    which means you can recycle the Daoine squad instead of investing in additional
+    attackers for that element.
+  date: '2018-12-24'
+  index: 17
+willow doryeong:
+  pic: "/images/yanagi0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 5 6 5 7
+  leader: Skill Gauge Charge Speed +8% for all Allies
+  auto: Deal 99 Attack damage
+  tap: 'Heal 330 HP for 2 Allies (Priority: Lowest HP)'
+  slide: 'Deal 579 Damage, Regen 79 HP (once per 2 seconds) and +700 DEF for 2 Allies
+    (Priority: Lowest HP) for 14 seconds, and 70% chance to grant Antidote (removes
+    Poison and heals damage dealt by 1 round of Poison) to 2 Poisoned Allies '
+  drive: Heals 1224 HP for all Allies, and 90% chance to grant Antidote (removes Poison
+    and heals damage dealt by 1 round of Poison) to 3 Poisoned Allies
+  notes: Good option for Tethys World Boss to mitigate poison damage.
+  date: '2019-6-28'
+  index: 45
+rita:
+  pic: "/images/rita0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 8 7 6 6
+  leader: Debuff EVA -10% for all Enemies
+  auto: Deal 101 Attack damage to the target (Automatic)
+  tap: Deal 387 Damage to 1 Enemy (Highest ATK), ATK -15% for 10 seconds
+  slide: 'Deal 644 Damage to 2 Enemies (Priority: Lowest HP), 70% chance to inflict
+    Death Heal (amount recovered by target is converted to same amount of damage,
+    except for certain effects) for 14 seconds, Skill Gauge -35%'
+  drive: Deal 1968 Damage to 3 random Enemies, inflict Necrosis (500 DoT every 2 sec.,
+    unable to cut or extend debuff) for 14 seconds
+  notes: Good against heal heavy comps in PvP. Her death heal works well for level
+    4 Rebirth Labyrinth, preventing healing and bypassing Diablo's taunt.
+  date: '2019-9-14'
+  index: 71
+fenrir:
+  pic: "/images/4fenrir0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: attacker
+  element: fire
+  tier: 6 6 5 6
+  leader: Attack +500 to Fire units.
+  auto: Deals 80 damage.
+  tap: Deals 275 damage 3 times to target.
+  slide: Deals 458 damage to 2 enemies and Bleeding (60 continuous damage every 2s)
+    for 10s, with 80 additional damage if grass type.
+  drive: Deals 1395 damage to 3 enemies, and Bleeding (200 continuous damage every
+    2s) for 8s.
+  notes: ''
+  date: '2018-12-24'
+  index: 112
+quirinus:
+  pic: "/images/4kirinus0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '4'
+  type: buffer
+  element: water
+  tier: 7 5 6 8
+  leader: Skill gauge charge speed +5% to all allies.
+  auto: Deals 73 damage.
+  tap: Deals 231 damage to target, and agility +300 to 2 allies with highest attack.
+  slide: Deals 408 damage to target and skill gauge charge speed 20% for 16s to 2
+    allies with highest attack.
+  drive: Deals 1075 damage to 2 random enemies and Attack +1000 for 18s to 2 allies
+    with highest attack.
+  notes: Has use in World Boss as her gauge charge speed buff can stack with all other
+    speed buffers' amount charge speed buff.
+  date: '2018-12-25'
+  index: 127
+olga:
+  pic: "/images/orga0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 8 8 3 3
+  leader: Skill gauge charge rate -8% to all enemies
+  auto: Deals 100 damage.
+  tap: Deals 375 damage and skill gauge charge rate -20% for 10s to target.
+  slide: Deals 600 damage and 60% chance Silence (can't use skills and gauge reset)
+    for 5s to 2 random enemies.
+  drive: Deals 1827 damage and skill gauge charge rate -45% for 22s and reduce skill
+    gauge by 45% to 3 random enemies.
+  notes: Prevalence of silence resist carta makes Olga less effective for PvP. Gets
+    outclassed by the consistency of Isolde.
+  date: '2018-12-24'
+  index: 54
+thetis:
+  pic: "/images/tethys0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: water
+  tier: 5 6 5 7
+  leader: Enemy Debuff ACC -10%
+  auto: Deal 101 Attack damage to the target (Automatic)
+  tap: Deal 384 Damage, inflict Poison (causes 200 damage each time a target acts
+    or takes damage)for 2 turns, Debuff EVA -10% for 8 seconds
+  slide: 'Deal 618 Damage to 2 Enemies (Priority: Debuffed), inflict Debuff Blast
+    (1 Debuff is removed and damage is done in relation to the type of debuff x 300),
+    Debuff duration increased by +30% for 12 seconds'
+  drive: Deal 1910 Damage to 3 random Enemies, inflict Poison (causes 800 damage each
+    time a target acts or takes damage) for 3 turns
+  notes: Her debuff explosion can be a detriment for World Boss, as having the debuff
+    stick would often result in more overall damage from your team. For PvP, depending
+    on whether the enemy is running Bathory or not, the debuff explosion may do more
+    damage than the DoTs would, making her an okay option there.
+  date: '2019-9-27'
+  index: 82
+newbie mona:
+  pic: "/images/newbiemona0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: grass
+  tier: 10 9 10 10
+  leader: Skill Gauge Charge Speed +8% (in PVP, +8% added)
+  auto: Deal 101 Attack damage
+  tap: Deal 389 Damage, 50% chance to remove DoT damage from DoT debuffs and grant
+    Vampirism (recover 15% HP on attack) for 2 allies for 14 seconds
+  slide: 'Deal 704 Damage to 2 random Enemies, grant +30% Skill Gauge Charge Speed
+    to 2 Allies (Priority: Highest ATK) for 2 turns, and a 70% chance to grant Support
+    (Weak Point Skill Damage +15%, ATK increase in proportion to current number of
+    buffs)'
+  drive: 'Deal 1828 Damage to 3 random Enemies, Skill Gauge Charge Amount +40% for
+    3 Allies (Priority: Wood Type Attackers) for 16 seconds, grant Support (Weak Point
+    Skill Damage +15%, ATK increase in proportion to current number of buffs) for
+    3 turns'
+  notes: Amazing for all content. Can replace Chang'e when you want additional damage
+    instead of a 2 second slide cooldown reduction. Her speed buff can also stack
+    with that of Chang'e, allowing for a swift team.
+  date: '2019-9-27'
+  index: 83
+maou davi:
+  pic: "/images/maoudavi0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 6 6 9 6
+  leader: Slide Skills Damage +5% to Fire Allies.
+  auto: Deals 233 damage
+  tap: Deals 466 damage 3 times to target.
+  slide: Deals 1205 damage to 2 highest attack enemies plus 700 Ignore defense damage.
+    Deal 550 Bonus damage to targets with "Regen" buff. Gain "Double-Edge Sword"(Increase
+    Attack by 35% but decreases Defense) to self for 23s
+  drive: "Deals 1487 damage to all enemies and Apply \"Bleed\"(250 damage per 2seconds)
+    to 2 lowest HP enemies for 12seconds.\r\n\r\n"
+  notes: Her own Double-Edge will override Daoine's Double-Edge, making them awkward
+    when together. Great only for manual damage ranking for Ragna at high uncaps by
+    pairing her with Pantheon and only tapping until fever, at which point you slide.
+  date: '2019-4-11'
+  index: 13
+catherine:
+  pic: "/images/catherine0.png"
+  pic2: "/images/catherine1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: fire
+  tier: 6 7 8 5
+  leader: DEF +8% for all Allies (In Raids, Weak Point Skill Final Blow +8% for Fire
+    Type Allies)
+  auto: Deal 91 Attack damage to the target (Automatic)
+  tap: 'Deal 308 Damage, grant Barrier (absorbs +600 damage before HP is affected)
+    to 2 Allies (Priority: Lowest HP) for 10 seconds. In Raids, Heal self for 9%+25
+    HP'
+  slide: Deal 544 Damage, grant self Taunt (90% chance to activate) for 10 seconds
+    and Immortal (HP cannot drop below 1) for 10 seconds. In Raids, grant self Life
+    Link (converts 30% of Damage to Recovery for 2 Allies (Lowest HP)) for 12 seconds
+  drive: 'Deal 1403 Damage to 2 random Enemies, grant Reflect (returns 25% of damage
+    taken) for 5 Allies (Priority: Lowest HP) for 20 seconds'
+  notes: Leader ability is good in Fire Ragna for more survivability.
+  date: '2019-10-17'
+  index: 85
+katherine:
+  pic: "/images/katherine0.png"
+  pic2: "/images/katherine1.png"
+  pic3: "/images/katherine2.png"
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: grass
+  tier: 7 7 6 6
+  leader: Water Type Enemies' ATK -15%
+  auto: Deal 101 Attack damage to the target (Automatic)
+  tap: Deal 386 Damage, DEF -350 for 8 seconds
+  slide: Deal 632 Damage to 2 random Enemies, 60% chance to inflict Allure (Nullify
+    effects of buffs on target. Can't remove) for 12 seconds, 70% chance to inflict
+    1 of the targets with Marked (Allies will focus attacks on marked enemy; however,
+    Taunt takes priority; can't remove) for 12 seconds
+  drive: Deal 1940 Damage to 3 random Enemies, inflict Blind (decrease Attack ACC
+    60%) for 14 seconds, Enemy Gauge -10%
+  notes: ''
+  date: '2019-10-17'
+  index: 84
