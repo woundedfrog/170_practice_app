@@ -983,25 +983,6 @@ hades:
   date: '2018-12-24'
   index: 24
   enabled: 'true'
-hermes:
-  pic: "/images/hermes0.png"
-  pic2: "/images/hermes1.png"
-  pic3: ''
-  stars: '5'
-  type: buffer
-  element: fire
-  tier: 6 6 7 7
-  leader: Attack +10% to Fire allies.
-  auto: Deals 99 damage.
-  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
-  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
-    attack +100 for 18s to 3 allies with highest attack.
-  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
-    attack +300 for 25s to 3 allies with highest attack.
-  notes: ''
-  date: '2018-12-24'
-  index: 26
-  enabled: 'true'
 elysion:
   pic: "/images/4elysium0.png"
   pic2: ''
@@ -1472,47 +1453,6 @@ neamhain:
   date: '2018-12-25'
   index: 106
   enabled: 'true'
-honoka:
-  pic: "/images/honoka0.png"
-  pic2: "/images/honoka1.png"
-  pic3: "/images/honoka2.png"
-  enabled: 'true'
-  stars: '5'
-  type: healer
-  element: fire
-  tier: 6 5 7 6
-  leader: CRT Rate +15% for Fire Type Allies (during Rumbles, gain +15% CRT Rate to
-    self)
-  auto: Deal 95 Auto Attack damage to the target
-  tap: 'Deal 331 Damage, Heal 318 HP for 1 Ally (Priority: Lowest HP)'
-  slide: 'Regen 150 HP for 2 allies (Priority: Lowest HP) for 14 seconds, and gain
-    +35% Skill Gauge when Critical Damage occurs'
-  drive: 'Deal 1527 Damage to 2 random Enemies, Regen 267 HP each for 5 Allies (Priority:
-    Lowest HP) for 16 seconds, +2000 CRT'
-  notes: ''
-  date: '2019-5-31'
-  index: 39
-marie rose:
-  pic: "/images/marierose0.png"
-  pic2: "/images/marierose1.png"
-  pic3: "/images/marierose2.png"
-  enabled: 'true'
-  stars: '5'
-  type: tank
-  element: grass
-  tier: 7 7 7 5
-  leader: Slide Skill Damage DEF +5% against Enemies for Wood Type Allies
-  auto: Deal 92 Auto Attack damage
-  tap: Deal 316 Damage, gain Skill Damage DEF +20% (removed after 24 seconds or upon
-    taking 3 attacks)
-  slide: Deal 575 Damage to target and grant Fortitude (removed after 14 seconds or
-    upon taking 2 attacks) to 3 Allies (excluding self), with a +20% chance to gain
-    Silence EVA for 14 seconds
-  drive: Deal 1444 Damage to 2 random Enemies, grant +40% Defense for 20 seconds and
-    +50% Debuff EVA for continuous damage up to 5 Allies
-  notes: ''
-  date: '2019-5-31'
-  index: 35
 luin:
   pic: "/images/ruin0.png"
   pic2: ''
@@ -1744,26 +1684,6 @@ durandal:
     damage increase.
   date: '2019-6-14'
   index: 40
-frey:
-  pic: "/images/frey0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 8 7 8 9
-  leader: Drive skill damage +1000 to Dark Units
-  auto: Deals 113 damage.
-  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
-    self.
-  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
-  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
-    enemy according to debuff) to all enemies.
-  notes: Frey's Skills are scaling, so he benefits significantly from unbinds and
-    good gear. At low uncaps, he's lackluster, but can deal hefty damage at high uncaps.
-  date: '2018-12-24'
-  index: 22
 elizabeth:
   pic: "/images/elizabeth0.png"
   pic2: ''
@@ -2198,48 +2118,6 @@ morgan:
   notes: ''
   date: '2019-2-8'
   index: 4
-khepri:
-  pic: "/images/khepri0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: dark
-  tier: 7 6 8 9
-  leader: Tap Skill Damage +8% for Dark Type Allies
-  auto: Deal 113 Attack damage to the target (Automatic)
-  tap: Deal 486 Damage, 100 of Ignore DEF Damage and Deal 100 Bonus Damage to Debuffer
-    targets
-  slide: 'Deal 704 Damage 2 times each to 2 Enemies (Priority: Debuffer), inflict
-    Blind (Attack ACC 20%) for 6 seconds'
-  drive: Deal 2585 Damage to 4 random Enemies and randomly inflict Confuse on one
-    enemy with a 80% chance for 10 seconds
-  notes: ''
-  date: '2019-7-12'
-  index: 47
-bari:
-  pic: "/images/bari0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: attacker
-  element: water
-  tier: 7 7 7 6
-  leader: Damage +5% for Water Type Allies
-  auto: Deal 113 Attack damage
-  tap: Deal 482 Damage, has a 70% chance to inflict Recovery Block (except from Vampirism/HP
-    Drain) for 8 seconds
-  slide: 'Deal 828 Damage to 2 Enemies (Priority: Buffed), on Defender targets deal
-    800 Ignore DEF Damage, and inflict Brand (Deals [No. of buffs on target +1] x
-    50 DoT every 4 seconds, max of 6 buffs [final multiplier of 7]) for 20 seconds
-    Skill '
-  drive: 'Deal 2232 Damage to 4 random Enemies, and on debuffed targets: inflict Debuff
-    Blast (remove 1st Debuff and deal damage based on its effect)'
-  notes: ''
-  date: '2019-6-28'
-  index: 43
 brownie:
   pic: "/images/brownie0.png"
   pic2: ''
@@ -2667,7 +2545,7 @@ fairy:
     for 10s to self.
   drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
     to 2 allies with lowest hp.
-  notes:
+  notes: 
   date: '2018-11-28'
   index: 90
 thoth:
@@ -3019,3 +2897,211 @@ katherine:
   notes: ''
   date: '2019-10-17'
   index: 84
+honoka:
+  pic: "/images/honoka0.png"
+  pic2: "/images/honoka1.png"
+  pic3: "/images/honoka2.png"
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: fire
+  tier: 6 5 8 6
+  leader: CRT Rate +15% for Fire Type Allies (during Rumbles, gain +15% CRT Rate to
+    self)
+  auto: Deal 95 Auto Attack damage to the target
+  tap: 'Deal 331 Damage, Heal 318 HP for 1 Ally (Priority: Lowest HP)'
+  slide: 'Regen 150 HP for 2 allies (Priority: Lowest HP) for 14 seconds, and gain
+    +35% Skill Gauge when Critical Damage occurs'
+  drive: 'Deal 1527 Damage to 2 random Enemies, Regen 267 HP each for 5 Allies (Priority:
+    Lowest HP) for 16 seconds, +2000 CRT'
+  notes: One of the current best options for Wood Ragna due to her leader ability.
+    Her healing can get a large increase from Daoine Sidhe's double edge buff.
+  date: '2019-5-31'
+  index: 39
+frey:
+  pic: "/images/frey0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 7 8 8
+  leader: Drive skill damage +1000 to Dark Units
+  auto: Deals 113 damage.
+  tap: Deals 485 damage to enemy with lowest HP and critical rate +40% for 12s to
+    self.
+  slide: Deals 612 (135%) damage to 3 enemies with lowest HP.
+  drive: Deals 2484 damage and Debuff Explosion (removes last applied debuff and damage
+    enemy according to debuff) to all enemies.
+  notes: Frey's slide benefits more x% (listed on slide) more from any additional
+    attack compared to another attacker without the percentage on their slide. On
+    auto, Frej's AI will tap first to get the crit buff, which means that if he's
+    not sped up or has crit buff from elsewhere, he will continually be tapping, losing
+    tons of DPS.
+  date: '2018-12-24'
+  index: 22
+khepri:
+  pic: "/images/khepri0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 8 6 9 9
+  leader: Tap Skill Damage +8% for Dark Type Allies
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 486 Damage, 100 of Ignore DEF Damage and Deal 100 Bonus Damage to Debuffer
+    targets
+  slide: 'Deal 704 Damage 2 times each to 2 Enemies (Priority: Debuffer), inflict
+    Blind (Attack ACC 20%) for 6 seconds'
+  drive: Deal 2585 Damage to 4 random Enemies and randomly inflict Confuse on one
+    enemy with a 80% chance for 10 seconds
+  notes: One of the best dark attackers released so far due to her 4-hit slide.
+  date: '2019-7-12'
+  index: 47
+bari:
+  pic: "/images/bari0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: water
+  tier: 7 6 7 6
+  leader: Damage +5% for Water Type Allies
+  auto: Deal 113 Attack damage
+  tap: Deal 482 Damage, has a 70% chance to inflict Recovery Block (except from Vampirism/HP
+    Drain) for 8 seconds
+  slide: 'Deal 828 Damage to 2 Enemies (Priority: Buffed), on Defender targets deal
+    800 Ignore DEF Damage, and inflict Brand (Deals [No. of buffs on target +1] x
+    50 DoT every 4 seconds, max of 6 buffs [final multiplier of 7]) for 20 seconds
+    Skill '
+  drive: 'Deal 2232 Damage to 4 random Enemies, and on debuffed targets: inflict Debuff
+    Blast (remove 1st Debuff and deal damage based on its effect)'
+  notes: ''
+  date: '2019-6-28'
+  index: 43
+marie rose:
+  pic: "/images/marierose0.png"
+  pic2: "/images/marierose1.png"
+  pic3: "/images/marierose2.png"
+  enabled: 'true'
+  stars: '5'
+  type: tank
+  element: grass
+  tier: 7 6 7 5
+  leader: Slide Skill Damage DEF +5% against Enemies for Wood Type Allies
+  auto: Deal 92 Auto Attack damage
+  tap: Deal 316 Damage, gain Skill Damage DEF +20% (removed after 24 seconds or upon
+    taking 3 attacks)
+  slide: Deal 575 Damage to target and grant Fortitude (removed after 14 seconds or
+    upon taking 2 attacks) to 3 Allies (excluding self), with a +20% chance to gain
+    Silence EVA for 14 seconds
+  drive: Deal 1444 Damage to 2 random Enemies, grant +40% Defense for 20 seconds and
+    +50% Debuff EVA for continuous damage up to 5 Allies
+  notes: ''
+  date: '2019-5-31'
+  index: 35
+rin:
+  pic: "/images/rin0.png"
+  pic2: "/images/rin1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: healer
+  element: water
+  tier: 6 6 6 6
+  leader: Heal Amount +8% for Water Type Allies
+  auto: Deal 95 Attack damage to the target (Automatic)
+  tap: 'Deal 328 Damage, Heal Amount +30% to 2 Allies (Priority: Lowest HP) for 20
+    seconds'
+  slide: 'Deal 482 Damage, Heal 1211 HP for 2 Allies (Priority: Lowest HP), Debuff
+    Duration -20% for 14 seconds'
+  drive: 'Deal 1475 Damage to 2 random Enemies, Heal 1089 HP for 3 Allies (Priority:
+    Lowest HP), if healed Ally is debuffed, Max HP +1200 for 16 seconds'
+  notes: ''
+  date: '2019-10-24'
+  index: 86
+party star medb:
+  pic: "/images/partystarmedb0.png"
+  pic2: "/images/partystarmedb1.png"
+  pic3: ''
+  enabled: 'false'
+  stars: '5'
+  type: buffer
+  element: fire
+  tier: 6 6 7 9
+  leader: Skill Gauge Charge Amount +10% for Fire Type Allies (For World Bosses, Weak
+    Point Skill Final Blow +10%)
+  auto: Deal 100 Attack damage to the target (Automatic)
+  tap: Deal 381 Damage, Skill Gauge +15% for 2 Fire Type Allies (Attackers)
+  slide: Deal 663 Damage, Skill Gauge Charge Amount +35% to 3 Fire Type Allies (Highest
+    ATK) for 16 seconds, Slide Skill Damage +1400. For World Bosses only, Weak Point
+    Skill Final Blow Damage +20% to 5 Fire Type Allies (Highest ATK) for 20 seconds
+  drive: 'Deal 1738 Damage to 3 random Enemies, heal 1525 HP for 5 Allies (Priority:
+    Lowest HP). For World Bosses only, Tap Skill Damage +1500 for all Allies in the
+    back row for 20 seconds'
+  notes: ''
+  date: '2019-10-31'
+  index: 87
+ailill:
+  pic: "/images/magicianailill0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'false'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 7 5 7 9
+  leader: Skill Final Damage +10% for Fire Type Allies
+  auto: 'Deal 113 Attack damage to the target (Automatic) '
+  tap: Deal 489 Damage, deal 500 Bonus Damage for World Bosses
+  slide: 'Deal 955 Damage and 850 Ignore DEF Damage to 3 Enemies (Priority: Wood Type),
+    600 Bonus Damage to Wood Type Enemies. For World Bosses, inflict Hellfire (1500
+    Bonus Damage for every Fire Type Ally, up to 10).'
+  drive: Deal 2488 Damage to all Enemies
+  notes: ''
+  date: '2019-10-31'
+  index: 143
+eochaid:
+  pic: "/images/magicianohad0.png"
+  pic2: "/images/magicianohad1.png"
+  pic3: ''
+  enabled: 'false'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 7 8 9
+  leader: ATK +12% for Wood Type Allies
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 482 Damage, gain Vampirism (recover 15% HP on attack) for 20 seconds
+  slide: 'Deal 902 Damage to 3 Enemies (Priority: Water Type), on Water Type targets
+    deal 800 Ignore DEF Damage, and inflict Brand (Deals [Number of buffs on target
+    + 1] x 50 DoT every 4 seconds, max of 6 buffs [7 in total]) on 2 random Enemies
+    for 20 seconds'
+  drive: Deal 2377 Damage to 4 random Enemies, and 500 Bonus Damage if targets are
+    Branded
+  notes: ''
+  date: '2019-10-31'
+  index: 142
+hermes:
+  pic: "/images/hermes0.png"
+  pic2: "/images/hermes1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: fire
+  tier: 6 6 6 7
+  leader: Attack +10% to Fire allies.
+  auto: Deals 99 damage.
+  tap: Deals 363 damage and gives +10% attack for 8s to 1 random ally.
+  slide: Deals 552 damage to 2 random enemies and gives +800 attack and Tap skill
+    attack +100 for 18s to 3 allies with highest attack.
+  drive: Deals 1696 damage to 3 random enemies and gives +30% attack and Slide skill
+    attack +300 for 25s to 3 allies with highest attack.
+  notes: ''
+  date: '2018-12-24'
+  index: 26

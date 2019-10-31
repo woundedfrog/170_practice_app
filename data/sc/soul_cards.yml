@@ -59,14 +59,6 @@ throne:
     Rumble."
   index: 32
   enabled: 'false'
-training expert:
-  pic: "/images/sc/trainingexpert.jpg"
-  stars: '5'
-  stats: "HP: 1030   2010  3517    \r\n\r\nDefense: 520 1500  2625   "
-  passive: "Restriction: Tank. \r\nWhen less than 3000 (5000) Hp, evasion +20% (27.5%
-    at lvl50 +5)  in Devil Rumble."
-  index: 35
-  enabled: 'false'
 blade of hot sun:
   pic: "/images/sc/bladesun.jpg"
   stars: '5'
@@ -293,20 +285,6 @@ home-made chocolate:
   passive: "Restriction: None. \r\n9% of defense stat is added to critical hit chance.
     \r\n"
   index: 77
-  enabled: 'false'
-stray lamb:
-  pic: "/images/sc/straylamb.jpg"
-  stars: '5'
-  stats: "Attack: 520  . \r\n\r\nCritical: 270  ."
-  passive: "Restriction: none. \r\n\r\nFinal Agility +250."
-  index: 79
-  enabled: 'false'
-extreme carnage:
-  pic: "/images/sc/extremecarnage.jpg"
-  stars: '5'
-  stats: "Defense: 520  . \r\nAgility: 270  ."
-  passive: "Restriction: none. \r\nFinal HP +1000."
-  index: 80
   enabled: 'false'
 lost dream:
   pic: "/images/sc/lostdream.jpg"
@@ -1207,47 +1185,234 @@ afternoon nap:
   - - Ability
     - Increase Slide Skill Damage by 750 for World Bosses
   index: 4
-forbidden fruit:
-  pic: "/images/sc/forbiddenfruit.jpg"
-  enabled: 'false'
+angelic smile:
+  pic: "/images/sc/angel'ssmile.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '1095'
+    - '0'
+    - '0'
+  - - agility
+    - '335'
+    - '0'
+    - '0'
+  prism:
+  - - hp
+    - '1095'
+    - '0'
+    - '0'
+  - - agility
+    - '335'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None
+  - - Ability
+    - Increase Poison damage by 300 in PVP
+  index: 87
+best friend trio:
+  pic: "/images/sc/3friends.png"
+  enabled: 'true'
+  stars: '5'
+  normal: &1
+  - - attack
+    - '575'
+    - '0'
+    - '0'
+  - - agility
+    - '305'
+    - '0'
+    - '0'
+  prism: *1
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase Max ATK by 700 in PVP
+  index: 89
+central fiction:
+  pic: "/images/sc/godsdream.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1075'
+    - '0'
+    - '0'
+  - - Defense
+    - '575'
+    - '0'
+    - '0'
+  prism:
+  - - HP
+    - '1075'
+    - '0'
+    - '0'
+  - - Defense
+    - '575'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase Silence EVA% in PVP by 20%
+  index: 90
+nightmare:
+  pic: "/images/sc/nightmare.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - attack
+    - '390'
+    - '0'
+    - '0'
+  - - critical
+    - '205'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase Bleed EVA by 15% in PVP
+  index: 91
+dominus duo:
+  pic: "/images/sc/twinds.png"
+  enabled: 'true'
   stars: '5'
   normal:
   - - HP
     - '1015'
     - '0'
-    - DEF
-  - - '515'
+    - '0'
+  - - Critical
+    - '265'
+    - '0'
     - '0'
   prism:
   - - HP
+    - '1015'
     - '0'
     - '0'
-    - DEF
-  - - '0'
+  - - Critical
+    - '265'
+    - '0'
     - '0'
   passive:
   - - Restriction
-    - none
+    - None.
   - - Ability
-    - Increase Regen by 100 when equipped
-  index: 55
-seventh time running away:
-  pic: "/images/sc/runaway.jpg"
-  enabled: 'false'
+    - Increased Vampirism & Absorb Amount by 100.
+  index: 88
+stray lamb:
+  pic: "/images/sc/straylamb.jpg"
+  enabled: 'true'
   stars: '5'
   normal:
-  - - atk
-    - '595'
+  - - Attack
+    - '605'
     - '0'
-    - crt
-  - - '325'
+    - '0'
+  - - Critical
+    - '335'
+    - '0'
     - '0'
   prism:
-  - - atk
+  - - Attack
+    - '605'
     - '0'
     - '0'
-    - crt
-  - - '0'
+  - - Critical
+    - '335'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - Fire.
+  - - Ability
+    - Increase Slide Skill CRT Damage by 4000 in Raids
+  index: 79
+training expert:
+  pic: "/images/sc/trainingexpert.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1090'
+    - '0'
+    - '0'
+  - - attack
+    - '600'
+    - '0'
+    - '0'
+  prism:
+  - - HP
+    - '1090'
+    - '0'
+    - '0'
+  - - attack
+    - '600'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - Wood.
+  - - Ability
+    - Increase Weak Point Skill Damage by 450 for World Bosses.
+  index: 35
+ultimate struggle:
+  pic: "/images/sc/extremecarnage.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '1015'
+    - '0'
+    - '0'
+  - - defense
+    - '515'
+    - '0'
+    - '0'
+  prism:
+  - - hp
+    - '1015'
+    - '0'
+    - '0'
+  - - defense
+    - '515'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None.
+  - - Ability
+    - Increase heal amount by 150 when equipped
+  index: 80
+7 time runaway:
+  pic: "/images/sc/runaway.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '595'
+    - '0'
+    - '0'
+  - - critical
+    - '325'
+    - '0'
+    - '0'
+  prism:
+  - - attack
+    - '595'
+    - '0'
+    - '0'
+  - - critical
+    - '325'
+    - '0'
     - '0'
   passive:
   - - Restriction
@@ -1255,3 +1420,31 @@ seventh time running away:
   - - Ability
     - Increase Slide Skill Damage by 750 in Raids
   index: 40
+forbidden fruit:
+  pic: "/images/sc/forbiddenfruit.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1015'
+    - '0'
+    - '0'
+  - - defense
+    - '515'
+    - '0'
+    - '0'
+  prism:
+  - - HP
+    - '1015'
+    - '0'
+    - '0'
+  - - defense
+    - '515'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - Increase Regen by 100 when equipped
+  index: 55

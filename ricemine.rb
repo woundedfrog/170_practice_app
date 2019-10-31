@@ -365,23 +365,23 @@ def skills_splitter(skills)
   key = ''
 
   skills.split.each_with_index do |word, idx|
-    if %w(leader lead slide tap drive auto).include?(word.downcase)
+    if %w(-leader -lead -slide -tap -drive -auto).include?(word.downcase)
       key = word.downcase
       next
     end
 
    case key#%w(leader slide tap drive).include?(word)
-   when 'lead'
+   when '-lead'
      leader << word
-   when 'leader'
+   when '-leader'
      leader << word
-   when 'slide'
+   when '-slide'
      slide << word
-   when 'tap'
+   when '-tap'
      tap << word
-   when 'auto'
+   when '-auto'
      auto << word
-   else
+   when '-drive'
      drive << word
    end
   end
