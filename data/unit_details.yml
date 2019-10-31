@@ -5650,45 +5650,6 @@ deino:
   notes: 'At higher uncaps, Deino will outperform Eve on Fire Ragna. '
   date: '2019-2-28'
   index: 170
-laima:
-  pic: "/images/laima0.png"
-  pic2: "/images/laima1.png"
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: dark
-  tier: 0 0 0 0
-  leader: Dark type allies Skill gauge charge amount  +12%
-  auto: Deals 100 damage
-  tap: Deal 379 damage to target, for 2 debuffed allies, 60% chance to cleanse 1 debuff
-  slide: Deal 663 damage to target, to 2 allies with the highest attack, skill gauge
-    charge amount +36.5% and debuff EVA +20% for 16s
-  drive: Deal 2040 damage to 3 random targets, prioritizing dark type childs, skill
-    gauge charge amount +50% and tap skill damage +1500 to 3 allies for 20s
-  notes: ''
-  date: '2019-10-17'
-  index: 285
-typhon:
-  pic: "/images/typhon0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'true'
-  stars: '5'
-  type: buffer
-  element: dark
-  tier: 0 0 0 0
-  leader: Dark type allies Max HP +800
-  auto: Deals 73 damage
-  tap: Deal 233 damage to target, to the highest attack ally, critical rate +30% for
-    10s
-  slide: Deal 448 damage to 2 random targets, prioritizing to 2 allies with the lowest
-    HP, gives AGI +800 and Barrier +1000 HP
-  drive: Deal 1120 damage to 3 random targets, prioritizing to 3 allies with the lowest
-    HP, gives Barrier +1500 HP
-  notes: ''
-  date: '2019-10-17'
-  index: 286
 catherine:
   pic: "/images/catherine0.png"
   pic2: "/images/catherine1.png"
@@ -5713,3 +5674,42 @@ catherine:
   notes: Only good in Fire Ragna for her lead, and if you need more survivability.
   date: '2019-9-30'
   index: 283
+laima:
+  pic: "/images/laima0.png"
+  pic2: "/images/laima1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 8 8 7 7
+  leader: Dark type allies Skill gauge charge amount  +12%
+  auto: Deals 100 damage
+  tap: Deal 379 damage to target, for 2 debuffed allies, 60% chance to cleanse 1 debuff
+  slide: Deal 663 damage to target, to 2 allies with the highest attack, skill gauge
+    charge amount +36.5% and debuff EVA +20% for 16s
+  drive: Deal 2040 damage to 3 random targets, prioritizing dark type childs, skill
+    gauge charge amount +50% and tap skill damage +1500 to 3 allies for 20s
+  notes: ''
+  date: '2019-10-17'
+  index: 285
+typhon:
+  pic: "/images/typhon0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: dark
+  tier: 6 6 5 5
+  leader: Dark type allies Max HP +800
+  auto: Deals 73 damage
+  tap: Deal 233 damage to target, to the highest attack ally, critical rate +30% for
+    10s
+  slide: Deal 448 damage to 2 random targets, prioritizing to 2 allies with the lowest
+    HP, gives AGI +800 and Barrier +1000 HP
+  drive: Deal 1120 damage to 3 random targets, prioritizing to 3 allies with the lowest
+    HP, gives Barrier +1500 HP
+  notes: ''
+  date: '2019-10-17'
+  index: 286
