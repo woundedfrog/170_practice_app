@@ -2545,7 +2545,7 @@ fairy:
     for 10s to self.
   drive: Deals 851 damage to 2 random enemies, and gives +2000 HP Barrier for 20s
     to 2 allies with lowest hp.
-  notes: 
+  notes:
   date: '2018-11-28'
   index: 90
 thoth:
@@ -3024,68 +3024,6 @@ rin:
   notes: ''
   date: '2019-10-24'
   index: 86
-party star medb:
-  pic: "/images/partystarmedb0.png"
-  pic2: "/images/partystarmedb1.png"
-  pic3: ''
-  enabled: 'false'
-  stars: '5'
-  type: buffer
-  element: fire
-  tier: 6 6 7 9
-  leader: Skill Gauge Charge Amount +10% for Fire Type Allies (For World Bosses, Weak
-    Point Skill Final Blow +10%)
-  auto: Deal 100 Attack damage to the target (Automatic)
-  tap: Deal 381 Damage, Skill Gauge +15% for 2 Fire Type Allies (Attackers)
-  slide: Deal 663 Damage, Skill Gauge Charge Amount +35% to 3 Fire Type Allies (Highest
-    ATK) for 16 seconds, Slide Skill Damage +1400. For World Bosses only, Weak Point
-    Skill Final Blow Damage +20% to 5 Fire Type Allies (Highest ATK) for 20 seconds
-  drive: 'Deal 1738 Damage to 3 random Enemies, heal 1525 HP for 5 Allies (Priority:
-    Lowest HP). For World Bosses only, Tap Skill Damage +1500 for all Allies in the
-    back row for 20 seconds'
-  notes: ''
-  date: '2019-10-31'
-  index: 87
-ailill:
-  pic: "/images/magicianailill0.png"
-  pic2: ''
-  pic3: ''
-  enabled: 'false'
-  stars: '5'
-  type: attacker
-  element: fire
-  tier: 7 5 7 9
-  leader: Skill Final Damage +10% for Fire Type Allies
-  auto: 'Deal 113 Attack damage to the target (Automatic) '
-  tap: Deal 489 Damage, deal 500 Bonus Damage for World Bosses
-  slide: 'Deal 955 Damage and 850 Ignore DEF Damage to 3 Enemies (Priority: Wood Type),
-    600 Bonus Damage to Wood Type Enemies. For World Bosses, inflict Hellfire (1500
-    Bonus Damage for every Fire Type Ally, up to 10).'
-  drive: Deal 2488 Damage to all Enemies
-  notes: ''
-  date: '2019-10-31'
-  index: 143
-eochaid:
-  pic: "/images/magicianohad0.png"
-  pic2: "/images/magicianohad1.png"
-  pic3: ''
-  enabled: 'false'
-  stars: '5'
-  type: attacker
-  element: grass
-  tier: 7 7 8 9
-  leader: ATK +12% for Wood Type Allies
-  auto: Deal 113 Attack damage to the target (Automatic)
-  tap: Deal 482 Damage, gain Vampirism (recover 15% HP on attack) for 20 seconds
-  slide: 'Deal 902 Damage to 3 Enemies (Priority: Water Type), on Water Type targets
-    deal 800 Ignore DEF Damage, and inflict Brand (Deals [Number of buffs on target
-    + 1] x 50 DoT every 4 seconds, max of 6 buffs [7 in total]) on 2 random Enemies
-    for 20 seconds'
-  drive: Deal 2377 Damage to 4 random Enemies, and 500 Bonus Damage if targets are
-    Branded
-  notes: ''
-  date: '2019-10-31'
-  index: 142
 hermes:
   pic: "/images/hermes0.png"
   pic2: "/images/hermes1.png"
@@ -3105,3 +3043,65 @@ hermes:
   notes: ''
   date: '2018-12-24'
   index: 26
+eochaid:
+  pic: "/images/magicianohad0.png"
+  pic2: "/images/magicianohad1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: grass
+  tier: 7 7 8 9
+  leader: ATK +12% for Wood Type Allies
+  auto: Deal 113 Attack damage to the target (Automatic)
+  tap: Deal 482 Damage, gain Vampirism (recover 15% HP on attack) for 20 seconds
+  slide: 'Deal 902 Damage to 3 Enemies (Priority: Water Type), on Water Type targets
+    deal 800 Ignore DEF Damage, and inflict Brand (Deals [Number of buffs on target
+    + 1] x 50 DoT every 4 seconds, max of 6 buffs [7 in total]) on 2 random Enemies
+    for 20 seconds'
+  drive: Deal 2377 Damage to 4 random Enemies, and 500 Bonus Damage if targets are
+    Branded
+  notes: ''
+  date: '2019-10-31'
+  index: 142
+ailill:
+  pic: "/images/magicianailill0.png"
+  pic2: ''
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 7 5 7 9
+  leader: Slide Skill Final Damage +10% for Fire Type Allies
+  auto: 'Deal 113 Attack damage to the target (Automatic) '
+  tap: Deal 489 Damage, deal 500 Bonus Damage for World Bosses
+  slide: 'Deal 955 Damage and 850 Ignore DEF Damage to 3 Enemies (Priority: Wood Type),
+    600 Bonus Damage to Wood Type Enemies. For World Bosses, inflict Hellfire (1500
+    Bonus Damage for every Fire Type Ally, up to 10).'
+  drive: Deal 2488 Damage to all Enemies
+  notes: ''
+  date: '2019-10-31'
+  index: 143
+party star medb:
+  pic: "/images/partystarmedb0.png"
+  pic2: "/images/partystarmedb1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: fire
+  tier: 6 6 7 9
+  leader: Skill Gauge Charge Amount +10% for Fire Type Allies (For World Bosses, Weak
+    Point Skill Final Blow +10%)
+  auto: Deal 100 Attack damage to the target (Automatic)
+  tap: Deal 381 Damage, Skill Gauge +15% for 2 Fire Type Allies (Attackers)
+  slide: Deal 663 Damage, Skill Gauge Charge Amount +35% to 3 Fire Type Allies (Highest
+    ATK) for 16 seconds, Slide Skill Damage +1400. For World Bosses only, Weak Point
+    Skill Final Blow Damage +20% to 5 Fire Type Allies (Highest ATK) for 20 seconds
+  drive: 'Deal 1738 Damage to 3 random Enemies, heal 1525 HP for 5 Allies (Priority:
+    Lowest HP). For World Bosses only, Tap Skill Damage +1500 for all Allies in the
+    back row for 20 seconds'
+  notes: ''
+  date: '2019-10-31'
+  index: 87
