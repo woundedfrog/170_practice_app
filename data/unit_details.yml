@@ -5713,3 +5713,73 @@ typhon:
   notes: ''
   date: '2019-10-17'
   index: 286
+alter davi:
+  pic: "/images/alterdavi0.png"
+  pic2: "/images/alterdavi1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: debuffer
+  element: dark
+  tier: 6 8 6 6
+  leader: Light type enemies Debuff Accuracy -15%
+  auto: Deals 102damage
+  tap: Deal 396 damage to the highest attack enemy, apply "Blind" (Attack Accuracy
+    -30%) to target for 10 seconds.
+  slide: Prioritizing Debuffer types, deal 677 damage to 2 targets, Apply "Blind"
+    (Attack Accuracy -45%) and Debuff Accuracy -20% for 12s
+  drive: Prioritizing lowest HP enemies, deal 2038 damage to 3 enemies, 80% chance
+    to inflict Death Heal (enemy receives damage equal to the HP heal received, Vampirism/HP
+    Absorb excluded) and 80% chance to apply "Attraction" (invalidates buffs, can't
+    be dispelled) for 16s.
+  notes: ''
+  date: '2019-10-31'
+  index: 288
+light mona:
+  pic: "/images/lightmona0.png"
+  pic2: "/images/lightmona1.png"
+  pic3: ''
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: light
+  tier: 8 6 9 9
+  leader: Light type allies Skill gauge charge amount +12% (During Ragna, Light type
+    allies Skill gauge charge amount +8% additional)
+  auto: Deals 101 damage
+  tap: Deal 390 damage to target, to 2 lowest HP allies, grant Barrier (adsorbs +900
+    HP before HP is affected) for 10s
+  slide: Deal 679 damage to target, to 3 light type allies with the highest attack,
+    skill gauge charge amount +40% and Final Weak point damage +20% for 16s. For Ragna,
+    grant Vampirism (recovers 15% HP on attack) to 3 allies with the lowest HP for
+    16s
+  drive: Deal 1828 damage to 3 random targets, to 5 allies, grant Barrier (adsorbs
+    +2500 HP before HP is affected) for 20s and Drive gauge +120 for every Light type
+    ally (up to 5)
+  notes: ''
+  date: '2019-10-31'
+  index: 287
+ophois:
+  pic: "/images/ophois0.png"
+  pic2: "/images/ophois1.png"
+  pic3: "/images/ophois2.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: dark
+  tier: 7 8 7 8
+  leader: Slide Skill Damage for Dark type allies +10%
+  auto: Deals 114 damage
+  tap: Prioritizing 2 lowest HP enemies, deal 440 damage, apply “anti barrier”(removes
+    barrier and inflict 70% of remaining barrier as damage)
+  slide: Prioritizing Light types, deal 961 damage to 2 targets, 2 times, apply “protection
+    buff explosion” (removes 1 protection type buff and deal 300 x number of protection
+    type buffs as damage). For PvP only, deal 600 bonus damage
+  drive: Prioritizing enemies with protection type buffs, deal 2605 damage to 4 enemies,
+    apply “protection buff explosion” (removes 1 protection type buff and deal 600
+    x number of protection type buffs as damage).
+  notes: "Protection Type Buff includes. DEF Up,\r\nSkill Defense Up,\r\nTap Skill
+    Defense Up,\r\nSlide Skill Defense Up,\r\nDrive Skill Defense Up,\r\nDEF Up stacks,\r\nImmortality,\r\nFortitude,\r\nBarrier,\r\nTaunt,\r\nDebuff
+    Taunt,\r\nPain Adaptation,\r\nMax HP Up"
+  date: '2019-11-14'
+  index: 289
