@@ -2514,3 +2514,31 @@ nightmare:
   - - Ability
     - Final attack +400(800)
   index: 96
+anniversary:
+  pic: "/images/sc/anniversary.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1058'
+    - '0'
+    - '0'
+  - - DEFENSE
+    - '558'
+    - '0'
+    - '0'
+  prism:
+  - - HP
+    - '1058'
+    - '0'
+    - '0'
+  - - DEFENSE
+    - '558'
+    - '0'
+    - '0'
+  passive:
+  - - Restriction
+    - None
+  - - Ability
+    - In DevilRumble final attack +545
+  index: 97

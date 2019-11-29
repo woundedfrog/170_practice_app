@@ -5773,13 +5773,58 @@ ophois:
   tap: Prioritizing 2 lowest HP enemies, deal 440 damage, apply “anti barrier”(removes
     barrier and inflict 70% of remaining barrier as damage)
   slide: Prioritizing Light types, deal 961 damage to 2 targets, 2 times, apply “protection
-    buff explosion” (removes 1 protection type buff and deal 300 x number of protection
-    type buffs as damage). For PvP only, deal 600 bonus damage
+    buff explosion” (removes 1 protection type buff and deal 300 x "type of buff"
+    as damage). For PvP only, deal 600 bonus damage
   drive: Prioritizing enemies with protection type buffs, deal 2605 damage to 4 enemies,
     apply “protection buff explosion” (removes 1 protection type buff and deal 600
-    x number of protection type buffs as damage).
+    x "type of buff" as damage).
   notes: "Protection Type Buff includes. DEF Up,\r\nSkill Defense Up,\r\nTap Skill
     Defense Up,\r\nSlide Skill Defense Up,\r\nDrive Skill Defense Up,\r\nDEF Up stacks,\r\nImmortality,\r\nFortitude,\r\nBarrier,\r\nTaunt,\r\nDebuff
-    Taunt,\r\nPain Adaptation,\r\nMax HP Up"
+    Taunt,\r\nPain Adaptation,\r\nMax HP Up. More info on \"type of buff\" damage
+    multiplier can be found here: https://ginmy.net/dc_ophois_inspection "
   date: '2019-11-14'
   index: 289
+ziva:
+  pic: "/images/ziva0.png"
+  pic2: "/images/ziva1.png"
+  pic3: "/images/ziva2.png"
+  enabled: 'true'
+  stars: '5'
+  type: attacker
+  element: fire
+  tier: 0 0 0 0
+  leader: Fire type allies Agility +15%
+  auto: Deals 113 damage
+  tap: Deal 490 damage to target, +20% Agility to self for 14s
+  slide: Prioritizing 3 lowest HP enemies, deal 933 damage, apply 148 damage per buff
+    (up to 8 applications). Apply “heal buff explosion” (removes 1 heal type buff
+    and deal 300x “type of buff” as damage).
+  drive: Deal 2545 damage to all enemies, apply “heal buff explosion” (removes 1 heal
+    type buff and deal 600x “type of buff” as damage).
+  notes: ''
+  date: '2019-11-28'
+  index: 290
+giltine:
+  pic: "/images/guiltine0.png"
+  pic2: "/images/guiltine1.png"
+  pic3: "/images/guiltine2.png"
+  enabled: 'true'
+  stars: '5'
+  type: buffer
+  element: water
+  tier: 0 0 0 0
+  leader: Water type allies Tap Skill Damage +12% (For WB only, water type allies
+    Skill Gauge Amount +20%)
+  auto: Deals 101 damage
+  tap: Deal 393 damage to target, for 2 allies that are stunned, 70% chance to remove
+    stun
+  slide: Deal 706 damage to target, for 3 highest attack water type allies, +40% Skill
+    Gauge Amount and +15% ATK. For WB only, prioritizing water type allies in the
+    back row, Skill Damage +20% for 5 allies
+  drive: Deal 1832 damage to 3 random enemies, prioritizing highest attack water type
+    allies, Tap skill damage +50% for 5 allies for 20s. For WB only, grants Attack
+    stance (only these 5 childs will attack during fever) to 5 highest attack water
+    type allies
+  notes: 'a.k.a - gilteen, guillotine, guiltine. '
+  date: '2019-11-28'
+  index: 291
