@@ -5,10 +5,6 @@
 		<% stars = @current_card["stars"] %>
 			<button type="button" class="btn btn-success btn-xs back-button" onclick="goBack()">Back to List</button>
 			<button type="button" class="btn btn-warning btn-xs mobile-button" id="picture" onClick="return mobileHide()">Show Pictures</button>
-	  	<% if session[:username] %>
-				<a href="/equips/<%= stars %>stars/<%= @sc_name.downcase %>/edit"><button type="button" class="btn btn-primary btn-xs">Edit</button></a>
-				<a href="/equips/<%= stars %>/<%= @sc_name %>/remove" onClick="return checkMe('<%= @sc_name %>')"><button type="button" class="btn btn-danger btn-xs">Remove</button></a>
-		  <% end %>
 	</div>
 
 	<h3><%= upcase_name(@sc_name) %></h3>

@@ -2514,6 +2514,109 @@ anniversary:
   - - Ability
     - In PvP Attack +545 (1045)
   index: 97
+strategy meeting:
+  pic: "/images/sc/strategymeeting.jpg"
+  enabled: 'true'
+  stars: '4'
+  normal:
+  - - hp
+    - '775'
+    - '1555'
+    - '1849'
+  - - def
+    - '400'
+    - '1180'
+    - '1339'
+  passive:
+  - - Restriction
+    - Wood Attackers.
+  - - Ability
+    - When equipped, reduces bleed damage received by 70(150)
+  index: 98
+check before proceeding:
+  pic: "/images/sc/checkproceed.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - defense
+    - '610'
+    - '1590'
+    - '2782'
+  prism:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - defense
+    - '610'
+    - '1590'
+    - '2782'
+  passive:
+  - - Restriction
+    - Wood Attackers
+  - - Ability
+    - In WorldBoss Final attack power +1150(1900)
+  index: 99
+hug the prince:
+  pic: "/images/sc/pc1.pck.19.19.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - defense
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - defense
+    - '370'
+    - '1350'
+    - '2362'
+  passive:
+  - - Restriction
+    - Water Attacker
+  - - Ability
+    - In Raid, Final Attack power +700 (1200).
+  index: 100
+competitive gamer:
+  pic: "/images/sc/competativegamer.jpg.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - agility
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - agility
+    - '370'
+    - '1350'
+    - '2362'
+  passive:
+  - - Restriction
+    - Wood
+  - - Ability
+    - For PvP only, Increase “Erode” damage by 10(50) (AKA for Piercing Ruin only)
+  index: 101
 growing feelings:
   pic: "/images/sc/growingfeelings.jpg"
   enabled: 'true'
@@ -2540,5 +2643,370 @@ growing feelings:
   - - Restriction
     - Fire Attacker
   - - Ability
-    - For Ragna only, deal an additional 400(850)[+15 if prism] defense ignore damage.
+    - For Ragna only, slide skills deal an additional 400(850)[+15 if prism] ignore
+      DEF damage.
   index: 95
+praying girl:
+  pic: "/images/sc/prayinggirl.jpg"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '0'
+    - '1600'
+    - '2800'
+  - - critical
+    - '0'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '0'
+    - '1600'
+    - '2800'
+  - - critical
+    - '0'
+    - '1350'
+    - '2362'
+  passive:
+  - - Restriction
+    - Dark Attacker
+  - - Ability
+    - In WB, final attack +1150(1900)
+  index: 102
+innocent malice:
+  pic: "/images/sc/innocentmalice.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - hp
+    - '2090'
+    - '0'
+    - '3657'
+  - - def
+    - '1600'
+    - '0'
+    - '2800'
+  prism:
+  - - hp
+    - '2090'
+    - '0'
+    - '3657'
+  - - def
+    - '1600'
+    - '0'
+    - '2800'
+  passive:
+  - - Restriction
+    - Buffer
+  - - Ability
+    - In WB debuff evasion +15(30)%
+  index: 103
+doki doki poker:
+  pic: "/images/sc/DDPoker.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - AGI
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - HP
+    - '1128'
+    - '2118'
+    - '3689'
+  - - Agility
+    - '382'
+    - '1362'
+    - '2383'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - In PvP, Debuff duration -5%(-15%)[+1% If Prism]
+  index: 104
+the start of love:
+  pic: "/images/sc/TheBeginningOfLove.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1350'
+    - '362'
+  prism:
+  - - attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - critical
+    - '382'
+    - '1362'
+    - '2383'
+  passive:
+  - - Restriction
+    - fire
+  - - Ability
+    - In ragna, Tap skill damage +450(885)[+15 if prism]
+  index: 105
+second death:
+  pic: "/images/sc/Second Death.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - critical
+    - '382'
+    - '1362'
+    - '2383'
+  passive:
+  - - Restriction
+    - Water
+  - - Ability
+    - In ragna, Weakpoint skill damage +1400(2400)[+100 if prism]
+  index: 106
+unrequited love:
+  pic: "/images/sc/Unrequited love.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1250'
+    - '2362'
+  prism:
+  - - attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - critical
+    - '382'
+    - '1262'
+    - '2383'
+  passive:
+  - - Restriction
+    - Water
+  - - Ability
+    - In WB, Final Atk +1150(1900)[+25 if prism]
+  index: 107
+summer buffet:
+  pic: "/images/sc/beach_buffet.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Defense
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Defense
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - none
+  - - Ability
+    - When attacked, Skill gauge +3%(7%)[+1% if prism]
+  index: 109
+surfing in summer:
+  pic: "/images/sc/surfing_summer.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - attack
+    - '620'
+    - '1600'
+    - '2800'
+  - - critical
+    - '370'
+    - '1350'
+    - '2362'
+  prism:
+  - - attack
+    - '636'
+    - '1616'
+    - '2828'
+  - - critical
+    - '382'
+    - '1362'
+    - '2383'
+  passive:
+  - - Restriction
+    - Dark
+  - - Ability
+    - In ragna, Slide skill Critical damage +15%(36%)[+0.5% if prism]
+  index: 108
+let's play at the beach:
+  pic: "/images/sc/Let's play at the beach.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - dark
+  - - Ability
+    - In PvP, Skill gauge charge speed +3%(8%)[+1% if prism]
+  index: 110
+luxurious summer:
+  pic: "/images/sc/Luxurious summer.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - light
+  - - Ability
+    - In PvP, Skill gauge charge speed +3%(8%)[+1% if prism]
+  index: 112
+summer date:
+  pic: "/images/sc/Summer date.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - wood
+  - - Ability
+    - In PvP, Skill gauge charge speed +3%(8%)[+1% if prism]
+  index: 113
+summer vaction:
+  pic: "/images/sc/Summer vacation.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - fire
+  - - Ability
+    - In PvP, Skill gauge charge speed +3%(8%)[+1% if prism]
+  index: 114
+how to wear:
+  pic: "/images/sc/How to put on.png"
+  enabled: 'true'
+  stars: '5'
+  normal:
+  - - HP
+    - '1110'
+    - '2090'
+    - '3657'
+  - - Attack
+    - '620'
+    - '1600'
+    - '2800'
+  prism:
+  - - HP
+    - '1128'
+    - '2108'
+    - '3689'
+  - - Attack
+    - '636'
+    - '1616'
+    - '2828'
+  passive:
+  - - Restriction
+    - water
+  - - Ability
+    - In PvP, Skill gauge charge speed +3%(8%)[+1% if prism]
+  index: 111

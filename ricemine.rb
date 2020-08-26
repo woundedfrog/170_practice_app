@@ -623,7 +623,7 @@ get '/' do
   erb :home
 end
 
-get '/basics' do
+get '/history' do
 
   path = File.expand_path('data/history.yml', __dir__)
   @history = YAML.load_file(path)
@@ -633,42 +633,8 @@ get '/basics' do
   erb :starterguide
 end
 
-get '/:filename/edit' do
-  file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
-  @name = params[:filename]
-  begin
-    @content = YAML.dump(YAML.load_file(file))
-  rescue Psych::SyntaxError => ex
-    p ex.file
-    p ex.message
-  end
-  # @content = YAML.dump(YAML.load_file(file))
-
-  erb :edit_notice
-end
-
-get '/download/:filename' do |filename|
-  fname = filename
-  ftype = 'Application/octet-stream'
-  # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
-  if filename.include?('soul')
-    send_file "./data/sc/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('unit') ||
-        filename.include?('maininfo') ||
-        filename.include?('basics.md') ||
-        filename.include?('history')
-    send_file "./data/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('.jpg')
-    send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
-  elsif filename.include?('full')
-    send_file "./public/images/full_size/#{filename}", filename: fname, type: ftype
-  else
-    send_file "./public/images/#{filename}", filename: fname, type: ftype
-  end
-  redirect '/'
-end
-
-get '/show_files/:type' do
+get '/files/:type' do
+require_user_signin
   file_type = params[:type]
   units = File.join(file_path[0], '*')
   cards = File.join(file_path[1], '*')
@@ -703,22 +669,59 @@ get '/show_files/:type' do
   erb :file_list
 end
 
-get '/show_files/:file_name/remove' do
+get '/:filename/edit' do
+  file = File.expand_path("data/#{params[:filename]}.yml", __dir__)
+  @name = params[:filename]
+  begin
+    @content = YAML.dump(YAML.load_file(file))
+  rescue Psych::SyntaxError => ex
+    p ex.file
+    p ex.message
+  end
+  # @content = YAML.dump(YAML.load_file(file))
+
+  erb :edit_notice
+end
+
+get '/download/:filename' do |filename|
+require_user_signin
+  fname = filename
+  ftype = 'Application/octet-stream'
+  # checked_fname = filename.split('').map(&:to_i).reduce(&:+) == 0
+  if filename.include?('soul')
+    send_file "./data/sc/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('unit') ||
+        filename.include?('maininfo') ||
+        filename.include?('basics.md') ||
+        filename.include?('history')
+    send_file "./data/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('.jpg')
+    send_file "./public/images/sc/#{filename}", filename: fname, type: ftype
+  elsif filename.include?('full')
+    send_file "./public/images/full_size/#{filename}", filename: fname, type: ftype
+  else
+    send_file "./public/images/#{filename}", filename: fname, type: ftype
+  end
+  redirect '/'
+end
+
+get '/files/:file_name/remove' do
+require_user_signin
   delete_selected_file(params[:file_name])
   redirect '/show_files'
 end
 
-get '/equips/new_sc' do
-  @card = @new_sc
-  @max_index_val = get_max_index_number(@soulcards)
-  erb :new_sc
-end
-
-get '/new_unit' do
+get '/units/new' do
   require_user_signin
   @new_unit_info = @new_unit
   @max_index_val = get_max_index_number(@units)
   erb :new_unit
+end
+
+get '/equips/new' do
+  @card = @new_sc
+  @max_index_val = get_max_index_number(@soulcards)
+  erb :new_sc
 end
 
 get '/:catagory/:star_rating' do
@@ -799,7 +802,8 @@ get '/childs/:star_rating/sort_by/:type' do
   erb :sort_by_type
 end
 
-get '/show_unit_details' do
+get '/unit_details_get' do
+require_user_signin
   @unit_details = select_enabled_profiles(@units)
   @disabled_units = select_disabled_profiles(@units)
   @sc_details = select_enabled_profiles(@soulcards)
@@ -807,7 +811,8 @@ get '/show_unit_details' do
   erb :show_unit_details
 end
 
-get '/upload' do
+get '/upload_file' do
+  require_user_signin
   erb :upload
 end
 
@@ -1038,6 +1043,7 @@ post '/upload' do
 end
 
 post '/update/:filename' do
+  require_user_signin
   name = params[:filename] + '.yml'
   content = params[:content].gsub("script", '')
   directory =

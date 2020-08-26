@@ -193,6 +193,22 @@ function goBack(e) {
 $(document).ready(function() {
   $('.main-container').hide();
   $('.0').show();
+
+
+if(localStorage.getItem('popState') != 'showed'){
+        $("#serverpopup").delay(1000).fadeIn();
+        localStorage.setItem('popState','showed')
+    }
+
+    $('#serverpopup-close').click(function(e) // You are clicking the close button
+    {
+    $('#serverpopup').fadeOut(); // Now the pop up is hiden.
+    });
+    $('#serverpopup').click(function(e) 
+    {
+    $('#serverpopup').fadeOut(); 
+    });
+
 });
 
 // back to top scroll button

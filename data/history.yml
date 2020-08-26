@@ -1,101 +1,95 @@
 ---
-- 2019-06-19 12:10:24 +0900 New unit called ORGA (WOLA) has been created.
-- 2019-06-19 12:12:40 +0900 New unit called JUPITER has been created.
-- 2019-06-19 12:14:11 +0900 New unit called BABEL has been created.
-- 2019-06-19 12:16:41 +0900 New unit called MEDUSA has been created.
-- 2019-06-19 12:21:36 +0900 New unit called EVE has been created.
-- 2019-06-19 12:24:05 +0900 New unit called THANATOS has been created.
-- '2019-06-19 18:24:32 +0900 File uploaded: uni_info_view.css'
-- '2019-06-19 18:24:36 +0900 File uploaded: uni_info_view.css'
-- '2019-06-19 18:25:08 +0900 File uploaded: uni_info_view.css'
-- '2019-06-19 18:25:36 +0900 File uploaded: uni_info_view.css'
-- '2019-06-19 18:25:44 +0900 File uploaded: uni_info_view.css'
-- '2019-09-15 16:18:07 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:19:45 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:20:52 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:20:55 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:21:40 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:23:12 +0900 File uploaded: fullmona.png'
-- '2019-09-15 16:25:02 +0900 File uploaded: fullmona.png'
-- '2019-09-16 16:05:12 +0900 File uploaded: fullmona.png'
-- 2019-09-20 05:13:55 +0900 New unit called TISBE has been created.
-- 2019-09-25 13:03:19 +0900 New unit called PALLAS has been created.
-- 2019-09-25 13:14:37 +0900 New unit called JUSTICE MAFDET has been created.
-- 2019-09-26 07:17:18 +0900 New unit called SCUBA MONA has been created.
-- 2019-09-26 07:17:54 +0900 New unit called SCUBA MONA has been created.
-- 2019-09-28 06:02:51 +0900 New unit called BRIGETTE has been created.
-- 2019-09-28 06:12:41 +0900 New unit called BRIGETTE has been created.
-- 2019-09-28 06:13:36 +0900 New unit called BRIGETTE has been created.
-- 2019-09-29 08:23:54 +0900 New Soulcard called BLADE OF HOT SUN has been created.
-- 2019-09-29 08:25:32 +0900 New Soulcard called ASS BARING DEVIL has been created.
-- 2019-09-30 17:10:41 +0900 New unit called KATHERINE has been created.
-- 2019-09-30 17:11:24 +0900 New unit called CATHERINE has been created.
-- 2019-09-30 17:13:15 +0900 New unit called KATHERINE has been created.
-- 2019-09-30 17:15:13 +0900 New Soulcard called ANGEL'S SMILE has been created.
-- 2019-09-30 17:15:32 +0900 New Soulcard called ANGEL'S SMILE has been created.
-- 2019-09-30 17:18:41 +0900 New Soulcard called GROWING FEELINGS has been created.
-- 2019-09-30 17:20:18 +0900 New Soulcard called ANGEL'S SMILE has been created.
-- 2019-09-30 17:25:03 +0900 New unit called RIN has been created.
-- 2019-09-30 17:25:54 +0900 New Soulcard called NIGHTMARE has been created.
-- 2019-09-30 17:46:05 +0900 New unit called KATHERINE has been created.
-- '2019-09-30 17:46:16 +0900 File uploaded: katherine1.png'
-- '2019-09-30 17:46:20 +0900 File uploaded: katherine2.png'
-- '2019-09-30 17:46:23 +0900 File uploaded: rin0.png'
-- '2019-09-30 17:46:26 +0900 File uploaded: rin1.png'
-- '2019-09-30 17:46:30 +0900 File uploaded: catherine0.png'
-- '2019-09-30 17:46:34 +0900 File uploaded: catherine1.png'
-- 2019-09-30 17:46:47 +0900 New unit called CATHERINE has been created.
-- 2019-09-30 17:47:05 +0900 New unit called RIN has been created.
-- 2019-09-30 17:47:20 +0900 New Soulcard called GROWING FEELINGS has been created.
-- 2019-09-30 17:47:32 +0900 New Soulcard called ANGEL'S SMILE has been created.
-- 2019-09-30 17:47:45 +0900 New Soulcard called NIGHTMARE has been created.
-- '2019-09-30 17:56:18 +0900 File uploaded: fullcatherine.png'
-- '2019-09-30 17:56:39 +0900 File uploaded: fullkatherine.png'
-- '2019-09-30 17:56:43 +0900 File uploaded: fullrin.png'
-- 2019-10-02 07:57:00 +0900 New unit called KATHERINE has been created.
-- 2019-10-02 08:02:36 +0900 New unit called CATHERINE has been created.
-- 2019-10-02 08:04:41 +0900 New unit called RIN has been created.
-- 2019-10-02 08:40:28 +0900 New Soulcard called GROWING FEELINGS has been created.
-- 2019-10-02 08:41:59 +0900 New Soulcard called ANGEL'S SMILE has been created.
-- 2019-10-02 08:42:35 +0900 New Soulcard called NIGHTMARE has been created.
-- 2019-10-03 22:44:12 +0900 New unit called RIN has been created.
-- 2019-10-04 12:48:15 +0900 New unit called CATHERINE has been created.
-- 2019-10-15 09:39:41 +0900 New unit called TISBE has been created.
-- 2019-10-15 09:40:39 +0900 New unit called DEINO has been created.
-- 2019-10-15 09:41:35 +0900 New unit called DEINO has been created.
-- 2019-10-17 18:17:18 +0900 New unit called LAIMA has been created.
-- 2019-10-17 18:19:09 +0900 New unit called TYPHON has been created.
-- 2019-10-17 18:27:18 +0900 New unit called LAIMA has been created.
-- '2019-10-17 18:27:29 +0900 File uploaded: laima0.png'
-- '2019-10-17 18:27:32 +0900 File uploaded: laima1.png'
-- '2019-10-17 18:27:36 +0900 File uploaded: typhon0.png'
-- 2019-10-17 18:28:03 +0900 New unit called TYPHON has been created.
-- 2019-10-17 18:29:20 +0900 New unit called CATHERINE has been created.
-- '2019-10-17 18:31:56 +0900 File uploaded: fulltyphon.png'
-- '2019-10-17 18:32:05 +0900 File uploaded: fulllaima.png'
-- 2019-10-31 16:53:07 +0900 New unit called TEST has been created.
-- 2019-10-31 16:53:18 +0900 TEST unit was successfully deleted.
-- 2019-10-31 18:46:02 +0900 New unit called LIGHT MONA has been created.
-- '2019-10-31 18:46:11 +0900 File uploaded: lightmona1.png'
-- 2019-10-31 18:47:12 +0900 New unit called ALER DAVI has been created.
-- 2019-10-31 18:47:26 +0900 New unit called LIGHT MONA has been created.
-- '2019-10-31 18:47:35 +0900 File uploaded: alterdavi1.png'
-- 2019-10-31 18:48:55 +0900 New unit called ALER DAVI has been created.
-- 2019-10-31 18:50:00 +0900 New unit called LIGHT MONA has been created.
-- '2019-10-31 18:51:59 +0900 File uploaded: fulllightmona.png'
-- '2019-10-31 18:52:08 +0900 File uploaded: fullalterdavi.png'
-- 2019-10-31 18:52:37 +0900 New unit called ALTER DAVI has been created.
-- 2019-11-01 09:03:18 +0900 New unit called ALTER DAVI has been created.
-- 2019-11-01 09:06:50 +0900 New unit called LIGHT MONA has been created.
-- 2019-11-14 22:24:01 +0900 New unit called OPHOIS has been created.
-- '2019-11-14 22:24:08 +0900 File uploaded: ophois2.png'
-- '2019-11-14 22:24:13 +0900 File uploaded: ophois1.png'
-- '2019-11-14 22:24:16 +0900 File uploaded: ophois0.png'
-- 2019-11-14 22:25:03 +0900 New unit called OPHOIS has been created.
-- '2019-11-14 22:34:13 +0900 File uploaded: fullophois.png'
-- 2019-11-15 10:34:48 +0900 New unit called OPHOIS has been created.
-- 2019-11-15 10:35:30 +0900 New unit called OPHOIS has been created.
-- 2019-11-15 10:35:46 +0900 New unit called OPHOIS has been created.
-- 2019-11-15 10:36:34 +0900 New unit called OPHOIS has been created.
-- 2019-11-15 10:37:19 +0900 New unit called OPHOIS has been created.
-- 2019-11-15 10:38:21 +0900 New unit called OPHOIS has been created.
+- '2020-07-02 18:07:10 +0900 File uploaded: fulltragicrusalka.png'
+- '2020-07-02 18:07:14 +0900 File uploaded: fullaltice.png'
+- 2020-07-06 04:20:02 +0900 New unit called LEO has been created.
+- 2020-07-10 04:23:27 +0900 New unit called VIRUPA has been created.
+- 2020-07-10 04:25:09 +0900 New unit called LAUFEY has been created.
+- 2020-07-10 05:28:32 +0900 New unit called NEPTUNE has been created.
+- '2020-07-10 05:30:27 +0900 File uploaded: virupa1.png'
+- '2020-07-10 05:30:31 +0900 File uploaded: virupa2.png'
+- '2020-07-10 05:31:03 +0900 File uploaded: laufey1.png'
+- 2020-07-10 05:31:52 +0900 New unit called VIRUPA has been created.
+- 2020-07-10 05:32:25 +0900 New unit called VIRUPA has been created.
+- 2020-07-10 05:33:06 +0900 New unit called VIRUPA has been created.
+- 2020-07-10 05:34:33 +0900 New unit called VIRUPA has been created.
+- 2020-07-10 05:34:48 +0900 LAUFEY unit was successfully deleted.
+- 2020-07-10 05:35:40 +0900 New unit called LAUFEY has been created.
+- 2020-07-23 15:55:50 +0900 New unit called MERCURY has been created.
+- 2020-07-23 17:01:30 +0900 New Soulcard called SECOND DEATH has been created.
+- 2020-07-23 17:02:47 +0900 New Soulcard called SECOND DEATH has been created.
+- 2020-07-23 17:05:42 +0900 New unit called BABEL has been created.
+- 2020-07-23 17:12:40 +0900 New unit called BIKINI LISA has been created.
+- 2020-07-23 17:18:14 +0900 New unit called BIKINI LISA has been created.
+- 2020-07-23 17:18:58 +0900 New unit called BIKINI LISA has been created.
+- 2020-07-24 03:15:05 +0900 New unit called ARGOS has been created.
+- '2020-07-24 06:47:58 +0900 File uploaded: Mercury1.png'
+- '2020-07-24 06:48:02 +0900 File uploaded: Argos1.png'
+- 2020-07-24 06:48:37 +0900 New unit called MERCURY has been created.
+- 2020-07-24 06:49:17 +0900 New unit called ARGOS has been created.
+- 2020-07-24 06:52:29 +0900 New Soulcard called UNREQUITED LOVE has been created.
+- '2020-07-24 09:42:43 +0900 File uploaded: fulltrainer.png'
+- '2020-07-24 09:42:50 +0900 File uploaded: fullargos.png'
+- '2020-07-24 09:44:21 +0900 File uploaded: fullmercury.png'
+- '2020-07-24 09:49:23 +0900 File uploaded: fullvirupa.png'
+- '2020-07-24 09:49:31 +0900 File uploaded: fulllaufey.png'
+- 2020-08-01 10:54:24 +0900 New unit called OIRAN BATHORY has been created.
+- 2020-08-01 10:55:11 +0900 New unit called SERKET has been created.
+- 2020-08-01 10:55:45 +0900 New unit called OPHOIS has been created.
+- 2020-08-01 10:57:31 +0900 New unit called DREAMER SATURN has been created.
+- 2020-08-01 10:57:57 +0900 New unit called ANNIE has been created.
+- 2020-08-01 11:00:54 +0900 New unit called MAFDET has been created.
+- 2020-08-01 11:03:31 +0900 New unit called CLEOPATRA has been created.
+- 2020-08-01 11:06:49 +0900 New unit called FIRE DAVI has been created.
+- 2020-08-01 11:12:02 +0900 New unit called WARWOLF has been created.
+- 2020-08-01 11:15:23 +0900 New unit called LUPIN has been created.
+- 2020-08-01 11:19:44 +0900 New unit called BILLY has been created.
+- 2020-08-01 11:27:07 +0900 New unit called FAILNAUGHT has been created.
+- 2020-08-01 11:29:48 +0900 New unit called HEQET has been created.
+- 2020-08-01 11:31:09 +0900 New unit called SWEET LEDA has been created.
+- '2020-08-07 06:40:31 +0900 File uploaded: juno0.png'
+- '2020-08-07 06:40:37 +0900 File uploaded: juno1.png'
+- '2020-08-07 06:40:42 +0900 File uploaded: odysseus0.png'
+- '2020-08-07 06:40:47 +0900 File uploaded: odysseus1.png'
+- '2020-08-07 06:40:51 +0900 File uploaded: Teiwaz0.png'
+- '2020-08-07 06:40:56 +0900 File uploaded: Teiwaz1.png'
+- '2020-08-07 06:41:02 +0900 File uploaded: Teiwaz2.png'
+- '2020-08-07 06:41:07 +0900 File uploaded: Teiwaz3.png'
+- 2020-08-07 06:44:58 +0900 New unit called TEIWAZ has been created.
+- 2020-08-07 06:45:27 +0900 New unit called TEIWAZ has been created.
+- 2020-08-07 06:45:49 +0900 New unit called TEIWAZ has been created.
+- 2020-08-07 06:47:05 +0900 New unit called JUNO has been created.
+- 2020-08-07 06:48:23 +0900 New unit called ODYSSEUS has been created.
+- 2020-08-07 06:49:06 +0900 New unit called ODYSSEUS has been created.
+- '2020-08-07 06:51:53 +0900 File uploaded: beach buffet.png'
+- '2020-08-07 06:51:59 +0900 File uploaded: surfing.png'
+- 2020-08-07 06:53:55 +0900 New Soulcard called SURFING IN SUMMER has been created.
+- 2020-08-07 06:57:10 +0900 New Soulcard called SUMMER BUFFET has been created.
+- 2020-08-07 06:58:34 +0900 New Soulcard called SUMMER BUFFET has been created.
+- 2020-08-07 06:59:07 +0900 New Soulcard called SURFING IN SUMMER has been created.
+- 2020-08-07 06:59:45 +0900 New Soulcard called SURFING IN SUMMER has been created.
+- 2020-08-14 10:30:03 +0900 New unit called TEIWAZ has been created.
+- '2020-08-21 13:11:36 +0900 File uploaded: fullodysseus.png'
+- '2020-08-21 13:11:44 +0900 File uploaded: fulljuno.png'
+- '2020-08-21 13:11:55 +0900 File uploaded: fullteiwaz.png'
+- '2020-08-21 13:12:14 +0900 File uploaded: fullclotho.png'
+- '2020-08-21 13:12:31 +0900 File uploaded: fullzephyros.png'
+- '2020-08-22 08:43:06 +0900 File uploaded: RacerDavi1.png'
+- '2020-08-22 08:43:10 +0900 File uploaded: Zephyr1.png'
+- '2020-08-22 08:43:15 +0900 File uploaded: Clotho1.png'
+- 2020-08-22 08:47:27 +0900 New Soulcard called LET'S PLAY AT THE BEACH has been created.
+- 2020-08-22 08:48:16 +0900 New Soulcard called HOW TO PUT ON? has been created.
+- 2020-08-22 08:49:08 +0900 New Soulcard called LUXURIOUS SUMMER has been created.
+- 2020-08-22 08:49:37 +0900 New Soulcard called SUMMER DATE has been created.
+- 2020-08-22 08:50:01 +0900 New Soulcard called SUMMER VACTION has been created.
+- 2020-08-22 08:53:28 +0900 New unit called ZEPHR has been created.
+- 2020-08-22 08:55:30 +0900 New unit called CLOTHO has been created.
+- 2020-08-22 08:56:33 +0900 New unit called RACER DAVI has been created.
+- '2020-08-22 10:05:12 +0900 File uploaded: fullracerdavi.png'
+- '2020-08-22 10:05:32 +0900 File uploaded: fullzephyr.png'
+- '2020-08-22 10:06:34 +0900 File uploaded: fullzephr.png'
+- 2020-08-22 12:36:02 +0900 New unit called ZEPHYR has been created.
+- 2020-08-23 16:14:10 +0900 New Soulcard called HOW TO WEAR has been created.
+- 2020-08-23 16:14:59 +0900 New Soulcard called HOW TO PUT ON? has been created.
+- 2020-08-23 16:15:49 +0900 New Soulcard called HOW TO WEAR has been created.
+- 2020-08-23 16:16:03 +0900 New Soulcard called HOW TO WEAR has been created.
+- 2020-08-23 16:16:16 +0900 New Soulcard called HOW TO WEAR has been created.

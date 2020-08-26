@@ -26,9 +26,8 @@ class RiceMineTest < Minitest::Test
     new_unit = {"new_name" => {"pic" => "", "pic2" => "", "pic3" => "", "tier" => "", "stars" => '', "element" => "", "type" => "", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 0}}
 
     units = {"cleopatra" => {"pic" => "cleopatra0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "attacker", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 0, 'enabled' => 'true'},
-    "dana" => {"pic" => "dana0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 1, 'enabled' => 'true'},
-    "maat" => {"pic" => "maat0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "healer", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 2, 'enabled' => 'true'}}
-
+  "dana" => {"pic" => "dana0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "tank", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 1, 'enabled' => 'true'},
+  "maat" => {"pic" => "maat0.png", "pic2" => "", "pic3" => "", "tier" => "s", "stars" => "5", "element" => "light", "type" => "healer", "leader" => '', "tap" => '', "auto" => '', "slide" => '', "drive" => '', "notes" => '', "date" => '', "index" => 2, 'enabled' => 'true'}}
     new_sc = {"new_sc" => { "pic" => "", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
 
     sc = {"vacation" => { "pic" => "vacation0.jpg", "stars" => '5', "stats" => "", "passive" => "", "index"=> 0}}
