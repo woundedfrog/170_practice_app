@@ -7,7 +7,7 @@ gem "minitest"
 gem 'minitest-reporters'
 gem "rack-test"
 gem "redcarpet"
-gem 'rack', '~> 2.1.4'
+gem 'rack', '~> 2.2.4'
 # password encryption
 gem "bcrypt"
 gem 'rsense'
